@@ -1,0 +1,7 @@
+# Claude Code config — local dev only
+.claude/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini

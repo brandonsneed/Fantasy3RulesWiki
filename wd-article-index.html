@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>White Dwarf Article Index — WFB 3rd Edition</title>
+<style>
+  :root {
+    --bg: #1a1a1a;
+    --bg2: #222;
+    --bg3: #2a2a2a;
+    --border: #333;
+    --text: #ddd;
+    --text-dim: #999;
+    --text-faint: #666;
+    --accent: #c8a96e;
+    --t1: #378ADD; --t1-bg: #0c2a44;
+    --t2: #3B9922; --t2-bg: #1a2e10;
+    --t3: #BA7517; --t3-bg: #2e1c04;
+    --t4: #888; --t4-bg: #222;
+    --roc: #a0407a; --roc-bg: #2a1020;
+    --deferred: #666; --deferred-bg: #222;
+    --prewa: #BA7517; --prewa-bg: #2e1c04;
+    --new: #3B9922; --new-bg: #1a2e10;
+    --fix: #c84040; --fix-bg: #2e1010;
+    --siege: #8040a0; --siege-bg: #1e1030;
+    --ing: #50b84a; --ing-bg: #0d200b;
+    --ing-border: #2a4a22;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; font-size: 14px; line-height: 1.5; }
+
+  .page-header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 20px 24px 16px; }
+  .page-header h1 { font-size: 20px; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+  .page-header p { color: var(--text-dim); font-size: 13px; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 24px; background: var(--bg2); border-bottom: 1px solid var(--border); align-items: center; }
+  .controls input[type="text"] {
+    background: var(--bg3); border: 1px solid var(--border); color: var(--text);
+    padding: 6px 10px; border-radius: 5px; font-size: 13px; width: 220px;
+  }
+  .controls input[type="text"]:focus { outline: none; border-color: var(--accent); }
+  .filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filter-btn {
+    padding: 4px 10px; border-radius: 12px; border: 1px solid var(--border);
+    background: var(--bg3); color: var(--text-dim); font-size: 12px; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn.active { border-color: var(--accent); color: var(--accent); background: #2a2010; }
+  .filter-btn.active.ing-btn { border-color: var(--ing); color: var(--ing); background: var(--ing-bg); }
+  .filter-btn.active.pending-btn { border-color: #c8a96e; color: #c8a96e; background: #2a2010; }
+  .filter-btn:hover { color: var(--text); }
+  .hide-ing-btn { margin-left: 6px; }
+  .hide-ing-btn.active { border-color: #666; color: #aaa; background: #2a2a2a; text-decoration: line-through; }
+
+  .stats { padding: 8px 24px; background: var(--bg3); border-bottom: 1px solid var(--border); font-size: 12px; color: var(--text-dim); }
+  .stats span { color: var(--text); font-weight: 500; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; padding: 10px 24px; border-bottom: 1px solid var(--border); background: var(--bg2); }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-dim); }
+  .leg-pill { display: inline-block; padding: 1px 7px; border-radius: 8px; font-size: 10px; font-weight: 600; }
+
+  .boundary-note { margin: 12px 24px 0; padding: 8px 12px; background: #2a1c04; border-left: 3px solid var(--t3); border-radius: 0 4px 4px 0; font-size: 12px; color: #c8a060; }
+
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    position: sticky; top: 0; background: var(--bg3); padding: 8px 12px;
+    text-align: left; font-size: 11px; font-weight: 600; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border);
+    cursor: pointer; user-select: none;
+  }
+  thead th:hover { color: var(--text); }
+  thead th.sorted { color: var(--accent); }
+  .sort-arrow { margin-left: 3px; opacity: 0.5; }
+  .sort-arrow.active { opacity: 1; color: var(--accent); }
+
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+  tbody tr:hover { background: var(--bg3); }
+  tbody tr.hidden { display: none; }
+  tbody tr.row-ingested { background: var(--ing-bg); border-left: 3px solid var(--ing-border); }
+  tbody tr.row-ingested:hover { background: #122010; }
+
+  td { padding: 8px 12px; vertical-align: top; }
+  .td-iss { font-weight: 600; color: var(--text-dim); white-space: nowrap; font-size: 13px; min-width: 48px; }
+  .td-title { font-weight: 500; color: var(--text); }
+  .td-note { font-size: 11px; color: var(--text-dim); margin-top: 3px; }
+  .td-cat { font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+  .td-pri { white-space: nowrap; }
+
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+  .pill-t1 { background: var(--t1-bg); color: var(--t1); }
+  .pill-t2 { background: var(--t2-bg); color: var(--t2); }
+  .pill-t3 { background: var(--t3-bg); color: var(--t3); }
+  .pill-t4 { background: var(--t4-bg); color: var(--t4); border: 1px solid #333; }
+  .pill-roc { background: var(--roc-bg); color: var(--roc); }
+  .pill-siege { background: var(--siege-bg); color: var(--siege); }
+
+  .tag { display: inline-block; padding: 1px 5px; border-radius: 5px; font-size: 10px; font-weight: 600; margin-left: 4px; vertical-align: middle; }
+  .tag-prewa { background: var(--prewa-bg); color: var(--prewa); }
+  .tag-new   { background: var(--new-bg); color: var(--new); }
+  .tag-fix   { background: var(--fix-bg); color: var(--fix); }
+  .tag-ing   { background: var(--ing-bg); color: var(--ing); border: 1px solid var(--ing-border); }
+
+  .section-head td { background: var(--bg3); color: var(--text-dim); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 12px; border-bottom: 1px solid var(--border); }
+
+  .table-wrap { padding: 0 0 40px; overflow-x: auto; }
+
+  @media (max-width: 700px) {
+    .td-cat, .td-note { display: none; }
+    .controls input { width: 160px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>White Dwarf Article Index — Warhammer Fantasy Battle 3rd Edition</h1>
+  <p>Issues #95–154 (1987–1992) · Cross-referenced against WD154 index and community sources · Last updated April 2026</p>
+</div>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Search articles…" oninput="filterTable()">
+  <div class="filter-group" id="priority-filters">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" data-filter="t1" onclick="setFilter('t1',this)">Tier 1</button>
+    <button class="filter-btn" data-filter="t2" onclick="setFilter('t2',this)">Tier 2</button>
+    <button class="filter-btn" data-filter="t3" onclick="setFilter('t3',this)">Tier 3</button>
+    <button class="filter-btn" data-filter="t4" onclick="setFilter('t4',this)">Tier 4</button>
+    <button class="filter-btn" data-filter="roc" onclick="setFilter('roc',this)">RoC Deferred</button>
+    <button class="filter-btn" data-filter="siege" onclick="setFilter('siege',this)">Siege Deferred</button>
+    <button class="filter-btn" data-filter="prewa" onclick="setFilter('prewa',this)">Pre-WA</button>
+    <button class="filter-btn ing-btn" data-filter="ingested" onclick="setFilter('ingested',this)">✓ Ingested</button>
+  </div>
+  <button class="filter-btn hide-ing-btn" id="hide-ing-toggle" onclick="toggleHideIngested(this)">Hide ingested</button>
+</div>
+
+<div class="stats" id="stats">Showing <span id="count">—</span> articles</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="pill pill-t1 leg-pill">Tier 1</span> Ingest immediately</div>
+  <div class="legend-item"><span class="pill pill-t2 leg-pill">Tier 2</span> Strong candidate</div>
+  <div class="legend-item"><span class="pill pill-t3 leg-pill">Tier 3</span> Review scan first</div>
+  <div class="legend-item"><span class="pill pill-t4 leg-pill">Tier 4</span> Context / reference only</div>
+  <div class="legend-item"><span class="pill pill-roc leg-pill">RoC</span> Realm of Chaos — deferred</div>
+  <div class="legend-item"><span class="pill pill-siege leg-pill">Siege</span> Siege supplement — deferred</div>
+  <div class="legend-item"><span class="tag tag-prewa">pre-WA</span> Published before Warhammer Armies (~WD100) — WA version authoritative</div>
+  <div class="legend-item"><span class="tag tag-new">NEW</span> Found in WD154 index, not on original list</div>
+  <div class="legend-item"><span class="tag tag-fix">CORRECTED</span> Updated from WD154 cross-reference</div>
+  <div class="legend-item"><span class="tag tag-ing">✓ ingested</span> Content added to wiki</div>
+</div>
+
+<div class="boundary-note">
+  ⚠ <strong>Warhammer Armies published 1988 (approx. WD #107 boundary).</strong> Articles in issues #95–99 marked <span class="tag tag-prewa">pre-WA</span> have a high probability of having been reprinted and revised in WA. Treat the WA version as authoritative; use pre-WA articles only to identify what changed. The WA errata appeared in WD108, confirming WA was published shortly before that issue.
+</div>
+
+<div class="table-wrap">
+<table id="article-table">
+<thead>
+<tr>
+  <th onclick="sortTable(0)" data-col="0">Issue <span class="sort-arrow" id="arr0">↕</span></th>
+  <th onclick="sortTable(1)" data-col="1">Article <span class="sort-arrow" id="arr1">↕</span></th>
+  <th onclick="sortTable(2)" data-col="2">Category <span class="sort-arrow" id="arr2">↕</span></th>
+  <th onclick="sortTable(3)" data-col="3">Priority <span class="sort-arrow" id="arr3">↕</span></th>
+</tr>
+</thead>
+<tbody id="tbody">
+</tbody>
+</table>
+</div>
+
+<script>
+const ARTICLES = [
+  // [issue_num, issue_display, title, note, category, priority, tags, ingested_date]
+  // priority: t1 t2 t3 t4 roc siege
+  // tags: prewa, new, fix (space separated)
+  // ingested_date: 'YYYY-MM-DD' or ''
+
+  // ── ERRATA & Q&A ──
+  [108, '#108', 'Warhammer Armies Errata', 'Ingested 2026-04-03. Nearly all corrections were pre-applied; genuine gap was Whelp Masters options. Citations added to Equipment Costs for Characters (WA Special Rules), Whelp Masters card, Chaos Warrior Horse/Marauder Horse profiles, Beastman Shaman points, Skaven Initiative values, Warpstone charm cost, Norse Dwarf Berserkers.', 'Errata', 't1', '', '2026-04-03'],
+  [127, '#127', 'Questions and Answers', 'Ingested 2026-04-03. Added Ranks of Archers and Splitting Fire sections (Shooting page); Jezzail range band stats and full operational rules; magic missile clarification for Firing Through Gaps; Undead standards/musicians ruling. All cited inline.', 'Rules Q&A', 't1', '', '2026-04-03'],
+  [131, '#131', 'Questions and Answers (continued)', 'Ingested 2026-04-03. Added: War Machines vs flying targets (WA War Machines page); Wedge Formation each-model-fights-once clarification; Heroes excess wounds ruling (Character Models page); Reforming/Unformed full conditions and rules (Routs & Rallying page); Amuletic Standard interactions with Vortex/Fetid Cloud/Ravine; Snotlings count as 3 ranks for cannon.', 'Rules Q&A', 't1', '', '2026-04-03'],
+  [136, '#136', 'Questions and Answers (continued)', 'Ingested 2026-04-03. Added: Rout Test clarification (25% of original strength, fear auto-rout); Panic cascade rules (only combat routs trigger cascade, procedure order, 4″ start-of-turn test); Magic Weapons one-ability-per-round ruling with Trance/Parry declaration timing; Combat Results table fully expanded (saved wounds don\'t count, excess hero wounds discarded, standards stack, charge/follow-up conditions, deeper rank note).', 'Rules Q&A', 't1', '', '2026-04-03'],
+  [144, '#144', 'Battle Playsheet: updated reference sheet', 'Reviewed 2026-04-03. Gap-analysed against wiki Quick Reference page. Filled 7 empty stubs (psychology roll list; shooting modifiers table; HtH to-hit modifiers; combat results modifiers table; reserve committed units; rally qualifying conditions; victory bonus points tables) and added new Army Notes section (M) covering composition limits and standard-bearer costs. Rout threshold wording confirmed correct. Reference document — no new page needed.', 'Errata', 't1', '', '2026-04-03'],
+  [107, '#107', 'Slaves to Darkness Errata', 'Listed in WD154 index — RoC errata but may affect Chaos army rules in WFB.', 'Errata', 't3', 'new', ''],
+
+  // ── ARMY LISTS ──
+  [107, '#107', 'Norse: full army list', 'Ingested 2026-04-04. Full Norse army (Warhird) page added as wd-107-norse-army. 11 unit cards (Huscarls, Warrior Bondsmen, Bondsmen Archers, Berserkers, Thralls, Ulfwerenar, Norse Dwarfs, Bondsdwarfs, Norse Dwarf Berserkers, Troll Slayers, Giant Slayers). Full character/wizard profiles and tables. By Rick Priestley & Nigel Stillman.', 'Army list', 't1', '', '2026-04-04'],
+  [121, '#121', 'Karasashalla\'s Reavers: army list', 'Not in WD154 index under any obvious name. May be miscatalogued online or appear under a different title in the RoC section. Needs scan check.', 'Army list', 't3', '', ''],
+  [137, '#137', 'Bretonnian Army List', 'Ingested 2026-04-05. Full Bretonnian army list supplementing WA Bretonnia. Includes Bretonnian Retainers in same issue.', 'Army list', 't1', '', '2026-04-05'],
+  [137, '#137', 'Bretonnian Retainers', 'Ingested 2026-04-05. Companion unit entry to WD137 Bretonnian list.', 'Army list', 't1', '', '2026-04-05'],
+  [138, '#138', 'Bretonnian Knights', 'Ingested 2026-04-05. Continuation/expansion of WD137 list. WD154 also lists Bretonnian Army at #138 as a sample army with colour scheme notes.', 'Army list', 't1', '', '2026-04-05'],
+  [141, '#141', 'Mike McVey\'s Wood Elf Army', 'Out of scope — confirmed no rules content, sample army only.', 'Army list', 't4', 'fix', ''],
+  [142, '#142', 'Undead Army', 'Out of scope — confirmed no rules content, sample army only.', 'Army list', 't4', '', ''],
+  [144, '#144', 'Dark Elf Army', 'Out of scope — confirmed no rules content, sample army only.', 'Army list', 't4', '', ''],
+  [144, '#144', 'Elven Lords (High Elf character expansion)', 'Out of scope — confirmed no rules content, sample army only.', 'Army list', 't4', '', ''],
+  [144, '#144', 'Wayne England\'s Dwarf Army (part 2)', 'Out of scope — confirmed no rules content, sample army only.', 'Army list', 't4', 'fix', ''],
+  [146, '#146', 'Empire Army Background', 'WD154 splits Empire content: background in #146, rules & list in #147.', 'Army list', 't2', 'new', ''],
+  [147, '#147', 'Empire Army Rules & Army List', '⚠ Skipping — on review this article reads as a 4th edition preview rather than a true 3rd edition supplement. Rules and unit profiles use 4th ed conventions and would be difficult to incorporate cleanly into the 3rd ed wiki. Flagged for potential future 4th ed companion treatment.', 'Army list', 't3', 'fix', ''],
+  [119, '#119', 'Skaven (army content)', 'Out of scope — confirmed no rules content.', 'Army list', 't4', 'new', ''],
+  [137, '#137', 'Andy Chamber\'s Skaven Army', 'WD154 clarifies this is a sample army at #137 — low rules content expected.', 'Army list', 't4', 'fix', ''],
+
+  // ── UNITS ──
+  [96, '#96', 'Wardancers! for WFB', 'Original Wardancer rules predating WA. Compare with WD144 Elf Wardancers for changes — WD144 is the authoritative version.', 'Units', 't4', 'prewa', ''],
+  [98, '#98', 'Chaos Thugs: WFB', 'Chaos Thugs ARE fully present in WA Chaos list (cards transcribed in wiki) — this is comparison material only, not a content gap.', 'Units', 't4', 'prewa fix', ''],
+  [98, '#98', 'Chaos Centaurs: WFB', 'In WA ally list. Compare for changes vs pre-WA version. WA version authoritative.', 'Units', 't4', 'prewa', ''],
+  [100, '#100', 'Dwarf Gyrocopters (Thwoppa Thwoppa Thwoppa!)', 'Ingested 2026-04-05. New Dwarf Gyrocopter unit page added (wd-100-gyrocopters). Confirmed in WD154 index. Not in WA Dwarfs — genuine new unit. Post-WA boundary.', 'Units', 't1', '', '2026-04-05'],
+  [103, '#103', 'Crush Crumble and Chop: Chaos Centaur weapons', 'Misidentified — WD#103 is Chaos Dwarf War Machines (already ingested 2026-04-05). Chaos Centaurs are pre-WA content; WA version is authoritative. Out of scope.', 'Units', 't4', 'fix', ''],
+  [106, '#106', 'Boar Boyz! for WFB', 'Ingested 2026-04-06. Added card-og-020-boar-boyz to Orcs & Goblins army list. +1 Shock Elite Orc Rider + Warboar profile; Level 15 Hero (Bratt) and Standard Bearer (Ridd) as named champions. 10–20 models, 27pts/model, spear option +2pts, Magic Standard 50pts.', 'Units', 't2', 'fix', '2026-04-06'],
+  [107, '#107', 'Chaos Renegades', 'Listed in WD107 Lexicanum contents (p.57) — not on original online list. Contents unknown; may be unit rules, ally list, or RoC-adjacent. Check scan.', 'Units', 't3', 'new', ''],
+  [108, '#108', 'Witch Elves of Naggaroth', 'WD154 lists under Elves section. Author Richard Halliwell. Check if rules included or background only — Amazon description suggests primarily background.', 'Units', 't3', '', ''],
+  [114, '#114', 'Storm Riders', 'Ingested 2026-04-05. New page wd-114-storm-riders. Summon Storm Riders spell (Level 2, 9 MP, 6″) plus Storm Rider Skeleton Chariot profile (crew × 2, Undead Horse × 2). Cross-referenced from Necromantic Spells page. Second half of article only — first half (short story/lore) not ingested. WD154 clarifies: "Rules for Skeleton charioteers." Distinct from the Chaos Chariots RoC article in the same issue.', 'Units', 't1', 'fix', '2026-04-05'],
+  [116, '#116', 'Dwarf Mountaineers', 'Ingested 2026-04-06. Added wa-dw-mountaineers section to Dwarf army list (card-dw-015-mountaineers). 5–10 models, 10pts. Scouts, ski movement (downhill 6″/no terrain penalty), Ski Charge 9″ with blunderbuss fire, Yodel of Doom (+1 to hit = Battlerage, 25pts), alpenhorn alternative.', 'Units', 't2', '', '2026-04-06'],
+  [135, '#135', 'Wayne England\'s Dwarf Army (part 1)', 'WD154 shows this is a two-part article at #135 and #144. Named regiment / army showcase.', 'Units', 't3', 'fix', ''],
+  [144, '#144', 'Elf Wardancers', 'Ingested 2026-04-05. Updated wa-sr-wardancers in-place. 6 special rules replacing 4; Interpenetration and Taunt become general rules (not attack modes); 4 named abilities (The Whirling Death, The Woven Mist, The Shadows Coil, The Storm of Blades) replace unnamed WA attack modes. Whirling Death now grants full frenzy. Explicit no-heavy-armour rule added. Source note and supersession notice added.', 'Units', 't1', 'fix', '2026-04-05'],
+  [152, '#152', 'Imperial Outriders', 'New Empire cavalry unit. Confirmed in WD154. Companion to WD147 Empire list.', 'Units', 't2', '', ''],
+  [153, '#153', 'Night Goblins', 'Listed in WD154 under Orcs & Goblins. Check if full stats/rules or background only.', 'Units', 't3', '', ''],
+
+  // ── WAR MACHINES & WEAPONS ──
+  [95, '#95', 'Dwarf Flame Cannon', 'Pre-WA. Out of scope — WA is authoritative; pre-WA war machines not ingested.', 'War machine', 't4', 'prewa', ''],
+  [101, '#101', 'Orc Bolt Thrower', 'Pre-WA. Out of scope — WA is authoritative; pre-WA war machines not ingested.', 'War machine', 't4', 'prewa', ''],
+  [101, '#101', 'Roks and Wheelz: Orc chariot & stone thrower rules', 'Pre-WA. Out of scope — WA is authoritative; pre-WA war machines not ingested.', 'War machine', 't4', 'prewa', ''],
+  [105, '#105', 'Goblin Stone Throwers', 'Ingested 2026-04-06. Added card-og-08-goblin-stone-throwers to O&G war machines. Goblin Crew (3), Stone Thrower 12″–48″ 1″radius Str5 −2 D4. 1–4 units, 37½pts inc. crew, option light armour +1pt.', 'War machine', 't2', 'fix', '2026-04-06'],
+  [108, '#108', 'Chaos Dwarf Ballistics (Swivel Gun)', '⚠ Partially ingested 2026-04-05 — WA content only. Full swivel gun rules added to War Machines page (wa-wm-swivel-gun). Two WA army list cards added to Chaos list: 0–30 Chaos Dwarf Crossbowmen (14 pts/model) and 0–8 Chaos Dwarf Swivel Guns (50 pts/team). RoC content NOT ingested: two Armies of Khorne variants (0–8 Swivel Gun at 55 pts/team; 0–24 Crossbowmen at 125 pts/8 models) deferred with all other RoC content. Authors: Nigel Stillman &amp; Mike Brunton.', 'War machine', 't1', 'fix roc', '2026-04-05'],
+  [103, '#103', 'Chaos Dwarf War Machines', 'Ingested 2026-04-05. War machine rules (13 special rules + Special Damage Chart) and Boar Centaur entry were already fully transcribed in the wiki from WA. Gap was the army list card only: 0–3 Chaos Dwarf War Machines added to Chaos army list (120 pts/model, Boar Centaur crew, Double-Handed Weapon, Heavy Armour &amp; Barding).', 'War machine', 't1', 'fix new', '2026-04-05'],
+  [109, '#109', 'Goblin War Chariot & Orc Stone Thrower', 'Ingested 2026-04-06. Goblin War Chariots: card-og-06-goblin-war-chariots updated — name corrected (Battle→War), points 46→42 (armour unbundled), options added (Scythed Wheels 20, Magic Standard 50, Bows/Shields/Light Armour 2 each per crew), flavour replaced. Orc Stone Throwers: card-og-08-orc-stone-throwers confirmed already matched WD109; Int=5 correct (WD109 image Int=6 is a typo, consistent with all other Orc Crew rows in wiki).', 'War machine', 't2', 'ingested', '2026-04-06'],
+  [110, '#110', 'Dwarf Firethrowers', 'Ingested 2026-04-06. Army list card only: 0–8 Dwarf Firethrower Teams added to Dwarf army list (56 pts/team, 1–4 teams, 2 Dwarf Crew, S4 −3 D3 wounds, 12″ range, 1″ template). Light Armour (2 pts) and Heavy Armour (3 pts) options. Subject to Fire Thrower rules in WFB and Using Teams rules in WA. Image ingested.', 'War machine', 't1', 'fix', '2026-04-06'],
+  [147, '#147', 'Empire Artillery Rules', '⚠ Part of the WD147 Empire content — skipping along with the army list as this appears to be 4th edition preview material. Flagged for future 4th ed companion treatment.', 'War machine', 't3', 'fix', ''],
+  [149, '#149', 'Empire War Wagon', '⚠ 4th edition preview — deferring alongside WD147 Empire Artillery and WD151 Steam Tank. Treat in a future 4th ed companion pass.', 'War machine', 't3', 'fix', ''],
+  [150, '#150', 'Halfling Hot Pot', '⚠ Deferred — contains some rules but no unit card or stats. Not a standard unit entry. Treat in a future 4th ed companion pass alongside WD147/149/151 Empire content.', 'War machine', 't3', 'fix', ''],
+  [151, '#151', 'Imperial Steam Tank', '⚠ Part of the WD151 Empire army list refresh — 4th edition preview material. Skip alongside WD147 Empire Artillery; treat together in a future 4th ed companion pass.', 'War machine', 't3', 'fix', ''],
+
+  // ── RULES ──
+  [101, '#101', 'Strategems, Ruses and Ploys: Tactics in WFB', 'Optional tactical rules. Review scope before committing — may be optional variant rules.', 'Rules', 't3', '', ''],
+  [113, '#113', 'Colleges of Magic (part 1)', 'Ingested 2026-04-06. New page ma-colour-magic. Great Wheel (8 colleges, clockwise superiority), colour casting rules (±1 MST vs wizards, no modifier vs units), Hub Wizards (Rainbow &amp; Dark mutual counters), Chaos Wizards rules. Clockwise order flagged for verification against WD#113 p.3 diagram. Lore/college personality descriptions trimmed. Authors: Bryan Ansell, Rick Priestley &amp; Geoff Lynas.', 'Rules', 't1', 'fix', '2026-04-06'],
+  [114, '#114', 'Colleges of Magic (part 2) — six new spells', 'Ingested 2026-04-06 alongside WD#113. Chaos Wizards Table (Slaanesh/Nurgle/Tzeentch), Colour Magic Spell Table (C1.1–C1.3, C2.1–C2.3), full descriptions for C2.2 Colour Challenge and C2.3 Combustion of Magic. C1.1–C1.3 and C2.1 stats confirmed; body text flagged ⚠ for verification at higher resolution. Storm Riders ingested separately (2026-04-05). College symbols chart (p.11) not transcribed — visual reference only.', 'Rules', 't1', 'fix', '2026-04-06'],
+  [130, '#130', 'Chivalry: card-moderated combat for knights', 'Out of scope — optional card-moderated combat system, not part of standard WFB3 rules.', 'Rules', 't4', 'fix', ''],
+  [152, '#152', 'The Dwarf Realms: history and description', 'Ingested 2026-04-06 (rules intro only). General rules for using runes covered in wa-dw-rune-weapons. Background/realm description deferred — lore only.', 'Rules', 't1', '', '2026-04-06'],
+  [152, '#152', 'Dwarf Language and Runic Script', 'Deferred — background/lore only, no rules content.', 'Rules', 't3', 'new', ''],
+  [153, '#153', 'Dwarf Rune Weapons', 'Ingested 2026-04-06. Full rune system in wa-dw-rune-weapons: 8 name runes, 11 weapon runes, 2 armour runes, 3 banner runes, 3 sacred runes, 3 runic artifacts. Gromril rules included.', 'Rules', 't1', '', '2026-04-06'],
+
+  // ── NAMED REGIMENTS ──
+  [95, '#95', 'Prince Ulther\'s Imperial Dwarfs — Dragon Company', 'Pre-WA. Not in WD154 index — check if reprinted in WA or stands alone. Named regiment with special rules.', 'Named regiment', 't2', 'prewa', ''],
+
+  // ── SCENARIOS, BATTLE REPORTS & TACTICS ──
+  [97, '#97', 'The Valley of Death: WFB Scenario', '', 'Scenario', 't4', '', ''],
+  [102, '#102', 'Fimir: Rules and Brief Encounter', 'WD154 title confirms rules are included alongside the WFRP scenario — worth checking for WFB Fimir rules content.', 'Scenario', 't3', 'fix', ''],
+  [103, '#103', 'Get Da Boyz!: Orc & Gobbo army', 'Battle report / sample army.', 'Battle report', 't4', '', ''],
+  [107, '#107', 'Twenty-Four Hours at Carik Mound', 'WD154: "Titanic encounter between Good and Evil". Lexicanum confirms p.66. Battle report.', 'Battle report', 't4', '', ''],
+  [108, '#108', 'Survival of the Fittest: running a Chaos army', 'Tactics article. Authors: Mike Brunton and Rick Priestley.', 'Tactics', 't4', '', ''],
+  [111, '#111', 'Turning The Tide: guide to fighting Chaos', 'Tactics article.', 'Tactics', 't4', '', ''],
+  [117, '#117', 'The Best Laid Plans...: battle report', 'WD154: High Elves vs Skaven, from Games Day \'89.', 'Battle report', 't4', '', ''],
+  [120, '#120', 'A Gathering of Eagles: battle report', 'WD154: Orcs vs Wood Elves, from Games Day \'89.', 'Battle report', 't4', '', ''],
+  [123, '#123', 'Clash of Evil: battle report', 'WD154: Chaos vs Orcs and Goblins.', 'Battle report', 't4', '', ''],
+  [148, '#148', 'Battle of Blood Keep: battle report', 'WD154: Empire vs a combined force of Elves and Dwarfs.', 'Battle report', 't4', '', ''],
+  [153, '#153', 'The Battle of Grimdal\'s Tomb: battle report', 'WD154: Dwarfs and Bretonnians fight for a magic weapon.', 'Battle report', 't4', '', ''],
+
+  // ── BACKGROUND ──
+  [108, '#108', 'Witch Elves of Naggaroth: background', 'Listed under Elves in WD154. Author: Richard Halliwell. Background for Dark Elves.', 'Background', 't4', '', ''],
+  [154, '#154', 'WFB: background to the new (4th) edition', 'WD154 itself — signals what changed from 3rd to 4th, useful for understanding the edition boundary.', 'Background', 't3', '', ''],
+
+  // ── REALM OF CHAOS — DEFERRED ──
+  [96, '#96', 'Slann o\' War', 'Slann naval rules — RoC adjacent.', 'RoC adjacent', 'roc', '', ''],
+  [102, '#102', 'Realm of Chaos: Daemon Names', 'Preview from RoC — Slaves to Darkness.', 'RoC', 'roc', '', ''],
+  [103, '#103', 'Realm of Chaos: Chaos Swords', 'Preview from RoC — Slaves to Darkness.', 'RoC', 'roc', '', ''],
+  [106, '#106', 'Chaos Beastmen for WFB', 'RoC-linked content.', 'RoC', 'roc', '', ''],
+  [109, '#109', 'Servants of Chaos: Nurgle and Tzeentch daemons', '', 'RoC', 'roc', '', ''],
+  [113, '#113', 'Narrative Campaigns: Realm of Chaos', 'Campaign ideas with a Chaotic flavour. WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [114, '#114', 'Chaos Chariots from RoC', 'Excerpt from The Lost and the Damned. Authors: Bryan Ansell and Rick Priestley. WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [114, '#114', 'Palanquins of Nurgle', 'WD154 confirmed. RoC item.', 'RoC', 'roc', '', ''],
+  [119, '#119', 'Nurgle: background, rules and monsters', 'Preview/content from RoC. WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [120, '#120', 'Tzeentch: background, rules and monsters', 'Preview/content from RoC. WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [121, '#121', 'Gifts & Magic of Nurgle', 'WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [122, '#122', 'Magic of Tzeentch', 'WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [124, '#124', 'Chaos Warbands: saga making', 'WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [124, '#124', 'Beastmen: extract from RoC', 'WD154 confirmed.', 'RoC', 'roc', '', ''],
+  [125, '#125', 'Chaos Minotaurs: more from RoC', 'WD154 confirmed.', 'RoC', 'roc', '', ''],
+
+  // ── SIEGE — DEFERRED ──
+  [100, '#100', 'Siege: Additional Rules (part 1)', 'Not on original online list — found in WD154 index. Substantial siege rules content. Deferred pending Warhammer Siege supplement work.', 'Siege', 'siege', 'new', ''],
+  [101, '#101', 'Siege: Additional Rules (part 2)', 'WD154 confirmed. Continuation of WD100 siege rules.', 'Siege', 'siege', 'new', ''],
+  [101, '#101', 'Siege: Tactics', 'WD154 confirmed. Companion tactics article for siege rules.', 'Siege', 'siege', 'new', ''],
+];
+
+const PILL_CLASS = { t1:'pill-t1', t2:'pill-t2', t3:'pill-t3', t4:'pill-t4', roc:'pill-roc', siege:'pill-siege' };
+const PILL_LABEL = { t1:'Tier 1', t2:'Tier 2', t3:'Tier 3', t4:'Tier 4', roc:'RoC Deferred', siege:'Siege Deferred' };
+const TAG_HTML = { prewa:'<span class="tag tag-prewa">pre-WA</span>', new:'<span class="tag tag-new">NEW</span>', fix:'<span class="tag tag-fix">CORRECTED</span>' };
+
+let currentFilter = 'all';
+let hideIngested = false;
+let sortCol = 0, sortDir = 1;
+
+function buildTable(data) {
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+  data.forEach(row => {
+    const [inum, idisp, title, note, cat, pri, tags, ingested] = row;
+    const tagHtml = (tags||'').split(' ').filter(Boolean).map(t => TAG_HTML[t]||'').join('');
+    const ingTag = ingested ? `<span class="tag tag-ing">✓ ingested ${ingested}</span>` : '';
+    const tr = document.createElement('tr');
+    tr.dataset.pri = pri;
+    tr.dataset.tags = tags||'';
+    tr.dataset.inum = inum;
+    tr.dataset.ingested = ingested || '';
+    if (ingested) tr.classList.add('row-ingested');
+    tr.innerHTML = `
+      <td class="td-iss">${idisp}</td>
+      <td class="td-title">${title}${tagHtml}${ingTag}${note ? `<div class="td-note">${note}</div>` : ''}</td>
+      <td class="td-cat">${cat}</td>
+      <td class="td-pri"><span class="pill ${PILL_CLASS[pri]}">${PILL_LABEL[pri]}</span></td>`;
+    tbody.appendChild(tr);
+  });
+  updateCount();
+}
+
+function filterTable() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const rows = document.querySelectorAll('#tbody tr');
+  let visible = 0;
+  rows.forEach(tr => {
+    let matchPri;
+    if (currentFilter === 'all') {
+      matchPri = true;
+    } else if (currentFilter === 'ingested') {
+      matchPri = !!tr.dataset.ingested;
+    } else if (currentFilter === 'prewa') {
+      matchPri = tr.dataset.tags.includes('prewa');
+    } else {
+      matchPri = tr.dataset.pri === currentFilter;
+    }
+    const matchHide = !(hideIngested && tr.dataset.ingested);
+    const matchSearch = !q || tr.textContent.toLowerCase().includes(q);
+    tr.classList.toggle('hidden', !(matchPri && matchHide && matchSearch));
+    if (matchPri && matchHide && matchSearch) visible++;
+  });
+  document.getElementById('count').textContent = visible;
+}
+
+function toggleHideIngested(btn) {
+  hideIngested = !hideIngested;
+  btn.classList.toggle('active', hideIngested);
+  btn.textContent = hideIngested ? 'Show ingested' : 'Hide ingested';
+  filterTable();
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterTable();
+}
+
+function updateCount() {
+  filterTable();
+}
+
+function sortTable(col) {
+  if (sortCol === col) sortDir = -sortDir; else { sortCol = col; sortDir = 1; }
+  document.querySelectorAll('.sort-arrow').forEach((a,i) => {
+    a.classList.toggle('active', i === col);
+    a.textContent = i === col ? (sortDir === 1 ? '↑' : '↓') : '↕';
+  });
+  const sorted = [...ARTICLES].sort((a, b) => {
+    let va = col === 0 ? a[0] : (col === 1 ? a[2] : (col === 2 ? a[4] : a[5]));
+    let vb = col === 0 ? b[0] : (col === 1 ? b[2] : (col === 2 ? b[4] : b[5]));
+    if (typeof va === 'number') return sortDir * (va - vb);
+    return sortDir * String(va).localeCompare(String(vb));
+  });
+  buildTable(sorted);
+}
+
+// Init
+buildTable(ARTICLES);
+</script>
+</body>
+</html>
