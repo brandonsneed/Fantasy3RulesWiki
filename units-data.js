@@ -1,0 +1,20676 @@
+const WFB3_ARMIES = [
+  { id: "dark-elves", name: "Dark Elves", pageId: "wa-dark-elves" },
+  { id: "wood-elves", name: "Wood Elves", pageId: "wa-wood-elves" },
+  { id: "high-elves", name: "High Elves", pageId: "wa-high-elves" },
+  { id: "empire", name: "The Empire", pageId: "wa-empire" },
+  { id: "bretonnia", name: "Bretonnia", pageId: "wa-bretonnia" },
+  { id: "chaos", name: "Chaos", pageId: "wa-chaos" },
+  { id: "skaven", name: "Skaven", pageId: "wa-skaven" },
+  { id: "orcs-goblins", name: "Orcs & Goblins", pageId: "wa-orcs-goblins" },
+  { id: "dwarfs", name: "Dwarfs", pageId: "wa-dwarfs" },
+  { id: "slann", name: "Slann", pageId: "wa-slann" },
+  { id: "undead", name: "Undead", pageId: "wa-undead" },
+  { id: "ally-chaos", name: "Ally: Chaos", pageId: "wa-ally-chaos" },
+  { id: "ally-dwarf", name: "Ally: Dwarf", pageId: "wa-ally-dwarf" },
+  { id: "ally-dark-elf", name: "Ally: Dark Elf", pageId: "wa-ally-dark-elf" },
+  { id: "ally-high-elf", name: "Ally: High Elf", pageId: "wa-ally-high-elf" },
+  { id: "ally-wood-elf", name: "Ally: Wood Elf", pageId: "wa-ally-wood-elf" },
+  { id: "ally-fimir", name: "Ally: Fimir", pageId: "wa-ally-fimir" },
+  { id: "ally-old-worlder", name: "Ally: Old Worlder", pageId: "wa-ally-old-worlder" },
+  { id: "ally-orc-goblin", name: "Ally: Orc Goblin", pageId: "wa-ally-orc-goblin" },
+  { id: "ally-pygmy", name: "Ally: Pygmy", pageId: "wa-ally-pygmy" },
+  { id: "ally-skaven", name: "Ally: Skaven", pageId: "wa-ally-skaven" },
+  { id: "ally-undead", name: "Ally: Undead", pageId: "wa-ally-undead" },
+  { id: "ally-halfling", name: "Ally: Halfling", pageId: "wa-ally-halfling" },
+  { id: "ally-zoat", name: "Ally: Zoat", pageId: "wa-ally-zoat" },
+  { id: "merc-dwarf", name: "Merc: Dwarf", pageId: "wa-merc-dwarf" },
+  { id: "merc-giant-ogre", name: "Merc: Giant Ogre", pageId: "wa-merc-giant-ogre" },
+  { id: "merc-half-orc", name: "Merc: Half Orc", pageId: "wa-merc-half-orc" },
+  { id: "merc-hobgoblin", name: "Merc: Hobgoblin", pageId: "wa-merc-hobgoblin" },
+  { id: "merc-nippon", name: "Merc: Nippon", pageId: "wa-merc-nippon" },
+  { id: "merc-orc", name: "Merc: Orc", pageId: "wa-merc-orc" },
+  { id: "merc-norse", name: "Merc: Norse", pageId: "wa-merc-norse" },
+  { id: "merc-old-worlder", name: "Merc: Old Worlder", pageId: "wa-merc-old-worlder" },
+  { id: "norse", name: "Norse", pageId: "wa-norse" },
+];
+
+const WFB3_UNITS = [
+  {
+    "id": "de-40100-warriors",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "40–100",
+    "name": "Warriors",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-warriors.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "15–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The grim warrior bands of the Dark Elves comprise the vast bulk of their numerous infantry. No Dark Elven force ever goes to war without a regiment or two."
+  },
+  {
+    "id": "de-2060-crossbowmen",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "20–60",
+    "name": "Crossbowmen",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-crossbowmen.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may substitute:",
+        "items": [
+          {
+            "name": "Repeating Crossbows for Crossbows",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Being great exponents of the ambush, Dark Elves favour the use of the crossbow, and are capable of putting it to devastating effect against their enemies."
+  },
+  {
+    "id": "de-1060-witch-elves",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "10–60",
+    "name": "Witch Elves",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-witch-elves.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Poisoned Attacks",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Witch Elves are the most evil of all their diabolic kin. They are terrifying adversaries who can be driven into a frenzy of unquenchable bloodlust by the excitement of battle."
+  },
+  {
+    "id": "de-025-shadows",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–25",
+    "name": "Shadows",
+    "profiles": [
+      {
+        "label": "Dark Elf Scout",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-shadows.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "3"
+          },
+          {
+            "name": "Repeating Crossbows",
+            "cost": "4"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf scouts are sly and cunning. They are masters of the ambush, seeking shadows and gloom in which to lurk, wearing twilight colours that merge with the shade."
+  },
+  {
+    "id": "de-040-dark-riders",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Dark Riders",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-dark-riders.png",
+    "ptsPerModel": 22,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Lances",
+            "cost": "4"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Repeating Crossbows",
+            "cost": "8"
+          },
+          {
+            "name": "Horse Barding",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Heralds of the armies of Naggaroth, these fell riders spread fear before them as they burn and pillage. Their mirthless laughter chills the blood of their victims, and it is said that their eyes never blink."
+  },
+  {
+    "id": "de-020-helldrakes",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Helldrakes",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "7",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One Mount",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "4",
+          "–",
+          "1",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-helldrakes.png",
+    "ptsPerModel": 39,
+    "ptsFixed": null,
+    "models": "5–15",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "6"
+          },
+          {
+            "name": "Lances",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Repeating Crossbows",
+            "cost": "8"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf nobles who choose to ride the fearful Cold Ones are awesome warriors. They inhale corrosive infusions to deaden their sense of smell so that they may endure the stench of these great lizards."
+  },
+  {
+    "id": "de-030-doomsteeds",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Doomsteeds",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "7",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "1",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-doomsteeds.png",
+    "ptsPerModel": 33,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Repeating Crossbows",
+            "cost": "8"
+          },
+          {
+            "name": "Horse Barding",
+            "cost": "8"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf Lords prefer to fight mounted, riding down their enemies with their swift black warhorses."
+  },
+  {
+    "id": "de-040-doomdrakes",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Doomdrakes",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One Mount",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "4",
+          "–",
+          "1",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-doomdrakes.png",
+    "ptsPerModel": 35,
+    "ptsFixed": null,
+    "models": "5–15",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "6"
+          },
+          {
+            "name": "Lances",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Repeating Crossbows",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are young riders, yet to attain full mastery over their lizard mounts."
+  },
+  {
+    "id": "de-08-whelp-masters",
+    "army": "dark-elves",
+    "type": "handler",
+    "allowance": "0–8",
+    "name": "Whelp Masters",
+    "profiles": [
+      {
+        "label": "Animal Handler",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": "Dark Elf"
+      },
+      {
+        "label": "Chaos Hounds",
+        "stats": [
+          "6",
+          "4",
+          "0",
+          "4",
+          "4",
+          "2",
+          "4",
+          "2",
+          "6",
+          "4",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhounds",
+        "stats": [
+          "6",
+          "3",
+          "0",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "4",
+          "6",
+          "4"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-whelpmasters.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "1–3 Handlers with packs",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any Animal Handler may have:",
+        "items": [
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Handlers may lead either:",
+        "items": [
+          {
+            "name": "Chaos Hounds",
+            "cost": "23"
+          },
+          {
+            "name": "Warhounds",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": [
+      {
+        "animal": "Chaos Hounds",
+        "cost": "23"
+      },
+      {
+        "animal": "Warhounds",
+        "cost": "4"
+      }
+    ],
+    "aggregateTable": null,
+    "flavour": "There is nothing these depraved beastmasters like better than the chase, setting the dogs on fleeing foes, hunting quarry for the cauldrons. Each handler may control a pack of 2–6 animals. Two or more packs may be merged to form larger units, but units may contain only one type of creature."
+  },
+  {
+    "id": "de-01-dark-elf-war-altar",
+    "army": "dark-elves",
+    "type": "waraltar",
+    "allowance": "0–1",
+    "name": "Dark Elf War Altar",
+    "profiles": [
+      {
+        "label": "Altar Guards (2)",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-war-altar.png",
+    "ptsPerModel": 70,
+    "ptsFixed": null,
+    "models": "1 Altar & Guards",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "War altar may have:",
+        "items": [
+          {
+            "name": "Up to 3 extra guards",
+            "cost": "10"
+          }
+        ]
+      },
+      {
+        "subheading": "Altar guards may have:",
+        "items": [
+          {
+            "name": "A magic standard",
+            "cost": "50"
+          },
+          {
+            "name": "A magic instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf sacrificial altars may be brought right up to the slaughter fields in readiness for the victory celebrations. The presence of an altar fills the Dark Elf warriors with predatory zeal lest the gods be disappointed."
+  },
+  {
+    "id": "de-04-repeating-bolt-throwers",
+    "army": "dark-elves",
+    "type": "warmachine",
+    "allowance": "0–4",
+    "name": "Repeating Bolt Throwers",
+    "profiles": [
+      {
+        "label": "Dark Elf Crew (2)",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-bolt-thrower.png",
+    "ptsPerModel": null,
+    "ptsFixed": 58,
+    "models": "1–4 Bolt Throwers",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": {
+      "label": "Repeating Bolt Thrower",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "2"
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "When the enemy masses together in stubborn defiance they present an ideal target for this deadly weapon. The repeating dart thrower fires a constant barrage of missiles upon the hapless foe."
+  },
+  {
+    "id": "we-020-elven-lords",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Elven Lords",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-elven-lords.png",
+    "ptsPerModel": 31,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Warhorse Barding",
+            "cost": "8"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The lords of Elven communities and their noble retainers ride magnificent warhorses into battle. Wood Elves favour roan and dappled horses, plaiting their manes and ornamenting their bridles with hair-plumes and jewels."
+  },
+  {
+    "id": "we-040-wood-riders",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Wood Riders",
+    "profiles": [
+      {
+        "label": "Elf (incl. horse)",
+        "stats": [
+          "8*",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes movement allowance of horse",
+    "profileD6": false,
+    "art": "img/unit-we-wood-riders.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Javelins",
+            "cost": "2"
+          },
+          {
+            "name": "Longbows",
+            "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Most Wood Elf settlements can muster riders. They are valued as messengers and patrol the woodland ways. In time of war, these band together to provide the Wood Elf host with a useful mounted force."
+  },
+  {
+    "id": "we-04-wain-lords",
+    "army": "wood-elves",
+    "type": "chariot",
+    "allowance": "0–4",
+    "name": "Wain Lords",
+    "profiles": [
+      {
+        "label": "Elf Crew (4)",
+        "stats": [
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse (4)",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-wain-lords.png",
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1–4 Chariots",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": {
+      "label": "Heavy Chariot",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "4",
+      "steeds": "4",
+      "attacks": "–"
+    },
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Amongst the open glades of the Elven woods, mighty lords race their glittering chariots in preparation for war. Elven chariots are made from the wood of the lornalim tree and are incredibly light and strong. Note that if chariot warriors have shields, all crew including the driver count as shielded; the points additions have been calculated accordingly. Chariot crews are considered to be armed with hand weapons irrespective of the weapons carried by the model."
+  },
+  {
+    "id": "we-020-guards",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Guards",
+    "profiles": [
+      {
+        "label": "+2 Missile Elite",
+        "stats": [
+          "5",
+          "4",
+          "5",
+          "3",
+          "3",
+          "1",
+          "7",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-guards.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Large settlements are protected by contingents of guards who watch the forest paths from their hidden strongpoints. These small units of Guards form the core of Wood Elf campaigning armies."
+  },
+  {
+    "id": "we-040-wardancers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Wardancers",
+    "profiles": [
+      {
+        "label": "Elf Wardancer",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-wardancers.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Flails",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Wardancers are courageous and incredibly athletic warriors. Their style of fighting is fleet and agile like a deadly 'dance' which cuts a swathe through their foes."
+  },
+  {
+    "id": "we-030-lords-bowmen",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Lord's Bowmen",
+    "profiles": [
+      {
+        "label": "+1 Missile Elite",
+        "stats": [
+          "5",
+          "4",
+          "5",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-lords-bowmen.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The best archers in a Wood Elf realm are banded together by their lord into elite contingents who live in the lord's hall in constant readiness."
+  },
+  {
+    "id": "we-030-glade-runners",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Glade Runners",
+    "profiles": [
+      {
+        "label": "Elf Scout",
+        "stats": [
+          "5",
+          "4",
+          "5",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-glade-runners.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "5–12",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are bands of scouts, way-watchers, messengers and hunters. They can follow the tracks of any who enter the forest for great distances while remaining unseen. They know the woodland trails intimately and can lead intruders astray with ease."
+  },
+  {
+    "id": "we-3060-archers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "30–60",
+    "name": "Archers",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-archers.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many Wood Elves fight as archers, using a bow fashioned from the lornalim tree which grows in the woods of the Old World. The longbow is their natural weapon, and one with which they are highly skilled."
+  },
+  {
+    "id": "we-060-warrior-kinbands",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Warrior Kinbands",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-warrior-kinbands.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elves live in very close families which form the basis for warriors bands in times of war. These kinbands carry a family banner and wear the family's badge upon their war-gear."
+  },
+  {
+    "id": "we-06-beastmasters",
+    "army": "wood-elves",
+    "type": "handler",
+    "allowance": "0–6",
+    "name": "Beastmasters",
+    "profiles": [
+      {
+        "label": "Animal Handler",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": "Elf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-beastmasters.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "1–3 Handlers with packs",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": [],
+    "aggregateTable": null,
+    "flavour": "Wood Elf Beastmasters train their packs ready to follow their lords in the wild hunt. In battle the quarry is the foe. Each handler may control from 2–6 animal models, and two or more handlers and their packs may be merged to form larger units. Each animal handler unit may contain only one type of creature, however."
+  },
+  {
+    "id": "we-020-falconers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Falconers",
+    "profiles": [
+      {
+        "label": "Elf Falconer",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Hawk",
+        "stats": [
+          "–",
+          "5",
+          "5",
+          "2",
+          "–",
+          "–",
+          "–",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-falconers.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon & Hawk",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Wood Elf lords are great hunters and hawkers. Their falconers tame and train birds of prey both for hunting and for war."
+  },
+  {
+    "id": "we-08-shapechangers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–8",
+    "name": "Shapechangers",
+    "profiles": [
+      {
+        "label": "Elf Shapechanger",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Giant Wolf*",
+        "stats": [
+          "9",
+          "4",
+          "0",
+          "3",
+          "3",
+          "1",
+          "3",
+          "2*",
+          "3",
+          "4",
+          "4",
+          "4"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Boar*",
+        "stats": [
+          "7",
+          "3",
+          "0",
+          "3",
+          "3",
+          "1",
+          "3",
+          "2*",
+          "3",
+          "4",
+          "4",
+          "4"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Bear*",
+        "stats": [
+          "4",
+          "3",
+          "0",
+          "4",
+          "4",
+          "2",
+          "3",
+          "3*",
+          "6",
+          "3",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes animal & weapon attacks",
+    "profileD6": false,
+    "art": "img/unit-we-shapechangers.png",
+    "ptsPerModel": 28,
+    "ptsFixed": null,
+    "models": "Up to ⅕ of unit",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any model may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are the favoured kin of animal spirits and are able to manifest the characteristics of a particular beast; usually a wolf, bear or boar. They are quite rare but may be found in any Wood Elf warband. Shapechangers may be 'hidden' in any of the infantry units listed above. See Special Troop Types — Shapechangers."
+  },
+  {
+    "id": "we-03-treemen",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–3",
+    "name": "Treemen",
+    "profiles": [
+      {
+        "label": "Treeman",
+        "stats": [
+          "6",
+          "8",
+          "3",
+          "6",
+          "7",
+          "6",
+          "2",
+          "4",
+          "9",
+          "9",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-treemen.png",
+    "ptsPerModel": 280,
+    "ptsFixed": null,
+    "models": "1–3",
+    "weapons": "Stomp Attacks",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The forest homes of the Elves are also the dwelling places of the giant Treemen. Elves and Treemen are close friends, and often aid each other, with willing Treemen fighting in the armies of the Elven Lords. Treemen cause fear in living creatures under 10′ tall, and hate goblinoids. See Bestiary — Treemen."
+  },
+  {
+    "id": "he-05-elven-dragonkin",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–5",
+    "name": "Elven Dragonkin",
+    "profiles": [
+      {
+        "label": "+4 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Dragon 1 (Winged)",
+        "stats": [
+          "6",
+          "4",
+          "0",
+          "5",
+          "5",
+          "7",
+          "2",
+          "6",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-dragonkin.png",
+    "ptsPerModel": 315,
+    "ptsFixed": null,
+    "models": "1–5",
+    "weapons": "Hand Weapons",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elven dragon riders are rare and highly revered warriors. They lead reclusive lives, dwelling upon tall pinnacles or in high towers. They are of noble and ancient lineage, and their association with Dragonkind goes back to the beginnings of Ulthuan."
+  },
+  {
+    "id": "he-040-silver-helms",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Silver Helms",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "7",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-silverhelms.png",
+    "ptsPerModel": 35,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Heavy Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse Barding",
+            "cost": "8"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elven lords and lesser nobles take to war mounted on splendid chargers and wearing magnificent tall helmets. White, silver-grey and dappled horses are the most highly prized."
+  },
+  {
+    "id": "he-040-shore-riders",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Shore Riders",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite (incl. horse)",
+        "stats": [
+          "8*",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes movement allowance of horse",
+    "profileD6": false,
+    "art": "img/unit-he-shoreriders.png",
+    "ptsPerModel": 22,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Bows",
+            "cost": "4"
+          },
+          {
+            "name": "Javelins",
+            "cost": "2"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "4"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The long sea coast of Ulthuan must be watched constantly, and every coastal Kingdom contributes to this effort. These warriors are battle-hardened, practical soldiers, used to the deprivation of long patrols and sudden combat."
+  },
+  {
+    "id": "he-04-warwains",
+    "army": "high-elves",
+    "type": "chariot",
+    "allowance": "0–4",
+    "name": "Warwains",
+    "profiles": [
+      {
+        "label": "Elf Crew (4)",
+        "stats": [
+          "–",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse (4)",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-warwains.png",
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1–4 Chariots",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": {
+      "label": "Heavy Chariot",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "4",
+      "steeds": "4",
+      "attacks": "–"
+    },
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many High Elf nobles ride finely made and superbly decorated chariots into battle. They form the most formidable and magnificent troops to be found in an Elven host. Chariot crews are considered to be armed with hand weapons in melee, irrespective of weapons carried by the model. If any crew member has a shield, all crew count as shielded and the points value has been calculated accordingly."
+  },
+  {
+    "id": "he-050-archers",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Archers",
+    "profiles": [
+      {
+        "label": "+1 Missile Elite",
+        "stats": [
+          "5",
+          "4",
+          "5",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-archers.png",
+    "ptsPerModel": 14,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The great annual fairs of the Elven Kingdoms feature all manner of martial sports. It is at these tournaments that the best archers are selected to serve in the bow-armed fighting regiments. They are the finest shots in the land, and practise daily at the butts."
+  },
+  {
+    "id": "he-030-ships-companies",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Ships Companies",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-ship.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The warships and trading galleons of the Sea Elves have well armed crews. Sometimes these warrior crews may be used to augment the land forces."
+  },
+  {
+    "id": "he-020-guard",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Guard",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-guard.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Halberds instead of Spears",
+            "cost": "1"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Every lord of any standing has his own personal guard to protect his halls and welcome strangers. Guards of this kind form the core of Elven armies."
+  },
+  {
+    "id": "he-060-kith",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Kith",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-kith.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Javelins",
+            "cost": "1"
+          },
+          {
+            "name": "Long Bows",
+            "cost": "3"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The humble Elven folk who serve the land owners in the fields and the artisans in the towns, muster together into bands based upon their area. They are, literally, warriors associated with a particular locality, but they are mighty warriors nonetheless."
+  },
+  {
+    "id": "he-060-merchant-companies",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Merchant Companies",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-merchant.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "One half of unit must have:",
+        "items": [
+          {
+            "name": "Longbows",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Other half may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Sea Elves prosper greatly from their trading ventures across the wide seas, and Merchant Princes maintain their own regiments of soldiers to protect their ships and havens at home and abroad. These regiments use Mixed Ranks — half are spearmen or halberdiers, while the other half are archers (see Special Formations — Mixed Ranks)."
+  },
+  {
+    "id": "he-060-warrior-kindreds",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Warrior Kindreds",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-warrior-kindreds.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "In times of war, Elves group together into regiments formed of family groups. Elves are very mindful of their relationships and family bonds, no matter how distant or ancient. They are usually well armed and arrayed in splendid uniforms."
+  },
+  {
+    "id": "he-010-sea-elf-wardancers",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Sea Elf Wardancers",
+    "profiles": [
+      {
+        "label": "Elf Wardancer",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-wardancers.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Flails",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These small bands are valued as boarding parties in Sea Elf naval actions and are frequently to be found in land armies as well."
+  },
+  {
+    "id": "he-025-seekers",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–25",
+    "name": "Seekers",
+    "profiles": [
+      {
+        "label": "Elf Scout",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-seekers.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Javelins",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The swiftest runners and those with the keenest eyesight belong to the bands of Seekers. These warriors excel at scouting, skirmishing and ambushing the enemy. Elves tend to be shrewd tacticians, who know how to use such troops to good effect."
+  },
+  {
+    "id": "he-04-marine-bolt-batteries",
+    "army": "high-elves",
+    "type": "warmachine",
+    "allowance": "0–4",
+    "name": "Marine Bolt-Batteries",
+    "profiles": [
+      {
+        "label": "Elf Crew (3)",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-marines.png",
+    "ptsPerModel": null,
+    "ptsFixed": 54,
+    "models": "1–4 Bolt Throwers",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": {
+      "label": "Bolt Thrower",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "3"
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Detached batteries of warship armament, with expert Sea Elf crews, may be used on land to support Elven armies. This is yet another example of how a powerful Elven army can be mustered virtually anywhere in the world, thanks to the flexibility of Sea Elf forces and Elven tactical ingenuity."
+  },
+  {
+    "id": "em-020-temple-ritterbruden",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Temple Ritterbruden",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-ritterbruden.png",
+    "ptsPerModel": 39,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour, Shield & Barding",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are the Templars, religious orders of knights including such warrior brotherhoods as the Order of the Fiery Heart, who serve Sigmar, the Templars of the White Wolf who serve Ulric and the Templars of Myrmidia."
+  },
+  {
+    "id": "em-050-stadtsknechtes",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Stadtsknechtes",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "–",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-stadsknechte.png",
+    "ptsPerModel": 25,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These knights are feudal nobles and their retainers from the provinces. They form the bulk of the mounted forces of the various Elector States. Some of these bellicose feudal barons have earned themselves the dubious title Raubritter, or 'robber knight'."
+  },
+  {
+    "id": "em-030-hohensknechtes",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Hohensknechtes",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-hohensknechte.png",
+    "ptsPerModel": 37,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour, Shield & Barding",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are the secular orders of knights including such regiments as the Imperial Guard, the High-Helms, the Knights Panther and the Gryphon Legion of Kislevite origin."
+  },
+  {
+    "id": "em-020-kriegsritter",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Kriegsritter",
+    "profiles": [
+      {
+        "label": "Human (incl. horse)",
+        "stats": [
+          "8*",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes movement allowance of horse",
+    "profileD6": false,
+    "art": "img/unit-emp-kriegsritter.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "10",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are mounted militia raised by the Electoral Provinces. They play a vital part in keeping the peace in the provinces and form a useful supplement to the heavily armed knights in battle."
+  },
+  {
+    "id": "em-020-reiksgard",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Reiksgard",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-reiksgard.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Flails",
+            "cost": "1"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "This is the infantry contingent of the Imperial Guard. They guard the Emperor whether in his palace or on the field of battle."
+  },
+  {
+    "id": "em-020-hakbutschutzen",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Hakbutschutzen",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-hakbut.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Arquebus & Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are troops armed with muzzle-loading arqubuses or 'bakbuts' in the local Reikspiel. Hakbutschutzen are raised by some states to augment the crossbowmen."
+  },
+  {
+    "id": "em-1050-armbrustschutzen",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "10–50",
+    "name": "Armbrustschutzen",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-armbrust.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Electoral Provinces raise regiments of crossbowmen for their standing armies. Some states, such as Nuln, favour Tilean crossbowmen."
+  },
+  {
+    "id": "em-0100-ersatzsolder",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–100",
+    "name": "Ersatzsolder",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-ersatzsoldier.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "30–60",
+    "weapons": "Hand Weapons",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Pikes",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are mustered from the urban population within each Electoral Province to support the standing army in time of war. The province of Nuln is famous for its pikemen."
+  },
+  {
+    "id": "em-2060-helblitzen",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "20–60",
+    "name": "Helblitzen",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-helblitzen.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–50",
+    "weapons": "Halberd & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Each Electoral Province within The Empire maintains a small standing army usually including strong contingents of good quality infantry. The mainstay of the infantry are the halberdiers."
+  },
+  {
+    "id": "em-060-landesturm",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Landesturm",
+    "profiles": [
+      {
+        "label": "Human Levy",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-landesturm.png",
+    "ptsPerModel": 3,
+    "ptsFixed": null,
+    "models": "30–60",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are mustered from the rural peasantry within each Electoral Province in time of war."
+  },
+  {
+    "id": "em-010-bergjaeger",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Bergjaeger",
+    "profiles": [
+      {
+        "label": "Human Scout",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-bergjager.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are trackers and hunters from the mountain regions of The Empire. They are exceptionally resourceful and much valued as scouts."
+  },
+  {
+    "id": "em-016-fleglers",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–16",
+    "name": "Fleglers",
+    "profiles": [
+      {
+        "label": "Human Flagellant",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-fleglers.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "8",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These flagellants belong to a sect of religious fanatics common within The Empire. They are to be seen throughout the land, suffering under their strange, self-inflicted form of atonement. Those bands which accompany Imperial armies into battle, whip themselves into a battle-frenzy, which they unleash upon the enemy. Flagellants are subject to frenzy and hatred of Chaotics. See document.getElementById('berserkers')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Special Troop Types — Berserkers."
+  },
+  {
+    "id": "em-030-forstjaeger",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Forstjaeger",
+    "profiles": [
+      {
+        "label": "Human Forester",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-forstjager.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "5–30",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Throwing Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Empire contains many vast and dense forests within its frontiers. Those who live deep within these wild woodlands are skilled foresters who live by hunting. They are much valued as skirmishers and regiments of foresters are recruited in many of the Electoral Provinces."
+  },
+  {
+    "id": "em-03-reiks-kanone-batterien",
+    "army": "empire",
+    "type": "standard",
+    "allowance": "0–3",
+    "name": "Reiks Kanone Batterien",
+    "profiles": [
+      {
+        "label": "Human Crew (3)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-emp-reiks-kanon.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "1–3 Cannon",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The first province to use cannon was Nuln, where the Imperial School of Gunnery was subsequently established and the Imperial Corps of Artillery is based."
+  },
+  {
+    "id": "br-520-chevaliers-dhonneur",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "5–20",
+    "name": "Chevaliers D'Honneur",
+    "profiles": [
+      {
+        "label": "+4 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-chevaliers-dhonneur.png",
+    "ptsPerModel": 31,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Horse Barding",
+            "cost": "8"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The noblest Bretonnian Knights of them all — the personal friends and supporters of the King."
+  },
+  {
+    "id": "br-580-noblesse-depee",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "5–80",
+    "name": "Noblesse D'Epee",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-noblesse-depee.png",
+    "ptsPerModel": 25,
+    "ptsFixed": null,
+    "models": "5–30",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Horse Barding",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "'Nobility of the sword' — warrior Knights from the rural provinces."
+  },
+  {
+    "id": "br-040-chev-notre-dame-de-bataille",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Chev. Notre Dame de Bataille",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-notre-dame.png",
+    "ptsPerModel": 29,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Horse Barding",
+            "cost": "8"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A Bretonnian order of Knights whose sacred banner bears the emblem of 'Our Lady of Battle' (known affectionately among the order as 'La Femme Fatale')."
+  },
+  {
+    "id": "br-040-chevaliers-rampants",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Chevaliers Rampants",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-chevaliers-rampants.png",
+    "ptsPerModel": 27,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Horse Barding",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Young Knights, seeking to make a reputation for themselves on the field of glory."
+  },
+  {
+    "id": "br-080-chasseurs-de-la-mort",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–80",
+    "name": "Chasseurs de la Mort",
+    "profiles": [
+      {
+        "label": "Human (incl. horse)",
+        "stats": [
+          "8*",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes movement allowance of horse",
+    "profileD6": false,
+    "art": "img/unit-bret-chasseurs.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are mounted men-at-arms and retainers of the Knights. They band together into units of their own, as their masters will not permit them to join the ranks of nobility."
+  },
+  {
+    "id": "br-040-villains",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Villains",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-villains.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Halberd & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These troops are fielded and equipped by Bretonnian towns for the defence of the realm."
+  },
+  {
+    "id": "br-020-ribalds",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Ribalds",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-ribalds.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The personal retinues of knights formed from humble servants such as dungeon keepers, lowly footmen and servants."
+  },
+  {
+    "id": "br-020-arblastiers",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Arblastiers",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-arbalasters.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Arblastiers come both from the voluntary Bretonnian township contingents and from the personal retinues of various knights."
+  },
+  {
+    "id": "br-060-rapscallions",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Rapscallions",
+    "profiles": [
+      {
+        "label": "Human Levy",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-rapscallions.png",
+    "ptsPerModel": 4,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Those peasants with enough presence of mind to bring bows are mustered together into units of Rapscallions."
+  },
+  {
+    "id": "br-020-brigands",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Brigands",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-brigands.png",
+    "ptsPerModel": 7,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebuses",
+            "cost": "5"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "5"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Brigands are fighting ruffians who eagerly join Bretonnian armies during wartime, usually reverting to banditry as soon as they are disbanded."
+  },
+  {
+    "id": "br-20160-rascals",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "20–160",
+    "name": "Rascals",
+    "profiles": [
+      {
+        "label": "Human Levy",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-rascals.png",
+    "ptsPerModel": 4,
+    "ptsFixed": null,
+    "models": "20–60",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "When the Bretonnian armies take to the field they are supported by the peasant rascalry, scum of the lowest order, herded into battle to fulfill their meagre feudal obligations."
+  },
+  {
+    "id": "br-020-foot-knights-wd137",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Foot Knights",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-foot-knights.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The nobility of Bretonnia is notoriously inflexible in its attitude to warfare — preferring to fight on horseback wherever and whenever possible. However, there are obviously circumstances when this is impossible, and even the flower of chivalry is obliged to fight on foot. Never comfortable in this role, the Knights do not fight so well as when mounted, but none-the-less they are easily the best foot soldiers in the Bretonnian army."
+  },
+  {
+    "id": "br-0200-feudal-levy-wd137",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–200",
+    "name": "Feudal Levy",
+    "profiles": [
+      {
+        "label": "Levy",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-feudal-levy.png",
+    "ptsPerModel": 3,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "½"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have one of the following:",
+        "items": [
+          {
+            "name": "Bows",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "All of a Lord's subjects may be obliged to fight for him when times are hard. Even the lowliest peasant can be pressed into military service. These civilians are known as the levy, and they include craftsmen, farmers and other relatively well-to-do individuals as well as less reputable souls. They have little real military experience or training."
+  },
+  {
+    "id": "br-0120-retainers-wd137",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–120",
+    "name": "Retainers",
+    "profiles": [
+      {
+        "label": "Retainer",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-retainers.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon + choice",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "All units must choose one Close Combat Weapon:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Or one Missile Weapon:",
+        "items": [
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may also have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are personal household troops brought along to the battle by the Knights and other Nobles of Bretonnia. They wear the livery of their feudal Lord who may well be one of the Knights fighting elsewhere in the army. Retainers are well trained and properly equipped. Armour and weapons vary depending on their role and the wealth of their Lord."
+  },
+  {
+    "id": "br-020-brigands-wd137",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Brigands",
+    "profiles": [
+      {
+        "label": "Brigand",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-brigands-wd137.png",
+    "ptsPerModel": 7,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have one Close Combat Weapon:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Or one Missile Weapon:",
+        "items": [
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Brigands are former soldiers cast adrift by the death of their Lord or break-up of his feudal holdings. Masterless and homeless, they have little option but to roam Bretonnia, hiring out their skills to Lords who have need of reliable fighting troops. In this way they take part in countless small wars between rival Lords, sometimes gaining fame, riches or a fearsome reputation."
+  },
+  {
+    "id": "br-01-bretonnian-war-altar",
+    "army": "bretonnia",
+    "type": "waraltar",
+    "allowance": "0–1",
+    "name": "Bretonnian War Altar",
+    "profiles": [
+      {
+        "label": "Altar Guard (2)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-war-altar.png",
+    "ptsPerModel": 66,
+    "ptsFixed": null,
+    "models": "1 Altar & Guards",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any altar may have:",
+        "items": [
+          {
+            "name": "Up to 3 additional guards",
+            "cost": "8"
+          },
+          {
+            "name": "2-Horse wagon as transport",
+            "cost": "28"
+          },
+          {
+            "name": "A magic standard",
+            "cost": "50"
+          }
+        ]
+      },
+      {
+        "subheading": "The altar guards may have:",
+        "items": [
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Bretonnians are a devout race. Armies often carry the bones of revered individuals in caskets forming part of a special war altar. These are carried right to the fighting, so that the troops may look upon and be inspired by the great saints and heroes of the past."
+  },
+  {
+    "id": "br-04-lordonnance-3-man-cannon",
+    "army": "bretonnia",
+    "type": "standard",
+    "allowance": "0–4",
+    "name": "L'Ordonnance (3-Man Cannon)",
+    "profiles": [
+      {
+        "label": "Human Crew (3)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-bret-lordonnance.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "1–4 Cannon",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Bretonnian artillery is maintained and serviced by a body of the King's servants called l'Ordonnance."
+  },
+  {
+    "id": "ch-020-chaos-warrior-horse",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Chaos Warrior Horse",
+    "profiles": [
+      {
+        "label": "Warrior",
+        "stats": [
+          "–",
+          "6",
+          "6",
+          "4",
+          "3",
+          "2",
+          "6",
+          "2",
+          "9+2",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-warrior-horse.png",
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Lances",
+            "cost": "2"
+          },
+          {
+            "name": "Horse Barding",
+            "cost": "4"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "100"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Doomed servitors of the Chaos gods! Although once human, these fell riders have exchanged their humanity for worldly power."
+  },
+  {
+    "id": "ch-030-marauder-horse",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Marauder Horse",
+    "profiles": [
+      {
+        "label": "Marauder",
+        "stats": [
+          "–",
+          "5",
+          "5",
+          "3",
+          "3",
+          "2",
+          "5",
+          "2",
+          "8+1",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-marauder-horse.png",
+    "ptsPerModel": 45,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Lances",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse Barding",
+            "cost": "4"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "3"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Chaos Marauders are almost as powerful as the Chaos Warriors they hope to become — if the gods favour them and they prove worthy in battle."
+  },
+  {
+    "id": "ch-040-thug-horse",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Thug Horse",
+    "profiles": [
+      {
+        "label": "Thug (incl. horse)",
+        "stats": [
+          "8*",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes movement allowance of horse",
+    "profileD6": false,
+    "art": "img/unit-chaos-thug-horse.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Lances",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are the lowliest of the human ranks of Chaos, the young and the desperate, their souls newly bartered for the promise of earthly power."
+  },
+  {
+    "id": "ch-020-chaos-warriors",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Chaos Warriors",
+    "profiles": [
+      {
+        "label": "Warrior",
+        "stats": [
+          "4",
+          "6",
+          "6",
+          "4",
+          "3",
+          "2",
+          "6",
+          "2",
+          "9+2",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-warriors.png",
+    "ptsPerModel": 74,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Fully-fledged Warriors of Chaos band together into units of retainers — retainers of the gods themselves!"
+  },
+  {
+    "id": "ch-030-marauders",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Marauders",
+    "profiles": [
+      {
+        "label": "Marauder",
+        "stats": [
+          "4",
+          "5",
+          "5",
+          "3",
+          "3",
+          "2",
+          "5",
+          "2",
+          "8+1",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-marauders.png",
+    "ptsPerModel": 39,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Although not as advanced upon the Chaos Path as true Warriors of Chaos, the Marauders are still blessed with awesome skills and the preternaturally power of the Chaos Gods."
+  },
+  {
+    "id": "ch-0120-thugs",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–120",
+    "name": "Thugs",
+    "profiles": [
+      {
+        "label": "Thug",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-thugs.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Flails",
+            "cost": "1"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
+          },
+          {
+            "name": "Long Bows",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing Axes",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many turn to Chaos as an easy road to power. Few travel far along that road, for it is beset with dangers that affect both mind and body. The Grimraiders are men of this kind — fresh upon the Chaos Path and barely touched by its corrupting power."
+  },
+  {
+    "id": "ch-0200-beastmen",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–200",
+    "name": "Beastmen",
+    "profiles": [
+      {
+        "label": "Beastman",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "4",
+          "2",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-beastmen.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Flails",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Amongst the wastes of Chaos and the dark forests of the Old World, lurk roving bands of Beastmen — men twisted into bestial form and beasts perverted into the shapes of men. They are the creations and the servants of Chaos itself."
+  },
+  {
+    "id": "ch-025-minotaurs",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–25",
+    "name": "Minotaurs",
+    "profiles": [
+      {
+        "label": "Minotaur",
+        "stats": [
+          "6",
+          "4",
+          "3",
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "9",
+          "5",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-minotaurs.png",
+    "ptsPerModel": 40,
+    "ptsFixed": null,
+    "models": "1–5",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "4"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Like the smaller Beastmen, Minotaurs are creatures of Chaos, corrupted and made powerful in order to serve their heinous masters."
+  },
+  {
+    "id": "ch-010-trolls",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Trolls",
+    "profiles": [
+      {
+        "label": "Troll",
+        "stats": [
+          "6",
+          "3",
+          "1",
+          "5",
+          "4",
+          "3",
+          "1",
+          "3",
+          "4",
+          "4",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-trolls.png",
+    "ptsPerModel": 65,
+    "ptsFixed": null,
+    "models": "1–5",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Trolls are dim-witted but strong creatures, easily beguiled into the service of Chaos."
+  },
+  {
+    "id": "ch-08-beastmasters",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–8",
+    "name": "Beastmasters",
+    "profiles": [
+      {
+        "label": "Animal Handler",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "4",
+          "2",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-beastmasters.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "15",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Beastmen are virtually beasts themselves and make ideal handlers for ferocious animals. Each Beastmaster may control from 2–6 animal models chosen from the listed types. Two or more handlers and their packs may be merged to form larger units."
+  },
+  {
+    "id": "ch-03-chaos-dwarf-war-machines",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–3",
+    "name": "Chaos Dwarf War Machines",
+    "profiles": [
+      {
+        "label": "Boar Centaur",
+        "stats": [
+          "7",
+          "4",
+          "3",
+          "3",
+          "4",
+          "2",
+          "2",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-ch-chaos-dwarf-war-machine.png",
+    "ptsPerModel": 120,
+    "ptsFixed": null,
+    "models": "1–4 machines",
+    "weapons": "Double-Handed Weapon",
+    "armour": "Heavy Armour & Barding",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Whirlwind and Tenderiser — push-carts of destruction crewed by enslaved Boar Centaurs. See document.getElementById('wa-wm-chaos-dwarf')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">War Machines — Chaos Dwarf War Machines for full rules."
+  },
+  {
+    "id": "ch-030-chaos-dwarf-crossbowmen",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Chaos Dwarf Crossbowmen",
+    "profiles": [
+      {
+        "label": "Chaos Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-ch-chaos-dwarf-crossbowmen.png",
+    "ptsPerModel": 14,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Chaos Dwarf crossbowmen provide useful missile support for the shock troops which predominate in most Chaos hordes."
+  },
+  {
+    "id": "ch-08-chaos-dwarf-swivel-guns",
+    "army": "chaos",
+    "type": "standard",
+    "allowance": "0–8",
+    "name": "Chaos Dwarf Swivel Guns",
+    "profiles": [
+      {
+        "label": "Chaos Dwarf Crew (2)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-ch-chaos-dwarf-swivel-gun.png",
+    "ptsPerModel": 50,
+    "ptsFixed": null,
+    "models": "1–4 (2 crew each)",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A light portable cannon firing devastating blasts of shrapnel in a wide arc. See document.getElementById('wa-wm-swivel-gun')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">War Machines — Chaos Dwarf Swivel Gun for full operational rules."
+  },
+  {
+    "id": "ch-01-chaos-war-altar",
+    "army": "chaos",
+    "type": "waraltar",
+    "allowance": "0–1",
+    "name": "Chaos War Altar",
+    "profiles": [
+      {
+        "label": "Chaos Cultist Guards (2)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-chaos-war-altar.png",
+    "ptsPerModel": 66,
+    "ptsFixed": null,
+    "models": "1 Altar & Guards",
+    "weapons": "Hand Weapons",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": null,
+        "items": [
+          {
+            "name": "Additional altar guards (max 3)",
+            "cost": "8 ea."
+          },
+          {
+            "name": "Wagon/carriage to mount altar",
+            "cost": "44"
+          },
+          {
+            "name": "Magic standard to accompany war altar",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The servants of Chaos often sacrifice their foes on the battlefield, spilling blood and souls in the name of their gods. For this purpose they will sometimes take a specially dedicated altar with their forces."
+  },
+  {
+    "id": "sk-020-clanrat-stormvermin",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Clanrat Stormvermin",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "5",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "5",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-stormvermin.png",
+    "ptsPerModel": 7.5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "To the fore of any Skaven swarm may be found the Stormvermin. These are ravenous elite warriors, eager to slay the enemy."
+  },
+  {
+    "id": "sk-50300-clanrat-warriors",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "50–300",
+    "name": "Clanrat Warriors",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-clanrats.png",
+    "ptsPerModel": 6,
+    "ptsFixed": null,
+    "models": "20–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "½"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Skaven belonging to the Warlord Clans make up the bulk of ordinary Skaven warriors. The minimum of 50 reflects the size of the typical Warlord warband."
+  },
+  {
+    "id": "sk-020-black-skaven-clanrats",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Black Skaven Clanrats",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "5",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-black-skaven.png",
+    "ptsPerModel": 6.5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Halberds",
+            "cost": "1"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Among the Clanrat Warriors are vicious Black Skaven who form a warrior elite, often as retainers of the Skaven Warlords."
+  },
+  {
+    "id": "sk-20500-skavenslaves",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "20–500",
+    "name": "Skavenslaves",
+    "profiles": [
+      {
+        "label": "Skaven Levy",
+        "stats": [
+          "5",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "5",
+          "5",
+          "4",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-slaves.png",
+    "ptsPerModel": 2.5,
+    "ptsFixed": null,
+    "models": "20–50",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Slings",
+            "cost": "½"
+          },
+          {
+            "name": "Spears",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The lowest caste of Skaven society are the slaves. They are often driven into battle by the more vicious Skaven, and hobbled together with chains."
+  },
+  {
+    "id": "sk-010-night-runners",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Night Runners",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "5",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-nightrunners.png",
+    "ptsPerModel": 8.5,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These Clan Eshin elites are often active by night, slaying foes in dark places, infiltrating the enemy cities, preparing the way…"
+  },
+  {
+    "id": "sk-020-gutter-runners",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Gutter Runners",
+    "profiles": [
+      {
+        "label": "Skaven Scout",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-gutter-runners.png",
+    "ptsPerModel": 12.5,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "½"
+          },
+          {
+            "name": "Throwing Stars",
+            "cost": "½"
+          },
+          {
+            "name": "Slings",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Clan Eshin scouts range far ahead of the Skaven hordes, seeking the enemy, ensuring the element of surprise and stirring the ratpacks of the cities into action."
+  },
+  {
+    "id": "sk-06-plague-censer-bearers",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "0–6",
+    "name": "Plague Censer Bearers",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-plague-censers.png",
+    "ptsPerModel": 40,
+    "ptsFixed": null,
+    "models": "Hidden within other Skaven units",
+    "weapons": "Plague Censer",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any model may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Plague censers are Warpstone 'incense burners', emitting a foul bubonic vapour. Those who inhale the fumes are infected and flesh exposed to the vapour erupts in festering blisters. Plague Censer Bearers may be hidden in any Skaven unit. See document.getElementById('skirmishers')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Special Troop Types — Skirmishers."
+  },
+  {
+    "id": "sk-020-plague-monks",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Plague Monks",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-plague-monks.png",
+    "ptsPerModel": 4.5,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Plague Monks of Clan Pestilens are a Skaven devout order — initiates of infection. They go into battle reciting from the Liber Bubonicus and chanting the Liturgus Infectus."
+  },
+  {
+    "id": "sk-08-clan-moulder-beastmasters",
+    "army": "skaven",
+    "type": "handler",
+    "allowance": "0–8",
+    "name": "Clan Moulder Beastmasters",
+    "profiles": [
+      {
+        "label": "Animal Handler",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": "Skaven"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-beastmasters.png",
+    "ptsPerModel": 9.5,
+    "ptsFixed": null,
+    "models": "1–4 handlers with packs",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Each handler may control from 2–6 animal models of one type chosen from the list. Several Beastmasters and their packs may be merged to form larger units so long as the animals are of the same type. Note: the printed list gives Giant Wolves as 2pts — this appears to be a typo and has been corrected to 8pts, consistent with the Bestiary and all other army lists."
+  },
+  {
+    "id": "sk-06-poisoned-wind-globadiers",
+    "army": "skaven",
+    "type": "standard",
+    "allowance": "0–6",
+    "name": "Poisoned Wind Globadiers",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-globadiers.png",
+    "ptsPerModel": 25,
+    "ptsFixed": null,
+    "models": "1–3",
+    "weapons": "Poisoned Wind Globe & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These troops carry glass globes containing Warpstone matter. When broken, the globes emit Warpstone gas which infects the minds of those unfortunate enough to inhale it."
+  },
+  {
+    "id": "sk-08-warpfire-thrower-teams",
+    "army": "skaven",
+    "type": "warmachine",
+    "allowance": "0–8",
+    "name": "Warpfire-Thrower Teams",
+    "profiles": [
+      {
+        "label": "Skaven (2)",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-warpfire.png",
+    "ptsPerModel": null,
+    "ptsFixed": 81,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range",
+        "Template Radius",
+        "Str",
+        "Save Mod.",
+        "Wnds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Warpfire Thrower",
+          "cols": [
+            "12″",
+            "1″",
+            "5",
+            "−3",
+            "1D3"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The dreaded Skaven Warpfire-throwers project a volatile mixture of Warpstone and other arcane ingredients, which erupts into flame. See document.getElementById('et-warpfire')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Engine Types — Warpfire Thrower."
+  },
+  {
+    "id": "sk-04-jezzailachis",
+    "army": "skaven",
+    "type": "warmachine",
+    "allowance": "0–4",
+    "name": "Jezzailachis",
+    "profiles": [
+      {
+        "label": "Skaven (2)",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sk-jezzailachis.png",
+    "ptsPerModel": null,
+    "ptsFixed": 39,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range",
+        "Str 0–12″",
+        "Str 12–24″",
+        "Str 24–36″",
+        "Save Mod.",
+        "Wounds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Jezzail",
+          "cols": [
+            "36″",
+            "6",
+            "5",
+            "4",
+            "−2",
+            "1"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "FAQ, WD #127 — The Clan Skryre Jezzail is a long, large calibre warplock musket crewed by two Skaven — one to fire, one to hold the musket rest. The crew move as a single unit and remain in base-to-base contact. If one crewman is slain, the survivor fights on independently but the Jezzail is lost; a lone survivor may join another Jezzail team as a reserve. The Jezzail has a 90° fire arc like a bow. It may move in the movement phase but may not fire that turn; it may however turn to face a target and still fire so long as it does not otherwise move. On a hit, the Jezzail penetrates ranks like a cannon — 2 hits per rank, up to 6 ranks deep. Each hit causes 1 Wound; saving throws are at −2 (a normal save of 4, 5 or 6 saves only on a 6). Casualties are removed as bow or crossbow casualties. Unlike cannon, Jezzails are not affected by heat build-up. The Jezzail fires warpstone shot which inflicts poisonous wounds; the extra points cost for this is included in the total. See WA p6 for two-man weapon team rules."
+  },
+  {
+    "id": "og-010-snortas",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Snortas",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "War Boar",
+        "stats": [
+          "7",
+          "4",
+          "0",
+          "3",
+          "4",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-snortas.png",
+    "ptsPerModel": 27,
+    "ptsFixed": null,
+    "models": "10",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Naturally, some really hard and bad Orcs choose to ride into battle on war-boars; such élites are known as 'Snortas'."
+  },
+  {
+    "id": "og-030-gruntas",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Gruntas",
+    "profiles": [
+      {
+        "label": "Orc Rider",
+        "stats": [
+          "–",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "War Boar",
+        "stats": [
+          "7",
+          "4",
+          "0",
+          "3",
+          "4",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-gruntas.png",
+    "ptsPerModel": 19,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "2"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are Orc warriors who ride war-boars. The stubborn, vicious nature of these beasts and their wicked tusks are much admired by Orcs."
+  },
+  {
+    "id": "og-020-boar-boyz",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Boar Boyz",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "4",
+          "5",
+          "3",
+          "4",
+          "3",
+          "9+2",
+          "5",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warboar",
+        "stats": [
+          "7",
+          "4",
+          "0",
+          "3",
+          "4",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-boar-boyz.png",
+    "ptsPerModel": 27,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit only:",
+        "items": [
+          {
+            "name": "Champion — Leader Bratt (Lv15 Hero)",
+            "cost": "108"
+          },
+          {
+            "name": "Standard Bearer",
+            "cost": "104"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Hand-picked Orc cavalry who have proven their ferocity in battle. Bratt leads from the front on his mighty warboar, while Ridd bears the unit standard into the thickest fighting."
+  },
+  {
+    "id": "og-06-orc-battle-chariots",
+    "army": "orcs-goblins",
+    "type": "chariot",
+    "allowance": "0–6",
+    "name": "Orc Battle Chariots",
+    "profiles": [
+      {
+        "label": "Light Chariot",
+        "stats": [
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Orc Crew (2)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Giant Wolf (2)",
+        "stats": [
+          "9",
+          "4",
+          "0",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "3",
+          "4",
+          "4",
+          "4"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-orc-chariots.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Going into battle in a chariot does much for the prestige of an Orc warrior. If the chariot warrior has a shield, both crew count as shielded and the points value has been calculated accordingly. Chariot crews are considered to be armed with hand weapons irrespective of weapons carried by the model."
+  },
+  {
+    "id": "og-030-biguns",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Biguns",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-biguns.png",
+    "ptsPerModel": 9.5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Foremost among Orc warrior society are the 'Big Uns'. These big, tough, fierce Orcs always grab the best wargear when looting the battlefield."
+  },
+  {
+    "id": "og-20100-boyz",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "20–100",
+    "name": "Boyz",
+    "profiles": [
+      {
+        "label": "Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-boyz.png",
+    "ptsPerModel": 8.5,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The bulk of the Orc warriors are known in goblinoid society as 'da Boyz'."
+  },
+  {
+    "id": "og-2060-arrer-boyz",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "20–60",
+    "name": "Arrer Boyz",
+    "profiles": [
+      {
+        "label": "Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-arrer-boyz.png",
+    "ptsPerModel": 7.5,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may substitute:",
+        "items": [
+          {
+            "name": "Bows for Crossbows",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The 'Arrrer Boyz' are Orc warriors who favour the bow, or occasionally the crossbow, so they can slay the enemy from a safe distance."
+  },
+  {
+    "id": "og-050-gobbo-wulfboyz",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Gobbo Wulfboyz",
+    "profiles": [
+      {
+        "label": "Goblin Wolf Rider",
+        "stats": [
+          "–",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Wolf",
+        "stats": [
+          "9",
+          "4",
+          "0",
+          "3",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-wulfboyz.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Short Bows",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are Goblin warriors who ride wolves specially tamed, bred and half-starved to turn them into ferocious drooling battle-mounts."
+  },
+  {
+    "id": "og-06-goblin-war-chariots",
+    "army": "orcs-goblins",
+    "type": "chariot",
+    "allowance": "0–6",
+    "name": "Goblin War Chariots",
+    "profiles": [
+      {
+        "label": "Light Chariot",
+        "stats": [
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Goblin Crew (2)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Giant Wolf (2)",
+        "stats": [
+          "9",
+          "4",
+          "0",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "3",
+          "4",
+          "4",
+          "4"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-goblin-chariots.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Goblin warlords and shamans often ride in ornate and awesome chariots. This does much to enhance their prestige among their followers and inspires fear and respect in their enemies. Chariots also provide the battlefield mobility which is vital to commanders of such numerous and unruly hordes. Chariots ridden by Goblin shamans often carry a magic standard. (WD#109)"
+  },
+  {
+    "id": "og-20200-stickas",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "20–200",
+    "name": "Stickas",
+    "profiles": [
+      {
+        "label": "Goblins",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-stickas.png",
+    "ptsPerModel": 3.5,
+    "ptsFixed": null,
+    "models": "20–50",
+    "weapons": "Short Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are Goblin archers who prove quite dangerous when deployed in large numbers."
+  },
+  {
+    "id": "og-20200-gobbos",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "20–200",
+    "name": "Gobbos",
+    "profiles": [
+      {
+        "label": "Goblins",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-gobbos.png",
+    "ptsPerModel": 3,
+    "ptsFixed": null,
+    "models": "20–100",
+    "weapons": "Hand Weapon & Javelin",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Halberds",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These form the bulk of the Goblin warriors. Goblins form a deprived and abused underclass in goblinoid society and are deployed with callous ruthlessness by Orc war-leaders."
+  },
+  {
+    "id": "og-03-goblin-fanatics-per-goblin-infantry-u",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–3",
+    "name": "Goblin Fanatics per Goblin Infantry Unit",
+    "profiles": [],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-fanatics.png",
+    "ptsPerModel": 30,
+    "ptsFixed": null,
+    "models": "0–3, hidden within Gobbo or Sticka units",
+    "weapons": "Ball & Chain",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These drug-crazed followers of an insane Goblin cult wield a huge ball-and-chain. The total number of Goblin fanatics allowed depends on the total number of Goblin infantry units in the army. Up to 3 fanatics may be hidden in each Gobbo or Sticka unit. See document.getElementById('goblin-fanatics')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Special Troop Types — Goblin Fanatics."
+  },
+  {
+    "id": "og-030-savage-boyz",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Savage Boyz",
+    "profiles": [
+      {
+        "label": "Savage Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-savage-boyz.png",
+    "ptsPerModel": 5.5,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Primitive Orc tribes dwelling in remote forest or mountainous regions are known as 'Savage Orcs'. They use crude weaponry and wear simple hide clothing, if any at all. Savage Orcs are subject to frenzy."
+  },
+  {
+    "id": "og-020-savage-arrers",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Savage Arrers",
+    "profiles": [
+      {
+        "label": "Savage Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-savage-arrers.png",
+    "ptsPerModel": 7.5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are Savage Orc archers, who use flint-tipped arrows. Like all Savage Orcs, they are subject to frenzy."
+  },
+  {
+    "id": "og-020-scabbies",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Scabbies",
+    "profiles": [
+      {
+        "label": "Half-Orcs",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-scabbies.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Known as 'Scabbies', Half-orcs are despised even by other goblinoids as being 'not-proper' Goblins or Orcs. Half-orcs are cross-breeds between Goblins and other races, usually combining the worst qualities of both."
+  },
+  {
+    "id": "og-040-black-orcs",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Black Orcs",
+    "profiles": [
+      {
+        "label": "Black Orcs",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-black-orcs.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Black Orcs come from the very heart of the Darklands and are the largest and most aggressive goblinoids yet known."
+  },
+  {
+    "id": "og-040-snotlings",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Snotlings",
+    "profiles": [
+      {
+        "label": "Snotling Base",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3",
+          "3",
+          "3",
+          "4",
+          "4",
+          "4",
+          "4"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-snotlings.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "5–20 bases",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spore Weapons",
+            "cost": "5"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Snotlings are even more wretched and degenerate than Goblins. They hang around Goblin settlements pilfering scraps of food and occasionally being eaten themselves. They are nasty and spiteful. Each base holds up to 9 Snotling figures. FAQ, WD #131 — Each Snotling base counts as 3 ranks of troops when fired at by cannon, irrespective of the actual number of Snotlings or their formation on the base."
+  },
+  {
+    "id": "og-020-trolls",
+    "army": "orcs-goblins",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Trolls",
+    "profiles": [
+      {
+        "label": "Troll",
+        "stats": [
+          "6",
+          "3",
+          "1",
+          "5",
+          "4",
+          "3",
+          "1",
+          "3",
+          "4",
+          "4",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-trolls.png",
+    "ptsPerModel": 65,
+    "ptsFixed": null,
+    "models": "1–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Bands of Trolls often 'latch on' to goblinoid tribes, attracted by the rotten carcasses, bones and refuse on which they feast. Orcs may even try to encourage them by tossing them the odd Snotling."
+  },
+  {
+    "id": "og-03-snotling-pump-wagons",
+    "army": "orcs-goblins",
+    "type": "warmachine",
+    "allowance": "0–3",
+    "name": "Snotling Pump Wagons",
+    "profiles": [
+      {
+        "label": "Snotling Crew (6)",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "1",
+          "1",
+          "3",
+          "3",
+          "3",
+          "4",
+          "4",
+          "4",
+          "4"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-pump-wagons.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Some War Machines are acquired by goblinoids by theft from other more ingenious races and later copied (after a fashion). It is believed that Pump Wagons were originally acquired in this way."
+  },
+  {
+    "id": "og-08-spear-chukkas",
+    "army": "orcs-goblins",
+    "type": "warmachine",
+    "allowance": "0–8",
+    "name": "Spear Chukkas",
+    "profiles": [
+      {
+        "label": "Orc Crew (3)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Goblin Crew (3)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-spear-chukkas.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range",
+        "Strength",
+        "Save Mod.",
+        "Wounds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Bolt Thrower",
+          "cols": [
+            "48″",
+            "5",
+            "−2",
+            "1D4"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Although goblinoids are not noted for ingenuity, it appears now and again where war and destruction are concerned. Hence these devices for skewering the enemy from a long way away."
+  },
+  {
+    "id": "og-02-lead-belcher-organ-guns",
+    "army": "orcs-goblins",
+    "type": "warmachine",
+    "allowance": "0–2",
+    "name": "Lead Belcher Organ Guns",
+    "profiles": [
+      {
+        "label": "Goblin Crew (3)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-lead-belcher.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range",
+        "Strength (up to 12″)",
+        "Save Mod.",
+        "Wounds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Lead Belcher",
+          "cols": [
+            "36″",
+            "5 (−1 per 12″ beyond)",
+            "−3",
+            "1D3"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Goblins like weapons which not only slay large numbers of enemy but do so spectacularly. They enjoy the loud bang, flash and clouds of smoke issuing from these organ guns. Lead Belcher has 4 barrels — see document.getElementById('et-organ-gun')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Engine Types — Organ Gun."
+  },
+  {
+    "id": "og-08-orc-stone-throwers",
+    "army": "orcs-goblins",
+    "type": "warmachine",
+    "allowance": "0–8",
+    "name": "Orc Stone Throwers",
+    "profiles": [
+      {
+        "label": "Orc Crew (3)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-stone-throwers.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range Min",
+        "Range Max",
+        "Template",
+        "Str",
+        "Save Mod.",
+        "Wnds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Stone Thrower",
+          "cols": [
+            "12″",
+            "48″",
+            "1″ Radius",
+            "5",
+            "−2",
+            "D4"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "This is a light stone thrower constructed with similar cunning to the renowned Orc spear chukka. Batteries of such stone throwers augment the array of war engines which are the pride of many an Orc or Goblin warlord."
+  },
+  {
+    "id": "og-08-goblin-stone-throwers",
+    "army": "orcs-goblins",
+    "type": "warmachine",
+    "allowance": "0–8",
+    "name": "Goblin Stone Throwers",
+    "profiles": [
+      {
+        "label": "Goblin Crew (3)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-goblin-stone-throwers.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range Min",
+        "Range Max",
+        "Template",
+        "Str",
+        "Save Mod.",
+        "Wnds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Stone Thrower",
+          "cols": [
+            "12″",
+            "48″",
+            "1″ Radius",
+            "5",
+            "−2",
+            "D4"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Things are stirring in Goblin society, and power and dominion are passing to those tribes which can field the most 'rock-chukkers', and one by one the strongholds are falling. Any Goblin warlord worthy of fear and dread would give his eye-teeth to acquire such a war-machine; not only a vital addition to the tribal arsenal, but also a symbol of status and prestige."
+  },
+  {
+    "id": "og-02-skull-crusher-stone-throwers",
+    "army": "orcs-goblins",
+    "type": "warmachine",
+    "allowance": "0–2",
+    "name": "Skull Crusher Stone Throwers",
+    "profiles": [
+      {
+        "label": "Orc Crew (4)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-skull-crusher.png",
+    "ptsPerModel": null,
+    "ptsFixed": 62,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range Min",
+        "Range Max",
+        "Template",
+        "Str",
+        "Save Mod.",
+        "Wnds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Skull Crusher",
+          "cols": [
+            "14″",
+            "64″",
+            "1″",
+            "6",
+            "−3",
+            "D4+1"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Known elsewhere as a 'trebuchet'. Orcs have difficulty pronouncing foreign words, referring to such machines according to what they do to the enemy — 'Skullcrusher' is an apt description. Machinery of Destruction."
+  },
+  {
+    "id": "og-02-man-mangler-stone-throwers",
+    "army": "orcs-goblins",
+    "type": "warmachine",
+    "allowance": "0–2",
+    "name": "Man-Mangler Stone Throwers",
+    "profiles": [
+      {
+        "label": "Orc Crew (6)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-og-man-mangler.png",
+    "ptsPerModel": null,
+    "ptsFixed": 93,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "options": [],
+    "machineStats": {
+      "headers": [
+        "Range Min",
+        "Range Max",
+        "Template",
+        "Str",
+        "Save Mod.",
+        "Wnds/Hit"
+      ],
+      "rows": [
+        {
+          "name": "Man-Mangler",
+          "cols": [
+            "18″",
+            "96″",
+            "1½″",
+            "8",
+            "−5",
+            "2D4+1"
+          ]
+        }
+      ]
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Among Orcs, catapults of this type are known as 'manglers'. Orcs were very impressed by such machines used against them and soon learned how to make their own. Machinery of Destruction."
+  },
+  {
+    "id": "dw-020-hammerers",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Hammerers",
+    "profiles": [
+      {
+        "label": "+4 Shock Elite",
+        "stats": [
+          "3",
+          "5",
+          "3",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-hammerers.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon & Double-Handed Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The most senior fighting Dwarfs of all are called Hammerers. They form into small units of shock troops, ready to perform the toughest and most demanding feats or die in the attempt."
+  },
+  {
+    "id": "dw-040-dwarf-clansmen",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Dwarf Clansmen",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "3",
+          "5",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-clansmen.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "20–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "In the mountains where Dwarfs live in isolated clans, warriors quickly become battle-hardened. These clansmen are greatly respected by all Dwarfs."
+  },
+  {
+    "id": "dw-020-iron-breakers",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Iron Breakers",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "3",
+          "5",
+          "3",
+          "4",
+          "4",
+          "1",
+          "3",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-iron-breakers.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "When Dwarven armies assemble, it is usual for some of the most renowned warriors to form small units of hard-hitting battle-troopers. These fiery Dwarfs will gallantly storm gates and prepared positions."
+  },
+  {
+    "id": "dw-020-longbeards",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Longbeards",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "3",
+          "5",
+          "3",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-longbeards.png",
+    "ptsPerModel": 14,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Flails",
+            "cost": "1"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Older Dwarven warriors are termed Longbeards, a term of respect and honour. These fighters combine experience with strength and maturity."
+  },
+  {
+    "id": "dw-2060-dwarf-crossbowmen",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "20–60",
+    "name": "Dwarf Crossbowmen",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-crossbowmen.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The crossbow is a favoured weapon of the Dwarfs as many Goblins know to their cost."
+  },
+  {
+    "id": "dw-40120-dwarf-warriors",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "40–120",
+    "name": "Dwarf Warriors",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-warriors.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "20–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Pikes",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "All Dwarfs are warriors as well as craftsmen — warfare is part of their nature."
+  },
+  {
+    "id": "dw-020-thunderers",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Thunderers",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-thunderers.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Arquebus & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarfs are highly skilled technicians and lead all other races in the new art of gunpowder technology."
+  },
+  {
+    "id": "dw-020-troll-slayers",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Troll Slayers",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-troll-slayers.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Troll Slayers are young Dwarfs who have been crossed in love, or who have suffered some great personal calamity. Such is their grief that they dedicate their lives to seeking out and slaying their race's most dangerous enemies, hoping to die in the attempt. Troll Slayers are immune to fear caused by living creatures and are subject to frenzy."
+  },
+  {
+    "id": "dw-010-giant-slayers",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Giant Slayers",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-giant-slayers.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Unsuccessful Troll Slayers — those that fail to get themselves killed — seek out larger and more fearsome monsters. Giant Slayers are immune to fear caused by living creatures, are subject to frenzy, and cannot be routed from hand-to-hand combat."
+  },
+  {
+    "id": "dw-050-gnome-warriors",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Gnome Warriors",
+    "profiles": [
+      {
+        "label": "Gnome",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "7",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-gnome-warriors.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Double Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "2"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Gnomes are close relatives of Dwarfs and may fight alongside them in their own units."
+  },
+  {
+    "id": "dw-012-sappers",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–12",
+    "name": "Sappers",
+    "profiles": [
+      {
+        "label": "Dwarf Sapper",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-sappers.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "2 (teams)",
+    "weapons": "Double-Handed Weapon & Hand Weapon",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarven sappers are expert designers and builders of field fortifications. Sappers operate in teams of two models. See document.getElementById('sappers')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Special Troop Types — Sappers."
+  },
+  {
+    "id": "dw-012-war-engines",
+    "army": "dwarfs",
+    "type": "aggregate",
+    "allowance": "0–12",
+    "name": "War Engines",
+    "profiles": [],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-war-engines.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "Up to 6 units of 1–4 engine models",
+    "weapons": null,
+    "armour": null,
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": {
+      "headers": [
+        "Engine",
+        "Max",
+        "Pts"
+      ],
+      "rows": [
+        [
+          "3-man bolt-throwers",
+          "0–4",
+          "54"
+        ],
+        [
+          "4-man bolt-throwers",
+          "0–2",
+          "72"
+        ],
+        [
+          "3-man stone-throwers",
+          "0–3",
+          "54"
+        ],
+        [
+          "3-man cannon",
+          "0–2",
+          "69"
+        ],
+        [
+          "3-man organ guns",
+          "0–1",
+          "99"
+        ],
+        [
+          "3-man flame cannon",
+          "0–1",
+          "119"
+        ],
+        [
+          "2-man fire throwers",
+          "0–3",
+          "56"
+        ]
+      ]
+    },
+    "flavour": "Dwarf armies may field a unique variety of engines of war. Engines are organised into units (batteries) of between 1 and 4 engine models. A battery may include a mix of different types of engine if the player wishes."
+  },
+  {
+    "id": "dw-08-firethrower-teams",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–8",
+    "name": "Dwarf Firethrower Teams",
+    "profiles": [
+      {
+        "label": "2 Dwarf Crew",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-firethrower-teams.png",
+    "ptsPerModel": 56,
+    "ptsFixed": null,
+    "models": "1–4 (2 crew each)",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any team may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarf Firethrowers may be added to any Dwarf army. Subject to the document.getElementById('et-fire-thrower')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Engine Types — Fire Thrower rules and the rules for Using Teams in Warhammer Armies."
+  },
+  {
+    "id": "dw-015-mountaineers",
+    "army": "dwarfs",
+    "type": "standard",
+    "allowance": "0–15",
+    "name": "Dwarf Mountaineers",
+    "profiles": [
+      {
+        "label": "Mountaineer",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-dw-mountaineers.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon & Blunderbuss",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarf trappers who roam the highest peaks and glaciers of the mountainous Dwarf realms. Covered in snow for most of the year, the Mountaineers patrol on skis — much valued by the Dwarven Lords as mountain troops."
+  },
+  {
+    "id": "sl-040-bull-slann-riders",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Bull Slann Riders",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "2",
+          "3",
+          "4",
+          "1",
+          "4",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One Mount",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "4",
+          "–",
+          "1",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-bull-riders.png",
+    "ptsPerModel": 31,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "2"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Slann hunt and capture Cold Ones from their subterranean haunts in the mountains of the west. Only the bravest of regular troops are permitted to ride these monsters."
+  },
+  {
+    "id": "sl-010-warrior-priests",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Warrior Priests",
+    "profiles": [
+      {
+        "label": "+4 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "2",
+          "4",
+          "4",
+          "1",
+          "4",
+          "2",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-warrior-priests.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "A Magic Standard",
+            "cost": "100"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "There are many priestly clans; every large Slann city has its own god and its own class of warrior priests. Slann warrior priests are subject to frenzy."
+  },
+  {
+    "id": "sl-030-jaguar-warriors",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Jaguar Warriors",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "2",
+          "3",
+          "4",
+          "1",
+          "4",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-jaguar.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelins",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "This elite order of Slann warriors wears battlesuits made from jaguar skins."
+  },
+  {
+    "id": "sl-030-alligator-warriors",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Alligator Warriors",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-alligator.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The order of Alligator warriors wears armour made from tough alligator skin."
+  },
+  {
+    "id": "sl-030-eagle-warriors",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Eagle Warriors",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "2",
+          "4",
+          "4",
+          "1",
+          "4",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-eagle.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "75"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "This order of Slann totem warriors wears battlesuits woven from feathers, and helmets shaped like eagles' heads. To become a member of the Eagle Order is the highest honour a Slann warrior can gain."
+  },
+  {
+    "id": "sl-060-bull-slann",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Bull Slann",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-bull-slann.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour & Shield",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The regular warriors of the Slann guard the highways and palaces of the Emperor, the religious buildings, fortresses and other institutions of the Slann. Bull Slann are regular warriors, spawned, bred and trained for war."
+  },
+  {
+    "id": "sl-020-venom-tribes",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Venom Tribes",
+    "profiles": [
+      {
+        "label": "+1 Missile Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-venom.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon & Blowpipe",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These primitive tribes supply lightly armed missile troops. By an adaption of nature these Slann exude a poisonous mucus which enables them to poison their weapons. All attacks, including missile hits, are poisonous."
+  },
+  {
+    "id": "sl-1080-spawn-bands",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "10–80",
+    "name": "Spawn Bands",
+    "profiles": [
+      {
+        "label": "Slann",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-spawn-bands.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These form the majority of warrior Slann and are drawn from local jungle settlements or districts of a town. All Slann are obliged to perform a length of military duty in these bands."
+  },
+  {
+    "id": "sl-015-scouts",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–15",
+    "name": "Scouts",
+    "profiles": [
+      {
+        "label": "Slann Scout",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-scouts.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "5–15",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many Slann dwell in the deepest jungles and trackless swamps where they have become skilled at scouting, tracking, ambushing and skirmishing. Many intruders disappear without trace, victims of the barely seen Slann."
+  },
+  {
+    "id": "sl-060-jungle-braves",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Jungle Braves",
+    "profiles": [
+      {
+        "label": "Slann Levy",
+        "stats": [
+          "4",
+          "2",
+          "1",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "6",
+          "8",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-jungle-braves.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "15–20",
+    "weapons": "Hand Weapons",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Blowpipes",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Slann of the southern jungles are wild and untamed. Their warriors serve the Emperor by means of tribute, having little else to offer their distant master."
+  },
+  {
+    "id": "sl-030-human-slaves",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Human Slaves",
+    "profiles": [
+      {
+        "label": "Human Slave",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "2",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-human-slaves.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "To bolster their dwindling armies, the Slann take young captives from human settlements and rear them as lobotomised eunoch slave warriors. Human Slave units must be led by a Slann champion — if their leader is slain and no other Slann character is available, slave troops will do nothing (though they fight back if attacked). Subject to stupidity."
+  },
+  {
+    "id": "sl-05-troglodytes",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–5",
+    "name": "Troglodytes",
+    "profiles": [
+      {
+        "label": "Troglodyte",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "4",
+          "2",
+          "1",
+          "2",
+          "9",
+          "4",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-troglodytes.png",
+    "ptsPerModel": 36,
+    "ptsFixed": null,
+    "models": "1–5",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shield",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Troglodytes are larger and fiercer relatives and associates of Lizardmen. They cause fear in smaller creatures and suffer from stupidity. Opponents suffer from nausea as described in document.getElementById('gr-troglodytes')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Bestiary — Troglodytes."
+  },
+  {
+    "id": "sl-020-lizardmen-warriors",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Lizardmen Warriors",
+    "profiles": [
+      {
+        "label": "Lizardman",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "2",
+          "1",
+          "1",
+          "9",
+          "5",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-lizardmen.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many thousands of years ago, the ancestors of the Slann waged war against and destroyed the ancient civilisation of the Lizardmen. Today most Lizardmen live reclusive underground lives, but some have been subjugated by the Emperor and fight in his armies. Immune to fear and panic."
+  },
+  {
+    "id": "sl-04-slann-animal-handlers",
+    "army": "slann",
+    "type": "standard",
+    "allowance": "0–4",
+    "name": "Slann Animal Handlers",
+    "profiles": [
+      {
+        "label": "Animal Handler",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-handlers.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "12",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Each handler may control 2–6 animal models; two or more handlers and their packs may be merged to form larger units. However each animal handler unit may contain only one type of creature."
+  },
+  {
+    "id": "sl-01-slann-war-altar",
+    "army": "slann",
+    "type": "waraltar",
+    "allowance": "0–1",
+    "name": "Slann War Altar",
+    "profiles": [
+      {
+        "label": "Altar Guards",
+        "stats": [
+          "4",
+          "4",
+          "2",
+          "4",
+          "4",
+          "1",
+          "4",
+          "2",
+          "8",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-sl-war-altar.png",
+    "ptsPerModel": 98,
+    "ptsFixed": null,
+    "models": "1 War Altar & 4 Altar Guards",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "The war altar may:",
+        "items": [
+          {
+            "name": "Be placed on a litter",
+            "cost": "12"
+          },
+          {
+            "name": "Have a magic standard",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Large armies are accompanied by a sacrificial altar of which there are a great many in the Slann Empire. Altars vary depending on the cult from which they come. Some are merely huge idols, whilst others are elaborately fashioned from the mummified remains of ancient high priests."
+  },
+  {
+    "id": "un-050-death-riders",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Death Riders",
+    "profiles": [
+      {
+        "label": "Undead",
+        "stats": [
+          "8*",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "2*",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* M includes movement allowance & stomp attack of undead steed",
+    "profileD6": false,
+    "art": "img/unit-un-death-riders.png",
+    "ptsPerModel": 21,
+    "ptsFixed": null,
+    "models": "5–25",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Lances",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These knights of undeath are mounted on undead horses, creatures of wholly unnatural appearance and uncanny abilities."
+  },
+  {
+    "id": "un-04-undead-chariots",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–4",
+    "name": "Undead Chariots",
+    "profiles": [
+      {
+        "label": "Chariot",
+        "stats": [
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Skeleton Crew (2)",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Undead Horse (2)",
+        "stats": [
+          "8",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-chariots.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "There are those amongst the warriors of the dead who ride into battle upon empty carcasses of huge creatures, wheeled in bone and pulled by undead horses. The value of the shield has been adjusted, as all crew count as shielded by any crew member."
+  },
+  {
+    "id": "un-20100-skeleton-warriors",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "20–100",
+    "name": "Skeleton Warriors",
+    "profiles": [
+      {
+        "label": "Skeleton",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-skeleton-warriors.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The bulk of undead are plucked from their graves in the form of skeletons, fleshless and unfeeling, fearless and frightening."
+  },
+  {
+    "id": "un-040-skeleton-archers",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Skeleton Archers",
+    "profiles": [
+      {
+        "label": "Skeleton",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-skeleton-archers.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Skeleton warriors armed with the bow."
+  },
+  {
+    "id": "un-040-skeleton-crossbows",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Skeleton Crossbows",
+    "profiles": [
+      {
+        "label": "Skeleton",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-skeleton-crossbows.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Skeleton warriors carrying the deadly crossbow."
+  },
+  {
+    "id": "un-1050-grim-reapers",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "10–50",
+    "name": "Grim Reapers",
+    "profiles": [
+      {
+        "label": "Skeleton",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-grim-reapers.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Double-Handed Weapons (Scythes)",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Skeleton warriors armed with the very symbol of death itself — the scythe."
+  },
+  {
+    "id": "un-0100-zombies",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–100",
+    "name": "Zombies",
+    "profiles": [
+      {
+        "label": "Zombie",
+        "stats": [
+          "4",
+          "2",
+          "0",
+          "3",
+          "3",
+          "1",
+          "1",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-zombies.png",
+    "ptsPerModel": 4,
+    "ptsFixed": null,
+    "models": "20–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Zombies are fleshy undead, their rotten flesh and torn entrails creating a nauseating stench, their stiff muscles leaving them with a shambling gait."
+  },
+  {
+    "id": "un-080-ghouls",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–80",
+    "name": "Ghouls",
+    "profiles": [
+      {
+        "label": "Ghoul",
+        "stats": [
+          "4",
+          "2",
+          "0",
+          "3",
+          "4",
+          "1",
+          "3",
+          "2",
+          "2",
+          "5",
+          "8",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-ghouls.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "20–40",
+    "weapons": "Bite, Claw or Club",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Ghouls are living creatures perverted into undead form by omophagic practices and other forms of morbid depravity."
+  },
+  {
+    "id": "un-010-mummies",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Mummies",
+    "profiles": [
+      {
+        "label": "Mummy",
+        "stats": [
+          "3",
+          "3",
+          "0",
+          "4",
+          "5",
+          "4",
+          "3",
+          "2",
+          "9",
+          "8",
+          "8",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-mummies.png",
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": "1–10",
+    "weapons": "Claw",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Mummies are amongst the most powerful of all undead, preserved beyond death by potent magic, and reeking of the natron and sulphur of the embalmer's parlour."
+  },
+  {
+    "id": "un-06-carrion",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–6",
+    "name": "Carrion",
+    "profiles": [
+      {
+        "label": "Carrion",
+        "stats": [
+          "4",
+          "3",
+          "0",
+          "3",
+          "3",
+          "2",
+          "4",
+          "3*",
+          "7",
+          "3",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Plus the rider's attacks (see <a onclick=\"navigate('be-undead');setTimeout(()=>document.getElementById('un-carrion')?.scrollIntoView({behavior:'smooth'}),150)\" style=\"color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)\">Bestiary — Carrion</a>)",
+    "profileD6": false,
+    "art": "img/unit-un-carrion.png",
+    "ptsPerModel": 45,
+    "ptsFixed": null,
+    "models": "1–6",
+    "weapons": "Bite/Claw",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The giant bird of death is a creature of chaos. A powerful master of Necromancy can draw it from the Chaos Wastes where it feeds upon the lost souls of the misguided."
+  },
+  {
+    "id": "un-01-plague-cart",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Plague Cart",
+    "profiles": [
+      {
+        "label": "Wagon",
+        "stats": [
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Undead Driver",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Undead Ox (1)",
+        "stats": [
+          "8",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "0",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-plague-cart.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": null,
+    "armour": null,
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The creaking cart of death carries its dark cargo of doom into the centre of battle, bolstering the power of the undead and filling the hearts of the enemy with despair."
+  },
+  {
+    "id": "un-04-undead-war-machines",
+    "army": "undead",
+    "type": "standard",
+    "allowance": "0–4",
+    "name": "Undead War Machines",
+    "profiles": [
+      {
+        "label": "Skeleton Crew (3)",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-un-war-machines.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "1–4 Stone Throwers",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "mount": null,
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Constructed by Necromantic artificers from bones, and dragged forth from the charnel vaults, these machines of hell may hurl stones or dread \"skull\" ammunition."
+  },
+  {
+    "id": "ally-chaos-001-chaos-knight",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Chaos Knight as Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "4*",
+          "8",
+          "8",
+          "5",
+          "4",
+          "3",
+          "8",
+          "3",
+          "10+3",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Chaos Steed",
+        "stats": [
+          "8",
+          "4",
+          "0",
+          "4",
+          "4",
+          "–",
+          "4",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-chaos-knight.png",
+    "ptsPerModel": 250,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapons",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Any commander may have:",
+        "items": [
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Warhorse Barding",
+            "cost": "4"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A mighty disciple of Chaos, by force of his own will and favour in the god's eye, may attract a following among those also upon the path of chaos."
+  },
+  {
+    "id": "ally-chaos-002-soulflayer",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Chaos Sorcerer as Contingent Commander",
+    "profiles": [
+      {
+        "label": "Lvl 20 Sorcerer",
+        "stats": [
+          "4*",
+          "5",
+          "4",
+          "4",
+          "4",
+          "4",
+          "5",
+          "1",
+          "9+2",
+          "10+3",
+          "9+2",
+          "10+3"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Chaos Steed",
+        "stats": [
+          "8",
+          "4",
+          "0",
+          "4",
+          "4",
+          "–",
+          "4",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-soulflayer.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Ally commander may have:",
+        "items": [
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Chaos Heavy Armour",
+            "cost": "53"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Sorcerer may use Battle Magic, Daemonic, Elemental, Illusionist or Necromantic spells without any restriction as to choice of type."
+  },
+  {
+    "id": "ally-chaos-010-chaos-warriors",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Chaos Warriors",
+    "profiles": [
+      {
+        "label": "Warrior",
+        "stats": [
+          "4",
+          "6",
+          "6",
+          "4",
+          "3",
+          "2",
+          "6",
+          "2",
+          "9+2",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Champion",
+        "stats": [
+          "4",
+          "7",
+          "7",
+          "5",
+          "3",
+          "2",
+          "7",
+          "2",
+          "10+3",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-chaos-warriors.png",
+    "ptsPerModel": 74,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Chaos Champion",
+            "cost": "129"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "100"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These Human warriors worship the gods of Chaos. They have exchanged their souls for superhuman strength and courage."
+  },
+  {
+    "id": "ally-chaos-020-minotaurs",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Minotaurs",
+    "profiles": [
+      {
+        "label": "Minotaur",
+        "stats": [
+          "6",
+          "4",
+          "3",
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "9",
+          "5",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "6",
+          "5",
+          "4",
+          "5",
+          "4",
+          "3",
+          "4",
+          "3",
+          "9",
+          "5",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "6",
+          "6",
+          "4",
+          "5",
+          "5",
+          "5",
+          "4",
+          "4",
+          "10+1",
+          "5",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "6",
+          "6",
+          "4",
+          "5",
+          "5",
+          "5",
+          "5",
+          "4",
+          "10+2",
+          "5",
+          "8+1",
+          "7+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-minotaurs.png",
+    "ptsPerModel": 40,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion — Level 5 Hero",
+            "cost": "90"
+          },
+          {
+            "name": "Champion — Level 10 Hero",
+            "cost": "140"
+          },
+          {
+            "name": "Champion — Level 15 Hero",
+            "cost": "190"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "8"
+          },
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "4"
+          },
+          {
+            "name": "Spears",
+            "cost": "4"
+          },
+          {
+            "name": "Halberds",
+            "cost": "8"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Minotaurs are slavering creatures of chaos which lust for the taste of warm blood, snarling and fighting with empasioned ferocity amidst an orgy of broken flesh. Minotaurs are subject to  and  as described under .blood-greedfrenzyPsychology — Frenzy"
+  },
+  {
+    "id": "ally-chaos-030-beastmen",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–100",
+    "name": "Chaos Beastmen",
+    "profiles": [
+      {
+        "label": "Beastman",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "4",
+          "2",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "4",
+          "2",
+          "7",
+          "6",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "5",
+          "4",
+          "3",
+          "4",
+          "3",
+          "8+1",
+          "6",
+          "7",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "3",
+          "9+2",
+          "6",
+          "8+1",
+          "7+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-beastmen.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion — Level 5 Hero",
+            "cost": "60"
+          },
+          {
+            "name": "Champion — Level 10 Hero",
+            "cost": "110"
+          },
+          {
+            "name": "Champion — Level 15 Hero",
+            "cost": "160"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Flails",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Bands of Beastmen dwell deep in forests and wilderness regions, worshipping the Chaos gods and steadily increasing in numbers."
+  },
+  {
+    "id": "ally-chaos-040-chaos-centaurs",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Chaos Centaurs",
+    "profiles": [
+      {
+        "label": "Centaur",
+        "stats": [
+          "8",
+          "3",
+          "4",
+          "4",
+          "3",
+          "2",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "8",
+          "4",
+          "5",
+          "5",
+          "3",
+          "2",
+          "4",
+          "3",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "8",
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "4",
+          "4",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "8",
+          "5",
+          "5",
+          "5",
+          "4",
+          "4",
+          "5",
+          "4",
+          "9+2",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-chaos-centaurs.png",
+    "ptsPerModel": 32,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion — Level 5 Hero",
+            "cost": "82"
+          },
+          {
+            "name": "Champion — Level 10 Hero",
+            "cost": "132"
+          },
+          {
+            "name": "Champion — Level 15 Hero",
+            "cost": "182"
+          },
+          {
+            "name": "Lances",
+            "cost": "8"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "8"
+          },
+          {
+            "name": "Halberds",
+            "cost": "8"
+          },
+          {
+            "name": "Flails",
+            "cost": "4"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "4"
+          },
+          {
+            "name": "Bows",
+            "cost": "4"
+          },
+          {
+            "name": "Shields",
+            "cost": "4"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "8"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Nomadic Chaos Centaurs are hot-blooded, aggressive animals always eager to sate their bestial lust for carnage."
+  },
+  {
+    "id": "ally-chaos-050-chaos-goblins",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–100",
+    "name": "Chaos Goblins",
+    "profiles": [
+      {
+        "label": "Chaos Goblin",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "3",
+          "4",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "2",
+          "3",
+          "3",
+          "6+1",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "7",
+          "+2",
+          "5",
+          "6+1",
+          "5",
+          "6+1",
+          "6+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-chaos-goblins.png",
+    "ptsPerModel": "2½",
+    "ptsFixed": null,
+    "models": "20–50",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion — Level 5 Hero",
+            "cost": "15"
+          },
+          {
+            "name": "Champion — Level 10 Hero",
+            "cost": "28"
+          },
+          {
+            "name": "Champion — Level 15 Hero",
+            "cost": "40"
+          },
+          {
+            "name": "Spears",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Bow",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Scorned outcasts of goblinoid society, these unwholesome creatures quickly heed the whims of their masters in the service of Chaos."
+  },
+  {
+    "id": "ally-chaos-060-cd-berserkers",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Chaos Dwarf Berserkers",
+    "profiles": [
+      {
+        "label": "Berserker",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "3",
+          "6",
+          "4",
+          "4",
+          "5",
+          "3",
+          "4",
+          "3",
+          "10+2",
+          "7",
+          "10+1",
+          "10+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-cd-berserkers.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "155"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing Axe or Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Gnashing razor sharp teeth and chewing at their own exposed flesh in their lust for battle, these blood-vomiting maniacs are the most dangerous of all Chaos Dwarfs. They are subject to the full rules for Berserkers (see ).Special Troop Types — Berserkers"
+  },
+  {
+    "id": "ally-chaos-070-chaos-dwarfs",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Chaos Dwarfs",
+    "profiles": [
+      {
+        "label": "Chaos Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "3",
+          "6",
+          "4",
+          "4",
+          "5",
+          "2",
+          "3",
+          "3",
+          "10+1",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "3",
+          "6",
+          "4",
+          "4",
+          "5",
+          "3",
+          "4",
+          "3",
+          "10+2",
+          "7",
+          "10+1",
+          "10+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-chaos-dwarfs.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion — Level 5 Hero",
+            "cost": "50"
+          },
+          {
+            "name": "Champion — Level 10 Hero",
+            "cost": "130"
+          },
+          {
+            "name": "Champion — Level 15 Hero",
+            "cost": "150"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Warped by Chaos, the Chaos Dwarfs manifest all the most warlike qualities of their race but twisted to a new pitch of evil and insanity."
+  },
+  {
+    "id": "ally-chaos-080-cd-bazuka",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–3",
+    "name": "Chaos Dwarf Bazuka",
+    "profiles": [
+      {
+        "label": "Chaos Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-cd-bazuka.png",
+    "ptsPerModel": 70,
+    "ptsFixed": null,
+    "models": "1–3",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Crew may have:",
+        "items": [
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Another outstanding example of the remarkable pyrotechnic abilities of the Chaos Dwarfs is the rocket launcher bazuka. The weapon is spectacular in its effects if rather erratic. Crews are usually volunteers who are either exceptionally brave or possibly slightly insane."
+  },
+  {
+    "id": "ally-chaos-090-cd-war-machines",
+    "army": "ally-chaos",
+    "type": "warmachine",
+    "allowance": "0–3",
+    "name": "Chaos Dwarf War Machines",
+    "profiles": [
+      {
+        "label": "Boar Centaur (crew)",
+        "stats": [
+          "7",
+          "4",
+          "3",
+          "3",
+          "4",
+          "2",
+          "2",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-cd-war-machines.png",
+    "ptsPerModel": 120,
+    "ptsFixed": null,
+    "models": "1–4",
+    "weapons": "Double-Handed Weapon",
+    "armour": "Heavy Armour & Barding",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These awesome war machines were devised by the notorious Chaos Dwarf inventor who also bred the Dwarf Boar-Centaurs to crew them. There are two types; the 'Whirlwind' with rotating flails and scythes, and the 'Tenderiser' armed with three enormous concussive implements."
+  },
+  {
+    "id": "ally-chaos-100-cd-mortars",
+    "army": "ally-chaos",
+    "type": "standard",
+    "allowance": "0–2",
+    "name": "Chaos Dwarf Mortars",
+    "profiles": [
+      {
+        "label": "Chaos Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-chaos-unit-ch-cd-mortars.png",
+    "ptsPerModel": 42,
+    "ptsFixed": null,
+    "models": "1–4",
+    "weapons": null,
+    "armour": "Heavy Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Chaos Dwarfs retain the ingenuity of their race, but their inventive minds are tainted with Chaos, and they seek only to serve the Chaos gods."
+  },
+  {
+    "id": "ally-dw-001-commander",
+    "army": "ally-dwarf",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Dwarf Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "3",
+          "7",
+          "4",
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "7",
+          "10+1",
+          "10+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dwarf-unit-dw-commander.png",
+    "ptsPerModel": 170,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Contingent commander may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Mithril Heavy Armour",
+            "cost": "26"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarf lords take their responsibility towards allies very seriously, and will often lead a contingent personally, or else appoint a trusted friend or relative to undertake the task on their behalf."
+  },
+  {
+    "id": "ally-dw-010-crossbowmen",
+    "army": "ally-dwarf",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Dwarf Crossbowmen",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dwarf-unit-dw-crossbowmen.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "53"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Dwarfs favour the crossbow above all other missile weapons. Like the Dwarfs themselves it is slow, but dependable and hard-hitting."
+  },
+  {
+    "id": "ally-dw-020-iron-breakers",
+    "army": "ally-dwarf",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Iron Breakers",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "3",
+          "5",
+          "3",
+          "4",
+          "4",
+          "1",
+          "3",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "3",
+          "6",
+          "4",
+          "4",
+          "5",
+          "2",
+          "3",
+          "3",
+          "10+1",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dwarf-unit-dw-iron-breakers.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "10",
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "92"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarf contingents are often formed around a core of elite dour-hearted warriors whose bravery and valour will serve to honour the race in the eyes of its allies."
+  },
+  {
+    "id": "ally-dw-030-warriors",
+    "army": "ally-dwarf",
+    "type": "standard",
+    "allowance": "10–80",
+    "name": "Dwarf Warriors",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dwarf-unit-dw-warriors.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "50"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarfs make steadfast warriors, ideal and dependable troops to fill the battle lines."
+  },
+  {
+    "id": "ally-de-001-commander",
+    "army": "ally-dark-elf",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "5*",
+          "7",
+          "5",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "4",
+          "–",
+          "1",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dark-elf-unit-de-commander.png",
+    "ptsPerModel": 170,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Contingent commander may have:",
+        "items": [
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Barding",
+            "cost": "4"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are frequently captains of black hulled fleets, nobles, or blood-seekers from the aristocracy of their kind — merciless leaders all too happy to throw in their lot with the forces of destruction in return for the chance to bathe in the blood of their enemies."
+  },
+  {
+    "id": "ally-de-002-grimwitch",
+    "army": "ally-dark-elf",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Grimwitch",
+    "profiles": [
+      {
+        "label": "Lvl 10 Wizard",
+        "stats": [
+          "5*",
+          "5",
+          "4",
+          "4",
+          "3",
+          "2",
+          "7",
+          "1",
+          "9+1",
+          "10+2",
+          "10+1",
+          "10+2"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "4",
+          "–",
+          "1",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dark-elf-unit-de-grimwitch.png",
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Grimwitch may have:",
+        "items": [
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Great practitioners of magic, Dark Elf forces often include wizards. The Grimwitch must have at least one Daemonic or Necromantic spell at level 1. Remaining spells are made up with Battle Magic, Daemonic or Necromantic spells."
+  },
+  {
+    "id": "ally-de-003-standard-bearer",
+    "army": "ally-dark-elf",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Ally Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5*",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "4",
+          "–",
+          "1",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dark-elf-unit-de-standard-bearer.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Standard bearer may have:",
+        "items": [
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Warhorse Barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "One Magic Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The tattered black banners of Dark Elf raiders are probably the least welcome sight in all the coastal regions of the Old World."
+  },
+  {
+    "id": "ally-de-010-doomdrakes",
+    "army": "ally-dark-elf",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Doomdrakes",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "–",
+          "6",
+          "5",
+          "4",
+          "4",
+          "2",
+          "7",
+          "3",
+          "9+1",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "4",
+          "–",
+          "1",
+          "2",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dark-elf-unit-de-doomdrakes.png",
+    "ptsPerModel": 35,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "105"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Repeating Crossbows",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Cold Ones are deadly lizard-like creatures of tremendous power. Ridden into battle by hardened Elf warriors, few can stand before them and fewer still stand for long."
+  },
+  {
+    "id": "ally-de-020-doomsteeds",
+    "army": "ally-dark-elf",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Doomsteeds",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "7",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "–",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dark-elf-unit-de-doomsteeds.png",
+    "ptsPerModel": 33,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "59"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Repeating Crossbows",
+            "cost": "8"
+          },
+          {
+            "name": "Barding",
+            "cost": "8"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The horses of the Dark Elves are evil-eyed brutes, as cruel tempered and murderous as their masters."
+  },
+  {
+    "id": "ally-de-030-warriors",
+    "army": "ally-dark-elf",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Warriors",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dark-elf-unit-de-warriors.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "50"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "3"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Few races are as murderous, or as keen to do battle, as the Dark Elves. To these mean-hearted and fell-handed people, slaughter is the ultimate aim of war, and one they will travel far to savour."
+  },
+  {
+    "id": "ally-de-040-witch-elves",
+    "army": "ally-dark-elf",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Witch Elves",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-dark-elf-unit-de-witch-elves.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "50"
+          },
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Poisoned Attacks",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These blood-smeared she-elves fight as though possessed by Daemons, and with a murderous appetite which can only be sated in the heat of battle. They are subject to .frenzy"
+  },
+  {
+    "id": "ally-he-001-commander",
+    "army": "ally-high-elf",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Elf Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "5*",
+          "7",
+          "5",
+          "4",
+          "4",
+          "9",
+          "4",
+          "–",
+          "10+3",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-high-elf-unit-he-commander.png",
+    "ptsPerModel": 168,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Contingent commander may have:",
+        "items": [
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Barding",
+            "cost": "4"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Longbow",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Few races are so handsome, or so physically imposing as the Elves, but few amongst even their own race can match the breathtaking physical perfection of the Princes of Ulthuan. No less impressive are the finely crafted armours and ancient weapons which adorn these heroes of a proud warrior culture."
+  },
+  {
+    "id": "ally-he-002-spellbard",
+    "army": "ally-high-elf",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Spellbard",
+    "profiles": [
+      {
+        "label": "Lvl 10 Wizard",
+        "stats": [
+          "5*",
+          "4",
+          "4",
+          "3",
+          "2",
+          "7",
+          "1",
+          "–",
+          "9+1",
+          "10+2",
+          "10+1",
+          "10+2"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-high-elf-unit-he-spellbard.png",
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Spellbard may have:",
+        "items": [
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elves are a magical folk who often take their wizards to war. The Spellbard may have one Illusionist, Elemental or Daemonic spell at level 1, making up the remainder with Battle Magic spells."
+  },
+  {
+    "id": "ally-he-003-standard-bearer",
+    "army": "ally-high-elf",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Ally Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5*",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "–",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-high-elf-unit-he-standard-bearer.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Standard bearer may have:",
+        "items": [
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "One Magic Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The fluttering banners of the Elves are wrought of the finest materials from the world over, cunningly crafted with the aid of magic, and depict many valiant deeds and heroic conquests."
+  },
+  {
+    "id": "ally-he-010-silver-helms",
+    "army": "ally-high-elf",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Silver Helms",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "7",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "–",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-high-elf-unit-he-silver-helms.png",
+    "ptsPerModel": 35,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "59"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Musical Instrument",
+            "cost": "25"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Barding",
+            "cost": "8"
+          },
+          {
+            "name": "A Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "It is said that Elven horses are the finest in all the world, carrying their warriors unflinching into the heat of battle."
+  },
+  {
+    "id": "ally-he-020-warrior-kindreds",
+    "army": "ally-high-elf",
+    "type": "standard",
+    "allowance": "10–40",
+    "name": "Warrior Kindreds",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-high-elf-unit-he-warrior-kindreds.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "50"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The glittering ranks of Elven warriors have honoured their race upon many a battlefield since the world was young."
+  },
+  {
+    "id": "ally-he-030-archers",
+    "army": "ally-high-elf",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Archers",
+    "profiles": [
+      {
+        "label": "+1 Missile Elite",
+        "stats": [
+          "5",
+          "4",
+          "5",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-high-elf-unit-he-archers.png",
+    "ptsPerModel": 14,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "53"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Bows are the most common form of missile weapon amongst the Elves. Many are trained to excel in their use."
+  },
+  {
+    "id": "ally-he-040-merchant-companies",
+    "army": "ally-high-elf",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Merchant Companies",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "2",
+          "7",
+          "3",
+          "9+1",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-high-elf-unit-he-merchant-companies.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "One half of each unit must have:",
+        "items": [
+          {
+            "name": "Longbows",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Other half of each unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "53"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These regiments are raised by Merchant Princes and are uniquely armed: half as spearmen or halberdiers, the other half as archers (see ).Special Formations — Mixed Ranks"
+  },
+  {
+    "id": "ally-we-001-commander",
+    "army": "ally-wood-elf",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Wood Elf Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "5*",
+          "6",
+          "5",
+          "4",
+          "4",
+          "3",
+          "8",
+          "3",
+          "10+2",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-wood-elf-unit-we-commander.png",
+    "ptsPerModel": 130,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Contingent commander may have:",
+        "items": [
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Barding",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elven lords are highly respected and cultured members of their complex hierarchical society. They are also brave fighters and able leaders, and inspire the best qualities from their loyal followers."
+  },
+  {
+    "id": "ally-we-002-wizard",
+    "army": "ally-wood-elf",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Wood Elf Wizard",
+    "profiles": [
+      {
+        "label": "Lvl 10 Wizard",
+        "stats": [
+          "5*",
+          "4",
+          "4",
+          "3",
+          "2",
+          "7",
+          "1",
+          "–",
+          "9+1",
+          "10+2",
+          "10+1",
+          "10+2"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-wood-elf-unit-we-wizard.png",
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "The wizard may have:",
+        "items": [
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The wizard may have one level 1 Elemental spell. Remaining spells are Battle Magic."
+  },
+  {
+    "id": "ally-we-010-warrior-kinbands",
+    "army": "ally-wood-elf",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Warrior Kinbands",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-wood-elf-unit-we-warrior-kinbands.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "49"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The family banners of the Kinbands are a familiar sight to the allies of the Elves, and their bloody-handed bearers a welcome addition to the army."
+  },
+  {
+    "id": "ally-we-020-lords-bowmen",
+    "army": "ally-wood-elf",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Lord's Bowmen",
+    "profiles": [
+      {
+        "label": "+1 Missile Elite",
+        "stats": [
+          "5",
+          "4",
+          "5",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "2",
+          "7",
+          "3",
+          "9+1",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-wood-elf-unit-we-lords-bowmen.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "91"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The finest archers of the realm form the élite core of a Wood Elf force, and are drawn from the personal retainers of the contingent's leader."
+  },
+  {
+    "id": "ally-we-030-archers",
+    "army": "ally-wood-elf",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Archers",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-wood-elf-unit-we-archers.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "51"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Wood Elves are masters of the bow; the most notorious and deadly Elven weapon of them all."
+  },
+  {
+    "id": "ally-we-040-wardancers",
+    "army": "ally-wood-elf",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Wardancers",
+    "profiles": [
+      {
+        "label": "Wardancer",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-wood-elf-unit-we-wardancers.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "60"
+          },
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Flails",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The amazing athletic fighting prowess of these dancing warriors of doom is doubly welcomed by their allies."
+  },
+  {
+    "id": "ally-we-050-glade-runners",
+    "army": "ally-wood-elf",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Glade Runners",
+    "profiles": [
+      {
+        "label": "Elf Scout",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "3",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-wood-elf-unit-we-glade-runners.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "5–12",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "56"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Scouts, way-watchers, messengers and hunters form the basis of the Elven Glade Runners, a valuable addition to the strength of any ally."
+  },
+  {
+    "id": "ally-fi-001-fimm-warlord",
+    "army": "ally-fimir",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Fimm Warlord",
+    "profiles": [
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "5",
+          "6",
+          "4",
+          "5",
+          "4",
+          "8+2",
+          "5",
+          "7+1",
+          "7+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-fimir-unit-fi-fimm-warlord.png",
+    "ptsPerModel": 190,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Fimm warlord may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "4"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "8"
+          },
+          {
+            "name": "Shield",
+            "cost": "4"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A Fimir contingent must be led by a Fimm warlord unless a Meargh is present, in which case she may assume command instead."
+  },
+  {
+    "id": "ally-fi-002-meargh",
+    "army": "ally-fimir",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Meargh Wizard",
+    "profiles": [
+      {
+        "label": "Lvl 15 Meargh",
+        "stats": [
+          "4",
+          "5",
+          "1",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "8+2",
+          "7+2",
+          "8+2",
+          "8+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-fimir-unit-fi-meargh.png",
+    "ptsPerModel": 195,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapons",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Meargh must have 1 Daemonic spell of levels 1 and 2. Remaining spells may be Battle Magic, Illusionist, Necromantic or Daemonic. A Meargh may act as commander of the Fimir contingent instead of a Fimm Warlord."
+  },
+  {
+    "id": "ally-fi-003-dirach",
+    "army": "ally-fimir",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Dirach Wizard",
+    "profiles": [
+      {
+        "label": "Level 5 Dirach",
+        "stats": [
+          "4",
+          "4",
+          "1",
+          "5",
+          "3",
+          "2",
+          "2",
+          "1",
+          "6",
+          "6+1",
+          "7+1",
+          "7+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-fimir-unit-fi-dirach.png",
+    "ptsPerModel": 75,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapons",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A Dirach must have at least 1 Daemonic spell. Remaining spells may be either Daemonic or Battle Magic."
+  },
+  {
+    "id": "ally-fi-010-fianna-fimm",
+    "army": "ally-fimir",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Fianna Fimm",
+    "profiles": [
+      {
+        "label": "Shock Elite",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "5",
+          "5",
+          "2",
+          "4",
+          "2",
+          "6",
+          "5",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "5",
+          "6",
+          "3",
+          "4",
+          "4",
+          "7+1",
+          "5",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-fimir-unit-fi-fianna-fimm.png",
+    "ptsPerModel": 42,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "140"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These doughty cyclopean warriors are the elite retainers of Fimm nobles and warlords."
+  },
+  {
+    "id": "ally-fi-020-fimm-warriors",
+    "army": "ally-fimir",
+    "type": "standard",
+    "allowance": "5–60",
+    "name": "Fimm Warriors",
+    "profiles": [
+      {
+        "label": "Fimm",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "5",
+          "2",
+          "4",
+          "3",
+          "6",
+          "5",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "5",
+          "2",
+          "4",
+          "3",
+          "6",
+          "5",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-fimir-unit-fi-fimm-warriors.png",
+    "ptsPerModel": 32,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "82"
+          },
+          {
+            "name": "Shields",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These form the majority of warrior Fimm, strong fleshed and hard skinned these creatures have abhuman strength and ferocity."
+  },
+  {
+    "id": "ally-ow-001-commander",
+    "army": "ally-old-worlder",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "4*",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-old-worlder-unit-emp-commander.png",
+    "ptsPerModel": 108,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Contingent commander may have:",
+        "items": [
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Barding",
+            "cost": "4"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Leaders often come from noble families with a military tradition, and may be of any nationality from amongst the Old Worlders. These warrior allies are very cosmopolitan, often combining individual units of several nationalities."
+  },
+  {
+    "id": "ally-ow-010-imperial-templars",
+    "army": "ally-old-worlder",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Imperial Templars",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "5",
+          "3",
+          "9+2",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-old-worlder-unit-emp-templars.png",
+    "ptsPerModel": 39,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour, Shield & Barding",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "96"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "100"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Templars are religious orders of knights from the Empire, including the Order of the Fiery Heart, the Templars of the White Wolf and the Templars of Myrmidia."
+  },
+  {
+    "id": "ally-ow-020-chevaliers-errants",
+    "army": "ally-old-worlder",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Bretonnian Chevaliers Errants",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "–",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "–",
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "5",
+          "3",
+          "9+2",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-old-worlder-unit-bret-chevaliers-errants.png",
+    "ptsPerModel": 25,
+    "ptsFixed": null,
+    "models": "5–30",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "91"
+          },
+          {
+            "name": "Shield",
+            "cost": "2"
+          },
+          {
+            "name": "Barding",
+            "cost": "8"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are either Bretonnian knights sent forth by the King to help allies of Bretonnia, or bands of questing knights seeking honour, glory and reputation by fighting for noble causes in foreign fields."
+  },
+  {
+    "id": "ally-ow-030-imperial-infantry",
+    "army": "ally-old-worlder",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Imperial Infantry",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-old-worlder-unit-emp-halberdiers.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–50",
+    "weapons": "Halberd & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "34"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Electoral Provinces of The Empire maintain small standing armies, the core of which are the halberdiers, and sometimes contribute ally contingents to help friends in time of war."
+  },
+  {
+    "id": "ally-ow-040-border-horse",
+    "army": "ally-old-worlder",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Border Horse",
+    "profiles": [
+      {
+        "label": "incl. horse",
+        "stats": [
+          "8*",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "8*",
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "5",
+          "3",
+          "9+2",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-old-worlder-unit-bret-border-horse.png",
+    "ptsPerModel": 14,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "35"
+          },
+          {
+            "name": "Spears",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          },
+          {
+            "name": "Bows",
+            "cost": "4"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are units of Border Princes and their retainers from the area lying between the Black Mountains and the Black Gulf. They are descendants of Bretonnian and other Old Worlder adventurers who conquered and settled in this region."
+  },
+  {
+    "id": "ally-ow-050-kislevites",
+    "army": "ally-old-worlder",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Kislevites",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-old-worlder-unit-emp-kislevites.png",
+    "ptsPerModel": 7,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Double-Handed Weapon & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "32"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Kislev is a hard land and a source of sturdy, tough warriors of great courage."
+  },
+  {
+    "id": "ally-og-001-commander",
+    "army": "ally-orc-goblin",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Orc Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "5",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-orc-goblin-unit-og-orc-commander.png",
+    "ptsPerModel": 119,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Contingent commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Orcs are ideally suited to the role of command, being loud-mouthed, brutal and rather unimaginative. Operating on the maxim 'If in doubt, kill the nearest living thing', they have achieved a considerable measure of success."
+  },
+  {
+    "id": "ally-og-002-standard-bearer",
+    "army": "ally-orc-goblin",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Ally Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-orc-goblin-unit-og-standard-bearer.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "Magic Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Above all else, standard bearers need a good strong pair of arms… and a standard. Orc standards are ugly, crude affairs, repugnant to look upon and rather smelly. Orc standard bearers are the same."
+  },
+  {
+    "id": "ally-og-003-shaman",
+    "army": "ally-orc-goblin",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Orc Shaman",
+    "profiles": [
+      {
+        "label": "Lvl 15 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "4",
+          "5",
+          "3",
+          "3",
+          "1",
+          "9+2",
+          "7+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-orc-goblin-unit-og-shaman.png",
+    "ptsPerModel": 163,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Shaman may generate one Elemental, Daemonic or Illusionist spell from levels 1 and 2. Remaining spells must be Battle Magic."
+  },
+  {
+    "id": "ally-og-010-biguns",
+    "army": "ally-orc-goblin",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Biguns",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Lvl 10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "5",
+          "2",
+          "3",
+          "3",
+          "8+1",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-orc-goblin-unit-og-biguns.png",
+    "ptsPerModel": "9½",
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "64"
+          },
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The biggest Orcs always get to fight at the front of the battle, right where the action is! They are very proud of their ability to chop down large numbers of enemy, whilst their mates can only admire their bloody-handed prowess."
+  },
+  {
+    "id": "ally-og-020-arrer-boyz",
+    "army": "ally-orc-goblin",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Arrer Boyz",
+    "profiles": [
+      {
+        "label": "Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-orc-goblin-unit-og-arrer-boyz.png",
+    "ptsPerModel": "7½",
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "35"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Bows are favoured by the more technically minded Orcs. Rumour has it that Orc arrows are pointed at both ends, just to avoid confusion on the battlefield."
+  },
+  {
+    "id": "ally-og-030-boyz",
+    "army": "ally-orc-goblin",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Boyz",
+    "profiles": [
+      {
+        "label": "Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-orc-goblin-unit-og-boyz.png",
+    "ptsPerModel": "8½",
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "33"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Orc Boyz make up the bulk of the real fighting force of any group of goblinoids."
+  },
+  {
+    "id": "ally-og-040-gobbos",
+    "army": "ally-orc-goblin",
+    "type": "standard",
+    "allowance": "0–100",
+    "name": "Gobbos",
+    "profiles": [
+      {
+        "label": "Goblin",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "3",
+          "4",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-orc-goblin-unit-og-gobbos.png",
+    "ptsPerModel": 3,
+    "ptsFixed": null,
+    "models": "20–100",
+    "weapons": "Hand Weapon & Javelin",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "16"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Spears",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Beaten, abused and frequently eaten by their larger cousins, Goblins form a large but downtrodden part of goblinoid society. The chance to vent their feelings on the enemy may come as something of a relief to these creatures."
+  },
+  {
+    "id": "ally-py-001-chieftain",
+    "army": "ally-pygmy",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Pygmy Chieftain",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "3",
+          "3",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-pygmy-unit-sl-pygmy-chieftain.png",
+    "ptsPerModel": 64,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Chieftain may have:",
+        "items": [
+          {
+            "name": "Javelin",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Pygmy chieftains often grow enormously fat, as obesity is taken as a sign of rank amongst these tiny people."
+  },
+  {
+    "id": "ally-py-002-standard-bearer",
+    "army": "ally-pygmy",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Pygmy Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "3",
+          "2",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-pygmy-unit-sl-pygmy-standard.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Standard bearer may have:",
+        "items": [
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "Magical Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The contingent standard can be of many sorts, but is always carried by a particularly brave warrior."
+  },
+  {
+    "id": "ally-py-003-shaman",
+    "army": "ally-pygmy",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Pygmy Shaman",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "8+1",
+          "9+2",
+          "8+1",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-pygmy-unit-sl-pygmy-shaman.png",
+    "ptsPerModel": 123,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Pygmy tribal shamans may have up to 2 level 1 Elemental spells, and up to 2 level 2 Elemental spells. Remaining spells may be made up from either Elemental or Battle Magic."
+  },
+  {
+    "id": "ally-py-010-impis",
+    "army": "ally-pygmy",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Pygmy Impis",
+    "profiles": [
+      {
+        "label": "Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "2",
+          "2",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 15 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "3",
+          "3",
+          "3",
+          "5",
+          "3",
+          "9+2",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-pygmy-unit-sl-pygmy-impis.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "48"
+          },
+          {
+            "name": "Javelin",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Tribal elders, older and more experienced warriors who form the bodyguards of chiefs."
+  },
+  {
+    "id": "ally-py-020-braves",
+    "army": "ally-pygmy",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Pygmy Braves",
+    "profiles": [
+      {
+        "label": "Pygmy",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "2",
+          "2",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "3",
+          "2",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-pygmy-unit-sl-pygmy-braves.png",
+    "ptsPerModel": "3½",
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Blowpipe & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "19"
+          },
+          {
+            "name": "Poisoned Attacks",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many Pygmy warriors use the blowpipe as their principle weapon, often with poisoned darts."
+  },
+  {
+    "id": "ally-py-030-warriors",
+    "army": "ally-pygmy",
+    "type": "standard",
+    "allowance": "10–80",
+    "name": "Pygmy Warriors",
+    "profiles": [
+      {
+        "label": "Pygmy",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "2",
+          "2",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "3",
+          "3",
+          "2",
+          "4",
+          "3",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-pygmy-unit-sl-pygmy-warriors.png",
+    "ptsPerModel": "3½",
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "33½"
+          },
+          {
+            "name": "Javelins",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Young warriors who have proven their bravery by taking the heads of enemies in battle."
+  },
+  {
+    "id": "ally-py-040-scouts",
+    "army": "ally-pygmy",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Pygmy Scouts",
+    "profiles": [
+      {
+        "label": "Pygmy Scout",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "2",
+          "2",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "3",
+          "2",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-pygmy-unit-sl-pygmy-scouts.png",
+    "ptsPerModel": "8½",
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Blowpipe & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "24"
+          },
+          {
+            "name": "Javelins",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Poisoned Attacks",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Adept trackers and hunters, skilled in the arts of tribal raiding, head-taking, ambushing and skirmishing."
+  },
+  {
+    "id": "ally-sk-001-commander",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Skaven Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "5",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "7",
+          "4",
+          "9+3",
+          "6",
+          "6+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-commander.png",
+    "ptsPerModel": 98,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Contingent commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing Star",
+            "cost": "1"
+          },
+          {
+            "name": "Poisoned Attacks",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Skaven leaders have a rodent-like cunning beyond the capacity of mere humans to understand. It is said that they can taste an enemy's fear on the wind, and can scent omens of victory from afar."
+  },
+  {
+    "id": "ally-sk-002-assassin",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Clan Eshin Assassin",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "5",
+          "2",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-assassin.png",
+    "ptsPerModel": 31,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "The assassin may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing Star",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "This Assassin may be hidden in any Skaven unit. While hidden, he may not lead the unit, but may do so once revealed. Assassins are armed with warpstone weapons and have poisoned attacks; the extra points cost for  has been included.poisoned attacks"
+  },
+  {
+    "id": "ally-sk-003-skryre-seer",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Clan Skryre Seer",
+    "profiles": [
+      {
+        "label": "Lvl 5 Wizard",
+        "stats": [
+          "5",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "7+1",
+          "6+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-skryre-seer.png",
+    "ptsPerModel": 58,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A Skaven wizard who may have one Elemental, one Necromantic and one Daemonic spell of level 1. Remaining spells are Battle Magic."
+  },
+  {
+    "id": "ally-sk-010-clanrats",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "10–50",
+    "name": "Clanrat Warriors",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "5",
+          "2",
+          "6",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-clanrats.png",
+    "ptsPerModel": "4½",
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "31"
+          },
+          {
+            "name": "Spears",
+            "cost": "½"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Squeaking masses of fur-clad warriors, undulating over the battlefield like a racing tide, these are the common fighting rats of the Skaven clans."
+  },
+  {
+    "id": "ally-sk-020-gutter-runners",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Clan Eshin Gutter Runners",
+    "profiles": [
+      {
+        "label": "Skaven Scout",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "5",
+          "3",
+          "7+1",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-gutter-runners.png",
+    "ptsPerModel": "12½",
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "58"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "½"
+          },
+          {
+            "name": "Throwing Stars",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Clan Eshin use weapons forged with warpstone to inflict poisoned wounds. All attacks count as poisoned and the points cost for  has been included.poisoned attacks"
+  },
+  {
+    "id": "ally-sk-030-plague-censer-bearers",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "0–3",
+    "name": "Clan Pestilens Plague Censer Bearers",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-plague-censer.png",
+    "ptsPerModel": 40,
+    "ptsFixed": null,
+    "models": "Hidden within other Skaven units",
+    "weapons": "Plague Censer",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any model may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Devoted followers of corruption, plague censer bearers may be hidden in any Skaven unit (see ).Special Troop Types — Assassins"
+  },
+  {
+    "id": "ally-sk-040-plague-monks",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Clan Pestilens Plague Monks",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "5",
+          "3",
+          "7+1",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-plague-monks.png",
+    "ptsPerModel": "4½",
+    "ptsFixed": null,
+    "models": "10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "50"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Hooded and robed in the tattered rags of filthy habits, the Plague Monks are the spreaders of divine corruption, unwilling to rest until they have carried their message of doom throughout the whole world."
+  },
+  {
+    "id": "ally-sk-050-warpfire-throwers",
+    "army": "ally-skaven",
+    "type": "standard",
+    "allowance": "0–4",
+    "name": "Clan Skryre Warp Firethrower Teams",
+    "profiles": [
+      {
+        "label": "Skaven",
+        "stats": [
+          "5",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-skaven-unit-sk-warpfire.png",
+    "ptsPerModel": null,
+    "ptsFixed": 81,
+    "models": "1–4",
+    "weapons": null,
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ally-un-001-necromancer",
+    "army": "ally-undead",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Necromancer",
+    "profiles": [
+      {
+        "label": "Lvl 15 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "4",
+          "4",
+          "3",
+          "4",
+          "1",
+          "9+2",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Undead Horse",
+        "stats": [
+          "+4",
+          "–",
+          "–",
+          "–",
+          "–",
+          "–",
+          "+1",
+          "–",
+          "+1",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-undead-unit-un-necromancer.png",
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Necromancer may have:",
+        "items": [
+          {
+            "name": "Undead Horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-Handed Weapon (Scythe)",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Necromancer must have at least 1 Necromantic spell of levels 1 and 2. Remaining spells may be either Battle Magic or Necromantic."
+  },
+  {
+    "id": "ally-un-002-standard-bearer",
+    "army": "ally-undead",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Ally Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-undead-unit-un-standard-bearer.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Standard bearer may have:",
+        "items": [
+          {
+            "name": "Undead Horse",
+            "cost": "10"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "One Magic Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Mouldering, tattered banners that hang above the sepulchres of the venerated dead provide undead legions with their standards. These are often embellished with the contents of a shattered reliquary or clutter from the charnel house."
+  },
+  {
+    "id": "ally-un-010-death-riders",
+    "army": "ally-undead",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Death Riders",
+    "profiles": [
+      {
+        "label": "Horseman",
+        "stats": [
+          "8*",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2*",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "8",
+          "3",
+          "3",
+          "4",
+          "1",
+          "3",
+          "4",
+          "3*",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "8",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "3",
+          "4*",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-undead-unit-un-death-riders.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon & 1 Stomp from Horse",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Each unit must have one of:",
+        "items": [
+          {
+            "name": "Level 5 Champion Leader",
+            "cost": "41"
+          },
+          {
+            "name": "Level 10 Champion Leader",
+            "cost": "91 +25"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Lances",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Upon many an ancient blood-soaked field, slain warriors and their steeds were flung into the same burial pit, only to rise again as gruesome cavalry."
+  },
+  {
+    "id": "ally-un-020-skeleton-warriors",
+    "army": "ally-undead",
+    "type": "standard",
+    "allowance": "20–60",
+    "name": "Skeleton Warriors",
+    "profiles": [
+      {
+        "label": "Skeleton",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "2",
+          "3",
+          "3",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-undead-unit-un-skeleton-warriors.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Each unit must have one of:",
+        "items": [
+          {
+            "name": "Level 5 Champion Leader",
+            "cost": "30"
+          },
+          {
+            "name": "Level 10 Champion Leader",
+            "cost": "80 +25"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Bows",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many a foe will listen in fear to the dreaded rattling bones of a skeleton horde, which breaks the eerie silence before battle is joined."
+  },
+  {
+    "id": "ally-un-030-grim-reapers",
+    "army": "ally-undead",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Grim Reapers",
+    "profiles": [
+      {
+        "label": "Skeleton",
+        "stats": [
+          "4",
+          "2",
+          "2",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "2",
+          "3",
+          "3",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-undead-unit-un-grim-reapers.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Double-Handed Weapon (Scythes)",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Each unit must have one of:",
+        "items": [
+          {
+            "name": "Level 5 Champion Leader",
+            "cost": "32"
+          },
+          {
+            "name": "Level 10 Champion Leader",
+            "cost": "82 +25"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Carrying the symbol of their deadly craft, the Grim Reapers represent the very personification of death."
+  },
+  {
+    "id": "ally-un-040-zombies",
+    "army": "ally-undead",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Zombies",
+    "profiles": [
+      {
+        "label": "Zombie",
+        "stats": [
+          "4",
+          "2",
+          "0",
+          "3",
+          "3",
+          "1",
+          "1",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-undead-unit-un-zombies.png",
+    "ptsPerModel": 4,
+    "ptsFixed": null,
+    "models": "20–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Each unit must have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "30"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The portals of the crypt are flung open, and up from the dank and foetid darkness emerge the warriors of the catacombs."
+  },
+  {
+    "id": "ally-ha-001-commander",
+    "army": "ally-halfling",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Halfling Contingent Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "3*",
+          "5",
+          "5",
+          "3",
+          "3",
+          "4",
+          "8",
+          "4",
+          "9+3",
+          "7",
+          "7+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-halfling-unit-emp-halfling-commander.png",
+    "ptsPerModel": 77,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Commander may have:",
+        "items": [
+          {
+            "name": "Pony",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Halfling Commanders are often respected civilian dignitaries, or members of noble families, elected as military leaders in time of war."
+  },
+  {
+    "id": "ally-ha-002-standard-bearer",
+    "army": "ally-halfling",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Ally Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "3",
+          "5",
+          "3",
+          "2",
+          "1",
+          "6",
+          "2",
+          "6",
+          "7",
+          "6",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-halfling-unit-emp-halfling-standard.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "One Magic Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A Halfling contingent may have a standard which will be carried by a noble or renowned warrior."
+  },
+  {
+    "id": "ally-ha-010-militia",
+    "army": "ally-halfling",
+    "type": "standard",
+    "allowance": "10–80",
+    "name": "Halfling Militia",
+    "profiles": [
+      {
+        "label": "Halfling",
+        "stats": [
+          "3",
+          "2",
+          "4",
+          "2",
+          "2",
+          "1",
+          "5",
+          "1",
+          "6",
+          "7",
+          "6",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "3",
+          "4",
+          "5",
+          "3",
+          "3",
+          "2",
+          "6",
+          "3",
+          "7+1",
+          "7",
+          "6",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-halfling-unit-emp-halfling-militia.png",
+    "ptsPerModel": "3½",
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "39"
+          },
+          {
+            "name": "Shield",
+            "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "½"
+          },
+          {
+            "name": "Bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A muster of able bodied farmers and villagers maintained in readiness to defend their lands against raiders."
+  },
+  {
+    "id": "ally-ha-020-scouts",
+    "army": "ally-halfling",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Halfling Scouts",
+    "profiles": [
+      {
+        "label": "Halfling Scout",
+        "stats": [
+          "3",
+          "2",
+          "4",
+          "2",
+          "2",
+          "1",
+          "5",
+          "1",
+          "6",
+          "7",
+          "6",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "3",
+          "5",
+          "3",
+          "2",
+          "1",
+          "6",
+          "2",
+          "6",
+          "7",
+          "6",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-halfling-unit-emp-halfling-scouts.png",
+    "ptsPerModel": "9½",
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "28"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Halfling woodsmen and those from remote and isolated homesteads are given the tasks of scouting and skirmishing. As might be expected, they are expert foragers."
+  },
+  {
+    "id": "ally-zo-001-wizard-commander",
+    "army": "ally-zoat",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Zoat Wizard Contingent Commander",
+    "profiles": [
+      {
+        "label": "Lvl 15 Wizard",
+        "stats": [
+          "7",
+          "7",
+          "3",
+          "5",
+          "6",
+          "5",
+          "6",
+          "2",
+          "10+2",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-zoat-unit-we-zoat.png",
+    "ptsPerModel": 275,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Zoat leaders are warriors of mysticism as well as battle, intermingling their guttural battle cries with frightening philosophical truths."
+  },
+  {
+    "id": "ally-zo-010-zoat-warriors",
+    "army": "ally-zoat",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Zoat Warriors",
+    "profiles": [
+      {
+        "label": "Zoat",
+        "stats": [
+          "7",
+          "5",
+          "3",
+          "4",
+          "5",
+          "3",
+          "5",
+          "2",
+          "10",
+          "9",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/ally-zoat-unit-we-zoat-warriors.png",
+    "ptsPerModel": 50,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "10"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Zoats are large, rough-skinned creatures whose massive physical presence and superficial ugliness shields a cunning intelligence and deep-seated passion for arcane lore."
+  },
+  {
+    "id": "merc-dw-001-commander",
+    "army": "merc-dwarf",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Dwarf Mercenary Commander",
+    "profiles": [
+      {
+        "label": "Level 20",
+        "stats": [
+          "3",
+          "7",
+          "4",
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "7",
+          "10+1",
+          "10+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-dwarf-unit-dw-commander.png",
+    "ptsPerModel": 170,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Mithril Heavy Armour",
+            "cost": "26"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Usually a battle-hardened veteran Dwarf warlord or freebooter who has gathered a mercenary band on account of his reputation for securing a good deal."
+  },
+  {
+    "id": "merc-dw-010-sappers",
+    "army": "merc-dwarf",
+    "type": "standard",
+    "allowance": "0–6",
+    "name": "Mercenary Dwarf Sappers",
+    "profiles": [
+      {
+        "label": "Dwarf Sapper",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-dwarf-unit-dw-sappers.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "2",
+    "weapons": "Double-Handed Weapon & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dwarf sappers operate in teams of two models. See  for full rules.Special Troop Types — Sappers"
+  },
+  {
+    "id": "merc-dw-020-warriors",
+    "army": "merc-dwarf",
+    "type": "standard",
+    "allowance": "0–80",
+    "name": "Dwarf Mercenary Warriors",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "3",
+          "6",
+          "4",
+          "4",
+          "5",
+          "2",
+          "3",
+          "3",
+          "10+1",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-dwarf-unit-dw-warriors.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "90"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Crossbows",
+            "cost": "3"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Since Dwarfs love wealth, loot and battle, there are many Dwarf warriors willing to fight for pay or a share in the spoils."
+  },
+  {
+    "id": "merc-dw-030-artillery",
+    "army": "merc-dwarf",
+    "type": "standard",
+    "allowance": "0–4",
+    "name": "Dwarf Mercenary Artillery",
+    "profiles": [
+      {
+        "label": "Bombardier",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-dwarf-unit-dw-artillery.png",
+    "ptsPerModel": 69,
+    "ptsFixed": null,
+    "models": "1–4",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Each unit may have:",
+        "items": [
+          {
+            "name": "Bombardier Champion",
+            "cost": "68"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Gunpowder weapons and artillery are a Dwarf speciality. Batteries of Dwarf cannon are always available for hire and much in demand. These mercenary batteries are always led by renowned master gunners or 'bombardiers'."
+  },
+  {
+    "id": "merc-go-010-giants",
+    "army": "merc-giant-ogre",
+    "type": "standard",
+    "allowance": "0–6",
+    "name": "Giants",
+    "profiles": [
+      {
+        "label": "1",
+        "stats": [
+          "5",
+          "2",
+          "2",
+          "6",
+          "6",
+          "5",
+          "1",
+          "special",
+          "5",
+          "4",
+          "5",
+          "5"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "2",
+        "stats": [
+          "6",
+          "3",
+          "2",
+          "6",
+          "6",
+          "5",
+          "2",
+          "special",
+          "6",
+          "5",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "3",
+        "stats": [
+          "6",
+          "3",
+          "3",
+          "7",
+          "6",
+          "6",
+          "2",
+          "special",
+          "6",
+          "5",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "4",
+        "stats": [
+          "6",
+          "3",
+          "3",
+          "7",
+          "7",
+          "6",
+          "3",
+          "special",
+          "6",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "5",
+        "stats": [
+          "6",
+          "3",
+          "3",
+          "7",
+          "7",
+          "6",
+          "3",
+          "special",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "6",
+        "stats": [
+          "7",
+          "3",
+          "3",
+          "8",
+          "7",
+          "7",
+          "4",
+          "special",
+          "8",
+          "6",
+          "8",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-giant-ogre-unit-og-giant.png",
+    "ptsPerModel": 250,
+    "ptsFixed": null,
+    "models": "1–3",
+    "weapons": "Big Blunt Implement",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "There is great diversity among Giants, some being tougher, stronger, faster or more intelligent than others. Profiles for Giants are generated before the game. Roll a D6 for each characteristic in turn to establish a Giant's profile."
+  },
+  {
+    "id": "merc-go-001-ogre-commander",
+    "army": "merc-giant-ogre",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Mercenary Ogre Commander",
+    "profiles": [
+      {
+        "label": "Level 20",
+        "stats": [
+          "6",
+          "6",
+          "3",
+          "5",
+          "6",
+          "6",
+          "6",
+          "5",
+          "10+3",
+          "4",
+          "6+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-giant-ogre-unit-og-ogre-commander.png",
+    "ptsPerModel": 240,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "4"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "8"
+          },
+          {
+            "name": "Flail",
+            "cost": "4"
+          },
+          {
+            "name": "Halberd",
+            "cost": "8"
+          },
+          {
+            "name": "Spear",
+            "cost": "4"
+          },
+          {
+            "name": "Shield",
+            "cost": "4"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "8"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "12"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The most brutal and savage Ogres quickly acquire followers. The success of a leader depends on his ability to find out where the most loot, grub and captives are to be had. Failures are eaten by their followers."
+  },
+  {
+    "id": "merc-go-020-ogre-mercenaries",
+    "army": "merc-giant-ogre",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Ogre Mercenaries",
+    "profiles": [
+      {
+        "label": "Ogre",
+        "stats": [
+          "6",
+          "3",
+          "2",
+          "5",
+          "3",
+          "3",
+          "2",
+          "7",
+          "4",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "6",
+          "4",
+          "3",
+          "5",
+          "5",
+          "3",
+          "4",
+          "3",
+          "7",
+          "4",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-giant-ogre-unit-og-ogres.png",
+    "ptsPerModel": 38,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "90"
+          },
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "4"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "8"
+          },
+          {
+            "name": "Spears",
+            "cost": "4"
+          },
+          {
+            "name": "Flails",
+            "cost": "4"
+          },
+          {
+            "name": "Halberds",
+            "cost": "8"
+          },
+          {
+            "name": "Shields",
+            "cost": "4"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "8"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "12"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many Ogres become mercenaries, mainly because an Ogre's idea of an ideal life is one of constant fighting relieved by frequent periods of eating (or vice-versa). However, these are not necessarily mutually exclusive activities for Ogres."
+  },
+  {
+    "id": "merc-ho-001-commander",
+    "army": "merc-half-orc",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Mercenary Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "4*",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "6",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-half-orc-unit-ho-commander.png",
+    "ptsPerModel": 105,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "3"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Shunned by Humans and Goblins alike, Half-Orcs band together and form their own society. The most intelligent and most ruthless rise to become leaders of large and formidable mercenary bands."
+  },
+  {
+    "id": "merc-ho-002-shaman",
+    "army": "merc-half-orc",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Half Orc Shaman",
+    "profiles": [
+      {
+        "label": "Lvl 15 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "4",
+          "4",
+          "3",
+          "4",
+          "1",
+          "9+2",
+          "8+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-half-orc-unit-ho-shaman.png",
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Shaman may have one spell at level 1 and/or 2 from the Elemental, Daemonic, Necromantic or Illusionist spell charts. Remaining spells must be Battle Magic."
+  },
+  {
+    "id": "merc-ho-010-henchmen",
+    "army": "merc-half-orc",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Henchmen",
+    "profiles": [
+      {
+        "label": "Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "4",
+          "3",
+          "8+1",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-half-orc-unit-ho-henchmen.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "58"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "In the uncouth and brutal society of Half-Orc mercenaries, a leader can only maintain his authority with the aid of trusted henchmen. These often act as his elite bodyguard in battle."
+  },
+  {
+    "id": "merc-ho-020-bushwackers",
+    "army": "merc-half-orc",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Bushwackers",
+    "profiles": [
+      {
+        "label": "Scout",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "6",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-half-orc-unit-ho-bushwackers.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "32"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbows instead of Bows",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Another reason why Half-Orcs are generally so despised is their habit of skulking in the scrub and shooting travellers in the back then leaping out to rob the corpses. Such mean low-lives as these find employment in mercenary bands as skirmishers."
+  },
+  {
+    "id": "merc-ho-030-warriors",
+    "army": "merc-half-orc",
+    "type": "standard",
+    "allowance": "0–100",
+    "name": "Warriors",
+    "profiles": [
+      {
+        "label": "Half-Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-half-orc-unit-ho-warriors.png",
+    "ptsPerModel": 6,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion Leader",
+            "cost": "31"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "It is ruthless self-interest which motivates Half-Orc mercenaries. They are feared and shunned even by their employers."
+  },
+  {
+    "id": "merc-hg-001-khan-commander",
+    "army": "merc-hobgoblin",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Hobgoblin Khan Mercenary Commander",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "4*",
+          "6",
+          "3",
+          "4",
+          "5",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "6",
+          "7+1",
+          "7+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Temple Dog",
+        "stats": [
+          "5",
+          "5",
+          "0",
+          "5",
+          "5",
+          "3",
+          "3",
+          "3",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-hobgoblin-unit-hg-khan.png",
+    "ptsPerModel": 107,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Temple Dog Mount",
+            "cost": "85"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Hobgoblin mercenary leaders are usually lesser Khans who have fallen out with the great Hobgobla-Khan and led their tribes beyond his domains. Some are leaders of roving bands which have split off from the Great Horde."
+  },
+  {
+    "id": "merc-hg-002-shaman",
+    "army": "merc-hobgoblin",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Hobgoblin Shaman",
+    "profiles": [
+      {
+        "label": "Level 15",
+        "stats": [
+          "4",
+          "5",
+          "2",
+          "4",
+          "5",
+          "3",
+          "4",
+          "1",
+          "9+2",
+          "8+2",
+          "8+2",
+          "8+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-hobgoblin-unit-hg-shaman.png",
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Shaman may use Battle Magic, Elemental, Daemonic or Necromantic magic. Hobgoblins do not use Illusionist magic."
+  },
+  {
+    "id": "merc-hg-003-standard-bearer",
+    "army": "merc-hobgoblin",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Contingent Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "4",
+          "2",
+          "7",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-hobgoblin-unit-hg-standard.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Standard bearer may have:",
+        "items": [
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "One Magic Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Hobgoblin standards are usually venerated tribal fetishes or shamanistic totems."
+  },
+  {
+    "id": "merc-hg-010-mourngul-renegades",
+    "army": "merc-hobgoblin",
+    "type": "standard",
+    "allowance": "20–80",
+    "name": "Mourngul Renegades",
+    "profiles": [
+      {
+        "label": "Hobgoblin",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "4",
+          "2",
+          "7",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-hobgoblin-unit-hg-mourngul.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "30"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The core of a Hobgoblin mercenary band are the Mourngul warriors. They are usually unruly elements that have fallen out with the great Hobgobla-Khan."
+  },
+  {
+    "id": "merc-hg-020-hobyars",
+    "army": "merc-hobgoblin",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Hobyars",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "4",
+          "5",
+          "2",
+          "4",
+          "3",
+          "8+1",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-hobgoblin-unit-hg-hobyars.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "58"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Hobyars are Hobgoblin warrior nobles and their retainers. They form the highest caste of Hobgoblin nomad society, possessing the greatest wealth, prestige and martial prowess."
+  },
+  {
+    "id": "merc-hg-030-hobhound-handlers",
+    "army": "merc-hobgoblin",
+    "type": "standard",
+    "allowance": "0–6",
+    "name": "Hobhound Handlers",
+    "profiles": [
+      {
+        "label": "Hobgoblin",
+        "stats": [],
+        "raceGroup": null
+      },
+      {
+        "label": "Animal Handler",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Hobhound",
+        "stats": [],
+        "raceGroup": null
+      },
+      {
+        "label": "Hobhound",
+        "stats": [
+          "8",
+          "4",
+          "0",
+          "3",
+          "3",
+          "1",
+          "3",
+          "2",
+          "8",
+          "8",
+          "8",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-hobgoblin-unit-hg-hobhounds.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": "1–4 handlers, each with pack of 2–6 Hobhounds",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Hobgoblins breed large ferocious dogs known as Hobhounds which they lead into battle to unleash onto the enemy."
+  },
+  {
+    "id": "merc-ni-001-samurai-lord",
+    "army": "merc-nippon",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Samurai Lord Mercenary Commander",
+    "profiles": [
+      {
+        "label": "Level 20",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Temple Dog",
+        "stats": [
+          "5",
+          "5",
+          "0",
+          "5",
+          "5",
+          "3",
+          "3",
+          "3",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Ki-Rin",
+        "stats": [
+          "8",
+          "4",
+          "0",
+          "5",
+          "4",
+          "2",
+          "7",
+          "3",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-nippon-unit-ni-samurai-lord.png",
+    "ptsPerModel": 107,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Long Bow",
+            "cost": "3"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Horse Barding",
+            "cost": "4"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Ki-Rin",
+            "cost": "75"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Samurai lords lead bands of disciplined and utterly devoted followers. The Samurai martial code does not recognise failure and there can be no honour in defeat. The Samurai are much concerned with their personal reputation as warriors and always fight to the utmost of their ability."
+  },
+  {
+    "id": "merc-ni-002-ninja-assassin",
+    "army": "merc-nippon",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Mercenary Ninja Assassin",
+    "profiles": [
+      {
+        "label": "Level 10",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "4",
+          "3",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-nippon-unit-ni-ninja.png",
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Assassin may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Torinoko Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing Star",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A Ninja assassin is an indispensible member of a Samurai lord's retinue. Ninja assassins may be hidden in any Nipponese unit. For rules on assassins see .Special Troop Types — Assassins"
+  },
+  {
+    "id": "merc-ni-010-samurai",
+    "army": "merc-nippon",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Samurai",
+    "profiles": [
+      {
+        "label": "Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-nippon-unit-ni-samurai.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "32"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Long Bow",
+            "cost": "3"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Samurai are the warrior nobility of Nippon. They adhere to a strict martial code of honour in which defeat is considered to be the greatest humiliation."
+  },
+  {
+    "id": "merc-ni-020-ashigaru",
+    "army": "merc-nippon",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Ashigaru",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-nippon-unit-ni-ashigaru.png",
+    "ptsPerModel": 5,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "30"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Long Bow",
+            "cost": "3"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These highly disciplined warriors are followers of the Samurai whom they obey without question."
+  },
+  {
+    "id": "merc-or-001-commander",
+    "army": "merc-orc",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Orc Mercenary Commander",
+    "profiles": [
+      {
+        "label": "Level 20",
+        "stats": [
+          "4*",
+          "6",
+          "4",
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "5",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "War Boar",
+        "stats": [
+          "7",
+          "4",
+          "0",
+          "3",
+          "4",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-orc-unit-og-orc-commander.png",
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "War Boar",
+            "cost": "16"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The most successful Orc mercenary leaders tend to be those with an unusual glimmer of intelligence, able to intimidate the most booty out of their employers."
+  },
+  {
+    "id": "merc-or-010-orc-renegades",
+    "army": "merc-orc",
+    "type": "standard",
+    "allowance": "20–80",
+    "name": "Orc Renegades",
+    "profiles": [
+      {
+        "label": "Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "5",
+          "2",
+          "3",
+          "8+1",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-orc-unit-og-boyz.png",
+    "ptsPerModel": "5½",
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "61"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many of Orc mercenaries are outcasts or renegades who managed to escape the wrath of their tribal chiefs."
+  },
+  {
+    "id": "merc-or-020-arrer-boyz",
+    "army": "merc-orc",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Orc Renegade Arrer Boyz",
+    "profiles": [
+      {
+        "label": "Orc",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-orc-unit-og-arrer-boyz.png",
+    "ptsPerModel": "7½",
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Crossbows instead of Bows",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The cleverest Orc mercenaries acquire bows and fight as Arrer Boyz since they can slay the enemy from a safe distance with a good chance of surviving the battle to collect their pay."
+  },
+  {
+    "id": "merc-no-001-commander",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Norse Mercenary Commander",
+    "profiles": [
+      {
+        "label": "Level 20",
+        "stats": [
+          "4*",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-commander.png",
+    "ptsPerModel": 108,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many Norse warlords take to raiding now and again. Raiding is the best way of ensuring enough loot, food, drink, women and heroic tales to keep the retainers entertained through the long winter evenings. If you can persuade one side to pay you to raid another, so much the better!"
+  },
+  {
+    "id": "merc-no-002-standard-bearer",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "0–1",
+    "name": "Norse Standard Bearer",
+    "profiles": [
+      {
+        "label": "Level 5",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-standard.png",
+    "ptsPerModel": null,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Contingent standard may have:",
+        "items": [
+          {
+            "name": "One Magic Attribute",
+            "cost": "100"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Some Norse warbands have frightening or even magical banners depicting such motifs as ravens, mythical beasts or valkyries intertwined with runes."
+  },
+  {
+    "id": "merc-no-010-norse-warriors",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "0–80",
+    "name": "Norse Warriors",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "4",
+          "3",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-warriors.png",
+    "ptsPerModel": 6,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "56"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Throwing Axes",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are the hard-fighting, hard-drinking retainers of Norse warlords, seasoned warriors who indulge in regular raiding, pillaging and feuding."
+  },
+  {
+    "id": "merc-no-020-berserkers",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Berserkers",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-berserkers.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "35"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Wild, maladjusted and insane elements in Norse society fight as Berserkers. They work themselves up into a battle-frenzy in which they rip asunder their clothing, clash their weapons, bite their shields and tear into the foe. Subject to .frenzy"
+  },
+  {
+    "id": "merc-no-030-ulfwerenar",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Ulfwerenar",
+    "profiles": [
+      {
+        "label": "Wolfman or Human",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "4",
+          "1",
+          "8",
+          "6",
+          "8",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero (Wolfman or Human)",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "1",
+          "5",
+          "2",
+          "8",
+          "6",
+          "8",
+          "8"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Giant Wolf",
+        "stats": [
+          "9",
+          "6",
+          "0",
+          "4",
+          "4",
+          "1",
+          "6",
+          "2",
+          "6",
+          "4",
+          "6",
+          "6"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-ulfwerenar.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Each unit must have:",
+        "items": [
+          {
+            "name": "Were Champion",
+            "cost": "65"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "4"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Ulfwerenar or 'wolf-kin' are Norse were-warriors, able to transform partly or completely into wolves. Ulfwerenar must be led by a were champion."
+  },
+  {
+    "id": "merc-no-040-norse-dwarf-berserkers",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Norse Dwarf Berserkers",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-dwarf-berserkers.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "48"
+          },
+          {
+            "name": "Additional Hand Weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing Axe or Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Norse Dwarf Berserkers are subject to the special rules for Berserkers on p96 of WFB. Errata, WD #108."
+  },
+  {
+    "id": "merc-no-050-norse-dwarfs",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Norse Dwarfs",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-norse-dwarfs.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "50"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Norse Dwarfs dwell in the mountains of Norsca and have much in common with their Norse neighbours, especially their liking for fighting and drinking."
+  },
+  {
+    "id": "merc-no-060-troll-slayers",
+    "army": "merc-norse",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Norse Dwarf Troll Slayers",
+    "profiles": [
+      {
+        "label": "Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "1",
+          "3",
+          "2",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-norse-unit-no-troll-slayers.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Each unit must have:",
+        "items": [
+          {
+            "name": "Troll-Slayer Champion",
+            "cost": "48"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Troll-slayers are immune to  caused by living creatures and are subject to . Troll-slayers must be led by a Troll-slayer champion.fearfrenzy"
+  },
+  {
+    "id": "merc-ow-001-mercenary-leader",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "1",
+    "name": "Mercenary Leader",
+    "profiles": [
+      {
+        "label": "Level 20 Hero",
+        "stats": [
+          "4*",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-emp-commander.png",
+    "ptsPerModel": 107,
+    "ptsFixed": null,
+    "models": null,
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Mercenary commander may have:",
+        "items": [
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Barding",
+            "cost": "4"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "There are many mercenary leaders in the Old World, each commanding a contingent of seasoned warriors willing to fight for any side in any cause, but loyal only to themselves and their leader."
+  },
+  {
+    "id": "merc-ow-010-tilean-condottieri",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Tilean Condottieri",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "–",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "–",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": [
+          "8",
+          "3",
+          "0",
+          "4",
+          "3",
+          "–",
+          "3",
+          "1",
+          "–",
+          "–",
+          "–",
+          "–"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-bret-chevaliers-dhonneur.png",
+    "ptsPerModel": 23,
+    "ptsFixed": null,
+    "models": "5–30",
+    "weapons": "Lance & Hand Weapons",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "41"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Tilean city-states frequently make war among themselves. Consequently there are many bands of Tilean mercenary knights willing to fight for one city or another. In times of relative peace, many seek employment elsewhere in the Old World."
+  },
+  {
+    "id": "merc-ow-020-estalian-caballeros",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Estalian Caballeros",
+    "profiles": [
+      {
+        "label": "Shock Elite",
+        "stats": [
+          "8*",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "8*",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-bret-border-horse.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "5–30",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "37"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are impoverished Estalian knights and freebooters who have left their decaying feudal estates to become soldiers of fortune."
+  },
+  {
+    "id": "merc-ow-030-kislevite-druzhina",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Kislevite Druzhina",
+    "profiles": [
+      {
+        "label": "Human (incl. horse)",
+        "stats": [
+          "8*",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero (incl. horse)",
+        "stats": [
+          "8*",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-emp-kislevites.png",
+    "ptsPerModel": 18,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "37"
+          },
+          {
+            "name": "Shield",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Bands of Kislevite nobles and retainers sometimes venture into the West to offer their services as mercenaries. Their armour tends to be rather old-fashioned, but begins to resemble the Western knights as they acquire items of equipment from the battlefield."
+  },
+  {
+    "id": "merc-ow-040-tilean-crossbowmen",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Tilean Crossbowmen",
+    "profiles": [
+      {
+        "label": "Missile Elite",
+        "stats": [
+          "4",
+          "3",
+          "4",
+          "3",
+          "3",
+          "1",
+          "4",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-emp-crossbowmen.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "33"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Crossbowmen from the city-states of Tilea are some of the most famous and widespread mercenaries in the Old World and are often employed by Bretonnia and the Empire."
+  },
+  {
+    "id": "merc-ow-050-estalian-hombres-villanos",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Estalian Hombres Villanos",
+    "profiles": [
+      {
+        "label": "Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-bret-villains.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "33"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are fierce, aggressive, sword and buckler men from Estalia, recruited from among the numerous cut-throats, bandits and renegades that inhabit that country."
+  },
+  {
+    "id": "merc-ow-060-bandolleros-gringos",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Estalian Bandolleros Gringos",
+    "profiles": [
+      {
+        "label": "Missile Elite",
+        "stats": [
+          "4",
+          "3",
+          "4",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-emp-hakbutschutzen.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Arquebus & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "35"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are a notorious mercenary company of arquebusiers recruited originally in Estalia from among the local banditry but including fugitives and freebooters from many lands."
+  },
+  {
+    "id": "merc-ow-070-bretonnian-brigands",
+    "army": "merc-old-worlder",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Bretonnian Mercenary Brigands",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Level 5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/merc-old-worlder-unit-bret-brigands.png",
+    "ptsPerModel": 7,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "32"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebuses",
+            "cost": "3"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "3"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many of the ruffians and dispossessed peasants that flock to Bretonnian armies are just as willing to wander abroad to fight as mercenaries, should peace break out at home."
+  },
+  {
+    "id": "wdno-010-huscarls",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Huscarls",
+    "profiles": [
+      {
+        "label": "+4 Shock Elite",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-huscarls.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Huscarls are the household troops of Norse Lords. They are maintained and equipped by their masters, leaving them free to spend their time feasting and fighting. In battle they frequently form up around the army's leader, or act as the bodyguards of heroes."
+  },
+  {
+    "id": "wdno-020-warrior-bondsmen",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "20–120",
+    "name": "Warrior Bondsmen",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-warrior-bondsmen.png",
+    "ptsPerModel": 6,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing Axes",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing Spears",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Norse are hard fighters and hard drinkers. True to their racial ideals, warriors aspire to a bloody death in battle, thereby ascending to an afterlife of perpetual fighting and boozing. Such are the attractions presented by an eternity of drunken violence that the Norse hold few qualms when it comes to laying down their lives in battle."
+  },
+  {
+    "id": "wdno-030-bondsmen-archers",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Bondsmen Archers",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-bondsmen-archers.png",
+    "ptsPerModel": 7,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Bow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Long Bows instead of Bows",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Norse place great store in a warrior's ability with a bow. Bowmen are often recruited from the poorer warriors, as well as from those who are particularly good shots. Bondsmen Archers may operate as skirmishers (any number of units)."
+  },
+  {
+    "id": "wdno-040-berserkers",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Berserkers",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-berserkers.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand-Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Given the Norse predilection for drunkenness and violence, it is horrifying to think that the lawless minority of Berserkers are considered maladjusted even by other Norse. Before a fight, these powerful warriors work themselves into a battle-frenzy, ripping and biting their clothes and war-gear. In this state they are dangerous — not only to the enemy but sometimes to their own side! Subject to  (see ).automatic frenzySpecial Troop Types — Berserkers"
+  },
+  {
+    "id": "wdno-050-thralls",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Thralls",
+    "profiles": [
+      {
+        "label": "Human",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-thralls.png",
+    "ptsPerModel": 6,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Javelin & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Slings instead of Javelins",
+            "cost": "0"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Thralls are the slave class of the Norse. They are recruited into armed bands in times of trouble. Such times are common and the Thralls are often armed to fight off neighbouring Norse kingdoms or rampaging Goblins. Despite their lowly status, Thralls are really as bloodthirsty as the rest of Norse society, and thoroughly enjoy the chance to suspend the monotony of drudgery for the excitement of battle."
+  },
+  {
+    "id": "wdno-060-ulfwerenar",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Ulfwerenar",
+    "profiles": [
+      {
+        "label": "Human Form",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      },
+      {
+        "label": "Wolfman Form",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "4",
+          "1",
+          "8",
+          "6",
+          "8",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-ulfwerenar.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double Handed Weapons",
+            "cost": "4"
+          },
+          {
+            "name": "Spears",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "4"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Ulfwerenar means 'wolf-warriors' and is the word used by the Norse to describe those able to transform their shape into a grotesque half-man half-wolf. Such individuals are quite common in the north, where whole families of these Weres live in forest settlements. Ulfwerenar must be led by one of their own kind. In Wolfman form they are subject to ; they are subject to  in Giant Wolf form (see ).automatic frenzyhatredPsychology — Frenzy & Hatred"
+  },
+  {
+    "id": "wdno-070-norse-dwarfs",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Norse Dwarfs",
+    "profiles": [
+      {
+        "label": "Norse Dwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-norse-dwarfs.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Norse Dwarfs form a distinct Dwarven community different from their more southernly Dwarven kin. They have a great deal in common with the Human Norse, enjoying drinking, fighting, brawling, more drinking, and so on. Subject to  against other Norse Dwarfs.saga animosity"
+  },
+  {
+    "id": "wdno-080-bondsdwarfs",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Bondsdwarfs",
+    "profiles": [
+      {
+        "label": "Bondsdwarf",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-bondsdwarfs.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "10–40",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Double Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Bows",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "3"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Faithful Dwarf retainers fight in their own units of Bondsdwarfs, rather like the Human Bondsmen. They may be armed in a similar manner to their master, and may also carry shooting weapons such as a bow or crossbow. Bondsdwarfs armed with bows may operate as skirmishers."
+  },
+  {
+    "id": "wdno-090-norse-dwarf-berserkers",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Norse Dwarf Berserkers",
+    "profiles": [
+      {
+        "label": "Berserkers",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-norse-dwarf-berserkers.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing Axes or Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Norse Dwarf Berserkers are subject to  (see ). They are immune to fear caused by living creatures and cannot be routed from hand-to-hand combat. frenzyPsychology — Frenzy— Errata, WD #108"
+  },
+  {
+    "id": "wdno-100-norse-dwarf-troll-slayers",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Norse Dwarf Troll Slayers",
+    "profiles": [
+      {
+        "label": "Troll Slayer",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-troll-slayers.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Dwarven cult of Troll Slayers is more popular in the north than in the south, as the Norse Dwarfs are more unhinged than their southernly brethren. Fortunately Trolls are fairly common in the cold wastlands of Norsca. These Dwarfs follow the cult styles of the Troll Slayers, with orange spiky hair and tattoos. They are immune to fear caused by living creatures and are subject to .frenzy"
+  },
+  {
+    "id": "wdno-110-norse-dwarf-giant-slayers",
+    "army": "norse",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Norse Dwarf Giant Slayers",
+    "profiles": [
+      {
+        "label": "Giant Slayer",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/wd-107-giant-slayers.png",
+    "ptsPerModel": 8,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Additional Hand Weapons",
+            "cost": "1"
+          },
+          {
+            "name": "Double Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "A Troll Slayer lucky enough to survive the attentions of Trolls becomes greatly respected by his fellow Slayers. Such individuals are known as Giant Slayers because they often seek out Giants and do battle with them. They are immune to fear caused by living creatures, are subject to , and cannot be routed from hand-to-hand combat.frenzy"
+  }
+];
+
+// Ensure globals are reachable from all scripts regardless of scope rules
+if (typeof window !== 'undefined') { window.WFB3_ARMIES = WFB3_ARMIES; window.WFB3_UNITS = WFB3_UNITS; }
+if (typeof module !== 'undefined') module.exports = { WFB3_ARMIES, WFB3_UNITS };

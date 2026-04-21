@@ -1,0 +1,1522 @@
+[
+  {
+    "id": "de-40100-warriors",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "40–100",
+    "name": "Warriors",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-warriors.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "15–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "Halberds", "cost": "2"},
+          {"name": "A Magic Standard", "cost": "25"},
+          {"name": "A Magic Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The grim warrior bands of the Dark Elves comprise the vast bulk of their numerous infantry. No Dark Elven force ever goes to war without a regiment or two."
+  },
+  {
+    "id": "de-2060-crossbowmen",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "20–60",
+    "name": "Crossbowmen",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-crossbowmen.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Crossbow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Double-Handed Weapons", "cost": "2"}
+        ]
+      },
+      {
+        "subheading": "One unit may substitute:",
+        "items": [
+          {"name": "Repeating Crossbows for Crossbows", "cost": "1"}
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Shields", "cost": "1"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Being great exponents of the ambush, Dark Elves favour the use of the crossbow, and are capable of putting it to devastating effect against their enemies."
+  },
+  {
+    "id": "de-1060-witch-elves",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "10–60",
+    "name": "Witch Elves",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-witch-elves.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Additional Hand Weapons", "cost": "1"},
+          {"name": "Poisoned Attacks", "cost": "3"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Crossbows", "cost": "3"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Witch Elves are the most evil of all their diabolic kin. They are terrifying adversaries who can be driven into a frenzy of unquenchable bloodlust by the excitement of battle."
+  },
+  {
+    "id": "de-025-shadows",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–25",
+    "name": "Shadows",
+    "profiles": [
+      {
+        "label": "Dark Elf Scout",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-shadows.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Crossbows", "cost": "3"},
+          {"name": "Repeating Crossbows", "cost": "4"},
+          {"name": "Shields", "cost": "1"},
+          {"name": "Light Armour", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf scouts are sly and cunning. They are masters of the ambush, seeking shadows and gloom in which to lurk, wearing twilight colours that merge with the shade."
+  },
+  {
+    "id": "de-040-dark-riders",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Dark Riders",
+    "profiles": [
+      {
+        "label": "Dark Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-dark-riders.png",
+    "ptsPerModel": 22,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Lances", "cost": "4"},
+          {"name": "Crossbows", "cost": "6"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Repeating Crossbows", "cost": "8"},
+          {"name": "Horse Barding", "cost": "8"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Heralds of the armies of Naggaroth, these fell riders spread fear before them as they burn and pillage. Their mirthless laughter chills the blood of their victims, and it is said that their eyes never blink."
+  },
+  {
+    "id": "de-020-helldrakes",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Helldrakes",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": ["–","5","4","4","3","1","7","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One Mount",
+        "stats": ["8","3","0","4","4","–","1","2","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-helldrakes.png",
+    "ptsPerModel": 39,
+    "ptsFixed": null,
+    "models": "5–15",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Crossbows", "cost": "6"},
+          {"name": "Lances", "cost": "4"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Repeating Crossbows", "cost": "8"},
+          {"name": "Magic Standard", "cost": "50"},
+          {"name": "Magic Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf nobles who choose to ride the fearful Cold Ones are awesome warriors. They inhale corrosive infusions to deaden their sense of smell so that they may endure the stench of these great lizards."
+  },
+  {
+    "id": "de-030-doomsteeds",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Doomsteeds",
+    "profiles": [
+      {
+        "label": "+2 Shock Elite",
+        "stats": ["–","5","4","3","3","1","7","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": ["8","3","0","4","3","–","1","1","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-doomsteeds.png",
+    "ptsPerModel": 33,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Crossbows", "cost": "6"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Repeating Crossbows", "cost": "8"},
+          {"name": "Horse Barding", "cost": "8"},
+          {"name": "Magic Standard", "cost": "50"},
+          {"name": "Magic Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf Lords prefer to fight mounted, riding down their enemies with their swift black warhorses."
+  },
+  {
+    "id": "de-040-doomdrakes",
+    "army": "dark-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Doomdrakes",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": ["–","5","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Cold One Mount",
+        "stats": ["8","3","0","4","4","–","1","2","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-doomdrakes.png",
+    "ptsPerModel": 35,
+    "ptsFixed": null,
+    "models": "5–15",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Crossbows", "cost": "6"},
+          {"name": "Lances", "cost": "4"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Repeating Crossbows", "cost": "8"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are young riders, yet to attain full mastery over their lizard mounts."
+  },
+  {
+    "id": "de-08-whelp-masters",
+    "army": "dark-elves",
+    "type": "handler",
+    "allowance": "0–8",
+    "name": "Whelp Masters",
+    "profiles": [
+      {
+        "label": "Animal Handler",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": "Dark Elf"
+      },
+      {
+        "label": "Chaos Hounds",
+        "stats": ["6","4","0","4","4","2","4","2","6","4","6","6"],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhounds",
+        "stats": ["6","3","0","3","3","1","4","1","6","4","6","4"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-whelpmasters.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "1–3 Handlers with packs",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any Animal Handler may have:",
+        "items": [
+          {"name": "Shield", "cost": "1"},
+          {"name": "Light Armour", "cost": "2"}
+        ]
+      },
+      {
+        "subheading": "Handlers may lead either:",
+        "items": [
+          {"name": "Chaos Hounds", "cost": "23"},
+          {"name": "Warhounds", "cost": "4"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": [
+      {"animal": "Chaos Hounds", "cost": "23"},
+      {"animal": "Warhounds", "cost": "4"}
+    ],
+    "aggregateTable": null,
+    "flavour": "There is nothing these depraved beastmasters like better than the chase, setting the dogs on fleeing foes, hunting quarry for the cauldrons. Each handler may control a pack of 2–6 animals. Two or more packs may be merged to form larger units, but units may contain only one type of creature."
+  },
+  {
+    "id": "de-01-dark-elf-war-altar",
+    "army": "dark-elves",
+    "type": "waraltar",
+    "allowance": "0–1",
+    "name": "Dark Elf War Altar",
+    "profiles": [
+      {
+        "label": "Altar Guards (2)",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-war-altar.png",
+    "ptsPerModel": 70,
+    "ptsFixed": null,
+    "models": "1 Altar & Guards",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Dark Elf sacrificial altars may be brought right up to the slaughter fields in readiness for the victory celebrations. The presence of an altar fills the Dark Elf warriors with predatory zeal lest the gods be disappointed."
+  },
+  {
+    "id": "de-04-repeating-bolt-throwers",
+    "army": "dark-elves",
+    "type": "warmachine",
+    "allowance": "0–4",
+    "name": "Repeating Bolt Throwers",
+    "profiles": [
+      {
+        "label": "Dark Elf Crew (2)",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-de-bolt-thrower.png",
+    "ptsPerModel": null,
+    "ptsFixed": 58,
+    "models": "1–4 Bolt Throwers",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": {
+      "label": "Repeating Bolt Thrower",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "2"
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "When the enemy masses together in stubborn defiance they present an ideal target for this deadly weapon. The repeating dart thrower fires a constant barrage of missiles upon the hapless foe."
+  },
+  {
+    "id": "we-020-elven-lords",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Elven Lords",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": ["–","5","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": ["8","3","0","4","3","–","3","1","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-elven-lords.png",
+    "ptsPerModel": 31,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Warhorse Barding", "cost": "8"},
+          {"name": "A Magic Standard", "cost": "50"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The lords of Elven communities and their noble retainers ride magnificent warhorses into battle. Wood Elves favour roan and dappled horses, plaiting their manes and ornamenting their bridles with hair-plumes and jewels."
+  },
+  {
+    "id": "we-040-wood-riders",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Wood Riders",
+    "profiles": [
+      {
+        "label": "Elf (incl. horse)",
+        "stats": ["8*","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes movement allowance of horse",
+    "profileD6": false,
+    "art": "img/unit-we-wood-riders.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Javelins", "cost": "2"},
+          {"name": "Longbows", "cost": "6"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Most Wood Elf settlements can muster riders. They are valued as messengers and patrol the woodland ways. In time of war, these band together to provide the Wood Elf host with a useful mounted force."
+  },
+  {
+    "id": "we-04-wain-lords",
+    "army": "wood-elves",
+    "type": "chariot",
+    "allowance": "0–4",
+    "name": "Wain Lords",
+    "profiles": [
+      {
+        "label": "Elf Crew (4)",
+        "stats": ["5","4","3","3","1","6","1","8","9","9","8","–"],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse (4)",
+        "stats": ["8","3","0","4","3","1","3","1","3","3","3","3"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-wain-lords.png",
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1–4 Chariots",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": {
+      "label": "Heavy Chariot",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "4",
+      "steeds": "4",
+      "attacks": "–"
+    },
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Amongst the open glades of the Elven woods, mighty lords race their glittering chariots in preparation for war. Elven chariots are made from the wood of the lornalim tree and are incredibly light and strong. Note that if chariot warriors have shields, all crew including the driver count as shielded; the points additions have been calculated accordingly. Chariot crews are considered to be armed with hand weapons irrespective of the weapons carried by the model."
+  },
+  {
+    "id": "we-020-guards",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Guards",
+    "profiles": [
+      {
+        "label": "+2 Missile Elite",
+        "stats": ["5","4","5","3","3","1","7","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-guards.png",
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "Shields", "cost": "1"},
+          {"name": "Spear", "cost": "1"},
+          {"name": "Magic Instrument", "cost": "25"},
+          {"name": "Magic Standard", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Large settlements are protected by contingents of guards who watch the forest paths from their hidden strongpoints. These small units of Guards form the core of Wood Elf campaigning armies."
+  },
+  {
+    "id": "we-040-wardancers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Wardancers",
+    "profiles": [
+      {
+        "label": "Elf Wardancer",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-wardancers.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Additional Hand Weapons", "cost": "1"},
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "Flails", "cost": "2"},
+          {"name": "Spears", "cost": "1"},
+          {"name": "Shields", "cost": "1"},
+          {"name": "Light Armour", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Wardancers are courageous and incredibly athletic warriors. Their style of fighting is fleet and agile like a deadly 'dance' which cuts a swathe through their foes."
+  },
+  {
+    "id": "we-030-lords-bowmen",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Lord's Bowmen",
+    "profiles": [
+      {
+        "label": "+1 Missile Elite",
+        "stats": ["5","4","5","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-lords-bowmen.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Light Armour", "cost": "2"},
+          {"name": "Shields", "cost": "1"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "A Magic Standard", "cost": "25"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The best archers in a Wood Elf realm are banded together by their lord into elite contingents who live in the lord's hall in constant readiness."
+  },
+  {
+    "id": "we-030-glade-runners",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Glade Runners",
+    "profiles": [
+      {
+        "label": "Elf Scout",
+        "stats": ["5","4","5","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-glade-runners.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "5–12",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Shields", "cost": "1"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are bands of scouts, way-watchers, messengers and hunters. They can follow the tracks of any who enter the forest for great distances while remaining unseen. They know the woodland trails intimately and can lead intruders astray with ease."
+  },
+  {
+    "id": "we-3060-archers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "30–60",
+    "name": "Archers",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-archers.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Shields", "cost": "1"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Light Armour", "cost": "2"},
+          {"name": "Double-Handed Weapons", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many Wood Elves fight as archers, using a bow fashioned from the lornalim tree which grows in the woods of the Old World. The longbow is their natural weapon, and one with which they are highly skilled."
+  },
+  {
+    "id": "we-060-warrior-kinbands",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Warrior Kinbands",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-warrior-kinbands.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Light Armour", "cost": "2"},
+          {"name": "Spears", "cost": "1"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Additional Hand Weapons", "cost": "1"},
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "A Magic Standard", "cost": "25"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elves live in very close families which form the basis for warriors bands in times of war. These kinbands carry a family banner and wear the family's badge upon their war-gear."
+  },
+  {
+    "id": "we-06-beastmasters",
+    "army": "wood-elves",
+    "type": "handler",
+    "allowance": "0–6",
+    "name": "Beastmasters",
+    "profiles": [
+      {
+        "label": "Animal Handler",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": "Elf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-beastmasters.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "1–3 Handlers with packs",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": [],
+    "aggregateTable": null,
+    "flavour": "Wood Elf Beastmasters train their packs ready to follow their lords in the wild hunt. In battle the quarry is the foe. Each handler may control from 2–6 animal models, and two or more handlers and their packs may be merged to form larger units. Each animal handler unit may contain only one type of creature, however."
+  },
+  {
+    "id": "we-020-falconers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Falconers",
+    "profiles": [
+      {
+        "label": "Elf Falconer",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Hawk",
+        "stats": ["–","5","5","2","–","–","–","1","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-falconers.png",
+    "ptsPerModel": 11,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon & Hawk",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "Shields", "cost": "1"},
+          {"name": "Light Armour", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Wood Elf lords are great hunters and hawkers. Their falconers tame and train birds of prey both for hunting and for war."
+  },
+  {
+    "id": "we-08-shapechangers",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–8",
+    "name": "Shapechangers",
+    "profiles": [
+      {
+        "label": "Elf Shapechanger",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Giant Wolf*",
+        "stats": ["9","4","0","3","3","1","3","2*","3","4","4","4"],
+        "raceGroup": null
+      },
+      {
+        "label": "Boar*",
+        "stats": ["7","3","0","3","3","1","3","2*","3","4","4","4"],
+        "raceGroup": null
+      },
+      {
+        "label": "Bear*",
+        "stats": ["4","3","0","4","4","2","3","3*","6","3","6","6"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes animal & weapon attacks",
+    "profileD6": false,
+    "art": "img/unit-we-shapechangers.png",
+    "ptsPerModel": 28,
+    "ptsFixed": null,
+    "models": "Up to ⅕ of unit",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any model may have:",
+        "items": [
+          {"name": "Spears", "cost": "1"},
+          {"name": "Double-Handed Weapons", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These are the favoured kin of animal spirits and are able to manifest the characteristics of a particular beast; usually a wolf, bear or boar. They are quite rare but may be found in any Wood Elf warband. Shapechangers may be 'hidden' in any of the infantry units listed above. See Special Troop Types — Shapechangers."
+  },
+  {
+    "id": "we-03-treemen",
+    "army": "wood-elves",
+    "type": "standard",
+    "allowance": "0–3",
+    "name": "Treemen",
+    "profiles": [
+      {
+        "label": "Treeman",
+        "stats": ["6","8","3","6","7","6","2","4","9","9","9","9"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-we-treemen.png",
+    "ptsPerModel": 280,
+    "ptsFixed": null,
+    "models": "1–3",
+    "weapons": "Stomp Attacks",
+    "armour": "None",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The forest homes of the Elves are also the dwelling places of the giant Treemen. Elves and Treemen are close friends, and often aid each other, with willing Treemen fighting in the armies of the Elven Lords. Treemen cause fear in living creatures under 10′ tall, and hate goblinoids. See Bestiary — Treemen."
+  },
+  {
+    "id": "he-05-elven-dragonkin",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–5",
+    "name": "Elven Dragonkin",
+    "profiles": [
+      {
+        "label": "+4 Shock Elite",
+        "stats": ["–","5","4","4","3","1","7","2","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Dragon 1 (Winged)",
+        "stats": ["6","4","0","5","5","7","2","6","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-dragonkin.png",
+    "ptsPerModel": 315,
+    "ptsFixed": null,
+    "models": "1–5",
+    "weapons": "Hand Weapons",
+    "armour": "Heavy Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Shield", "cost": "1"},
+          {"name": "Lance", "cost": "2"},
+          {"name": "Bow", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elven dragon riders are rare and highly revered warriors. They lead reclusive lives, dwelling upon tall pinnacles or in high towers. They are of noble and ancient lineage, and their association with Dragonkind goes back to the beginnings of Ulthuan."
+  },
+  {
+    "id": "he-040-silver-helms",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Silver Helms",
+    "profiles": [
+      {
+        "label": "+3 Shock Elite",
+        "stats": ["–","5","4","4","3","1","7","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse",
+        "stats": ["8","3","0","4","3","–","3","1","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-silverhelms.png",
+    "ptsPerModel": 35,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Lance & Hand Weapon",
+    "armour": "Light Armour & Shield",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Heavy Armour", "cost": "2"},
+          {"name": "Warhorse Barding", "cost": "8"},
+          {"name": "A Magic Standard", "cost": "50"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Elven lords and lesser nobles take to war mounted on splendid chargers and wearing magnificent tall helmets. White, silver-grey and dappled horses are the most highly prized."
+  },
+  {
+    "id": "he-040-shore-riders",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–40",
+    "name": "Shore Riders",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite (incl. horse)",
+        "stats": ["8*","5","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": "* Includes movement allowance of horse",
+    "profileD6": false,
+    "art": "img/unit-he-shoreriders.png",
+    "ptsPerModel": 22,
+    "ptsFixed": null,
+    "models": "5–20",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Bows", "cost": "4"},
+          {"name": "Javelins", "cost": "2"},
+          {"name": "Light Armour", "cost": "4"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The long sea coast of Ulthuan must be watched constantly, and every coastal Kingdom contributes to this effort. These warriors are battle-hardened, practical soldiers, used to the deprivation of long patrols and sudden combat."
+  },
+  {
+    "id": "he-04-warwains",
+    "army": "high-elves",
+    "type": "chariot",
+    "allowance": "0–4",
+    "name": "Warwains",
+    "profiles": [
+      {
+        "label": "Elf Crew (4)",
+        "stats": ["–","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      },
+      {
+        "label": "Warhorse (4)",
+        "stats": ["8","3","0","4","3","–","3","1","–","–","–","–"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-warwains.png",
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1–4 Chariots",
+    "weapons": "Hand Weapons",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": {
+      "label": "Heavy Chariot",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "4",
+      "steeds": "4",
+      "attacks": "–"
+    },
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Many High Elf nobles ride finely made and superbly decorated chariots into battle. They form the most formidable and magnificent troops to be found in an Elven host. Chariot crews are considered to be armed with hand weapons in melee, irrespective of weapons carried by the model. If any crew member has a shield, all crew count as shielded and the points value has been calculated accordingly."
+  },
+  {
+    "id": "he-050-archers",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–50",
+    "name": "Archers",
+    "profiles": [
+      {
+        "label": "+1 Missile Elite",
+        "stats": ["5","4","5","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-archers.png",
+    "ptsPerModel": 14,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The great annual fairs of the Elven Kingdoms feature all manner of martial sports. It is at these tournaments that the best archers are selected to serve in the bow-armed fighting regiments. They are the finest shots in the land, and practise daily at the butts."
+  },
+  {
+    "id": "he-030-ships-companies",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–30",
+    "name": "Ships Companies",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-ship.png",
+    "ptsPerModel": 13,
+    "ptsFixed": null,
+    "models": "10",
+    "weapons": "Long Bow & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "Shields", "cost": "1"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "A Magic Standard", "cost": "25"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The warships and trading galleons of the Sea Elves have well armed crews. Sometimes these warrior crews may be used to augment the land forces."
+  },
+  {
+    "id": "he-020-guard",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–20",
+    "name": "Guard",
+    "profiles": [
+      {
+        "label": "+1 Shock Elite",
+        "stats": ["5","5","5","4","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-guard.png",
+    "ptsPerModel": 12,
+    "ptsFixed": null,
+    "models": "10–20",
+    "weapons": "Spear & Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "Shields", "cost": "1"},
+          {"name": "Heavy Armour", "cost": "1"},
+          {"name": "Halberds instead of Spears", "cost": "1"},
+          {"name": "A Magic Standard", "cost": "50"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Every lord of any standing has his own personal guard to protect his halls and welcome strangers. Guards of this kind form the core of Elven armies."
+  },
+  {
+    "id": "he-060-kith",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Kith",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-kith.png",
+    "ptsPerModel": 9,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Shield",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Spears", "cost": "1"},
+          {"name": "Javelins", "cost": "1"},
+          {"name": "Long Bows", "cost": "3"},
+          {"name": "Light Armour", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The humble Elven folk who serve the land owners in the fields and the artisans in the towns, muster together into bands based upon their area. They are, literally, warriors associated with a particular locality, but they are mighty warriors nonetheless."
+  },
+  {
+    "id": "he-060-merchant-companies",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Merchant Companies",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-merchant.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Shields", "cost": "1"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      },
+      {
+        "subheading": "One half of unit must have:",
+        "items": [
+          {"name": "Longbows", "cost": "3"}
+        ]
+      },
+      {
+        "subheading": "Other half may have:",
+        "items": [
+          {"name": "Spears", "cost": "1"},
+          {"name": "Halberds", "cost": "2"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "A Magic Standard", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The Sea Elves prosper greatly from their trading ventures across the wide seas, and Merchant Princes maintain their own regiments of soldiers to protect their ships and havens at home and abroad. These regiments use Mixed Ranks — half are spearmen or halberdiers, while the other half are archers (see Special Formations — Mixed Ranks)."
+  },
+  {
+    "id": "he-060-warrior-kindreds",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–60",
+    "name": "Warrior Kindreds",
+    "profiles": [
+      {
+        "label": "Elf",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-warrior-kindreds.png",
+    "ptsPerModel": 10,
+    "ptsFixed": null,
+    "models": "10–30",
+    "weapons": "Hand Weapon",
+    "armour": "Light Armour",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Halberds", "cost": "2"},
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "Spears", "cost": "1"},
+          {"name": "Shields", "cost": "1"},
+          {"name": "Heavy Armour", "cost": "1"}
+        ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {"name": "A Magic Standard", "cost": "25"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "In times of war, Elves group together into regiments formed of family groups. Elves are very mindful of their relationships and family bonds, no matter how distant or ancient. They are usually well armed and arrayed in splendid uniforms."
+  },
+  {
+    "id": "he-010-sea-elf-wardancers",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–10",
+    "name": "Sea Elf Wardancers",
+    "profiles": [
+      {
+        "label": "Elf Wardancer",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-wardancers.png",
+    "ptsPerModel": 20,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Additional Hand Weapons", "cost": "1"},
+          {"name": "Double-Handed Weapons", "cost": "2"},
+          {"name": "Flails", "cost": "2"},
+          {"name": "Spears", "cost": "1"},
+          {"name": "Shields", "cost": "1"},
+          {"name": "Light Armour", "cost": "2"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "These small bands are valued as boarding parties in Sea Elf naval actions and are frequently to be found in land armies as well."
+  },
+  {
+    "id": "he-025-seekers",
+    "army": "high-elves",
+    "type": "standard",
+    "allowance": "0–25",
+    "name": "Seekers",
+    "profiles": [
+      {
+        "label": "Elf Scout",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-seekers.png",
+    "ptsPerModel": 16,
+    "ptsFixed": null,
+    "models": "5–10",
+    "weapons": "Longbow & Hand Weapon",
+    "armour": "None",
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {"name": "Javelins", "cost": "1"},
+          {"name": "Shields", "cost": "1"},
+          {"name": "Light Armour", "cost": "2"},
+          {"name": "A Magical Instrument", "cost": "25"}
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "The swiftest runners and those with the keenest eyesight belong to the bands of Seekers. These warriors excel at scouting, skirmishing and ambushing the enemy. Elves tend to be shrewd tacticians, who know how to use such troops to good effect."
+  },
+  {
+    "id": "he-04-marine-bolt-batteries",
+    "army": "high-elves",
+    "type": "warmachine",
+    "allowance": "0–4",
+    "name": "Marine Bolt-Batteries",
+    "profiles": [
+      {
+        "label": "Elf Crew (3)",
+        "stats": ["5","4","4","3","3","1","6","1","8","9","9","8"],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": "img/unit-he-marines.png",
+    "ptsPerModel": null,
+    "ptsFixed": 54,
+    "models": "1–4 Bolt Throwers",
+    "weapons": "Hand Weapon",
+    "armour": "None",
+    "options": [],
+    "machineStats": {
+      "label": "Bolt Thrower",
+      "move": "–",
+      "save": "–",
+      "wounds": "–",
+      "crew": "3"
+    },
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": "Detached batteries of warship armament, with expert Sea Elf crews, may be used on land to support Elven armies. This is yet another example of how a powerful Elven army can be mustered virtually anywhere in the world, thanks to the flexibility of Sea Elf forces and Elven tactical ingenuity."
+  }
+]

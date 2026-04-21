@@ -305,7 +305,10 @@ body { background: #111111; min-height: 100vh; display: flex; flex-direction: co
     <button class="card-type-tab" onclick="setCardType('character')">Character</button>
   </div>
   <button class="topbar-btn" onclick="window.print()">&#128424; Print Card</button>
+  <button class="topbar-btn" onclick="addToArmyList()" style="background:#3d6b50;margin-left:4px" id="add-army-btn">+ Army List</button>
+  <a href="army-list.html" class="topbar-btn" style="background:#2a4a38;text-decoration:none;margin-left:2px">&#9776; View List</a>
 </div>
+<div id="army-toast" style="display:none;position:fixed;bottom:20px;right:20px;background:#3d6b50;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:9px 18px;border-radius:2px;z-index:9999;box-shadow:2px 2px 8px #0006;transition:opacity 0.3s"></div>
 <div class="editor-main">
   <div class="form-panel" id="form-panel"></div>
   <div class="preview-panel" id="preview-panel">
@@ -3700,6 +3703,29 @@ function scalePreview() {
 }
 
 new ResizeObserver(scalePreview).observe(document.getElementById("preview-panel") || document.body);
+
+/* ═══ ARMY LIST ═══ */
+function addToArmyList() {
+  const card = document.getElementById("card-preview");
+  if (!card || !card.innerHTML.trim()) return;
+  const label = (document.getElementById("f-name")?.value || "Unnamed Unit").trim();
+  // Strip file inputs so stored HTML is clean
+  const clone = card.cloneNode(true);
+  clone.removeAttribute("id");
+  clone.querySelectorAll("input[type='file']").forEach(i => i.remove());
+  const html = clone.outerHTML;
+  const list = JSON.parse(localStorage.getItem("wfb3-army-list") || "[]");
+  list.push({ id: Date.now(), label, html });
+  localStorage.setItem("wfb3-army-list", JSON.stringify(list));
+  const toast = document.getElementById("army-toast");
+  if (toast) {
+    toast.textContent = "\u2713 \u201c" + label + "\u201d added \u2014 " + list.length + " card" + (list.length !== 1 ? "s" : "") + " in list";
+    toast.style.display = "block";
+    toast.style.opacity = "1";
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => { toast.style.opacity = "0"; setTimeout(() => { toast.style.display = "none"; }, 300); }, 2500);
+  }
+}
 
 /* INIT */
 buildForm(); render();
