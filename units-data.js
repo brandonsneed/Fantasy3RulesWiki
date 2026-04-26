@@ -2664,6 +2664,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "100"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -2727,7 +2731,17 @@ const WFB3_UNITS = [
     "weapons": "Lance & Hand Weapon",
     "armour": "Heavy Armour & Shield",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Warhorse Barding",
+            "cost": "8"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -2794,6 +2808,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "25"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -2845,6 +2863,10 @@ const WFB3_UNITS = [
         "items": [
           {
             "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
             "cost": "1"
           }
         ]
@@ -2909,6 +2931,10 @@ const WFB3_UNITS = [
           },
           {
             "name": "A Magic Standard",
+            "cost": "25"
+          },
+          {
+            "name": "A Magical Instrument",
             "cost": "25"
           }
         ]
@@ -3058,6 +3084,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
           }
         ]
       }
@@ -3156,6 +3186,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
           }
         ]
       }
@@ -3201,7 +3235,17 @@ const WFB3_UNITS = [
     "weapons": "Long Bow & Hand Weapon",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -3250,6 +3294,10 @@ const WFB3_UNITS = [
           {
             "name": "Additional Hand Weapon",
             "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
           }
         ]
       }
@@ -3301,6 +3349,10 @@ const WFB3_UNITS = [
         "items": [
           {
             "name": "Throwing Spears",
+            "cost": "1"
+          },
+          {
+            "name": "Shields",
             "cost": "1"
           }
         ]
@@ -3418,6 +3470,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "2"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -3488,6 +3544,10 @@ const WFB3_UNITS = [
           {
             "name": "Horse Barding",
             "cost": "8"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
           }
         ]
       }
@@ -3566,6 +3626,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "100"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -3636,6 +3700,10 @@ const WFB3_UNITS = [
           {
             "name": "Horse Barding",
             "cost": "8"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
           }
         ]
       }
@@ -3688,6 +3756,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "2"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "6"
           }
         ]
       }
@@ -3733,7 +3805,17 @@ const WFB3_UNITS = [
     "weapons": "Halberd & Hand Weapon",
     "armour": "Light Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -3790,6 +3872,10 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
           }
         ]
       }
@@ -3835,7 +3921,17 @@ const WFB3_UNITS = [
     "weapons": "Crossbow & Hand Weapon",
     "armour": "Light Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -3877,7 +3973,17 @@ const WFB3_UNITS = [
     "weapons": "Bow & Hand Weapon",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "½"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -3942,6 +4048,10 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          },
+          {
+            "name": "Spears",
+            "cost": "1"
           }
         ]
       }
@@ -3993,6 +4103,10 @@ const WFB3_UNITS = [
         "items": [
           {
             "name": "Spears",
+            "cost": "½"
+          },
+          {
+            "name": "Shields",
             "cost": "½"
           }
         ]
@@ -4046,6 +4160,10 @@ const WFB3_UNITS = [
           {
             "name": "Shield",
             "cost": "1"
+          },
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
           }
         ]
       }
@@ -4106,6 +4224,10 @@ const WFB3_UNITS = [
         "items": [
           {
             "name": "Bows",
+            "cost": "½"
+          },
+          {
+            "name": "Spears",
             "cost": "½"
           }
         ]
@@ -4189,6 +4311,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
           }
         ]
       }
@@ -4262,6 +4388,15 @@ const WFB3_UNITS = [
           {
             "name": "Arquebus",
             "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may also have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
           }
         ]
       }
@@ -4461,6 +4596,15 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "One unit may substitute:",
+        "items": [
+          {
+            "name": "Warhorses for Chaos Steeds",
+            "cost": "26"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -4541,6 +4685,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "50"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -4610,6 +4758,10 @@ const WFB3_UNITS = [
           {
             "name": "Spears",
             "cost": "1"
+          },
+          {
+            "name": "Pistols",
+            "cost": "2"
           }
         ]
       }
@@ -4674,6 +4826,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "50"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -4751,6 +4907,10 @@ const WFB3_UNITS = [
           {
             "name": "Bows",
             "cost": "2"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "3"
           }
         ]
       }
@@ -4840,6 +5000,10 @@ const WFB3_UNITS = [
           {
             "name": "Throwing Axes",
             "cost": "1"
+          },
+          {
+            "name": "Pistols",
+            "cost": "2"
           }
         ]
       }
@@ -4917,6 +5081,10 @@ const WFB3_UNITS = [
           {
             "name": "Throwing Spears",
             "cost": "1"
+          },
+          {
+            "name": "Halberds",
+            "cost": "2"
           }
         ]
       }
@@ -4972,6 +5140,10 @@ const WFB3_UNITS = [
           },
           {
             "name": "Double-Handed Weapons",
+            "cost": "8"
+          },
+          {
+            "name": "Light Armour",
             "cost": "8"
           }
         ]
@@ -5162,7 +5334,29 @@ const WFB3_UNITS = [
     "weapons": "Crossbow & Hand Weapon",
     "armour": "Heavy Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": null,
+        "items": [
+          {
+            "name": "Champion",
+            "cost": "D6–4"
+          },
+          {
+            "name": "Unit",
+            "cost": "D4–3"
+          },
+          {
+            "name": "Champion",
+            "cost": "53"
+          },
+          {
+            "name": "Double-Handed Weapon",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -5204,7 +5398,17 @@ const WFB3_UNITS = [
     "weapons": "Hand Weapons",
     "armour": "Light Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Crew may have:",
+        "items": [
+          {
+            "name": "Heavy Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -6657,7 +6861,38 @@ const WFB3_UNITS = [
     "models": null,
     "weapons": null,
     "armour": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any chariot may have:",
+        "items": [
+          {
+            "name": "Scythed Wheels",
+            "cost": "20"
+          },
+          {
+            "name": "Magic Standard",
+            "cost": "50"
+          }
+        ]
+      },
+      {
+        "subheading": "Any crew member may have:",
+        "items": [
+          {
+            "name": "Bows",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "2"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -7455,7 +7690,17 @@ const WFB3_UNITS = [
     "models": null,
     "weapons": null,
     "armour": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Crew models may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
     "machineStats": {
       "headers": [
         "Range Min",
@@ -7652,6 +7897,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "100"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -7715,6 +7964,15 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Any unit may substitute:",
+        "items": [
+          {
+            "name": "Heavy Armour for Light",
+            "cost": "1"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -7774,6 +8032,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "50"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -7839,6 +8101,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "25"
+          },
+          {
+            "name": "A Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -7900,6 +8166,15 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may substitute:",
+        "items": [
+          {
+            "name": "Heavy Armour for Light",
+            "cost": "1"
           }
         ]
       }
@@ -7969,6 +8244,10 @@ const WFB3_UNITS = [
           {
             "name": "Pikes",
             "cost": "1"
+          },
+          {
+            "name": "Crossbows",
+            "cost": "3"
           }
         ]
       }
@@ -8014,7 +8293,17 @@ const WFB3_UNITS = [
     "weapons": "Arquebus & Hand Weapon",
     "armour": "Light Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Double-Handed Weapons",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -8066,6 +8355,10 @@ const WFB3_UNITS = [
           },
           {
             "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Light Armour",
             "cost": "2"
           }
         ]
@@ -8127,6 +8420,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
           }
         ]
       }
@@ -8191,6 +8488,10 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "3"
           }
         ]
       }
@@ -8236,7 +8537,17 @@ const WFB3_UNITS = [
     "weapons": "Double-Handed Weapon & Hand Weapon",
     "armour": "Light Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may substitute:",
+        "items": [
+          {
+            "name": "Heavy Armour for Light",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -8351,6 +8662,10 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          },
+          {
+            "name": "Heavy Armour",
+            "cost": "3"
           }
         ]
       }
@@ -8396,7 +8711,17 @@ const WFB3_UNITS = [
     "weapons": "Hand Weapon & Blunderbuss",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Magic Instrument",
+            "cost": "25"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -8467,6 +8792,10 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "4"
+          },
+          {
+            "name": "Darts",
+            "cost": "2"
           }
         ]
       }
@@ -8523,6 +8852,15 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Shields",
+            "cost": "1"
           }
         ]
       }
@@ -8588,6 +8926,10 @@ const WFB3_UNITS = [
           {
             "name": "Magic Standard",
             "cost": "50"
+          },
+          {
+            "name": "Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -8657,6 +8999,10 @@ const WFB3_UNITS = [
           {
             "name": "Magic Standard",
             "cost": "25"
+          },
+          {
+            "name": "Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -8722,6 +9068,10 @@ const WFB3_UNITS = [
           {
             "name": "Magic Standard",
             "cost": "75"
+          },
+          {
+            "name": "Magical Instrument",
+            "cost": "25"
           }
         ]
       }
@@ -8767,7 +9117,17 @@ const WFB3_UNITS = [
     "weapons": "Hand Weapons",
     "armour": "Light Armour & Shield",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Any unit may have:",
+        "items": [
+          {
+            "name": "Darts",
+            "cost": "1"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -8820,6 +9180,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
           }
         ]
       }
@@ -8872,6 +9236,10 @@ const WFB3_UNITS = [
           {
             "name": "Double Handed Weapons",
             "cost": "2"
+          },
+          {
+            "name": "Shields",
+            "cost": "1"
           }
         ]
       }
@@ -8932,6 +9300,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          },
+          {
+            "name": "Poisoned Attacks",
+            "cost": "3"
           }
         ]
       }
@@ -8992,6 +9364,10 @@ const WFB3_UNITS = [
         "items": [
           {
             "name": "Blowpipes",
+            "cost": "1"
+          },
+          {
+            "name": "Darts",
             "cost": "1"
           }
         ]
@@ -9087,6 +9463,10 @@ const WFB3_UNITS = [
           {
             "name": "Shield",
             "cost": "4"
+          },
+          {
+            "name": "Double Handed Weapon",
+            "cost": "8"
           }
         ]
       }
@@ -9142,6 +9522,10 @@ const WFB3_UNITS = [
           },
           {
             "name": "Double-Handed Weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Shields",
             "cost": "2"
           }
         ]
@@ -9306,6 +9690,10 @@ const WFB3_UNITS = [
           {
             "name": "Spears",
             "cost": "1"
+          },
+          {
+            "name": "Bows",
+            "cost": "2"
           }
         ]
       }
@@ -9442,6 +9830,15 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Spears",
+            "cost": "1"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9485,7 +9882,17 @@ const WFB3_UNITS = [
     "weapons": "Bow & Hand Weapon",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "One unit may have:",
+        "items": [
+          {
+            "name": "Light Armour",
+            "cost": "2"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -9534,6 +9941,15 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "One unit may substitute:",
+        "items": [
+          {
+            "name": "Arquebuses for Crossbows",
+            "cost": "1"
           }
         ]
       }
@@ -9586,6 +10002,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "2"
           }
         ]
       }
@@ -9642,6 +10062,10 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "½"
+          },
+          {
+            "name": "Light Armour",
+            "cost": "1"
           }
         ]
       }
