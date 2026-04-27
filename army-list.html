@@ -6,6 +6,7 @@
 <title>WFB3 Army List Builder</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&family=IM+Fell+English:ital@0;1&family=Cinzel:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <script src="units-data.js"></script>
+<script src="magic-items-data.js"></script>
 <script src="card-render.js"></script>
 <style>
 /* ═══════════════════════════════════════════════
@@ -85,6 +86,13 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .alb-opt-chip input[type="checkbox"] { width: 10px; height: 10px; margin: 0; accent-color: #88bb88; cursor: pointer; flex-shrink: 0; }
 .alb-opt-cost { color: #555; font-size: 8px; margin-left: 2px; }
 .alb-opt-chip.checked .alb-opt-cost { color: #4a8a4a; }
+.alb-opt-chip.magic { border-color: #2a3a4a; }
+.alb-opt-chip.magic.checked { border-color: #4a7aaa; background: #0f161c; color: #88aacc; }
+.alb-opt-chip.magic.checked .alb-opt-cost { color: #6699bb; }
+/* MAGIC ITEM ABILITY SUB-ROW */
+.alb-magic-wrapper { width: 100%; display: flex; flex-direction: column; }
+.alb-magic-sub { display: flex; flex-wrap: wrap; gap: 3px; padding: 4px 0 2px 14px; border-left: 2px solid #2a3a4a; margin: 2px 0 3px; }
+.alb-magic-sub-label { width: 100%; font-size: 7px; color: #4a6a8a; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 2px; font-weight: 700; }
 
 /* EMPTY STATE */
 .empty-state { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 80px 24px; text-align: center; }
@@ -732,6 +740,23 @@ function calcAutoPoints(item) {
       });
     });
   }
+
+  // Add chosen magic ability costs on top of base option cost
+  if (unit && unit.options && item.magicAbilities && typeof WFB3_MAGIC_ITEMS !== 'undefined') {
+    unit.options.forEach(function(group) {
+      group.items.forEach(function(opt) {
+        if (!item.optionsSelected[opt.name]) return;
+        var catKey = getMagicItemCategory(opt.name);
+        if (!catKey || !WFB3_MAGIC_ITEMS[catKey] || !WFB3_MAGIC_ITEMS[catKey].abilities) return;
+        var abMap = item.magicAbilities[opt.name];
+        if (!abMap) return;
+        WFB3_MAGIC_ITEMS[catKey].abilities.forEach(function(ab) {
+          if (abMap[ab.name]) fixed += ab.cost;
+        });
+      });
+    });
+  }
+
   return models * perModel + fixed;
 }
 
@@ -741,6 +766,112 @@ function recalcPts(item, ptsTotalEl) {
   item.totalPts = pts;
   ptsTotalEl.textContent = pts || '—';
   ptsTotalEl.className   = 'alb-pts-total auto';
+}
+
+/* ═══════════════════════════════════════
+   MAGIC ITEM HELPERS
+═══════════════════════════════════════ */
+function getMagicItemCategory(optName) {
+  if (typeof WFB3_MAGIC_ITEMS === 'undefined') return null;
+  var n = optName.toLowerCase();
+  if (/magic(al)?\s+(unit\s+)?standard/.test(n) || /\bstandard.*magic/.test(n)) return 'standard';
+  if (/magic(al)?\s+instrument/.test(n)) return 'instrument';
+  if (/magic(al)?\s+(hand\s+)?weapon/.test(n) || /magic(al)?\s+sword/.test(n)) return 'weapon';
+  if (/magic(al)?\s+(armou?r|shield|helm)/.test(n)) return 'armour';
+  if (/magic(al)?\s+missile/.test(n)) return 'missile_supply';
+  if (/scroll/.test(n)) return 'scroll';
+  if (/magic(al)?\s+ring/.test(n)) return 'ring';
+  return null;
+}
+
+function buildMagicItemControl(opt, catKey, item, ptsTotalEl) {
+  var catData = WFB3_MAGIC_ITEMS[catKey];
+  if (!item.magicAbilities) item.magicAbilities = {};
+  if (!item.magicAbilities[opt.name]) item.magicAbilities[opt.name] = {};
+  var abMap    = item.magicAbilities[opt.name];
+  var baseCost = parseFloat(String(opt.cost).replace(/[^\d.]/g, '')) || 0;
+
+  function calcMagicCost() {
+    var total = baseCost;
+    catData.abilities.forEach(function(ab) { if (abMap[ab.name]) total += ab.cost; });
+    return total;
+  }
+
+  var wrapper = document.createElement('div');
+  wrapper.className = 'alb-magic-wrapper';
+
+  // Main chip (toggle item on/off)
+  var chip = document.createElement('label');
+  var isSelected = !!item.optionsSelected[opt.name];
+  chip.className = 'alb-opt-chip magic' + (isSelected ? ' checked' : '');
+  var cb = document.createElement('input');
+  cb.type = 'checkbox';
+  cb.checked = isSelected;
+
+  var costSpan = document.createElement('span');
+  costSpan.className = 'alb-opt-cost';
+
+  function updateCostDisplay() {
+    var anyAbility = catData.abilities.some(function(ab){ return abMap[ab.name]; });
+    costSpan.textContent = '\u00a0' + calcMagicCost() + (anyAbility ? ' pts' : '+');
+  }
+  updateCostDisplay();
+
+  chip.appendChild(cb);
+  chip.appendChild(document.createTextNode('\u00a0' + opt.name));
+  chip.appendChild(costSpan);
+
+  // Ability sub-row (shown when item is selected)
+  var subRow = document.createElement('div');
+  subRow.className = 'alb-magic-sub';
+  subRow.style.display = isSelected ? 'flex' : 'none';
+
+  var subLabel = document.createElement('div');
+  subLabel.className = 'alb-magic-sub-label';
+  subLabel.textContent = catKey === 'standard' ? 'Standard ability:' :
+                         catKey === 'instrument' ? 'Instrument ability:' :
+                         catKey === 'weapon' ? 'Weapon ability:' :
+                         catKey === 'armour' ? 'Armour ability:' : 'Ability:';
+  subRow.appendChild(subLabel);
+
+  catData.abilities.forEach(function(ab) {
+    var abChip = document.createElement('label');
+    var isAbSel = !!abMap[ab.name];
+    abChip.className = 'alb-opt-chip' + (isAbSel ? ' checked' : '');
+
+    var abCb = document.createElement('input');
+    abCb.type = 'checkbox';
+    abCb.checked = isAbSel;
+    abCb.onchange = function() {
+      abMap[ab.name] = abCb.checked;
+      abChip.classList.toggle('checked', abCb.checked);
+      updateCostDisplay();
+      recalcPts(item, ptsTotalEl);
+      saveCards(); updateTotals();
+    };
+
+    var abCostSpan = document.createElement('span');
+    abCostSpan.className = 'alb-opt-cost';
+    abCostSpan.textContent = '\u00a0+' + ab.cost;
+
+    abChip.appendChild(abCb);
+    abChip.appendChild(document.createTextNode('\u00a0' + ab.name));
+    abChip.appendChild(abCostSpan);
+    subRow.appendChild(abChip);
+  });
+
+  cb.onchange = function() {
+    item.optionsSelected[opt.name] = cb.checked;
+    chip.classList.toggle('checked', cb.checked);
+    subRow.style.display = cb.checked ? 'flex' : 'none';
+    updateCostDisplay();
+    recalcPts(item, ptsTotalEl);
+    saveCards(); updateTotals();
+  };
+
+  wrapper.appendChild(chip);
+  wrapper.appendChild(subRow);
+  return wrapper;
 }
 
 /* ═══════════════════════════════════════
@@ -845,26 +976,33 @@ function buildControls(item) {
       const optsRow = document.createElement("div");
       optsRow.className = "alb-opts-row";
       allOpts.forEach(function(opt) {
-        const chip = document.createElement("label");
-        chip.className = "alb-opt-chip" + (item.optionsSelected[opt.name] ? " checked" : "");
-        const cb = document.createElement("input");
-        cb.type = "checkbox";
-        cb.checked = !!item.optionsSelected[opt.name];
-        cb.onchange = function() {
-          item.optionsSelected[opt.name] = cb.checked;
-          chip.classList.toggle("checked", cb.checked);
-          recalcPts(item, ptsTotalEl);
-          saveCards(); updateTotals();
-        };
-        const perModel = isPerModelCost(opt.cost, unitForOpts);
-        const costLabel = perModel && !/ea/i.test(opt.cost) ? opt.cost + ' ea.' : opt.cost;
-        chip.appendChild(cb);
-        chip.appendChild(document.createTextNode('\u00a0' + opt.name));
-        const costSpan = document.createElement("span");
-        costSpan.className = "alb-opt-cost";
-        costSpan.textContent = '\u00a0' + costLabel;
-        chip.appendChild(costSpan);
-        optsRow.appendChild(chip);
+        var catKey = getMagicItemCategory(opt.name);
+        if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' && WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
+          // Magic item: render chip + expandable ability sub-picker
+          optsRow.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl));
+        } else {
+          // Normal option chip
+          const chip = document.createElement("label");
+          chip.className = "alb-opt-chip" + (item.optionsSelected[opt.name] ? " checked" : "");
+          const cb = document.createElement("input");
+          cb.type = "checkbox";
+          cb.checked = !!item.optionsSelected[opt.name];
+          cb.onchange = function() {
+            item.optionsSelected[opt.name] = cb.checked;
+            chip.classList.toggle("checked", cb.checked);
+            recalcPts(item, ptsTotalEl);
+            saveCards(); updateTotals();
+          };
+          const perModel = isPerModelCost(opt.cost, unitForOpts);
+          const costLabel = perModel && !/ea/i.test(opt.cost) ? opt.cost + ' ea.' : opt.cost;
+          chip.appendChild(cb);
+          chip.appendChild(document.createTextNode('\u00a0' + opt.name));
+          const costSpan = document.createElement("span");
+          costSpan.className = "alb-opt-cost";
+          costSpan.textContent = '\u00a0' + costLabel;
+          chip.appendChild(costSpan);
+          optsRow.appendChild(chip);
+        }
       });
       ctrl.appendChild(optsRow);
     }
@@ -1038,7 +1176,8 @@ function addUnitToList(unit) {
     totalPts:        0,
     notes:           "",
     manualPts:       false,
-    optionsSelected: {}
+    optionsSelected: {},
+    magicAbilities:  {}
   });
   saveCards();
   renderGrid();
