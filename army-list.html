@@ -881,20 +881,32 @@ function buildControls(item) {
   const ctrl = document.createElement("div");
   ctrl.className = "alb-controls";
 
-  // Models field
+  // Look up the unit to detect character type early (also used by options row)
+  const unitData = lookupUnit(item.sourceId);
+  const isChar   = unitData && unitData.type === 'character';
+
+  // Models field — locked to 1 for characters
   const mf = document.createElement("div");
   mf.className = "alb-field";
   const ml = document.createElement("label"); ml.textContent = "Models";
-  const mi = document.createElement("input");
-  mi.type = "number"; mi.min = "0"; mi.className = "alb-input";
-  mi.value = item.models || "";
-  mi.placeholder = "—";
-  mi.oninput = function() {
-    item.models = parseInt(mi.value) || 0;
-    recalcPts(item, ptsTotalEl);
-    saveCards(); updateTotals();
-  };
-  mf.appendChild(ml); mf.appendChild(mi);
+  if (isChar) {
+    // Characters are always a single model — show static "1" instead of editable field
+    const mv = document.createElement("div");
+    mv.style.cssText = "font-size:12px;color:#888;padding:2px 0;font-family:'Barlow Condensed',sans-serif;text-align:center";
+    mv.textContent = "1";
+    mf.appendChild(ml); mf.appendChild(mv);
+  } else {
+    const mi = document.createElement("input");
+    mi.type = "number"; mi.min = "0"; mi.className = "alb-input";
+    mi.value = item.models || "";
+    mi.placeholder = "—";
+    mi.oninput = function() {
+      item.models = parseInt(mi.value) || 0;
+      recalcPts(item, ptsTotalEl);
+      saveCards(); updateTotals();
+    };
+    mf.appendChild(ml); mf.appendChild(mi);
+  }
   ctrl.appendChild(mf);
 
   // pts/model hint
@@ -965,7 +977,7 @@ function buildControls(item) {
   ctrl.appendChild(rb);
 
   // Options row — equipment/upgrade checkboxes
-  const unitForOpts = lookupUnit(item.sourceId);
+  const unitForOpts = unitData; // already looked up at top of buildControls
   if (unitForOpts && unitForOpts.options && unitForOpts.options.length) {
     const allOpts = [];
     unitForOpts.options.forEach(function(g) {
@@ -1101,7 +1113,9 @@ function renderBrowserUnits(armyId, filter) {
   const units = WFB3_UNITS.filter(function(u) {
     if (u.army !== armyId) return false;
     if (!filter) return true;
-    return u.name.toLowerCase().includes(filter) || u.allowance.toLowerCase().includes(filter);
+    return u.name.toLowerCase().includes(filter) ||
+           (u.allowance && u.allowance.toLowerCase().includes(filter)) ||
+           (u.charType  && u.charType.toLowerCase().includes(filter));
   });
 
   // Header
@@ -1118,7 +1132,11 @@ function renderBrowserUnits(armyId, filter) {
     return;
   }
 
-  units.forEach(function(unit) {
+  // Separate characters from rank-and-file for section headers
+  const rankFile = units.filter(function(u) { return u.type !== 'character'; });
+  const chars    = units.filter(function(u) { return u.type === 'character'; });
+
+  function renderUnitRow(unit) {
     const row = document.createElement("div");
     row.className = "browser-unit-row";
 
@@ -1132,10 +1150,18 @@ function renderBrowserUnits(armyId, filter) {
 
     const meta = document.createElement("div");
     meta.className = "browser-unit-meta";
-    const ptsStr = unit.ptsPerModel ? unit.ptsPerModel + " pts/model"
-                 : unit.ptsFixed   ? unit.ptsFixed + " pts"
-                 : "";
-    meta.textContent = unit.allowance + (ptsStr ? "  ·  " + ptsStr : "");
+    if (unit.type === 'character') {
+      const lvl   = unit.level    ? 'Level\u00a0' + unit.level : '';
+      const ct    = unit.charType ? (unit.charType.charAt(0).toUpperCase() + unit.charType.slice(1)) : '';
+      const maxS  = unit.charMax  ? 'Max:\u00a0' + unit.charMax : '';
+      const ptsS  = unit.ptsPerModel ? unit.ptsPerModel + '\u00a0pts' : '';
+      meta.textContent = [lvl, ct, maxS, ptsS].filter(Boolean).join('  \u00b7  ');
+    } else {
+      const ptsStr = unit.ptsPerModel ? unit.ptsPerModel + " pts/model"
+                   : unit.ptsFixed   ? unit.ptsFixed + " pts"
+                   : "";
+      meta.textContent = unit.allowance + (ptsStr ? "  \u00b7  " + ptsStr : "");
+    }
     info.appendChild(meta);
 
     // Clicking the info section opens the full card preview
@@ -1157,14 +1183,32 @@ function renderBrowserUnits(armyId, filter) {
 
     row.appendChild(info);
     row.appendChild(addBtn);
-    container.appendChild(row);
-  });
+    return row;
+  } // end renderUnitRow
+
+  function addSectionHeader(text) {
+    const hdr = document.createElement("div");
+    hdr.className = "browser-units-header";
+    hdr.style.cssText = "border-top:1px solid #2a2a2a;margin-top:2px;";
+    hdr.textContent = text;
+    container.appendChild(hdr);
+  }
+
+  if (rankFile.length) {
+    rankFile.forEach(function(unit) { container.appendChild(renderUnitRow(unit)); });
+  }
+
+  if (chars.length) {
+    addSectionHeader("Characters");
+    chars.forEach(function(unit) { container.appendChild(renderUnitRow(unit)); });
+  }
 }
 
 function addUnitToList(unit) {
   const armyDef = (typeof WFB3_ARMIES !== 'undefined')
     ? WFB3_ARMIES.find(function(a) { return a.id === unit.army; })
     : null;
+  const isChar = unit.type === 'character';
   cards.push({
     id:              Date.now(),
     sourceId:        unit.id,
@@ -1172,8 +1216,8 @@ function addUnitToList(unit) {
     label:           unit.name,
     ptsPerModel:     unit.ptsPerModel || null,
     ptsFixed:        unit.ptsFixed    || null,
-    models:          0,
-    totalPts:        0,
+    models:          isChar ? 1 : 0,
+    totalPts:        isChar ? (unit.ptsPerModel || 0) : 0,
     notes:           "",
     manualPts:       false,
     optionsSelected: {},

@@ -591,6 +591,80 @@ function renderAggregate(unit) {
   return html;
 }
 
+/* ── character ───────────────────────────────────────────────────────────── */
+/**
+ * Character cards (heroes, wizards, assassins, etc.).
+ * Shows the profile table, then an info panel with level/max/pts/weapons,
+ * then the equipment + magic items options block.
+ * Art placeholder is shown when unit.art is null (characters rarely have art yet).
+ */
+function renderCharacter(unit) {
+  let html = buildProfileTable(unit.profiles);
+  if (unit.profileNote) html += buildProfileNote(unit.profileNote);
+
+  // Art panel (placeholder when no art)
+  let artHtml;
+  if (unit.art) {
+    artHtml = buildArt(unit, 'al-art');
+  } else {
+    artHtml =
+      '<div class="al-art">' +
+      '<div class="al-art-ph">No<br>art<br>yet</div>' +
+      '</div>';
+  }
+
+  // Info column
+  let info = '<div class="al-info">';
+
+  if (unit.charType) {
+    const ct = unit.charType.charAt(0).toUpperCase() + unit.charType.slice(1);
+    info +=
+      `<div class="al-row">` +
+      `<span class="al-lbl">Type:</span>` +
+      `<span class="al-val">${esc(ct)}</span>` +
+      `</div>`;
+  }
+
+  if (unit.charMax != null) {
+    info +=
+      `<div class="al-row">` +
+      `<span class="al-lbl">Max allowed:</span>` +
+      `<span class="al-val-r">${esc(unit.charMax)}</span>` +
+      `</div>`;
+  }
+
+  if (unit.ptsPerModel != null && unit.ptsPerModel !== '') {
+    info +=
+      `<div class="al-row">` +
+      `<span class="al-lbl">Points:</span>` +
+      `<span class="al-val-r">${esc(unit.ptsPerModel)}</span>` +
+      `</div>`;
+  }
+
+  if (unit.weapons) {
+    info +=
+      `<div class="al-row">` +
+      `<span class="al-lbl">Weapons:</span>` +
+      `<span class="al-val">${esc(unit.weapons)}</span>` +
+      `</div>`;
+  }
+
+  if (unit.armour) {
+    info +=
+      `<div class="al-row">` +
+      `<span class="al-lbl">Armour:</span>` +
+      `<span class="al-val">${esc(unit.armour)}</span>` +
+      `</div>`;
+  }
+
+  info += buildOptions(unit.options);
+  info += '</div>'; // .al-info
+
+  html += `<div class="al-mid">${artHtml}${info}</div>`;
+  html += buildFlavour(unit.flavour);
+  return html;
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    MAIN EXPORT
 ═══════════════════════════════════════════════════════════════════════════ */
@@ -607,15 +681,29 @@ function renderAggregate(unit) {
 function renderAlCard(unit) {
   const id = unit.id ? `id="card-${esc(unit.id)}" ` : '';
 
-  // Header
-  const allowance = (unit.allowance != null && unit.allowance !== '') ? esc(unit.allowance) + ' ' : '';
+  // Header — characters get a "Level N Chartype · Name" header
+  let headerText;
+  if (unit.type === 'character') {
+    const lvlPart = unit.level ? 'Level\u00a0' + unit.level : '';
+    const ctPart  = unit.charType
+      ? (unit.charType.charAt(0).toUpperCase() + unit.charType.slice(1))
+      : '';
+    const prefix  = [lvlPart, ctPart].filter(Boolean).join('\u00a0');
+    headerText    = (prefix ? prefix + '\u00a0\u00b7\u00a0' : '') + esc(unit.name);
+  } else {
+    const allowance = (unit.allowance != null && unit.allowance !== '') ? esc(unit.allowance) + ' ' : '';
+    headerText = allowance + esc(unit.name);
+  }
   const header =
-    `<div class="al-header">${allowance}${esc(unit.name)}</div>` +
+    `<div class="al-header">${headerText}</div>` +
     `<div class="al-header-gap"></div>`;
 
   // Body — dispatched by card type
   let body;
   switch (unit.type) {
+    case 'character':
+      body = renderCharacter(unit);
+      break;
     case 'warmachine':
       body = renderWarMachine(unit);
       break;
