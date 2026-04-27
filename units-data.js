@@ -21093,6 +21093,28950 @@ const WFB3_UNITS = [
     "aggregateTable": null,
     "flavour": "A Troll Slayer lucky enough to survive the attentions of Trolls becomes greatly respected by his fellow Slayers. Such individuals are known as Giant Slayers because they often seek out Giants and do battle with them. They are immune to fear caused by living creatures, are subject to , and cannot be routed from hand-to-hand combat.frenzy"
   }
+,
+  {
+    "id": "de-char-hero-5-deathshades",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Deathshades",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 48,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-hero-10-witch-helms",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Witch-helms",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "2",
+          "7",
+          "3",
+          "9+1",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-hero-15-death-dealers",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Death Dealers",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "3",
+          "8",
+          "3",
+          "10+2",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-hero-20-deathcaps",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Deathcaps",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "5",
+          "7",
+          "5",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 168,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-hero-25-dark-lords",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Dark Lords",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "5",
+          "8",
+          "6",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 208,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-assassin-5-bloodshades",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "assassin",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Bloodshades",
+    "profiles": [
+      {
+        "label": "5 Assassin",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "3",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 48,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-assassin-10-goredirker",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "assassin",
+    "level": 10,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Goredirker",
+    "profiles": [
+      {
+        "label": "10 Assassin",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "2",
+          "7",
+          "3",
+          "9+1",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-assassin-15-bloodfetch",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "assassin",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Bloodfetch",
+    "profiles": [
+      {
+        "label": "15 Assassin",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "3",
+          "8",
+          "3",
+          "10+2",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-assassin-20-dagulus",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "assassin",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Dagulus",
+    "profiles": [
+      {
+        "label": "20 Assassin",
+        "stats": [
+          "5",
+          "7",
+          "5",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 168,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-assassin-25-doomblade",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "assassin",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Doomblade",
+    "profiles": [
+      {
+        "label": "25 Assassin",
+        "stats": [
+          "5",
+          "8",
+          "6",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 208,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-wizard-5-hellfays",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Hellfays",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "10+1",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 78,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-wizard-10-grimwitches",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Grimwitches",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "3",
+          "2",
+          "7",
+          "1",
+          "9+1",
+          "10+2",
+          "10+1",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-wizard-15-death-hoods",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Death-hoods",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "5",
+          "6",
+          "4",
+          "4",
+          "4",
+          "3",
+          "7",
+          "1",
+          "10+2",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 203,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-wizard-20-witherwitches",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Witherwitches",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "8",
+          "1",
+          "10+2",
+          "10+3",
+          "10+2",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 303,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "de-char-wizard-25-wizendamn",
+    "army": "dark-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Wizendamn",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "5",
+          "7",
+          "6",
+          "4",
+          "4",
+          "4",
+          "9",
+          "1",
+          "10+3",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 418,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Repeating crossbow",
+            "cost": "4"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Horse/warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Temple Dog",
+            "cost": "85"
+          },
+          {
+            "name": "Giant Spider",
+            "cost": "45"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-hero-5-glade-watchers",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 10,
+    "allowance": "1",
+    "name": "Glade Watchers",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 48,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-hero-10-guardians",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Guardians",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "2",
+          "7",
+          "3",
+          "9+1",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-hero-15-wood-lords",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Wood Lords",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "3",
+          "8",
+          "3",
+          "10+2",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-hero-20-sylvan-chieftains",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Sylvan Chieftains",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "5",
+          "7",
+          "5",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 168,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-hero-25-sylvan-kings",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Sylvan Kings",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "5",
+          "7",
+          "6",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 208,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-wizard-5-woodfeys",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Woodfeys",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "10+1",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 78,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-wizard-10-spellsingers",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Spellsingers",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "3",
+          "2",
+          "7",
+          "1",
+          "9+1",
+          "10+2",
+          "10+1",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-wizard-15-sylphseers",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Sylphseers",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "5",
+          "6",
+          "4",
+          "4",
+          "4",
+          "3",
+          "7",
+          "1",
+          "10+2",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 203,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-wizard-20-greenfeys",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Greenfeys",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "8",
+          "1",
+          "10+2",
+          "10+3",
+          "10+2",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 303,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "we-char-wizard-25-dryad",
+    "army": "wood-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Dryad",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "5",
+          "7",
+          "6",
+          "4",
+          "4",
+          "4",
+          "9",
+          "1",
+          "10+3",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 418,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapons",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 6",
+            "cost": "750"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Eagle",
+            "cost": "75"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-hero-5-kinthanes",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Kinthanes",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "5",
+          "5",
+          "5",
+          "4",
+          "3",
+          "1",
+          "7",
+          "2",
+          "8",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 48,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-hero-10-earls",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Earls",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "2",
+          "7",
+          "3",
+          "9+1",
+          "9",
+          "9",
+          "8"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-hero-15-kinlords",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Kinlords",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "3",
+          "8",
+          "3",
+          "10+2",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-hero-20-princes",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Princes",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "5",
+          "7",
+          "5",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "9",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 168,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-hero-25-suzerain",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Suzerain",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "5",
+          "7",
+          "6",
+          "4",
+          "4",
+          "4",
+          "9",
+          "4",
+          "10+3",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 208,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-wizard-5-incantors",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Incantors",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "3",
+          "1",
+          "6",
+          "1",
+          "8",
+          "10+1",
+          "10+1",
+          "9+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 78,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-wizard-10-spellbards",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Spellbards",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "3",
+          "2",
+          "7",
+          "1",
+          "9+1",
+          "10+2",
+          "10+1",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-wizard-15-feys",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Feys",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "5",
+          "6",
+          "4",
+          "4",
+          "4",
+          "3",
+          "7",
+          "1",
+          "10+2",
+          "10+2",
+          "10+2",
+          "10+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 203,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-wizard-20-dreamguilers",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Dreamguilers",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "8",
+          "1",
+          "10+2",
+          "10+3",
+          "10+2",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 303,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "he-char-wizard-25-elven-mage",
+    "army": "high-elves",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Elven Mage",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "5",
+          "7",
+          "6",
+          "4",
+          "4",
+          "4",
+          "9",
+          "1",
+          "10+3",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 418,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 5",
+            "cost": "650"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Extra for winged dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Mithril light armour",
+            "cost": "52"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-hero-5-grafs",
+    "army": "empire",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Grafs",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 30,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-hero-10-baronen",
+    "army": "empire",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Baronen",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "4",
+          "3",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 55,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-hero-15-margrafs",
+    "army": "empire",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Margrafs",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "5",
+          "3",
+          "9+2",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-hero-20-counts",
+    "army": "empire",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Counts",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 105,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-hero-25-hochmarschall",
+    "army": "empire",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Hochmarschall",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "4",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 130,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-wizard-5-zauberer",
+    "army": "empire",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Zauberer",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 60,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-wizard-10-schwarzmantels",
+    "army": "empire",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Schwarzmantels",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "2",
+          "4",
+          "1",
+          "8+1",
+          "9+2",
+          "8+1",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 85,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-wizard-15-hohenhexe",
+    "army": "empire",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Hohenhexe",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "4",
+          "4",
+          "3",
+          "4",
+          "1",
+          "9+2",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-wizard-20-zaubermiester",
+    "army": "empire",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Zaubermiester",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "5",
+          "1",
+          "1",
+          "9+2",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 240,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "em-char-wizard-25-kultmiester",
+    "army": "empire",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Kultmiester",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "4",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "6",
+          "1",
+          "10+3",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 340,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Horse or Warhorse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Pegasus",
+            "cost": "14"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Long bow",
+            "cost": "3"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-hero-5-barons",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Barons",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "4",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 30,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-hero-10-marquises",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Marquises",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "4",
+          "3",
+          "8+1",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 55,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-hero-15-viscomtes",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Viscomtes",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "5",
+          "3",
+          "9+2",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-hero-20-comtes",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Comtes",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "4",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "7",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 105,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-hero-25-duc",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Duc",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "4",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 130,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-wizard-5-amorciers",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Amorciers",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 60,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-wizard-10-charmiers",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Charmiers",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "2",
+          "4",
+          "1",
+          "8+1",
+          "9+2",
+          "8+1",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 85,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-wizard-15-enchantiers",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Enchantiers",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "3",
+          "4",
+          "4",
+          "3",
+          "4",
+          "1",
+          "9+2",
+          "9+2",
+          "9+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-wizard-20-grand-sorcier",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Grand Sorcier",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "5",
+          "1",
+          "1",
+          "9+2",
+          "10+3",
+          "9+2",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 240,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "br-char-wizard-25-maitre-myst-rieux",
+    "army": "bretonnia",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Maitre Mystérieux",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "4",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "6",
+          "1",
+          "10+3",
+          "10+3",
+          "10+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 340,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Unicorn (female riders only)",
+            "cost": "80"
+          },
+          {
+            "name": "Dragon 1",
+            "cost": "250"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 2",
+            "cost": "350"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Dragon 3",
+            "cost": "450"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Dragon 4",
+            "cost": "550"
+          },
+          {
+            "name": "Winged Dragon",
+            "cost": "+50"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse or warhorse barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-5-beastmen-heroes-banebeasts",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Banebeasts",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 60,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-10-beastmen-heroes-despoilers",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Despoilers",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 110,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-15-beastmen-heroes-feralfiends",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Feralfiends",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 160,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-20-beastmen-heroes-havocrender",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Havocrender",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 210,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-25-beastmen-heroes-spasmghast",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Spasmghast",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 260,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-5-minotaur-heroes-bloodkine",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Bloodkine",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 90,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-10-minotaur-heroes-goremaster",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Goremaster",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 140,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-15-minotaur-heroes-deathsteer",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Deathsteer",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 190,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-20-minotaur-heroes-doombull",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Doombull",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 240,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-hero-25-minotaur-heroes-minotaur-lord",
+    "army": "chaos",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Minotaur Lord",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 290,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-5-chaos-sorcerers-initiates",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Initiates",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 60,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-10-chaos-sorcerers-maledictors",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Maledictors",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 85,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-15-chaos-sorcerers-doomweavers",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Doomweavers",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-20-chaos-sorcerers-soulflayers",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Soulflayers",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 240,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-25-chaos-sorcerers-apocalypt",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Apocalypt",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 340,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-5-beastman-shamans-initiates",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Initiates",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 110,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-10-beastman-shamans-marauders",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Marauders",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 160,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-15-beastman-shamans-feralfluxer",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Feralfluxer",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 225,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-20-beastman-shamans-malevolus",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Malevolus",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 345,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "ch-char-wizard-25-beastman-shamans-arcanarch",
+    "army": "chaos",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Arcanarch",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 470,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Horse",
+            "cost": "3"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warhorse",
+            "cost": "6"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Chaos Steed",
+            "cost": "32"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Chaos Centaur",
+            "cost": "32"
+          },
+          {
+            "name": "Net",
+            "cost": "2"
+          },
+          {
+            "name": "Chimera",
+            "cost": "250"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Griffon",
+            "cost": "200"
+          },
+          {
+            "name": "Hippogriff",
+            "cost": "200"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Manticore",
+            "cost": "200"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Wyvern",
+            "cost": "180"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Horse, warhorse or Chaos Steed barding",
+            "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-hero-5-warlord-clan-heroes-clan-chieftains",
+    "army": "skaven",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 10,
+    "allowance": "1",
+    "name": "Clan Chieftains",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "5",
+          "2",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 28,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-hero-10-warlord-clan-heroes-clan-warlords",
+    "army": "skaven",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Clan Warlords",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "5",
+          "3",
+          "7+1",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 50,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-hero-15-warlord-clan-heroes-verminlords",
+    "army": "skaven",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Verminlords",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "6",
+          "3",
+          "8+2",
+          "6",
+          "6+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 72,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-hero-20-warlord-clan-heroes-sewertyrant",
+    "army": "skaven",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Sewertyrant",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "5",
+          "6",
+          "4",
+          "4",
+          "4",
+          "4",
+          "7",
+          "4",
+          "9+3",
+          "6",
+          "6+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 95,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-hero-25-warlord-clan-heroes-lord-of-decay",
+    "army": "skaven",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Lord of Decay",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "7",
+          "4",
+          "9+3",
+          "8+2",
+          "7+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 117,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-assassin-5-clan-eshin-assassins-stranglers",
+    "army": "skaven",
+    "type": "character",
+    "charType": "assassin",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Stranglers",
+    "profiles": [
+      {
+        "label": "5 Assassin",
+        "stats": [
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "1",
+          "5",
+          "2",
+          "6",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 31,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-assassin-10-clan-eshin-assassins-cullers",
+    "army": "skaven",
+    "type": "character",
+    "charType": "assassin",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Cullers",
+    "profiles": [
+      {
+        "label": "10 Assassin",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "5",
+          "3",
+          "7+1",
+          "6",
+          "5",
+          "7"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 53,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-assassin-15-clan-eshin-assassins-garrotters",
+    "army": "skaven",
+    "type": "character",
+    "charType": "assassin",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Garrotters",
+    "profiles": [
+      {
+        "label": "15 Assassin",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "3",
+          "6",
+          "3",
+          "8+2",
+          "6",
+          "6+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 75,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-wizard-5-clan-scryre-seers",
+    "army": "skaven",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Clan Scryre Seers",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "5",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "4",
+          "1",
+          "6",
+          "7+1",
+          "6+1",
+          "8+1"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 58,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-wizard-10-clan-scryre-warpweavers",
+    "army": "skaven",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Clan Scryre Warpweavers",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "5",
+          "4",
+          "3",
+          "4",
+          "3",
+          "2",
+          "5",
+          "1",
+          "7+1",
+          "8+2",
+          "6+1",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-wizard-15-clan-scryre-warpsquealers",
+    "army": "skaven",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Clan Scryre Warpsquealers",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "3",
+          "4",
+          "4",
+          "3",
+          "5",
+          "1",
+          "8+2",
+          "8+2",
+          "7+2",
+          "9+2"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 147,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-wizard-20-white-skaven-sorcerer",
+    "army": "skaven",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "White Skaven Sorcerer",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "4",
+          "6",
+          "1",
+          "8+2",
+          "9+3",
+          "7+2",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 230,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sk-char-wizard-25-grey-seer",
+    "army": "skaven",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Grey Seer",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "5",
+          "6",
+          "5",
+          "4",
+          "4",
+          "4",
+          "7",
+          "1",
+          "9+3",
+          "9+3",
+          "8+3",
+          "10+3"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 327,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Warplock pistol (Clan Skryre)",
+            "cost": "2"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Warplock arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Throwing axes",
+            "cost": "1"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing star",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-5-slann-call-leaders",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Call Leaders",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 42,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-10-slann-strong-spawn",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Strong Spawn",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 77,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-15-slann-spawn-masters",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Spawn Masters",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 112,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-20-slann-pond-masters",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Pond Masters",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 147,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-25-slann-lotus-lord",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Lotus Lord",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 182,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-5-lizardmen-bonecracker",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Bonecracker",
+    "profiles": [
+      {
+        "label": "5 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 70,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-10-lizardmen-skullbreaker",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Skullbreaker",
+    "profiles": [
+      {
+        "label": "10 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 120,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-15-lizardmen-thighsnapper",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Thighsnapper",
+    "profiles": [
+      {
+        "label": "15 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 170,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-20-lizardmen-headsplitter",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Headsplitter",
+    "profiles": [
+      {
+        "label": "20 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 220,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-hero-25-lizardmen-warbiter",
+    "army": "slann",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Warbiter",
+    "profiles": [
+      {
+        "label": "25 Hero",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 270,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-wizard-5-blessers-of-water",
+    "army": "slann",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Blessers of Water",
+    "profiles": [
+      {
+        "label": "5 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 72,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-wizard-10-masters-of-deluge",
+    "army": "slann",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Masters of Deluge",
+    "profiles": [
+      {
+        "label": "10 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 107,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-wizard-15-watchers-of-rain",
+    "army": "slann",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Watchers of Rain",
+    "profiles": [
+      {
+        "label": "15 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 187,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-wizard-20-seekers-of-stars",
+    "army": "slann",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Seekers of Stars",
+    "profiles": [
+      {
+        "label": "20 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 282,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "sl-char-wizard-25-auspice-of-heaven",
+    "army": "slann",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Auspice of Heaven",
+    "profiles": [
+      {
+        "label": "25 Wizard",
+        "stats": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "raceGroup": null
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 392,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Cold One",
+            "cost": "22"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Litter with 4 bearers (Wizards only)",
+            "cost": "12"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Blowpipe",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Darts",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Orc Level 5 Hero",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 33,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-half-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Half-Orc Level 5 Hero",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 30,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-goblin-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Goblin Level 5 Hero",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 15,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-black-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Black Orc Level 5 Hero",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 42,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-savage-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Savage Orc Level 5 Hero",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 33,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Orc Level 10 Hero",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 61,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-half-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Half-Orc Level 10 Hero",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 55,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-goblin-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Goblin Level 10 Hero",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 28,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-black-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Black Orc Level 10 Hero",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 77,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-savage-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 5,
+    "allowance": "1",
+    "name": "Savage Orc Level 10 Hero",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 61,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Orc Level 15 Hero",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-half-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Half-Orc Level 15 Hero",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-goblin-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Goblin Level 15 Hero",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 40,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-black-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Black Orc Level 15 Hero",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 112,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-savage-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Savage Orc Level 15 Hero",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Orc Level 20 Hero",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 116,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-half-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Half-Orc Level 20 Hero",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 105,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-goblin-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Goblin Level 20 Hero",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 53,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-black-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Black Orc Level 20 Hero",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 147,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-savage-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Savage Orc Level 20 Hero",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 116,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Orc Level 25 Hero",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 143,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-half-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Half-Orc Level 25 Hero",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 150,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-goblin-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Goblin Level 25 Hero",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 65,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-black-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Black Orc Level 25 Hero",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 217,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-hero-savage-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Savage Orc Level 25 Hero",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 143,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Orc Level 5 Wizard",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 63,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-half-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Half-Orc Level 5 Wizard",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 60,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-goblin-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Goblin Level 5 Wizard",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 45,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-black-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Black Orc Level 5 Wizard",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 72,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-savage-orc-5",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Savage Orc Level 5 Wizard",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 63,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Orc Level 10 Wizard",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 91,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-half-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Half-Orc Level 10 Wizard",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 85,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-goblin-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Goblin Level 10 Wizard",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 58,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-black-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Black Orc Level 10 Wizard",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 107,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-savage-orc-10",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Savage Orc Level 10 Wizard",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 91,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Orc Level 15 Wizard",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 163,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-half-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Half-Orc Level 15 Wizard",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-goblin-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Goblin Level 15 Wizard",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 115,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-black-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Black Orc Level 15 Wizard",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 187,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-savage-orc-15",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Savage Orc Level 15 Wizard",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 163,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Orc Level 20 Wizard",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 251,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-half-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Half-Orc Level 20 Wizard",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 240,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-goblin-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Goblin Level 20 Wizard",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 188,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-black-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Black Orc Level 20 Wizard",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 282,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-savage-orc-20",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Savage Orc Level 20 Wizard",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 251,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Orc Level 25 Wizard",
+    "profiles": [
+      {
+        "label": "Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 353,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-half-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Half-Orc Level 25 Wizard",
+    "profiles": [
+      {
+        "label": "Half-Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "6",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Half-Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 340,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-goblin-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Goblin Level 25 Wizard",
+    "profiles": [
+      {
+        "label": "Goblin (base)",
+        "stats": [
+          "4",
+          "2",
+          "3",
+          "3",
+          "3",
+          "1",
+          "2",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "raceGroup": "Goblin"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 275,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-black-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Black Orc Level 25 Wizard",
+    "profiles": [
+      {
+        "label": "Black Orc (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "4",
+          "1",
+          "2",
+          "1",
+          "8",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Black Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 427,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "og-char-wizard-savage-orc-25",
+    "army": "orcs-goblins",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Savage Orc Level 25 Wizard",
+    "profiles": [
+      {
+        "label": "Savage Orc (base)",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "7",
+          "5",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Savage Orc"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 353,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Boar (Goblins only)",
+            "cost": "6"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Giant wolf mount",
+            "cost": "8"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "War Boar mount (not Goblins)",
+            "cost": "16"
+          },
+          {
+            "name": "Net",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Giant Spider (Goblins only)",
+            "cost": "45"
+          },
+          {
+            "name": "Wyvern (not Goblins)",
+            "cost": "180"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow (not Goblins)",
+            "cost": "3"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Javelin",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Throwing axes or spears",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing knives or darts",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-hero-5-foe-smiters",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Foe Smiters",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 48,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-hero-10-anvil-cleavers",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Anvil Cleavers",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-hero-15-war-forgers",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "War Forgers",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-hero-20-battle-wrights",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 3,
+    "allowance": "1",
+    "name": "Battle Wrights",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 168,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-hero-25-hold-masters",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Hold Masters",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 208,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-slayer-5-troll-slayer-doomseekers",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "slayer",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Troll-slayer Doomseekers",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 48,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-slayer-10-troll-slayer-fate-quester",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "slayer",
+    "level": 10,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Troll-slayer Fate Quester",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 88,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-slayer-15-troll-slayer-grave-hunter",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "slayer",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Troll-slayer Grave Hunter",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 128,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-slayer-20-giant-slayer-morgue-filler",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "slayer",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Giant-slayer Morgue Filler",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 168,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-slayer-25-giant-slayer-death-weird",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "slayer",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Giant-slayer Death Weird",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 208,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-gnome-5-gnome-dwarrors",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "gnome",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Gnome Dwarrors",
+    "profiles": [
+      {
+        "label": "Gnome (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "7",
+          "8"
+        ],
+        "raceGroup": "Gnome"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 30,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-gnome-10-gnome-delver",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "gnome",
+    "level": 10,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Gnome Delver",
+    "profiles": [
+      {
+        "label": "Gnome (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "7",
+          "8"
+        ],
+        "raceGroup": "Gnome"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 55,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-gnome-15-gnome-rodwielder",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "gnome",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Gnome Rodwielder",
+    "profiles": [
+      {
+        "label": "Gnome (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "7",
+          "8"
+        ],
+        "raceGroup": "Gnome"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 80,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-gnome-20-gnome-heathmaster",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "gnome",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Gnome Heathmaster",
+    "profiles": [
+      {
+        "label": "Gnome (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "7",
+          "8"
+        ],
+        "raceGroup": "Gnome"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 105,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-gnome-25-gnome-burrowmaster",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "gnome",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Gnome Burrowmaster",
+    "profiles": [
+      {
+        "label": "Gnome (base)",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "3",
+          "2",
+          "1",
+          "3",
+          "1",
+          "8",
+          "7",
+          "7",
+          "8"
+        ],
+        "raceGroup": "Gnome"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 130,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-wizard-5-spell-smiths",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Spell Smiths",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 78,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-wizard-10-forgers-of-enchantry",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Forgers of Enchantry",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 118,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-wizard-15-lore-delver",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Lore Delver",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 203,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-wizard-20-thunder-master",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Thunder Master",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 303,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "dw-char-wizard-25-forge-mage",
+    "army": "dwarfs",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Forge Mage",
+    "profiles": [
+      {
+        "label": "Dwarf (base)",
+        "stats": [
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "1",
+          "2",
+          "1",
+          "9",
+          "7",
+          "9",
+          "9"
+        ],
+        "raceGroup": "Dwarf"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 418,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Mithril heavy armour",
+            "cost": "28"
+          },
+          {
+            "name": "Pike",
+            "cost": "1"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Arquebus",
+            "cost": "3"
+          },
+          {
+            "name": "Blunderbuss",
+            "cost": "2"
+          },
+          {
+            "name": "Bow",
+            "cost": "2"
+          },
+          {
+            "name": "Crossbow",
+            "cost": "3"
+          },
+          {
+            "name": "Grenades",
+            "cost": "2"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          },
+          {
+            "name": "Short bow",
+            "cost": "1"
+          },
+          {
+            "name": "Sling",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing axe",
+            "cost": "1"
+          },
+          {
+            "name": "Throwing spear",
+            "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-hero-5-charnel-warriors",
+    "army": "undead",
+    "type": "character",
+    "charType": "hero",
+    "level": 5,
+    "charMax": 8,
+    "allowance": "1",
+    "name": "Charnel Warriors",
+    "profiles": [
+      {
+        "label": "Undead Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Undead Hero"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 30,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-hero-10-grave-fiends",
+    "army": "undead",
+    "type": "character",
+    "charType": "hero",
+    "level": 10,
+    "charMax": 6,
+    "allowance": "1",
+    "name": "Grave Fiends",
+    "profiles": [
+      {
+        "label": "Undead Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Undead Hero"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 55,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-hero-15-tombterrors",
+    "army": "undead",
+    "type": "character",
+    "charType": "hero",
+    "level": 15,
+    "charMax": 4,
+    "allowance": "1",
+    "name": "Tombterrors",
+    "profiles": [
+      {
+        "label": "Undead Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Undead Hero"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 85,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-hero-20-corpse-knights",
+    "army": "undead",
+    "type": "character",
+    "charType": "hero",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Corpse Knights",
+    "profiles": [
+      {
+        "label": "Undead Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Undead Hero"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 105,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-hero-25-undead-lord",
+    "army": "undead",
+    "type": "character",
+    "charType": "hero",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Undead Lord",
+    "profiles": [
+      {
+        "label": "Undead Hero",
+        "stats": [
+          "4",
+          "3",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "2",
+          "7",
+          "7",
+          "7",
+          "7"
+        ],
+        "raceGroup": "Undead Hero"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 130,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-necromancer-5-necrus-adeptus",
+    "army": "undead",
+    "type": "character",
+    "charType": "wizard",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Necrus Adeptus",
+    "profiles": [
+      {
+        "label": "Evil Sorcerer",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": "Evil Sorcerer"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 60,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-liche-5-barrow-seer",
+    "army": "undead",
+    "type": "character",
+    "charType": "liche",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Barrow Seer",
+    "profiles": [
+      {
+        "label": "Liche",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "4",
+          "3",
+          "1",
+          "2",
+          "1",
+          "7+3",
+          "8+1",
+          "8+3",
+          "8+1"
+        ],
+        "raceGroup": "Liche"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 90,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-vampire-5-vrolka",
+    "army": "undead",
+    "type": "character",
+    "charType": "vampire",
+    "level": 5,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Vrolka",
+    "profiles": [
+      {
+        "label": "Vampire",
+        "stats": [
+          "4",
+          "6",
+          "6",
+          "6",
+          "6",
+          "4",
+          "6",
+          "4",
+          "7",
+          "8",
+          "8",
+          "8"
+        ],
+        "raceGroup": "Vampire"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 330,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-necromancer-10-morbidus",
+    "army": "undead",
+    "type": "character",
+    "charType": "wizard",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Morbidus",
+    "profiles": [
+      {
+        "label": "Evil Sorcerer",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": "Evil Sorcerer"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 85,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-liche-10-doombinder",
+    "army": "undead",
+    "type": "character",
+    "charType": "liche",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Doombinder",
+    "profiles": [
+      {
+        "label": "Liche",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "4",
+          "3",
+          "1",
+          "2",
+          "1",
+          "7+3",
+          "8+1",
+          "8+3",
+          "8+1"
+        ],
+        "raceGroup": "Liche"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 140,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-vampire-10-wurdalak",
+    "army": "undead",
+    "type": "character",
+    "charType": "vampire",
+    "level": 10,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Wurdalak",
+    "profiles": [
+      {
+        "label": "Vampire",
+        "stats": [
+          "4",
+          "6",
+          "6",
+          "6",
+          "6",
+          "4",
+          "6",
+          "4",
+          "7",
+          "8",
+          "8",
+          "8"
+        ],
+        "raceGroup": "Vampire"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 380,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-necromancer-15-necrosus",
+    "army": "undead",
+    "type": "character",
+    "charType": "wizard",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Necrosus",
+    "profiles": [
+      {
+        "label": "Evil Sorcerer",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": "Evil Sorcerer"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 155,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-liche-15-deathmage",
+    "army": "undead",
+    "type": "character",
+    "charType": "liche",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Deathmage",
+    "profiles": [
+      {
+        "label": "Liche",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "4",
+          "3",
+          "1",
+          "2",
+          "1",
+          "7+3",
+          "8+1",
+          "8+3",
+          "8+1"
+        ],
+        "raceGroup": "Liche"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 235,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-vampire-15-lugosi",
+    "army": "undead",
+    "type": "character",
+    "charType": "vampire",
+    "level": 15,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Lugosi",
+    "profiles": [
+      {
+        "label": "Vampire",
+        "stats": [
+          "4",
+          "6",
+          "6",
+          "6",
+          "6",
+          "4",
+          "6",
+          "4",
+          "7",
+          "8",
+          "8",
+          "8"
+        ],
+        "raceGroup": "Vampire"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 475,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-necromancer-20-magister-mortis",
+    "army": "undead",
+    "type": "character",
+    "charType": "wizard",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Magister Mortis",
+    "profiles": [
+      {
+        "label": "Evil Sorcerer",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": "Evil Sorcerer"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 240,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-liche-20-dust-lord",
+    "army": "undead",
+    "type": "character",
+    "charType": "liche",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Dust Lord",
+    "profiles": [
+      {
+        "label": "Liche",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "4",
+          "3",
+          "1",
+          "2",
+          "1",
+          "7+3",
+          "8+1",
+          "8+3",
+          "8+1"
+        ],
+        "raceGroup": "Liche"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 345,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-vampire-20-nosferatu",
+    "army": "undead",
+    "type": "character",
+    "charType": "vampire",
+    "level": 20,
+    "charMax": 2,
+    "allowance": "1",
+    "name": "Nosferatu",
+    "profiles": [
+      {
+        "label": "Vampire",
+        "stats": [
+          "4",
+          "6",
+          "6",
+          "6",
+          "6",
+          "4",
+          "6",
+          "4",
+          "7",
+          "8",
+          "8",
+          "8"
+        ],
+        "raceGroup": "Vampire"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 585,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-necromancer-25-necrarch",
+    "army": "undead",
+    "type": "character",
+    "charType": "wizard",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Necrarch",
+    "profiles": [
+      {
+        "label": "Evil Sorcerer",
+        "stats": [
+          "4",
+          "4",
+          "3",
+          "4",
+          "3",
+          "1",
+          "3",
+          "1",
+          "7",
+          "8+1",
+          "8+1",
+          "8+1"
+        ],
+        "raceGroup": "Evil Sorcerer"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 340,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-liche-25-lichemaster",
+    "army": "undead",
+    "type": "character",
+    "charType": "liche",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Lichemaster",
+    "profiles": [
+      {
+        "label": "Liche",
+        "stats": [
+          "4",
+          "3",
+          "2",
+          "4",
+          "3",
+          "1",
+          "2",
+          "1",
+          "7+3",
+          "8+1",
+          "8+3",
+          "8+1"
+        ],
+        "raceGroup": "Liche"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 460,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  },
+  {
+    "id": "un-char-vampire-25-dracula",
+    "army": "undead",
+    "type": "character",
+    "charType": "vampire",
+    "level": 25,
+    "charMax": 1,
+    "allowance": "1",
+    "name": "Dracula",
+    "profiles": [
+      {
+        "label": "Vampire",
+        "stats": [
+          "4",
+          "6",
+          "6",
+          "6",
+          "6",
+          "4",
+          "6",
+          "4",
+          "7",
+          "8",
+          "8",
+          "8"
+        ],
+        "raceGroup": "Vampire"
+      }
+    ],
+    "profileNote": null,
+    "profileD6": false,
+    "art": null,
+    "ptsPerModel": 690,
+    "ptsFixed": null,
+    "models": "1",
+    "weapons": "Hand Weapon",
+    "armour": null,
+    "options": [
+      {
+        "subheading": "Equipment",
+        "items": [
+          {
+            "name": "Additional hand weapon",
+            "cost": "1"
+          },
+          {
+            "name": "Undead horse",
+            "cost": "10"
+          },
+          {
+            "name": "Double-handed weapon",
+            "cost": "2"
+          },
+          {
+            "name": "Halberd",
+            "cost": "2"
+          },
+          {
+            "name": "Shield",
+            "cost": "1"
+          },
+          {
+            "name": "Flail",
+            "cost": "1"
+          },
+          {
+            "name": "Light armour",
+            "cost": "2"
+          },
+          {
+            "name": "Lance",
+            "cost": "2"
+          },
+          {
+            "name": "Heavy armour",
+            "cost": "3"
+          },
+          {
+            "name": "Spear",
+            "cost": "1"
+          },
+          {
+            "name": "Horse barding",
+            "cost": "4"
+          },
+          {
+            "name": "Pistol",
+            "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Magic Items",
+        "items": [
+          {
+            "name": "A Magic Weapon",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Standard (army)",
+            "cost": "50"
+          },
+          {
+            "name": "A Magic Armour",
+            "cost": "0"
+          },
+          {
+            "name": "A Magic Scroll",
+            "cost": "25"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
+          }
+        ]
+      }
+    ],
+    "machineStats": null,
+    "chariot": null,
+    "packs": null,
+    "aggregateTable": null,
+    "flavour": null
+  }
 ];
 
 // Ensure globals are reachable from all scripts regardless of scope rules
