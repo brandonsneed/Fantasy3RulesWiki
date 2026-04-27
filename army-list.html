@@ -78,7 +78,7 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .alb-remove { background: none; border: 1px solid #4a1515; color: #884444; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; padding: 2px 7px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; }
 .alb-remove:hover { background: #8b2020; border-color: #8b2020; color: #fff; }
 
-/* OPTIONS CHIPS ROW */
+/* OPTIONS CHIPS ROW (non-character units — flat layout) */
 .alb-opts-row { width: 100%; display: flex; flex-wrap: wrap; gap: 4px; padding: 5px 0 1px; border-top: 1px solid #242424; }
 .alb-opt-chip { display: inline-flex; align-items: center; gap: 3px; font-size: 9px; color: #888; cursor: pointer; padding: 2px 6px 2px 4px; border: 1px solid #2a2a2a; border-radius: 2px; background: #111; user-select: none; line-height: 1.5; }
 .alb-opt-chip:hover { border-color: #555; color: #ccc; }
@@ -93,6 +93,37 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .alb-magic-wrapper { width: 100%; display: flex; flex-direction: column; }
 .alb-magic-sub { display: flex; flex-wrap: wrap; gap: 3px; padding: 4px 0 2px 14px; border-left: 2px solid #2a3a4a; margin: 2px 0 3px; }
 .alb-magic-sub-label { width: 100%; font-size: 7px; color: #4a6a8a; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 2px; font-weight: 700; }
+
+/* CHARACTER OPTION SECTIONS (accordion in controls bar) */
+.alb-char-opts { width: 100%; display: flex; flex-direction: column; }
+.alb-opt-section { width: 100%; border-top: 1px solid #1e1e1e; }
+.alb-opt-sec-hdr {
+  display: flex; align-items: center; gap: 5px;
+  padding: 4px 8px 3px;
+  cursor: pointer; user-select: none;
+  color: #666;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 8px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  transition: background 0.1s;
+}
+.alb-opt-sec-hdr:hover { color: #aaa; background: #181818; }
+.alb-opt-sec-arrow { font-size: 9px; line-height: 1; flex-shrink: 0; opacity: 0.7; }
+.alb-opt-sec-body { padding: 3px 6px 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+.alb-opt-sec-body.hidden { display: none; }
+/* Sub-group dividers within a section */
+.alb-opt-subgrp {
+  width: 100%; display: flex; align-items: center; gap: 5px;
+  margin: 3px 0 1px;
+}
+.alb-opt-subgrp:first-child { margin-top: 1px; }
+.alb-opt-subgrp-lbl {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 6.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: #3d3d3d; white-space: nowrap;
+}
+.alb-opt-subgrp-line { flex: 1; height: 1px; background: #252525; }
 
 /* EMPTY STATE */
 .empty-state { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 80px 24px; text-align: center; }
@@ -906,6 +937,135 @@ function buildMagicItemControl(opt, catKey, item, ptsTotalEl, isChar) {
 }
 
 /* ═══════════════════════════════════════
+   CHARACTER OPTION HELPERS
+═══════════════════════════════════════ */
+
+/**
+ * Classify a single equipment item into weapons / armour / mounts bucket.
+ * Uses name keywords first, then falls back to cost threshold (>=20 = mount).
+ */
+function classifyEquipItem(name, cost) {
+  const n = name.toLowerCase();
+  const c = parseFloat(String(cost).replace(/[+\-]/g, '').replace(/[^\d.]/g, '')) || 0;
+  // Mounts & Beasts: creature/vehicle keywords OR expensive (>= 20 pts)
+  if (c >= 20 ||
+      /\b(horse|warhorse|cold one|dragon|griffon|hippogriff|wyvern|pegasus|manticore|chimera|war boar|litter|giant spider|temple dog|disc of|juggernaut|rhinox|terradon|elk|hawk|war eagle|steed|toad dragon|cold blood|boar mount|bear|pterosaur|triceratops|stegadon)\b/.test(n)) {
+    return 'mounts';
+  }
+  // Armour & Protection
+  if (/\b(armou?r|shield|helm|barding|cloak|woad|tattoos?|war.?paint)\b/.test(n)) {
+    return 'armour';
+  }
+  // Default: weapons (melee + ranged)
+  return 'weapons';
+}
+
+/**
+ * Build a single option checkbox chip (used by both flat and sectioned layouts).
+ */
+function buildOptChip(opt, item, ptsTotalEl, isChar, unitData) {
+  const chip = document.createElement("label");
+  const isSelected = !!item.optionsSelected[opt.name];
+  chip.className = "alb-opt-chip" + (isSelected ? " checked" : "");
+  const cb = document.createElement("input");
+  cb.type = "checkbox";
+  cb.checked = isSelected;
+  cb.onchange = function() {
+    item.optionsSelected[opt.name] = cb.checked;
+    chip.classList.toggle("checked", cb.checked);
+    recalcPts(item, ptsTotalEl);
+    if (isChar) refreshCharCard(item);
+    saveCards(); updateTotals();
+  };
+  const perModel = isPerModelCost(opt.cost, unitData);
+  const costLabel = perModel && !/ea/i.test(opt.cost) ? opt.cost + ' ea.' : opt.cost;
+  chip.appendChild(cb);
+  chip.appendChild(document.createTextNode('\u00a0' + opt.name));
+  const costSpan = document.createElement("span");
+  costSpan.className = "alb-opt-cost";
+  costSpan.textContent = '\u00a0' + costLabel;
+  chip.appendChild(costSpan);
+  return chip;
+}
+
+/**
+ * Build the grouped accordion options panel for character units.
+ * Equipment items are auto-classified into Weapons / Armour / Mounts & Beasts.
+ * Magic Items keep their existing expandable ability sub-pickers.
+ */
+function buildCharOptSections(unitData, item, ptsTotalEl) {
+  const wrap = document.createElement('div');
+  wrap.className = 'alb-char-opts';
+
+  (unitData.options || []).forEach(function(group) {
+    const section = document.createElement('div');
+    section.className = 'alb-opt-section';
+
+    // Section header (clickable toggle)
+    const hdr = document.createElement('div');
+    hdr.className = 'alb-opt-sec-hdr';
+    const arrow = document.createElement('span');
+    arrow.className = 'alb-opt-sec-arrow';
+    arrow.textContent = '▼';
+    const titleSpan = document.createElement('span');
+    titleSpan.textContent = group.subheading || 'Options';
+    hdr.appendChild(arrow);
+    hdr.appendChild(titleSpan);
+
+    const body = document.createElement('div');
+    body.className = 'alb-opt-sec-body';
+
+    hdr.onclick = function() {
+      const nowHidden = body.classList.toggle('hidden');
+      arrow.textContent = nowHidden ? '▶' : '▼';
+    };
+
+    section.appendChild(hdr);
+
+    if (group.subheading === 'Equipment') {
+      // Auto-classify items into three buckets
+      var buckets    = { weapons: [], armour: [], mounts: [] };
+      var bucketLbls = { weapons: 'Weapons', armour: 'Armour', mounts: 'Mounts & Beasts' };
+      (group.items || []).forEach(function(opt) {
+        buckets[classifyEquipItem(opt.name, opt.cost)].push(opt);
+      });
+      ['weapons', 'armour', 'mounts'].forEach(function(cat) {
+        if (!buckets[cat].length) return;
+        // Sub-group divider
+        var sg = document.createElement('div');
+        sg.className = 'alb-opt-subgrp';
+        var sgLbl = document.createElement('span');
+        sgLbl.className = 'alb-opt-subgrp-lbl';
+        sgLbl.textContent = bucketLbls[cat];
+        var sgLine = document.createElement('span');
+        sgLine.className = 'alb-opt-subgrp-line';
+        sg.appendChild(sgLbl); sg.appendChild(sgLine);
+        body.appendChild(sg);
+        buckets[cat].forEach(function(opt) {
+          body.appendChild(buildOptChip(opt, item, ptsTotalEl, true, unitData));
+        });
+      });
+    } else {
+      // Magic Items (and any future sections): magic items get ability sub-pickers
+      (group.items || []).forEach(function(opt) {
+        var catKey = getMagicItemCategory(opt.name);
+        if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' &&
+            WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
+          body.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl, true));
+        } else {
+          body.appendChild(buildOptChip(opt, item, ptsTotalEl, true, unitData));
+        }
+      });
+    }
+
+    section.appendChild(body);
+    wrap.appendChild(section);
+  });
+
+  return wrap;
+}
+
+/* ═══════════════════════════════════════
    CHARACTER CARD REFRESH
    Re-renders the .al-card element inside a character's .card-wrapper
    after an option checkbox changes, so the card always reflects current
@@ -1027,48 +1187,33 @@ function buildControls(item) {
   rb.onclick = function() { removeCard(item.id); };
   ctrl.appendChild(rb);
 
-  // Options row — equipment/upgrade checkboxes
+  // Options — characters get grouped accordion sections; other units get a flat chip row
   const unitForOpts = unitData; // already looked up at top of buildControls
   if (unitForOpts && unitForOpts.options && unitForOpts.options.length) {
-    const allOpts = [];
-    unitForOpts.options.forEach(function(g) {
-      g.items.forEach(function(o) { allOpts.push(o); });
-    });
-    if (allOpts.length) {
-      if (!item.optionsSelected) item.optionsSelected = {};
-      const optsRow = document.createElement("div");
-      optsRow.className = "alb-opts-row";
-      allOpts.forEach(function(opt) {
-        var catKey = getMagicItemCategory(opt.name);
-        if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' && WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
-          // Magic item: render chip + expandable ability sub-picker
-          optsRow.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl, isChar));
-        } else {
-          // Normal option chip
-          const chip = document.createElement("label");
-          chip.className = "alb-opt-chip" + (item.optionsSelected[opt.name] ? " checked" : "");
-          const cb = document.createElement("input");
-          cb.type = "checkbox";
-          cb.checked = !!item.optionsSelected[opt.name];
-          cb.onchange = function() {
-            item.optionsSelected[opt.name] = cb.checked;
-            chip.classList.toggle("checked", cb.checked);
-            recalcPts(item, ptsTotalEl);
-            if (isChar) refreshCharCard(item);
-            saveCards(); updateTotals();
-          };
-          const perModel = isPerModelCost(opt.cost, unitForOpts);
-          const costLabel = perModel && !/ea/i.test(opt.cost) ? opt.cost + ' ea.' : opt.cost;
-          chip.appendChild(cb);
-          chip.appendChild(document.createTextNode('\u00a0' + opt.name));
-          const costSpan = document.createElement("span");
-          costSpan.className = "alb-opt-cost";
-          costSpan.textContent = '\u00a0' + costLabel;
-          chip.appendChild(costSpan);
-          optsRow.appendChild(chip);
-        }
+    if (!item.optionsSelected) item.optionsSelected = {};
+
+    if (isChar) {
+      // Grouped accordion: Equipment (Weapons/Armour/Mounts) + Magic Items
+      ctrl.appendChild(buildCharOptSections(unitForOpts, item, ptsTotalEl));
+    } else {
+      // Flat chip row for rank-and-file / war machines / etc.
+      const allOpts = [];
+      unitForOpts.options.forEach(function(g) {
+        g.items.forEach(function(o) { allOpts.push(o); });
       });
-      ctrl.appendChild(optsRow);
+      if (allOpts.length) {
+        const optsRow = document.createElement("div");
+        optsRow.className = "alb-opts-row";
+        allOpts.forEach(function(opt) {
+          var catKey = getMagicItemCategory(opt.name);
+          if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' && WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
+            optsRow.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl, false));
+          } else {
+            optsRow.appendChild(buildOptChip(opt, item, ptsTotalEl, false, unitForOpts));
+          }
+        });
+        ctrl.appendChild(optsRow);
+      }
     }
   }
 
