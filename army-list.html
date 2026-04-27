@@ -64,19 +64,26 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .card-wrapper { background: #fff; border: 2px solid #1a1a1a; max-width: 340px; overflow: hidden; box-shadow: 2px 2px 0 #0003; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; }
 
 /* CONTROLS BAR — sits below the .al-card, inside .card-wrapper */
-.alb-controls { background: #1a1a1a; padding: 6px 8px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.alb-controls { background: #1a1a1a; padding: 5px 8px 4px; display: flex; flex-direction: column; gap: 0; }
+.alb-meta-row { display: flex; align-items: center; gap: 6px; width: 100%; }
+.alb-meta-left { display: flex; align-items: center; gap: 6px; }
+.alb-meta-right { display: flex; align-items: center; gap: 7px; margin-left: auto; }
 .alb-field { display: flex; flex-direction: column; gap: 1px; }
 .alb-field label { font-size: 7px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #666; }
 .alb-input { background: #0d0d0d; border: 1px solid #3a3a3a; border-radius: 2px; color: #e8e8e8; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; padding: 2px 6px; outline: none; width: 58px; text-align: center; }
-.alb-input.notes { width: 120px; text-align: left; }
 .alb-input:focus { border-color: #888; }
-.alb-pts-display { flex: 1; min-width: 60px; text-align: right; }
+.alb-pts-display { text-align: right; }
 .alb-pts-display label { font-size: 7px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #666; display: block; }
 .alb-pts-total { font-family: 'Cinzel', serif; font-size: 14px; color: #e8e8e8; }
 .alb-pts-total.auto { color: #88bb99; }
 .alb-pts-total.manual { color: #e8e8e8; }
-.alb-remove { background: none; border: 1px solid #4a1515; color: #884444; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; padding: 2px 7px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; }
-.alb-remove:hover { background: #8b2020; border-color: #8b2020; color: #fff; }
+.alb-remove { background: none; border: 1px solid #6b2020; color: #cc5555; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; }
+.alb-remove:hover { background: #8b2020; border-color: #aa3333; color: #fff; }
+/* Notes row — ghost text, no label */
+.alb-notes-row { width: 100%; padding: 3px 0 1px; }
+.alb-input.notes { width: 100%; box-sizing: border-box; text-align: left; background: transparent; border: none; border-top: 1px solid #252525; border-radius: 0; font-size: 10px; color: #888; padding: 4px 2px 3px; }
+.alb-input.notes:focus { color: #ccc; border-top-color: #444; outline: none; }
+.alb-input.notes::placeholder { color: #3d3d3d; font-style: italic; }
 
 /* OPTIONS CHIPS ROW (non-character units — flat layout) */
 .alb-opts-row { width: 100%; display: flex; flex-wrap: wrap; gap: 4px; padding: 5px 0 1px; border-top: 1px solid #242424; }
@@ -1097,17 +1104,18 @@ function buildControls(item) {
   const unitData = lookupUnit(item.sourceId);
   const isChar   = unitData && unitData.type === 'character';
 
-  // Models field — locked to 1 for characters
-  const mf = document.createElement("div");
-  mf.className = "alb-field";
-  const ml = document.createElement("label"); ml.textContent = "Models";
-  if (isChar) {
-    // Characters are always a single model — show static "1" instead of editable field
-    const mv = document.createElement("div");
-    mv.style.cssText = "font-size:12px;color:#888;padding:2px 0;font-family:'Barlow Condensed',sans-serif;text-align:center";
-    mv.textContent = "1";
-    mf.appendChild(ml); mf.appendChild(mv);
-  } else {
+  // ── Meta row: [Models + pts/model] ··· [Total pts | Remove] ──────────
+  const metaRow = document.createElement("div");
+  metaRow.className = "alb-meta-row";
+
+  // Left cluster: models input + pts rate
+  const metaLeft = document.createElement("div");
+  metaLeft.className = "alb-meta-left";
+
+  if (!isChar) {
+    const mf = document.createElement("div");
+    mf.className = "alb-field";
+    const ml = document.createElement("label"); ml.textContent = "Models";
     const mi = document.createElement("input");
     mi.type = "number"; mi.min = "0"; mi.className = "alb-input";
     mi.value = item.models || "";
@@ -1118,19 +1126,18 @@ function buildControls(item) {
       saveCards(); updateTotals();
     };
     mf.appendChild(ml); mf.appendChild(mi);
+    metaLeft.appendChild(mf);
   }
-  ctrl.appendChild(mf);
 
-  // pts/model hint
   if (item.ptsPerModel) {
     const hint = document.createElement("div");
     hint.className = "alb-field";
-    const hl = document.createElement("label"); hl.textContent = "pts/model";
+    const hl = document.createElement("label"); hl.textContent = isChar ? "pts" : "pts / model";
     const hv = document.createElement("div");
     hv.style.cssText = "font-size:12px;color:#888;padding:2px 0;font-family:'Barlow Condensed',sans-serif";
     hv.textContent = item.ptsPerModel;
     hint.appendChild(hl); hint.appendChild(hv);
-    ctrl.appendChild(hint);
+    metaLeft.appendChild(hint);
   } else if (item.ptsFixed) {
     const hint = document.createElement("div");
     hint.className = "alb-field";
@@ -1139,22 +1146,15 @@ function buildControls(item) {
     hv.style.cssText = "font-size:12px;color:#888;padding:2px 0;font-family:'Barlow Condensed',sans-serif";
     hv.textContent = item.ptsFixed;
     hint.appendChild(hl); hint.appendChild(hv);
-    ctrl.appendChild(hint);
+    metaLeft.appendChild(hint);
   }
 
-  // Notes field
-  const nf = document.createElement("div");
-  nf.className = "alb-field";
-  const nl = document.createElement("label"); nl.textContent = "Notes";
-  const ni = document.createElement("input");
-  ni.type = "text"; ni.className = "alb-input notes";
-  ni.value = item.notes || "";
-  ni.placeholder = "eg. +2 halberds, magic standard";
-  ni.oninput = function() { item.notes = ni.value; saveCards(); };
-  nf.appendChild(nl); nf.appendChild(ni);
-  ctrl.appendChild(nf);
+  metaRow.appendChild(metaLeft);
 
-  // Total pts display
+  // Right cluster: total pts display + remove button
+  const metaRight = document.createElement("div");
+  metaRight.className = "alb-meta-right";
+
   const pd = document.createElement("div");
   pd.className = "alb-pts-display";
   const pl = document.createElement("label"); pl.textContent = "Total pts";
@@ -1178,15 +1178,28 @@ function buildControls(item) {
     saveCards(); updateTotals();
   };
   pd.appendChild(pl); pd.appendChild(ptsTotalEl);
-  ctrl.appendChild(pd);
+  metaRight.appendChild(pd);
 
-  // Remove button
   const rb = document.createElement("button");
   rb.className = "alb-remove";
-  rb.textContent = "✕";
+  rb.textContent = "Remove";
   rb.title = "Remove from list";
   rb.onclick = function() { removeCard(item.id); };
-  ctrl.appendChild(rb);
+  metaRight.appendChild(rb);
+
+  metaRow.appendChild(metaRight);
+  ctrl.appendChild(metaRow);
+
+  // ── Notes row: full-width ghost text field ────────────────────────────
+  const nr = document.createElement("div");
+  nr.className = "alb-notes-row";
+  const ni = document.createElement("input");
+  ni.type = "text"; ni.className = "alb-input notes";
+  ni.value = item.notes || "";
+  ni.placeholder = "Add a note…";
+  ni.oninput = function() { item.notes = ni.value; saveCards(); };
+  nr.appendChild(ni);
+  ctrl.appendChild(nr);
 
   // Options — characters get grouped accordion sections; other units get a flat chip row
   const unitForOpts = unitData; // already looked up at top of buildControls
