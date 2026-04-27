@@ -196,21 +196,57 @@ def parse_equipment_table(equip_html):
         return []
     return [{'subheading': 'Equipment', 'items': items}]
 
-def magic_opts(is_wizard):
+# Per-army magic item flags derived from the rules prose in each army's
+# wa-XX-char-magic-items section. Armies not listed use the defaults.
+#
+#   ring      – any character (not just wizards) may take a magic ring
+#   scrolls   – wizards may take scrolls  (False = army doesn't mention it)
+#   missiles  – characters may take magic missiles (one-shot or supply)
+#   standard  – characters may carry an army magic standard
+#   extra     – army-specific additional items [(name, cost), ...]
+#
+_ARMY_MAGIC = {
+    'dark-elves':   {'ring': True,  'scrolls': True,  'missiles': True},
+    'wood-elves':   {'ring': True,  'scrolls': True,  'missiles': True},
+    'high-elves':   {'ring': True,  'scrolls': True,  'missiles': False},
+    'empire':       {'ring': True,  'scrolls': True,  'missiles': False},
+    'bretonnia':    {'ring': True,  'scrolls': True,  'missiles': False},
+    'chaos':        {'ring': True,  'scrolls': True,  'missiles': True},
+    'skaven':       {'ring': False, 'scrolls': False, 'missiles': False,
+                     'extra': [('Warpstone charm', '25')]},
+    'slann':        {'ring': True,  'scrolls': True,  'missiles': False},
+    'orcs-goblins': {'ring': False, 'scrolls': False, 'missiles': False},
+    'dwarfs':       {'ring': True,  'scrolls': True,  'missiles': False},
+    'undead':       {'ring': True,  'scrolls': True,  'missiles': False},
+}
+_MAGIC_DEFAULTS = {'ring': True, 'scrolls': True, 'missiles': False}
+
+def magic_opts(is_wizard, army=''):
+    """Build the Magic Items options group for a character.
+    is_wizard  – True if charType is wizard/liche/vampire (gets scrolls when army allows).
+    army       – army slug string used to look up per-army flags.
+    """
+    cfg = _ARMY_MAGIC.get(army, _MAGIC_DEFAULTS)
     items = [
         {'name': 'A Magic Weapon',          'cost': '25'},
         {'name': 'A Magic Standard (army)', 'cost': '50'},
         {'name': 'A Magic Armour',          'cost': '0'},
     ]
-    if is_wizard:
+    if cfg.get('missiles', False):
         items += [
-            {'name': 'A Magic Scroll', 'cost': '25'},
-            {'name': 'A Magic Ring',   'cost': '50'},
+            {'name': 'A One-Shot Magic Missile', 'cost': '10+'},
+            {'name': 'A Magic Missile Supply',   'cost': '5+'},
         ]
+    if is_wizard and cfg.get('scrolls', True):
+        items.append({'name': 'A Magic Scroll', 'cost': '25'})
+    if cfg.get('ring', True):
+        items.append({'name': 'A Magic Ring', 'cost': '50'})
+    for name, cost in cfg.get('extra', []):
+        items.append({'name': name, 'cost': cost})
     return {'subheading': 'Magic Items', 'items': items}
 
-def make_options(base, is_wizard):
-    return [{'subheading': g['subheading'], 'items': list(g['items'])} for g in base] + [magic_opts(is_wizard)]
+def make_options(base, is_wizard, army=''):
+    return [{'subheading': g['subheading'], 'items': list(g['items'])} for g in base] + [magic_opts(is_wizard, army)]
 
 # ──────────────────────────────────────────────
 # Level profile table parser
@@ -353,8 +389,9 @@ def extract_standard(army, prefix, id_pfx):
         id_parts = [id_pfx, 'char', ctype, str(lvl)] + ([grp_slug] if grp_slug else []) + [slugify(name)]
         uid = '-'.join(id_parts)
         grp_label = compute_char_group_label(group, ctype)
+        is_wiz = ctype in ('wizard', 'liche', 'vampire')
         units.append(make_char(uid, army, ctype, lvl, maxn, name, pkey, None, stats, pts,
-                               make_options(base_opts, ctype == 'wizard'),
+                               make_options(base_opts, is_wiz, army),
                                char_group_label=grp_label))
     return units
 
@@ -409,7 +446,7 @@ def extract_og():
                 name      = race + ' Level ' + str(level) + ' ' + ctype.title()
                 grp_label = race + ' ' + ctype.title()
                 units.append(make_char(uid, army, ctype, level, maxn, name, label, race, stats, pts,
-                                       make_options(base_opts, ctype == 'wizard'),
+                                       make_options(base_opts, ctype == 'wizard', army),
                                        char_group_label=grp_label))
     return units
 
@@ -468,7 +505,7 @@ def extract_dwarfs():
             uid   = id_pfx + '-char-' + ctype + '-' + str(level) + '-' + slugify(name)
             label = race + ' (base)'
             units.append(make_char(uid, army, ctype, level, maxn, name, label, race, stats, pts,
-                                   make_options(base_opts, False),
+                                   make_options(base_opts, False, army),
                                    char_group_label=grp_label))
     wsec = get_chunk_after_id(sec, prefix + '-char-wizards')
     if wsec:
@@ -488,7 +525,7 @@ def extract_dwarfs():
             stats = race_stats.get('Dwarf', ['?'] * 12)
             uid   = id_pfx + '-char-wizard-' + str(level) + '-' + slugify(name)
             units.append(make_char(uid, army, 'wizard', level, maxn, name, 'Dwarf (base)',
-                                   'Dwarf', stats, pts, make_options(base_opts, True),
+                                   'Dwarf', stats, pts, make_options(base_opts, True, army),
                                    char_group_label='Wizard'))
     return units
 
@@ -540,7 +577,7 @@ def extract_undead():
             uid = id_pfx + '-char-hero-' + str(level) + '-' + slugify(name)
             units.append(make_char(uid, army, 'hero', level, maxn, name, 'Undead Hero',
                                    'Undead Hero', hero_stats, pts,
-                                   make_options(base_opts, False),
+                                   make_options(base_opts, False, army),
                                    char_group_label='Hero'))
 
     # Wizards: two tables (pts table + names table) between wa-un-char-wizards and next <h4
@@ -594,7 +631,7 @@ def extract_undead():
                 units.append(make_char(uid, army, ctype, level,
                                        2 if level < 25 else 1,
                                        name, wt, wt, stats, pts,
-                                       make_options(base_opts, True),
+                                       make_options(base_opts, True, army),
                                        char_group_label=wt))  # 'Evil Sorcerer' / 'Liche' / 'Vampire'
     return units
 

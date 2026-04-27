@@ -21264,6 +21264,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -21444,6 +21456,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -21624,6 +21648,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -21804,6 +21840,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -21984,6 +22032,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -22164,6 +22224,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -22344,6 +22416,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -22524,6 +22608,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -22704,6 +22800,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -22884,6 +22992,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -23064,6 +23184,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -23254,6 +23382,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -23440,6 +23576,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -23630,6 +23774,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -23818,6 +23970,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -23988,6 +24148,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -24152,6 +24324,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -24316,6 +24500,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -24480,6 +24676,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -24644,6 +24852,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -24808,6 +25028,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -24982,6 +25210,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -25152,6 +25388,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -25326,6 +25570,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -25496,6 +25748,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -25688,6 +25948,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -25872,6 +26136,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -26056,6 +26324,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -26240,6 +26512,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -26424,6 +26700,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -27544,6 +27824,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -27704,6 +27988,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -27864,6 +28152,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -28024,6 +28316,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -28184,6 +28480,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -29168,6 +29468,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -29312,6 +29616,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -29456,6 +29764,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -29600,6 +29912,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -29744,6 +30060,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -30664,6 +30984,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -30824,6 +31156,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -30984,6 +31328,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -31144,6 +31500,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -31304,6 +31672,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -31464,6 +31844,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -31624,6 +32016,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -31784,6 +32188,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -31944,6 +32360,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -32104,6 +32532,18 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -32264,6 +32704,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -32434,6 +32882,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -32600,6 +33056,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -32770,6 +33234,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -32936,6 +33408,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -33106,6 +33586,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -33272,6 +33760,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -33442,6 +33938,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -33608,6 +34112,14 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
           },
           {
             "name": "A Magic Scroll",
@@ -33778,6 +34290,14 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
+            "name": "A One-Shot Magic Missile",
+            "cost": "10+"
+          },
+          {
+            "name": "A Magic Missile Supply",
+            "cost": "5+"
+          },
+          {
             "name": "A Magic Scroll",
             "cost": "25"
           },
@@ -33916,6 +34436,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34048,6 +34572,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34180,6 +34708,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34312,6 +34844,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34444,6 +34980,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34576,6 +35116,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34708,6 +35252,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34840,6 +35388,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "Warpstone charm",
+            "cost": "25"
           }
         ]
       }
@@ -34974,12 +35526,8 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
-            "name": "A Magic Scroll",
+            "name": "Warpstone charm",
             "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -35114,12 +35662,8 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
-            "name": "A Magic Scroll",
+            "name": "Warpstone charm",
             "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -35254,12 +35798,8 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
-            "name": "A Magic Scroll",
+            "name": "Warpstone charm",
             "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -35394,12 +35934,8 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
-            "name": "A Magic Scroll",
+            "name": "Warpstone charm",
             "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -35534,12 +36070,8 @@ const WFB3_UNITS = [
             "cost": "0"
           },
           {
-            "name": "A Magic Scroll",
+            "name": "Warpstone charm",
             "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -35660,6 +36192,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -35780,6 +36316,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -35900,6 +36440,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -36020,6 +36564,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -36140,6 +36688,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -36260,6 +36812,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -36380,6 +36936,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -36500,6 +37060,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -36620,6 +37184,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -36740,6 +37308,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -41124,14 +41696,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -41276,14 +41840,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -41428,14 +41984,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -41580,14 +42128,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -41732,14 +42272,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -41884,14 +42416,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -42036,14 +42560,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -42188,14 +42704,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -42340,14 +42848,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -42492,14 +42992,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -42644,14 +43136,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -42796,14 +43280,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -42948,14 +43424,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -43100,14 +43568,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -43252,14 +43712,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -43404,14 +43856,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -43556,14 +44000,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -43708,14 +44144,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -43860,14 +44288,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -44012,14 +44432,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -44164,14 +44576,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -44316,14 +44720,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -44468,14 +44864,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -44620,14 +45008,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -44772,14 +45152,6 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
-          },
-          {
-            "name": "A Magic Scroll",
-            "cost": "25"
-          },
-          {
-            "name": "A Magic Ring",
-            "cost": "50"
           }
         ]
       }
@@ -44928,6 +45300,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -45076,6 +45452,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -45224,6 +45604,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -45372,6 +45756,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -45520,6 +45908,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -45668,6 +46060,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -45816,6 +46212,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -45964,6 +46364,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -46112,6 +46516,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -46260,6 +46668,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -46408,6 +46820,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -46556,6 +46972,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -46704,6 +47124,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -46852,6 +47276,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -47000,6 +47428,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -47896,6 +48328,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -48012,6 +48448,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -48128,6 +48568,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -48244,6 +48688,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }
@@ -48360,6 +48808,10 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Armour",
             "cost": "0"
+          },
+          {
+            "name": "A Magic Ring",
+            "cost": "50"
           }
         ]
       }

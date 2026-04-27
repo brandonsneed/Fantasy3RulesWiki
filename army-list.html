@@ -839,6 +839,7 @@ function getMagicItemCategory(optName) {
   if (/magic(al)?\s+instrument/.test(n)) return 'instrument';
   if (/magic(al)?\s+(hand\s+)?weapon/.test(n) || /magic(al)?\s+sword/.test(n)) return 'weapon';
   if (/magic(al)?\s+(armou?r|shield|helm)/.test(n)) return 'armour';
+  if (/one.?shot/i.test(n)) return 'missile_oneshot';
   if (/magic(al)?\s+missile/.test(n)) return 'missile_supply';
   if (/scroll/.test(n)) return 'scroll';
   if (/magic(al)?\s+ring/.test(n)) return 'ring';
