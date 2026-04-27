@@ -281,6 +281,31 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .browser-unit-info { cursor: pointer; }
 .browser-unit-row:hover .browser-unit-name { color: #acd6bc; }
 
+/* CHARACTER GROUP LEVEL CHIPS */
+.browser-char-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 3px 0 1px;
+}
+.browser-char-level-chip {
+  background: #1a2820;
+  border: 1px solid #2a4a36;
+  border-radius: 2px;
+  color: #6aaa85;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  cursor: pointer;
+  transition: all 0.12s;
+  line-height: 1.4;
+}
+.browser-char-level-chip:hover { background: #2a4a38; border-color: #3d6b50; color: #fff; }
+.browser-char-level-chip.just-added { background: #2a4a38; border-color: #3d6b50; color: #fff; }
+
 /* CARD PREVIEW MODAL */
 .preview-overlay {
   display: none;
@@ -394,6 +419,7 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-opt-n { white-space: nowrap; flex-shrink: 0; }
 .al-opt-d { flex: 1; min-width: 0; height: 0; border-bottom: 1px dotted #aaa; margin: 0 3px; position: relative; top: 1px; }
 .al-opt-c { font-weight: 700; white-space: nowrap; flex-shrink: 0; min-width: 14px; text-align: right; }
+.al-char-no-opts { padding: 5px 6px 4px; font-size: 7px; color: #aaa; font-style: italic; text-align: center; border-top: 1px solid #eee; }
 .al-flavour { border-top: 1px solid #1a1a1a; padding: 4px 7px 5px; font-style: italic; font-size: 7.5px; line-height: 1.5; color: #222; font-family: 'IM Fell English', Georgia, serif; flex-shrink: 0; }
 .al-flavour-text { font-style: italic; font-size: 7.5px; line-height: 1.5; color: #222; font-family: 'IM Fell English', Georgia, serif; margin-top: 4px; }
 .al-profile tr.al-rh td { background: #d8d8d8 !important; color: #1a1a1a; font-size: 7.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-align: left; padding: 2px 5px !important; border-color: #999 !important; }
@@ -692,13 +718,17 @@ function renderGrid() {
 }
 
 /** Return rendered card HTML for a list item.
- *  Priority: sourceId → renderAlCard(); html field (legacy/custom) → raw html; fallback → placeholder */
+ *  Priority: sourceId → renderAlCard(); html field (legacy/custom) → raw html; fallback → placeholder.
+ *  For character units, passes the current optionsSelected map so the card shows only chosen upgrades. */
 function resolveCardHtml(item) {
   // Official unit via sourceId (strip "card-" prefix if present — wiki buttons add it)
   if (item.sourceId && typeof WFB3_UNITS !== 'undefined' && typeof renderAlCard !== 'undefined') {
     const normalizedId = item.sourceId.replace(/^card-/, '');
     const unit = WFB3_UNITS.find(function(u) { return u.id === normalizedId; });
-    if (unit) return renderAlCard(unit);
+    if (unit) {
+      const opts = (unit.type === 'character') ? (item.optionsSelected || {}) : undefined;
+      return renderAlCard(unit, opts);
+    }
   }
   // Legacy / custom card HTML (from card editor import or old wiki button)
   if (item.html) return item.html;
@@ -784,7 +814,7 @@ function getMagicItemCategory(optName) {
   return null;
 }
 
-function buildMagicItemControl(opt, catKey, item, ptsTotalEl) {
+function buildMagicItemControl(opt, catKey, item, ptsTotalEl, isChar) {
   var catData = WFB3_MAGIC_ITEMS[catKey];
   if (!item.magicAbilities) item.magicAbilities = {};
   if (!item.magicAbilities[opt.name]) item.magicAbilities[opt.name] = {};
@@ -866,12 +896,33 @@ function buildMagicItemControl(opt, catKey, item, ptsTotalEl) {
     subRow.style.display = cb.checked ? 'flex' : 'none';
     updateCostDisplay();
     recalcPts(item, ptsTotalEl);
+    if (isChar) refreshCharCard(item);
     saveCards(); updateTotals();
   };
 
   wrapper.appendChild(chip);
   wrapper.appendChild(subRow);
   return wrapper;
+}
+
+/* ═══════════════════════════════════════
+   CHARACTER CARD REFRESH
+   Re-renders the .al-card element inside a character's .card-wrapper
+   after an option checkbox changes, so the card always reflects current
+   selections without requiring a full grid re-render.
+═══════════════════════════════════════ */
+function refreshCharCard(item) {
+  const wrapper = document.querySelector('[data-list-id="' + item.id + '"]');
+  if (!wrapper) return;
+  const unit = lookupUnit(item.sourceId);
+  if (!unit || unit.type !== 'character') return;
+  const oldCard = wrapper.querySelector('.al-card');
+  if (!oldCard) return;
+  const newHtml = renderAlCard(unit, item.optionsSelected || {});
+  const tmp = document.createElement('div');
+  tmp.innerHTML = newHtml;
+  const newCard = tmp.firstElementChild;
+  if (newCard) wrapper.replaceChild(newCard, oldCard);
 }
 
 /* ═══════════════════════════════════════
@@ -991,7 +1042,7 @@ function buildControls(item) {
         var catKey = getMagicItemCategory(opt.name);
         if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' && WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
           // Magic item: render chip + expandable ability sub-picker
-          optsRow.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl));
+          optsRow.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl, isChar));
         } else {
           // Normal option chip
           const chip = document.createElement("label");
@@ -1003,6 +1054,7 @@ function buildControls(item) {
             item.optionsSelected[opt.name] = cb.checked;
             chip.classList.toggle("checked", cb.checked);
             recalcPts(item, ptsTotalEl);
+            if (isChar) refreshCharCard(item);
             saveCards(); updateTotals();
           };
           const perModel = isPerModelCost(opt.cost, unitForOpts);
@@ -1114,8 +1166,9 @@ function renderBrowserUnits(armyId, filter) {
     if (u.army !== armyId) return false;
     if (!filter) return true;
     return u.name.toLowerCase().includes(filter) ||
-           (u.allowance && u.allowance.toLowerCase().includes(filter)) ||
-           (u.charType  && u.charType.toLowerCase().includes(filter));
+           (u.allowance       && u.allowance.toLowerCase().includes(filter))       ||
+           (u.charType        && u.charType.toLowerCase().includes(filter))        ||
+           (u.charGroupLabel  && u.charGroupLabel.toLowerCase().includes(filter));
   });
 
   // Header
@@ -1150,18 +1203,10 @@ function renderBrowserUnits(armyId, filter) {
 
     const meta = document.createElement("div");
     meta.className = "browser-unit-meta";
-    if (unit.type === 'character') {
-      const lvl   = unit.level    ? 'Level\u00a0' + unit.level : '';
-      const ct    = unit.charType ? (unit.charType.charAt(0).toUpperCase() + unit.charType.slice(1)) : '';
-      const maxS  = unit.charMax  ? 'Max:\u00a0' + unit.charMax : '';
-      const ptsS  = unit.ptsPerModel ? unit.ptsPerModel + '\u00a0pts' : '';
-      meta.textContent = [lvl, ct, maxS, ptsS].filter(Boolean).join('  \u00b7  ');
-    } else {
-      const ptsStr = unit.ptsPerModel ? unit.ptsPerModel + " pts/model"
-                   : unit.ptsFixed   ? unit.ptsFixed + " pts"
-                   : "";
-      meta.textContent = unit.allowance + (ptsStr ? "  \u00b7  " + ptsStr : "");
-    }
+    const ptsStr = unit.ptsPerModel ? unit.ptsPerModel + " pts/model"
+                 : unit.ptsFixed   ? unit.ptsFixed + " pts"
+                 : "";
+    meta.textContent = unit.allowance + (ptsStr ? "  \u00b7  " + ptsStr : "");
     info.appendChild(meta);
 
     // Clicking the info section opens the full card preview
@@ -1172,7 +1217,6 @@ function renderBrowserUnits(armyId, filter) {
     addBtn.textContent = "+ Add";
     addBtn.onclick = function() {
       addUnitToList(unit);
-      // Brief visual feedback
       addBtn.textContent = "✓ Added";
       addBtn.classList.add("just-added");
       setTimeout(function() {
@@ -1200,7 +1244,62 @@ function renderBrowserUnits(armyId, filter) {
 
   if (chars.length) {
     addSectionHeader("Characters");
-    chars.forEach(function(unit) { container.appendChild(renderUnitRow(unit)); });
+
+    // Group chars by charGroupLabel, preserving first-seen order
+    const charGroups = {};
+    const charGroupOrder = [];
+    chars.forEach(function(c) {
+      const lbl = c.charGroupLabel ||
+        (c.charType ? c.charType.charAt(0).toUpperCase() + c.charType.slice(1) : 'Character');
+      if (!charGroups[lbl]) { charGroups[lbl] = []; charGroupOrder.push(lbl); }
+      charGroups[lbl].push(c);
+    });
+
+    charGroupOrder.forEach(function(lbl) {
+      // Sort members by level ascending
+      const members = charGroups[lbl].slice().sort(function(a, b) {
+        return (a.level || 0) - (b.level || 0);
+      });
+
+      const row = document.createElement("div");
+      row.className = "browser-unit-row";
+
+      const info = document.createElement("div");
+      info.className = "browser-unit-info";
+      info.style.cssText = "cursor:pointer";
+
+      // Group label (acts as heading)
+      const nameEl = document.createElement("div");
+      nameEl.className = "browser-unit-name";
+      nameEl.textContent = lbl;
+      info.appendChild(nameEl);
+
+      // Level chips — one per member
+      const chips = document.createElement("div");
+      chips.className = "browser-char-levels";
+      members.forEach(function(c) {
+        const chip = document.createElement("button");
+        chip.className = "browser-char-level-chip";
+        chip.textContent = 'Lv\u00a0' + c.level;
+        chip.title = c.name + '\u2002\u00b7\u2002' +
+                     (c.ptsPerModel != null ? c.ptsPerModel + ' pts' : '') +
+                     (c.charMax     != null ? '\u2002\u00b7\u2002Max: ' + c.charMax : '');
+        chip.onclick = function(e) {
+          e.stopPropagation();  // don't bubble to info.onclick
+          addUnitToList(c);
+          chip.classList.add('just-added');
+          setTimeout(function() { chip.classList.remove('just-added'); }, 900);
+        };
+        chips.appendChild(chip);
+      });
+      info.appendChild(chips);
+
+      // Clicking the group name row (not a chip) opens preview of lowest-level member
+      info.onclick = function() { showPreview(members[0]); };
+
+      row.appendChild(info);
+      container.appendChild(row);
+    });
   }
 }
 

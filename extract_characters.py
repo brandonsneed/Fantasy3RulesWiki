@@ -80,6 +80,86 @@ def slugify(name):
     return name.strip('-')
 
 # ──────────────────────────────────────────────
+# Name singularization
+# ──────────────────────────────────────────────
+
+def singularize_word(w):
+    """Singularize a single English word. Handles common WFB3 name endings."""
+    wl = w.lower()
+    # Don't singularize: already singular or irregular (ss, is, us, as, ous, ix)
+    if re.search(r'(ss|is|us|as|ous|ix)$', wl):
+        return w
+    # Irregular: -men -> -man  (Lizardmen->Lizardman, Beastmen->Beastman)
+    if wl.endswith('men') and len(w) > 3:
+        return w[:-3] + 'man'
+    # -ies -> -y  (Armies->Army, Sorceries->Sorcery)
+    if wl.endswith('ies') and len(w) > 3:
+        return w[:-3] + 'y'
+    # -es with sibilant/vowel+o stem: remove 'es'
+    if wl.endswith('es') and len(w) > 3:
+        stem = w[:-2]
+        if re.search(r'(sh|ch|x|z|o)$', stem.lower()):
+            return stem          # Witches->Witch, Heroes->Hero
+        return w[:-1]            # all other -es: just drop 's'
+    # Simple -s plural: drop the 's'
+    if wl.endswith('s') and len(w) > 2:
+        return w[:-1]
+    return w
+
+def singularize(name):
+    """Singularize a character name.
+    'X of Y' -> singularize the last word of X only.
+    Plain name  -> singularize the last word."""
+    m = re.match(r'^(.+?)\s+of\s+(.+)$', name, re.I)
+    if m:
+        prefix_words = m.group(1).split()
+        prefix_words[-1] = singularize_word(prefix_words[-1])
+        return ' '.join(prefix_words) + ' of ' + m.group(2)
+    words = name.split()
+    if words:
+        words[-1] = singularize_word(words[-1])
+    return ' '.join(words)
+
+# ──────────────────────────────────────────────
+# Character group label
+# ──────────────────────────────────────────────
+
+# Words in a group name that already imply the charType (so we don't append it again)
+_TYPE_SYNONYMS = {
+    'hero':     ['hero', 'heroes', 'lord'],
+    'wizard':   ['wizard', 'sorcerer', 'shaman', 'mage', 'warlock', 'druid'],
+    'assassin': ['assassin'],
+    'slayer':   ['slayer'],
+    'gnome':    ['gnome'],
+    'liche':    ['liche', 'lich'],
+    'vampire':  ['vampire'],
+}
+
+def compute_char_group_label(group, ctype):
+    """Return a display label for a character group (used in the browser).
+    group: compact-divider section name from HTML (may be empty string)
+    ctype: charType string ('hero', 'wizard', 'assassin', ...)
+    Examples:
+      ('',                 'hero')    -> 'Hero'
+      ('Beastman Shamans', 'wizard')  -> 'Beastman Shaman'
+      ('Slann',            'hero')    -> 'Slann Hero'
+      ('Lizardmen',        'hero')    -> 'Lizardman Hero'
+      ('Dwarven Slayers',  'slayer')  -> 'Dwarven Slayer'
+      ('Assassins',        'assassin')-> 'Assassin'
+    """
+    if not group or group.lower().rstrip('s') in ('assassin',):
+        return ctype.capitalize()
+    # Singularize the group name (last word, or word before 'of')
+    g_sing = singularize(group)
+    g_lower = g_sing.lower()
+    # Check whether the singularized group name already implies the charType
+    synonyms = _TYPE_SYNONYMS.get(ctype, [ctype])
+    if any(syn in g_lower for syn in synonyms):
+        return g_sing
+    # Append the charType
+    return g_sing + ' ' + ctype.capitalize()
+
+# ──────────────────────────────────────────────
 # Equipment table parser
 # ──────────────────────────────────────────────
 
@@ -201,31 +281,33 @@ def parse_avail_table(section_html, default_ctype):
 # Character unit builder
 # ──────────────────────────────────────────────
 
-def make_char(uid, army, ctype, level, char_max, name, prof_label, race_group, stats, pts, options):
+def make_char(uid, army, ctype, level, char_max, name, prof_label, race_group,
+              stats, pts, options, char_group_label=None):
     return {
-        'id':            uid,
-        'army':          army,
-        'type':          'character',
-        'charType':      ctype,
-        'level':         level,
-        'charMax':       char_max,
-        'allowance':     '1',
-        'name':          name,
-        'profiles':      [{'label': prof_label, 'stats': stats, 'raceGroup': race_group}],
-        'profileNote':   None,
-        'profileD6':     False,
-        'art':           None,
-        'ptsPerModel':   pts,
-        'ptsFixed':      None,
-        'models':        '1',
-        'weapons':       'Hand Weapon',
-        'armour':        None,
-        'options':       options,
-        'machineStats':  None,
-        'chariot':       None,
-        'packs':         None,
+        'id':             uid,
+        'army':           army,
+        'type':           'character',
+        'charType':       ctype,
+        'charGroupLabel': char_group_label or ctype.capitalize(),
+        'level':          level,
+        'charMax':        char_max,
+        'allowance':      '1',
+        'name':           name,
+        'profiles':       [{'label': prof_label, 'stats': stats, 'raceGroup': race_group}],
+        'profileNote':    None,
+        'profileD6':      False,
+        'art':            None,
+        'ptsPerModel':    pts,
+        'ptsFixed':       None,
+        'models':         '1',
+        'weapons':        'Hand Weapon',
+        'armour':         None,
+        'options':        options,
+        'machineStats':   None,
+        'chariot':        None,
+        'packs':          None,
         'aggregateTable': None,
-        'flavour':       None,
+        'flavour':        None,
     }
 
 # ──────────────────────────────────────────────
@@ -253,8 +335,9 @@ def extract_standard(army, prefix, id_pfx):
         print('    [WARN] wizards chunk not found: ' + prefix + '-char-wizards')
     units = []
     for e in all_avail:
-        lvl, ctype, name, pts, maxn = e['level'], e['charType'], e['name'], e['pts'], e['max']
+        lvl, ctype, pts, maxn = e['level'], e['charType'], e['pts'], e['max']
         group = e.get('group', '') or ''
+        name  = singularize(e['name'])
         if ctype == 'assassin':
             pkey = str(lvl) + ' Assassin'
         elif ctype == 'wizard':
@@ -263,14 +346,16 @@ def extract_standard(army, prefix, id_pfx):
             pkey = str(lvl) + ' Hero'
         pd = level_profiles.get(pkey) or level_profiles.get(str(lvl) + ' Hero')
         stats = pd['stats'] if pd else ['?'] * 12
-        # Include group slug in ID to disambiguate (e.g. Chaos has two sets of wizards
-        # where both level-5 groups are named "Initiates"). Skip 'Assassins' group since
-        # that's already reflected in ctype.
+        # Include group slug in ID to disambiguate (e.g. Chaos has two wizard groups
+        # where both level-5 entries are named "Initiate" after singularization).
+        # Skip 'Assassins' group since that's already reflected in ctype.
         grp_slug = slugify(group) if group and group.lower() not in ('assassins',) else ''
         id_parts = [id_pfx, 'char', ctype, str(lvl)] + ([grp_slug] if grp_slug else []) + [slugify(name)]
         uid = '-'.join(id_parts)
+        grp_label = compute_char_group_label(group, ctype)
         units.append(make_char(uid, army, ctype, lvl, maxn, name, pkey, None, stats, pts,
-                               make_options(base_opts, ctype == 'wizard')))
+                               make_options(base_opts, ctype == 'wizard'),
+                               char_group_label=grp_label))
     return units
 
 # ──────────────────────────────────────────────
@@ -317,13 +402,15 @@ def extract_og():
                     pts = int(pts_cols[i])
                 except ValueError:
                     continue
-                rslug = race_slugs[race]
-                uid   = id_pfx + '-char-' + ctype + '-' + rslug + '-' + str(level)
-                stats = race_stats.get(race, ['?'] * 12)
-                label = race + ' (base)'
-                name  = race + ' Level ' + str(level) + ' ' + ctype.title()
+                rslug     = race_slugs[race]
+                uid       = id_pfx + '-char-' + ctype + '-' + rslug + '-' + str(level)
+                stats     = race_stats.get(race, ['?'] * 12)
+                label     = race + ' (base)'
+                name      = race + ' Level ' + str(level) + ' ' + ctype.title()
+                grp_label = race + ' ' + ctype.title()
                 units.append(make_char(uid, army, ctype, level, maxn, name, label, race, stats, pts,
-                                       make_options(base_opts, ctype == 'wizard')))
+                                       make_options(base_opts, ctype == 'wizard'),
+                                       char_group_label=grp_label))
     return units
 
 # ──────────────────────────────────────────────
@@ -362,18 +449,27 @@ def extract_dwarfs():
             m = re.match(r'(\d+)\s+(.+?)\s*\(level\s+(\d+)\)', cells[0], re.I)
             if not m:
                 continue
-            maxn, name, level = int(m.group(1)), m.group(2).strip(), int(m.group(3))
+            maxn  = int(m.group(1))
+            name  = singularize(m.group(2).strip())
+            level = int(m.group(3))
             if cur_div and 'slayer' in cur_div.lower():
-                ctype = 'slayer'; race = 'Dwarf'
+                ctype     = 'slayer'
+                race      = 'Dwarf'
+                grp_label = singularize(cur_div)   # "Dwarven Slayer"
             elif cur_div and 'gnome' in cur_div.lower():
-                ctype = 'gnome'; race = 'Gnome'
+                ctype     = 'gnome'
+                race      = 'Gnome'
+                grp_label = singularize(cur_div)   # "Gnome"
             else:
-                ctype = 'hero'; race = 'Dwarf'
+                ctype     = 'hero'
+                race      = 'Dwarf'
+                grp_label = 'Hero'
             stats = race_stats.get(race, ['?'] * 12)
             uid   = id_pfx + '-char-' + ctype + '-' + str(level) + '-' + slugify(name)
             label = race + ' (base)'
             units.append(make_char(uid, army, ctype, level, maxn, name, label, race, stats, pts,
-                                   make_options(base_opts, False)))
+                                   make_options(base_opts, False),
+                                   char_group_label=grp_label))
     wsec = get_chunk_after_id(sec, prefix + '-char-wizards')
     if wsec:
         for is_div, cells in parse_table_rows(wsec):
@@ -386,11 +482,14 @@ def extract_dwarfs():
             m = re.match(r'(\d+)\s+(.+?)\s*\(level\s+(\d+)\)', cells[0], re.I)
             if not m:
                 continue
-            maxn, name, level = int(m.group(1)), m.group(2).strip(), int(m.group(3))
+            maxn  = int(m.group(1))
+            name  = singularize(m.group(2).strip())
+            level = int(m.group(3))
             stats = race_stats.get('Dwarf', ['?'] * 12)
             uid   = id_pfx + '-char-wizard-' + str(level) + '-' + slugify(name)
             units.append(make_char(uid, army, 'wizard', level, maxn, name, 'Dwarf (base)',
-                                   'Dwarf', stats, pts, make_options(base_opts, True)))
+                                   'Dwarf', stats, pts, make_options(base_opts, True),
+                                   char_group_label='Wizard'))
     return units
 
 # ──────────────────────────────────────────────
@@ -435,10 +534,14 @@ def extract_undead():
             m = re.match(r'(\d+)\s+(.+?)\s*\(level\s+(\d+)\)', cells[0], re.I)
             if not m:
                 continue
-            maxn, name, level = int(m.group(1)), m.group(2).strip(), int(m.group(3))
+            maxn  = int(m.group(1))
+            name  = singularize(m.group(2).strip())
+            level = int(m.group(3))
             uid = id_pfx + '-char-hero-' + str(level) + '-' + slugify(name)
             units.append(make_char(uid, army, 'hero', level, maxn, name, 'Undead Hero',
-                                   'Undead Hero', hero_stats, pts, make_options(base_opts, False)))
+                                   'Undead Hero', hero_stats, pts,
+                                   make_options(base_opts, False),
+                                   char_group_label='Hero'))
 
     # Wizards: two tables (pts table + names table) between wa-un-char-wizards and next <h4
     wsec = get_chunk_after_id(sec, prefix + '-char-wizards')
@@ -482,15 +585,17 @@ def extract_undead():
                 pts = pts_by_level[level].get(wt)
                 if pts is None:
                     continue
-                name = names_by_level.get(level, {}).get(wt, wt + ' Level ' + str(level))
-                rd    = race_data.get(profile_key.get(wt, wt), {})
-                stats = rd.get('stats', ['?'] * 12)
-                ctype = wtype_ctype[wt]
-                uid   = id_pfx + '-char-' + wtype_slug[wt] + '-' + str(level) + '-' + slugify(name)
+                raw_name = names_by_level.get(level, {}).get(wt, wt + ' Level ' + str(level))
+                name     = singularize(raw_name)
+                rd       = race_data.get(profile_key.get(wt, wt), {})
+                stats    = rd.get('stats', ['?'] * 12)
+                ctype    = wtype_ctype[wt]
+                uid      = id_pfx + '-char-' + wtype_slug[wt] + '-' + str(level) + '-' + slugify(name)
                 units.append(make_char(uid, army, ctype, level,
                                        2 if level < 25 else 1,
                                        name, wt, wt, stats, pts,
-                                       make_options(base_opts, True)))
+                                       make_options(base_opts, True),
+                                       char_group_label=wt))  # 'Evil Sorcerer' / 'Liche' / 'Vampire'
     return units
 
 # ──────────────────────────────────────────────

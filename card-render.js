@@ -148,6 +148,39 @@ function buildOptions(options) {
   return html;
 }
 
+/* ── Selected options block (character army-list cards) ──────────────────── */
+/**
+ * Renders only the options that appear in selectedOpts map.
+ * Used by character cards in the army list builder so the card shows only
+ * what the player has actually chosen, rather than the full catalogue.
+ * @param {Array}  options      unit.options array
+ * @param {Object} selectedOpts { optionName: true, ... }
+ */
+function buildSelectedOptions(options, selectedOpts) {
+  if (!options) return '';
+  const chosen = [];
+  options.forEach(function(group) {
+    if (!group.items) return;
+    group.items.forEach(function(item) {
+      if (selectedOpts[item.name]) chosen.push(item);
+    });
+  });
+  if (!chosen.length) {
+    return '<div class="al-char-no-opts">No upgrades selected</div>';
+  }
+  let html = '<div class="al-opts"><div class="al-opts-h">Upgrades</div>';
+  chosen.forEach(function(item) {
+    html +=
+      `<div class="al-opt">` +
+      `<span class="al-opt-n">${esc(item.name)}</span>` +
+      `<span class="al-opt-d"></span>` +
+      `<span class="al-opt-c">${esc(item.cost)}</span>` +
+      `</div>`;
+  });
+  html += '</div>';
+  return html;
+}
+
 /* ── Packs block (handler type) ──────────────────────────────────────────── */
 function buildPacks(packs) {
   if (!packs || !packs.length) return '';
@@ -595,10 +628,14 @@ function renderAggregate(unit) {
 /**
  * Character cards (heroes, wizards, assassins, etc.).
  * Shows the profile table, then an info panel with level/max/pts/weapons,
- * then the equipment + magic items options block.
- * Art placeholder is shown when unit.art is null (characters rarely have art yet).
+ * then an options block.
+ *
+ * @param {Object}      unit
+ * @param {Object|null} selectedOpts  When provided (army-list context) only the
+ *   chosen options are rendered on the card.  When null/undefined (wiki / preview
+ *   context) the full options catalogue is shown.
  */
-function renderCharacter(unit) {
+function renderCharacter(unit, selectedOpts) {
   let html = buildProfileTable(unit.profiles);
   if (unit.profileNote) html += buildProfileNote(unit.profileNote);
 
@@ -657,7 +694,13 @@ function renderCharacter(unit) {
       `</div>`;
   }
 
-  info += buildOptions(unit.options);
+  // Options: filtered to selected only (army-list) or full catalogue (preview/wiki)
+  if (selectedOpts != null) {
+    info += buildSelectedOptions(unit.options, selectedOpts);
+  } else {
+    info += buildOptions(unit.options);
+  }
+
   info += '</div>'; // .al-info
 
   html += `<div class="al-mid">${artHtml}${info}</div>`;
@@ -670,15 +713,18 @@ function renderCharacter(unit) {
 ═══════════════════════════════════════════════════════════════════════════ */
 
 /**
- * renderAlCard(unit)
+ * renderAlCard(unit, selectedOpts)
  *
- * Takes a unit data object (matching the shape in army-cards.json) and
+ * Takes a unit data object (matching the shape in units-data.js) and
  * returns a complete .al-card div HTML string.
  *
- * @param  {Object} unit
+ * @param  {Object}      unit
+ * @param  {Object|null} selectedOpts  Optional map of { optionName: true } for
+ *   character cards in the army list builder.  When provided only chosen options
+ *   are shown on the card; when omitted the full options catalogue is shown.
  * @return {string} HTML string
  */
-function renderAlCard(unit) {
+function renderAlCard(unit, selectedOpts) {
   const id = unit.id ? `id="card-${esc(unit.id)}" ` : '';
 
   // Header — characters get a "Level N Chartype · Name" header
@@ -702,7 +748,7 @@ function renderAlCard(unit) {
   let body;
   switch (unit.type) {
     case 'character':
-      body = renderCharacter(unit);
+      body = renderCharacter(unit, selectedOpts != null ? selectedOpts : null);
       break;
     case 'warmachine':
       body = renderWarMachine(unit);

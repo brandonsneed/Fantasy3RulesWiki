@@ -21095,14 +21095,15 @@ const WFB3_UNITS = [
   }
 ,
   {
-    "id": "de-char-hero-5-deathshades",
+    "id": "de-char-hero-5-deathshade",
     "army": "dark-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
-    "name": "Deathshades",
+    "name": "Deathshade",
     "profiles": [
       {
         "label": "5 Hero",
@@ -21274,14 +21275,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-hero-10-witch-helms",
+    "id": "de-char-hero-10-witch-helm",
     "army": "dark-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
-    "name": "Witch-helms",
+    "name": "Witch-helm",
     "profiles": [
       {
         "label": "10 Hero",
@@ -21453,14 +21455,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-hero-15-death-dealers",
+    "id": "de-char-hero-15-death-dealer",
     "army": "dark-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
-    "name": "Death Dealers",
+    "name": "Death Dealer",
     "profiles": [
       {
         "label": "15 Hero",
@@ -21632,14 +21635,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-hero-20-deathcaps",
+    "id": "de-char-hero-20-deathcap",
     "army": "dark-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
-    "name": "Deathcaps",
+    "name": "Deathcap",
     "profiles": [
       {
         "label": "20 Hero",
@@ -21811,14 +21815,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-hero-25-dark-lords",
+    "id": "de-char-hero-25-dark-lord",
     "army": "dark-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
-    "name": "Dark Lords",
+    "name": "Dark Lord",
     "profiles": [
       {
         "label": "25 Hero",
@@ -21990,14 +21995,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-assassin-5-bloodshades",
+    "id": "de-char-assassin-5-bloodshade",
     "army": "dark-elves",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Assassin",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Bloodshades",
+    "name": "Bloodshade",
     "profiles": [
       {
         "label": "5 Assassin",
@@ -22173,6 +22179,7 @@ const WFB3_UNITS = [
     "army": "dark-elves",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Assassin",
     "level": 10,
     "charMax": 1,
     "allowance": "1",
@@ -22352,6 +22359,7 @@ const WFB3_UNITS = [
     "army": "dark-elves",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Assassin",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -22531,6 +22539,7 @@ const WFB3_UNITS = [
     "army": "dark-elves",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Assassin",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -22710,6 +22719,7 @@ const WFB3_UNITS = [
     "army": "dark-elves",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Assassin",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -22885,14 +22895,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-wizard-5-hellfays",
+    "id": "de-char-wizard-5-hellfay",
     "army": "dark-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
-    "name": "Hellfays",
+    "name": "Hellfay",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -23072,14 +23083,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-wizard-10-grimwitches",
+    "id": "de-char-wizard-10-grimwitch",
     "army": "dark-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 3,
     "allowance": "1",
-    "name": "Grimwitches",
+    "name": "Grimwitch",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -23259,14 +23271,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-wizard-15-death-hoods",
+    "id": "de-char-wizard-15-death-hood",
     "army": "dark-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 3,
     "allowance": "1",
-    "name": "Death-hoods",
+    "name": "Death-hood",
     "profiles": [
       {
         "label": "15 Wizard",
@@ -23446,14 +23459,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "de-char-wizard-20-witherwitches",
+    "id": "de-char-wizard-20-witherwitch",
     "army": "dark-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Witherwitches",
+    "name": "Witherwitch",
     "profiles": [
       {
         "label": "20 Wizard",
@@ -23637,6 +23651,7 @@ const WFB3_UNITS = [
     "army": "dark-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -23820,14 +23835,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-hero-5-glade-watchers",
+    "id": "we-char-hero-5-glade-watcher",
     "army": "wood-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 5,
     "charMax": 10,
     "allowance": "1",
-    "name": "Glade Watchers",
+    "name": "Glade Watcher",
     "profiles": [
       {
         "label": "5 Hero",
@@ -23983,14 +23999,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-hero-10-guardians",
+    "id": "we-char-hero-10-guardian",
     "army": "wood-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
-    "name": "Guardians",
+    "name": "Guardian",
     "profiles": [
       {
         "label": "10 Hero",
@@ -24146,14 +24163,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-hero-15-wood-lords",
+    "id": "we-char-hero-15-wood-lord",
     "army": "wood-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
-    "name": "Wood Lords",
+    "name": "Wood Lord",
     "profiles": [
       {
         "label": "15 Hero",
@@ -24309,14 +24327,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-hero-20-sylvan-chieftains",
+    "id": "we-char-hero-20-sylvan-chieftain",
     "army": "wood-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
-    "name": "Sylvan Chieftains",
+    "name": "Sylvan Chieftain",
     "profiles": [
       {
         "label": "20 Hero",
@@ -24472,14 +24491,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-hero-25-sylvan-kings",
+    "id": "we-char-hero-25-sylvan-king",
     "army": "wood-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
-    "name": "Sylvan Kings",
+    "name": "Sylvan King",
     "profiles": [
       {
         "label": "25 Hero",
@@ -24635,14 +24655,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-wizard-5-woodfeys",
+    "id": "we-char-wizard-5-woodfey",
     "army": "wood-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
-    "name": "Woodfeys",
+    "name": "Woodfey",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -24806,14 +24827,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-wizard-10-spellsingers",
+    "id": "we-char-wizard-10-spellsinger",
     "army": "wood-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 3,
     "allowance": "1",
-    "name": "Spellsingers",
+    "name": "Spellsinger",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -24977,14 +24999,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-wizard-15-sylphseers",
+    "id": "we-char-wizard-15-sylphseer",
     "army": "wood-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Sylphseers",
+    "name": "Sylphseer",
     "profiles": [
       {
         "label": "15 Wizard",
@@ -25148,14 +25171,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "we-char-wizard-20-greenfeys",
+    "id": "we-char-wizard-20-greenfey",
     "army": "wood-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Greenfeys",
+    "name": "Greenfey",
     "profiles": [
       {
         "label": "20 Wizard",
@@ -25323,6 +25347,7 @@ const WFB3_UNITS = [
     "army": "wood-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -25490,14 +25515,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-hero-5-kinthanes",
+    "id": "he-char-hero-5-kinthane",
     "army": "high-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
-    "name": "Kinthanes",
+    "name": "Kinthane",
     "profiles": [
       {
         "label": "5 Hero",
@@ -25673,14 +25699,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-hero-10-earls",
+    "id": "he-char-hero-10-earl",
     "army": "high-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
-    "name": "Earls",
+    "name": "Earl",
     "profiles": [
       {
         "label": "10 Hero",
@@ -25856,14 +25883,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-hero-15-kinlords",
+    "id": "he-char-hero-15-kinlord",
     "army": "high-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
-    "name": "Kinlords",
+    "name": "Kinlord",
     "profiles": [
       {
         "label": "15 Hero",
@@ -26039,14 +26067,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-hero-20-princes",
+    "id": "he-char-hero-20-prince",
     "army": "high-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Princes",
+    "name": "Prince",
     "profiles": [
       {
         "label": "20 Hero",
@@ -26226,6 +26255,7 @@ const WFB3_UNITS = [
     "army": "high-elves",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -26405,14 +26435,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-wizard-5-incantors",
+    "id": "he-char-wizard-5-incantor",
     "army": "high-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
-    "name": "Incantors",
+    "name": "Incantor",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -26596,14 +26627,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-wizard-10-spellbards",
+    "id": "he-char-wizard-10-spellbard",
     "army": "high-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 3,
     "allowance": "1",
-    "name": "Spellbards",
+    "name": "Spellbard",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -26787,14 +26819,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-wizard-15-feys",
+    "id": "he-char-wizard-15-fey",
     "army": "high-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 3,
     "allowance": "1",
-    "name": "Feys",
+    "name": "Fey",
     "profiles": [
       {
         "label": "15 Wizard",
@@ -26978,14 +27011,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "he-char-wizard-20-dreamguilers",
+    "id": "he-char-wizard-20-dreamguiler",
     "army": "high-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Dreamguilers",
+    "name": "Dreamguiler",
     "profiles": [
       {
         "label": "20 Wizard",
@@ -27173,6 +27207,7 @@ const WFB3_UNITS = [
     "army": "high-elves",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -27360,14 +27395,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "em-char-hero-5-grafs",
+    "id": "em-char-hero-5-graf",
     "army": "empire",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
-    "name": "Grafs",
+    "name": "Graf",
     "profiles": [
       {
         "label": "5 Hero",
@@ -27523,6 +27559,7 @@ const WFB3_UNITS = [
     "army": "empire",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 10,
     "charMax": 4,
     "allowance": "1",
@@ -27678,14 +27715,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "em-char-hero-15-margrafs",
+    "id": "em-char-hero-15-margraf",
     "army": "empire",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 15,
     "charMax": 3,
     "allowance": "1",
-    "name": "Margrafs",
+    "name": "Margraf",
     "profiles": [
       {
         "label": "15 Hero",
@@ -27837,14 +27875,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "em-char-hero-20-counts",
+    "id": "em-char-hero-20-count",
     "army": "empire",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Counts",
+    "name": "Count",
     "profiles": [
       {
         "label": "20 Hero",
@@ -28000,6 +28039,7 @@ const WFB3_UNITS = [
     "army": "empire",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -28159,6 +28199,7 @@ const WFB3_UNITS = [
     "army": "empire",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
@@ -28322,14 +28363,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "em-char-wizard-10-schwarzmantels",
+    "id": "em-char-wizard-10-schwarzmantel",
     "army": "empire",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
-    "name": "Schwarzmantels",
+    "name": "Schwarzmantel",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -28493,6 +28535,7 @@ const WFB3_UNITS = [
     "army": "empire",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -28660,6 +28703,7 @@ const WFB3_UNITS = [
     "army": "empire",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -28827,6 +28871,7 @@ const WFB3_UNITS = [
     "army": "empire",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -28990,14 +29035,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "br-char-hero-5-barons",
+    "id": "br-char-hero-5-baron",
     "army": "bretonnia",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
-    "name": "Barons",
+    "name": "Baron",
     "profiles": [
       {
         "label": "5 Hero",
@@ -29133,14 +29179,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "br-char-hero-10-marquises",
+    "id": "br-char-hero-10-marquise",
     "army": "bretonnia",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 10,
     "charMax": 4,
     "allowance": "1",
-    "name": "Marquises",
+    "name": "Marquise",
     "profiles": [
       {
         "label": "10 Hero",
@@ -29276,14 +29323,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "br-char-hero-15-viscomtes",
+    "id": "br-char-hero-15-viscomte",
     "army": "bretonnia",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 15,
     "charMax": 3,
     "allowance": "1",
-    "name": "Viscomtes",
+    "name": "Viscomte",
     "profiles": [
       {
         "label": "15 Hero",
@@ -29419,14 +29467,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "br-char-hero-20-comtes",
+    "id": "br-char-hero-20-comte",
     "army": "bretonnia",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Comtes",
+    "name": "Comte",
     "profiles": [
       {
         "label": "20 Hero",
@@ -29566,6 +29615,7 @@ const WFB3_UNITS = [
     "army": "bretonnia",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -29705,14 +29755,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "br-char-wizard-5-amorciers",
+    "id": "br-char-wizard-5-amorcier",
     "army": "bretonnia",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
-    "name": "Amorciers",
+    "name": "Amorcier",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -29856,14 +29907,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "br-char-wizard-10-charmiers",
+    "id": "br-char-wizard-10-charmier",
     "army": "bretonnia",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 3,
     "allowance": "1",
-    "name": "Charmiers",
+    "name": "Charmier",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -30007,14 +30059,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "br-char-wizard-15-enchantiers",
+    "id": "br-char-wizard-15-enchantier",
     "army": "bretonnia",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Enchantiers",
+    "name": "Enchantier",
     "profiles": [
       {
         "label": "15 Wizard",
@@ -30162,6 +30215,7 @@ const WFB3_UNITS = [
     "army": "bretonnia",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -30313,6 +30367,7 @@ const WFB3_UNITS = [
     "army": "bretonnia",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -30460,14 +30515,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-hero-5-beastmen-heroes-banebeasts",
+    "id": "ch-char-hero-5-beastmen-heroes-banebeast",
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Beastmen Hero",
     "level": 5,
     "charMax": 4,
     "allowance": "1",
-    "name": "Banebeasts",
+    "name": "Banebeast",
     "profiles": [
       {
         "label": "5 Hero",
@@ -30619,14 +30675,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-hero-10-beastmen-heroes-despoilers",
+    "id": "ch-char-hero-10-beastmen-heroes-despoiler",
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Beastmen Hero",
     "level": 10,
     "charMax": 3,
     "allowance": "1",
-    "name": "Despoilers",
+    "name": "Despoiler",
     "profiles": [
       {
         "label": "10 Hero",
@@ -30778,14 +30835,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-hero-15-beastmen-heroes-feralfiends",
+    "id": "ch-char-hero-15-beastmen-heroes-feralfiend",
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Beastmen Hero",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Feralfiends",
+    "name": "Feralfiend",
     "profiles": [
       {
         "label": "15 Hero",
@@ -30941,6 +30999,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Beastmen Hero",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -31100,6 +31159,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Beastmen Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -31259,6 +31319,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Minotaur Hero",
     "level": 5,
     "charMax": 4,
     "allowance": "1",
@@ -31418,6 +31479,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Minotaur Hero",
     "level": 10,
     "charMax": 1,
     "allowance": "1",
@@ -31577,6 +31639,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Minotaur Hero",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -31736,6 +31799,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Minotaur Hero",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -31895,6 +31959,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Minotaur Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -32050,14 +32115,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-wizard-5-chaos-sorcerers-initiates",
+    "id": "ch-char-wizard-5-chaos-sorcerers-initiate",
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Chaos Sorcerer",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
-    "name": "Initiates",
+    "name": "Initiate",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -32217,14 +32283,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-wizard-10-chaos-sorcerers-maledictors",
+    "id": "ch-char-wizard-10-chaos-sorcerers-maledictor",
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Chaos Sorcerer",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
-    "name": "Maledictors",
+    "name": "Maledictor",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -32384,14 +32451,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-wizard-15-chaos-sorcerers-doomweavers",
+    "id": "ch-char-wizard-15-chaos-sorcerers-doomweaver",
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Chaos Sorcerer",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Doomweavers",
+    "name": "Doomweaver",
     "profiles": [
       {
         "label": "15 Wizard",
@@ -32551,14 +32619,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-wizard-20-chaos-sorcerers-soulflayers",
+    "id": "ch-char-wizard-20-chaos-sorcerers-soulflayer",
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Chaos Sorcerer",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Soulflayers",
+    "name": "Soulflayer",
     "profiles": [
       {
         "label": "20 Wizard",
@@ -32722,6 +32791,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Chaos Sorcerer",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -32885,14 +32955,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-wizard-5-beastman-shamans-initiates",
+    "id": "ch-char-wizard-5-beastman-shamans-initiate",
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Beastman Shaman",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Initiates",
+    "name": "Initiate",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -33052,14 +33123,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "ch-char-wizard-10-beastman-shamans-marauders",
+    "id": "ch-char-wizard-10-beastman-shamans-marauder",
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Beastman Shaman",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
-    "name": "Marauders",
+    "name": "Marauder",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -33223,6 +33295,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Beastman Shaman",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -33390,6 +33463,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Beastman Shaman",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -33557,6 +33631,7 @@ const WFB3_UNITS = [
     "army": "chaos",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Beastman Shaman",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -33720,14 +33795,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-hero-5-warlord-clan-heroes-clan-chieftains",
+    "id": "sk-char-hero-5-warlord-clan-heroes-clan-chieftain",
     "army": "skaven",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Warlord Clan Hero",
     "level": 5,
     "charMax": 10,
     "allowance": "1",
-    "name": "Clan Chieftains",
+    "name": "Clan Chieftain",
     "profiles": [
       {
         "label": "5 Hero",
@@ -33851,14 +33927,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-hero-10-warlord-clan-heroes-clan-warlords",
+    "id": "sk-char-hero-10-warlord-clan-heroes-clan-warlord",
     "army": "skaven",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Warlord Clan Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
-    "name": "Clan Warlords",
+    "name": "Clan Warlord",
     "profiles": [
       {
         "label": "10 Hero",
@@ -33982,14 +34059,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-hero-15-warlord-clan-heroes-verminlords",
+    "id": "sk-char-hero-15-warlord-clan-heroes-verminlord",
     "army": "skaven",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Warlord Clan Hero",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Verminlords",
+    "name": "Verminlord",
     "profiles": [
       {
         "label": "15 Hero",
@@ -34117,6 +34195,7 @@ const WFB3_UNITS = [
     "army": "skaven",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Warlord Clan Hero",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -34248,6 +34327,7 @@ const WFB3_UNITS = [
     "army": "skaven",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Warlord Clan Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -34375,14 +34455,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-assassin-5-clan-eshin-assassins-stranglers",
+    "id": "sk-char-assassin-5-clan-eshin-assassins-strangler",
     "army": "skaven",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Clan Eshin Assassin",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Stranglers",
+    "name": "Strangler",
     "profiles": [
       {
         "label": "5 Assassin",
@@ -34506,14 +34587,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-assassin-10-clan-eshin-assassins-cullers",
+    "id": "sk-char-assassin-10-clan-eshin-assassins-culler",
     "army": "skaven",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Clan Eshin Assassin",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
-    "name": "Cullers",
+    "name": "Culler",
     "profiles": [
       {
         "label": "10 Assassin",
@@ -34637,14 +34719,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-assassin-15-clan-eshin-assassins-garrotters",
+    "id": "sk-char-assassin-15-clan-eshin-assassins-garrotter",
     "army": "skaven",
     "type": "character",
     "charType": "assassin",
+    "charGroupLabel": "Clan Eshin Assassin",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Garrotters",
+    "name": "Garrotter",
     "profiles": [
       {
         "label": "15 Assassin",
@@ -34768,14 +34851,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-wizard-5-clan-scryre-seers",
+    "id": "sk-char-wizard-5-clan-scryre-seer",
     "army": "skaven",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Clan Scryre Seers",
+    "name": "Clan Scryre Seer",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -34907,14 +34991,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-wizard-10-clan-scryre-warpweavers",
+    "id": "sk-char-wizard-10-clan-scryre-warpweaver",
     "army": "skaven",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
-    "name": "Clan Scryre Warpweavers",
+    "name": "Clan Scryre Warpweaver",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -35046,14 +35131,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sk-char-wizard-15-clan-scryre-warpsquealers",
+    "id": "sk-char-wizard-15-clan-scryre-warpsquealer",
     "army": "skaven",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Clan Scryre Warpsquealers",
+    "name": "Clan Scryre Warpsquealer",
     "profiles": [
       {
         "label": "15 Wizard",
@@ -35189,6 +35275,7 @@ const WFB3_UNITS = [
     "army": "skaven",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -35328,6 +35415,7 @@ const WFB3_UNITS = [
     "army": "skaven",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -35463,14 +35551,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sl-char-hero-5-slann-call-leaders",
+    "id": "sl-char-hero-5-slann-call-leader",
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Slann Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
-    "name": "Call Leaders",
+    "name": "Call Leader",
     "profiles": [
       {
         "label": "5 Hero",
@@ -35586,6 +35675,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Slann Hero",
     "level": 10,
     "charMax": 4,
     "allowance": "1",
@@ -35701,14 +35791,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sl-char-hero-15-slann-spawn-masters",
+    "id": "sl-char-hero-15-slann-spawn-master",
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Slann Hero",
     "level": 15,
     "charMax": 3,
     "allowance": "1",
-    "name": "Spawn Masters",
+    "name": "Spawn Master",
     "profiles": [
       {
         "label": "15 Hero",
@@ -35820,14 +35911,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sl-char-hero-20-slann-pond-masters",
+    "id": "sl-char-hero-20-slann-pond-master",
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Slann Hero",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Pond Masters",
+    "name": "Pond Master",
     "profiles": [
       {
         "label": "20 Hero",
@@ -35943,6 +36035,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Slann Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -36062,6 +36155,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Lizardman Hero",
     "level": 5,
     "charMax": 1,
     "allowance": "1",
@@ -36181,6 +36275,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Lizardman Hero",
     "level": 10,
     "charMax": 1,
     "allowance": "1",
@@ -36300,6 +36395,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Lizardman Hero",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -36419,6 +36515,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Lizardman Hero",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -36538,6 +36635,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Lizardman Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -36653,14 +36751,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sl-char-wizard-5-blessers-of-water",
+    "id": "sl-char-wizard-5-blesser-of-water",
     "army": "slann",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Blessers of Water",
+    "name": "Blesser of Water",
     "profiles": [
       {
         "label": "5 Wizard",
@@ -36780,14 +36879,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sl-char-wizard-10-masters-of-deluge",
+    "id": "sl-char-wizard-10-master-of-deluge",
     "army": "slann",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
-    "name": "Masters of Deluge",
+    "name": "Master of Deluge",
     "profiles": [
       {
         "label": "10 Wizard",
@@ -36907,14 +37007,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sl-char-wizard-15-watchers-of-rain",
+    "id": "sl-char-wizard-15-watcher-of-rain",
     "army": "slann",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
-    "name": "Watchers of Rain",
+    "name": "Watcher of Rain",
     "profiles": [
       {
         "label": "15 Wizard",
@@ -37034,14 +37135,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "sl-char-wizard-20-seekers-of-stars",
+    "id": "sl-char-wizard-20-seeker-of-stars",
     "army": "slann",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Seekers of Stars",
+    "name": "Seeker of Stars",
     "profiles": [
       {
         "label": "20 Wizard",
@@ -37165,6 +37267,7 @@ const WFB3_UNITS = [
     "army": "slann",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -37292,6 +37395,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Orc Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
@@ -37435,6 +37539,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Half-Orc Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
@@ -37578,6 +37683,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Goblin Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
@@ -37721,6 +37827,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Black Orc Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
@@ -37864,6 +37971,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Savage Orc Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
@@ -38007,6 +38115,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Orc Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
@@ -38150,6 +38259,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Half-Orc Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
@@ -38293,6 +38403,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Goblin Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
@@ -38436,6 +38547,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Black Orc Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
@@ -38579,6 +38691,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Savage Orc Hero",
     "level": 10,
     "charMax": 5,
     "allowance": "1",
@@ -38722,6 +38835,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Orc Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
@@ -38865,6 +38979,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Half-Orc Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
@@ -39008,6 +39123,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Goblin Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
@@ -39151,6 +39267,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Black Orc Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
@@ -39294,6 +39411,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Savage Orc Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
@@ -39437,6 +39555,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Orc Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
@@ -39580,6 +39699,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Half-Orc Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
@@ -39723,6 +39843,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Goblin Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
@@ -39866,6 +39987,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Black Orc Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
@@ -40009,6 +40131,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Savage Orc Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
@@ -40152,6 +40275,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Orc Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
@@ -40295,6 +40419,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Half-Orc Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
@@ -40438,6 +40563,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Goblin Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
@@ -40581,6 +40707,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Black Orc Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
@@ -40724,6 +40851,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Savage Orc Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
@@ -40867,6 +40995,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Orc Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
@@ -41018,6 +41147,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Half-Orc Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
@@ -41169,6 +41299,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Goblin Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
@@ -41320,6 +41451,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Black Orc Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
@@ -41471,6 +41603,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Savage Orc Wizard",
     "level": 5,
     "charMax": 3,
     "allowance": "1",
@@ -41622,6 +41755,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Orc Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -41773,6 +41907,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Half-Orc Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -41924,6 +42059,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Goblin Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -42075,6 +42211,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Black Orc Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -42226,6 +42363,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Savage Orc Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -42377,6 +42515,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Orc Wizard",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -42528,6 +42667,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Half-Orc Wizard",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -42679,6 +42819,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Goblin Wizard",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -42830,6 +42971,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Black Orc Wizard",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -42981,6 +43123,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Savage Orc Wizard",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -43132,6 +43275,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Orc Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -43283,6 +43427,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Half-Orc Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -43434,6 +43579,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Goblin Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -43585,6 +43731,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Black Orc Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -43736,6 +43883,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Savage Orc Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -43887,6 +44035,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Orc Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -44038,6 +44187,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Half-Orc Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -44189,6 +44339,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Goblin Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -44340,6 +44491,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Black Orc Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -44491,6 +44643,7 @@ const WFB3_UNITS = [
     "army": "orcs-goblins",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Savage Orc Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -44638,14 +44791,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-hero-5-foe-smiters",
+    "id": "dw-char-hero-5-foe-smiter",
     "army": "dwarfs",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 5,
     "charMax": 6,
     "allowance": "1",
-    "name": "Foe Smiters",
+    "name": "Foe Smiter",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -44785,14 +44939,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-hero-10-anvil-cleavers",
+    "id": "dw-char-hero-10-anvil-cleaver",
     "army": "dwarfs",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 10,
     "charMax": 6,
     "allowance": "1",
-    "name": "Anvil Cleavers",
+    "name": "Anvil Cleaver",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -44932,14 +45087,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-hero-15-war-forgers",
+    "id": "dw-char-hero-15-war-forger",
     "army": "dwarfs",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
-    "name": "War Forgers",
+    "name": "War Forger",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -45079,14 +45235,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-hero-20-battle-wrights",
+    "id": "dw-char-hero-20-battle-wright",
     "army": "dwarfs",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 20,
     "charMax": 3,
     "allowance": "1",
-    "name": "Battle Wrights",
+    "name": "Battle Wright",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -45226,14 +45383,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-hero-25-hold-masters",
+    "id": "dw-char-hero-25-hold-master",
     "army": "dwarfs",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 25,
     "charMax": 2,
     "allowance": "1",
-    "name": "Hold Masters",
+    "name": "Hold Master",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -45373,14 +45531,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-slayer-5-troll-slayer-doomseekers",
+    "id": "dw-char-slayer-5-troll-slayer-doomseeker",
     "army": "dwarfs",
     "type": "character",
     "charType": "slayer",
+    "charGroupLabel": "Dwarven Slayer",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Troll-slayer Doomseekers",
+    "name": "Troll-slayer Doomseeker",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -45524,6 +45683,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "slayer",
+    "charGroupLabel": "Dwarven Slayer",
     "level": 10,
     "charMax": 1,
     "allowance": "1",
@@ -45671,6 +45831,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "slayer",
+    "charGroupLabel": "Dwarven Slayer",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -45818,6 +45979,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "slayer",
+    "charGroupLabel": "Dwarven Slayer",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -45965,6 +46127,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "slayer",
+    "charGroupLabel": "Dwarven Slayer",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -46108,14 +46271,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-gnome-5-gnome-dwarrors",
+    "id": "dw-char-gnome-5-gnome-dwarror",
     "army": "dwarfs",
     "type": "character",
     "charType": "gnome",
+    "charGroupLabel": "Gnome",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Gnome Dwarrors",
+    "name": "Gnome Dwarror",
     "profiles": [
       {
         "label": "Gnome (base)",
@@ -46259,6 +46423,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "gnome",
+    "charGroupLabel": "Gnome",
     "level": 10,
     "charMax": 1,
     "allowance": "1",
@@ -46406,6 +46571,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "gnome",
+    "charGroupLabel": "Gnome",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -46553,6 +46719,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "gnome",
+    "charGroupLabel": "Gnome",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -46700,6 +46867,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "gnome",
+    "charGroupLabel": "Gnome",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -46843,14 +47011,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-wizard-5-spell-smiths",
+    "id": "dw-char-wizard-5-spell-smith",
     "army": "dwarfs",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
-    "name": "Spell Smiths",
+    "name": "Spell Smith",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -46998,14 +47167,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "dw-char-wizard-10-forgers-of-enchantry",
+    "id": "dw-char-wizard-10-forger-of-enchantry",
     "army": "dwarfs",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
-    "name": "Forgers of Enchantry",
+    "name": "Forger of Enchantry",
     "profiles": [
       {
         "label": "Dwarf (base)",
@@ -47157,6 +47327,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 15,
     "charMax": 1,
     "allowance": "1",
@@ -47312,6 +47483,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 20,
     "charMax": 1,
     "allowance": "1",
@@ -47467,6 +47639,7 @@ const WFB3_UNITS = [
     "army": "dwarfs",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Wizard",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -47618,14 +47791,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "un-char-hero-5-charnel-warriors",
+    "id": "un-char-hero-5-charnel-warrior",
     "army": "undead",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 5,
     "charMax": 8,
     "allowance": "1",
-    "name": "Charnel Warriors",
+    "name": "Charnel Warrior",
     "profiles": [
       {
         "label": "Undead Hero",
@@ -47733,14 +47907,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "un-char-hero-10-grave-fiends",
+    "id": "un-char-hero-10-grave-fiend",
     "army": "undead",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 10,
     "charMax": 6,
     "allowance": "1",
-    "name": "Grave Fiends",
+    "name": "Grave Fiend",
     "profiles": [
       {
         "label": "Undead Hero",
@@ -47848,14 +48023,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "un-char-hero-15-tombterrors",
+    "id": "un-char-hero-15-tombterror",
     "army": "undead",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 15,
     "charMax": 4,
     "allowance": "1",
-    "name": "Tombterrors",
+    "name": "Tombterror",
     "profiles": [
       {
         "label": "Undead Hero",
@@ -47963,14 +48139,15 @@ const WFB3_UNITS = [
     "flavour": null
   },
   {
-    "id": "un-char-hero-20-corpse-knights",
+    "id": "un-char-hero-20-corpse-knight",
     "army": "undead",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
-    "name": "Corpse Knights",
+    "name": "Corpse Knight",
     "profiles": [
       {
         "label": "Undead Hero",
@@ -48082,6 +48259,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "hero",
+    "charGroupLabel": "Hero",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -48197,6 +48375,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Evil Sorcerer",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
@@ -48320,6 +48499,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "liche",
+    "charGroupLabel": "Liche",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
@@ -48443,6 +48623,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "vampire",
+    "charGroupLabel": "Vampire",
     "level": 5,
     "charMax": 2,
     "allowance": "1",
@@ -48566,6 +48747,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Evil Sorcerer",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -48689,6 +48871,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "liche",
+    "charGroupLabel": "Liche",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -48812,6 +48995,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "vampire",
+    "charGroupLabel": "Vampire",
     "level": 10,
     "charMax": 2,
     "allowance": "1",
@@ -48935,6 +49119,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Evil Sorcerer",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
@@ -49058,6 +49243,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "liche",
+    "charGroupLabel": "Liche",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
@@ -49181,6 +49367,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "vampire",
+    "charGroupLabel": "Vampire",
     "level": 15,
     "charMax": 2,
     "allowance": "1",
@@ -49304,6 +49491,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Evil Sorcerer",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
@@ -49427,6 +49615,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "liche",
+    "charGroupLabel": "Liche",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
@@ -49550,6 +49739,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "vampire",
+    "charGroupLabel": "Vampire",
     "level": 20,
     "charMax": 2,
     "allowance": "1",
@@ -49673,6 +49863,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "wizard",
+    "charGroupLabel": "Evil Sorcerer",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -49796,6 +49987,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "liche",
+    "charGroupLabel": "Liche",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
@@ -49919,6 +50111,7 @@ const WFB3_UNITS = [
     "army": "undead",
     "type": "character",
     "charType": "vampire",
+    "charGroupLabel": "Vampire",
     "level": 25,
     "charMax": 1,
     "allowance": "1",
