@@ -1001,13 +1001,13 @@ function buildCharOptSections(unitData, item, ptsTotalEl) {
     hdr.className = 'alb-opt-sec-hdr';
     const arrow = document.createElement('span');
     arrow.className = 'alb-opt-sec-arrow';
-    arrow.textContent = '▼';
+    arrow.textContent = '▶';
     const titleSpan = document.createElement('span');
     titleSpan.textContent = title;
     hdr.appendChild(arrow);
     hdr.appendChild(titleSpan);
     const body = document.createElement('div');
-    body.className = 'alb-opt-sec-body';
+    body.className = 'alb-opt-sec-body hidden';
     hdr.onclick = function() {
       const nowHidden = body.classList.toggle('hidden');
       arrow.textContent = nowHidden ? '▶' : '▼';
