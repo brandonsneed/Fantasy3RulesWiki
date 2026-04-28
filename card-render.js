@@ -263,6 +263,27 @@ function buildInfoRows(unit) {
   return html;
 }
 
+/* ── Special rules block ─────────────────────────────────────────────────── */
+/**
+ * Renders a row of special rule tags for a unit, using the WFB3_UNIT_RULES
+ * overlay from special-rules-data.js.  Returns '' if no rules apply or the
+ * data file is not loaded.
+ * @param {string} unitId  — unit.id (no "card-" prefix)
+ */
+function buildSpecialRules(unitId) {
+  if (typeof WFB3_UNIT_RULES === 'undefined') return '';
+  const rules = WFB3_UNIT_RULES[unitId];
+  if (!rules || !rules.length) return '';
+
+  const defs = (typeof WFB3_RULE_DEFS !== 'undefined') ? WFB3_RULE_DEFS : {};
+  const tags = rules.map(function(r) {
+    const tip = defs[r] ? esc(defs[r]) : '';
+    return `<span class="al-rule-tag" title="${tip}">${esc(r)}</span>`;
+  }).join('');
+
+  return `<div class="al-special-rules">${tags}</div>`;
+}
+
 /* ── Flavour text ────────────────────────────────────────────────────────── */
 function buildFlavour(flavour) {
   if (!flavour) return '';
@@ -286,6 +307,7 @@ function renderStandard(unit) {
 
   let info = '<div class="al-info">';
   info += buildInfoRows(unit);
+  info += buildSpecialRules(unit.id);
   info += buildOptions(unit.options);
   info += '</div>';
 
@@ -356,6 +378,7 @@ function renderHandler(unit) {
       `</div>`;
   }
 
+  info += buildSpecialRules(unit.id);
   info += buildOptions(unit.options);
   info += buildPacks(unit.packs);
   info += '</div>';
@@ -410,9 +433,10 @@ function renderWarMachine(unit) {
     html += `<div class="al-wm-art"><img src="${unit.art}" alt="${esc(unit.name || '')}"></div>`;
   }
 
-  // Options block (between art and footer, if present)
-  if (unit.options && unit.options.length) {
-    html += `<div style="padding:4px 10px 6px">` + buildOptions(unit.options) + `</div>`;
+  // Special rules + options block (between art and footer, if present)
+  const srHtml = buildSpecialRules(unit.id);
+  if (srHtml || (unit.options && unit.options.length)) {
+    html += `<div style="padding:4px 10px 6px">` + srHtml + buildOptions(unit.options) + `</div>`;
   }
 
   // .al-wm-footer: weapons + armour cells (+ any extra footer cells from chariot.crew, etc.)
@@ -519,9 +543,10 @@ function renderChariot(unit) {
     `</div>` +
     `</div>`;
 
-  // Options (if any)
-  if (unit.options && unit.options.length) {
-    html += `<div style="padding:4px 10px 6px">` + buildOptions(unit.options) + `</div>`;
+  // Special rules + options (if any)
+  const srHtml2 = buildSpecialRules(unit.id);
+  if (srHtml2 || (unit.options && unit.options.length)) {
+    html += `<div style="padding:4px 10px 6px">` + srHtml2 + buildOptions(unit.options) + `</div>`;
   }
 
   html += buildFlavour(unit.flavour);
@@ -693,6 +718,9 @@ function renderCharacter(unit, selectedOpts) {
       `<span class="al-val">${esc(unit.armour)}</span>` +
       `</div>`;
   }
+
+  // Special rules
+  info += buildSpecialRules(unit.id);
 
   // Options: filtered to selected only (army-list) or full catalogue (preview/wiki)
   if (selectedOpts != null) {
