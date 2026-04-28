@@ -58,9 +58,22 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 /* CARD AREA */
 .card-area { flex: 1; background: #ccc; padding: 24px 20px; overflow-y: auto; }
 
-/* GROUP HEADING (army name) */
+/* SECTION HEADINGS (Characters / Units) */
 .army-group-heading { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #444; margin: 20px 0 10px; padding-bottom: 4px; border-bottom: 1px solid #aaa; column-span: all; }
 .army-group-heading:first-child { margin-top: 0; }
+
+/* DRAG AND DROP */
+.alb-drag-handle { color: #3a3a3a; font-size: 13px; line-height: 1; cursor: grab; padding: 0 3px 0 0; flex-shrink: 0; user-select: none; }
+.alb-drag-handle:active { cursor: grabbing; }
+.card-wrapper.drag-over { border-top: 3px solid #5a8a6a; }
+.card-wrapper.dragging  { opacity: 0.4; }
+
+/* LEADING FIELD */
+.alb-leading-row { width: 100%; padding: 3px 0 2px; display: flex; align-items: center; gap: 5px; border-top: 1px solid #252525; }
+.alb-leading-lbl { font-size: 7px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #555; white-space: nowrap; flex-shrink: 0; }
+.alb-leading-select { flex: 1; background: transparent; border: none; color: #888; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-style: italic; outline: none; cursor: pointer; min-width: 0; }
+.alb-leading-select:focus { color: #ccc; }
+.alb-leading-select option { background: #1a1a1a; color: #ccc; font-style: normal; }
 
 /* CARD GRID — 2 columns */
 .card-grid { column-count: 2; column-gap: 20px; }
@@ -672,6 +685,7 @@ const HEADER_KEY = "wfb3-army-header";
 /* ═══ STATE ═══ */
 let cards = [];
 let browserArmyId = null;  // currently selected army in browser
+let dragId = null;          // id of card being dragged
 
 /* ═══ INIT ═══ */
 (function init() {
@@ -706,31 +720,29 @@ function renderGrid() {
   }
   empty.classList.remove("visible");
 
-  // Group by army, preserving insertion order
-  const groups = {};
-  const order  = [];
-  cards.forEach(function(item) {
-    const key = item.army || "Other";
-    if (!groups[key]) { groups[key] = []; order.push(key); }
-    groups[key].push(item);
+  // Split into characters and units, preserving insertion order within each
+  const charCards = cards.filter(function(c) {
+    const u = lookupUnit(c.sourceId);
+    return u && u.type === 'character';
+  });
+  const unitCards = cards.filter(function(c) {
+    const u = lookupUnit(c.sourceId);
+    return !u || u.type !== 'character';
   });
 
-  order.forEach(function(armyKey) {
-    // Group heading — look up display name from WFB3_ARMIES if available
-    const armyDef = (typeof WFB3_ARMIES !== 'undefined')
-      ? WFB3_ARMIES.find(function(a) { return a.id === armyKey; })
-      : null;
+  function addSection(label, sectionCards) {
+    if (!sectionCards.length) return;
     const heading = document.createElement("div");
     heading.className = "army-group-heading";
-    heading.textContent = armyDef ? armyDef.name : armyKey;
+    heading.textContent = label;
     grid.appendChild(heading);
 
-    groups[armyKey].forEach(function(item) {
+    sectionCards.forEach(function(item) {
       const wrapper = document.createElement("div");
       wrapper.className = "card-wrapper";
       wrapper.dataset.listId = item.id;
 
-      // Render the card HTML
+      // Card HTML
       const cardHtml = resolveCardHtml(item);
       if (cardHtml) {
         const tmp = document.createElement("div");
@@ -741,9 +753,41 @@ function renderGrid() {
 
       // Controls bar
       wrapper.appendChild(buildControls(item));
+
+      // Drag-and-drop: drop target on the wrapper
+      wrapper.addEventListener('dragover', function(e) {
+        if (!dragId || dragId === item.id) return;
+        // Only allow drop within the same section
+        const draggedUnit = lookupUnit((cards.find(function(c){return c.id===dragId;})||{}).sourceId);
+        const draggedIsChar = draggedUnit && draggedUnit.type === 'character';
+        const thisIsChar    = sectionCards === charCards;
+        if (draggedIsChar !== thisIsChar) return;
+        e.preventDefault();
+        wrapper.classList.add('drag-over');
+      });
+      wrapper.addEventListener('dragleave', function() {
+        wrapper.classList.remove('drag-over');
+      });
+      wrapper.addEventListener('drop', function(e) {
+        e.preventDefault();
+        wrapper.classList.remove('drag-over');
+        if (!dragId || dragId === item.id) return;
+        const fromIdx = cards.findIndex(function(c){return c.id===dragId;});
+        if (fromIdx === -1) return;
+        const [moved] = cards.splice(fromIdx, 1);
+        // After removal, find target's new index and insert before it
+        const toIdx = cards.findIndex(function(c){return c.id===item.id;});
+        if (toIdx === -1) { cards.push(moved); } else { cards.splice(toIdx, 0, moved); }
+        saveCards();
+        renderGrid();
+      });
+
       grid.appendChild(wrapper);
     });
-  });
+  }
+
+  addSection("Characters", charCards);
+  addSection("Units", unitCards);
 
   updateTotals();
   document.title = (document.getElementById("al-name").value || "Army List") + " — WFB3";
@@ -1095,9 +1139,28 @@ function buildControls(item) {
   const metaRow = document.createElement("div");
   metaRow.className = "alb-meta-row";
 
-  // Left cluster: models input + pts rate
+  // Left cluster: drag handle + models input + pts rate
   const metaLeft = document.createElement("div");
   metaLeft.className = "alb-meta-left";
+
+  const handle = document.createElement("span");
+  handle.className = "alb-drag-handle";
+  handle.textContent = "⠿";
+  handle.title = "Drag to reorder";
+  handle.draggable = true;
+  handle.addEventListener('dragstart', function(e) {
+    dragId = item.id;
+    e.dataTransfer.effectAllowed = 'move';
+    // Mark the wrapper as being dragged (find it by data-list-id)
+    const wrapper = document.querySelector('[data-list-id="' + item.id + '"]');
+    if (wrapper) wrapper.classList.add('dragging');
+  });
+  handle.addEventListener('dragend', function() {
+    dragId = null;
+    const wrapper = document.querySelector('[data-list-id="' + item.id + '"]');
+    if (wrapper) wrapper.classList.remove('dragging');
+  });
+  metaLeft.appendChild(handle);
 
   if (!isChar) {
     const mf = document.createElement("div");
@@ -1187,6 +1250,38 @@ function buildControls(item) {
   ni.oninput = function() { item.notes = ni.value; saveCards(); };
   nr.appendChild(ni);
   ctrl.appendChild(nr);
+
+  // ── Leading field (characters only) ──────────────────────────────────
+  if (isChar) {
+    const lr = document.createElement("div");
+    lr.className = "alb-leading-row";
+    const ll = document.createElement("span");
+    ll.className = "alb-leading-lbl";
+    ll.textContent = "Leading";
+    const ls = document.createElement("select");
+    ls.className = "alb-leading-select";
+    const blankOpt = document.createElement("option");
+    blankOpt.value = "";
+    blankOpt.textContent = "Not attached to a unit";
+    ls.appendChild(blankOpt);
+    cards.forEach(function(c) {
+      if (c.id === item.id) return;
+      const u = lookupUnit(c.sourceId);
+      if (u && u.type === 'character') return;
+      const opt = document.createElement("option");
+      opt.value = c.id;
+      opt.textContent = u ? u.name : (c.label || c.sourceId || "Unit");
+      if (c.id === item.leadingUnit) opt.selected = true;
+      ls.appendChild(opt);
+    });
+    ls.onchange = function() {
+      item.leadingUnit = ls.value || null;
+      saveCards();
+    };
+    lr.appendChild(ll);
+    lr.appendChild(ls);
+    ctrl.appendChild(lr);
+  }
 
   // Options — characters get grouped accordion sections; other units get a flat chip row
   const unitForOpts = unitData; // already looked up at top of buildControls
