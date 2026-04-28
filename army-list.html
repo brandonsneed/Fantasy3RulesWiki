@@ -48,6 +48,12 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .army-pts-value { font-family: 'Cinzel', serif; font-size: 20px; color: #e8e8e8; letter-spacing: 0.06em; line-height: 1; }
 .army-pts-limit-bar { font-size: 9px; color: #555; letter-spacing: 0.06em; }
 .army-pts-limit-bar.over { color: #c05050; }
+.army-validation-summary { font-size: 9px; letter-spacing: 0.05em; margin-top: 1px; min-height: 13px; }
+.army-validation-summary.ok   { color: #4a8a5a; }
+.army-validation-summary.warn { color: #c08040; }
+/* Card-level warnings */
+.card-wrapper.card-warning { border-color: #7a3a1a; }
+.card-warn-badge { background: #1c1208; color: #c08040; font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-top: 1px solid #2e1a06; }
 
 /* CARD AREA */
 .card-area { flex: 1; background: #ccc; padding: 24px 20px; overflow-y: auto; }
@@ -593,6 +599,7 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
       <label>Total Points</label>
       <span class="army-pts-value" id="al-total-pts">0</span>
       <span class="army-pts-limit-bar" id="al-limit-bar"></span>
+      <div class="army-validation-summary" id="al-validation-summary"></div>
     </div>
   </div>
 
@@ -1543,6 +1550,29 @@ function clearAll() {
 }
 
 /* ═══════════════════════════════════════
+   VALIDATION
+═══════════════════════════════════════ */
+function runValidation() {
+  // Count how many times each sourceId appears in the list
+  const counts = {};
+  cards.forEach(function(c) {
+    if (c.sourceId) counts[c.sourceId] = (counts[c.sourceId] || 0) + 1;
+  });
+
+  // Build a map of cardId → warning message for any violations
+  const warnings = {};
+  cards.forEach(function(c) {
+    const unit = lookupUnit(c.sourceId);
+    if (!unit) return;
+    const taken = counts[c.sourceId] || 0;
+    if (unit.charMax && taken > unit.charMax) {
+      warnings[c.id] = '⚠ max ' + unit.charMax + ' in army — ' + taken + ' taken';
+    }
+  });
+  return warnings;
+}
+
+/* ═══════════════════════════════════════
    TOTALS + HEADER
 ═══════════════════════════════════════ */
 function updateTotals() {
@@ -1550,17 +1580,61 @@ function updateTotals() {
   document.getElementById("al-total-pts").textContent = total;
 
   const limitRaw = parseInt(document.getElementById("al-limit").value) || 0;
-  const bar   = document.getElementById("al-limit-bar");
-  const count = document.getElementById("card-count");
+  const bar      = document.getElementById("al-limit-bar");
+  const count    = document.getElementById("card-count");
   const n = cards.length;
   count.textContent = n + " unit" + (n !== 1 ? "s" : "");
 
+  // Points limit bar
+  let overLimit = false;
   if (limitRaw) {
     const rem = limitRaw - total;
-    bar.textContent = rem >= 0 ? (rem + " pts remaining") : (Math.abs(rem) + " pts over limit!");
-    bar.className = "army-pts-limit-bar" + (rem < 0 ? " over" : "");
+    overLimit = rem < 0;
+    bar.textContent = rem >= 0
+      ? (rem + " pts remaining")
+      : (Math.abs(rem) + " pts over limit!");
+    bar.className = "army-pts-limit-bar" + (overLimit ? " over" : "");
   } else {
     bar.textContent = "";
+    bar.className = "army-pts-limit-bar";
+  }
+
+  // Unit-level validation
+  const warnings = runValidation();
+  const warnCount = Object.keys(warnings).length;
+
+  // Apply / clear warning badges on each card wrapper
+  document.querySelectorAll('[data-list-id]').forEach(function(wrapper) {
+    const id  = wrapper.getAttribute('data-list-id');
+    const msg = warnings[id];
+    wrapper.classList.toggle('card-warning', !!msg);
+    let badge = wrapper.querySelector('.card-warn-badge');
+    if (msg) {
+      if (!badge) {
+        badge = document.createElement('div');
+        badge.className = 'card-warn-badge';
+        wrapper.appendChild(badge);
+      }
+      badge.textContent = msg;
+    } else if (badge) {
+      badge.remove();
+    }
+  });
+
+  // Validation summary line in header
+  const vs = document.getElementById("al-validation-summary");
+  if (vs) {
+    const issues = warnCount + (overLimit ? 1 : 0);
+    if (!n) {
+      vs.textContent = "";
+      vs.className = "army-validation-summary";
+    } else if (issues === 0) {
+      vs.textContent = "✓ List is valid";
+      vs.className = "army-validation-summary ok";
+    } else {
+      vs.textContent = "⚠ " + issues + " issue" + (issues !== 1 ? "s" : "");
+      vs.className = "army-validation-summary warn";
+    }
   }
 }
 
