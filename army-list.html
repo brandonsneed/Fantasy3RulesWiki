@@ -118,19 +118,6 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .alb-opt-sec-arrow { font-size: 9px; line-height: 1; flex-shrink: 0; opacity: 0.7; }
 .alb-opt-sec-body { padding: 3px 6px 6px; display: flex; flex-wrap: wrap; gap: 4px; }
 .alb-opt-sec-body.hidden { display: none; }
-/* Sub-group dividers within a section */
-.alb-opt-subgrp {
-  width: 100%; display: flex; align-items: center; gap: 5px;
-  margin: 3px 0 1px;
-}
-.alb-opt-subgrp:first-child { margin-top: 1px; }
-.alb-opt-subgrp-lbl {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 6.5px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.1em;
-  color: #3d3d3d; white-space: nowrap;
-}
-.alb-opt-subgrp-line { flex: 1; height: 1px; background: #252525; }
 
 /* EMPTY STATE */
 .empty-state { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 80px 24px; text-align: center; }
@@ -998,40 +985,42 @@ function buildOptChip(opt, item, ptsTotalEl, isChar, unitData) {
 
 /**
  * Build the grouped accordion options panel for character units.
- * Equipment items are auto-classified into Weapons / Armour / Mounts & Beasts.
+ * Equipment items are auto-classified into Weapons / Armour / Mounts & Beasts,
+ * each becoming its own independently collapsible section.
  * Magic Items keep their existing expandable ability sub-pickers.
  */
 function buildCharOptSections(unitData, item, ptsTotalEl) {
   const wrap = document.createElement('div');
   wrap.className = 'alb-char-opts';
 
-  (unitData.options || []).forEach(function(group) {
+  // Helper: build one collapsible section with a given title and body-builder callback
+  function makeSection(title, buildBody) {
     const section = document.createElement('div');
     section.className = 'alb-opt-section';
-
-    // Section header (clickable toggle)
     const hdr = document.createElement('div');
     hdr.className = 'alb-opt-sec-hdr';
     const arrow = document.createElement('span');
     arrow.className = 'alb-opt-sec-arrow';
     arrow.textContent = '▼';
     const titleSpan = document.createElement('span');
-    titleSpan.textContent = group.subheading || 'Options';
+    titleSpan.textContent = title;
     hdr.appendChild(arrow);
     hdr.appendChild(titleSpan);
-
     const body = document.createElement('div');
     body.className = 'alb-opt-sec-body';
-
     hdr.onclick = function() {
       const nowHidden = body.classList.toggle('hidden');
       arrow.textContent = nowHidden ? '▶' : '▼';
     };
-
+    buildBody(body);
     section.appendChild(hdr);
+    section.appendChild(body);
+    return section;
+  }
 
+  (unitData.options || []).forEach(function(group) {
     if (group.subheading === 'Equipment') {
-      // Auto-classify items into three buckets
+      // Classify items into three buckets; emit one collapsible section per non-empty bucket
       var buckets    = { weapons: [], armour: [], mounts: [] };
       var bucketLbls = { weapons: 'Weapons', armour: 'Armour', mounts: 'Mounts & Beasts' };
       (group.items || []).forEach(function(opt) {
@@ -1039,35 +1028,26 @@ function buildCharOptSections(unitData, item, ptsTotalEl) {
       });
       ['weapons', 'armour', 'mounts'].forEach(function(cat) {
         if (!buckets[cat].length) return;
-        // Sub-group divider
-        var sg = document.createElement('div');
-        sg.className = 'alb-opt-subgrp';
-        var sgLbl = document.createElement('span');
-        sgLbl.className = 'alb-opt-subgrp-lbl';
-        sgLbl.textContent = bucketLbls[cat];
-        var sgLine = document.createElement('span');
-        sgLine.className = 'alb-opt-subgrp-line';
-        sg.appendChild(sgLbl); sg.appendChild(sgLine);
-        body.appendChild(sg);
-        buckets[cat].forEach(function(opt) {
-          body.appendChild(buildOptChip(opt, item, ptsTotalEl, true, unitData));
-        });
+        wrap.appendChild(makeSection(bucketLbls[cat], function(body) {
+          buckets[cat].forEach(function(opt) {
+            body.appendChild(buildOptChip(opt, item, ptsTotalEl, true, unitData));
+          });
+        }));
       });
     } else {
-      // Magic Items (and any future sections): magic items get ability sub-pickers
-      (group.items || []).forEach(function(opt) {
-        var catKey = getMagicItemCategory(opt.name);
-        if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' &&
-            WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
-          body.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl, true));
-        } else {
-          body.appendChild(buildOptChip(opt, item, ptsTotalEl, true, unitData));
-        }
-      });
+      // Magic Items (and any future non-equipment groups)
+      wrap.appendChild(makeSection(group.subheading || 'Options', function(body) {
+        (group.items || []).forEach(function(opt) {
+          var catKey = getMagicItemCategory(opt.name);
+          if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' &&
+              WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
+            body.appendChild(buildMagicItemControl(opt, catKey, item, ptsTotalEl, true));
+          } else {
+            body.appendChild(buildOptChip(opt, item, ptsTotalEl, true, unitData));
+          }
+        });
+      }));
     }
-
-    section.appendChild(body);
-    wrap.appendChild(section);
   });
 
   return wrap;
