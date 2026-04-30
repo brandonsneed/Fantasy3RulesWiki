@@ -66,8 +66,35 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 /* DRAG AND DROP */
 .alb-drag-handle { color: #3a3a3a; font-size: 13px; line-height: 1; cursor: grab; padding: 0 3px 0 0; flex-shrink: 0; user-select: none; }
 .alb-drag-handle:active { cursor: grabbing; }
-.card-wrapper.drag-over { border-top: 3px solid #5a8a6a; }
-.card-wrapper.dragging  { opacity: 0.4; }
+.card-wrapper.drag-over   { border-top: 3px solid #5a8a6a; }
+.card-wrapper.drag-attach { box-shadow: 0 0 0 2px #5a7aaa; }
+
+/* Empty IC section placeholder */
+.alb-ic-placeholder { color: #555; font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-style: italic; letter-spacing: 0.06em; padding: 10px 8px; border: 1px dashed #333; border-radius: 3px; margin-bottom: 8px; }
+
+/* Attach-here strip — appears to the right of unit cards while a character is being dragged */
+.alb-attach-zone { width: 44px; align-self: stretch; border: 2px dashed #3a5a7a; border-radius: 3px; background: rgba(58,90,122,0.07); color: #4a7aaa; font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; cursor: copy; transition: all 0.12s; }
+.alb-attach-zone.over { border-color: #5a9aee; background: rgba(90,154,238,0.18); color: #88bbee; }
+.card-wrapper.dragging    { opacity: 0.4; }
+
+/* SCREEN PAIR WRAPPER — unit left, leading character right */
+.screen-pair-wrapper { display: flex; flex-direction: row; gap: 20px; align-items: flex-start; width: 100%; }
+.screen-pair-wrapper > .card-wrapper { flex: 1; max-width: 340px; margin-bottom: 0; }
+/* Column container for the connector label + character card */
+.screen-pair-char-col { flex: 1; max-width: 340px; display: flex; flex-direction: column; }
+.screen-pair-char-col .card-wrapper { margin-bottom: 0; }
+.screen-pair-connector { background: #0d0d0d; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; color: #666; font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; }
+/* Rename bar — sits ABOVE the card, styled like a prominent editable title */
+.alb-rename-bar { width: 100%; background: #1a1a1a; display: flex; align-items: center; }
+.alb-rename-grip { color: #666; font-size: 14px; line-height: 1; padding: 0 4px 0 6px; cursor: grab; flex-shrink: 0; user-select: none; transition: color 0.12s; }
+.alb-rename-grip:hover { color: #bbb; }
+.alb-rename-grip:active { cursor: grabbing; }
+.alb-input.rename { flex: 1; min-width: 0; box-sizing: border-box; text-align: center; background: transparent; border: none; border-radius: 0; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: #fff; padding: 5px 8px 4px; }
+.alb-input.rename:focus { color: #fff; background: #242424; outline: none; }
+.alb-input.rename::placeholder { color: #fff; font-style: normal; }
+/* When a rename bar sits above the card, .al-header becomes a small dim subtitle */
+.alb-has-rename .al-header { font-size: 7px !important; color: #777 !important; letter-spacing: 0.07em !important; padding: 2px 7px !important; background: #111 !important; }
+/* Attached characters are draggable — handle stays visible for detach/reassign */
 
 /* LEADING FIELD */
 .alb-leading-row { width: 100%; padding: 3px 0 2px; display: flex; align-items: center; gap: 5px; border-top: 1px solid #252525; }
@@ -76,9 +103,25 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .alb-leading-select:focus { color: #ccc; }
 .alb-leading-select option { background: #1a1a1a; color: #ccc; font-style: normal; }
 
-/* CARD GRID — 2 columns */
-.card-grid { column-count: 2; column-gap: 20px; }
-.card-grid > * { break-inside: avoid; display: inline-block; width: 100%; margin-bottom: 20px; }
+/* CARD GRID — single column; paired unit+hero sit side by side via .screen-pair-wrapper */
+.card-grid { display: flex; flex-direction: column; gap: 0; }
+
+/* Card row — wraps a card/pair with its external copy button */
+.alb-card-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 16px; width: fit-content; }
+.alb-card-row > .card-wrapper { flex-shrink: 0; }
+.alb-card-row > .screen-pair-wrapper { flex: 0 0 auto; width: auto; }
+
+/* External copy button — sits to the right of each card */
+.alb-copy-ext { background: #181818; border: 1px solid #2a2a2a; border-radius: 3px; color: #666; font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 7px 7px; cursor: pointer; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: all 0.15s; width: 36px; align-self: stretch; justify-content: center; }
+.alb-copy-ext:hover { border-color: #4a7aaa; color: #88aacc; background: #131d28; }
+.alb-copy-ext-icon { font-size: 16px; line-height: 1; }
+
+/* Perforated divider between cards in a section */
+.alb-divider { width: 100%; height: 0; border: none; border-top: 1px dashed #444; margin: 0 0 16px; }
+
+/* Drop zones — injected between cards while dragging */
+.alb-drop-zone { width: 100%; max-width: 360px; height: 30px; border: 2px dashed #3a5a4a; border-radius: 3px; background: rgba(58,90,74,0.07); box-sizing: border-box; transition: all 0.12s; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #4a7a5a; cursor: copy; }
+.alb-drop-zone.over { border-color: #5aaa7a; background: rgba(90,170,122,0.18); color: #88ccaa; height: 38px; }
 
 /* CARD WRAPPER — card + controls bar */
 .card-wrapper { background: #fff; border: 2px solid #1a1a1a; max-width: 340px; overflow: hidden; box-shadow: 2px 2px 0 #0003; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; }
@@ -99,6 +142,8 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .alb-pts-total.manual { color: #e8e8e8; }
 .alb-remove { background: none; border: 1px solid #6b2020; color: #cc5555; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; }
 .alb-remove:hover { background: #8b2020; border-color: #aa3333; color: #fff; }
+.alb-duplicate { background: none; border: 1px solid #2a3a4a; color: #6699bb; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; }
+.alb-duplicate:hover { background: #1a2d40; border-color: #4a7aaa; color: #aaccee; }
 /* Notes row — ghost text, no label */
 .alb-notes-row { width: 100%; padding: 3px 0 1px; }
 .alb-input.notes { width: 100%; box-sizing: border-box; text-align: left; background: transparent; border: none; border-top: 1px solid #252525; border-radius: 0; font-size: 10px; color: #888; padding: 4px 2px 3px; }
@@ -456,6 +501,7 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-row { display: flex; align-items: baseline; border-bottom: 1px solid #ddd; padding: 2px 6px; flex-shrink: 0; overflow: hidden; }
 .al-lbl { font-family: 'Barlow Condensed', sans-serif; font-size: 7.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; color: #1a1a1a; flex-shrink: 0; }
 .al-val { font-family: 'Barlow Condensed', sans-serif; font-size: 7.5px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em; color: #1a1a1a; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; margin-left: 4px; }
+.al-char-level { background: #2a4a36; color: #a0d4b0; border-radius: 2px; padding: 0 3px; font-size: 7px; font-weight: 700; letter-spacing: 0.08em; vertical-align: middle; }
 .al-val-r { margin-left: auto; padding-left: 4px; font-family: 'Barlow Condensed', sans-serif; font-size: 7.5px; font-weight: 400; color: #1a1a1a; white-space: nowrap; flex-shrink: 0; }
 .al-opts { padding: 3px 6px 4px; flex: 1; overflow: hidden; }
 .al-opts-h { font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; text-align: center; margin-bottom: 2px; color: #1a1a1a; }
@@ -466,7 +512,27 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-opt-c { font-weight: 700; white-space: nowrap; flex-shrink: 0; min-width: 14px; text-align: right; }
 .al-char-no-opts { padding: 5px 6px 4px; font-size: 7px; color: #aaa; font-style: italic; text-align: center; border-top: 1px solid #eee; }
 .al-special-rules { display: flex; flex-wrap: wrap; gap: 3px; padding: 3px 0 2px; }
-.al-rule-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #5a3a1a; background: #f5ede0; border: 1px solid #c8a070; border-radius: 2px; padding: 1px 5px; cursor: default; white-space: nowrap; }
+.al-rule-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #5a3a1a; background: #f5ede0; border: 1px solid #c8a070; border-radius: 2px; padding: 1px 5px; cursor: pointer; white-space: nowrap; transition: background 0.1s, border-color 0.1s; }
+.al-rule-tag:hover { background: #ede0cc; border-color: #a07040; }
+.al-rule-tag.active { background: #c8a070; border-color: #8a6030; color: #1a0a00; }
+
+/* ── Rule detail drawer (expands below rule tags) ── */
+.al-rule-detail { display: none; border-top: 1px solid #e0d0b8; background: #fdf6ec; padding: 6px 8px 7px; }
+.al-rule-detail-name { font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #1a0a00; margin-bottom: 3px; }
+.al-rule-detail-short { font-family: 'Barlow Condensed', sans-serif; font-size: 7.5px; font-style: italic; color: #5a4a2a; line-height: 1.45; margin-bottom: 4px; padding-bottom: 4px; border-bottom: 1px solid #e0d0b8; }
+.al-rule-detail-text { font-family: 'Barlow Condensed', sans-serif; font-size: 7.5px; color: #2a1a08; line-height: 1.55; }
+.al-magic-ability { display: flex; flex-direction: column; padding: 3px 6px 3px 12px; border-left: 2px solid #c8a070; margin: 2px 0 1px; background: #fdf8f2; }
+.al-magic-ab-name { font-family: 'Barlow Condensed', sans-serif; font-size: 7.5px; font-weight: 700; color: #3a2a10; letter-spacing: 0.04em; }
+.al-magic-ab-desc { font-size: 6.5px; color: #555; font-style: italic; line-height: 1.45; margin-top: 1px; }
+.al-magic-ab-cost { font-family: 'Share Tech Mono', monospace; font-size: 6.5px; color: #7a5c2a; margin-top: 1px; }
+/* Weapon rules — hidden on screen, shown in print */
+.al-weapon-rules { display: none; }
+/* Print note — hidden on screen, shown in print */
+.al-print-note { display: none; }
+/* Print appendix — hidden on screen, shown in print when toggle is on */
+#al-print-appendix { display: none; }
+/* Pair connector — only exists in DOM during beforeprint/afterprint window */
+.print-pair-connector { display: none; }
 .al-flavour { border-top: 1px solid #1a1a1a; padding: 4px 7px 5px; font-style: italic; font-size: 7.5px; line-height: 1.5; color: #222; font-family: 'IM Fell English', Georgia, serif; flex-shrink: 0; }
 .al-flavour-text { font-style: italic; font-size: 7.5px; line-height: 1.5; color: #222; font-family: 'IM Fell English', Georgia, serif; margin-top: 4px; }
 .al-profile tr.al-rh td { background: #d8d8d8 !important; color: #1a1a1a; font-size: 7.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-align: left; padding: 2px 5px !important; border-color: #999 !important; }
@@ -539,8 +605,8 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 
   .army-group-heading { font-family: 'Cinzel', serif; font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: #1a1a1a; border-bottom: 0.75pt solid #666; padding-bottom: 1.5mm; margin: 4mm 0 2mm; }
 
-  .card-grid { column-count: 2 !important; column-gap: 5mm !important; }
-  .card-grid > * { break-inside: avoid; margin-bottom: 5mm !important; }
+  .card-grid { display: block !important; column-count: 2 !important; column-gap: 5mm !important; }
+  .card-grid > * { break-inside: avoid; display: inline-block !important; width: 100% !important; margin-bottom: 5mm !important; }
 
   .card-wrapper { box-shadow: none !important; border: 1.5pt solid #1a1a1a !important; width: 100% !important; max-width: none !important; }
   .al-card { width: 100% !important; }
@@ -552,6 +618,107 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
   .al-chariot-weapons, .al-chariot-armour { width: 68px !important; }
   .al-profile th.rh { width: 64px !important; }
   .al-stats-band th.al-sn { width: 54px !important; }
+
+  /* Weapon rules — below the card border, print only */
+  .al-weapon-rules {
+    display: block !important;
+    padding: 3px 6px 4px;
+    background: #fdf9f4;
+    border-top: 1pt solid #c0a870;
+  }
+  .al-weapon-rule {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 6pt;
+    color: #2a1a08;
+    line-height: 1.6;
+  }
+  .al-wr-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .al-wr-sep { color: #8b6914; }
+  .al-wr-text { font-weight: 400; font-style: italic; }
+
+  /* Print note — shown below each card when notes exist */
+  .al-print-note {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 6.5pt;
+    font-style: italic;
+    color: #444;
+    border-top: 0.5pt solid #ccc;
+    padding: 2px 6px 3px;
+    background: #fff;
+  }
+  .al-print-note:empty { display: none; }
+
+  /* ── Print appendix ── */
+  #al-print-appendix { display: block !important; margin-top: 8mm; page-break-before: always; }
+  .al-appendix-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10pt; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #000; border-bottom: 1.5pt solid #111; padding-bottom: 2pt; margin-bottom: 4pt;
+  }
+  .al-appendix-cols {
+    column-count: 2; column-gap: 5mm; column-fill: auto;
+  }
+  .al-appendix-section {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 7pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #000; background: #efefef; padding: 1.5pt 5pt;
+    margin: 4pt 0 2pt; break-after: avoid;
+  }
+  .al-appendix-entry {
+    border-bottom: 0.4pt solid #ddd; padding: 2pt 0; break-inside: avoid;
+  }
+  .al-appendix-entry:last-child { border-bottom: none; }
+  .al-appendix-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 7pt; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #000;
+    margin-bottom: 1pt;
+  }
+  .al-appendix-short {
+    font-size: 6pt; color: #555; font-style: italic; line-height: 1.3; margin-bottom: 1.5pt;
+  }
+  .al-appendix-text { font-size: 6.5pt; color: #222; line-height: 1.3; }
+
+  /* Hide screen-only chrome in print */
+  .alb-rename-bar { display: none !important; }
+  .alb-copy-ext    { display: none !important; }
+  .alb-divider     { display: none !important; }
+  .alb-drop-zone   { display: none !important; }
+  .alb-attach-zone { display: none !important; }
+  .alb-card-row   { display: block; margin-bottom: 0; }
+  /* Restore .al-header to full prominence in print (undo the screen subtitle styling) */
+  .alb-has-rename .al-header { font-size: 12px !important; color: #fff !important; letter-spacing: 0.13em !important; padding: 5px 8px 4px !important; background: #1a1a1a !important; }
+
+  /* Paired character + unit grouping */
+  .print-pair-wrapper { break-inside: avoid; margin-bottom: 5mm; display: inline-block; width: 100%; }
+  .print-pair-wrapper .card-wrapper { margin-bottom: 0 !important; width: 100% !important; max-width: none !important; }
+
+  /* Shared gold left accent — visually brackets the pair as one regiment */
+  .card-wrapper.print-group-leader,
+  .card-wrapper.print-group-led {
+    border-left: 4pt solid #8b6914 !important;
+  }
+
+  /* Connector strip between leader and led */
+  .print-pair-connector {
+    display: block;
+    border-left: 4pt solid #8b6914;
+    background: #fdf5e0;
+    border-top: 0.75pt solid #c8a84a;
+    border-bottom: 0.75pt solid #c8a84a;
+    color: #7a5010;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 5.5pt;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 2.5px 8px;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -590,7 +757,8 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
     <button class="topbar-btn dim" onclick="openExport()">&#8595; Export JSON</button>
     <button class="topbar-btn dim" onclick="openImport()">&#8593; Import JSON</button>
     <button class="topbar-btn danger" onclick="clearAll()">&#10005; Clear All</button>
-    <button class="topbar-btn" onclick="window.print()">&#128424; Print / PDF</button>
+    <button class="topbar-btn dim" id="appendix-toggle" onclick="toggleAppendix()">+ Rules Appendix</button>
+    <button class="topbar-btn" onclick="printArmy()">&#128424; Print / PDF</button>
   </div>
 
   <!-- Army header form -->
@@ -725,72 +893,243 @@ function renderGrid() {
 
   // Split into characters and units, preserving insertion order within each
   const charCards = cards.filter(function(c) {
-    const u = lookupUnit(c.sourceId);
-    return u && u.type === 'character';
+    const u = lookupUnit(c.sourceId); return isCharUnit(u);
   });
   const unitCards = cards.filter(function(c) {
-    const u = lookupUnit(c.sourceId);
-    return !u || u.type !== 'character';
+    const u = lookupUnit(c.sourceId); return !isCharUnit(u);
   });
 
-  function addSection(label, sectionCards) {
-    if (!sectionCards.length) return;
-    const heading = document.createElement("div");
-    heading.className = "army-group-heading";
-    heading.textContent = label;
-    grid.appendChild(heading);
+  // Map string unitId → the char item that is leading it
+  const unitToChar = {};
+  charCards.forEach(function(c) {
+    if (c.leadingUnit) {
+      const exists = cards.find(function(u) { return String(u.id) === String(c.leadingUnit); });
+      if (exists) unitToChar[String(c.leadingUnit)] = c;
+    }
+  });
+  const attachedCharIds = new Set(
+    Object.values(unitToChar).map(function(c) { return c.id; })
+  );
+  const ungroupedChars = charCards.filter(function(c) { return !attachedCharIds.has(c.id); });
 
-    sectionCards.forEach(function(item) {
-      const wrapper = document.createElement("div");
-      wrapper.className = "card-wrapper";
-      wrapper.dataset.listId = item.id;
-
-      // Card HTML
-      const cardHtml = resolveCardHtml(item);
-      if (cardHtml) {
-        const tmp = document.createElement("div");
-        tmp.innerHTML = cardHtml;
-        const cardEl = tmp.firstElementChild;
-        if (cardEl) wrapper.appendChild(cardEl);
-      }
-
-      // Controls bar
-      wrapper.appendChild(buildControls(item));
-
-      // Drag-and-drop: drop target on the wrapper
-      wrapper.addEventListener('dragover', function(e) {
-        if (!dragId || dragId === item.id) return;
-        // Only allow drop within the same section
-        const draggedUnit = lookupUnit((cards.find(function(c){return c.id===dragId;})||{}).sourceId);
-        const draggedIsChar = draggedUnit && draggedUnit.type === 'character';
-        const thisIsChar    = sectionCards === charCards;
-        if (draggedIsChar !== thisIsChar) return;
-        e.preventDefault();
-        wrapper.classList.add('drag-over');
-      });
-      wrapper.addEventListener('dragleave', function() {
-        wrapper.classList.remove('drag-over');
-      });
-      wrapper.addEventListener('drop', function(e) {
-        e.preventDefault();
-        wrapper.classList.remove('drag-over');
-        if (!dragId || dragId === item.id) return;
-        const fromIdx = cards.findIndex(function(c){return c.id===dragId;});
-        if (fromIdx === -1) return;
-        const [moved] = cards.splice(fromIdx, 1);
-        // After removal, find target's new index and insert before it
-        const toIdx = cards.findIndex(function(c){return c.id===item.id;});
-        if (toIdx === -1) { cards.push(moved); } else { cards.splice(toIdx, 0, moved); }
-        saveCards();
-        renderGrid();
-      });
-
-      grid.appendChild(wrapper);
-    });
+  // Auto-number duplicate unit types with Roman numerals (I, II, III…)
+  // Counts across ALL cards so duplicates spanning chars and units are caught.
+  const _srcCount = {};
+  cards.forEach(function(c) { if (c.sourceId) _srcCount[c.sourceId] = (_srcCount[c.sourceId] || 0) + 1; });
+  const _srcSeq = {};
+  function getDisplayName(item) {
+    if (item.customName) return item.customName;
+    const u = lookupUnit(item.sourceId);
+    const base = u ? u.name : (item.label || '');
+    if (_srcCount[item.sourceId] > 1) {
+      _srcSeq[item.sourceId] = (_srcSeq[item.sourceId] || 0) + 1;
+      return base + '\u00a0' + toRoman(_srcSeq[item.sourceId]);
+    }
+    return base;
   }
 
-  addSection("Characters", charCards);
-  addSection("Units", unitCards);
+  /** Build a .card-wrapper for item.
+   *  isDraggable: whether dragover/drop listeners are added (paired chars are not).
+   *  isCharSection: used to validate cross-section drag attempts.
+   *  displayName: resolved name (custom rename or auto-numbered) to show on card and in rename placeholder. */
+  function createWrapper(item, isDraggable, isCharSection, displayName) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "card-wrapper";
+    wrapper.dataset.listId = item.id;
+
+    // ── Rename bar: prominent editable title above the card ──────────────────
+    const renameUnitData = lookupUnit(item.sourceId);
+    const renameIsChar   = isCharUnit(renameUnitData);
+    wrapper.classList.add('alb-has-rename');
+    const renameBar = document.createElement('div');
+    renameBar.className = 'alb-rename-bar';
+    const ri = document.createElement('input');
+    ri.type = 'text'; ri.className = 'alb-input rename';
+    ri.value = item.customName || '';
+    ri.placeholder = displayName || (renameUnitData && renameUnitData.name) || '';
+    ri.dataset.autoName = displayName || (renameUnitData && renameUnitData.name) || '';
+    ri.title = 'Rename this unit';
+    ri.oninput = function() {
+      item.customName = ri.value.trim() || null;
+      saveCards();
+    };
+    const grip = document.createElement('span');
+    grip.className = 'alb-rename-grip';
+    grip.textContent = '⠿';
+    grip.draggable = true;
+    grip.title = renameIsChar ? 'Drag onto a unit to assign as leader' : 'Drag to reorder';
+    grip.addEventListener('dragstart', function(e) {
+      dragId = item.id;
+      e.dataTransfer.effectAllowed = 'move';
+      wrapper.classList.add('dragging');
+      setTimeout(activateDropZones, 0);
+    });
+    grip.addEventListener('dragend', function() {
+      dragId = null;
+      wrapper.classList.remove('dragging');
+      teardownZones();
+    });
+    renameBar.appendChild(grip);
+    renameBar.appendChild(ri);
+    wrapper.appendChild(renameBar);
+
+    // Card HTML — extract weapon-rules block for placement below notes
+    const cardHtml = resolveCardHtml(item, displayName);
+    let extractedWeaponRules = null;
+    if (cardHtml) {
+      const tmp = document.createElement("div");
+      tmp.innerHTML = cardHtml;
+      const cardEl = tmp.firstElementChild;
+      if (cardEl) {
+        const wrEl = cardEl.querySelector('.al-weapon-rules');
+        if (wrEl) { wrEl.parentNode.removeChild(wrEl); extractedWeaponRules = wrEl; }
+        wrapper.appendChild(cardEl);
+        // Subtitle: always show constant unit type name; store displayName for print
+        const subHdr = cardEl.querySelector('.al-header');
+        if (subHdr && renameUnitData) {
+          subHdr.dataset.printName = subHdr.textContent;
+          subHdr.textContent = renameUnitData.name;
+        }
+      }
+    }
+
+    wrapper.appendChild(buildControls(item, displayName));
+
+    // Print note (hidden on screen via CSS)
+    const pnEl = document.createElement('div');
+    pnEl.className = 'al-print-note';
+    pnEl.textContent = item.notes || '';
+    wrapper.appendChild(pnEl);
+
+    // Weapon rules (below note, print-only)
+    if (extractedWeaponRules) wrapper.appendChild(extractedWeaponRules);
+
+    wrapper.addEventListener('dragover', function(e) {
+      if (!dragId || dragId === item.id) return;
+      const dragged = cards.find(function(c) { return c.id === dragId; });
+      if (!dragged) return;
+      const draggedUnit = lookupUnit(dragged.sourceId);
+      const draggedIsChar = isCharUnit(draggedUnit);
+      if (draggedIsChar && !isCharSection) {
+        // Character dragged over a unit — show attach highlight
+        e.preventDefault();
+        wrapper.classList.add('drag-attach');
+      } else if (draggedIsChar === isCharSection) {
+        // Same type — show reorder highlight
+        e.preventDefault();
+        wrapper.classList.add('drag-over');
+      }
+    });
+    wrapper.addEventListener('dragleave', function(e) {
+      if (!wrapper.contains(e.relatedTarget)) {
+        wrapper.classList.remove('drag-over');
+        wrapper.classList.remove('drag-attach');
+      }
+    });
+    wrapper.addEventListener('drop', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      wrapper.classList.remove('drag-over');
+      wrapper.classList.remove('drag-attach');
+      if (!dragId || dragId === item.id) return;
+      const dragged = cards.find(function(c) { return c.id === dragId; });
+      if (!dragged) return;
+      const draggedUnit = lookupUnit(dragged.sourceId);
+      const draggedIsChar = isCharUnit(draggedUnit);
+      if (draggedIsChar && !isCharSection) {
+        // Attach: detach any existing leader from this unit first
+        cards.forEach(function(c) { if (String(c.leadingUnit) === String(item.id)) c.leadingUnit = null; });
+        dragged.leadingUnit = String(item.id);
+        saveCards(); renderGrid();
+      } else if (draggedIsChar === isCharSection) {
+        // Reorder within same section; detach char if it was attached
+        if (draggedIsChar) dragged.leadingUnit = null;
+        const fromIdx = cards.findIndex(function(c) { return c.id === dragId; });
+        if (fromIdx === -1) return;
+        const [moved] = cards.splice(fromIdx, 1);
+        const toIdx = cards.findIndex(function(c) { return c.id === item.id; });
+        if (toIdx === -1) { cards.push(moved); } else { cards.splice(toIdx, 0, moved); }
+        saveCards(); renderGrid();
+      }
+    });
+
+    return wrapper;
+  }
+
+  function addHeading(text) {
+    const h = document.createElement("div");
+    h.className = "army-group-heading";
+    h.textContent = text;
+    grid.appendChild(h);
+  }
+
+  function makeCopyBtn(id) {
+    const btn = document.createElement('button');
+    btn.className = 'alb-copy-ext';
+    btn.title = 'Duplicate';
+    btn.innerHTML = '<span class="alb-copy-ext-icon">⊕</span>Copy';
+    btn.onclick = function() { duplicateCard(id); };
+    return btn;
+  }
+
+  function cardRow(el, id) {
+    const row = document.createElement('div');
+    row.className = 'alb-card-row';
+    row.appendChild(el);
+    row.appendChild(makeCopyBtn(id));
+    return row;
+  }
+
+  function divider() {
+    const d = document.createElement('div');
+    d.className = 'alb-divider';
+    return d;
+  }
+
+  // ── Section 1: Independent characters (not leading any unit) ──────────────
+  addHeading("Independent Characters");
+  if (ungroupedChars.length) {
+    ungroupedChars.forEach(function(c, i) {
+      grid.appendChild(cardRow(createWrapper(c, true, true, getDisplayName(c)), c.id));
+      if (i < ungroupedChars.length - 1) grid.appendChild(divider());
+    });
+  } else {
+    const ph = document.createElement('div');
+    ph.className = 'alb-ic-placeholder';
+    ph.textContent = 'No independent characters — drag a leader here to detach from its unit';
+    grid.appendChild(ph);
+  }
+
+  // ── Section 2: Units — each unit with its leading character to the right ───
+  if (unitCards.length) {
+    addHeading("Units");
+    unitCards.forEach(function(u, i) {
+      const leadingChar = unitToChar[String(u.id)];
+      let rowEl;
+
+      if (leadingChar) {
+        const pairWrapper = document.createElement('div');
+        pairWrapper.className = 'screen-pair-wrapper';
+        pairWrapper.appendChild(createWrapper(u, true, false, getDisplayName(u)));
+        const charCol = document.createElement('div');
+        charCol.className = 'screen-pair-char-col';
+        const connector = document.createElement('div');
+        connector.className = 'screen-pair-connector';
+        connector.textContent = 'Unit Leader:';
+        charCol.appendChild(connector);
+        const charWrap = createWrapper(leadingChar, true, true, getDisplayName(leadingChar));
+        charWrap.classList.add('screen-group-led');
+        charCol.appendChild(charWrap);
+        pairWrapper.appendChild(charCol);
+        rowEl = cardRow(pairWrapper, u.id);
+      } else {
+        rowEl = cardRow(createWrapper(u, true, false, getDisplayName(u)), u.id);
+      }
+
+      grid.appendChild(rowEl);
+      if (i < unitCards.length - 1) grid.appendChild(divider());
+    });
+  }
 
   updateTotals();
   document.title = (document.getElementById("al-name").value || "Army List") + " — WFB3";
@@ -798,15 +1137,20 @@ function renderGrid() {
 
 /** Return rendered card HTML for a list item.
  *  Priority: sourceId → renderAlCard(); html field (legacy/custom) → raw html; fallback → placeholder.
- *  For character units, passes the current optionsSelected map so the card shows only chosen upgrades. */
-function resolveCardHtml(item) {
+ *  For character units, passes optionsSelected and magicAbilities so the card shows chosen upgrades
+ *  with full magic item ability descriptions. */
+function resolveCardHtml(item, displayName) {
   // Official unit via sourceId (strip "card-" prefix if present — wiki buttons add it)
   if (item.sourceId && typeof WFB3_UNITS !== 'undefined' && typeof renderAlCard !== 'undefined') {
     const normalizedId = item.sourceId.replace(/^card-/, '');
     const unit = WFB3_UNITS.find(function(u) { return u.id === normalizedId; });
     if (unit) {
-      const opts = (unit.type === 'character') ? (item.optionsSelected || {}) : undefined;
-      return renderAlCard(unit, opts);
+      const isChar = isCharUnit(unit);
+      const opts   = isChar ? (item.optionsSelected || {}) : undefined;
+      const mab    = isChar ? (item.magicAbilities  || {}) : undefined;
+      const rOpts  = { hideAllowance: true };
+      if (displayName) rOpts.unitName = displayName;
+      return renderAlCard(unit, opts, mab, rOpts);
     }
   }
   // Legacy / custom card HTML (from card editor import or old wiki button)
@@ -822,6 +1166,14 @@ function lookupUnit(sourceId) {
   if (!sourceId || typeof WFB3_UNITS === 'undefined') return null;
   const id = sourceId.replace(/^card-/, '');
   return WFB3_UNITS.find(function(u) { return u.id === id; }) || null;
+}
+
+var CHAR_KEYWORDS = /\b(commander|general|lord|warlord|chieftain|chief|hero|champion|wizard|sorcerer|shaman|necromancer|vampire|assassin|witch|seer|prophet|warlock|liege|captain|warchief|master|elder|prince|king|queen|overlord|daemon prince)\b/i;
+function isCharUnit(unit) {
+  if (!unit) return false;
+  if (unit.type === 'character') return true;
+  if ((unit.id.startsWith('ally-') || unit.id.startsWith('merc-')) && CHAR_KEYWORDS.test(unit.name)) return true;
+  return false;
 }
 
 // Small numeric costs on per-model units are per-model upgrades (shields, weapons, armour).
@@ -957,6 +1309,7 @@ function buildMagicItemControl(opt, catKey, item, ptsTotalEl, isChar) {
       abChip.classList.toggle('checked', abCb.checked);
       updateCostDisplay();
       recalcPts(item, ptsTotalEl);
+      if (isChar) refreshCharCard(item);
       saveCards(); updateTotals();
     };
 
@@ -1117,26 +1470,32 @@ function refreshCharCard(item) {
   const wrapper = document.querySelector('[data-list-id="' + item.id + '"]');
   if (!wrapper) return;
   const unit = lookupUnit(item.sourceId);
-  if (!unit || unit.type !== 'character') return;
+  if (!unit || !isCharUnit(unit)) return;
   const oldCard = wrapper.querySelector('.al-card');
   if (!oldCard) return;
-  const newHtml = renderAlCard(unit, item.optionsSelected || {});
+  const renameInput = wrapper.querySelector('.alb-input.rename');
+  const resolvedName = item.customName || (renameInput && renameInput.dataset.autoName) || unit.name;
+  const newHtml = renderAlCard(unit, item.optionsSelected || {}, item.magicAbilities || {}, { hideAllowance: true, unitName: resolvedName });
   const tmp = document.createElement('div');
   tmp.innerHTML = newHtml;
   const newCard = tmp.firstElementChild;
-  if (newCard) wrapper.replaceChild(newCard, oldCard);
+  if (newCard) {
+    wrapper.replaceChild(newCard, oldCard);
+    const newHdr = newCard.querySelector('.al-header');
+    if (newHdr) { newHdr.dataset.printName = newHdr.textContent; newHdr.textContent = unit.name; }
+  }
 }
 
 /* ═══════════════════════════════════════
    CONTROLS BAR
 ═══════════════════════════════════════ */
-function buildControls(item) {
+function buildControls(item, displayName) {
   const ctrl = document.createElement("div");
   ctrl.className = "alb-controls";
 
   // Look up the unit to detect character type early (also used by options row)
   const unitData = lookupUnit(item.sourceId);
-  const isChar   = unitData && unitData.type === 'character';
+  const isChar   = isCharUnit(unitData);
 
   // ── Meta row: [Models + pts/model] ··· [Total pts | Remove] ──────────
   const metaRow = document.createElement("div");
@@ -1154,23 +1513,28 @@ function buildControls(item) {
   handle.addEventListener('dragstart', function(e) {
     dragId = item.id;
     e.dataTransfer.effectAllowed = 'move';
-    // Mark the wrapper as being dragged (find it by data-list-id)
     const wrapper = document.querySelector('[data-list-id="' + item.id + '"]');
     if (wrapper) wrapper.classList.add('dragging');
+    setTimeout(activateDropZones, 0);
   });
   handle.addEventListener('dragend', function() {
     dragId = null;
     const wrapper = document.querySelector('[data-list-id="' + item.id + '"]');
     if (wrapper) wrapper.classList.remove('dragging');
+    teardownZones();
   });
   metaLeft.appendChild(handle);
 
   if (!isChar) {
     const mf = document.createElement("div");
     mf.className = "alb-field";
-    const ml = document.createElement("label"); ml.textContent = "Models";
+    const modelsRange = parseModelsRange(unitData && unitData.models);
+    const ml = document.createElement("label");
+    ml.textContent = modelsRange.label ? 'Models (' + modelsRange.label + ')' : 'Models';
     const mi = document.createElement("input");
-    mi.type = "number"; mi.min = "0"; mi.className = "alb-input";
+    mi.type = "number"; mi.className = "alb-input";
+    mi.min = modelsRange.min != null ? String(modelsRange.min) : "0";
+    if (modelsRange.max != null) mi.max = String(modelsRange.max);
     mi.value = item.models || "";
     mi.placeholder = "—";
     mi.oninput = function() {
@@ -1250,41 +1614,15 @@ function buildControls(item) {
   ni.type = "text"; ni.className = "alb-input notes";
   ni.value = item.notes || "";
   ni.placeholder = "Add a note…";
-  ni.oninput = function() { item.notes = ni.value; saveCards(); };
+  ni.oninput = function() {
+    item.notes = ni.value;
+    saveCards();
+    // Keep the sibling print note div in sync
+    const wr = ni.closest('.card-wrapper');
+    if (wr) { const pn = wr.querySelector('.al-print-note'); if (pn) pn.textContent = ni.value; }
+  };
   nr.appendChild(ni);
   ctrl.appendChild(nr);
-
-  // ── Leading field (characters only) ──────────────────────────────────
-  if (isChar) {
-    const lr = document.createElement("div");
-    lr.className = "alb-leading-row";
-    const ll = document.createElement("span");
-    ll.className = "alb-leading-lbl";
-    ll.textContent = "Leading";
-    const ls = document.createElement("select");
-    ls.className = "alb-leading-select";
-    const blankOpt = document.createElement("option");
-    blankOpt.value = "";
-    blankOpt.textContent = "Not attached to a unit";
-    ls.appendChild(blankOpt);
-    cards.forEach(function(c) {
-      if (c.id === item.id) return;
-      const u = lookupUnit(c.sourceId);
-      if (u && u.type === 'character') return;
-      const opt = document.createElement("option");
-      opt.value = c.id;
-      opt.textContent = u ? u.name : (c.label || c.sourceId || "Unit");
-      if (c.id === item.leadingUnit) opt.selected = true;
-      ls.appendChild(opt);
-    });
-    ls.onchange = function() {
-      item.leadingUnit = ls.value || null;
-      saveCards();
-    };
-    lr.appendChild(ll);
-    lr.appendChild(ls);
-    ctrl.appendChild(lr);
-  }
 
   // Options — characters get grouped accordion sections; other units get a flat chip row
   const unitForOpts = unitData; // already looked up at top of buildControls
@@ -1341,9 +1679,9 @@ function buildArmyBrowser() {
 
   try {
 
-  const mainArmies  = WFB3_ARMIES.filter(function(a) { return !a.id.startsWith("ally-") && !a.id.startsWith("merc-") && a.id !== "norse"; });
+  const mainArmies  = WFB3_ARMIES.filter(function(a) { return !a.id.startsWith("ally-") && !a.id.startsWith("merc-"); });
   const allyArmies  = WFB3_ARMIES.filter(function(a) { return a.id.startsWith("ally-"); });
-  const mercArmies  = WFB3_ARMIES.filter(function(a) { return a.id.startsWith("merc-") || a.id === "norse"; });
+  const mercArmies  = WFB3_ARMIES.filter(function(a) { return a.id.startsWith("merc-"); });
 
   function makeSection(label, list) {
     if (!list.length) return;
@@ -1366,7 +1704,7 @@ function buildArmyBrowser() {
 
   makeSection("Main Armies", mainArmies);
   makeSection("Allies", allyArmies);
-  makeSection("Mercs & Norse", mercArmies);
+  makeSection("Mercenaries", mercArmies);
 
   // Auto-select first army
   if (mainArmies.length) selectBrowserArmy(mainArmies[0].id);
@@ -1430,8 +1768,8 @@ function renderBrowserUnits(armyId, filter) {
   }
 
   // Separate characters from rank-and-file for section headers
-  const rankFile = units.filter(function(u) { return u.type !== 'character'; });
-  const chars    = units.filter(function(u) { return u.type === 'character'; });
+  const rankFile = units.filter(function(u) { return !isCharUnit(u); });
+  const chars    = units.filter(function(u) { return isCharUnit(u); });
 
   function renderUnitRow(unit) {
     const row = document.createElement("div");
@@ -1551,7 +1889,7 @@ function addUnitToList(unit) {
   const armyDef = (typeof WFB3_ARMIES !== 'undefined')
     ? WFB3_ARMIES.find(function(a) { return a.id === unit.army; })
     : null;
-  const isChar = unit.type === 'character';
+  const isChar = isCharUnit(unit);
   cards.push({
     id:              Date.now(),
     sourceId:        unit.id,
@@ -1562,6 +1900,7 @@ function addUnitToList(unit) {
     models:          isChar ? 1 : 0,
     totalPts:        isChar ? (unit.ptsPerModel || 0) : 0,
     notes:           "",
+    customName:      null,
     manualPts:       false,
     optionsSelected: {},
     magicAbilities:  {}
@@ -1631,6 +1970,196 @@ function toggleBrowser() {
 /* ═══════════════════════════════════════
    LIST MANAGEMENT
 ═══════════════════════════════════════ */
+function teardownZones() {
+  document.querySelectorAll('.alb-drop-zone, .alb-attach-zone').forEach(function(z) {
+    if (z.parentNode) z.parentNode.removeChild(z);
+  });
+  stopAutoScroll();
+}
+
+/* ── Auto-scroll during drag ── */
+var _autoScrollRAF = null;
+var _autoScrollY   = 0;
+
+document.addEventListener('dragover', function(e) {
+  if (!dragId) return;
+  _autoScrollY = e.clientY;
+  if (!_autoScrollRAF) _autoScrollRAF = requestAnimationFrame(_autoScrollTick);
+});
+
+function _autoScrollTick() {
+  _autoScrollRAF = null;
+  if (!dragId) return;
+  var area = document.getElementById('card-area');
+  var rect = area.getBoundingClientRect();
+  var ZONE = 100, SPEED = 16;
+  var top = _autoScrollY - rect.top;
+  var bot = rect.bottom - _autoScrollY;
+  if (top < ZONE && top > 0) {
+    area.scrollTop -= SPEED * Math.pow(1 - top / ZONE, 1.5);
+    _autoScrollRAF = requestAnimationFrame(_autoScrollTick);
+  } else if (bot < ZONE && bot > 0) {
+    area.scrollTop += SPEED * Math.pow(1 - bot / ZONE, 1.5);
+    _autoScrollRAF = requestAnimationFrame(_autoScrollTick);
+  }
+}
+
+function stopAutoScroll() {
+  if (_autoScrollRAF) { cancelAnimationFrame(_autoScrollRAF); _autoScrollRAF = null; }
+}
+
+function activateDropZones() {
+  teardownZones(); // clear any stale zones before injecting new ones
+  if (!dragId) return;
+  const dragged = cards.find(function(c) { return c.id === dragId; });
+  if (!dragged) return;
+  const du = lookupUnit(dragged.sourceId);
+  const draggedIsChar = isCharUnit(du);
+  const grid = document.getElementById('card-grid');
+
+  // Collect same-type card rows (skip the dragged item itself)
+  const rows = Array.from(grid.querySelectorAll('.alb-card-row'));
+  const sameTypeRows = rows.filter(function(row) {
+    const w = row.querySelector('.card-wrapper[data-list-id]');
+    if (!w) return false;
+    const wId = Number(w.dataset.listId);
+    if (wId === dragId) return false;
+    const c = cards.find(function(x) { return x.id === wId; });
+    if (!c) return false;
+    const cu = lookupUnit(c.sourceId);
+    return draggedIsChar === isCharUnit(cu);
+  });
+
+  function makeZone(beforeCardId) {
+    const zone = document.createElement('div');
+    zone.className = 'alb-drop-zone';
+    zone.textContent = draggedIsChar ? 'Move here' : 'Move here';
+    zone.addEventListener('dragover',  function(e) { e.preventDefault(); e.stopPropagation(); zone.classList.add('over'); });
+    zone.addEventListener('dragleave', function()  { zone.classList.remove('over'); });
+    zone.addEventListener('drop', function(e) {
+      e.preventDefault(); e.stopPropagation();
+      if (!dragId) return;
+      const moved = cards.find(function(c) { return c.id === dragId; });
+      if (!moved) return;
+      if (draggedIsChar) moved.leadingUnit = null;
+      const from = cards.findIndex(function(c) { return c.id === dragId; });
+      if (from === -1) return;
+      cards.splice(from, 1);
+      if (beforeCardId !== null) {
+        const to = cards.findIndex(function(c) { return c.id === beforeCardId; });
+        cards.splice(to !== -1 ? to : cards.length, 0, moved);
+      } else {
+        cards.push(moved);
+      }
+      saveCards(); renderGrid();
+    });
+    return zone;
+  }
+
+  sameTypeRows.forEach(function(row) {
+    const w = row.querySelector('.card-wrapper[data-list-id]');
+    const wId = Number(w.dataset.listId);
+    row.parentNode.insertBefore(makeZone(wId), row);
+  });
+  // End-of-section zone after the last same-type row
+  if (sameTypeRows.length) {
+    const last = sameTypeRows[sameTypeRows.length - 1];
+    last.parentNode.insertBefore(makeZone(null), last.nextSibling);
+  }
+
+  // When dragging a char: if IC section is empty, make its placeholder a drop target
+  if (draggedIsChar) {
+    const ph = document.querySelector('.alb-ic-placeholder');
+    if (ph) {
+      ph.classList.add('alb-drop-zone');
+      ph.textContent = 'Drop here to detach from unit';
+      ph.addEventListener('dragover',  function(e) { e.preventDefault(); e.stopPropagation(); ph.classList.add('over'); });
+      ph.addEventListener('dragleave', function(e) { if (!ph.contains(e.relatedTarget)) ph.classList.remove('over'); });
+      ph.addEventListener('drop', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        if (!dragId) return;
+        const moved = cards.find(function(c) { return c.id === dragId; });
+        if (moved) { moved.leadingUnit = null; saveCards(); renderGrid(); }
+      });
+    }
+  }
+
+  // When dragging a char: add a visible attach strip to the right of unit card rows
+  if (draggedIsChar) {
+    document.querySelectorAll('.alb-card-row').forEach(function(row) {
+      const w = row.querySelector('.card-wrapper[data-list-id]');
+      if (!w) return;
+      const wId = Number(w.dataset.listId);
+      const c = cards.find(function(x) { return x.id === wId; });
+      if (!c) return;
+      const cu = lookupUnit(c.sourceId);
+      if (!cu || isCharUnit(cu)) return; // units only
+      // Don't add if unit already has an attached leader
+      const alreadyLed = cards.some(function(x) {
+        return x.leadingUnit && String(x.leadingUnit) === String(wId);
+      });
+      if (alreadyLed) return;
+
+      const zone = document.createElement('div');
+      zone.className = 'alb-attach-zone';
+      zone.textContent = 'Attach Leader';
+      zone.addEventListener('dragover', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        zone.classList.add('over');
+      });
+      zone.addEventListener('dragleave', function(e) {
+        if (!zone.contains(e.relatedTarget)) zone.classList.remove('over');
+      });
+      zone.addEventListener('drop', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        if (!dragId) return;
+        const moved = cards.find(function(x) { return x.id === dragId; });
+        if (!moved) return;
+        cards.forEach(function(x) { if (String(x.leadingUnit) === String(wId)) x.leadingUnit = null; });
+        moved.leadingUnit = String(wId);
+        saveCards(); renderGrid();
+      });
+      // Insert between the card/pair and the copy button
+      const copyBtn = row.querySelector('.alb-copy-ext');
+      row.insertBefore(zone, copyBtn);
+    });
+  }
+}
+
+function duplicateCard(id) {
+  const idx = cards.findIndex(function(c) { return c.id === id; });
+  if (idx === -1) return;
+  const original   = cards[idx];
+  const origUnit   = lookupUnit(original.sourceId);
+  const origIsChar = isCharUnit(origUnit);
+
+  const newId  = Date.now();
+  const newItem = JSON.parse(JSON.stringify(original));
+  newItem.id         = newId;
+  newItem.customName = null;
+  if (origIsChar) newItem.leadingUnit = null; // copy floats free
+
+  cards.splice(idx + 1, 0, newItem);
+
+  if (!origIsChar) {
+    // Also copy any attached character leader
+    const attachedChar = cards.find(function(c) {
+      return c.leadingUnit && String(c.leadingUnit) === String(id);
+    });
+    if (attachedChar) {
+      const charIdx = cards.findIndex(function(c) { return c.id === attachedChar.id; });
+      const newChar = JSON.parse(JSON.stringify(attachedChar));
+      newChar.id          = newId + 1;
+      newChar.leadingUnit = String(newId);
+      newChar.customName  = null;
+      cards.splice(charIdx + 1, 0, newChar);
+    }
+  }
+
+  saveCards();
+  renderGrid();
+}
+
 function removeCard(id) {
   cards = cards.filter(function(c) { return c.id !== id; });
   saveCards();
@@ -1849,10 +2378,306 @@ window.addEventListener("storage", function(e) {
   }
 });
 
+/* ═══════════════════════════════════════
+   PRINT — leadingUnit grouping + notes
+═══════════════════════════════════════ */
+
+/** Reorder the card grid for print:
+ *  1. Characters not assigned to a unit
+ *  2. Character + unit pairs (char directly above its unit, visually connected)
+ *  3. Units with no leading character
+ *  Called via the beforeprint event so the layout is correct before the browser
+ *  renders the print preview. renderGrid() restores normal order in afterprint. */
+function applyPrintOrder() {
+  // Restore display names in card headers (screen shows unit.name; print needs the full display name)
+  document.querySelectorAll('.card-wrapper .al-header[data-print-name]').forEach(function(h) {
+    h.textContent = h.dataset.printName;
+  });
+
+  const grid = document.getElementById('card-grid');
+
+  // Collect existing wrapper elements by list-id
+  const wrapperMap = {};
+  grid.querySelectorAll('.card-wrapper[data-list-id]').forEach(function(el) {
+    wrapperMap[el.dataset.listId] = el;
+  });
+
+  const charItems = cards.filter(function(c) {
+    const u = lookupUnit(c.sourceId); return isCharUnit(u);
+  });
+  const unitItems = cards.filter(function(c) {
+    const u = lookupUnit(c.sourceId); return !isCharUnit(u);
+  });
+
+  // Which unit IDs have a leading character assigned (and that character wrapper exists)?
+  // Normalise all IDs to strings — item.id is a number (Date.now()) but
+  // item.leadingUnit is a string (from ls.value), so we must compare consistently.
+  const ledUnitIds = new Set();
+  charItems.forEach(function(c) {
+    if (c.leadingUnit && wrapperMap[String(c.leadingUnit)]) ledUnitIds.add(String(c.leadingUnit));
+  });
+
+  const ungroupedChars = charItems.filter(function(c) {
+    return !c.leadingUnit || !wrapperMap[String(c.leadingUnit)];
+  });
+  const pairedChars = charItems.filter(function(c) {
+    return c.leadingUnit && wrapperMap[String(c.leadingUnit)];
+  });
+  const ungroupedUnits = unitItems.filter(function(u) {
+    return !ledUnitIds.has(String(u.id));
+  });
+
+  // Rebuild grid contents in print order
+  grid.innerHTML = '';
+
+  // Section 1 — Independent characters (no unit assigned)
+  if (ungroupedChars.length) {
+    const h = document.createElement('div');
+    h.className = 'army-group-heading';
+    h.textContent = 'Independent Characters';
+    grid.appendChild(h);
+    ungroupedChars.forEach(function(c) {
+      const el = wrapperMap[String(c.id)];
+      if (el) { el.classList.remove('print-group-leader', 'print-group-led'); grid.appendChild(el); }
+    });
+  }
+
+  // Section 2 — Units: paired character+unit groups first, then standalone units
+  const hasUnits = pairedChars.length || ungroupedUnits.length;
+  if (hasUnits) {
+    const h = document.createElement('div');
+    h.className = 'army-group-heading';
+    h.textContent = 'Units';
+    grid.appendChild(h);
+
+    // Paired groups — unit card sits above, leading character below, wrapped for page cohesion
+    pairedChars.forEach(function(c) {
+      const charEl = wrapperMap[String(c.id)];
+      const unitEl = wrapperMap[String(c.leadingUnit)];
+      if (!charEl || !unitEl) return;
+      unitEl.classList.add('print-group-leader');
+      charEl.classList.add('print-group-led');
+      const pair = document.createElement('div');
+      pair.className = 'print-pair-wrapper';
+      pair.appendChild(unitEl);
+      const connector = document.createElement('div');
+      connector.className = 'print-pair-connector';
+      connector.textContent = 'Leading';
+      pair.appendChild(connector);
+      pair.appendChild(charEl);
+      grid.appendChild(pair);
+    });
+
+    // Standalone units (no leading character)
+    ungroupedUnits.forEach(function(u) {
+      const el = wrapperMap[String(u.id)];
+      if (el) { el.classList.remove('print-group-leader', 'print-group-led'); grid.appendChild(el); }
+    });
+  }
+}
+
+/* ── Appendix toggle ──────────────────────────────────────────────────────── */
+var _appendixOn = false;
+
+function toggleAppendix() {
+  _appendixOn = !_appendixOn;
+  var btn = document.getElementById('appendix-toggle');
+  btn.textContent = _appendixOn ? '✓ Rules Appendix' : '+ Rules Appendix';
+  btn.classList.toggle('active', _appendixOn);
+}
+
+/* ── Build print appendix from rules referenced by current cards ──────────── */
+function buildPrintAppendix() {
+  var el = document.getElementById('al-print-appendix');
+  if (!el) return;
+  el.innerHTML = '';
+  if (typeof WFB3_RULES === 'undefined') return;
+
+  /* Collect unique rule names from all visible rule tags */
+  var names = [];
+  document.querySelectorAll('.al-rule-tag[data-rule]').forEach(function(tag) {
+    var r = tag.dataset.rule;
+    if (names.indexOf(r) === -1) names.push(r);
+  });
+  if (!names.length) return;
+
+  /* Group by category, preserving category order from WFB3_RULES */
+  var ORDER = ['Psychology','Combat','Deployment','Special Troop','Special Rule',
+               'Racial Rules','Bestiary — Giant Races','Bestiary — Unit Specific','Mount Rule'];
+  var byCat = {};
+  names.forEach(function(name) {
+    var rule = WFB3_RULES[name];
+    if (!rule) return;
+    var cat = rule.category || 'Other';
+    if (!byCat[cat]) byCat[cat] = [];
+    byCat[cat].push({ name: name, rule: rule });
+  });
+
+  /* Title */
+  var title = document.createElement('div');
+  title.className = 'al-appendix-title';
+  title.textContent = 'Special Rules Reference';
+  el.appendChild(title);
+
+  var cols = document.createElement('div');
+  cols.className = 'al-appendix-cols';
+
+  ORDER.forEach(function(cat) {
+    if (!byCat[cat]) return;
+    var sec = document.createElement('div');
+    sec.className = 'al-appendix-section';
+    sec.textContent = cat === 'Special Rule' ? 'Special Unit Rules' : cat;
+    cols.appendChild(sec);
+
+    byCat[cat].forEach(function(item) {
+      var entry = document.createElement('div');
+      entry.className = 'al-appendix-entry';
+      var nameEl = document.createElement('div');
+      nameEl.className = 'al-appendix-name';
+      nameEl.textContent = item.name;
+      entry.appendChild(nameEl);
+      if (item.rule.short) {
+        var shortEl = document.createElement('div');
+        shortEl.className = 'al-appendix-short';
+        shortEl.textContent = item.rule.short;
+        entry.appendChild(shortEl);
+      }
+      if (item.rule.text) {
+        var textEl = document.createElement('div');
+        textEl.className = 'al-appendix-text';
+        textEl.textContent = item.rule.text;
+        entry.appendChild(textEl);
+      }
+      cols.appendChild(entry);
+    });
+    delete byCat[cat];
+  });
+
+  /* Any remaining categories not in ORDER */
+  Object.keys(byCat).forEach(function(cat) {
+    var sec = document.createElement('div');
+    sec.className = 'al-appendix-section';
+    sec.textContent = cat;
+    cols.appendChild(sec);
+    byCat[cat].forEach(function(item) {
+      var entry = document.createElement('div');
+      entry.className = 'al-appendix-entry';
+      var nameEl = document.createElement('div');
+      nameEl.className = 'al-appendix-name';
+      nameEl.textContent = item.name;
+      entry.appendChild(nameEl);
+      if (item.rule.short) {
+        var shortEl = document.createElement('div');
+        shortEl.className = 'al-appendix-short';
+        shortEl.textContent = item.rule.short;
+        entry.appendChild(shortEl);
+      }
+      if (item.rule.text) {
+        var textEl = document.createElement('div');
+        textEl.className = 'al-appendix-text';
+        textEl.textContent = item.rule.text;
+        entry.appendChild(textEl);
+      }
+      cols.appendChild(entry);
+    });
+  });
+
+  el.appendChild(cols);
+}
+
+function printArmy() {
+  window.print();
+}
+
+window.addEventListener('beforeprint', function() {
+  applyPrintOrder();
+  if (_appendixOn) buildPrintAppendix();
+});
+window.addEventListener('afterprint', function() {
+  document.getElementById('al-print-appendix').innerHTML = '';
+  renderGrid();
+});
+
+/* ── Card-area background: drop a character here to detach it from its unit ── */
+(function() {
+  const area = document.getElementById('card-area');
+  area.addEventListener('dragover', function(e) {
+    if (!dragId) return;
+    const dragged = cards.find(function(c) { return c.id === dragId; });
+    if (!dragged || !dragged.leadingUnit) return;
+    const du = lookupUnit(dragged.sourceId);
+    if (isCharUnit(du)) e.preventDefault();
+  });
+  area.addEventListener('drop', function(e) {
+    if (!dragId) return;
+    const dragged = cards.find(function(c) { return c.id === dragId; });
+    if (!dragged) return;
+    const du = lookupUnit(dragged.sourceId);
+    if (isCharUnit(du) && dragged.leadingUnit) {
+      dragged.leadingUnit = null;
+      saveCards();
+      renderGrid();
+    }
+  });
+}());
+
 /* ═══ UTILS ═══ */
 function esc(s) {
   return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
+
+function toRoman(n) {
+  if (n < 1) return '';
+  const map = [[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],
+               [50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];
+  return map.reduce(function(r, p) { while (n >= p[0]) { r += p[1]; n -= p[0]; } return r; }, '');
+}
+
+/** Parse a models range string ("5–20", "5-20", "10") into { min, max, label }.
+ *  Returns { min: null, max: null, label: '' } when no range is available. */
+function parseModelsRange(str) {
+  if (!str) return { min: null, max: null, label: '' };
+  const m = String(str).match(/^(\d+)\s*[–\-]\s*(\d+)$/);
+  if (m) return { min: parseInt(m[1], 10), max: parseInt(m[2], 10), label: String(str) };
+  const n = parseInt(str, 10);
+  if (!isNaN(n)) return { min: n, max: n, label: String(n) };
+  return { min: null, max: null, label: '' };
+}
+
+/* ── Rule detail drawer ───────────────────────────────────────────────────── */
+function showRuleDetail(tag) {
+  var sr = tag.parentNode;
+  var detail = sr.nextElementSibling;
+  if (!detail || !detail.classList.contains('al-rule-detail')) return;
+
+  var name = tag.dataset.rule;
+
+  /* Toggle off if same tag clicked again */
+  if (detail.style.display === 'block' && detail.dataset.active === name) {
+    detail.style.display = 'none';
+    detail.dataset.active = '';
+    tag.classList.remove('active');
+    return;
+  }
+
+  /* Deactivate any previously active tag in this rule row */
+  var siblings = sr.querySelectorAll('.al-rule-tag');
+  for (var i = 0; i < siblings.length; i++) siblings[i].classList.remove('active');
+  tag.classList.add('active');
+
+  var rule = (typeof WFB3_RULES !== 'undefined') ? WFB3_RULES[name] : null;
+  var html = '<div class="al-rule-detail-name">' + name + '</div>';
+  if (rule && rule.short) html += '<div class="al-rule-detail-short">' + rule.short + '</div>';
+  if (rule && rule.text)  html += '<div class="al-rule-detail-text">'  + rule.text  + '</div>';
+
+  detail.innerHTML = html;
+  detail.style.display = 'block';
+  detail.dataset.active = name;
+}
 </script>
+
+<!-- Print appendix (populated before print when toggle is on) -->
+<div id="al-print-appendix"></div>
+
 </body>
 </html>

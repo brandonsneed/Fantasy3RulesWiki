@@ -320,6 +320,7 @@ body { background: #111111; min-height: 100vh; display: flex; flex-direction: co
     </div>
   </div>
 </div>
+<script src="special-rules-data.js"></script>
 <script>
 /* ═══ CARD TYPE STATE ═══ */
 let cardType = "standard";
@@ -522,7 +523,8 @@ function makePointsOverrideSection() {
 }
 
 // ─── Special Rules Catalogue ─────────────────────────────────────────────────
-const SPECIAL_RULES_CATALOGUE = {
+// Inline fallback — overridden below by WFB3_SPECIAL_RULES_CATALOGUE from special-rules-data.js.
+const _SPEC_RULES_INLINE = {
   // Racial Rules — succinct
   "Dwarf Racial Rules": {
     category: "Racial Rules",
@@ -708,6 +710,9 @@ const SPECIAL_RULES_CATALOGUE = {
     text: "Character model leading an engine battery. Supervises one engine per turn: lobbing engines use D20 to hit (deviate reduced by 1–2\u2033); bolt throwers +1 to hit; cannons/organ guns +1 wound; skyrockets reposition \u00b13\u2033. +20 pts (unmodified)."
   }
 };
+// Prefer the shared catalogue loaded from special-rules-data.js; fall back to inline copy.
+const SPECIAL_RULES_CATALOGUE = (typeof WFB3_SPECIAL_RULES_CATALOGUE !== 'undefined')
+  ? WFB3_SPECIAL_RULES_CATALOGUE : _SPEC_RULES_INLINE;
 
 // Companion sheet state (persists across card re-renders)
 let companionState = {
@@ -716,7 +721,8 @@ let companionState = {
   customNotes: ""
 };
 
-const STT_RULE_MAP = {
+// Prefer the shared STT map from special-rules-data.js; fall back to inline.
+const STT_RULE_MAP = (typeof WFB3_STT_RULE_MAP !== 'undefined') ? WFB3_STT_RULE_MAP : {
   scouts:      "Scout Rules",
   skirmishers: "Skirmisher Rules",
   berserkers:  "Berserker Rules",

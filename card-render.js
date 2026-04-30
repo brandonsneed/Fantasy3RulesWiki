@@ -12,6 +12,38 @@
  *   aggregate — no profile table; aggregateTable rendered inside .al-flavour
  */
 
+/* ── Generic army fallback art ───────────────────────────────────────────── */
+var GENERIC_ART = {
+  'bretonnia':        'img/generic/bretonnia.png',
+  'chaos':            'img/generic/chaos.png',
+  'dark-elves':       'img/generic/dark-elves.png',
+  'dwarfs':           'img/generic/dwarfs.png',
+  'empire':           'img/generic/empire.png',
+  'high-elves':       'img/generic/high-elves.png',
+  'orcs-goblins':     'img/generic/orcs-goblins.png',
+  'skaven':           'img/generic/skaven.png',
+  'slann':            'img/generic/slann.png',
+  'undead':           'img/generic/undead.png',
+  'wood-elves':       'img/generic/wood-elves.png',
+  // allies & mercs mapped to their parent race
+  'ally-chaos':       'img/generic/chaos.png',
+  'ally-dwarf':       'img/generic/dwarfs.png',
+  'ally-dark-elf':    'img/generic/dark-elves.png',
+  'ally-high-elf':    'img/generic/high-elves.png',
+  'ally-wood-elf':    'img/generic/wood-elves.png',
+  'ally-orc-goblin':  'img/generic/orcs-goblins.png',
+  'ally-skaven':      'img/generic/skaven.png',
+  'ally-undead':      'img/generic/undead.png',
+  'ally-old-worlder': 'img/generic/empire.png',
+  'merc-dwarf':       'img/generic/dwarfs.png',
+  'merc-orc':         'img/generic/orcs-goblins.png',
+  'merc-norse':       'img/generic/chaos.png',
+  'norse':            'img/generic/chaos.png',
+};
+function getArt(unit) {
+  return (unit.art) || GENERIC_ART[unit.army] || '';
+}
+
 /* ── HTML escape ─────────────────────────────────────────────────────────── */
 function esc(s) {
   if (s === null || s === undefined) return '';
@@ -153,10 +185,14 @@ function buildOptions(options) {
  * Renders only the options that appear in selectedOpts map.
  * Used by character cards in the army list builder so the card shows only
  * what the player has actually chosen, rather than the full catalogue.
- * @param {Array}  options      unit.options array
- * @param {Object} selectedOpts { optionName: true, ... }
+ * For magic item options the selected abilities and their descriptions are
+ * expanded inline below each option row.
+ *
+ * @param {Array}  options        unit.options array
+ * @param {Object} selectedOpts   { optionName: true, ... }
+ * @param {Object} magicAbilities { optionName: { abilityName: true, ... }, ... }
  */
-function buildSelectedOptions(options, selectedOpts) {
+function buildSelectedOptions(options, selectedOpts, magicAbilities) {
   if (!options) return '';
   const chosen = [];
   options.forEach(function(group) {
@@ -168,6 +204,7 @@ function buildSelectedOptions(options, selectedOpts) {
   if (!chosen.length) {
     return '<div class="al-char-no-opts">No upgrades selected</div>';
   }
+  const abMap = magicAbilities || {};
   let html = '<div class="al-opts"><div class="al-opts-h">Upgrades</div>';
   chosen.forEach(function(item) {
     html +=
@@ -176,9 +213,44 @@ function buildSelectedOptions(options, selectedOpts) {
       `<span class="al-opt-d"></span>` +
       `<span class="al-opt-c">${esc(item.cost)}</span>` +
       `</div>`;
+    // Expand selected magic abilities with descriptions
+    const catKey = getMagicItemCategoryFromName(item.name);
+    if (catKey && typeof WFB3_MAGIC_ITEMS !== 'undefined' &&
+        WFB3_MAGIC_ITEMS[catKey] && WFB3_MAGIC_ITEMS[catKey].abilities) {
+      const selectedAbs = abMap[item.name] || {};
+      WFB3_MAGIC_ITEMS[catKey].abilities.forEach(function(ab) {
+        if (!selectedAbs[ab.name]) return;
+        const desc = ab.desc ? esc(ab.desc) : '';
+        html +=
+          `<div class="al-magic-ability">` +
+          `<span class="al-magic-ab-name">${esc(ab.name)}</span>` +
+          (desc ? `<span class="al-magic-ab-desc">${desc}</span>` : '') +
+          `<span class="al-magic-ab-cost">+${esc(String(ab.cost))} pts</span>` +
+          `</div>`;
+      });
+    }
   });
   html += '</div>';
   return html;
+}
+
+/**
+ * Returns the WFB3_MAGIC_ITEMS category key for a given option name string.
+ * Mirrors the getMagicItemCategory logic in army-list.html so both pages
+ * classify options identically.
+ */
+function getMagicItemCategoryFromName(optName) {
+  if (typeof WFB3_MAGIC_ITEMS === 'undefined') return null;
+  const n = (optName || '').toLowerCase();
+  if (/magic(al)?\s+(unit\s+)?standard/.test(n) || /\bstandard.*magic/.test(n)) return 'standard';
+  if (/magic(al)?\s+instrument/.test(n))                                          return 'instrument';
+  if (/magic(al)?\s+(hand\s+)?weapon/.test(n) || /magic(al)?\s+sword/.test(n))   return 'weapon';
+  if (/magic(al)?\s+(armou?r|shield|helm)/.test(n))                               return 'armour';
+  if (/one.?shot/i.test(n))                                                        return 'missile_oneshot';
+  if (/magic(al)?\s+missile/.test(n))                                              return 'missile_supply';
+  if (/scroll/.test(n))                                                             return 'scroll';
+  if (/magic(al)?\s+ring/.test(n))                                                 return 'ring';
+  return null;
 }
 
 /* ── Packs block (handler type) ──────────────────────────────────────────── */
@@ -200,10 +272,10 @@ function buildPacks(packs) {
 
 /* ── Art element ─────────────────────────────────────────────────────────── */
 function buildArt(unit, cssClass) {
-  if (!unit.art) return '';
-  // art path is used directly in src — not escaped (it's a file path, not user text)
+  const src = getArt(unit);
+  if (!src) return '';
   const altText = esc(unit.name || '');
-  return `<div class="${cssClass}"><img src="${unit.art}" alt="${altText}"></div>`;
+  return `<div class="${cssClass}"><img src="${src}" alt="${altText}"></div>`;
 }
 
 /* ── Standard info rows ──────────────────────────────────────────────────── */
@@ -265,23 +337,91 @@ function buildInfoRows(unit) {
 
 /* ── Special rules block ─────────────────────────────────────────────────── */
 /**
- * Renders a row of special rule tags for a unit, using the WFB3_UNIT_RULES
- * overlay from special-rules-data.js.  Returns '' if no rules apply or the
- * data file is not loaded.
- * @param {string} unitId  — unit.id (no "card-" prefix)
+ * Renders a row of special rule tags for a unit.
+ * Combines explicit WFB3_UNIT_RULES entries with name-pattern inference
+ * from WFB3_NAME_RULES (bestiary creatures, racial variants, etc.).
+ * @param {string} unitId   — unit.id
+ * @param {string} unitName — unit.name (used for pattern inference)
  */
-function buildSpecialRules(unitId) {
-  if (typeof WFB3_UNIT_RULES === 'undefined') return '';
-  const rules = WFB3_UNIT_RULES[unitId];
-  if (!rules || !rules.length) return '';
+function buildSpecialRules(unitId, unitName) {
+  const explicit = (typeof WFB3_UNIT_RULES !== 'undefined' && WFB3_UNIT_RULES[unitId])
+    ? WFB3_UNIT_RULES[unitId].slice()
+    : [];
 
-  const defs = (typeof WFB3_RULE_DEFS !== 'undefined') ? WFB3_RULE_DEFS : {};
+  const inferred = [];
+  if (typeof WFB3_NAME_RULES !== 'undefined') {
+    WFB3_NAME_RULES.forEach(function(entry) {
+      if (entry.match(unitName || '', unitId)) {
+        entry.rules.forEach(function(r) {
+          if (explicit.indexOf(r) === -1 && inferred.indexOf(r) === -1) inferred.push(r);
+        });
+      }
+    });
+  }
+
+  const rules = explicit.concat(inferred);
+  if (!rules.length) return '';
+
   const tags = rules.map(function(r) {
-    const tip = defs[r] ? esc(defs[r]) : '';
-    return `<span class="al-rule-tag" title="${tip}">${esc(r)}</span>`;
+    return `<span class="al-rule-tag" data-rule="${esc(r)}" onclick="showRuleDetail(this)">${esc(r)}</span>`;
   }).join('');
 
-  return `<div class="al-special-rules">${tags}</div>`;
+  return `<div class="al-special-rules">${tags}</div><div class="al-rule-detail"></div>`;
+}
+
+/* ── Weapon rules block (print-only) ────────────────────────────────────── */
+/**
+ * Returns a compact weapon-rules reference block for printing.
+ * The block is hidden on screen (CSS: display:none) and only visible in
+ * @media print so it doesn't clutter the on-screen army builder.
+ *
+ * @param {string}      weaponsStr   unit.weapons field (comma-separated names)
+ * @param {Object|null} selectedOpts optionsSelected map — character cards only
+ * @param {Array|null}  optionGroups unit.options array — to extract selected weapon names
+ */
+function buildWeaponRules(weaponsStr, selectedOpts, optionGroups) {
+  if (typeof WFB3_WEAPON_RULES === 'undefined') return '';
+
+  // Collect every weapon name string we need to inspect
+  const names = [];
+  if (weaponsStr) {
+    weaponsStr.split(',').forEach(function(s) { names.push(s.trim()); });
+  }
+  if (selectedOpts && optionGroups) {
+    optionGroups.forEach(function(group) {
+      (group.items || []).forEach(function(item) {
+        if (selectedOpts[item.name]) names.push(item.name);
+      });
+    });
+  }
+  if (!names.length) return '';
+
+  // Match each name against WFB3_WEAPON_RULES patterns (first match wins per entry)
+  const found = [];
+  const seen  = new Set();
+  names.forEach(function(name) {
+    for (var i = 0; i < WFB3_WEAPON_RULES.length; i++) {
+      var entry = WFB3_WEAPON_RULES[i];
+      if (!seen.has(entry.name) && entry.pattern.test(name)) {
+        found.push(entry);
+        seen.add(entry.name);
+        break;
+      }
+    }
+  });
+  if (!found.length) return '';
+
+  let html = '<div class="al-weapon-rules">';
+  found.forEach(function(entry) {
+    html +=
+      `<div class="al-weapon-rule">` +
+      `<span class="al-wr-name">${esc(entry.name)}</span>` +
+      `<span class="al-wr-sep"> — </span>` +
+      `<span class="al-wr-text">${esc(entry.rule)}</span>` +
+      `</div>`;
+  });
+  html += '</div>';
+  return html;
 }
 
 /* ── Flavour text ────────────────────────────────────────────────────────── */
@@ -307,7 +447,8 @@ function renderStandard(unit) {
 
   let info = '<div class="al-info">';
   info += buildInfoRows(unit);
-  info += buildSpecialRules(unit.id);
+  info += buildSpecialRules(unit.id, unit.name);
+  info += buildWeaponRules(unit.weapons, null, null);
   info += buildOptions(unit.options);
   info += '</div>';
 
@@ -331,8 +472,9 @@ function renderHandler(unit) {
   let body = '';
 
   // Art
-  if (unit.art) {
-    body += `<div class="al-handler-art"><img src="${unit.art}" alt="${esc(unit.name || '')}"></div>`;
+  const handlerArt = getArt(unit);
+  if (handlerArt) {
+    body += `<div class="al-handler-art"><img src="${handlerArt}" alt="${esc(unit.name || '')}"></div>`;
   }
 
   // Info
@@ -378,7 +520,8 @@ function renderHandler(unit) {
       `</div>`;
   }
 
-  info += buildSpecialRules(unit.id);
+  info += buildSpecialRules(unit.id, unit.name);
+  info += buildWeaponRules(unit.weapons, null, null);
   info += buildOptions(unit.options);
   info += buildPacks(unit.packs);
   info += '</div>';
@@ -429,14 +572,16 @@ function renderWarMachine(unit) {
     `</div>`;
 
   // Art — full width
-  if (unit.art) {
-    html += `<div class="al-wm-art"><img src="${unit.art}" alt="${esc(unit.name || '')}"></div>`;
+  const wmArt1 = getArt(unit);
+  if (wmArt1) {
+    html += `<div class="al-wm-art"><img src="${wmArt1}" alt="${esc(unit.name || '')}"></div>`;
   }
 
   // Special rules + options block (between art and footer, if present)
-  const srHtml = buildSpecialRules(unit.id);
-  if (srHtml || (unit.options && unit.options.length)) {
-    html += `<div style="padding:4px 10px 6px">` + srHtml + buildOptions(unit.options) + `</div>`;
+  const srHtml = buildSpecialRules(unit.id, unit.name);
+  const wrHtml = buildWeaponRules(unit.weapons, null, null);
+  if (srHtml || wrHtml || (unit.options && unit.options.length)) {
+    html += `<div style="padding:4px 10px 6px">` + srHtml + wrHtml + buildOptions(unit.options) + `</div>`;
   }
 
   // .al-wm-footer: weapons + armour cells (+ any extra footer cells from chariot.crew, etc.)
@@ -501,8 +646,9 @@ function renderChariot(unit) {
   }
 
   let artPanel = '';
-  if (unit.art) {
-    artPanel = `<div class="al-chariot-art"><img src="${unit.art}" alt="${esc(unit.name || '')}"></div>`;
+  const chArt = getArt(unit);
+  if (chArt) {
+    artPanel = `<div class="al-chariot-art"><img src="${chArt}" alt="${esc(unit.name || '')}"></div>`;
   } else {
     artPanel = `<div class="al-chariot-art"></div>`;
   }
@@ -544,9 +690,10 @@ function renderChariot(unit) {
     `</div>`;
 
   // Special rules + options (if any)
-  const srHtml2 = buildSpecialRules(unit.id);
-  if (srHtml2 || (unit.options && unit.options.length)) {
-    html += `<div style="padding:4px 10px 6px">` + srHtml2 + buildOptions(unit.options) + `</div>`;
+  const srHtml2 = buildSpecialRules(unit.id, unit.name);
+  const wrHtml2 = buildWeaponRules(unit.weapons, null, null);
+  if (srHtml2 || wrHtml2 || (unit.options && unit.options.length)) {
+    html += `<div style="padding:4px 10px 6px">` + srHtml2 + wrHtml2 + buildOptions(unit.options) + `</div>`;
   }
 
   html += buildFlavour(unit.flavour);
@@ -586,8 +733,9 @@ function renderAggregate(unit) {
     `</div>`;
 
   // Art
-  if (unit.art) {
-    html += `<div class="al-wm-art"><img src="${unit.art}" alt="${esc(unit.name || '')}"></div>`;
+  const wmArt2 = getArt(unit);
+  if (wmArt2) {
+    html += `<div class="al-wm-art"><img src="${wmArt2}" alt="${esc(unit.name || '')}"></div>`;
   }
 
   // Footer: weapons + armour
@@ -656,17 +804,20 @@ function renderAggregate(unit) {
  * then an options block.
  *
  * @param {Object}      unit
- * @param {Object|null} selectedOpts  When provided (army-list context) only the
+ * @param {Object|null} selectedOpts    When provided (army-list context) only the
  *   chosen options are rendered on the card.  When null/undefined (wiki / preview
  *   context) the full options catalogue is shown.
+ * @param {Object|null} magicAbilities  { optionName: { abilityName: true } } map
+ *   from the army list item — used to expand selected magic item abilities.
  */
-function renderCharacter(unit, selectedOpts) {
+function renderCharacter(unit, selectedOpts, magicAbilities) {
   let html = buildProfileTable(unit.profiles);
   if (unit.profileNote) html += buildProfileNote(unit.profileNote);
 
-  // Art panel (placeholder when no art)
+  // Art panel (generic fallback when no specific art)
   let artHtml;
-  if (unit.art) {
+  const stdArt = getArt(unit);
+  if (stdArt) {
     artHtml = buildArt(unit, 'al-art');
   } else {
     artHtml =
@@ -680,10 +831,17 @@ function renderCharacter(unit, selectedOpts) {
 
   if (unit.charType) {
     const ct = unit.charType.charAt(0).toUpperCase() + unit.charType.slice(1);
+    const lvlSuffix = unit.level != null ? `&nbsp;<span class="al-char-level">Lv&nbsp;${esc(String(unit.level))}</span>` : '';
     info +=
       `<div class="al-row">` +
       `<span class="al-lbl">Type:</span>` +
-      `<span class="al-val">${esc(ct)}</span>` +
+      `<span class="al-val">${esc(ct)}${lvlSuffix}</span>` +
+      `</div>`;
+  } else if (unit.level != null) {
+    info +=
+      `<div class="al-row">` +
+      `<span class="al-lbl">Level:</span>` +
+      `<span class="al-val"><span class="al-char-level">Lv&nbsp;${esc(String(unit.level))}</span></span>` +
       `</div>`;
   }
 
@@ -720,11 +878,16 @@ function renderCharacter(unit, selectedOpts) {
   }
 
   // Special rules
-  info += buildSpecialRules(unit.id);
+  info += buildSpecialRules(unit.id, unit.name);
+
+  // Weapon rules (print-only; for army-list show only equipped weapons)
+  info += buildWeaponRules(unit.weapons,
+    selectedOpts != null ? selectedOpts : null,
+    selectedOpts != null ? unit.options : null);
 
   // Options: filtered to selected only (army-list) or full catalogue (preview/wiki)
   if (selectedOpts != null) {
-    info += buildSelectedOptions(unit.options, selectedOpts);
+    info += buildSelectedOptions(unit.options, selectedOpts, magicAbilities);
   } else {
     info += buildOptions(unit.options);
   }
@@ -741,21 +904,29 @@ function renderCharacter(unit, selectedOpts) {
 ═══════════════════════════════════════════════════════════════════════════ */
 
 /**
- * renderAlCard(unit, selectedOpts)
+ * renderAlCard(unit, selectedOpts, magicAbilities, renderOpts)
  *
  * Takes a unit data object (matching the shape in units-data.js) and
  * returns a complete .al-card div HTML string.
  *
  * @param  {Object}      unit
- * @param  {Object|null} selectedOpts  Optional map of { optionName: true } for
+ * @param  {Object|null} selectedOpts    Optional map { optionName: true } for
  *   character cards in the army list builder.  When provided only chosen options
  *   are shown on the card; when omitted the full options catalogue is shown.
+ * @param  {Object|null} magicAbilities  Optional map { optionName: { abilityName: true } }
+ *   from the army list item — expands selected magic item abilities with descriptions.
+ * @param  {Object|null} renderOpts      Optional rendering flags:
+ *   { hideAllowance: true } — omits the allowance prefix from the card title.
+ *   Used by the army list builder so the title reads "Temple Ritterbruden" not
+ *   "0–20 Temple Ritterbruden" (the range is shown in the controls bar instead).
  * @return {string} HTML string
  */
-function renderAlCard(unit, selectedOpts) {
+function renderAlCard(unit, selectedOpts, magicAbilities, renderOpts) {
   const id = unit.id ? `id="card-${esc(unit.id)}" ` : '';
 
-  // Header — characters get a "Level N Chartype · Name" header
+  // Header — use renderOpts.unitName when provided (custom rename or auto-numbering)
+  const displayName = (renderOpts && renderOpts.unitName) ? renderOpts.unitName : unit.name;
+
   let headerText;
   if (unit.type === 'character') {
     const lvlPart = unit.level ? 'Level\u00a0' + unit.level : '';
@@ -763,10 +934,13 @@ function renderAlCard(unit, selectedOpts) {
       ? (unit.charType.charAt(0).toUpperCase() + unit.charType.slice(1))
       : '';
     const prefix  = [lvlPart, ctPart].filter(Boolean).join('\u00a0');
-    headerText    = (prefix ? prefix + '\u00a0\u00b7\u00a0' : '') + esc(unit.name);
+    headerText    = (prefix ? prefix + '\u00a0\u00b7\u00a0' : '') + esc(displayName);
   } else {
-    const allowance = (unit.allowance != null && unit.allowance !== '') ? esc(unit.allowance) + ' ' : '';
-    headerText = allowance + esc(unit.name);
+    const hideAllowance = renderOpts && renderOpts.hideAllowance;
+    const allowance = (!hideAllowance && unit.allowance != null && unit.allowance !== '')
+      ? esc(unit.allowance) + '\u00a0'
+      : '';
+    headerText = allowance + esc(displayName);
   }
   const header =
     `<div class="al-header">${headerText}</div>` +
@@ -776,7 +950,9 @@ function renderAlCard(unit, selectedOpts) {
   let body;
   switch (unit.type) {
     case 'character':
-      body = renderCharacter(unit, selectedOpts != null ? selectedOpts : null);
+      body = renderCharacter(unit,
+        selectedOpts != null ? selectedOpts : null,
+        magicAbilities || null);
       break;
     case 'warmachine':
       body = renderWarMachine(unit);

@@ -31582,7 +31582,13 @@ function renderNav() {
     { id: 'home', label: '⌂ Overview', indent: 28 },
     { id: 'bg-quick-reference', label: '📋 Quick Reference', indent: 28 },
     { id: 'glossary', label: '📖 Glossary', indent: 28 },
-  ].map(item => `<a class="nav-item" data-page="${item.id}" onclick="navigate('${item.id}')" style="padding-left:${item.indent}px">${item.label}</a>`).join('');
+    { id: 'special-rules-ref', label: '📜 Special Rules', indent: 28 },
+  ].map(item => {
+    if (item.id === 'special-rules-ref') {
+      return `<a class="nav-item" href="special-rules.html" style="padding-left:${item.indent}px">${item.label}</a>`;
+    }
+    return `<a class="nav-item" data-page="${item.id}" onclick="navigate('${item.id}')" style="padding-left:${item.indent}px">${item.label}</a>`;
+  }).join('');
   nav.appendChild(fixed);
   sections.forEach((sec, si) => {
     const div = document.createElement('div');
