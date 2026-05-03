@@ -107,8 +107,8 @@ const WFB3_RULES = {
 
   'Poisoned Attacks': {
     category: 'Combat',
-    short: 'All attacks automatically wound on any successful to-hit roll — no Strength roll needed.',
-    text: 'All attacks made by this unit (or with the designated poisoned weapon) automatically wound on any successful to-hit roll. No separate Strength vs Toughness roll is made. Armour saves are still taken as normal. If the model has multiple attacks only the specified attacks are poisoned unless otherwise noted. Poisoned attacks still count as magical if the attacker also has Magical Attacks.'
+    short: 'Each poisoned attack counts as +1 to the attacker\'s Strength for wounding purposes. Normal to-wound roll still applies.',
+    text: 'Each attack made with poison counts as having +1 bonus to the attacker\'s Strength when determining whether a wound is caused — the normal Strength vs Toughness wounding roll is still made, but at the higher effective Strength. Armour saves are taken as normal. Troops may be equipped with poisoned weapons at a cost of 3 points per model; some creatures have natural poisoned attacks as part of their profile (cost already included). If the model has multiple attacks only the specified attacks are poisoned unless otherwise noted.'
   },
 
   'Regeneration': {
@@ -203,8 +203,8 @@ const WFB3_RULES = {
 
   'War Altar Rules': {
     category: 'Special Rule',
-    short: 'Guards immune to psychology. Friendly units within 12″ gain +1 combat resolution and +2 Ld.',
-    text: 'Guards within 6″ immune to psychology. Friendly units within 12″: +1 combat resolution, +2 Ld bonus. If captured, own side must take an immediate Rout test. Base cost: 50 pts.'
+    short: 'Guards (within 6″) immune to psychology and rout tests. Friendly units within 12″ gain +1 combat resolution and +2 Ld.',
+    text: 'Guards within 6″ are immune to psychology tests and rout tests. All friendly troops within 12″: +1 to hand-to-hand combat resolution score; +2 bonus to Leadership. If captured or desecrated (all guards slain AND enemy in base contact), all friendly troops within 12″ must take an immediate Rout test. May be mounted on a wagon. Base cost: 50 pts.'
   },
 
   'Animal Handler Rules': {
@@ -256,7 +256,7 @@ const WFB3_RULES = {
   'Giant Rules': {
     category: 'Bestiary — Giant Races',
     short: 'Causes Fear (under 10′). Half terrain penalties. May be drunk. Roll special attack table when in combat.',
-    text: 'Causes Fear in creatures under 10′. Halves movement penalties for difficult ground; ignores obstacles under 10′. Short-weapon troops suffer −1 to hit. If pushed-back, roll D6: 6 = Giant falls (use Fallen Giant template, D6 Str 5 hits in fall direction). Roll D6 before game: 6 = drunk — each move requires D10 roll determining stagger, fall, or random lurch. See Bestiary: Giant Races for drunk attack table.'
+    text: 'Causes Fear in creatures under 10′. Halves movement penalties for difficult ground; ignores obstacles under 10′. Short-weapon troops suffer −1 to hit. If pushed-back, roll D6: on a 6 the Giant falls — place the Fallen Giant template; all models under the template suffer a Strength 5 blow and 1 wound. Roll D6 before game: 6 = drunk — each move requires a D10 roll determining stagger, fall, or random lurch. See Bestiary: Giant Races for drunk attack table.'
   },
 
   'Ogre Rules': {
