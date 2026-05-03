@@ -2055,7 +2055,7 @@
               <p>Single characters and units in single file suffer no penalty for <em>difficult ground</em>, treat <em>very difficult</em> as <em>difficult ground</em> and only lose a quarter of their move for <em>obstacles</em>.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-turn-movement');setTimeout(()=>document.getElementById('manoeuvres')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Manoeuvres</a></h4>
-              <p>Units may make 1 <em>complex manoeuvre</em> or up to 3 <em>simple manoeuvres</em>. The first <em>simple manoeuvre</em> is automatic. All others require a leader and a 2D6 roll under <strong>Ld</strong> or the unit immediately halts. A failed <em>complex manoeuvre</em> also costs the unit its <em>reserve move</em>.</p>
+              <p>Units may make 1 <em>complex manoeuvre</em> or up to 3 <em>simple manoeuvres</em>. The first <em>simple manoeuvre</em> is automatic. All others require a leader and a 2D6 roll equal to or under <strong>Ld</strong> or the unit immediately halts. A failed <em>complex manoeuvre</em> also costs the unit its <em>reserve move</em>.</p>
               <p><em><a onclick="navigate('bg-turn-movement');setTimeout(()=>document.getElementById('simple-manoeuvres')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Simple manoeuvres</a>:</em> formation changes, turns, wheels; <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-mixed-ranks')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">changing ranks, deploying flanks</a>; <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-shieldwall')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">wedges, archer wedges, shieldwalls</a>.</p>
               <p><em><a onclick="navigate('bg-turn-movement');setTimeout(()=>document.getElementById('complex-manoeuvres')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Complex manoeuvres</a>:</em> moving backwards, wheeling backwards, wheeling from the centre; <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-mixed-ranks')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">squares</a>, <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-testudo')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">testudos</a>.</p>
               <p>Units in single file can follow snaking paths without penalty. Single characters can make as many turns as desired without penalty. A unit with a musician in the front rank adds +1 to <strong>Ld</strong> tests for manoeuvres.</p>
@@ -2066,8 +2066,8 @@
               <p><a onclick="navigate('ag-aerial');setTimeout(()=>document.getElementById('aerial-dropping')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Aerial troops</a> may leave the table to collect suitable missiles to drop; requiring at least 1 full turn off-table before returning.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-charges');setTimeout(()=>document.getElementById('charge')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Charging</a></h4>
-              <p>Units in single file may not charge. Charging units may not <em>manoeuvre</em> within 4″ of the enemy except to wheel to within 22½° of the enemy line. A unit failing a manoeuvre (<strong>Ld</strong>) test while charging may complete the charge and may still <em>wheel</em>, but attacks <em>unformed</em>. A unit meeting the enemy at an angle greater than 22½° or failing to complete a charge is also unformed. <em>Unformed</em> units receive no charge bonuses, make all <strong>Ld</strong>, <strong>Int</strong>, <strong>Cl</strong> and <strong>WP</strong> tests at −1 and automatically <em>rout</em> if <em>pushed back</em> in the first round of combat.</p>
-              <p>Units <em>must</em> charge a <em>bated</em> enemy if possible (roll under <strong>Cl</strong> on 2D6 to resist).</p>
+              <p>Charging units move at <strong>twice their normal Movement rate</strong>. Units in single file may not charge. Charging units may not <em>manoeuvre</em> within 4″ of the enemy except to wheel to within 22½° of the enemy line. A unit failing a manoeuvre (<strong>Ld</strong>) test while charging may complete the charge and may still <em>wheel</em>, but attacks <em>unformed</em>. A unit meeting the enemy at an angle greater than 22½° or failing to complete a charge is also unformed. <em>Unformed</em> units receive no charge bonuses, make all <strong>Ld</strong>, <strong>Int</strong>, <strong>Cl</strong> and <strong>WP</strong> tests at −1 and automatically <em>rout</em> if <em>pushed back</em> in the first round of combat.</p>
+              <p>Units <em>must</em> charge a <em>bated</em> enemy if possible (roll equal to or under <strong>Cl</strong> on 2D6 to resist).</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-charges');setTimeout(()=>document.getElementById('receiving-a-charge')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Charged Units May</a></h4>
               <p><em>Shoot</em>, provided the enemy begins more than half of its charge move away. Unit must make a <strong>Ld</strong> test to fire, and must receive at the halt if it fails. Once it has fired, the unit receives at the halt.</p>
@@ -2208,28 +2208,28 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr><td class="wiki-table-grid-header">1</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-                        <tr><td class="wiki-table-grid-header">2</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-                        <tr><td class="wiki-table-grid-header">3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td><td>—</td></tr>
-                        <tr><td class="wiki-table-grid-header">4</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td></tr>
-                        <tr><td class="wiki-table-grid-header">5</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td></tr>
-                        <tr><td class="wiki-table-grid-header">6</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td></tr>
-                        <tr><td class="wiki-table-grid-header">7</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td></tr>
-                        <tr><td class="wiki-table-grid-header">8</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td></tr>
-                        <tr><td class="wiki-table-grid-header">9</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td></tr>
-                        <tr><td class="wiki-table-grid-header">10</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                        <tr><td class="wiki-table-grid-header">1</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td class="wiki-table-grid-header">2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td class="wiki-table-grid-header">3</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td class="wiki-table-grid-header">4</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td class="wiki-table-grid-header">5</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td class="wiki-table-grid-header">6</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td></tr>
+                        <tr><td class="wiki-table-grid-header">7</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td></tr>
+                        <tr><td class="wiki-table-grid-header">8</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                        <tr><td class="wiki-table-grid-header">9</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                        <tr><td class="wiki-table-grid-header">10</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td></tr>
                       </tbody>
                     </table>
               </div>
-              <p style="font-size:12px;color:var(--text-dim);margin-top:4px">— = automatic failure regardless of dice roll.</p>
+              <p style="font-size:12px;color:var(--text-dim);margin-top:4px">— = no damage possible regardless of dice roll. A roll of 1 always means no damage. <em>Frenzied</em> units add +1 to the roll.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-resolving-hits');setTimeout(()=>document.getElementById('saving-throws')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Saving Throws</a></h4>
               <table class="wiki-table wiki-table-compact no-last-highlight" style="margin-top:8px;width:auto">
                 <thead><tr><th style="text-align:left">Armour Type</th><th>On foot</th><th>Mounted</th></tr></thead>
                 <tbody>
                   <tr><td>None</td><td>—</td><td>6</td></tr>
-                  <tr><td>Shield</td><td>6</td><td>5</td></tr>
-                  <tr><td>Light armour</td><td>6</td><td>5</td></tr>
+                  <tr><td>Shield</td><td>6</td><td>6</td></tr>
+                  <tr><td>Light armour</td><td>6</td><td>6</td></tr>
                   <tr><td>Light armour &amp; shield*</td><td>5</td><td>4</td></tr>
                   <tr><td>Heavy armour</td><td>5</td><td>4</td></tr>
                   <tr><td>Heavy armour &amp; shield*</td><td>4</td><td>3</td></tr>
@@ -2360,13 +2360,18 @@
             <h3>G. Reserve Phase</h3>
             <div class="wiki-body">
               <p>Units making a reserve move may not approach within 4″ of an enemy unit (including routing enemy units).</p>
-              <h4 class="wiki-subsection-heading">Committed Units</h4>
+              <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-turn-movement');setTimeout(()=>document.getElementById('reserve-move')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Committed Units</a></h4>
               <p>The following may not make a <em>reserve move:</em></p>
               <ul style="margin:6px 0 8px 18px;padding:0;line-height:1.8">
+                <li>Units divided by an <em>obstacle</em> or with any models on <em>difficult ground</em></li>
+                <li>Units that failed a <em>complex manoeuvre</em> in their previous movement phase</li>
+                <li>Units that failed a <em>fear</em> test before charging a <em>feared</em> enemy</li>
                 <li>Units engaged in hand-to-hand combat</li>
-                <li>Units that charged this turn (already engaged)</li>
-                <li>Units that failed a <em>complex manoeuvre</em> test this turn</li>
-                <li>Routing units</li>
+                <li>Routing units and pursuing units</li>
+                <li>Units within 4″ of friendly or enemy routing troops</li>
+                <li>Units hurling insults at friendly troops while subject to <em>animosity</em></li>
+                <li>Flying creatures of any type</li>
+                <li>Large vehicles and war machines (excluding 1 and 2 horse chariots)</li>
               </ul>
 
             </div>
@@ -2377,8 +2382,8 @@
             <div class="wiki-body">
               <p>Dispel any spells whose duration has now expired and remove relevant effects from play. The GM or player may move or redirect existing spells where appropriate.</p>
               <p>Wizards who were wounded during the combat phase or who are routing may not cast spells.</p>
-              <p>Wizards with less than 12 magic points left must roll under their <em>Intelligence</em> or the number of remaining points (whichever is higher) on 2D6 to <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-casting')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">successfully cast a spell</a> — the relevant magic points must be expended regardless of the spell's success or failure.</p>
-              <p>Spell targets may be allowed a <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-save')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">magic save</a>, requiring a 2D6 roll under the target's <strong>WP</strong>. Wizards may augment their <em>magic save</em>, gaining +1 per magic point expended: the caster may also reduce the target's save by −1 per extra point — these must be spent before the <em>saving throw</em> is made.</p>
+              <p>Wizards with less than 12 magic points left must roll equal to or under their <em>Intelligence</em> or the number of remaining points (whichever is higher) on 2D6 to <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-casting')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">successfully cast a spell</a> — the relevant magic points must be expended regardless of the spell's success or failure.</p>
+              <p>Spell targets may be allowed a <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-save')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">magic save</a>, requiring a 2D6 roll equal to or under the target's <strong>WP</strong>. Wizards may augment their <em>magic save</em>, gaining +1 per magic point expended: the caster may also reduce the target's save by −1 per extra point — these must be spent before the <em>saving throw</em> is made.</p>
               <p>Test for <em>rout</em> in any unit that has just lost a quarter of its current strength to the combined effects of missile and magical attacks this turn — see <a onclick="document.getElementById('qr-rout')?.scrollIntoView({behavior:'smooth'})" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">K. Rout</a>.</p>
             </div>
           </div><!-- /wiki-section: qr-magic -->
@@ -2386,13 +2391,13 @@
           <div class="wiki-section" id="qr-rallying">
             <h3>I. Rallying Phase</h3>
             <div class="wiki-body">
-              <p>The player may roll under <strong>Ld</strong> on 2D6 to rally any units that began routing last turn or earlier. Rallied units may not move but can adopt any permitted formation and facing, reverting to normal after this phase.</p>
+              <p>The player may roll equal to or under <strong>Ld</strong> on 2D6 to rally any units that began routing last turn or earlier. Rallied units may not move but can adopt any permitted formation and facing, reverting to normal after this phase.</p>
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Rallying Units</a></h4>
               <p>To qualify for <em>rallying</em>, a unit must:</p>
               <ol style="margin:6px 0 8px 20px;padding:0;line-height:1.8">
                 <li>Be free of pursuers — no enemy in base-to-base contact</li>
                 <li>Retain at least 25% of its original strength</li>
-                <li>Be closer to friendly models than to enemy models</li>
+                <li>Have a non-routing, friendly unit of at least 5 models closer than any enemy units</li>
                 <li>Not be within range of any <em>fear</em>-causing enemy</li>
                 <li>Not have started routing during the current turn</li>
               </ol>
@@ -2448,7 +2453,7 @@
                 <tbody>
                   <tr><td style="width:2em;white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">1</td><td>unit cannot cause physical damage but is affected by weapons and magic as normal; paralysis and chill attacks plus psychological effects still work. The effect is permanent — another test immediately dispels the unit</td></tr>
                   <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">2</td><td>unit may not move, fire missiles or employ magic this turn — if in combat, attacks at −1 to hit for the remainder of the engagement</td></tr>
-                  <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">3</td><td>roll a further D6 for each model: 4–6 remove from play (character models receive a magic save — 2D6 roll under WP)</td></tr>
+                  <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">3</td><td>roll a further D6 for each model: 4–6 remove from play (character models receive a magic save — 2D6 roll equal to or under WP)</td></tr>
                   <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">4</td><td>as 3 but only remove on 5 or 6</td></tr>
                   <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">5</td><td>unit may strike an extra round of blows this turn, or double its movement or fire missiles twice — if the enemy's turn, these effects apply during the unit's next turn</td></tr>
                   <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">6</td><td>any casualties caused this turn are returned to the unit, though still counted for establishing the winner of a combat</td></tr>
@@ -2462,11 +2467,11 @@
           <div class="wiki-section" id="qr-rout">
             <h3>K. Rout</h3>
             <div class="wiki-body">
-              <p>Test (roll 2D6 under unit's <strong>Ld</strong>) if the unit: has just lost 25% of its current strength to missile and magical attacks; has lost 25% of its original strength and has just lost the current turn of combat; loses a combat fought to capture a standard; has been penetrated by a <em>wedge</em>.</p>
+              <p>Test (roll 2D6 equal to or under unit's <strong>Ld</strong>) if the unit: has just lost 25% of its current strength to missile and magical attacks; has lost 25% of its original strength and has just lost the current turn of combat; loses a combat fought to capture a standard; has been penetrated by a <em>wedge</em>.</p>
               <p>The unit automatically routs if it has: failed a <em>panic</em> test; been <em>pushed back</em> while <em>unformed</em>; been <em>followed up</em> by a <em>feared</em> enemy; failed to break free of pursuers after a voluntary withdrawal from combat. <em>Frenzied</em> units never take <em>rout</em> tests.</p>
               <p>If a rout is caused, the enemy gets a <em>free back</em> for each model remaining in the front rank: the routers are hit automatically — armour saves are allowed, ignoring shields.</p>
               <p>The routing unit turns and moves away at double rate during its side's <em>movement phase</em> (with no <em>reserve move</em>) towards the nearest table edge until it has <a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">rallied</a> or has left the table. Terrain penalties apply, but no <em>manoeuvres</em> are made.</p>
-              <p>The enemy which caused the rout will pursue the fleeing unit unless a 2D6 roll under <strong>Ld</strong> is made. Units routing a <em>bated</em> enemy must always pursue. Pursuers that keep contact make all subsequent attacks as <em>free backs</em>.</p>
+              <p>The enemy which caused the rout will pursue the fleeing unit unless a 2D6 roll equal to or under <strong>Ld</strong> is made. Units routing a <em>bated</em> enemy must always pursue. Pursuers that keep contact make all subsequent attacks as <em>free backs</em>.</p>
               <p>If a pursuing unit loses contact or kills all the routers, it becomes unformed until the end of its next <em>movement phase</em>. An unformed unit makes <strong>Ld</strong>, <strong>Int</strong>, <strong>Cl</strong> and <strong>WP</strong> tests at −1, and automatically <em>routs</em> if <em>followed up</em>.</p>
             </div>
           </div><!-- /wiki-section: qr-rout -->
@@ -2507,7 +2512,7 @@
               <table class="wiki-table wiki-table-compact wiki-table-text no-last-highlight" style="margin:6px 0 10px;width:auto">
                 <tbody>
                   <tr><td style="width:5em"><strong>≥ 50%</strong></td><td><strong>Rank &amp; file</strong> — core troops must make up at least half the army</td></tr>
-                  <tr><td><strong>≤ 33%</strong></td><td><strong>Characters</strong> — heroes, wizards, and commanders combined</td></tr>
+                  <tr><td><strong>≤ 25%</strong></td><td><strong>Characters</strong> — heroes, wizards, and commanders combined</td></tr>
                   <tr><td><strong>≤ 33%</strong></td><td><strong>Allies</strong> — allied contingents from other army lists</td></tr>
                   <tr><td><strong>≤ 33%</strong></td><td><strong>Mercenaries</strong> — mercenary contingents</td></tr>
                 </tbody>
