@@ -529,7 +529,7 @@ const WFB3_UNIT_RULES = {
   /* ── WOOD ELVES ──────────────────────────────────────────────────────── */
   // All Wood Elves hate Goblinoids (army-wide rule)
   'we-020-elven-lords':         ['Hatred (Goblinoids)'],
-  'we-040-wood-riders':         ['Skirmishers', 'Hatred (Goblinoids)'],
+  'we-040-wood-riders':         ['Hatred (Goblinoids)'],
   'we-04-wain-lords':           ['Hatred (Goblinoids)'],
   'we-020-guards':              ['Hatred (Goblinoids)'],
   'we-040-wardancers':          ['Immune to Psychology', 'Hatred (Goblinoids)'],
@@ -538,13 +538,13 @@ const WFB3_UNIT_RULES = {
   'we-3060-archers':            ['Hatred (Goblinoids)'],
   'we-060-warrior-kinbands':    ['Hatred (Goblinoids)'],
   'we-06-beastmasters':         ['Hatred (Goblinoids)'],
-  'we-020-falconers':           ['Skirmishers', 'Hatred (Goblinoids)'],
+  'we-020-falconers':           ['Hatred (Goblinoids)'],
   'we-08-shapechangers':        ['Cause Fear', 'Hatred (Goblinoids)'],
   'we-03-treemen':              ['Cause Fear', 'Hatred (Goblinoids)'],
 
   /* ── HIGH ELVES ──────────────────────────────────────────────────────── */
   'he-05-elven-dragonkin':      ['Cause Fear', 'Fly'],
-  'he-040-shore-riders':        ['Skirmishers'],
+  'he-040-shore-riders':        [],
   'he-010-sea-elf-wardancers':  ['Immune to Psychology'],
   'he-025-seekers':             ['Scouts', 'Skirmishers'],
 
@@ -555,7 +555,7 @@ const WFB3_UNIT_RULES = {
 
   /* ── BRETONNIA ───────────────────────────────────────────────────────── */
   'br-080-chasseurs-de-la-mort': ['Scouts'],
-  'br-020-ribalds':              ['Skirmishers'],
+  'br-020-ribalds':              [],
 
   /* ── NORSE (White Dwarf) ─────────────────────────────────────────────── */
   'wdno-040-berserkers':               ['Berserker Rules'],
@@ -571,7 +571,7 @@ const WFB3_UNIT_RULES = {
   'ch-010-trolls':              ['Cause Fear', 'Stupidity', 'Regeneration'],
 
   /* ── SKAVEN ──────────────────────────────────────────────────────────── */
-  'sk-010-night-runners':       ['Scouts', 'Skirmishers'],
+  'sk-010-night-runners':       ['Scouts'],
   'sk-020-gutter-runners':      ['Scouts', 'Skirmishers'],
   'sk-06-plague-censer-bearers':['Cause Fear', 'Frenzy'],
   'sk-020-plague-monks':        ['Frenzy'],
@@ -604,7 +604,7 @@ const WFB3_UNIT_RULES = {
   'dw-010-giant-slayers':       ['Frenzy', 'Immune to Psychology', 'Hatred (Goblinoids)'],
   'dw-050-gnome-warriors':      [],
   'dw-012-sappers':             ['Scouts', 'Hatred (Goblinoids)'],
-  'dw-015-mountaineers':        ['Scouts', 'Skirmishers', 'Hatred (Goblinoids)'],
+  'dw-015-mountaineers':        ['Scouts', 'Hatred (Goblinoids)'],
 
   /* ── UNDEAD ──────────────────────────────────────────────────────────── */
   // Most Undead: Cause Fear + Immune to Psychology (via army catch-all in WFB3_NAME_RULES).
