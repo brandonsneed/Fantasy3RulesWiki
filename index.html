@@ -1660,6 +1660,10 @@
   .al-opt { display: flex; align-items: center; font-family: 'Barlow Condensed', sans-serif; font-size: 7px; color: #1a1a1a; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.7; width: 100%; min-width: 0; }
   .al-opt-c { font-weight: 700; white-space: nowrap; flex-shrink: 0; min-width: 14px; text-align: right; }
   .al-flavour { border-top: 1px solid #1a1a1a; padding: 4px 7px 5px; font-style: italic; font-size: 7.5px; line-height: 1.5; color: #222; font-family: 'IM Fell English', Georgia, serif; flex-shrink: 0; }
+  .al-special-rules { display: flex; flex-wrap: wrap; gap: 3px; padding: 4px 6px 3px; border-top: 1px solid #e0d0b8; background: #fdf8f0; }
+  .al-rule-tag { display: inline-block; background: #f5e8cc; border: 1px solid #c8a060; color: #3a2a08; font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 1px 5px 0; border-radius: 2px; cursor: default; }
+  .al-val .al-char-level { background: #2a4a36; color: #a0d4b0; border-radius: 2px; padding: 0 3px; font-size: 7px; font-weight: 700; letter-spacing: 0.08em; vertical-align: middle; }
+  .al-char-no-opts { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-style: italic; color: #888; padding: 4px 6px; }
   .al-pending { background: var(--bg2); border: 1px dashed var(--accent-dim); border-radius: 3px; padding: 12px 16px; color: var(--text-dim); font-size: 13px; font-style: italic; margin-bottom: 8px; }
   /* Army list card extensions — Handler, War Machine, War Altar variants */
   .al-profile tr.al-rh td { background: #d8d8d8 !important; color: #1a1a1a; font-size: 7.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-align: left; padding: 2px 5px !important; border-color: #999 !important; }
@@ -32116,9 +32120,28 @@ function wikiTurnSequence(items, pageId) {
     </table>`;
 }
 
+function enhanceWikiArmyCards(pageEl) {
+  if (!pageEl) return;
+  if (typeof renderAlCard === 'undefined' || typeof WFB3_UNITS === 'undefined') return;
+  pageEl.querySelectorAll('.al-card[id]:not([data-enhanced])').forEach(function(cardEl) {
+    const unitId = cardEl.id.replace(/^card-/, '');
+    const unit = WFB3_UNITS.find(function(u) { return u.id === unitId; });
+    if (!unit) return;
+    const tmp = document.createElement('div');
+    tmp.innerHTML = renderAlCard(unit);
+    const newCard = tmp.firstElementChild;
+    if (newCard) {
+      newCard.dataset.enhanced = '1';
+      cardEl.parentNode.replaceChild(newCard, cardEl);
+    }
+  });
+}
+
 function renderRulesSection(pageId) {
   const el = document.getElementById(`page-${pageId}`);
   if (!el) return;
+  // Re-render any army list cards from live data (adds special rules, current options, etc.)
+  enhanceWikiArmyCards(el);
   // If the page already has static pre-rendered content, leave it alone
   if (el.children.length > 0) return;
   const meta = sectionMeta[pageId];
@@ -33029,5 +33052,8 @@ document.querySelectorAll('h4.spell-heading').forEach(h4 => {
       </div></div>
         </div><!-- /page-wa-norse -->
 
-
+<script src="units-data.js"></script>
+<script src="special-rules-data.js"></script>
+<script src="magic-items-data.js"></script>
+<script src="card-render.js"></script>
 </body></html>
