@@ -123,12 +123,6 @@ const WFB3_RULES = {
     text: 'Flying creatures use the aerial movement rules rather than ground movement. Each flying creature\'s profile lists its maximum flight speed, minimum flight speed, acceleration/deceleration rate per turn, and turning radius (equal to its movement distance). Creatures occupy height levels (attack level, +10, +20, +30, +40) and fight at attack level when in combat. A flyer crashing below minimum speed crashes to the ground. Flying creatures may not make a reserve move. When killed in the air a flyer crashes D12″ in a random direction, causing D4 wounds/damage points per height level above ground to itself and anything it lands on (modify by adding the flyer\'s Toughness and deducting the target\'s Toughness for landings on creatures).'
   },
 
-  'Fast Cavalry': {
-    category: 'Combat',
-    short: 'May skirmish, freely evade charges, and perform an additional free reform during movement.',
-    text: 'Fast Cavalry units are highly mobile mounted troops. They may adopt loose skirmish formation, may evade charges as a free action, and may perform one additional free reformation during their movement phase. Fast Cavalry may also fire missiles while moving at no penalty. When pursuing they always use the mount\'s Movement characteristic. They may not form ordered ranks like regular cavalry but are less restricted in their movement options.'
-  },
-
   'Magical Attacks': {
     category: 'Combat',
     short: 'All attacks count as magical — required to harm ethereal and certain daemonic creatures.',
@@ -524,9 +518,9 @@ const WFB3_UNIT_RULES = {
   // All Dark Elves hate High Elves and Wood Elves (army-wide rule)
   'de-40100-warriors':          ['Hatred (High Elves & Wood Elves)'],
   'de-2060-crossbowmen':        ['Hatred (High Elves & Wood Elves)'],
-  'de-1060-witch-elves':        ['Frenzy', 'Hatred (High Elves & Wood Elves)'],
-  'de-025-shadows':             ['Scouts', 'Hatred (High Elves & Wood Elves)'],
-  'de-040-dark-riders':         ['Fast Cavalry', 'Hatred (High Elves & Wood Elves)'],
+  'de-1060-witch-elves':        ['Frenzy', 'Immune to Psychology', 'Hatred (High Elves & Wood Elves)'],
+  'de-025-shadows':             ['Scouts', 'Skirmishers', 'Hatred (High Elves & Wood Elves)'],
+  'de-040-dark-riders':         ['Hatred (High Elves & Wood Elves)'],
   'de-020-helldrakes':          ['Stupidity', 'Hatred (High Elves & Wood Elves)'],   // Cold One riders
   'de-030-doomsteeds':          ['Hatred (High Elves & Wood Elves)'],
   'de-040-doomdrakes':          ['Stupidity', 'Hatred (High Elves & Wood Elves)'],   // younger Cold One riders
@@ -535,7 +529,7 @@ const WFB3_UNIT_RULES = {
   /* ── WOOD ELVES ──────────────────────────────────────────────────────── */
   // All Wood Elves hate Goblinoids (army-wide rule)
   'we-020-elven-lords':         ['Hatred (Goblinoids)'],
-  'we-040-wood-riders':         ['Fast Cavalry', 'Hatred (Goblinoids)'],
+  'we-040-wood-riders':         ['Skirmishers', 'Hatred (Goblinoids)'],
   'we-04-wain-lords':           ['Hatred (Goblinoids)'],
   'we-020-guards':              ['Hatred (Goblinoids)'],
   'we-040-wardancers':          ['Immune to Psychology', 'Hatred (Goblinoids)'],
@@ -548,15 +542,9 @@ const WFB3_UNIT_RULES = {
   'we-08-shapechangers':        ['Cause Fear', 'Hatred (Goblinoids)'],
   'we-03-treemen':              ['Cause Fear', 'Hatred (Goblinoids)'],
 
-  /* ── DARK ELVES ─────────────────────────────────────────────────────── */
-  // Catch-all id-prefix rule adds Dark Elf Racial Rules to all de- units
-  'de-1060-witch-elves':        ['Frenzy', 'Immune to Psychology'],
-  'de-025-shadows':             ['Scouts', 'Skirmishers'],
-  'de-040-dark-riders':         ['Fast Cavalry'],
-
   /* ── HIGH ELVES ──────────────────────────────────────────────────────── */
   'he-05-elven-dragonkin':      ['Cause Fear', 'Fly'],
-  'he-040-shore-riders':        ['Fast Cavalry'],
+  'he-040-shore-riders':        ['Skirmishers'],
   'he-010-sea-elf-wardancers':  ['Immune to Psychology'],
   'he-025-seekers':             ['Scouts', 'Skirmishers'],
 
@@ -649,7 +637,6 @@ const WFB3_UNIT_RULES = {
   'ally-de-040-witch-elves': ['Frenzy', 'Hatred (High Elves & Wood Elves)'],
 
   /* ── ALLIES — HIGH ELVES ─────────────────────────────────────────────── */
-  'ally-he-010-silver-helms':        ['Fast Cavalry'],
   'ally-he-040-merchant-companies':  ['Skirmishers'],
 
   /* ── ALLIES — WOOD ELVES ─────────────────────────────────────────────── */
