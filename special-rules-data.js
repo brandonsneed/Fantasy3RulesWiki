@@ -27,14 +27,14 @@ const WFB3_RULES = {
 
   'Animosity': {
     category: 'Psychology',
-    short: 'O&G units test each turn not in combat. Fail: unit squabbles — stands still, attacks itself, or blunders forward.',
-    text: 'At the start of each player turn, any Orc or Goblin unit not currently in close combat must test for Animosity (Black Orcs are exempt — see Black Orc Animosity). Roll 2D6 against the unit\'s Leadership. On a fail, consult the Animosity table: the unit may refuse orders and squabble, attack a friendly unit, or blunder forward out of control. Goblins and Night Goblins are more prone to Animosity than Orcs. Units in the Animosity condition may not cast spells, use missiles, or perform any voluntary actions. See the Animosity Table in the rulebook.'
+    short: 'O&G units test if a friendly Animosity unit is within 12″ (unless enemy in reach, bated enemy in sight, or in combat). Roll D6 − leader Ld bonus ± modifiers. 7+: charges or fires on the friendly unit. 6: moves up and insults — no reserve move. 5−: passes.',
+    text: 'At the start of each player turn, if a friendly Animosity-causing unit is within 12″, any Orc or Goblin unit must test — unless enemy troops are within 12″ or charge range, there is a bated enemy in sight, or the unit is already engaged in combat (Black Orcs are exempt — see Black Orc Animosity). Roll D6, deduct the leader\'s Ld bonus, then modify: +1 if the Animosity unit is directly in front and within charge range; +1 if of a different race; +1 if no enemy in sight. Result 7+: charges or fires missiles at the friendly unit (hurling insults if no missiles). Result 6: fires missiles if available, otherwise moves as close as possible (no closer than 1″) and exchanges jeers — neither unit may make a reserve move. Result 5−: unit behaves normally. Units gripped by Animosity will fight unless enemy approach within 12″ (or charge range) or a bated enemy appears.'
   },
 
   'Cause Fear': {
     category: 'Psychology',
-    short: 'Enemies must test before charging or when charged. Fail to charge: frozen. Fail when charged: auto-rout.',
-    text: 'This unit causes Fear in all living enemies under 10′ tall (unless those enemies are themselves Fear-causing or Immune to Psychology). Enemies wishing to charge this unit must first pass a Fear test (2D6 vs Cl). Failure means they cannot charge that turn. When this unit charges an enemy, the target must test or automatically rout. Enemies pushed back in combat by a Fear-causing unit also auto-rout. Note: creatures over 10′ tall are not affected by Fear from smaller creatures.'
+    short: 'Enemies test (2D6 vs Cl): to fire missiles within charge reach, to charge (fail = frozen), and when charged (fail = auto-rout). Pushed-back by this unit: auto-rout.',
+    text: 'This unit causes Fear in all living enemies under 10′ tall (unless those enemies are themselves Fear-causing or Immune to Psychology). Fear tests (2D6 vs Cl) are required in three situations: (1) a unit wants to fire missiles at this unit while it is within the shooter\'s charge reach — fail means it cannot fire; (2) a unit wants to charge this unit — fail means it cannot move that turn; (3) a unit is charged by this unit — fail means it automatically routs. In addition, any unit pushed back in combat by a Fear-causing unit automatically routs. Creatures over 10′ tall are not affected by Fear from smaller creatures. Some creatures have a Fear Range (e.g. Fear 15″): enemy units within that range suffer −1 to hit in all attacks, cannot rally if routing within range, and may not make reserve moves toward the feared creature.'
   },
 
   'Cause Terror': {
@@ -57,38 +57,38 @@ const WFB3_RULES = {
 
   'Frenzy': {
     category: 'Psychology',
-    short: '+1 Attack. Must always pursue. Immune to Fear & Terror while frenzied. Lost if unit takes casualties.',
-    text: 'Test on charge (2D6 vs Cl; fail = frenzied). While frenzied: +1 to hit, +1 to wound, +1 to saves; must follow-up and pursue; never take Rout tests. Frenzy lasts while in base-to-base contact with enemy.'
+    short: '+1 to hit, +1 to wound, +1 to saves. Must follow up and pursue. Ignores psychology tests. Lasts while in base-to-base contact with enemy.',
+    text: 'When this unit charges, test 2D6 vs Cl — note the inverted logic: rolling MORE than Cl triggers frenzy; rolling equal to or under Cl means the unit keeps its cool and does not frenzy. While frenzied: +1 to hit, +1 to wound, +1 to all saving throws; must always follow up enemies who are pushed back; must always pursue routing enemies; never takes other psychology tests or Rout tests. Frenzy persists as long as the unit remains in base-to-base contact with the enemy, including during pursuit and free hacks — it is not lost when the unit takes casualties.'
   },
 
   'Hatred': {
     category: 'Psychology',
-    short: 'Re-roll all missed attacks in the first round of combat against the hated enemy.',
-    text: 'Must charge/shoot hated enemy if able (Cl test to resist). In combat vs hated: +1 to hit in the first round; +1 Ld on rout tests if pushed back; must always pursue.'
+    short: 'Must charge/shoot hated enemy if able (Cl test to resist). +1 to hit in first round of combat. +1 Ld on rout tests. Must always pursue.',
+    text: 'Must charge a hated enemy if able, or shoot at them if unable to charge (make a Cl test to resist either compulsion). In the first round of hand-to-hand combat against the hated enemy: +1 to hit. If pushed back by hated enemy, +1 Ld bonus on rout tests. Must always pursue a routing hated enemy.'
   },
 
   'Hatred (High Elves & Wood Elves)': {
     category: 'Psychology',
-    short: 'Re-roll all misses in the first round of combat against High Elves and Wood Elves.',
+    short: 'Must charge/shoot High/Wood Elves if able. +1 to hit in first round of combat vs High or Wood Elves.',
     text: 'This unit hates all High Elves and Wood Elves. Must charge/shoot hated enemy if able (Cl test to resist). In combat vs High or Wood Elves: +1 to hit in the first round; +1 Ld on rout tests if pushed back; must always pursue.'
   },
 
   'Hatred (Goblinoids)': {
     category: 'Psychology',
-    short: 'Re-roll all misses in the first round of combat against Orcs, Goblins and all Goblinoids.',
+    short: 'Must charge/shoot Goblinoids if able. +1 to hit in first round of combat vs Goblinoids.',
     text: 'This unit hates all Goblinoids (Orcs, Goblins, Hobgoblins, Snotlings and any similar creatures). Must charge/shoot hated enemy if able (Cl test to resist). In combat vs Goblinoids: +1 to hit in the first round; +1 Ld on rout tests if pushed back; must always pursue.'
   },
 
   'Hatred (Dwarfs & Gnomes)': {
     category: 'Psychology',
-    short: 'Re-roll all misses in the first round of combat against Dwarfs and Gnomes.',
+    short: 'Must charge/shoot Dwarfs and Gnomes if able. +1 to hit in first round of combat vs Dwarfs or Gnomes.',
     text: 'This unit hates all Dwarfs and Gnomes. Must charge/shoot hated enemy if able (Cl test to resist). In combat vs Dwarfs or Gnomes: +1 to hit in the first round; +1 Ld on rout tests if pushed back; must always pursue. This is a racial trait of Goblins as noted in the O&G army psychology section.'
   },
 
   'Stupidity': {
     category: 'Psychology',
-    short: 'Test each turn. Fail in combat: only odd-numbered models fight. Fail out of combat: random blundering move.',
-    text: 'Test at start of each turn (2D6 vs Cl). Fail in combat: odd man fights on D6 4+, characters test individually. Fail out of combat: random half-rate movement, no magic or shooting.'
+    short: 'Test each turn (2D6 vs Cl). Fail in combat: only odd models fight (D6 4+). Fail out of combat: D6 — 1–3 random half-rate move; 4–6 completely inactive. No magic or shooting while stupid.',
+    text: 'Test at start of each turn (2D6 vs Cl). In combat: half the models fail to fight — for an odd number of troops, the odd one fights on a D6 result of 4+; characters test individually on the same basis. Out of combat: roll D6 — on 1–3 the unit moves randomly at half rate (roll D12 for direction using a clock face; no penalty for turning); on 4–6 the unit stands completely inactive and does nothing at all. In either case no magic may be used and no missiles may be fired. Stupid units ignore all other psychology tests.'
   },
 
   'Immune to Psychology': {
@@ -99,8 +99,8 @@ const WFB3_RULES = {
 
   'Instability': {
     category: 'Psychology',
-    short: 'Undead: suffer automatic D6 Strength 4 hits at end of each turn away from a controlling wizard.',
-    text: 'Undead units that are not within range of a controlling wizard\'s Instability radius suffer D6 automatic Strength 4 hits at the end of each movement phase, with no armour save allowed. Wounds from Instability cannot be regenerated. If a controlling wizard is slain, all Undead units under their control immediately become subject to Instability. Units reduced to 0 models by Instability crumble and are removed. Mummies and other independently animated Undead are immune to Instability.'
+    short: 'Test when pushed back in combat, within 12″ of a Zone spell, or targeted by Dispel Magic. Roll D6: 1 = loses combat ability; 2 = cannot act; 3–4 = models removed on roll; 5 = extra attacks/movement; 6 = casualties restored.',
+    text: 'Test when: (1) the unit is pushed back in combat; (2) the unit begins its turn within 12″ of a wizard using a relevant Zone spell; (3) a Dispel Magic spell is cast at the unit. Roll D6:\n1 — unit cannot cause physical damage but is still affected by weapons and magic normally; paralysis and chill attacks plus psychological effects still work. The effect is permanent — a second Instability result immediately dispels the unit.\n2 — unit may not move, fire missiles or use magic this turn; if in combat attacks at −1 to hit for the remainder of the engagement.\n3 — roll a D6 for each model: on 4–6 the model is removed from play (character models receive a magic save: 2D6 equal to or under WP).\n4 — as result 3 but models are only removed on a 5 or 6.\n5 — unit may strike an extra round of blows, or double its movement, or fire missiles twice; if the enemy\'s turn, these effects apply during the unit\'s next turn.\n6 — any casualties caused this turn are returned to the unit (though still counted for combat results).'
   },
 
   /* ── COMBAT SPECIAL RULES ───────────────────────────────────────────── */
@@ -113,14 +113,14 @@ const WFB3_RULES = {
 
   'Regeneration': {
     category: 'Combat',
-    short: 'At the start of each turn, roll D6 for each wound taken that turn; on a 4+ the wound is healed.',
-    text: 'At the end of each player turn, a model with Regeneration may roll D6 for each wound it suffered during that turn. On a 4+, that wound is healed and removed. Wounds caused by fire or acid are harder to regenerate — fire wounds heal on 6+ only; wounds from weapons that are wholly fire/acid based cannot be regenerated at all. Armoured Trolls cannot regenerate. Wounds healed by Regeneration are removed before Instability is checked.'
+    short: 'At end of each turn, roll a single D6: on 4+ ALL wounds taken that turn are recovered. Fire/acid: 6+ only. Wholly fire/acid source: no regeneration.',
+    text: 'At the end of each player turn, any model with Regeneration that took wounds that turn rolls a single D6. On a result of 4, 5 or 6 the regeneration is successful and all wounds suffered that turn are recovered — it is not a roll per wound, it is one roll that either heals everything or nothing. Wounds caused by fire or acid are harder to regenerate: such wounds require a 6+ to heal. Wounds caused by a weapon or attack that is entirely fire or acid based cannot be regenerated at all. Armoured Trolls cannot regenerate.'
   },
 
   'Fly': {
     category: 'Combat',
-    short: 'Uses flying movement (M×3). Ignores terrain and intervening units; cannot land in impassable terrain.',
-    text: 'Flying creatures use a special Fly movement of M×3 instead of their ground movement. They ignore all terrain, obstacles, and intervening units during their move, but must start and end their move in legal positions (cannot land on impassable terrain or inside other units). Flying models may not fly over the heads of enemies in close combat. In close combat a flying creature fights normally. Flying creatures cannot march-move but may charge at full fly distance.'
+    short: 'Uses aerial movement rules. Has a listed maximum and minimum flight speed, acceleration/deceleration rate, and turning radius. Occupies height levels. May not make a reserve move.',
+    text: 'Flying creatures use the aerial movement rules rather than ground movement. Each flying creature\'s profile lists its maximum flight speed, minimum flight speed, acceleration/deceleration rate per turn, and turning radius (equal to its movement distance). Creatures occupy height levels (attack level, +10, +20, +30, +40) and fight at attack level when in combat. A flyer crashing below minimum speed crashes to the ground. Flying creatures may not make a reserve move. When killed in the air a flyer crashes D12″ in a random direction, causing D4 wounds/damage points per height level above ground to itself and anything it lands on (modify by adding the flyer\'s Toughness and deducting the target\'s Toughness for landings on creatures).'
   },
 
   'Fast Cavalry': {
@@ -137,8 +137,8 @@ const WFB3_RULES = {
 
   'Fanatics': {
     category: 'Combat',
-    short: 'Hidden in a parent unit. When released, spin out dealing automatic hits on everything in their path.',
-    text: 'Night Goblin Fanatics are hidden within a Night Goblin infantry unit before the game. When the unit moves to within 8″ of an enemy unit, or when the owning player chooses, the Fanatics are released. Each Fanatic spins out in a random direction, rolling 2D6″ of movement. Everything in their path (friend or foe) suffers an automatic Strength 5 hit with no armour save. After release, Fanatics move randomly each turn — roll D8 for direction, 2D6″ distance. A Fanatic that hits a wall, impassable terrain, or rolls 1–2 is removed.'
+    short: 'Hidden in parent unit. Automatically released when unit comes within 8″ of enemy. Spin 2D6″ causing D6 Str 5 auto-hits (no save) on all in path. Subsequently move 2D6″ on D12 direction each turn. Removed on a double.',
+    text: 'Night Goblin Fanatics are hidden within a Night Goblin infantry unit before the game. As soon as the unit comes within 8″ of an enemy unit the Fanatics are automatically and compulsorily released toward the enemy — this happens regardless of which player\'s turn it is. The owning player aims each Fanatic and moves them 2D6″ in the chosen direction. Every unit in their path (friend or foe) suffers D6 automatic Strength 5 hits with no armour save. Skirmishing units may roll D6: on a 5–6 they avoid the fanatic. After release, Fanatics continue to move each turn: roll 2D6″ for distance and a D12 for direction (using a clock face, with 12 o\'clock as the current facing). A Fanatic is removed if it rolls a double for movement distance in any subsequent turn, or moves into a building, wood or other obstacle.'
   },
 
   'Ambushers': {
@@ -151,7 +151,7 @@ const WFB3_RULES = {
 
   'Scouts': {
     category: 'Deployment',
-    short: 'Deploy after all other forces; may be placed anywhere on the table not in the enemy deployment zone.',
+    short: 'All Skirmisher rules but can charge normally and stand when charged. Deploy after all forces, anywhere not in enemy deployment zone or within charge distance of enemy. +5 pts (unmodified).',
     text: 'All Skirmisher rules apply except rules 7 & 8: Scouts may charge normal troops and may stand their ground when charged. Scouts are deployed after all other forces have been placed. They may be positioned anywhere on the table that is not within the enemy deployment zone and not within charge distance of an enemy unit. +5 pts per model (unmodified).',
     catalogueName: 'Scout Rules'
   },
@@ -236,7 +236,7 @@ const WFB3_RULES = {
   'Undead Racial Rules': {
     category: 'Racial Rules',
     short: 'Cause Fear, immune to psychology, subject to Instability. Skeletons/Zombies stupid without a controlling wizard.',
-    text: 'Most Undead: immune to psychology, cause Fear in all living creatures, subject to Instability. Skeletons/Zombies/Undead Horsemen: Stupid unless controlled by a character; cannot be routed. Ghouls: not immune to psychology; always rout if pushed back. Vampires: separate rules — see Bestiary.'
+    text: 'Most Undead: immune to psychology, cause Fear in all living creatures, subject to Instability. Skeletons/Zombies/Undead Horsemen: Stupid unless controlled by a character; cannot be routed. Ghouls: not immune to psychology; always rout if pushed back. Mummies: not immune to psychology; not subject to Instability — they are independently animated and operate under their own rules. Vampires: separate rules — see Bestiary.'
   },
 
   'Chaos Racial Rules': {
@@ -619,7 +619,9 @@ const WFB3_UNIT_RULES = {
   'dw-015-mountaineers':        ['Scouts', 'Skirmishers', 'Hatred (Goblinoids)'],
 
   /* ── UNDEAD ──────────────────────────────────────────────────────────── */
-  // All Undead: Cause Fear + Immune to Psychology. Mummies: Cause Terror instead.
+  // Most Undead: Cause Fear + Immune to Psychology (via army catch-all in WFB3_NAME_RULES).
+  // Exceptions: Ghouls are NOT immune to psychology (they always rout if pushed back).
+  //             Mummies cause Fear (not Terror) and are NOT immune to psychology.
   'un-050-death-riders':        ['Cause Fear', 'Immune to Psychology'],
   'un-04-undead-chariots':      ['Cause Fear', 'Immune to Psychology'],
   'un-20100-skeleton-warriors': ['Cause Fear', 'Immune to Psychology'],
@@ -627,8 +629,8 @@ const WFB3_UNIT_RULES = {
   'un-040-skeleton-crossbows':  ['Cause Fear', 'Immune to Psychology'],
   'un-1050-grim-reapers':       ['Cause Fear', 'Immune to Psychology'],
   'un-0100-zombies':            ['Cause Fear', 'Immune to Psychology'],
-  'un-080-ghouls':              ['Cause Fear', 'Immune to Psychology'],
-  'un-010-mummies':             ['Cause Terror', 'Immune to Psychology'],
+  'un-080-ghouls':              ['Cause Fear'],
+  'un-010-mummies':             ['Cause Fear'],
   'un-06-carrion':              ['Cause Fear', 'Immune to Psychology', 'Fly'],
   'un-01-plague-cart':          ['Cause Fear', 'Immune to Psychology'],
   'un-04-undead-war-machines':  ['Cause Fear', 'Immune to Psychology'],
