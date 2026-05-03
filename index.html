@@ -2066,11 +2066,11 @@
               <p><a onclick="navigate('ag-aerial');setTimeout(()=>document.getElementById('aerial-dropping')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Aerial troops</a> may leave the table to collect suitable missiles to drop; requiring at least 1 full turn off-table before returning.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-charges');setTimeout(()=>document.getElementById('charge')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Charging</a></h4>
-              <p>Charging units move at <strong>twice their normal Movement rate</strong>. Units in single file may not charge. Charging units may not <em>manoeuvre</em> within 4″ of the enemy except to wheel to within 22½° of the enemy line. A unit failing a manoeuvre (<strong>Ld</strong>) test while charging may complete the charge and may still <em>wheel</em>, but attacks <em>unformed</em>. A unit meeting the enemy at an angle greater than 22½° or failing to complete a charge is also unformed. <em>Unformed</em> units receive no charge bonuses, make all <strong>Ld</strong>, <strong>Int</strong>, <strong>Cl</strong> and <strong>WP</strong> tests at −1 and automatically <em>rout</em> if <em>pushed back</em> in the first round of combat.</p>
+              <p>Charges must be <strong>declared before any units move</strong> at the start of the movement phase. Charging units move at <strong>twice their normal Movement rate</strong>. Units in single file may not charge. A unit may not see — and therefore may not charge — an enemy it could not have seen at the start of the turn. Charging units may not <em>manoeuvre</em> within 4″ of the enemy; a unit that wheels within the <strong>last 4″</strong> of its charge move loses all charge bonuses and attacks <em>unformed</em>. A unit failing a manoeuvre (<strong>Ld</strong>) test while charging may complete the charge and may still <em>wheel</em>, but attacks <em>unformed</em>. A unit meeting the enemy at an angle greater than 22½° or failing to complete a charge is also unformed. <em>Unformed</em> units receive no charge bonuses, make all <strong>Ld</strong>, <strong>Int</strong>, <strong>Cl</strong> and <strong>WP</strong> tests at −1 and automatically <em>rout</em> if <em>pushed back</em> in the first round of combat.</p>
               <p>Units <em>must</em> charge a <em>bated</em> enemy if possible (roll equal to or under <strong>Cl</strong> on 2D6 to resist).</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-charges');setTimeout(()=>document.getElementById('receiving-a-charge')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Charged Units May</a></h4>
-              <p><em>Shoot</em>, provided the enemy begins more than half of its charge move away. Unit must make a <strong>Ld</strong> test to fire, and must receive at the halt if it fails. Once it has fired, the unit receives at the halt.</p>
+              <p><em>Shoot</em>, provided the enemy begins more than half of its charge move away. Unit must make a <strong>Ld</strong> test to fire, and must receive at the halt if it fails. Once it has fired, the unit receives at the halt. A unit firing <strong>bows, crossbows, blunderbusses or arquebuses</strong> at a charging enemy <strong>may not use their shields</strong> in the first round of the ensuing combat.</p>
               <p><em>Turn to face:</em> if charged in the side or rear, unengaged models may turn to face the enemy (unless crossing an obstacle).</p>
               <p><em>Run away:</em> requires <strong>Ld</strong> test to avoid a rout. If successful, unit turns and moves away from enemy at double rate. It may move next turn but cannot charge. This option <em>must</em> be taken by units in single file if charged.</p>
               <p>Roll for Psychology when charged: <a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('fear')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">fear</a> if charged by a feared enemy; <a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('frenzy')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">frenzy</a> if charging while subject to frenzy; <a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('panic')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">panic</a> if charged in the side or rear, while crossing an obstacle, or if a character leaves while unit is engaged.</p>
@@ -2174,7 +2174,11 @@
               <p>Modify the roll as follows:</p>
               <table class="wiki-table wiki-table-compact wiki-table-text no-last-highlight" style="margin:6px 0 10px;width:auto">
                 <tbody>
-                  <tr><td style="width:3em"><strong>−1</strong></td><td>Attacker pushed back this round</td></tr>
+                  <tr><td style="width:3em"><strong>+1</strong></td><td>Charged into combat this turn (unit wheeling within the last 4″ of charge does <em>not</em> qualify)</td></tr>
+                  <tr><td><strong>+1</strong></td><td>Following up — won previous round and followed up the enemy</td></tr>
+                  <tr><td><strong>+1</strong></td><td>Advantage of higher ground</td></tr>
+                  <tr><td><strong>−1</strong></td><td>Enemy behind an obstacle</td></tr>
+                  <tr><td><strong>−1</strong></td><td>Attacker pushed back this round</td></tr>
                   <tr><td><strong>−1</strong></td><td>Attacker subject to stupidity and failed test this turn</td></tr>
                   <tr><td colspan="2" style="padding-top:6px;font-size:11px;color:var(--text-faint)">See <a onclick="navigate('ag-weapons')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">weapon-specific modifiers</a> in the Advanced Game.</td></tr>
                 </tbody>
@@ -2228,11 +2232,11 @@
                 <thead><tr><th style="text-align:left">Armour Type</th><th>On foot</th><th>Mounted</th></tr></thead>
                 <tbody>
                   <tr><td>None</td><td>—</td><td>6</td></tr>
-                  <tr><td>Shield</td><td>6</td><td>6</td></tr>
-                  <tr><td>Light armour</td><td>6</td><td>6</td></tr>
-                  <tr><td>Light armour &amp; shield*</td><td>5</td><td>4</td></tr>
-                  <tr><td>Heavy armour</td><td>5</td><td>4</td></tr>
-                  <tr><td>Heavy armour &amp; shield*</td><td>4</td><td>3</td></tr>
+                  <tr><td>Shield</td><td>6</td><td>5</td></tr>
+                  <tr><td>Light armour</td><td>5</td><td>4</td></tr>
+                  <tr><td>Light armour &amp; shield*</td><td>4</td><td>3</td></tr>
+                  <tr><td>Heavy armour</td><td>4</td><td>3</td></tr>
+                  <tr><td>Heavy armour &amp; shield*</td><td>3</td><td>2</td></tr>
                 </tbody>
               </table>
               <p style="margin-top:6px;font-size:13px;color:var(--text-dim)">* shield discounted if using weapon requiring both hands or being attacked from the rear. +1 to the roll if mount has cloth or metal armour. +1 to the roll if <em>frenzied</em>. Remember to apply <a onclick="navigate('ag-weapons');setTimeout(()=>document.getElementById('modifying-values')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">weapon type saving throw modifiers</a>.</p>
@@ -2315,8 +2319,9 @@
               <table class="wiki-table wiki-table-compact wiki-table-text no-last-highlight" style="width:100%;table-layout:fixed;margin-top:8px;font-size:13px">
                 <thead><tr><th style="text-align:left">Weapon</th><th style="width:4em">Range</th><th style="width:4em">Str</th><th style="width:4.5em">Save Mod</th><th>Notes</th></tr></thead>
                 <tbody>
-                  <tr><td>Arquebus</td><td>24″</td><td>4</td><td>−2/−1</td><td>cannot move and fire; no consecutive fire</td></tr>
-                  <tr><td>Blunderbuss</td><td>16″</td><td>1</td><td>−2/−1</td><td>cannot move and fire; no consecutive fire</td></tr>
+                  <tr><td>Arquebus</td><td>24″</td><td>4</td><td>−2 at ≤6″; −1 at 6–12″; — beyond</td><td>cannot move and fire; no consecutive fire; roll of 1 to hit = misfire (S4 hit on firer)</td></tr>
+                  <tr><td>Blunderbuss (0–8″)</td><td rowspan="2">16″</td><td>3</td><td>−2</td><td rowspan="2">cannot move and fire; no consecutive fire; roll of 1 to hit = misfire (S4 hit on firer)</td></tr>
+                  <tr><td>Blunderbuss (8–16″)</td><td>1</td><td>—</td></tr>
                   <tr><td>Pistol</td><td>6″</td><td>4</td><td>−1/−1</td><td>no consecutive fire</td></tr>
                   <tr><td>Grenade</td><td>6″</td><td>3</td><td>−2/−2</td><td>no move if throwing but may reserve move</td></tr>
                   <tr><td>Torinoko Grenade</td><td>6″</td><td>see below</td><td>−/-</td><td>no move if throwing but may reserve move</td></tr>
@@ -2391,7 +2396,7 @@
           <div class="wiki-section" id="qr-rallying">
             <h3>I. Rallying Phase</h3>
             <div class="wiki-body">
-              <p>The player may roll equal to or under <strong>Ld</strong> on 2D6 to rally any units that began routing last turn or earlier. Rallied units may not move but can adopt any permitted formation and facing, reverting to normal after this phase.</p>
+              <p>The player may roll equal to or under <strong>Ld</strong> on 2D6 to rally any units that began routing last turn or earlier. Rallied units may not move but may <strong>shoot normally</strong> during the shooting phase; they can adopt any permitted formation and facing, reverting to normal after this phase.</p>
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Rallying Units</a></h4>
               <p>To qualify for <em>rallying</em>, a unit must:</p>
               <ol style="margin:6px 0 8px 20px;padding:0;line-height:1.8">
@@ -2416,7 +2421,7 @@
               <p>Any unit pushed back and followed up by a <em>feared</em> enemy is automatically routed. Models with a <em>ranged fear</em> ability affect enemy units within <em>fear</em> range: all attacks at −1 to hit; no attempt may be made to <em>rally</em>; no <em>reserve move</em> may be made. Bonuses to the <em>fear</em> ability (eg <em>fear</em> +2) are applied to the enemy's dice roll against <strong>Cl</strong>.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('frenzy')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Frenzy</a></h4>
-              <p>Test when a unit <em>subject to frenzy</em> charges. The following rules apply: <em>frenzy</em> continues while the unit remains in base-to-base contact with the enemy; the unit must always <em>follow up</em> and <em>pursue</em>; the unit never takes other <em>psychology</em> tests or <em>rout</em> tests; models gain +1 to hit, +1 to wound, and +1 to any <em>saves</em> made.</p>
+              <p>Test when a unit <em>subject to frenzy</em> charges — roll 2D6 against the unit's <strong>Cl</strong>. <strong>Note: this test is inverted</strong> — rolling <em>more than</em> <strong>Cl</strong> means the unit <em>goes frenzied</em>; rolling equal to or under <strong>Cl</strong> means it keeps its cool and does not frenzy. The following rules apply while frenzied: <em>frenzy</em> continues while the unit remains in base-to-base contact with the enemy; the unit must always <em>follow up</em> and <em>pursue</em>; the unit never takes other <em>psychology</em> tests or <em>rout</em> tests; models gain +1 to hit, +1 to wound, and +1 to any <em>saves</em> made.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('hatred')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hatred</a></h4>
               <p>Units <em>subject to hatred</em> must always charge a <em>bated</em> enemy, or shoot at them if outside charge range, unless a <strong>Cl</strong> test is passed. Models in hand-to-hand combat with <em>bated</em> enemy gain +1 to hit, and +1 to <strong>Ld</strong> for rout tests. They must always pursue routing enemy.</p>
@@ -2469,9 +2474,9 @@
             <div class="wiki-body">
               <p>Test (roll 2D6 equal to or under unit's <strong>Ld</strong>) if the unit: has just lost 25% of its current strength to missile and magical attacks; has lost 25% of its original strength and has just lost the current turn of combat; loses a combat fought to capture a standard; has been penetrated by a <em>wedge</em>.</p>
               <p>The unit automatically routs if it has: failed a <em>panic</em> test; been <em>pushed back</em> while <em>unformed</em>; been <em>followed up</em> by a <em>feared</em> enemy; failed to break free of pursuers after a voluntary withdrawal from combat. <em>Frenzied</em> units never take <em>rout</em> tests.</p>
-              <p>If a rout is caused, the enemy gets a <em>free back</em> for each model remaining in the front rank: the routers are hit automatically — armour saves are allowed, ignoring shields.</p>
+              <p>If a rout is caused, the enemy gets a <em>free hack</em> for each model remaining in the front rank: the routers are hit automatically — armour saves are allowed, ignoring shields.</p>
               <p>The routing unit turns and moves away at double rate during its side's <em>movement phase</em> (with no <em>reserve move</em>) towards the nearest table edge until it has <a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">rallied</a> or has left the table. Terrain penalties apply, but no <em>manoeuvres</em> are made.</p>
-              <p>The enemy which caused the rout will pursue the fleeing unit unless a 2D6 roll equal to or under <strong>Ld</strong> is made. Units routing a <em>bated</em> enemy must always pursue. Pursuers that keep contact make all subsequent attacks as <em>free backs</em>.</p>
+              <p>The enemy which caused the rout will pursue the fleeing unit unless a 2D6 roll equal to or under <strong>Ld</strong> is made. Units routing a <em>bated</em> enemy must always pursue. Pursuers that keep contact make all subsequent attacks as <em>free hacks</em>.</p>
               <p>If a pursuing unit loses contact or kills all the routers, it becomes unformed until the end of its next <em>movement phase</em>. An unformed unit makes <strong>Ld</strong>, <strong>Int</strong>, <strong>Cl</strong> and <strong>WP</strong> tests at −1, and automatically <em>routs</em> if <em>followed up</em>.</p>
             </div>
           </div><!-- /wiki-section: qr-rout -->
@@ -17715,16 +17720,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td class="wiki-table-grid-header">1</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><td class="wiki-table-grid-header">2</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><td class="wiki-table-grid-header">3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td><td>—</td></tr>
-              <tr><td class="wiki-table-grid-header">4</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td><td>—</td></tr>
-              <tr><td class="wiki-table-grid-header">5</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>—</td></tr>
-              <tr><td class="wiki-table-grid-header">6</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td></tr>
-              <tr><td class="wiki-table-grid-header">7</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td></tr>
-              <tr><td class="wiki-table-grid-header">8</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>6</td></tr>
-              <tr><td class="wiki-table-grid-header">9</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td></tr>
-              <tr><td class="wiki-table-grid-header">10</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+              <tr><td class="wiki-table-grid-header">1</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="wiki-table-grid-header">2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="wiki-table-grid-header">3</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="wiki-table-grid-header">4</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="wiki-table-grid-header">5</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="wiki-table-grid-header">6</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td><td>—</td></tr>
+              <tr><td class="wiki-table-grid-header">7</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>—</td></tr>
+              <tr><td class="wiki-table-grid-header">8</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+              <tr><td class="wiki-table-grid-header">9</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+              <tr><td class="wiki-table-grid-header">10</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td></tr>
             </tbody>
           </table>
         </div>
