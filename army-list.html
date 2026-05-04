@@ -1335,6 +1335,7 @@ function buildMagicItemControl(opt, catKey, item, ptsTotalEl, isChar) {
     updateCostDisplay();
     recalcPts(item, ptsTotalEl);
     if (isChar) refreshCharCard(item);
+    else refreshStatBadges(item, cb.closest('.card-wrapper'));
     saveCards(); updateTotals();
   };
 
@@ -1382,6 +1383,7 @@ function buildOptChip(opt, item, ptsTotalEl, isChar, unitData) {
     chip.classList.toggle("checked", cb.checked);
     recalcPts(item, ptsTotalEl);
     if (isChar) refreshCharCard(item);
+    else refreshStatBadges(item, cb.closest('.card-wrapper'));
     saveCards(); updateTotals();
   };
   const perModel = isPerModelCost(opt.cost, unitData);
@@ -1463,6 +1465,31 @@ function buildCharOptSections(unitData, item, ptsTotalEl) {
   });
 
   return wrap;
+}
+
+/* ═══════════════════════════════════════
+   STAT BADGE REFRESH (non-character units)
+   Patches only the .al-stat-badges strip on a standard unit card when an
+   option that affects movement or armour is toggled. Characters use the
+   full refreshCharCard instead (they re-render the whole card).
+═══════════════════════════════════════ */
+function refreshStatBadges(item, wrapper) {
+  if (!wrapper) return;
+  const unit = lookupUnit(item.sourceId);
+  if (!unit) return;
+  const newHtml = buildStatBadges(unit, item.optionsSelected);
+  const existing = wrapper.querySelector('.al-stat-badges');
+  if (existing) {
+    if (newHtml) {
+      existing.outerHTML = newHtml;
+    } else {
+      existing.remove();
+    }
+  } else if (newHtml) {
+    // Insert between profile table / profile note and the .al-mid body
+    const mid = wrapper.querySelector('.al-mid');
+    if (mid) mid.insertAdjacentHTML('beforebegin', newHtml);
+  }
 }
 
 /* ═══════════════════════════════════════

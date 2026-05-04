@@ -433,65 +433,127 @@ function buildFlavour(flavour) {
 }
 
 /* ── Stat badges ─────────────────────────────────────────────────────────── */
+
+/* Known mount speeds (M stat) used when a character selects a mount option. */
+var _MOUNT_M = {
+  'Warhorse': 8, 'Chaos Steed': 8, 'Hippogriff': 8, 'Pegasus': 8,
+  'Warhorses for Chaos Steeds': 8,
+  'Cold One': 7, 'War Boar': 7,
+  'Wyvern': 6, 'Griffon': 6, 'Manticore': 6,
+  'Giant Spider': 6, 'Eagle': 6, 'Winged Dragon': 6,
+  'Temple Dog': 5, 'Temple Dog Mount': 5,
+  'Dragon 1': 6, 'Dragon 2': 6, 'Dragon 3': 6,
+  'Dragon 4': 6, 'Dragon 5': 6, 'Dragon 6': 6
+};
+
 /**
- * Derives three at-a-glance values from the unit data:
- *   move  — movement in inches (uses mount M for cavalry)
- *   toHit — roll to hit with missiles (7 − BS, min 2); null if BS is 0
- *   save  — armour save roll; null if no save
+ * Resolves effective armour state by merging unit base data with selected
+ * options. Returns { heavy, light, shield, barding, mounted,
+ *   mountedFromBase, mountedFromOption, mountM }.
+ *
+ * mountedFromBase  — true when the unit profile/note/base armour implies mounting
+ * mountedFromOption — true when a mount option is selected (may have unknown speed)
+ * mountM           — base M of the selected mount, or null if speed is unknown
  */
-function calcStatBadges(unit) {
-  // Mounted detection ------------------------------------------------------
-  // Signal 1: rider's M is "–" (separate mount profile carries the movement)
-  // Signal 2: profileNote mentions horse or mount (combined-M units like Wood Riders)
-  // Signal 3: armour string includes Barding
-  var mounted = false;
-  if (unit.profiles && unit.profiles[0] && (unit.profiles[0].stats[0] === '–' || unit.profiles[0].stats[0] === '-')) mounted = true;
-  if (!mounted && unit.profileNote && /horse|mount/i.test(unit.profileNote)) mounted = true;
-  if (!mounted && unit.armour && /barding/i.test(unit.armour)) mounted = true;
+function resolveArmourState(unit, optionsSelected) {
+  var sel = optionsSelected || {};
+  var base = (unit.armour || '').toLowerCase();
 
-  // Armour flags -----------------------------------------------------------
-  var heavy = false, light = false, shield = false, barding = false;
-  if (unit.armour) {
-    var a = unit.armour.toLowerCase();
-    heavy   = a.includes('heavy');
-    light   = !heavy && a.includes('light');
-    shield  = a.includes('shield');
-    barding = a.includes('barding');
-  }
+  // Flags from base unit data
+  var heavy   = base.includes('heavy');
+  var light   = !heavy && base.includes('light');
+  var shield  = base.includes('shield');
+  var barding = base.includes('barding');
 
-  // Movement ---------------------------------------------------------------
-  // Profile M is the race base. Armour and mounting add penalties (WFB3 p.XX):
-  //   Foot — LA+Shield: −½″  |  HA: −½″  |  HA+Shield: −1″
-  //   Mounted — any armour adds +½″ on top of the foot penalty; barding +½″ more
-  var move = null;
-  if (unit.profiles && unit.profiles[0]) {
-    var riderM = unit.profiles[0].stats[0];
-    if (riderM === '–' || riderM === '-') {
-      // Cavalry with separate mount profile — use the mount row's M
-      for (var i = 1; i < unit.profiles.length; i++) {
-        var mountM = unit.profiles[i].stats[0];
-        if (mountM && mountM !== '–' && mountM !== '-') { move = mountM; break; }
-      }
-    } else {
-      move = riderM;
+  // Merge armour/shield/barding options
+  if (sel['Heavy Armour'] || sel['Heavy Armour for Light']) { heavy = true; light = false; }
+  if (!heavy && sel['Light Armour'])                         light   = true;
+  if (sel['Shield'] || sel['Shields'])                       shield  = true;
+  if (sel['Horse Barding'] || sel['Warhorse Barding'] ||
+      sel['Horse/warhorse barding'] ||
+      sel['Horse, warhorse or Chaos Steed barding'])         barding = true;
+
+  // Mounted from base profile / note / armour
+  var mountedFromBase = false;
+  if (unit.profiles && unit.profiles[0] &&
+      (unit.profiles[0].stats[0] === '–' || unit.profiles[0].stats[0] === '-')) mountedFromBase = true;
+  if (!mountedFromBase && unit.profileNote && /horse|mount/i.test(unit.profileNote)) mountedFromBase = true;
+  if (barding) mountedFromBase = true; // barding always implies mounted
+
+  // Mount option
+  var mountM = null;
+  var mountedFromOption = false;
+  var optKeys = Object.keys(sel);
+  for (var _i = 0; _i < optKeys.length; _i++) {
+    var k = optKeys[_i];
+    if (!sel[k]) continue;
+    if (_MOUNT_M.hasOwnProperty(k)) {
+      mountM = _MOUNT_M[k];
+      mountedFromOption = true;
+      break;
+    }
+    // Catch mount options whose speed isn't in the table (flag mounted, hide M)
+    if (/warhorse|steed|boar|dragon|wyvern|griffon|pegasus|manticore|spider|eagle|hippogriff|litter/i.test(k)) {
+      mountedFromOption = true;
     }
   }
+
+  return {
+    heavy: heavy, light: light, shield: shield, barding: barding,
+    mounted: mountedFromBase || mountedFromOption,
+    mountedFromBase: mountedFromBase, mountedFromOption: mountedFromOption,
+    mountM: mountM
+  };
+}
+
+/**
+ * Derives three at-a-glance values from the unit data + selected options:
+ *   move  — effective movement in inches after armour penalties
+ *   toHit — roll to hit with missiles (7 − BS, min 2+); null if BS = 0
+ *   save  — armour save roll after mounted bonus; null if no save
+ */
+function calcStatBadges(unit, optionsSelected) {
+  var st = resolveArmourState(unit, optionsSelected);
+
+  // Movement ---------------------------------------------------------------
+  // Priority: known mount option > profile mount row > foot profile M
+  // If a mount option was selected but speed is unknown, hide M (null).
+  var move = null;
+  if (st.mountM !== null) {
+    move = String(st.mountM);
+  } else if (!st.mountedFromOption) {
+    // No mount option selected — derive from profile as before
+    if (unit.profiles && unit.profiles[0]) {
+      var riderM = unit.profiles[0].stats[0];
+      if (riderM === '–' || riderM === '-') {
+        for (var i = 1; i < unit.profiles.length; i++) {
+          var mVal = unit.profiles[i].stats[0];
+          if (mVal && mVal !== '–' && mVal !== '-') { move = mVal; break; }
+        }
+      } else {
+        move = riderM;
+      }
+    }
+  }
+  // else: mountedFromOption && mountM===null → unknown mount speed, keep move=null
+
+  // Apply WFB3 armour movement penalties
+  //   Foot:    LA+Shield −½″ | HA −½″ | HA+Shield −1″
+  //   Mounted: same foot penalty + ½″ surcharge for any armour + ½″ for barding
   if (move !== null) {
     var mNum = parseInt(move, 10);
     if (!isNaN(mNum)) {
       var penalty = 0;
-      if (!mounted) {
-        if ((light && shield) || (heavy && !shield)) penalty = 0.5;
-        if (heavy && shield)                         penalty = 1;
+      if (!st.mounted) {
+        if ((st.light && st.shield) || (st.heavy && !st.shield)) penalty = 0.5;
+        if (st.heavy && st.shield)                               penalty = 1;
       } else {
-        // Mounted: same foot penalty + ½ for being armoured + ½ for barding
-        if ((light && shield) || (heavy && !shield)) penalty = 0.5;
-        if (heavy && shield)                         penalty = 1;
-        if (shield || light || heavy)                penalty += 0.5; // mounted surcharge
-        if (barding)                                 penalty += 0.5;
+        if ((st.light && st.shield) || (st.heavy && !st.shield)) penalty = 0.5;
+        if (st.heavy && st.shield)                               penalty = 1;
+        if (st.shield || st.light || st.heavy)                   penalty += 0.5;
+        if (st.barding)                                          penalty += 0.5;
       }
       var mResult = mNum - penalty;
-      // Format: whole number or X½
       move = (mResult % 1 === 0) ? String(mResult) : Math.floor(mResult) + '½';
     }
   }
@@ -505,20 +567,20 @@ function calcStatBadges(unit) {
 
   // Armour save ------------------------------------------------------------
   var save = null;
-  if (unit.armour) {
-    if      (!heavy && !light &&  shield) save = 6;  // Shield only
-    else if ( light && !shield)           save = 5;  // Light Armour
-    else if ( light &&  shield)           save = 4;  // Light Armour & Shield
-    else if ( heavy && !shield)           save = 4;  // Heavy Armour
-    else if ( heavy &&  shield)           save = 3;  // Heavy Armour & Shield
-    if (save !== null && mounted) save = Math.max(2, save - 1);
+  if (st.heavy || st.light || st.shield) {
+    if      (!st.heavy && !st.light && st.shield) save = 6;
+    else if ( st.light && !st.shield)             save = 5;
+    else if ( st.light &&  st.shield)             save = 4;
+    else if ( st.heavy && !st.shield)             save = 4;
+    else if ( st.heavy &&  st.shield)             save = 3;
+    if (save !== null && st.mounted) save = Math.max(2, save - 1);
   }
 
   return { move: move, toHit: toHit, save: save };
 }
 
-function buildStatBadges(unit) {
-  var b = calcStatBadges(unit);
+function buildStatBadges(unit, optionsSelected) {
+  var b = calcStatBadges(unit, optionsSelected);
   if (!b.move && b.toHit === null && b.save === null) return '';
 
   var badges = '';
@@ -918,6 +980,7 @@ function renderAggregate(unit) {
 function renderCharacter(unit, selectedOpts, magicAbilities) {
   let html = buildProfileTable(unit.profiles);
   if (unit.profileNote) html += buildProfileNote(unit.profileNote);
+  html += buildStatBadges(unit, selectedOpts);
 
   // Art panel (generic fallback when no specific art)
   let artHtml;
