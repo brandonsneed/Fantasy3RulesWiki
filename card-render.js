@@ -432,6 +432,82 @@ function buildFlavour(flavour) {
   return `<div class="al-flavour">${flavour}</div>`;
 }
 
+/* ── Stat badges ─────────────────────────────────────────────────────────── */
+/**
+ * Derives three at-a-glance values from the unit data:
+ *   move  — movement in inches (uses mount M for cavalry)
+ *   toHit — roll to hit with missiles (7 − BS, min 2); null if BS is 0
+ *   save  — armour save roll; null if no save
+ */
+function calcStatBadges(unit) {
+  // Movement ---------------------------------------------------------------
+  var move = null;
+  if (unit.profiles && unit.profiles[0]) {
+    var riderM = unit.profiles[0].stats[0];
+    if (riderM === '–' || riderM === '-') {
+      // Cavalry with separate mount profile — rider row has no M
+      for (var i = 1; i < unit.profiles.length; i++) {
+        var mountM = unit.profiles[i].stats[0];
+        if (mountM && mountM !== '–' && mountM !== '-') { move = mountM; break; }
+      }
+    } else {
+      move = riderM;
+    }
+  }
+
+  // To hit (missile) -------------------------------------------------------
+  var toHit = null;
+  if (unit.profiles && unit.profiles[0]) {
+    var bs = parseInt(unit.profiles[0].stats[2], 10);
+    if (!isNaN(bs) && bs > 0) toHit = Math.max(2, 7 - bs);
+  }
+
+  // Mounted detection ------------------------------------------------------
+  // Signal 1: rider's M is "–" (mount profile carries the movement)
+  // Signal 2: profileNote mentions horse or mount (combined-M units)
+  // Signal 3: armour string includes Barding
+  var mounted = false;
+  if (unit.profiles && unit.profiles[0] && (unit.profiles[0].stats[0] === '–' || unit.profiles[0].stats[0] === '-')) mounted = true;
+  if (!mounted && unit.profileNote && /horse|mount/i.test(unit.profileNote)) mounted = true;
+  if (!mounted && unit.armour && /barding/i.test(unit.armour)) mounted = true;
+
+  // Armour save ------------------------------------------------------------
+  var save = null;
+  if (unit.armour) {
+    var a = unit.armour.toLowerCase();
+    var heavy  = a.includes('heavy');
+    var light  = !heavy && a.includes('light');
+    var shield = a.includes('shield');
+    if      (!heavy && !light &&  shield) save = 6;  // Shield only
+    else if ( light && !shield)           save = 5;  // Light Armour
+    else if ( light &&  shield)           save = 4;  // Light Armour & Shield
+    else if ( heavy && !shield)           save = 4;  // Heavy Armour
+    else if ( heavy &&  shield)           save = 3;  // Heavy Armour & Shield
+    if (save !== null && mounted) save = Math.max(2, save - 1);
+  }
+
+  return { move: move, toHit: toHit, save: save };
+}
+
+function buildStatBadges(unit) {
+  var b = calcStatBadges(unit);
+  if (!b.move && b.toHit === null && b.save === null) return '';
+
+  var badges = '';
+  if (b.move !== null) {
+    var mStr = String(b.move).replace(/\*/g, '') + '″'; // strip annotation, add ″
+    badges += `<span class="al-stat-badge al-badge-move"><span class="al-badge-label">M</span>${mStr}</span>`;
+  }
+  if (b.toHit !== null) {
+    badges += `<span class="al-stat-badge al-badge-hit"><span class="al-badge-label">Hit</span>${b.toHit}+</span>`;
+  }
+  if (b.save !== null) {
+    badges += `<span class="al-stat-badge al-badge-save"><span class="al-badge-label">Sv</span>${b.save}+</span>`;
+  }
+
+  return `<div class="al-stat-badges">${badges}</div>`;
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    CARD TYPE RENDERERS
 ═══════════════════════════════════════════════════════════════════════════ */
@@ -440,6 +516,7 @@ function buildFlavour(flavour) {
 function renderStandard(unit) {
   let html = buildProfileTable(unit.profiles);
   html += buildProfileNote(unit.profileNote);
+  html += buildStatBadges(unit);
 
   // .al-mid: art + info column
   let mid = '';

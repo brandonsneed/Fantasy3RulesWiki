@@ -516,6 +516,11 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-rule-tag:hover { background: #ede0cc; border-color: #a07040; }
 .al-rule-tag.active { background: #c8a070; border-color: #8a6030; color: #1a0a00; }
 
+/* ── Stat badges (quick-reference strip: M / Hit / Sv) ── */
+.al-stat-badges { display: flex; gap: 4px; padding: 3px 6px 4px; background: #f0e8d0; border-bottom: 1px solid #d0b888; }
+.al-stat-badge { display: inline-flex; align-items: baseline; gap: 3px; font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; padding: 1px 6px 0; border-radius: 2px; border: 1px solid #c8a060; background: #fdf6ec; color: #2a1a08; }
+.al-badge-label { font-size: 6px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 400; opacity: 0.65; margin-right: 1px; }
+
 /* ── Rule detail drawer (expands below rule tags) ── */
 .al-rule-detail { display: none; border-top: 1px solid #e0d0b8; background: #fdf6ec; padding: 6px 8px 7px; }
 .al-rule-detail-name { font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #1a0a00; margin-bottom: 3px; }
