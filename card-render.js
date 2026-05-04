@@ -360,13 +360,26 @@ function buildSpecialRules(unitId, unitName) {
   }
 
   const rules = explicit.concat(inferred);
-  if (!rules.length) return '';
+
+  // Skirmish eligibility tag — optional skirmishers only (always-skirmishers already
+  // have a 'Skirmishers' rule tag from WFB3_UNIT_RULES, so no duplicate needed).
+  var skirmTag = '';
+  if (typeof WFB3_SKIRMISHER_ELIGIBILITY !== 'undefined' &&
+      WFB3_SKIRMISHER_ELIGIBILITY.hasOwnProperty(unitId)) {
+    var lim = WFB3_SKIRMISHER_ELIGIBILITY[unitId];
+    var limText = lim === null
+      ? 'any number of units'
+      : ('up to ' + lim + (lim === 1 ? ' unit' : ' units'));
+    skirmTag = `<span class="al-skirmish-tag">May Skirmish · ${limText}</span>`;
+  }
+
+  if (!rules.length && !skirmTag) return '';
 
   const tags = rules.map(function(r) {
     return `<span class="al-rule-tag" data-rule="${esc(r)}" onclick="showRuleDetail(this)">${esc(r)}</span>`;
   }).join('');
 
-  return `<div class="al-special-rules">${tags}</div><div class="al-rule-detail"></div>`;
+  return `<div class="al-special-rules">${tags}${skirmTag}</div><div class="al-rule-detail"></div>`;
 }
 
 /* ── Weapon rules block (print-only) ────────────────────────────────────── */

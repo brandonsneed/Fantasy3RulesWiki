@@ -516,6 +516,16 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-rule-tag:hover { background: #ede0cc; border-color: #a07040; }
 .al-rule-tag.active { background: #c8a070; border-color: #8a6030; color: #1a0a00; }
 
+/* ── Skirmish eligibility tag (on card) ── */
+.al-skirmish-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #3a6a1a; background: #f0f5e8; border: 1px dashed #7aaa4a; border-radius: 2px; padding: 1px 5px; white-space: nowrap; }
+
+/* ── Skirmish toggle row (controls bar) ── */
+.alb-skirmish-row { display: flex; align-items: center; gap: 8px; padding: 4px 0 2px; border-top: 1px solid #1e1e1e; }
+.alb-skirmish-toggle { background: none; border: 1px solid #3a4a28; color: #6a8a4a; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 9px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; }
+.alb-skirmish-toggle:hover { border-color: #5a7a38; color: #8aaa5a; background: #0d1208; }
+.alb-skirmish-toggle.active { background: #141f08; border-color: #6a9a3a; color: #aada6a; }
+.alb-skirmish-limit-note { font-family: 'Barlow Condensed', sans-serif; font-size: 8px; color: #4a5a38; letter-spacing: 0.04em; }
+
 /* ── Stat footer strip — parchment bar at bottom of card with M / To Hit / Save cells ── */
 .al-stat-footer { display: flex; border-top: 1px solid #c8b080; }
 .al-stat-footer-cell { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3px 4px 4px; text-align: center; background: #e8dfc8; }
@@ -1637,6 +1647,34 @@ function buildControls(item, displayName) {
   metaRow.appendChild(metaRight);
   ctrl.appendChild(metaRow);
 
+  // ── Skirmish toggle — only for non-character units in WFB3_SKIRMISHER_ELIGIBILITY ──
+  if (!isChar && typeof WFB3_SKIRMISHER_ELIGIBILITY !== 'undefined' && unitData &&
+      WFB3_SKIRMISHER_ELIGIBILITY.hasOwnProperty(unitData.id)) {
+    const skLim = WFB3_SKIRMISHER_ELIGIBILITY[unitData.id];
+    const skRow = document.createElement('div');
+    skRow.className = 'alb-skirmish-row';
+
+    const skBtn = document.createElement('button');
+    skBtn.type = 'button';
+    skBtn.className = 'alb-skirmish-toggle' + (item.skirmishing ? ' active' : '');
+    skBtn.textContent = '≋ Skirmish Formation';
+    skBtn.onclick = function() {
+      item.skirmishing = !item.skirmishing;
+      skBtn.classList.toggle('active', item.skirmishing);
+      saveCards(); updateTotals();
+    };
+
+    const skNote = document.createElement('span');
+    skNote.className = 'alb-skirmish-limit-note';
+    skNote.textContent = skLim === null
+      ? 'any number of units eligible'
+      : ('max ' + skLim + (skLim === 1 ? ' unit' : ' units') + ' eligible');
+
+    skRow.appendChild(skBtn);
+    skRow.appendChild(skNote);
+    ctrl.appendChild(skRow);
+  }
+
   // ── Notes row: full-width ghost text field ────────────────────────────
   const nr = document.createElement("div");
   nr.className = "alb-notes-row";
@@ -2216,14 +2254,41 @@ function runValidation() {
     if (c.sourceId) counts[c.sourceId] = (counts[c.sourceId] || 0) + 1;
   });
 
+  // Count skirmishing units per sourceId
+  const skirmCounts = {};
+  if (typeof WFB3_SKIRMISHER_ELIGIBILITY !== 'undefined') {
+    cards.forEach(function(c) {
+      if (c.skirmishing && c.sourceId) {
+        const rawId = c.sourceId.replace(/^card-/, '');
+        skirmCounts[rawId] = (skirmCounts[rawId] || 0) + 1;
+      }
+    });
+  }
+
   // Build a map of cardId → warning message for any violations
   const warnings = {};
   cards.forEach(function(c) {
     const unit = lookupUnit(c.sourceId);
     if (!unit) return;
+
+    // Character allowance limit
     const taken = counts[c.sourceId] || 0;
     if (unit.charMax && taken > unit.charMax) {
       warnings[c.id] = '⚠ max ' + unit.charMax + ' in army — ' + taken + ' taken';
+    }
+
+    // Skirmish formation limit
+    if (c.skirmishing && typeof WFB3_SKIRMISHER_ELIGIBILITY !== 'undefined') {
+      const rawId = (c.sourceId || '').replace(/^card-/, '');
+      if (WFB3_SKIRMISHER_ELIGIBILITY.hasOwnProperty(rawId)) {
+        const lim = WFB3_SKIRMISHER_ELIGIBILITY[rawId];
+        if (lim !== null) {
+          const skTaken = skirmCounts[rawId] || 0;
+          if (skTaken > lim) {
+            warnings[c.id] = '⚠ skirmish limit: max ' + lim + (lim === 1 ? ' unit' : ' units') + ' — ' + skTaken + ' set';
+          }
+        }
+      }
     }
   });
   return warnings;
