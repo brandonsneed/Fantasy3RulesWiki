@@ -516,8 +516,10 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-rule-tag:hover { background: #ede0cc; border-color: #a07040; }
 .al-rule-tag.active { background: #c8a070; border-color: #8a6030; color: #1a0a00; }
 
-/* ── Skirmish eligibility tag (on card) ── */
+/* ── Skirmish eligibility tag (on card, screen only) ── */
 .al-skirmish-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #3a6a1a; background: #f0f5e8; border: 1px dashed #7aaa4a; border-radius: 2px; padding: 1px 5px; white-space: nowrap; }
+/* Print skirmish indicator — hidden on screen; rendered in card only when unit is set to skirmish */
+.al-print-skirmish { display: none; }
 
 /* ── Skirmish toggle row (controls bar) ── */
 .alb-skirmish-row { display: flex; align-items: center; gap: 8px; padding: 4px 0 2px; border-top: 1px solid #1e1e1e; }
@@ -699,6 +701,10 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
     font-size: 6pt; color: #555; font-style: italic; line-height: 1.3; margin-bottom: 1.5pt;
   }
   .al-appendix-text { font-size: 6.5pt; color: #222; line-height: 1.3; }
+
+  /* Skirmish: hide eligibility tag, show confirmed formation banner */
+  .al-skirmish-tag    { display: none !important; }
+  .al-print-skirmish  { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #2a5a0a; background: #eef5e0; border-bottom: 1px solid #8aaa5a; padding: 2pt 6pt; text-align: center; }
 
   /* Hide screen-only chrome in print */
   .alb-rename-bar  { display: none !important; }
@@ -1000,6 +1006,10 @@ function renderGrid() {
       if (cardEl) {
         const wrEl = cardEl.querySelector('.al-weapon-rules');
         if (wrEl) { wrEl.parentNode.removeChild(wrEl); extractedWeaponRules = wrEl; }
+        // Print skirmish banner — shown in print only when unit is in skirmish formation
+        if (item.skirmishing) {
+          cardEl.insertAdjacentHTML('afterbegin', '<div class="al-print-skirmish">Skirmish Formation</div>');
+        }
         wrapper.appendChild(cardEl);
         // Subtitle: always show constant unit type name; store displayName for print
         const subHdr = cardEl.querySelector('.al-header');
@@ -1661,6 +1671,19 @@ function buildControls(item, displayName) {
     skBtn.onclick = function() {
       item.skirmishing = !item.skirmishing;
       skBtn.classList.toggle('active', item.skirmishing);
+      // Keep print banner in sync
+      const wr = document.querySelector('[data-list-id="' + item.id + '"]');
+      if (wr) {
+        const card = wr.querySelector('.al-card');
+        if (card) {
+          const existing = card.querySelector('.al-print-skirmish');
+          if (item.skirmishing && !existing) {
+            card.insertAdjacentHTML('afterbegin', '<div class="al-print-skirmish">Skirmish Formation</div>');
+          } else if (!item.skirmishing && existing) {
+            existing.remove();
+          }
+        }
+      }
       saveCards(); updateTotals();
     };
 
