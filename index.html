@@ -32394,6 +32394,36 @@ function exportData() {
   }
 }
 
+function showRuleDetail(tag) {
+  var sr = tag.parentNode;
+  var detail = sr.nextElementSibling;
+  if (!detail || !detail.classList.contains('al-rule-detail')) return;
+
+  var name = tag.dataset.rule;
+
+  /* Toggle off if same tag clicked again */
+  if (detail.style.display === 'block' && detail.dataset.active === name) {
+    detail.style.display = 'none';
+    detail.dataset.active = '';
+    tag.classList.remove('active');
+    return;
+  }
+
+  /* Deactivate any previously active tag in this rule row */
+  var siblings = sr.querySelectorAll('.al-rule-tag');
+  for (var i = 0; i < siblings.length; i++) siblings[i].classList.remove('active');
+  tag.classList.add('active');
+
+  var rule = (typeof WFB3_RULES !== 'undefined') ? WFB3_RULES[name] : null;
+  var html = '<div class="al-rule-detail-name">' + name + '</div>';
+  if (rule && rule.short) html += '<div class="al-rule-detail-short">' + rule.short + '</div>';
+  if (rule && rule.text)  html += '<div class="al-rule-detail-text">'  + rule.text  + '</div>';
+
+  detail.innerHTML = html;
+  detail.style.display = 'block';
+  detail.dataset.active = name;
+}
+
 function showJsonModal(json) {
   const existing = document.getElementById('json-modal');
   if (existing) existing.remove();
