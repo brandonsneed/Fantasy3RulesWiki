@@ -516,10 +516,18 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-rule-tag:hover { background: #ede0cc; border-color: #a07040; }
 .al-rule-tag.active { background: #c8a070; border-color: #8a6030; color: #1a0a00; }
 
-/* ── Stat badges (quick-reference strip: M / Hit / Sv) ── */
+/* ── In-card badge strip — hidden on screen (replaced by sidebar panel); shown in print ── */
+.alb-card-row .al-stat-badges { display: none; }
 .al-stat-badges { display: flex; gap: 4px; padding: 3px 6px 4px; background: #f0e8d0; border-bottom: 1px solid #d0b888; }
 .al-stat-badge { display: inline-flex; align-items: baseline; gap: 3px; font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; padding: 1px 6px 0; border-radius: 2px; border: 1px solid #c8a060; background: #fdf6ec; color: #2a1a08; }
 .al-badge-label { font-size: 6px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 400; opacity: 0.65; margin-right: 1px; }
+
+/* ── Stat panel — dark sidebar to the right of each card in the army list ── */
+.alb-stat-panel { background: #111; border: 1px solid #252525; border-radius: 3px; display: flex; flex-direction: column; align-self: stretch; width: 64px; flex-shrink: 0; overflow: hidden; box-shadow: 2px 2px 0 #0003; }
+.alb-sp-badge { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4px 2px; text-align: center; gap: 2px; }
+.alb-sp-sep { height: 1px; background: #1e1e1e; flex-shrink: 0; }
+.alb-sp-label { font-family: 'Barlow Condensed', sans-serif; font-size: 6.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #555; line-height: 1.3; }
+.alb-sp-value { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: #e8e8e8; line-height: 1; }
 
 /* ── Rule detail drawer (expands below rule tags) ── */
 .al-rule-detail { display: none; border-top: 1px solid #e0d0b8; background: #fdf6ec; padding: 6px 8px 7px; }
@@ -689,12 +697,15 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
   .al-appendix-text { font-size: 6.5pt; color: #222; line-height: 1.3; }
 
   /* Hide screen-only chrome in print */
-  .alb-rename-bar { display: none !important; }
+  .alb-rename-bar  { display: none !important; }
   .alb-copy-ext    { display: none !important; }
   .alb-divider     { display: none !important; }
   .alb-drop-zone   { display: none !important; }
   .alb-attach-zone { display: none !important; }
-  .alb-card-row   { display: block; margin-bottom: 0; }
+  .alb-stat-panel  { display: none !important; }
+  .alb-card-row    { display: block; margin-bottom: 0; }
+  /* Restore in-card badge strip for print (replaced by panel on screen) */
+  .alb-card-row .al-stat-badges { display: flex !important; }
   /* Restore .al-header to full prominence in print (undo the screen subtitle styling) */
   .alb-has-rename .al-header { font-size: 12px !important; color: #fff !important; letter-spacing: 0.13em !important; padding: 5px 8px 4px !important; background: #1a1a1a !important; }
 
@@ -1077,10 +1088,23 @@ function renderGrid() {
     return btn;
   }
 
-  function cardRow(el, id) {
+  function cardRow(el, id, item) {
     const row = document.createElement('div');
     row.className = 'alb-card-row';
     row.appendChild(el);
+    // Stat panel — dark sidebar between card and copy button
+    if (item) {
+      const unit = lookupUnit(item.sourceId);
+      if (unit) {
+        const panelHtml = buildStatPanel(unit, item.optionsSelected);
+        if (panelHtml) {
+          const tmp = document.createElement('div');
+          tmp.innerHTML = panelHtml;
+          const panel = tmp.firstElementChild;
+          if (panel) row.appendChild(panel);
+        }
+      }
+    }
     row.appendChild(makeCopyBtn(id));
     return row;
   }
@@ -1095,7 +1119,7 @@ function renderGrid() {
   addHeading("Independent Characters");
   if (ungroupedChars.length) {
     ungroupedChars.forEach(function(c, i) {
-      grid.appendChild(cardRow(createWrapper(c, true, true, getDisplayName(c)), c.id));
+      grid.appendChild(cardRow(createWrapper(c, true, true, getDisplayName(c)), c.id, c));
       if (i < ungroupedChars.length - 1) grid.appendChild(divider());
     });
   } else {
@@ -1126,9 +1150,9 @@ function renderGrid() {
         charWrap.classList.add('screen-group-led');
         charCol.appendChild(charWrap);
         pairWrapper.appendChild(charCol);
-        rowEl = cardRow(pairWrapper, u.id);
+        rowEl = cardRow(pairWrapper, u.id, u);
       } else {
-        rowEl = cardRow(createWrapper(u, true, false, getDisplayName(u)), u.id);
+        rowEl = cardRow(createWrapper(u, true, false, getDisplayName(u)), u.id, u);
       }
 
       grid.appendChild(rowEl);
@@ -1469,26 +1493,40 @@ function buildCharOptSections(unitData, item, ptsTotalEl) {
 
 /* ═══════════════════════════════════════
    STAT BADGE REFRESH (non-character units)
-   Patches only the .al-stat-badges strip on a standard unit card when an
-   option that affects movement or armour is toggled. Characters use the
-   full refreshCharCard instead (they re-render the whole card).
+   Updates both the sidebar panel in .alb-card-row AND the in-card strip
+   (the strip is hidden on screen but used for print).
+   Characters use the full refreshCharCard instead.
 ═══════════════════════════════════════ */
 function refreshStatBadges(item, wrapper) {
   if (!wrapper) return;
   const unit = lookupUnit(item.sourceId);
   if (!unit) return;
-  const newHtml = buildStatBadges(unit, item.optionsSelected);
+
+  // ── Sidebar panel (screen) ──────────────────────────────────────────────
+  const row = wrapper.closest('.alb-card-row');
+  if (row) {
+    const newPanelHtml = buildStatPanel(unit, item.optionsSelected);
+    const oldPanel = row.querySelector('.alb-stat-panel');
+    if (oldPanel) {
+      if (newPanelHtml) { oldPanel.outerHTML = newPanelHtml; }
+      else              { oldPanel.remove(); }
+    } else if (newPanelHtml) {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = newPanelHtml;
+      const newPanel = tmp.firstElementChild;
+      if (newPanel) row.insertBefore(newPanel, row.querySelector('.alb-copy-ext'));
+    }
+  }
+
+  // ── In-card strip (print) ───────────────────────────────────────────────
+  const newStripHtml = buildStatBadges(unit, item.optionsSelected);
   const existing = wrapper.querySelector('.al-stat-badges');
   if (existing) {
-    if (newHtml) {
-      existing.outerHTML = newHtml;
-    } else {
-      existing.remove();
-    }
-  } else if (newHtml) {
-    // Insert between profile table / profile note and the .al-mid body
+    if (newStripHtml) { existing.outerHTML = newStripHtml; }
+    else              { existing.remove(); }
+  } else if (newStripHtml) {
     const mid = wrapper.querySelector('.al-mid');
-    if (mid) mid.insertAdjacentHTML('beforebegin', newHtml);
+    if (mid) mid.insertAdjacentHTML('beforebegin', newStripHtml);
   }
 }
 
@@ -1515,6 +1553,26 @@ function refreshCharCard(item) {
     wrapper.replaceChild(newCard, oldCard);
     const newHdr = newCard.querySelector('.al-header');
     if (newHdr) { newHdr.dataset.printName = newHdr.textContent; newHdr.textContent = unit.name; }
+  }
+
+  // Update the sidebar stat panel — only for standalone characters (not unit leaders,
+  // whose panel belongs to the unit card and shouldn't be overwritten).
+  const inPair = !!wrapper.closest('.screen-pair-char-col');
+  if (!inPair) {
+    const row = wrapper.closest('.alb-card-row');
+    if (row) {
+      const newPanelHtml = buildStatPanel(unit, item.optionsSelected);
+      const oldPanel = row.querySelector('.alb-stat-panel');
+      if (oldPanel) {
+        if (newPanelHtml) { oldPanel.outerHTML = newPanelHtml; }
+        else              { oldPanel.remove(); }
+      } else if (newPanelHtml) {
+        const tmp2 = document.createElement('div');
+        tmp2.innerHTML = newPanelHtml;
+        const newPanel = tmp2.firstElementChild;
+        if (newPanel) row.insertBefore(newPanel, row.querySelector('.alb-copy-ext'));
+      }
+    }
   }
 }
 

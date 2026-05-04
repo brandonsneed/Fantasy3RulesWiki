@@ -602,6 +602,30 @@ function buildStatBadges(unit, optionsSelected) {
   return `<div class="al-stat-badges">${badges}</div>`;
 }
 
+/**
+ * Builds the dark sidebar stat panel used in the army list builder.
+ * Rendered OUTSIDE the .al-card, as a sibling in .alb-card-row.
+ * Returns an HTML string for .alb-stat-panel, or '' if no stats apply.
+ */
+function buildStatPanel(unit, optionsSelected) {
+  var b = calcStatBadges(unit, optionsSelected);
+  var items = [];
+
+  if (b.move !== null) {
+    var mStr = String(b.move).replace(/\*/g, '') + '″';
+    items.push('<div class="alb-sp-badge"><span class="alb-sp-label">Move</span><span class="alb-sp-value">' + mStr + '</span></div>');
+  }
+  if (b.toHit !== null) {
+    items.push('<div class="alb-sp-badge"><span class="alb-sp-label">To Hit</span><span class="alb-sp-value">' + b.toHit + '+</span></div>');
+  }
+  if (b.save !== null) {
+    items.push('<div class="alb-sp-badge"><span class="alb-sp-label">Armour Save</span><span class="alb-sp-value">' + b.save + '+</span></div>');
+  }
+
+  if (!items.length) return '';
+  return '<div class="alb-stat-panel">' + items.join('<div class="alb-sp-sep"></div>') + '</div>';
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    CARD TYPE RENDERERS
 ═══════════════════════════════════════════════════════════════════════════ */
