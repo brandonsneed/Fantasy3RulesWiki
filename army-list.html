@@ -49,7 +49,7 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .army-pts-value { font-family: 'Cinzel', serif; font-size: 20px; color: #e8e8e8; letter-spacing: 0.06em; line-height: 1; }
 .army-pts-limit-bar { font-size: 9px; color: #555; letter-spacing: 0.06em; }
 .army-pts-limit-bar.over { color: #c05050; }
-.army-validation-summary { font-size: 9px; letter-spacing: 0.05em; margin-top: 1px; min-height: 13px; }
+.army-validation-summary { font-size: 9px; letter-spacing: 0.05em; margin-top: 2px; min-height: 13px; line-height: 1.6; }
 .army-validation-summary.ok   { color: #4a8a5a; }
 .army-validation-summary.warn { color: #c08040; }
 /* Card-level warnings */
@@ -2269,52 +2269,79 @@ function clearAll() {
 
 /* ═══════════════════════════════════════
    VALIDATION
+   Returns { cards: { id → msg }, army: [msg, …] }
+   cards  — per-unit warnings rendered as orange badges on each card
+   army   — army-level rule violations shown in the header summary
 ═══════════════════════════════════════ */
 function runValidation() {
-  // Count how many times each sourceId appears in the list
-  const counts = {};
+  const cardWarnings = {};
+  const armyWarnings = [];
+
+  // ── Counts ───────────────────────────────────────────────────────────
+  const counts     = {};   // sourceId → how many of this unit in list
+  const skirmCounts = {};  // normalized sourceId → how many set to skirmish
+
   cards.forEach(function(c) {
     if (c.sourceId) counts[c.sourceId] = (counts[c.sourceId] || 0) + 1;
+    if (c.skirmishing && c.sourceId) {
+      const rid = c.sourceId.replace(/^card-/, '');
+      skirmCounts[rid] = (skirmCounts[rid] || 0) + 1;
+    }
   });
 
-  // Count skirmishing units per sourceId
-  const skirmCounts = {};
-  if (typeof WFB3_SKIRMISHER_ELIGIBILITY !== 'undefined') {
-    cards.forEach(function(c) {
-      if (c.skirmishing && c.sourceId) {
-        const rawId = c.sourceId.replace(/^card-/, '');
-        skirmCounts[rawId] = (skirmCounts[rawId] || 0) + 1;
-      }
-    });
-  }
-
-  // Build a map of cardId → warning message for any violations
-  const warnings = {};
+  // ── Per-card warnings ─────────────────────────────────────────────────
   cards.forEach(function(c) {
     const unit = lookupUnit(c.sourceId);
     if (!unit) return;
+    const msgs = [];
 
-    // Character allowance limit
+    // Character type allowance (charMax per unit entry)
     const taken = counts[c.sourceId] || 0;
     if (unit.charMax && taken > unit.charMax) {
-      warnings[c.id] = '⚠ max ' + unit.charMax + ' in army — ' + taken + ' taken';
+      msgs.push('max ' + unit.charMax + ' allowed — ' + taken + ' taken');
     }
 
-    // Skirmish formation limit
+    // Skirmish formation limit per unit type
     if (c.skirmishing && typeof WFB3_SKIRMISHER_ELIGIBILITY !== 'undefined') {
-      const rawId = (c.sourceId || '').replace(/^card-/, '');
-      if (WFB3_SKIRMISHER_ELIGIBILITY.hasOwnProperty(rawId)) {
-        const lim = WFB3_SKIRMISHER_ELIGIBILITY[rawId];
-        if (lim !== null) {
-          const skTaken = skirmCounts[rawId] || 0;
-          if (skTaken > lim) {
-            warnings[c.id] = '⚠ skirmish limit: max ' + lim + (lim === 1 ? ' unit' : ' units') + ' — ' + skTaken + ' set';
-          }
+      const rid = (c.sourceId || '').replace(/^card-/, '');
+      if (WFB3_SKIRMISHER_ELIGIBILITY.hasOwnProperty(rid)) {
+        const lim = WFB3_SKIRMISHER_ELIGIBILITY[rid];
+        if (lim !== null && (skirmCounts[rid] || 0) > lim) {
+          msgs.push('skirmish limit ' + lim + ' — ' + skirmCounts[rid] + ' set');
         }
       }
     }
+
+    if (msgs.length) cardWarnings[c.id] = '⚠ ' + msgs.join(' · ');
   });
-  return warnings;
+
+  // ── Army-level warnings ───────────────────────────────────────────────
+  if (cards.length === 0) return { cards: cardWarnings, army: armyWarnings };
+
+  const totalPts  = cards.reduce(function(s, c) { return s + (c.totalPts || 0); }, 0);
+  const limitRaw  = parseInt(document.getElementById('al-limit').value) || 0;
+  const baseForCap = limitRaw || totalPts; // cap calculated against limit if set, else actual total
+
+  // 1. Character points cap — max 25% of army
+  if (baseForCap > 0) {
+    const charPts = cards.reduce(function(s, c) {
+      return s + (isCharUnit(lookupUnit(c.sourceId)) ? (c.totalPts || 0) : 0);
+    }, 0);
+    const charCap = Math.floor(baseForCap * 0.25);
+    if (charPts > charCap) {
+      armyWarnings.push(
+        'Characters over 25% allowance — ' + charPts + ' pts spent, ' + charCap + ' pts allowed'
+      );
+    }
+  }
+
+  // 2. No regiment units — an all-character list is invalid
+  const hasRegiments = cards.some(function(c) { return !isCharUnit(lookupUnit(c.sourceId)); });
+  if (!hasRegiments) {
+    armyWarnings.push('Army contains no regiment or war machine units');
+  }
+
+  return { cards: cardWarnings, army: armyWarnings };
 }
 
 /* ═══════════════════════════════════════
@@ -2344,14 +2371,16 @@ function updateTotals() {
     bar.className = "army-pts-limit-bar";
   }
 
-  // Unit-level validation
-  const warnings = runValidation();
-  const warnCount = Object.keys(warnings).length;
+  // Validation
+  const validation = runValidation();
+  const cardWarnings = validation.cards;
+  const armyWarnings = validation.army;
+  const cardWarnCount = Object.keys(cardWarnings).length;
 
-  // Apply / clear warning badges on each card wrapper
+  // Apply / clear per-card warning badges
   document.querySelectorAll('[data-list-id]').forEach(function(wrapper) {
     const id  = wrapper.getAttribute('data-list-id');
-    const msg = warnings[id];
+    const msg = cardWarnings[id];
     wrapper.classList.toggle('card-warning', !!msg);
     let badge = wrapper.querySelector('.card-warn-badge');
     if (msg) {
@@ -2366,18 +2395,22 @@ function updateTotals() {
     }
   });
 
-  // Validation summary line in header
+  // Validation summary — one line per army-level issue, plus card-level roll-up
   const vs = document.getElementById("al-validation-summary");
   if (vs) {
-    const issues = warnCount + (overLimit ? 1 : 0);
+    const totalIssues = (overLimit ? 1 : 0) + armyWarnings.length + cardWarnCount;
     if (!n) {
-      vs.textContent = "";
+      vs.innerHTML = "";
       vs.className = "army-validation-summary";
-    } else if (issues === 0) {
-      vs.textContent = "✓ List is valid";
+    } else if (totalIssues === 0) {
+      vs.innerHTML = "✓ List is valid";
       vs.className = "army-validation-summary ok";
     } else {
-      vs.textContent = "⚠ " + issues + " issue" + (issues !== 1 ? "s" : "");
+      const lines = [];
+      if (overLimit)           lines.push('⚠ Points over limit');
+      armyWarnings.forEach(function(w) { lines.push('⚠ ' + w); });
+      if (cardWarnCount > 0)   lines.push('⚠ ' + cardWarnCount + ' unit' + (cardWarnCount !== 1 ? 's' : '') + ' with rule violations');
+      vs.innerHTML = lines.join('<br>');
       vs.className = "army-validation-summary warn";
     }
   }
