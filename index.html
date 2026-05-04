@@ -1663,9 +1663,11 @@
   .al-special-rules { display: flex; flex-wrap: wrap; gap: 3px; padding: 4px 6px 3px; border-top: 1px solid #e0d0b8; background: #fdf8f0; }
   .al-rule-tag { display: inline-block; background: #f5e8cc; border: 1px solid #c8a060; color: #3a2a08; font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 1px 5px 0; border-radius: 2px; cursor: pointer; }
   .al-rule-tag.active { background: #c8a060; color: #fff; }
-  .al-stat-badges { display: flex; gap: 4px; padding: 3px 6px 4px; background: #f0e8d0; border-bottom: 1px solid #d0b888; }
-  .al-stat-badge { display: inline-flex; align-items: baseline; gap: 3px; font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; padding: 1px 6px 0; border-radius: 2px; border: 1px solid #c8a060; background: #fdf6ec; color: #2a1a08; }
-  .al-badge-label { font-size: 6px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 400; opacity: 0.65; margin-right: 1px; }
+  .al-stat-footer { display: flex; border-top: 1px solid #c8b080; }
+  .al-stat-footer-cell { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3px 4px 4px; text-align: center; background: #e8dfc8; }
+  .al-stat-footer-cell + .al-stat-footer-cell { border-left: 1px solid #c8b080; }
+  .al-sf-label { font-family: 'Barlow Condensed', sans-serif; font-size: 6px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a7040; line-height: 1.2; margin-bottom: 1px; }
+  .al-sf-value { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #1a0e00; line-height: 1; }
   .al-rule-detail { display: none; border-top: 1px solid #e0d0b8; background: #fdf6ec; padding: 6px 8px 7px; }
   .al-rule-detail-name { font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #1a0a00; margin-bottom: 3px; }
   .al-rule-detail-short { font-family: 'Barlow Condensed', sans-serif; font-size: 7.5px; font-style: italic; color: #5a4a2a; line-height: 1.45; margin-bottom: 4px; padding-bottom: 4px; border-bottom: 1px solid #e0d0b8; }

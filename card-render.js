@@ -603,27 +603,42 @@ function buildStatBadges(unit, optionsSelected) {
 }
 
 /**
- * Builds the dark sidebar stat panel used in the army list builder.
- * Rendered OUTSIDE the .al-card, as a sibling in .alb-card-row.
- * Returns an HTML string for .alb-stat-panel, or '' if no stats apply.
+ * Builds the stat footer strip — a parchment-toned bar pinned to the bottom
+ * of .al-card with equal-width cells for Effective Movement / To Hit / Save.
+ * Returns an HTML string for .al-stat-footer, or '' if no stats apply.
  */
-function buildStatPanel(unit, optionsSelected) {
+function buildStatFooter(unit, optionsSelected) {
   var b = calcStatBadges(unit, optionsSelected);
-  var items = [];
+  var cells = [];
 
   if (b.move !== null) {
     var mStr = String(b.move).replace(/\*/g, '') + '″';
-    items.push('<div class="alb-sp-badge"><span class="alb-sp-label">Move</span><span class="alb-sp-value">' + mStr + '</span></div>');
+    cells.push(
+      '<div class="al-stat-footer-cell">' +
+      '<span class="al-sf-label">Effective Movement</span>' +
+      '<span class="al-sf-value">' + mStr + '</span>' +
+      '</div>'
+    );
   }
   if (b.toHit !== null) {
-    items.push('<div class="alb-sp-badge"><span class="alb-sp-label">To Hit</span><span class="alb-sp-value">' + b.toHit + '+</span></div>');
+    cells.push(
+      '<div class="al-stat-footer-cell">' +
+      '<span class="al-sf-label">To Hit</span>' +
+      '<span class="al-sf-value">' + b.toHit + '+</span>' +
+      '</div>'
+    );
   }
   if (b.save !== null) {
-    items.push('<div class="alb-sp-badge"><span class="alb-sp-label">Armour Save</span><span class="alb-sp-value">' + b.save + '+</span></div>');
+    cells.push(
+      '<div class="al-stat-footer-cell">' +
+      '<span class="al-sf-label">Armour Save</span>' +
+      '<span class="al-sf-value">' + b.save + '+</span>' +
+      '</div>'
+    );
   }
 
-  if (!items.length) return '';
-  return '<div class="alb-stat-panel">' + items.join('<div class="alb-sp-sep"></div>') + '</div>';
+  if (!cells.length) return '';
+  return '<div class="al-stat-footer">' + cells.join('') + '</div>';
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -634,7 +649,6 @@ function buildStatPanel(unit, optionsSelected) {
 function renderStandard(unit) {
   let html = buildProfileTable(unit.profiles);
   html += buildProfileNote(unit.profileNote);
-  html += buildStatBadges(unit);
 
   // .al-mid: art + info column
   let mid = '';
@@ -650,6 +664,7 @@ function renderStandard(unit) {
   mid += info;
   html += `<div class="al-mid">${mid}</div>`;
   html += buildFlavour(unit.flavour);
+  html += buildStatFooter(unit);
   return html;
 }
 
@@ -1008,7 +1023,6 @@ function renderAggregate(unit) {
 function renderCharacter(unit, selectedOpts, magicAbilities) {
   let html = buildProfileTable(unit.profiles);
   if (unit.profileNote) html += buildProfileNote(unit.profileNote);
-  html += buildStatBadges(unit, selectedOpts);
 
   // Art panel (generic fallback when no specific art)
   let artHtml;
@@ -1092,6 +1106,7 @@ function renderCharacter(unit, selectedOpts, magicAbilities) {
 
   html += `<div class="al-mid">${artHtml}${info}</div>`;
   html += buildFlavour(unit.flavour);
+  html += buildStatFooter(unit, selectedOpts);
   return html;
 }
 
