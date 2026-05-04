@@ -577,7 +577,7 @@ const WFB3_UNIT_RULES = {
   'sk-020-plague-monks':        ['Frenzy'],
 
   /* ── SLANN ───────────────────────────────────────────────────────────── */
-  'sl-020-venom-tribes':        ['Poisoned Attacks', 'Skirmishers'],
+  'sl-020-venom-tribes':        ['Poisoned Attacks'],
   'sl-015-scouts':              ['Scouts', 'Skirmishers'],
   'sl-030-jaguar-warriors':     ['Scouts'],
   'sl-05-troglodytes':          ['Cause Fear', 'Stupidity'],
@@ -694,5 +694,66 @@ const WFB3_UNIT_RULES = {
   'merc-no-040-norse-dwarf-berserkers':['Berserker Rules', 'Hatred (Goblinoids)'],
   'merc-no-060-troll-slayers':       ['Frenzy', 'Immune to Psychology', 'Hatred (Goblinoids)'],
 
+
+};
+
+/* ═══════════════════════════════════════════════════════════════════════
+   WFB3_SKIRMISHER_ELIGIBILITY
+   ─────────────────────────────────────────────────────────────────────
+   Optional-skirmisher units: may be deployed as skirmishers at the
+   player's pre-game discretion ("Skirmishing units must be noted down
+   before the battle"). These units do NOT carry the 'Skirmishers' rule
+   tag — that is reserved for always-skirmisher units (Scouts etc.).
+
+   Value: maximum number of skirmishing units of this type allowed in
+   the army. null = unlimited ("Any"). Conditional qualifiers noted in
+   comments.
+
+   Note: skirmishing units are generally capped at 15 models (foot) or
+   10 models (mounted) unless the army list specifies otherwise.
+
+   Source: each army's Skirmishers section in the Warhammer Armies list.
+═══════════════════════════════════════════════════════════════════════ */
+const WFB3_SKIRMISHER_ELIGIBILITY = {
+
+  /* ── DARK ELVES ──────────────────────────────────────────────────────── */
+  'de-2060-crossbowmen':           2,
+
+  /* ── WOOD ELVES ──────────────────────────────────────────────────────── */
+  'we-040-wood-riders':            1,
+  'we-3060-archers':               2,
+  'we-030-lords-bowmen':           2,
+
+  /* ── HIGH ELVES ──────────────────────────────────────────────────────── */
+  'he-040-shore-riders':           2,
+  'he-060-warrior-kindreds':       1,
+  'he-050-archers':                1,
+
+  /* ── EMPIRE ──────────────────────────────────────────────────────────── */
+  'em-1050-armbrustschutzen':      2,
+  'em-020-hakbutschutzen':         2,
+
+  /* ── BRETONNIA ───────────────────────────────────────────────────────── */
+  'br-020-arblastiers':            1,
+  'br-020-brigands':               1,
+  'br-060-rapscallions':           2,
+
+  /* ── ORCS & GOBLINS ──────────────────────────────────────────────────── */
+  'og-2060-arrer-boyz':            2,
+  'og-20200-gobbos':               2,
+  'og-20200-stickas':              2,
+  'og-050-gobbo-wulfboyz':         1,   // only if armed with bows
+
+  /* ── DWARFS ──────────────────────────────────────────────────────────── */
+  'dw-2060-dwarf-crossbowmen':     1,
+  'dw-020-thunderers':             1,
+
+  /* ── SLANN ───────────────────────────────────────────────────────────── */
+  'sl-020-venom-tribes':           null,  // Any
+  'sl-060-jungle-braves':          null,  // Any
+
+  /* ── NORSE (WD#107) ──────────────────────────────────────────────────── */
+  'wdno-030-bondsmen-archers':     null,  // Any
+  'wdno-080-bondsdwarfs':          null,  // Any; only if armed with bows
 
 };
