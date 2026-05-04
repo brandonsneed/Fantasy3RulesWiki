@@ -434,26 +434,28 @@ function buildFlavour(flavour) {
 
 /* ── Stat badges ─────────────────────────────────────────────────────────── */
 
-/* Known mount speeds (M stat) used when a character selects a mount option. */
+/* Known mount speeds (M stat) used when a character selects a mount option.
+   Keys are matched case-insensitively against option names in resolveArmourState. */
 var _MOUNT_M = {
-  'Warhorse': 8, 'Chaos Steed': 8, 'Hippogriff': 8, 'Pegasus': 8,
-  'Warhorses for Chaos Steeds': 8,
-  'Cold One': 7, 'War Boar': 7,
-  'Wyvern': 6, 'Griffon': 6, 'Manticore': 6,
-  'Giant Spider': 6, 'Eagle': 6, 'Winged Dragon': 6,
-  'Temple Dog': 5, 'Temple Dog Mount': 5,
-  'Dragon 1': 6, 'Dragon 2': 6, 'Dragon 3': 6,
-  'Dragon 4': 6, 'Dragon 5': 6, 'Dragon 6': 6
+  'warhorse': 8, 'horse': 8, 'chaos steed': 8, 'hippogriff': 8, 'pegasus': 8,
+  'warhorses for chaos steeds': 8,
+  'cold one': 7, 'war boar': 7,
+  'wyvern': 6, 'griffon': 6, 'manticore': 6,
+  'giant spider': 6, 'eagle': 6, 'winged dragon': 6, 'chimera': 6,
+  'unicorn': 10,
+  'temple dog': 5, 'temple dog mount': 5,
+  'dragon 1': 6, 'dragon 2': 6, 'dragon 3': 6,
+  'dragon 4': 6, 'dragon 5': 6, 'dragon 6': 6
 };
 
 /**
  * Resolves effective armour state by merging unit base data with selected
- * options. Returns { heavy, light, shield, barding, mounted,
- *   mountedFromBase, mountedFromOption, mountM }.
+ * options. All option-name matching is case-insensitive and pattern-based
+ * to handle the inconsistent capitalisation in the source data
+ * (e.g. "Heavy armour" vs "Heavy Armour", "Light armour", "Mithril light armour").
  *
- * mountedFromBase  — true when the unit profile/note/base armour implies mounting
- * mountedFromOption — true when a mount option is selected (may have unknown speed)
- * mountM           — base M of the selected mount, or null if speed is unknown
+ * Returns { heavy, light, shield, barding, mounted,
+ *           mountedFromBase, mountedFromOption, mountM }.
  */
 function resolveArmourState(unit, optionsSelected) {
   var sel = optionsSelected || {};
@@ -465,38 +467,40 @@ function resolveArmourState(unit, optionsSelected) {
   var shield  = base.includes('shield');
   var barding = base.includes('barding');
 
-  // Merge armour/shield/barding options
-  if (sel['Heavy Armour'] || sel['Heavy Armour for Light']) { heavy = true; light = false; }
-  if (!heavy && sel['Light Armour'])                         light   = true;
-  if (sel['Shield'] || sel['Shields'])                       shield  = true;
-  if (sel['Horse Barding'] || sel['Warhorse Barding'] ||
-      sel['Horse/warhorse barding'] ||
-      sel['Horse, warhorse or Chaos Steed barding'])         barding = true;
-
-  // Mounted from base profile / note / armour
-  var mountedFromBase = false;
-  if (unit.profiles && unit.profiles[0] &&
-      (unit.profiles[0].stats[0] === '–' || unit.profiles[0].stats[0] === '-')) mountedFromBase = true;
-  if (!mountedFromBase && unit.profileNote && /horse|mount/i.test(unit.profileNote)) mountedFromBase = true;
-  if (barding) mountedFromBase = true; // barding always implies mounted
-
-  // Mount option
+  // Scan all selected options with case-insensitive regex matching
   var mountM = null;
   var mountedFromOption = false;
   var optKeys = Object.keys(sel);
   for (var _i = 0; _i < optKeys.length; _i++) {
     var k = optKeys[_i];
     if (!sel[k]) continue;
-    if (_MOUNT_M.hasOwnProperty(k)) {
-      mountM = _MOUNT_M[k];
+
+    // Armour type — "heavy armour" / "heavy armor" beats light
+    if (/\bheavy\s+armou?r\b/i.test(k)) { heavy = true; light = false; }
+    else if (/\blight\s+armou?r\b/i.test(k) && !heavy) light = true;
+
+    // Shield
+    if (/\bshields?\b/i.test(k)) shield = true;
+
+    // Barding (any variant: "Horse Barding", "Horse or warhorse barding", etc.)
+    if (/\bbarding\b/i.test(k)) barding = true;
+
+    // Mount — try lowercase lookup in _MOUNT_M first, then keyword fallback
+    var kl = k.toLowerCase().trim();
+    if (_MOUNT_M.hasOwnProperty(kl)) {
+      mountM = _MOUNT_M[kl];
       mountedFromOption = true;
-      break;
-    }
-    // Catch mount options whose speed isn't in the table (flag mounted, hide M)
-    if (/warhorse|steed|boar|dragon|wyvern|griffon|pegasus|manticore|spider|eagle|hippogriff|litter/i.test(k)) {
-      mountedFromOption = true;
+    } else if (/\b(horse|warhorse|steed|boar|dragon|wyvern|griffon|pegasus|manticore|spider|eagle|hippogriff|unicorn|chimera|litter)\b/i.test(k)) {
+      mountedFromOption = true; // speed unknown — M badge hidden, save still updates
     }
   }
+
+  // Mounted from base profile / note / barding
+  var mountedFromBase = false;
+  if (unit.profiles && unit.profiles[0] &&
+      (unit.profiles[0].stats[0] === '–' || unit.profiles[0].stats[0] === '-')) mountedFromBase = true;
+  if (!mountedFromBase && unit.profileNote && /horse|mount/i.test(unit.profileNote)) mountedFromBase = true;
+  if (barding) mountedFromBase = true; // barding always implies mounted
 
   return {
     heavy: heavy, light: light, shield: shield, barding: barding,
