@@ -440,18 +440,59 @@ function buildFlavour(flavour) {
  *   save  — armour save roll; null if no save
  */
 function calcStatBadges(unit) {
+  // Mounted detection ------------------------------------------------------
+  // Signal 1: rider's M is "–" (separate mount profile carries the movement)
+  // Signal 2: profileNote mentions horse or mount (combined-M units like Wood Riders)
+  // Signal 3: armour string includes Barding
+  var mounted = false;
+  if (unit.profiles && unit.profiles[0] && (unit.profiles[0].stats[0] === '–' || unit.profiles[0].stats[0] === '-')) mounted = true;
+  if (!mounted && unit.profileNote && /horse|mount/i.test(unit.profileNote)) mounted = true;
+  if (!mounted && unit.armour && /barding/i.test(unit.armour)) mounted = true;
+
+  // Armour flags -----------------------------------------------------------
+  var heavy = false, light = false, shield = false, barding = false;
+  if (unit.armour) {
+    var a = unit.armour.toLowerCase();
+    heavy   = a.includes('heavy');
+    light   = !heavy && a.includes('light');
+    shield  = a.includes('shield');
+    barding = a.includes('barding');
+  }
+
   // Movement ---------------------------------------------------------------
+  // Profile M is the race base. Armour and mounting add penalties (WFB3 p.XX):
+  //   Foot — LA+Shield: −½″  |  HA: −½″  |  HA+Shield: −1″
+  //   Mounted — any armour adds +½″ on top of the foot penalty; barding +½″ more
   var move = null;
   if (unit.profiles && unit.profiles[0]) {
     var riderM = unit.profiles[0].stats[0];
     if (riderM === '–' || riderM === '-') {
-      // Cavalry with separate mount profile — rider row has no M
+      // Cavalry with separate mount profile — use the mount row's M
       for (var i = 1; i < unit.profiles.length; i++) {
         var mountM = unit.profiles[i].stats[0];
         if (mountM && mountM !== '–' && mountM !== '-') { move = mountM; break; }
       }
     } else {
       move = riderM;
+    }
+  }
+  if (move !== null) {
+    var mNum = parseInt(move, 10);
+    if (!isNaN(mNum)) {
+      var penalty = 0;
+      if (!mounted) {
+        if ((light && shield) || (heavy && !shield)) penalty = 0.5;
+        if (heavy && shield)                         penalty = 1;
+      } else {
+        // Mounted: same foot penalty + ½ for being armoured + ½ for barding
+        if ((light && shield) || (heavy && !shield)) penalty = 0.5;
+        if (heavy && shield)                         penalty = 1;
+        if (shield || light || heavy)                penalty += 0.5; // mounted surcharge
+        if (barding)                                 penalty += 0.5;
+      }
+      var mResult = mNum - penalty;
+      // Format: whole number or X½
+      move = (mResult % 1 === 0) ? String(mResult) : Math.floor(mResult) + '½';
     }
   }
 
@@ -462,22 +503,9 @@ function calcStatBadges(unit) {
     if (!isNaN(bs) && bs > 0) toHit = Math.max(2, 7 - bs);
   }
 
-  // Mounted detection ------------------------------------------------------
-  // Signal 1: rider's M is "–" (mount profile carries the movement)
-  // Signal 2: profileNote mentions horse or mount (combined-M units)
-  // Signal 3: armour string includes Barding
-  var mounted = false;
-  if (unit.profiles && unit.profiles[0] && (unit.profiles[0].stats[0] === '–' || unit.profiles[0].stats[0] === '-')) mounted = true;
-  if (!mounted && unit.profileNote && /horse|mount/i.test(unit.profileNote)) mounted = true;
-  if (!mounted && unit.armour && /barding/i.test(unit.armour)) mounted = true;
-
   // Armour save ------------------------------------------------------------
   var save = null;
   if (unit.armour) {
-    var a = unit.armour.toLowerCase();
-    var heavy  = a.includes('heavy');
-    var light  = !heavy && a.includes('light');
-    var shield = a.includes('shield');
     if      (!heavy && !light &&  shield) save = 6;  // Shield only
     else if ( light && !shield)           save = 5;  // Light Armour
     else if ( light &&  shield)           save = 4;  // Light Armour & Shield
