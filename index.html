@@ -32814,13 +32814,15 @@ document.addEventListener('click', e => {
 Object.keys(embeddedData).forEach(k => { store[k] = embeddedData[k]; });
 loadFromStorage();
 renderNav();
-buildSearchIndex();
+// buildSearchIndex() deferred to DOMContentLoaded so static .wiki-section elements are in the DOM
 
 // Hash routing — restore page from URL on load, keep URL in sync
-(function() {
+// Deferred to DOMContentLoaded so all page-* divs exist when we check the hash
+document.addEventListener('DOMContentLoaded', function() {
+  buildSearchIndex();
   const hash = location.hash.slice(1);
   navigate(hash && document.getElementById('page-' + hash) ? hash : 'home', { fromHash: true });
-})();
+});
 
 window.addEventListener('popstate', function(e) {
   const pageId = (e.state && e.state.pageId) || location.hash.slice(1) || 'home';
