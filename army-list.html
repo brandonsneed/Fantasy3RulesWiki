@@ -119,6 +119,24 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 /* Perforated divider between cards in a section */
 .alb-divider { width: 100%; height: 0; border: none; border-top: 1px dashed #444; margin: 0 0 16px; }
 
+/* Force group separator — shown above each army/ally/merc block */
+.force-separator { width: 100%; box-sizing: border-box; margin: 0 0 12px; padding: 5px 12px 6px; background: #191919; border: 1px solid #2e2e2e; border-left: 3px solid #666; display: flex; align-items: center; gap: 10px; }
+.force-sep-main { border-left-color: #8a7040; }
+.force-sep-ally { border-left-color: #3a6a8a; }
+.force-sep-merc { border-left-color: #6a3a3a; }
+.force-sep-custom { border-left-color: #7a5a9a; }
+.fs-type-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 1px 6px; border-radius: 2px; flex-shrink: 0; }
+.force-sep-main .fs-type-badge { color: #c8a050; background: #201808; border: 1px solid #5a3a10; }
+.force-sep-ally .fs-type-badge { color: #50a0c8; background: #081828; border: 1px solid #1a4870; }
+.force-sep-merc .fs-type-badge { color: #c87060; background: #200808; border: 1px solid #6a2010; }
+.force-sep-custom .fs-type-badge { color: #b898d8; background: #180828; border: 1px solid #5a2a8a; }
+.fs-name { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.04em; color: #e0e0e0; flex: 1; }
+.fs-limits { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; letter-spacing: 0.05em; line-height: 1.5; text-align: right; color: #777; }
+.fs-limit-ok   { color: #4a8a5a; }
+.fs-limit-warn { color: #c08040; }
+.fs-pts { font-size: 11px; font-weight: 700; color: #aaa; }
+
+
 /* Drop zones — injected between cards while dragging */
 .alb-drop-zone { width: 100%; max-width: 360px; height: 30px; border: 2px dashed #3a5a4a; border-radius: 3px; background: rgba(58,90,74,0.07); box-sizing: border-box; transition: all 0.12s; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #4a7a5a; cursor: copy; }
 .alb-drop-zone.over { border-color: #5aaa7a; background: rgba(90,170,122,0.18); color: #88ccaa; height: 38px; }
@@ -206,6 +224,30 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .overlay-btn.cancel { background: #2a2a2a; color: #888; }
 .overlay-btn.cancel:hover { background: #3a3a3a; color: #e8e8e8; }
 .overlay-hint { font-size: 9px; color: #555; letter-spacing: 0.06em; line-height: 1.6; }
+
+/* ── Custom unit badge ── */
+.alb-custom-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b898d8; padding: 3px 8px 2px; border-top: 1px solid #252535; display: flex; align-items: center; gap: 6px; }
+.alb-custom-unassign { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #7a5a9a; background: none; border: 1px solid #3a2a5a; border-radius: 2px; padding: 1px 5px; cursor: pointer; margin-left: auto; }
+.alb-custom-unassign:hover { color: #b898d8; border-color: #7a5a9a; }
+
+/* ── Saved Lists overlay ── */
+.overlay-box.saves-box { width: 560px; max-height: 80vh; overflow-y: auto; }
+.saves-input-row { display: flex; gap: 8px; align-items: center; }
+.saves-input { flex: 1; background: #0d0d0d; border: 1px solid #3a3a3a; border-radius: 2px; color: #e8e8e8; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; padding: 4px 8px; outline: none; transition: border-color 0.15s; }
+.saves-input:focus { border-color: #e8e8e8; }
+.saves-divider { border: none; border-top: 1px solid #2a2a2a; margin: 2px 0; }
+.saves-list { display: flex; flex-direction: column; gap: 5px; min-height: 40px; }
+.saves-empty { font-size: 10px; color: #555; font-style: italic; text-align: center; padding: 18px 0; letter-spacing: 0.05em; }
+.saves-item { background: #111; border: 1px solid #2a2a2a; border-radius: 2px; padding: 7px 10px; display: flex; align-items: center; gap: 10px; }
+.saves-item-info { flex: 1; min-width: 0; }
+.saves-item-name { font-family: 'Cinzel', serif; font-size: 11px; color: #e0e0e0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.saves-item-meta { font-size: 8px; color: #666; letter-spacing: 0.05em; margin-top: 2px; }
+.saves-item-actions { display: flex; gap: 5px; flex-shrink: 0; }
+.saves-item-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border: none; border-radius: 2px; cursor: pointer; transition: background 0.12s; }
+.saves-item-btn.load { background: #1e3a2a; color: #88ccaa; }
+.saves-item-btn.load:hover { background: #2e5a3e; color: #ccffcc; }
+.saves-item-btn.del  { background: #2e1010; color: #cc7070; }
+.saves-item-btn.del:hover  { background: #4a1a1a; color: #ffaaaa; }
 
 /* ═══════════════════════════════════════════════
    UNIT BROWSER PANEL (left sidebar, always visible)
@@ -607,7 +649,8 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 
   html, body { display: block !important; background: #fff !important; min-height: 0 !important; height: auto !important; overflow: visible !important; }
 
-  .topbar, .army-header-bar, .alb-controls, .empty-state, .overlay, .browser-panel { display: none !important; }
+  .topbar, .army-header-bar, .alb-controls, .empty-state, .overlay, .browser-panel,
+  .force-separator { display: none !important; }
 
   .main-area { display: block !important; overflow: visible !important; }
   .card-area { background: #fff !important; padding: 0 !important; overflow: visible !important; height: auto !important; }
@@ -777,6 +820,9 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
     <a class="topbar-link" href="index.html">&#8592; Wiki / Army Lists</a>
     <span class="topbar-spacer"></span>
     <span class="topbar-count" id="card-count"></span>
+    <input type="file" id="custom-import-file" accept=".json" style="display:none" onchange="importCustomUnitFile(this)">
+    <button class="topbar-btn dim" onclick="document.getElementById('custom-import-file').click()">&#8593; Import Card</button>
+    <button class="topbar-btn dim" onclick="openSaves()">&#9776; Saved Lists</button>
     <button class="topbar-btn dim" onclick="openExport()">&#8595; Export JSON</button>
     <button class="topbar-btn dim" onclick="openImport()">&#8593; Import JSON</button>
     <button class="topbar-btn danger" onclick="clearAll()">&#10005; Clear All</button>
@@ -802,7 +848,7 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
       <label>Date</label>
       <input type="text" id="al-date" placeholder="eg. 18 Apr 2026" oninput="saveHeader();updatePrintHeader()">
     </div>
-    <div class="army-pts-summary">
+<div class="army-pts-summary">
       <label>Total Points</label>
       <span class="army-pts-value" id="al-total-pts">0</span>
       <span class="army-pts-limit-bar" id="al-limit-bar"></span>
@@ -871,10 +917,45 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
   </div>
 </div>
 
+<!-- ── Saved Lists overlay ── -->
+<div class="overlay" id="saves-overlay" onclick="onSavesBackdropClick(event)">
+  <div class="overlay-box saves-box">
+    <div class="overlay-title">Saved Lists</div>
+    <div class="saves-input-row">
+      <input type="text" class="saves-input" id="saves-name-input" placeholder="Name for this save…" maxlength="60"
+             onkeydown="if(event.key==='Enter')saveCurrent()">
+      <button class="overlay-btn" onclick="saveCurrent()">Save</button>
+    </div>
+    <hr class="saves-divider">
+    <div class="saves-list" id="saves-list"></div>
+    <div class="overlay-row" style="margin-top:4px">
+      <button class="overlay-btn cancel" onclick="closeOverlay('saves-overlay')">Close</button>
+    </div>
+  </div>
+</div>
+
 <script>
 /* ═══ STORAGE KEYS ═══ */
 const LIST_KEY   = "wfb3-army-list";
 const HEADER_KEY = "wfb3-army-header";
+const SAVES_KEY  = "wfb3-army-saves";
+const CUSTOM_KEY = "wfb3-custom-units";
+
+/* ═══ CUSTOM UNIT HELPERS ═══ */
+function getCustomUnits() {
+  try { return JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]'); } catch(e) { return []; }
+}
+function saveCustomUnits(units) {
+  localStorage.setItem(CUSTOM_KEY, JSON.stringify(units));
+}
+function mergeCustomUnits(incoming) {
+  var existing = getCustomUnits();
+  incoming.forEach(function(u) {
+    var idx = existing.findIndex(function(e) { return e.id === u.id; });
+    if (idx >= 0) existing[idx] = u; else existing.push(u);
+  });
+  saveCustomUnits(existing);
+}
 
 /* ═══ STATE ═══ */
 let cards = [];
@@ -892,6 +973,7 @@ let dragId = null;          // id of card being dragged
 
   // Restore cards
   cards = JSON.parse(localStorage.getItem(LIST_KEY) || "[]");
+  inferCustomAssignments();
 
   // Render
   renderGrid();
@@ -963,6 +1045,7 @@ function renderGrid() {
     // ── Rename bar: prominent editable title above the card ──────────────────
     const renameUnitData = lookupUnit(item.sourceId);
     const renameIsChar   = isCharUnit(renameUnitData);
+    const renameIsCustom = !!(renameUnitData && renameUnitData.isCustom);
     wrapper.classList.add('alb-has-rename');
     const renameBar = document.createElement('div');
     renameBar.className = 'alb-rename-bar';
@@ -1020,7 +1103,20 @@ function renderGrid() {
       }
     }
 
-    wrapper.appendChild(buildControls(item, displayName));
+    const controls = buildControls(item, displayName);
+    if (renameIsCustom) {
+      const customBadgeEl = document.createElement('div');
+      customBadgeEl.className = 'alb-custom-badge';
+      customBadgeEl.textContent = '⚙ Custom Unit  ';
+      const unassignBtn = document.createElement('button');
+      unassignBtn.className = 'alb-custom-unassign';
+      unassignBtn.textContent = '↩ Unassign';
+      unassignBtn.title = 'Move back to Custom Units section';
+      unassignBtn.onclick = function() { item.assignedArmy = '__custom__'; saveCards(); renderGrid(); };
+      customBadgeEl.appendChild(unassignBtn);
+      controls.appendChild(customBadgeEl);
+    }
+    wrapper.appendChild(controls);
 
     // Print note (hidden on screen via CSS)
     const pnEl = document.createElement('div');
@@ -1076,6 +1172,9 @@ function renderGrid() {
         const [moved] = cards.splice(fromIdx, 1);
         const toIdx = cards.findIndex(function(c) { return c.id === item.id; });
         if (toIdx === -1) { cards.push(moved); } else { cards.splice(toIdx, 0, moved); }
+        // Custom units follow the force of whatever card they're dropped onto
+        const movedUnit = lookupUnit(moved.sourceId);
+        if (movedUnit && movedUnit.isCustom) moved.assignedArmy = getForceArmyId(item);
         saveCards(); renderGrid();
       }
     });
@@ -1113,48 +1212,218 @@ function renderGrid() {
     return d;
   }
 
-  // ── Section 1: Independent characters (not leading any unit) ──────────────
-  addHeading("Independent Characters");
-  if (ungroupedChars.length) {
-    ungroupedChars.forEach(function(c, i) {
-      grid.appendChild(cardRow(createWrapper(c, true, true, getDisplayName(c)), c.id));
-      if (i < ungroupedChars.length - 1) grid.appendChild(divider());
-    });
-  } else {
-    const ph = document.createElement('div');
-    ph.className = 'alb-ic-placeholder';
-    ph.textContent = 'No independent characters — drag a leader here to detach from its unit';
-    grid.appendChild(ph);
+  // ── Helper: get army ID for a card item ────────────────────────────────────
+  function getForceArmyId(item) {
+    const u = lookupUnit(item.sourceId);
+    if (u && u.army) return u.army;
+    if ((u && u.isCustom) || item.html) return item.assignedArmy || '__custom__';
+    return '__unknown__';
+  }
+  function getForceType(armyId) {
+    if (!armyId || armyId === '__unknown__') return 'other';
+    if (armyId === '__custom__') return 'custom';
+    if (armyId.startsWith('ally-')) return 'ally';
+    if (armyId.startsWith('merc-')) return 'merc';
+    return 'main';
   }
 
-  // ── Section 2: Units — each unit with its leading character to the right ───
-  if (unitCards.length) {
-    addHeading("Units");
-    unitCards.forEach(function(u, i) {
-      const leadingChar = unitToChar[String(u.id)];
-      let rowEl;
+  // ── Collect unique forces in insertion order, sort main→ally→merc ──────────
+  const forcesOrdered = [];
+  const forcesSeen    = new Set();
+  cards.forEach(function(c) {
+    const fid = getForceArmyId(c);
+    if (fid === '__unknown__') return; // handled separately at the bottom
+    if (!forcesSeen.has(fid)) { forcesSeen.add(fid); forcesOrdered.push(fid); }
+  });
+  const typeOrder = { main: 0, ally: 1, merc: 2, custom: 4, other: 3 };
+  forcesOrdered.sort(function(a, b) {
+    return typeOrder[getForceType(a)] - typeOrder[getForceType(b)];
+  });
 
-      if (leadingChar) {
-        const pairWrapper = document.createElement('div');
-        pairWrapper.className = 'screen-pair-wrapper';
-        pairWrapper.appendChild(createWrapper(u, true, false, getDisplayName(u)));
-        const charCol = document.createElement('div');
-        charCol.className = 'screen-pair-char-col';
-        const connector = document.createElement('div');
-        connector.className = 'screen-pair-connector';
-        connector.textContent = 'Unit Leader:';
-        charCol.appendChild(connector);
-        const charWrap = createWrapper(leadingChar, true, true, getDisplayName(leadingChar));
-        charWrap.classList.add('screen-group-led');
-        charCol.appendChild(charWrap);
-        pairWrapper.appendChild(charCol);
-        rowEl = cardRow(pairWrapper, u.id);
-      } else {
-        rowEl = cardRow(createWrapper(u, true, false, getDisplayName(u)), u.id);
+  // ── Points totals for per-force limit display ───────────────────────────────
+  const totalPts  = cards.reduce(function(s, c) { return s + (c.totalPts || 0); }, 0);
+  const limitRaw  = parseInt(document.getElementById('al-limit').value) || 0;
+  const basePV    = limitRaw || totalPts;
+
+  // Find primary main army composition (use first main army found in list)
+  function getPrimaryComp() {
+    for (var i = 0; i < forcesOrdered.length; i++) {
+      if (getForceType(forcesOrdered[i]) === 'main') {
+        var def = WFB3_ARMIES.find(function(a) { return a.id === forcesOrdered[i]; });
+        if (def && def.composition) return def.composition;
       }
+    }
+    return null;
+  }
 
-      grid.appendChild(rowEl);
-      if (i < unitCards.length - 1) grid.appendChild(divider());
+  // ── Force separator — phase 1: build shell (placed before cards in DOM) ───────
+  function buildForceSeparatorShell(forceId, forceType) {
+    var armyDef = WFB3_ARMIES.find(function(a) { return a.id === forceId; });
+    var armyName = forceId === '__custom__' ? 'Custom Units' : (armyDef ? armyDef.name : forceId);
+    var typeLabel = forceType === 'main' ? 'Main Force' : forceType === 'ally' ? 'Allies'
+                  : forceType === 'merc' ? 'Mercenaries' : 'Custom';
+
+    var sep = document.createElement('div');
+    sep.className = 'force-separator force-sep-' + forceType;
+
+    var badge = document.createElement('span');
+    badge.className = 'fs-type-badge';
+    badge.textContent = typeLabel;
+
+    var nameEl = document.createElement('span');
+    nameEl.className = 'fs-name';
+    nameEl.textContent = armyName;
+
+    var limitsEl = document.createElement('span');
+    limitsEl.className = 'fs-limits';
+
+    sep.appendChild(badge);
+    sep.appendChild(nameEl);
+    sep.appendChild(limitsEl);
+    return sep;
+  }
+
+  // ── Force separator — phase 2: fill limits AFTER cards are created (totalPts live) ─
+  function fillForceSeparatorLimits(sep, forceId, forceType) {
+    var limitsEl = sep.querySelector('.fs-limits');
+    if (!limitsEl) return;
+
+    // Count points now that createWrapper() has run recalcPts() on every card
+    var forcePts = cards.filter(function(c) { return getForceArmyId(c) === forceId; })
+                        .reduce(function(s, c) { return s + (c.totalPts || 0); }, 0);
+    var forceCharPts = cards.filter(function(c) {
+      return getForceArmyId(c) === forceId && isCharUnit(lookupUnit(c.sourceId));
+    }).reduce(function(s, c) { return s + (c.totalPts || 0); }, 0);
+    var forceRnfPts = forcePts - forceCharPts;
+
+    var armyDef = WFB3_ARMIES.find(function(a) { return a.id === forceId; });
+
+    if (forceType === 'main' && armyDef && armyDef.composition) {
+      var comp = armyDef.composition;
+      // When multiple main armies are present, validate each against its own
+      // subtotal so they don't inflate each other's requirements.
+      var mainForceCount = forcesOrdered.filter(function(f) { return getForceType(f) === 'main'; }).length;
+      var checkPV = (mainForceCount > 1) ? forcePts : basePV;
+      if (checkPV > 0) {
+        var charCap = Math.floor(checkPV * comp.charMax);
+        var rnfMin  = Math.ceil(checkPV * comp.rnfMin);
+        var charPct = Math.round(comp.charMax * 100);
+        var rnfPct  = Math.round(comp.rnfMin * 100);
+        var charOk  = forceCharPts <= charCap;
+        var rnfOk   = forceRnfPts >= rnfMin;
+        limitsEl.innerHTML =
+          '<span class="' + (rnfOk ? 'fs-limit-ok' : 'fs-limit-warn') + '">' +
+            'R&amp;F ' + forceRnfPts + '<span style="color:#555"> / min ' + rnfMin + 'pts (' + rnfPct + '%)</span>' +
+          '</span><br>' +
+          '<span class="' + (charOk ? 'fs-limit-ok' : 'fs-limit-warn') + '">' +
+            'Chars ' + forceCharPts + '<span style="color:#555"> / max ' + charCap + 'pts (' + charPct + '%)</span>' +
+          '</span>';
+      }
+    } else if ((forceType === 'ally' || forceType === 'merc') && basePV > 0) {
+      var pComp = getPrimaryComp();
+      var capFrac = pComp ? (forceType === 'ally' ? pComp.allyMax : pComp.mercMax) : null;
+      if (capFrac === 0) {
+        limitsEl.innerHTML = '<span class="fs-limit-warn">' + forcePts + 'pts · not permitted</span>';
+      } else if (capFrac !== null) {
+        var capPts = Math.floor(basePV * capFrac);
+        var ok = forcePts <= capPts;
+        limitsEl.innerHTML = '<span class="' + (ok ? 'fs-limit-ok' : 'fs-limit-warn') + '">' +
+          forcePts + '<span style="color:#555"> / max ' + capPts + 'pts (' + Math.round(capFrac * 100) + '%)</span></span>';
+      } else {
+        limitsEl.innerHTML = '<span class="fs-pts">' + forcePts + ' pts</span>';
+      }
+    } else {
+      limitsEl.innerHTML = '<span class="fs-pts">' + forcePts + ' pts</span>';
+    }
+  }
+
+  // ── Render function for a unit card (with optional paired char) ─────────────
+  function renderUnitRow(u) {
+    const leadingChar = unitToChar[String(u.id)];
+    let rowEl;
+    if (leadingChar) {
+      const pairWrapper = document.createElement('div');
+      pairWrapper.className = 'screen-pair-wrapper';
+      pairWrapper.appendChild(createWrapper(u, true, false, getDisplayName(u)));
+      const charCol = document.createElement('div');
+      charCol.className = 'screen-pair-char-col';
+      const connector = document.createElement('div');
+      connector.className = 'screen-pair-connector';
+      connector.textContent = 'Unit Leader:';
+      charCol.appendChild(connector);
+      const charWrap = createWrapper(leadingChar, true, true, getDisplayName(leadingChar));
+      charWrap.classList.add('screen-group-led');
+      charCol.appendChild(charWrap);
+      pairWrapper.appendChild(charCol);
+      rowEl = cardRow(pairWrapper, u.id);
+    } else {
+      rowEl = cardRow(createWrapper(u, true, false, getDisplayName(u)), u.id);
+    }
+    return rowEl;
+  }
+
+  // ── Render each force group ─────────────────────────────────────────────────
+  const multipleForces = forcesOrdered.length > 1;
+
+  forcesOrdered.forEach(function(forceId) {
+    const forceType  = getForceType(forceId);
+    const forceUCards = unitCards.filter(function(c) { return getForceArmyId(c) === forceId; });
+    const forceCCards = ungroupedChars.filter(function(c) { return getForceArmyId(c) === forceId; });
+
+    // Phase 1: build separator shell and insert into DOM before cards
+    const armyDefForSep = WFB3_ARMIES.find(function(a) { return a.id === forceId; });
+    const hasComp = armyDefForSep && armyDefForSep.composition;
+    var sep = null;
+    if (multipleForces || hasComp) {
+      sep = buildForceSeparatorShell(forceId, forceType);
+      grid.appendChild(sep);
+    }
+
+    const armyDef2 = WFB3_ARMIES.find(function(a) { return a.id === forceId; });
+    const forceName = armyDef2 ? armyDef2.name : '';
+
+    // Independent characters for this force
+    if (forceCCards.length) {
+      addHeading(multipleForces && forceName ? forceName + ' — Independent Characters' : 'Independent Characters');
+      forceCCards.forEach(function(c, i) {
+        grid.appendChild(cardRow(createWrapper(c, true, true, getDisplayName(c)), c.id));
+        if (i < forceCCards.length - 1) grid.appendChild(divider());
+      });
+    } else if (!multipleForces) {
+      // Single force: show the standard "drag here" placeholder
+      addHeading('Independent Characters');
+      const ph = document.createElement('div');
+      ph.className = 'alb-ic-placeholder';
+      ph.textContent = 'No independent characters — drag a leader here to detach from its unit';
+      grid.appendChild(ph);
+    }
+
+    // Units for this force
+    if (forceUCards.length) {
+      addHeading(multipleForces && forceName ? forceName + ' — Units' : 'Units');
+      forceUCards.forEach(function(u, i) {
+        grid.appendChild(renderUnitRow(u));
+        if (i < forceUCards.length - 1) grid.appendChild(divider());
+      });
+    }
+
+    // Phase 2: fill separator limits now that all createWrapper() calls have run
+    // (recalcPts has been called for each card, so c.totalPts is live)
+    if (sep) fillForceSeparatorLimits(sep, forceId, forceType);
+  });
+
+  // Handle ungrouped chars/units with unknown force (sourceId not found)
+  const unknownChars = ungroupedChars.filter(function(c) { return getForceArmyId(c) === '__unknown__'; });
+  const unknownUnits = unitCards.filter(function(c) { return getForceArmyId(c) === '__unknown__'; });
+  if (unknownChars.length || unknownUnits.length) {
+    addHeading("Other");
+    unknownChars.forEach(function(c, i) {
+      grid.appendChild(cardRow(createWrapper(c, true, true, getDisplayName(c)), c.id));
+      if (i < unknownChars.length - 1) grid.appendChild(divider());
+    });
+    unknownUnits.forEach(function(u, i) {
+      grid.appendChild(renderUnitRow(u));
+      if (i < unknownUnits.length - 1) grid.appendChild(divider());
     });
   }
 
@@ -1167,10 +1436,14 @@ function renderGrid() {
  *  For character units, passes optionsSelected and magicAbilities so the card shows chosen upgrades
  *  with full magic item ability descriptions. */
 function resolveCardHtml(item, displayName) {
-  // Official unit via sourceId (strip "card-" prefix if present — wiki buttons add it)
-  if (item.sourceId && typeof WFB3_UNITS !== 'undefined' && typeof renderAlCard !== 'undefined') {
+  // Official or custom unit via sourceId
+  if (item.sourceId && typeof renderAlCard !== 'undefined') {
     const normalizedId = item.sourceId.replace(/^card-/, '');
-    const unit = WFB3_UNITS.find(function(u) { return u.id === normalizedId; });
+    let unit = null;
+    if (typeof WFB3_UNITS !== 'undefined') {
+      unit = WFB3_UNITS.find(function(u) { return u.id === normalizedId; });
+    }
+    if (!unit) unit = getCustomUnits().find(function(u) { return u.id === normalizedId; });
     if (unit) {
       const isChar = isCharUnit(unit);
       const opts   = isChar ? (item.optionsSelected || {}) : undefined;
@@ -1190,9 +1463,13 @@ function resolveCardHtml(item, displayName) {
    POINTS HELPERS
 ═══════════════════════════════════════ */
 function lookupUnit(sourceId) {
-  if (!sourceId || typeof WFB3_UNITS === 'undefined') return null;
+  if (!sourceId) return null;
   const id = sourceId.replace(/^card-/, '');
-  return WFB3_UNITS.find(function(u) { return u.id === id; }) || null;
+  if (typeof WFB3_UNITS !== 'undefined') {
+    const official = WFB3_UNITS.find(function(u) { return u.id === id; });
+    if (official) return official;
+  }
+  return getCustomUnits().find(function(u) { return u.id === id; }) || null;
 }
 
 var CHAR_KEYWORDS = /\b(commander|general|lord|warlord|chieftain|chief|hero|champion|wizard|sorcerer|shaman|necromancer|vampire|assassin|witch|seer|prophet|warlock|liege|captain|warchief|master|elder|prince|king|queen|overlord|daemon prince)\b/i;
@@ -1797,6 +2074,21 @@ function buildArmyBrowser() {
   makeSection("Allies", allyArmies);
   makeSection("Mercenaries", mercArmies);
 
+  // Custom units section
+  var custLabel = document.createElement("div");
+  custLabel.className = "browser-section-label";
+  custLabel.textContent = "Custom";
+  container.appendChild(custLabel);
+  var custGrid = document.createElement("div");
+  custGrid.className = "browser-army-grid";
+  var custBtn = document.createElement("button");
+  custBtn.className = "browser-army-btn";
+  custBtn.dataset.armyId = '__custom__';
+  custBtn.textContent = "Custom Units";
+  custBtn.onclick = function() { selectBrowserArmy('__custom__'); };
+  custGrid.appendChild(custBtn);
+  container.appendChild(custGrid);
+
   // Auto-select first army
   if (mainArmies.length) selectBrowserArmy(mainArmies[0].id);
 
@@ -1825,9 +2117,108 @@ function filterBrowserUnits(query) {
   renderBrowserUnits(browserArmyId, query.toLowerCase().trim());
 }
 
+function renderBrowserCustomUnits(filter) {
+  const container = document.getElementById("browser-units");
+  container.innerHTML = "";
+  const hdr = document.createElement("div");
+  hdr.className = "browser-units-header";
+  hdr.textContent = "Custom Units" + (filter ? " — filtered" : "");
+  container.appendChild(hdr);
+  const customs = getCustomUnits();
+  const filtered = filter
+    ? customs.filter(function(u) { return u.name.toLowerCase().includes(filter); })
+    : customs;
+  if (!filtered.length) {
+    const em = document.createElement("div");
+    em.className = "browser-empty";
+    em.textContent = customs.length
+      ? 'No units match "' + filter + '".'
+      : "No custom units yet. Use the Card Editor’s + Army List or Export Card buttons.";
+    container.appendChild(em);
+  } else {
+    filtered.forEach(function(unit) {
+      const row = document.createElement("div");
+      row.className = "browser-unit-row";
+      const info = document.createElement("div");
+      info.className = "browser-unit-info";
+      const nameEl = document.createElement("div");
+      nameEl.className = "browser-unit-name";
+      nameEl.textContent = unit.name;
+      info.appendChild(nameEl);
+      const meta = document.createElement("div");
+      meta.className = "browser-unit-meta";
+      const pts = unit.ptsFixed != null ? unit.ptsFixed + " pts"
+                 : unit.ptsPerModel != null ? unit.ptsPerModel + " pts/model" : "";
+      meta.textContent = (unit.type || "standard") + (pts ? "  ·  " + pts : "");
+      info.appendChild(meta);
+      const addBtn = document.createElement("button");
+      addBtn.className = "browser-add-btn";
+      addBtn.textContent = "+ Add";
+      addBtn.onclick = (function(u) {
+        return function() {
+          addUnitToList(u);
+          addBtn.textContent = "✓ Added";
+          addBtn.classList.add("just-added");
+          setTimeout(function() { addBtn.textContent = "+ Add"; addBtn.classList.remove("just-added"); }, 1500);
+        };
+      })(unit);
+      const delBtn = document.createElement("button");
+      delBtn.className = "browser-add-btn";
+      delBtn.style.cssText = "background:#2a1a1a;border-color:#5a2a2a;color:#c87060;margin-left:3px;";
+      delBtn.textContent = "✕";
+      delBtn.title = "Remove from custom library";
+      delBtn.onclick = (function(u) {
+        return function() {
+          var lib = getCustomUnits().filter(function(x) { return x.id !== u.id; });
+          saveCustomUnits(lib);
+          renderBrowserCustomUnits(document.getElementById('browser-search') ? document.getElementById('browser-search').value.toLowerCase().trim() : '');
+        };
+      })(unit);
+      row.appendChild(info);
+      row.appendChild(addBtn);
+      row.appendChild(delBtn);
+      container.appendChild(row);
+    });
+  }
+  var importRow = document.createElement("div");
+  importRow.style.cssText = "padding:8px 10px 4px;";
+  var importBtn = document.createElement("button");
+  importBtn.className = "browser-add-btn";
+  importBtn.style.cssText = "width:100%;padding:5px 8px;";
+  importBtn.textContent = "↑ Import Custom Unit File";
+  importBtn.onclick = function() { document.getElementById('custom-import-file').click(); };
+  importRow.appendChild(importBtn);
+  container.appendChild(importRow);
+}
+
+function importCustomUnitFile(fileInput) {
+  var file = fileInput.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      var def = JSON.parse(e.target.result);
+      if (!def.id || !def.name || !def.isCustom) throw new Error("Not a valid custom unit file.");
+      mergeCustomUnits([def]);
+      if (browserArmyId === '__custom__') renderBrowserUnits('__custom__', document.getElementById('browser-search').value.toLowerCase().trim());
+      var toast = document.createElement('div');
+      toast.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#4a2a7a;color:#e8d8ff;font-family:"Barlow Condensed",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:9px 18px;border-radius:2px;z-index:9999;box-shadow:2px 2px 8px #0006;';
+      toast.textContent = '✓ "' + def.name + '" added to library';
+      document.body.appendChild(toast);
+      setTimeout(function() { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 2500);
+    } catch(err) {
+      alert("Import failed: " + err.message);
+    }
+    fileInput.value = '';
+  };
+  reader.readAsText(file);
+}
+
 function renderBrowserUnits(armyId, filter) {
   const container = document.getElementById("browser-units");
   container.innerHTML = "";
+
+  if (armyId === '__custom__') { renderBrowserCustomUnits(filter); return; }
 
   if (typeof WFB3_UNITS === 'undefined') {
     container.innerHTML = '<div class="browser-empty">Unit data not loaded.</div>';
@@ -2136,11 +2527,19 @@ function activateDropZones() {
       const from = cards.findIndex(function(c) { return c.id === dragId; });
       if (from === -1) return;
       cards.splice(from, 1);
+      const movedUnit = lookupUnit(moved.sourceId);
       if (beforeCardId !== null) {
         const to = cards.findIndex(function(c) { return c.id === beforeCardId; });
         cards.splice(to !== -1 ? to : cards.length, 0, moved);
+        if (movedUnit && movedUnit.isCustom) {
+          const targetCard = cards.find(function(c) { return c.id === beforeCardId; });
+          moved.assignedArmy = targetCard ? getForceArmyId(targetCard) : '__custom__';
+        }
       } else {
         cards.push(moved);
+        if (movedUnit && movedUnit.isCustom) {
+          moved.assignedArmy = cards.length > 1 ? getForceArmyId(cards[cards.length - 2]) : '__custom__';
+        }
       }
       saveCards(); renderGrid();
     });
@@ -2277,9 +2676,9 @@ function runValidation() {
   const cardWarnings = {};
   const armyWarnings = [];
 
-  // ── Counts ───────────────────────────────────────────────────────────
-  const counts     = {};   // sourceId → how many of this unit in list
-  const skirmCounts = {};  // normalized sourceId → how many set to skirmish
+  // ── Per-card counts ───────────────────────────────────────────────────
+  const counts      = {};   // sourceId → how many of this unit in list
+  const skirmCounts = {};   // unit id → how many set to skirmish
 
   cards.forEach(function(c) {
     if (c.sourceId) counts[c.sourceId] = (counts[c.sourceId] || 0) + 1;
@@ -2318,28 +2717,141 @@ function runValidation() {
   // ── Army-level warnings ───────────────────────────────────────────────
   if (cards.length === 0) return { cards: cardWarnings, army: armyWarnings };
 
-  const totalPts  = cards.reduce(function(s, c) { return s + (c.totalPts || 0); }, 0);
-  const limitRaw  = parseInt(document.getElementById('al-limit').value) || 0;
-  const baseForCap = limitRaw || totalPts; // cap calculated against limit if set, else actual total
+  const totalPts = cards.reduce(function(s, c) { return s + (c.totalPts || 0); }, 0);
+  const limitRaw = parseInt(document.getElementById('al-limit').value) || 0;
+  const basePV   = limitRaw || totalPts;
 
-  // 1. Character points cap — max 25% of army
-  if (baseForCap > 0) {
-    const charPts = cards.reduce(function(s, c) {
-      return s + (isCharUnit(lookupUnit(c.sourceId)) ? (c.totalPts || 0) : 0);
-    }, 0);
-    const charCap = Math.floor(baseForCap * 0.25);
+  // Classify points by force type and army
+  var mainCharPts = {};   // armyId → pts on characters (main army only)
+  var mainRnfPts  = {};   // armyId → pts on rank & file (main army only)
+  var totalAllyPts = 0;
+  var totalMercPts = 0;
+
+  cards.forEach(function(c) {
+    const u = lookupUnit(c.sourceId);
+    if (!u) return;
+    const pts   = c.totalPts || 0;
+    const army  = u.army || '';
+    if (army.startsWith('ally-')) {
+      totalAllyPts += pts;
+    } else if (army.startsWith('merc-')) {
+      totalMercPts += pts;
+    } else {
+      if (isCharUnit(u)) {
+        mainCharPts[army] = (mainCharPts[army] || 0) + pts;
+      } else {
+        mainRnfPts[army]  = (mainRnfPts[army]  || 0) + pts;
+      }
+    }
+  });
+
+  const mainArmyIds = new Set([...Object.keys(mainCharPts), ...Object.keys(mainRnfPts)]);
+
+  if (mainArmyIds.size === 0) {
+    armyWarnings.push('No main army units in list');
+    return { cards: cardWarnings, army: armyWarnings };
+  }
+
+  // Per-main-army composition checks
+  const multipleMain = mainArmyIds.size > 1;
+  mainArmyIds.forEach(function(armyId) {
+    const armyDef = WFB3_ARMIES.find(function(a) { return a.id === armyId; });
+    const comp    = armyDef ? armyDef.composition : null;
+    if (!comp || basePV === 0) return;
+
+    const charPts = mainCharPts[armyId] || 0;
+    const rnfPts  = mainRnfPts[armyId]  || 0;
+    const prefix  = multipleMain ? (armyDef.name + ': ') : '';
+
+    // When multiple main armies are present, always validate each against its own
+    // subtotal — otherwise one army's points inflate the other's minimum requirements.
+    const checkPV = multipleMain ? (charPts + rnfPts) : basePV;
+    if (checkPV === 0) return;
+
+    // Character cap
+    const charCap = Math.floor(checkPV * comp.charMax);
     if (charPts > charCap) {
       armyWarnings.push(
-        'Characters over 25% allowance — ' + charPts + ' pts spent, ' + charCap + ' pts allowed'
+        prefix + 'Characters over ' + Math.round(comp.charMax * 100) + '% — ' +
+        charPts + 'pts spent, ' + charCap + 'pts allowed'
       );
+    }
+
+    // Rank & File minimum
+    const rnfMin = Math.ceil(checkPV * comp.rnfMin);
+    if (rnfPts < rnfMin) {
+      armyWarnings.push(
+        prefix + 'Rank & File below ' + Math.round(comp.rnfMin * 100) + '% minimum — ' +
+        rnfPts + 'pts, need ' + rnfMin + 'pts'
+      );
+    }
+  });
+
+  // Ally and merc caps — use strictest limit if multiple main armies
+  var allyCapFrac = null;
+  var mercCapFrac = null;
+  mainArmyIds.forEach(function(armyId) {
+    const comp = (WFB3_ARMIES.find(function(a) { return a.id === armyId; }) || {}).composition;
+    if (!comp) return;
+    if (comp.allyMax !== undefined && comp.allyMax !== null) {
+      allyCapFrac = (allyCapFrac === null) ? comp.allyMax : Math.min(allyCapFrac, comp.allyMax);
+    }
+    if (comp.mercMax !== undefined && comp.mercMax !== null) {
+      mercCapFrac = (mercCapFrac === null) ? comp.mercMax : Math.min(mercCapFrac, comp.mercMax);
+    }
+  });
+
+  if (totalAllyPts > 0 && basePV > 0) {
+    if (allyCapFrac === 0) {
+      armyWarnings.push('This army cannot take allies');
+    } else if (allyCapFrac !== null) {
+      const allyCap = Math.floor(basePV * allyCapFrac);
+      if (totalAllyPts > allyCap) {
+        armyWarnings.push(
+          'Allies over ' + Math.round(allyCapFrac * 100) + '% allowance — ' +
+          totalAllyPts + 'pts spent, ' + allyCap + 'pts allowed'
+        );
+      }
     }
   }
 
-  // 2. No regiment units — an all-character list is invalid
-  const hasRegiments = cards.some(function(c) { return !isCharUnit(lookupUnit(c.sourceId)); });
-  if (!hasRegiments) {
-    armyWarnings.push('Army contains no regiment or war machine units');
+  if (totalMercPts > 0 && basePV > 0) {
+    if (mercCapFrac === 0) {
+      armyWarnings.push('This army does not employ mercenaries');
+    } else if (mercCapFrac !== null) {
+      const mercCap = Math.floor(basePV * mercCapFrac);
+      if (totalMercPts > mercCap) {
+        armyWarnings.push(
+          'Mercenaries over ' + Math.round(mercCapFrac * 100) + '% allowance — ' +
+          totalMercPts + 'pts spent, ' + mercCap + 'pts allowed'
+        );
+      }
+    }
   }
+
+  // ── Contingent commander checks ───────────────────────────────────────
+  // Build a set of all unit IDs present in the list (normalised, no "card-" prefix)
+  const unitIdsInList = new Set(
+    cards.map(function(c) { return (c.sourceId || '').replace(/^card-/, ''); })
+  );
+
+  // For each ally/merc force actually in the list, check commander requirement
+  var forcesInList = new Set(
+    cards.map(function(c) {
+      var u = lookupUnit(c.sourceId);
+      return u ? u.army : null;
+    }).filter(Boolean)
+  );
+
+  forcesInList.forEach(function(armyId) {
+    if (!armyId.startsWith('ally-') && !armyId.startsWith('merc-')) return;
+    var def = WFB3_ARMIES.find(function(a) { return a.id === armyId; });
+    if (!def || !def.commanderUnitId) return;
+    var hasCommander = unitIdsInList.has(def.commanderUnitId);
+    if (def.commanderRequired && !hasCommander) {
+      armyWarnings.push(def.name + ' requires a Contingent Commander');
+    }
+  });
 
   return { cards: cardWarnings, army: armyWarnings };
 }
@@ -2416,6 +2928,18 @@ function updateTotals() {
   }
 }
 
+function inferCustomAssignments() {
+  var currentArmy = '__custom__';
+  cards.forEach(function(c) {
+    var u = lookupUnit(c.sourceId);
+    if (u && u.army) {
+      currentArmy = u.army;
+    } else if ((u && u.isCustom) || c.html) {
+      if (!c.assignedArmy) c.assignedArmy = currentArmy;
+    }
+  });
+}
+
 function saveCards() {
   // Strip html field before saving (don't persist large HTML blobs for official units)
   const toSave = cards.map(function(c) {
@@ -2434,7 +2958,7 @@ function saveHeader() {
     name:   document.getElementById("al-name").value,
     player: document.getElementById("al-player").value,
     limit:  document.getElementById("al-limit").value,
-    date:   document.getElementById("al-date").value
+    date:   document.getElementById("al-date").value,
   }));
 }
 
@@ -2457,18 +2981,174 @@ function updatePrintHeader() {
 }
 
 /* ═══════════════════════════════════════
+   SAVED LISTS
+═══════════════════════════════════════ */
+function getSaves() {
+  try { return JSON.parse(localStorage.getItem(SAVES_KEY) || "[]"); }
+  catch(e) { return []; }
+}
+
+function openSaves() {
+  // Pre-fill name from current army name if input is empty
+  var nameInput = document.getElementById("saves-name-input");
+  if (!nameInput.value) {
+    var hdr = JSON.parse(localStorage.getItem(HEADER_KEY) || "{}");
+    nameInput.value = hdr.name || '';
+  }
+  renderSavesList();
+  document.getElementById("saves-overlay").classList.add("open");
+  // Focus name input after a tick so the overlay is visible
+  setTimeout(function() { nameInput.select(); }, 60);
+}
+
+function renderSavesList() {
+  var saves = getSaves();
+  var container = document.getElementById("saves-list");
+  if (!saves.length) {
+    container.innerHTML = '<div class="saves-empty">No saved lists yet — type a name above and click Save</div>';
+    return;
+  }
+  container.innerHTML = '';
+  saves.forEach(function(save, idx) {
+    var item = document.createElement("div");
+    item.className = "saves-item";
+
+    var info = document.createElement("div");
+    info.className = "saves-item-info";
+
+    var nameEl = document.createElement("div");
+    nameEl.className = "saves-item-name";
+    nameEl.textContent = save.name || "Unnamed";
+
+    var meta = document.createElement("div");
+    meta.className = "saves-item-meta";
+    var parts = [];
+    if (save.header && save.header.player) parts.push(save.header.player);
+    if (save.header && save.header.limit)  parts.push(save.header.limit + " pts limit");
+    if (save.list)                          parts.push(save.list.length + " units");
+    if (save.savedAt) {
+      var d = new Date(save.savedAt);
+      parts.push(d.toLocaleDateString() + " " +
+                 d.toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}));
+    }
+    meta.textContent = parts.join(" · ");
+
+    info.appendChild(nameEl);
+    info.appendChild(meta);
+
+    var actions = document.createElement("div");
+    actions.className = "saves-item-actions";
+
+    var loadBtn = document.createElement("button");
+    loadBtn.className = "saves-item-btn load";
+    loadBtn.textContent = "Load";
+    loadBtn.onclick = (function(i) { return function() { loadSave(i); }; })(idx);
+
+    var delBtn = document.createElement("button");
+    delBtn.className = "saves-item-btn del";
+    delBtn.textContent = "Delete";
+    delBtn.onclick = (function(i) { return function() { deleteSave(i); }; })(idx);
+
+    actions.appendChild(loadBtn);
+    actions.appendChild(delBtn);
+    item.appendChild(info);
+    item.appendChild(actions);
+    container.appendChild(item);
+  });
+}
+
+function saveCurrent() {
+  var nameInput = document.getElementById("saves-name-input");
+  var name = nameInput.value.trim();
+  if (!name) {
+    nameInput.focus();
+    nameInput.style.borderColor = "#c05050";
+    setTimeout(function() { nameInput.style.borderColor = ""; }, 1200);
+    return;
+  }
+  var saves = getSaves();
+  var hdr = JSON.parse(localStorage.getItem(HEADER_KEY) || "{}");
+  var usedCustomIds2 = new Set(cards.filter(function(c) {
+    var u = lookupUnit(c.sourceId); return u && u.isCustom;
+  }).map(function(c) { return c.sourceId; }));
+  var embedCustoms2 = getCustomUnits().filter(function(u) { return usedCustomIds2.has(u.id); });
+  var entry = {
+    name: name,
+    savedAt: new Date().toISOString(),
+    header: hdr,
+    list: cards.map(function(c) {
+      var copy = Object.assign({}, c);
+      delete copy.html;
+      return copy;
+    })
+  };
+  if (embedCustoms2.length) entry.customUnits = embedCustoms2;
+  // Overwrite if same name exists, otherwise prepend
+  var existIdx = saves.findIndex(function(s) { return s.name === name; });
+  if (existIdx >= 0) {
+    saves[existIdx] = entry;
+  } else {
+    saves.unshift(entry);
+  }
+  localStorage.setItem(SAVES_KEY, JSON.stringify(saves));
+  renderSavesList();
+  nameInput.value = '';
+}
+
+function loadSave(idx) {
+  var saves = getSaves();
+  var save = saves[idx];
+  if (!save) return;
+  if (!confirm("Load \"" + save.name + "\"?\nThis will replace your current army list.")) return;
+
+  if (save.header) {
+    localStorage.setItem(HEADER_KEY, JSON.stringify(save.header));
+    document.getElementById("al-name").value   = save.header.name   || '';
+    document.getElementById("al-player").value = save.header.player || '';
+    document.getElementById("al-limit").value  = save.header.limit  || '';
+    document.getElementById("al-date").value   = save.header.date   || '';
+  }
+  if (save.customUnits && save.customUnits.length) mergeCustomUnits(save.customUnits);
+  cards = save.list || [];
+  localStorage.setItem(LIST_KEY, JSON.stringify(cards));
+
+  closeOverlay("saves-overlay");
+  renderGrid();
+  updateTotals();
+  updatePrintHeader();
+}
+
+function deleteSave(idx) {
+  var saves = getSaves();
+  var save = saves[idx];
+  if (!save) return;
+  if (!confirm("Delete saved list \"" + save.name + "\"?")) return;
+  saves.splice(idx, 1);
+  localStorage.setItem(SAVES_KEY, JSON.stringify(saves));
+  renderSavesList();
+}
+
+function onSavesBackdropClick(e) {
+  if (e.target === document.getElementById("saves-overlay")) closeOverlay("saves-overlay");
+}
+
+/* ═══════════════════════════════════════
    IMPORT / EXPORT
 ═══════════════════════════════════════ */
 function openExport() {
+  var usedCustomIds = new Set(cards.filter(function(c) {
+    var u = lookupUnit(c.sourceId); return u && u.isCustom;
+  }).map(function(c) { return c.sourceId; }));
+  var embedCustoms = getCustomUnits().filter(function(u) { return usedCustomIds.has(u.id); });
   const data = {
     header: JSON.parse(localStorage.getItem(HEADER_KEY) || "{}"),
     list: cards.map(function(c) {
-      // Export without html blob
       const out = Object.assign({}, c);
       delete out.html;
       return out;
     })
   };
+  if (embedCustoms.length) data.customUnits = embedCustoms;
   document.getElementById("export-text").value = JSON.stringify(data, null, 2);
   document.getElementById("export-overlay").classList.add("open");
 }
@@ -2497,15 +3177,17 @@ function doImport() {
     const data = JSON.parse(raw);
     const list = Array.isArray(data) ? data : (data.list || []);
     const hdr  = Array.isArray(data) ? null : (data.header || null);
+    const incomingCustoms = Array.isArray(data) ? [] : (data.customUnits || []);
     if (!Array.isArray(list)) throw new Error("Expected an array of units.");
+    if (incomingCustoms.length) mergeCustomUnits(incomingCustoms);
     cards = list;
     saveCards();
     if (hdr) {
       localStorage.setItem(HEADER_KEY, JSON.stringify(hdr));
-      if (hdr.name)   document.getElementById("al-name").value   = hdr.name;
-      if (hdr.player) document.getElementById("al-player").value = hdr.player;
-      if (hdr.limit)  document.getElementById("al-limit").value  = hdr.limit;
-      if (hdr.date)   document.getElementById("al-date").value   = hdr.date;
+      if (hdr.name)    document.getElementById("al-name").value    = hdr.name;
+      if (hdr.player)  document.getElementById("al-player").value  = hdr.player;
+      if (hdr.limit)   document.getElementById("al-limit").value   = hdr.limit;
+      if (hdr.date)    document.getElementById("al-date").value    = hdr.date;
     }
     closeOverlay("import-overlay");
     renderGrid();

@@ -1457,8 +1457,54 @@
     transition: background .12s;
   }
   .sr-item:last-child { border-bottom: none; }
-  .sr-item:hover { background: rgba(255,255,255,.05); }
+  .sr-item:hover, .sr-item.selected { background: rgba(255,255,255,.07); }
   .sr-item .sr-title { font-size: 14px; color: var(--text); }
+  .sr-item .sr-section { font-size: 10px; color: var(--text-dim); margin-top: 1px; letter-spacing: .04em; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; }
+  .sr-item .sr-snippet { font-size: 11px; color: var(--text-dim); margin-top: 4px; line-height: 1.5; font-style: italic; }
+  .sr-item .sr-snippet mark { background: none; color: var(--accent); font-style: normal; font-weight: 600; }
+
+  /* ── Special Rules Reference page ──────────────────── */
+  .sr-layout { display: flex; gap: 40px; align-items: flex-start; }
+  .sr-body { flex: 1; min-width: 0; }
+  .sr-toc { width: 160px; flex-shrink: 0; position: sticky; top: 20px; }
+  .sr-toc-title { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 10px; }
+  .sr-toc a { display: block; color: var(--text-dim); text-decoration: none; padding: 3px 0 3px 8px; border-left: 1px solid var(--border); font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.04em; line-height: 1.4; transition: all .15s; cursor: pointer; }
+  .sr-toc a:hover { color: var(--text); border-left-color: var(--text-dim); }
+  .sr-toc a.active { color: var(--text); border-left-color: var(--text); background: rgba(255,255,255,.03); }
+  .sr-section { margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid var(--border); }
+  .sr-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .sr-section-heading { font-family: 'Cinzel', serif; font-weight: 700; font-size: 12px; color: var(--text); letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 20px; padding: 9px 14px; border-left: 3px solid var(--accent); background: rgba(255,255,255,0.04); scroll-margin-top: 20px; }
+  .sr-rule-entry { border-bottom: 1px solid var(--border); padding: 18px 0; }
+  .sr-rule-entry:last-child { border-bottom: none; padding-bottom: 0; }
+  .sr-rule-name { font-family: 'Cinzel', serif; font-weight: 600; font-size: 13px; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 5px; scroll-margin-top: 20px; }
+  .sr-rule-short { font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 10px; line-height: 1.45; padding-left: 12px; border-left: 2px solid var(--border2); }
+  .sr-rule-text { font-size: 15px; color: var(--text-dim); line-height: 1.7; }
+  .sr-racial-entry { border: 1px solid var(--border2); border-left: 3px solid #6a8a6a; background: rgba(106,138,106,0.04); padding: 16px 20px; margin-bottom: 16px; }
+  .sr-racial-entry:last-child { margin-bottom: 0; }
+  .sr-racial-name { font-family: 'Cinzel', serif; font-weight: 700; font-size: 12px; color: var(--text); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; scroll-margin-top: 20px; }
+  .sr-racial-short { font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 10px; line-height: 1.45; }
+  .sr-racial-text { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+  .sr-mount-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 4px; }
+  .sr-mount-table thead tr { border-bottom: 2px solid var(--border-hard); background: rgba(255,255,255,0.05); }
+  .sr-mount-table thead th { font-family: 'Cinzel', serif; font-weight: 700; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); padding: 8px 12px; text-align: left; }
+  .sr-mount-table thead th:first-child { width: 180px; }
+  .sr-mount-table tbody tr { border-bottom: 1px solid var(--border); }
+  .sr-mount-table tbody tr:last-child { border-bottom: none; }
+  .sr-mount-table td { padding: 10px 12px; color: var(--text-dim); vertical-align: top; line-height: 1.55; font-size: 14px; }
+  .sr-mount-table td:first-child { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; color: var(--text); letter-spacing: 0.04em; vertical-align: middle; width: 180px; }
+  .sr-weapon-subsection { margin-bottom: 28px; }
+  .sr-weapon-subsection:last-child { margin-bottom: 0; }
+  .sr-weapon-label { font-family: 'Cinzel', serif; font-weight: 600; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); padding-left: 10px; border-left: 2px solid var(--border-hard); margin-bottom: 12px; }
+  .sr-weapon-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .sr-weapon-table thead tr { border-bottom: 2px solid var(--border-hard); background: rgba(255,255,255,0.05); }
+  .sr-weapon-table thead th { font-family: 'Cinzel', serif; font-weight: 700; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); padding: 7px 10px; text-align: left; }
+  .sr-weapon-table thead th.centre { text-align: center; }
+  .sr-weapon-table tbody tr { border-bottom: 1px solid var(--border); }
+  .sr-weapon-table tbody tr:last-child { border-bottom: none; }
+  .sr-weapon-table td { padding: 8px 10px; color: var(--text-dim); vertical-align: top; line-height: 1.5; }
+  .sr-weapon-table td.weapon-name { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; color: var(--text); letter-spacing: 0.04em; vertical-align: middle; white-space: nowrap; width: 180px; }
+  .sr-weapon-table td.centre { text-align: center; font-family: 'Share Tech Mono', monospace; font-size: 13px; color: var(--text); white-space: nowrap; vertical-align: middle; }
+
   /* ── Responsive / Mobile ─────────────────────────── */
   /* ── QR Print bar ─────────────────────────────────── */
   .qr-print-bar {
@@ -2685,6 +2731,24 @@
       </div></div>
     </div><!-- /page-glossary -->
 
+    <div class="page" id="page-special-rules-ref">
+      <div class="article-header">
+        <div class="article-header-content">
+          <h1>Special Rules Reference</h1>
+          <p class="article-subtitle">Psychology, combat rules, special troop types, racial rules, bestiary abilities, mount rules and weapon rules</p>
+        </div>
+      </div>
+      <div class="sr-layout">
+        <div class="sr-body">
+          <div id="sr-inner"></div>
+        </div>
+        <aside class="sr-toc">
+          <div class="sr-toc-title">Contents</div>
+          <nav id="sr-page-toc"></nav>
+        </aside>
+      </div>
+    </div><!-- /page-special-rules-ref -->
+
     <!-- WARHAMMER ARMIES -->
     <div class="page" id="page-warhammer-armies"></div>
 
@@ -2731,7 +2795,7 @@
           <p>The points modifiers for characters' weaponry and equipment as given in <em>Warhammer Fantasy Battle</em> no longer apply. Instead, characters now pay the same points as normal members of their race. This amendment makes characters relatively more cost effective, and also enables their points values to be calculated more easily.</p>
 
           <h4 class="wiki-subsection-heading">Ally and Mercenary Characters</h4>
-          <p>Models comprising an allied or a mercenary contingent do not affect the minimums and maximums for character models or rank and file within the main army. All models in the contingent are drawn from the allowances given in the ally and mercenary lists (p126–162).</p>
+          <p>Models comprising an allied or a mercenary contingent do not affect the minimums and maximums for character models or rank and file within the main army. All models in the contingent are drawn from the allowances given in the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Allies</a> and <a onclick="navigate('wa-mercenaries')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Mercenaries</a> lists.</p>
           </div>
         </div><!-- /wiki-section: wa-sr-weapons-armour -->
 
@@ -2796,7 +2860,7 @@
             <li>If any friendly unit within 12″ of the standard should rout, the player may take the test again. The result of this second test is final.</li>
             <li>If any friendly unit within 12″ takes a <em>rally</em> test, the unit may add a further +1 to its <em>Leadership</em> score. As this usually includes the general's bonus, the unit's <em>Leadership</em> may rise to 10 — but no higher.</li>
           </ol>
-          <p>If an army or contingent standard bearer is slain and the unit pushed back or routed, the standard may be captured in the same way as ordinary unit standards. Similarly, if the bearer is slain, but the unit wins the combat round, the standard may be passed on to another model. Army or contingent standards should only be passed into the care of a character model and should only be passed into the care of rank and file troops if there is no other choice. The general or contingent commander may take up the standard. If an ordinary trooper carries the standard, it functions as normal, but any magical powers the standard may possess are suspended (see <em>Magic</em> p9).</p>
+          <p>If an army or contingent standard bearer is slain and the unit pushed back or routed, the standard may be captured in the same way as ordinary unit standards. Similarly, if the bearer is slain, but the unit wins the combat round, the standard may be passed on to another model. Army or contingent standards should only be passed into the care of a character model and should only be passed into the care of rank and file troops if there is no other choice. The general or contingent commander may take up the standard. If an ordinary trooper carries the standard, it functions as normal, but any magical powers the standard may possess are suspended (see the <a onclick="navigate('wa-magic')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic</a> section).</p>
           <p>If an army standard falls, but is not captured, the <em>Leadership</em> of the unit currently associated with it drops by -2 for the remainder of the battle. The <em>Leadership</em> and <em>Leadership</em> bonus of any character associated with a unit also drops by -2. This does not affect the general's position as army commander, even if his <em>Leadership</em> is now lower than that of another character. If an army standard is captured, the penalty is increased to -3. This can only be cancelled by recapturing the standard.</p>
           <p>The rules concerning Army Standards are given in <a onclick="navigate('bg-standards-musicians');setTimeout(()=>document.getElementById('capturing-standards')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Standards — Capturing</a>. Ally and Mercenary Contingent Standards count in every respect as Army Standards, but only for their own contingent.</p>
           </div>
@@ -2846,9 +2910,9 @@
           <div class="wiki-body">
           <p><em>Hosts</em> are packs of beasts, chaotic creatures or ethereal beings which have been magically <em>bound</em> before a battle. Only a wizard, or group of wizards, may magically bind a host in this way. They might be creatures drawn forth from the local environment or, if ethereal beings, they might be the shades of long dead warriors unable to rest until they have fulfilled some ancient oath or obligation. Binding a host uses up a portion of a wizard's magic points; these cannot be replenished by resting before the game begins. Several wizards may 'club together' in order to accumulate enough magic points to bind a host.</p>
           <p>There are three types of host: <em>monstrous</em>, <em>chaotic</em> and <em>ethereal</em>.</p>
-          <p><strong>Monstrous hosts</strong> are made up of <em>creatures</em>. A monstrous host must be organised into units of up to 20 creatures. It is not essential that all creatures in a unit are of the same type, but if the host includes more than one creature of a type, they should be organised into the same unit, or into as few units as possible if there are more than 20 creatures. Monstrous hosts do not need leaders, they are magically bound and motivated; they are still subject to the usual leadership, rout and other tests. Refer to <strong>WFB</strong> p241 for rules concerning the binding and use of a monstrous host.</p>
-          <p><strong>Chaotic hosts</strong> are made up of <em>creatures of Chaos</em>. Only a Chaos Sorcerer is able to bind a chaotic host. As with the monstrous host, creatures of the same type should be organised into the same unit, or into as few units as possible if there are more than 20 creatures. A Chaotic host does not need to be led; it is still subject to the usual leadership, rout and other tests. Refer to <strong>WFB</strong> p251 for rules concerning binding and use of a chaotic host.</p>
-          <p><strong>Ethereal hosts</strong> are made up of <em>ethereal creatures</em>. Units of ethereal troops always contain the same kind of ethereal creature. Creatures of one kind must be placed in a single unit of between 1 and 20 models where possible. If a host includes more than 20 models of one kind they may be divided into two units as required; if more than 40 they may be divided into three units and so on. An ethereal host does not need to be led. Refer to <strong>WFB</strong> p263, for rules concerning binding and use of an ethereal host.</p>
+          <p><strong>Monstrous hosts</strong> are made up of <em>creatures</em>. A monstrous host must be organised into units of up to 20 creatures. It is not essential that all creatures in a unit are of the same type, but if the host includes more than one creature of a type, they should be organised into the same unit, or into as few units as possible if there are more than 20 creatures. Monstrous hosts do not need leaders, they are magically bound and motivated; they are still subject to the usual leadership, rout and other tests. See the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hosts</a> section for rules concerning the binding and use of a monstrous host.</p>
+          <p><strong>Chaotic hosts</strong> are made up of <em>creatures of Chaos</em>. Only a Chaos Sorcerer is able to bind a chaotic host. As with the monstrous host, creatures of the same type should be organised into the same unit, or into as few units as possible if there are more than 20 creatures. A Chaotic host does not need to be led; it is still subject to the usual leadership, rout and other tests. See the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hosts</a> section for rules concerning binding and use of a chaotic host.</p>
+          <p><strong>Ethereal hosts</strong> are made up of <em>ethereal creatures</em>. Units of ethereal troops always contain the same kind of ethereal creature. Creatures of one kind must be placed in a single unit of between 1 and 20 models where possible. If a host includes more than 20 models of one kind they may be divided into two units as required; if more than 40 they may be divided into three units and so on. An ethereal host does not need to be led. See the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hosts</a> section for rules concerning binding and use of an ethereal host.</p>
           <p>Only wizards from the main army, not those from allied contingents or mercenary groups, may bind hosts. This is because allied wizards are unwilling to sacrifice the amount of personal magical power that is needed to bind a host.</p>
           </div>
         </div><!-- /wiki-section: wa-sr-hosts -->
@@ -2901,7 +2965,7 @@
           <p>Once your army is selected, there are a few pre-game preparation tasks to complete before battle begins.</p>
           <ol class="wiki-rules-list">
             <li>Allocate characters to units as leader champions, if you haven't already done so when selecting units or characters. Some characters may be left as independent heroes or wizards, but these may still be <em>associated</em> with a unit in order to gain shelter from missile fire.</li>
-            <li>Spells should be randomly determined as described on page 9 and noted down.</li>
+            <li>Spells should be randomly determined as described in the <a onclick="navigate('wa-magic')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic</a> section and noted down.</li>
             <li>Chaotic attributes should be determined as described on page p6 (and <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-chaos-attributes')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Army Lists — Chaos Attributes</a>) and noted down.</li>
             <li>Allocate assassins, ball-and-chain fanatics, and other hidden troops to units and note down which units contain them.</li>
           </ol>
@@ -3005,8 +3069,8 @@
           </table>
 
           <h4 class="wiki-subsection-heading">Spell Generation</h4>
-          <p>Each wizard's spells must be randomly generated before the game begins. This should be done by preparing a <em>Wizard Record Sheet</em> (page 167) for each wizard. Each wizard's spells are then generated in turn and written down together with other details, such as remaining magic points and magic level. If a GM or other unbiased party is present, he should oversee all dice rolling. If not, then players may agree to trust each other, or may oversee each other's dice rolling if preferred.</p>
-          <p>All spells are generated randomly from the <strong>Spell Table</strong> (see p10). Except where specifically noted in the army lists, spells should be generated from the appropriate level of the Battle Magic chart. For example, a wizard with a character level of 15 generates 6 spells from level 1 and 3 spells from level 2.</p>
+          <p>Each wizard's spells must be randomly generated before the game begins. This should be done by keeping a note of each wizard's spells, remaining magic points and magic level. Each wizard's spells are then generated in turn and written down together with other details, such as remaining magic points and magic level. If a GM or other unbiased party is present, he should oversee all dice rolling. If not, then players may agree to trust each other, or may oversee each other's dice rolling if preferred.</p>
+          <p>All spells are generated randomly from the <a onclick="navigate('wa-magic')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><strong>Spell Table</strong></a>. Except where specifically noted in the army lists, spells should be generated from the appropriate level of the Battle Magic chart. For example, a wizard with a character level of 15 generates 6 spells from level 1 and 3 spells from level 2.</p>
           <p>Most wizards are allowed to generate spells from the Elemental, Daemonic, Illusionist or Necromantic charts instead of Battle Magic spells. Any Goblin wizard for example, may have up to one Elemental, one Necromantic, one Illusionist and up to two Daemonic spells from each of the levels available to him. This does not affect the total number of spells the wizard has, but merely substitutes spells of a different type. Where wizards are permitted to use Elemental, Daemonic, Illusionist or Necromantic spells, this is indicated in the army lists. Players should note that the word 'substitute' refers to the choice of table from which the spell is generated; it does not mean that an already generated spell may be 'swapped' for a dice roll on another chart. It is not acceptable to change a spell once it has been generated.</p>
 
           <h4 class="wiki-subsection-heading">Duplicate Rolls</h4>
@@ -3859,7 +3923,7 @@
             <li>Like Dwarfs, Boar Centaurs suffer no movement penalties for armour. Nor do they suffer movement penalties when operating war machines.</li>
             <li>Boar centaurs have one <em>stomp</em> attack plus one other attack, which may be either a weapon attack or another <em>stomp</em> depending on whether the creature is armed or not.</li>
             <li>Because it is a creature of chaos, riddled with the very stuff of Chaos itself, a Boar Centaur's <em>attacks</em> are considered to be magical in the same way as <em>attacks</em> from Daemons and Elementals. A Boar Centaur's <em>attacks</em> are fully effective against <em>all</em> creatures normally immune to non-magical attacks.</li>
-            <li>Boar Centaurs may have D4-3 personal <em>chaotic attributes</em> generated before the game (see p6).</li>
+            <li>Boar Centaurs may have D4-3 personal <em>chaotic attributes</em> generated before the game (see <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-chaos-attributes')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Chaos Attributes</a>).</li>
             <li>Boar Centaurs are a newly developed creature, the future of which lies at the whim of the great Chaos gods and their work-slaves the Chaos Dwarfs. To date, none have been permitted to rise to the status of 'character', and their role has been limited to that of 'power-unit' for the Chaos Dwarf war machines.</li>
           </ol>
           <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:8px">
@@ -4028,7 +4092,7 @@
           <ol class="wiki-rules-list">
             <li>Savage Orcs are subject to <em>animosity</em> against all goblinoid units on the same side as themselves. Savage Orcs are culturally distinct from other Orcs; the two kinds treat each other as a different <em>race</em> for purposes of animosity.</li>
             <li>Savage Orcs do not usually wear armour. Character models may do so as indicated in the lists. However, this does not prevent a unit or character carrying a shield. A unit or character model without armour gains a form of 'magical protection' which reflects their belief in the protective powers of nakedness. This is equivalent to <em>light armour</em>. However, this special protection is lost if a character is given armour. A naked Savage Orc and a Savage Orc with <em>light armour</em> therefore both have the same <em>saving throw</em>.</li>
-            <li>Savage Orcs <em>fear</em> chariots and engines of war. This includes bombards, stone-throwers, and all machines covered under <em>Engines of War</em> (see <a onclick="navigate('ag-engines-of-war');setTimeout(()=>document.getElementById('eow-intro')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Engines of War</a>) as well as the Snotling Pump Wagon and Chaos Dwarf war machines described in this volume (p18–20).</li>
+            <li>Savage Orcs <em>fear</em> chariots and engines of war. This includes bombards, stone-throwers, and all machines covered under <em>Engines of War</em> (see <a onclick="navigate('ag-engines-of-war');setTimeout(()=>document.getElementById('eow-intro')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Engines of War</a>) as well as the Snotling Pump Wagon and Chaos Dwarf war machines described in this section.</li>
             <li>A unit of Savage Orcs must take a <em>rout</em> test if it suffers 1 or more casualties from any engine of war during the <em>shooting phase</em>.</li>
             <li>Savage Orcs are subject to <em>frenzy</em>.</li>
             <li>Savage Orc wizards may substitute any one Battle Magic spell from each level with an equivalent level Necromantic, Daemonic, Elemental or Illusionist spell.</li>
@@ -4480,7 +4544,7 @@
           <p>Dark Elves wear dark and sinister attire. Their helmets and other war-gear are highly decorated with distinctive swirling patterns in black, gold and silver. Their shields and standards bear fell symbols of death and terror, or else images and badges of the evil gods that they worship.</p>
           <p><strong>Alignment:</strong> Dark Elf armies can be of either Evil or Chaotic alignment.</p>
           <p><strong>Psychology:</strong> Dark Elves <em><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('hatred')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">hate</a></em> other Elf kindreds. Witch Elves are subject to <em><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('frenzy')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">frenzy</a></em>.</p>
-          <p><strong>Chaos Attributes:</strong> Dark Elf character models may manifest chaotic attributes, subject to the provisions on p6. A Dark Elf character may have up to D6−3 personal attributes.</p>
+          <p><strong>Chaos Attributes:</strong> Dark Elf character models may manifest chaotic attributes, subject to the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-chaos-attributes')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Chaos Attributes</a> provisions. A Dark Elf character may have up to D6−3 personal attributes.</p>
           </div>
         </div><!-- /wiki-section: wa-de-background -->
 
@@ -4589,7 +4653,7 @@
           <p>Spells should be generated from the appropriate spell level of the Battle Magic chart, except that at least one spell of each level must be generated from either the Daemonic or Necromantic charts instead. In addition, the player may choose to employ more Daemonic or Necromantic magic, by replacing any or all Battle Magic spells with Daemonic or Necromantic spells of the same level. Finally, one Battle Magic spell from any level may be replaced by an Illusionist spell of the same level. Note that Dark Elf wizards never have Elemental spells.</p>
 
           <h4 class="wiki-subsection-heading" id="wa-de-char-magic-items">Magic Items for Characters</h4>
-          <p>Character models can be equipped with magical items by paying the points indicated on the <em>Magic Items Chart</em> (p13). This comes out of the points allocated to the character model points allowance. The items must be one of the following:</p>
+          <p>Character models can be equipped with magical items by paying the points indicated in the <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Magic Items</em></a> section. This comes out of the points allocated to the character model points allowance. The items must be one of the following:</p>
           <ul class="wiki-rules-list">
             <li>Any character model may carry one magic weapon with up to one magic attribute for every 5 'levels' of the character (ie, a level 5 character may carry a weapon with one attribute, a level 15 character may carry a weapon with three, etc).</li>
             <li>Character models may be equipped with any sort of magic missiles.</li>
@@ -4638,8 +4702,8 @@
           <h3>Rank &amp; File</h3>
           <div class="wiki-body">
           <p>At least a third of the army's total points value must be spent on rank &amp; file troops organised into units. Any unit may be given a unit standard bearer and/or a musician (see <a onclick="navigate('ag-points-values');setTimeout(()=>document.getElementById('musicians-standard-bearers-points')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Points Values — Musicians &amp; Standards</a>). Standard bearers and musicians must be equipped in exactly the same way as the rest of the unit, and cost twice the points value of a basic trooper.</p>
-          <p>Any unit indicated may convert an ordinary standard into a magic standard with a single ability. The ability may have a points value up to the amount shown. The specific ability must be chosen and noted down before the game (see p15).</p>
-          <p>Any unit indicated may convert an ordinary musical instrument into a magic instrument with a single ability. All magical instruments cost an extra 25 points as indicated below. The specific ability must be chosen and noted down before the game (see p16).</p>
+          <p>Any unit indicated may convert an ordinary standard into a magic standard with a single ability. The ability may have a points value up to the amount shown. The specific ability must be chosen and noted down before the game (see <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a>).</p>
+          <p>Any unit indicated may convert an ordinary musical instrument into a magic instrument with a single ability. All magical instruments cost an extra 25 points as indicated below. The specific ability must be chosen and noted down before the game (see <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a>).</p>
           </div>
         </div><!-- /wiki-section: wa-de-rank-file -->
 
@@ -5044,8 +5108,8 @@
         <div class="wiki-section" id="wa-de-allies">
           <h3>Allies &amp; Mercenaries</h3>
           <div class="wiki-body">
-          <p><strong>Allies:</strong> Dark Elves may seek allies among other evil or chaotic races. The player may spend up to one third of the army's total points on allies. The allies must be assembled using the <em>Allies Section</em> (p126), and chosen from the following contingents: Chaos Allies, Fimir, Skaven, Undead.</p>
-          <p><strong>Mercenaries:</strong> Dark Elves sometimes offer a share in the spoils to vicious mercenary bands in return for their services in battle, thus attracting those who like booty as much as blood. The player may spend up to one third of the army's total points on mercenaries. Mercenaries must be assembled using the <em>Mercenary Section</em> (p150), and chosen from the following contingents: Nippon, Hobgoblins, Ogres.</p>
+          <p><strong>Allies:</strong> Dark Elves may seek allies among other evil or chaotic races. The player may spend up to one third of the army's total points on allies. The allies must be assembled using the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Allies</em></a> section, and chosen from the following contingents: Chaos Allies, Fimir, Skaven, Undead.</p>
+          <p><strong>Mercenaries:</strong> Dark Elves sometimes offer a share in the spoils to vicious mercenary bands in return for their services in battle, thus attracting those who like booty as much as blood. The player may spend up to one third of the army's total points on mercenaries. Mercenaries must be assembled using the <a onclick="navigate('wa-mercenaries')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Mercenaries</em></a> section, and chosen from the following contingents: Nippon, Hobgoblins, Ogres.</p>
           </div>
         </div><!-- /wiki-section: wa-de-allies -->
 
@@ -5203,7 +5267,7 @@
           <p>All spells are generated randomly from the appropriate spell level of the Battle Magic Chart. A Wood Elf wizard may substitute any Battle Magic spell for an Illusionist spell of the same level, and one Battle Magic spell from each level with an Elemental spell of the same level. Wood Elf wizards do not use Necromantic or Daemonic spells.</p>
 
           <h4 class="wiki-subsection-heading" id="wa-we-char-magic-items">Magic Items for Characters</h4>
-          <p>Characters can carry magical items by paying the points indicated on the Magic Items Chart (p13), paid for from the character model points allowance:</p>
+          <p>Characters can carry magical items by paying the points indicated in the <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a> section, paid for from the character model points allowance:</p>
           <ul class="wiki-rules-list">
             <li>Any character model may carry a single magic weapon with up to one magic attribute for every 5 'levels' of the character.</li>
             <li>Four character models may be equipped with any sort of magic missiles.</li>
@@ -5667,7 +5731,7 @@
         <div class="wiki-section" id="wa-we-allies">
           <h3>Allies</h3>
           <div class="wiki-body">
-          <p>The natural allies of Wood Elves are other 'good' Elves and other inhabitants of the forests. The player may spend up to one third of the army's total points on allies. The allies must be assembled using the <em>Allies Section</em> (p126) and should be chosen from the following: High Elves, Halflings, Zoats.</p>
+          <p>The natural allies of Wood Elves are other 'good' Elves and other inhabitants of the forests. The player may spend up to one third of the army's total points on allies. The allies must be assembled using the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Allies</em></a> section and should be chosen from the following: High Elves, Halflings, Zoats.</p>
           <p>Wood Elves do not hire mercenaries.</p>
           </div>
         </div><!-- /wiki-section: wa-we-allies -->
@@ -5825,7 +5889,7 @@
           <p>All spells are generated randomly from the Battle Magic chart. An Elven wizard may also use other sorts of magic if the player chooses. <strong>High Elf wizards</strong> may replace one Battle Magic spell from each level with either an Illusionist, Elemental, Daemonic, or Necromantic spell of the same level. <strong>Sea Elf wizards</strong> may replace one Battle Magic spell from each level with an Illusionist, Daemonic, or Elemental spell of the same level. They may not use Necromantic spells.</p>
 
           <h4 class="wiki-subsection-heading" id="wa-he-char-magic-items">Magic Items for Characters</h4>
-          <p>Characters can also carry a limited number of magical items by paying the points indicated on the Magic Items Chart (p13), paid for from the character model points allowance:</p>
+          <p>Characters can also carry a limited number of magical items by paying the points indicated in the <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a> section, paid for from the character model points allowance:</p>
           <ul class="wiki-rules-list">
             <li>Any character model may carry one magic weapon with up to one magic attribute for every 5 'levels' of the character.</li>
             <li>Character models may be equipped with any sort of magic missiles.</li>
@@ -6296,7 +6360,7 @@
         <div class="wiki-section" id="wa-he-allies">
           <h3>Allies</h3>
           <div class="wiki-body">
-          <p>The natural allies of High Elves and Sea Elves are their rustic sylvan kindred from the Old and New Worlds — the Wood Elves. They have many warlike skills and unusual warriors which are sometimes requested by the lords of the Elven Kingdoms. The player may spend up to a third of the army's total points value on a Wood Elf allied contingent (and no others). The allies must be assembled using the <em>Allies Section</em> (p126).</p>
+          <p>The natural allies of High Elves and Sea Elves are their rustic sylvan kindred from the Old and New Worlds — the Wood Elves. They have many warlike skills and unusual warriors which are sometimes requested by the lords of the Elven Kingdoms. The player may spend up to a third of the army's total points value on a Wood Elf allied contingent (and no others). The allies must be assembled using the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Allies</em></a> section.</p>
           <p>High Elves do not employ mercenaries.</p>
           </div>
         </div><!-- /wiki-section: wa-he-allies -->
@@ -6455,7 +6519,7 @@
           <p>All spells are generated randomly from the appropriate spell level of the Battle Magic Chart. A wizard may also use other forms of magic if the player chooses. A wizard may substitute Illusionist or Elemental spells for any or all Battle Magic spells. A wizard may substitute one Necromantic spell and one Daemonic spell for equivalent level Battle Magic spells.</p>
 
           <h4 class="wiki-subsection-heading" id="wa-em-char-magic-items">Magic Items for Characters</h4>
-          <p>Characters can carry magical items paying the points indicated on the Magic Items Chart (p13), paid for from the character model points allowance:</p>
+          <p>Characters can carry magical items paying the points indicated in the <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a> section, paid for from the character model points allowance:</p>
           <ul class="wiki-rules-list">
             <li>Any character model may carry one magic weapon with up to one magic attribute for every 5 'levels' of the character.</li>
             <li>The army's wizards may be equipped with up to three scrolls each. The scrolls may contain up to two different spells of level 3 or lower.</li>
@@ -6880,7 +6944,7 @@
         <div class="wiki-section" id="wa-em-hosts">
           <h3>Hosts</h3>
           <div class="wiki-body">
-          <p>An Imperial wizard may magically bind a monstrous host prior to the game. The player may spend up to one quarter of the army's total points on a <em>host</em>. The host is assembled using the rules in the <em>Warhammer Bestiary</em>, p240/263.</p>
+          <p>An Imperial wizard may magically bind a monstrous host prior to the game. The player may spend up to one quarter of the army's total points on a <em>host</em>. The host is assembled using the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hosts</a> rules.</p>
           <table class="wiki-table wiki-table-compact no-last-highlight" style="width:280px;margin-bottom:12px">
             <colgroup><col><col style="width:80px"></colgroup>
             <thead><tr>
@@ -6902,8 +6966,8 @@
         <div class="wiki-section" id="wa-em-allies">
           <h3>Allies &amp; Mercenaries</h3>
           <div class="wiki-body">
-          <p><strong>Allies:</strong> The Empire can draw upon certain allies who will join forces against the common enemy. The player may spend up to a third of the army's total points on allies. The allies must be assembled using the <em>Allies Section</em> (p126), drawn from the following: Halflings, Old Worlders, Wood Elves.</p>
-          <p><strong>Mercenaries:</strong> The rich Burgermeisters of the Electoral Provinces have plenty of geld to spend on mercenaries. The player may spend up to half of the army's total points on mercenaries. Mercenaries must be assembled using the <em>Mercenary Section</em> (p150), chosen from the following: Dwarfs, Norse, Old Worlders, Ogres.</p>
+          <p><strong>Allies:</strong> The Empire can draw upon certain allies who will join forces against the common enemy. The player may spend up to a third of the army's total points on allies. The allies must be assembled using the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Allies</em></a> section, drawn from the following: Halflings, Old Worlders, Wood Elves.</p>
+          <p><strong>Mercenaries:</strong> The rich Burgermeisters of the Electoral Provinces have plenty of geld to spend on mercenaries. The player may spend up to half of the army's total points on mercenaries. Mercenaries must be assembled using the <a onclick="navigate('wa-mercenaries')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Mercenaries</em></a> section, chosen from the following: Dwarfs, Norse, Old Worlders, Ogres.</p>
           </div>
         </div><!-- /wiki-section: wa-em-allies -->
 
@@ -7060,7 +7124,7 @@
           <p>All spells are generated randomly from the appropriate Battle Magic chart. A Bretonnian wizard may also use other sorts of magic if the player chooses. A wizard may substitute Illusionist or Elemental spells for any or all Battle Magic spells. A wizard may substitute one Necromantic spell and/or one Daemonic spell for equivalent level Battle Magic spells.</p>
 
           <h4 class="wiki-subsection-heading" id="wa-br-char-magic-items">Magic Items for Characters</h4>
-          <p>Characters (wizards <em>and</em> heroes) can carry magical items paying the points indicated on the Magic Items Chart (p13), paid for from the character model points allowance:</p>
+          <p>Characters (wizards <em>and</em> heroes) can carry magical items paying the points indicated in the <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a> section, paid for from the character model points allowance:</p>
           <ul class="wiki-rules-list">
             <li>Any character model may carry a single magic weapon with no more than one magic attribute for every 5 'levels' of the character.</li>
             <li>Wizards may be equipped with up to three scrolls each. The scrolls may contain up to three different spells of level three or lower.</li>
@@ -7625,7 +7689,7 @@
         <div class="wiki-section" id="wa-br-hosts">
           <h3>Hosts</h3>
           <div class="wiki-body">
-          <p>Any wizard of the Grand Army of Bretonnia may bind a monstrous host (see <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Army Lists — Hosts</a>). The player may spend up to one quarter of the army's total points on a <em>host</em>. The host must be assembled subject to the guidelines given on p8 of the <em>Warhammer Armies</em> volume.</p>
+          <p>Any wizard of the Grand Army of Bretonnia may bind a monstrous host (see <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Army Lists — Hosts</a>). The player may spend up to one quarter of the army's total points on a <em>host</em>. The host must be assembled subject to the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hosts</a> guidelines.</p>
           <table class="wiki-table wiki-table-compact no-last-highlight" style="width:280px;margin-bottom:12px">
             <colgroup><col><col style="width:80px"></colgroup>
             <thead><tr>
@@ -7647,8 +7711,8 @@
         <div class="wiki-section" id="wa-br-allies">
           <h3>Allies &amp; Mercenaries</h3>
           <div class="wiki-body">
-          <p><strong>Allies:</strong> The Grand Army of Bretonnia may also invite allied forces to attend <em>Le Tourney</em>. The player may spend up to one third of the army's total points on allies, assembled from the <em>Allies Section</em> (pp126–149), using any of the following lists: Halflings, Old Worlders, Wood Elves.</p>
-          <p><strong>Mercenaries:</strong> Bretonnians are willing to pay extravagant rates for sturdy or particularly fierce mercenary infantry to compensate for their own wretched Rascals. The player may spend up to one third of the army's total points on mercenaries, assembled from any of the following lists (detailed in the <em>Mercenary Section</em>, pp150–162): Dwarfs, Half Orcs, Norse, Old Worlders, Ogres.</p>
+          <p><strong>Allies:</strong> The Grand Army of Bretonnia may also invite allied forces to attend <em>Le Tourney</em>. The player may spend up to one third of the army's total points on allies, assembled from the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Allies</em></a> section, using any of the following lists: Halflings, Old Worlders, Wood Elves.</p>
+          <p><strong>Mercenaries:</strong> Bretonnians are willing to pay extravagant rates for sturdy or particularly fierce mercenary infantry to compensate for their own wretched Rascals. The player may spend up to one third of the army's total points on mercenaries, assembled from any of the following lists (detailed in the <a onclick="navigate('wa-mercenaries')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Mercenaries</em></a> section): Dwarfs, Half Orcs, Norse, Old Worlders, Ogres.</p>
           </div>
         </div><!-- /wiki-section: wa-br-allies -->
 
@@ -7710,7 +7774,7 @@
         <div class="wiki-section" id="wa-ch-chaos-attributes">
           <h3>Chaotic Attributes</h3>
           <div class="wiki-body">
-          <p>Troops making up chaotic armies may manifest <em>chaotic attributes</em> subject to the provisions on p6. The charts below summarise the number of <em>dominant attributes</em> applying to units of Warriors of Chaos, Beastmen and Human Chaos Cultists, as well as <em>personal attributes</em> for character models.</p>
+          <p>Troops making up chaotic armies may manifest <em>chaotic attributes</em> subject to the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-chaos-attributes')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Chaos Attributes</a> provisions. The charts below summarise the number of <em>dominant attributes</em> applying to units of Warriors of Chaos, Beastmen and Human Chaos Cultists, as well as <em>personal attributes</em> for character models.</p>
           <table class="wiki-table wiki-table-compact no-last-highlight" style="width:100%;table-layout:fixed;margin-bottom:12px">
             <thead><tr><th style="text-align:left">Grade</th><th style="text-align:center">No. of attributes</th><th style="text-align:left">Grade</th><th style="text-align:center">No. of attributes</th></tr></thead>
             <tbody>
@@ -8380,8 +8444,8 @@
         <div class="wiki-section" id="wa-ch-allies">
           <h3>Allies &amp; Mercenaries</h3>
           <div class="wiki-body">
-          <p><strong>Allies:</strong> The player may spend up to a quarter of the army's total points on allies, assembled using the Allies Section (p126), chosen from the following: Chaos Allies, Skaven, Dark Elves, Undead, Orcs and Goblins. Players may spend up to one quarter on 'ordinary' allies, but may spend up to half on Chaos Allies.</p>
-          <p><strong>Mercenaries:</strong> The player may spend up to a quarter of the army's total points on mercenaries, assembled using the Mercenary Section (p150), chosen from the following: Giants, Hobgoblins, Half Orcs, Ogres, Orcs.</p>
+          <p><strong>Allies:</strong> The player may spend up to a quarter of the army's total points on allies, assembled using the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Allies</a> section, chosen from the following: Chaos Allies, Skaven, Dark Elves, Undead, Orcs and Goblins. Players may spend up to one quarter on 'ordinary' allies, but may spend up to half on Chaos Allies.</p>
+          <p><strong>Mercenaries:</strong> The player may spend up to a quarter of the army's total points on mercenaries, assembled using the <a onclick="navigate('wa-mercenaries')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Mercenaries</a> section, chosen from the following: Giants, Hobgoblins, Half Orcs, Ogres, Orcs.</p>
           </div>
         </div><!-- /wiki-section: wa-ch-allies -->
 
@@ -8440,7 +8504,7 @@
           <p>In the remote past, rats infesting the decaying ruins and other unwholesome places of the earth fed upon a mighty source of raw magic. This was <em>warpstone</em> — solid fragments of the very stuff of Chaos. Tainted by the unnatural mutating influence of the warpstone, the vile race of Skaven evolved and spread throughout the world. Warpstone remains a vital part of Skaven civilisation, fuelling Skaven magicians with magical energy and enabling their artificers to make weapons of awesome power.</p>
           <p>Skaven society is divided into various clans, each of which has its own weird armaments and foul methods of waging war. Clan Skryre, the Warlock Engineers, are masters of an insane blend of magic and science derived from warpstone. Clan Eshin, feared as assassins, murderers and haunters of the night, are active within and under the cities of man. Clan Moulder are powerful beastmasters, using warpstone to create foul breeds by genetic engineering. Clan Pestilens, the Plague Monks, are the disciples of disease and decay. The many Warlord Clans provide the bulk of Skaven warriors. The lowest of all are the Slaves whose lives are brutish, painful and mercifully short.</p>
           <p><strong>Alignment:</strong> Skaven armies are Chaotic.</p>
-          <p><strong>Chaotic Attributes:</strong> Skaven may manifest <em>chaotic attributes</em> subject to the provisions on p6. A unit of Skaven may have up to D6−3 dominant attributes. A Skaven character may have up to D6−4 personal attributes.</p>
+          <p><strong>Chaotic Attributes:</strong> Skaven may manifest <em>chaotic attributes</em> subject to the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-chaos-attributes')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Chaos Attributes</a> provisions. A unit of Skaven may have up to D6−3 dominant attributes. A Skaven character may have up to D6−4 personal attributes.</p>
           </div>
         </div><!-- /wiki-section: wa-sk-background -->
 
@@ -8911,7 +8975,7 @@
                 <div class="al-wm-footer-cell"><span class="al-wm-footer-label">Weapons:</span><span class="al-wm-footer-value">Warplock Jezzail &amp; Hand Weapon</span></div>
                 <div class="al-wm-footer-cell"><span class="al-wm-footer-label">Armour:</span><span class="al-wm-footer-value">None</span></div>
               </div>
-              <div class="al-flavour"><span style="font-size:11px;color:var(--text-faint)">FAQ, WD #127 —</span> The Clan Skryre Jezzail is a long, large calibre warplock musket crewed by two Skaven — one to fire, one to hold the musket rest. The crew move as a single unit and remain in base-to-base contact. If one crewman is slain, the survivor fights on independently but the Jezzail is lost; a lone survivor may join another Jezzail team as a reserve. The Jezzail has a 90° fire arc like a bow. It may move in the movement phase but may not fire that turn; it may however turn to face a target and still fire so long as it does not otherwise move. On a hit, the Jezzail penetrates ranks like a cannon — 2 hits per rank, up to 6 ranks deep. Each hit causes 1 Wound; saving throws are at −2 (a normal save of 4, 5 or 6 saves only on a 6). Casualties are removed as bow or crossbow casualties. Unlike cannon, Jezzails are not affected by heat build-up. The Jezzail fires warpstone shot which inflicts poisonous wounds; the extra points cost for this is included in the total. See <strong>WA</strong> p6 for two-man weapon team rules.</div>
+              <div class="al-flavour"><span style="font-size:11px;color:var(--text-faint)">FAQ, WD #127 —</span> The Clan Skryre Jezzail is a long, large calibre warplock musket crewed by two Skaven — one to fire, one to hold the musket rest. The crew move as a single unit and remain in base-to-base contact. If one crewman is slain, the survivor fights on independently but the Jezzail is lost; a lone survivor may join another Jezzail team as a reserve. The Jezzail has a 90° fire arc like a bow. It may move in the movement phase but may not fire that turn; it may however turn to face a target and still fire so long as it does not otherwise move. On a hit, the Jezzail penetrates ranks like a cannon — 2 hits per rank, up to 6 ranks deep. Each hit causes 1 Wound; saving throws are at −2 (a normal save of 4, 5 or 6 saves only on a 6). Casualties are removed as bow or crossbow casualties. Unlike cannon, Jezzails are not affected by heat build-up. The Jezzail fires warpstone shot which inflicts poisonous wounds; the extra points cost for this is included in the total. See the <a onclick="navigate('wa-army-selection')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Army Selection</a> section for two-man weapon team rules.</div>
             </div>
 
           </div><!-- /wiki-body -->
@@ -8927,7 +8991,7 @@
         <div class="wiki-section" id="wa-sk-hosts">
           <h3>Hosts</h3>
           <div class="wiki-body">
-          <p>A Skaven wizard may bind either a monstrous or chaotic host. The player may spend up to one quarter of the army's total points on a <em>host</em>. The host is assembled using the rules in the <em>Warhammer Bestiary</em> on p240/265.</p>
+          <p>A Skaven wizard may bind either a monstrous or chaotic host. The player may spend up to one quarter of the army's total points on a <em>host</em>. The host is assembled using the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-hosts')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hosts</a> rules.</p>
           <table class="wiki-table wiki-table-compact no-last-highlight" style="width:320px;margin-bottom:12px">
             <colgroup><col><col style="width:80px"></colgroup>
             <thead><tr>
@@ -8967,7 +9031,7 @@
         <div class="wiki-section" id="wa-sk-allies">
           <h3>Allies</h3>
           <div class="wiki-body">
-          <p>The player may spend up to a third of the army's total points on allies. The allies must be assembled using the <em>Allies Section</em> (p126), and chosen from the following: Chaos Allies, Orcs and Goblins, Dark Elves.</p>
+          <p>The player may spend up to a third of the army's total points on allies. The allies must be assembled using the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Allies</em></a> section, and chosen from the following: Chaos Allies, Orcs and Goblins, Dark Elves.</p>
           <p>Skaven do not employ mercenaries.</p>
           </div>
         </div><!-- /wiki-section: wa-sk-allies -->
@@ -9875,8 +9939,8 @@
         <div class="wiki-section" id="wa-og-allies">
           <h3>Allies &amp; Mercenaries</h3>
           <div class="wiki-body">
-          <p><strong>Allies:</strong> The player may spend up to a third of the army's total points on allies, assembled using the rules given on pp126–149. Chosen from: Chaos Allies, Skaven, Fimir.</p>
-          <p><strong>Mercenaries:</strong> The player may spend up to one third of the armies total points on mercenaries, assembled using the <em>Mercenaries Section</em> (pp150–162). Chosen from: Giants, Half Orcs, Hobgoblins, Ogres, Orcs.</p>
+          <p><strong>Allies:</strong> The player may spend up to a third of the army's total points on allies, assembled using the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Allies</a> rules. Chosen from: Chaos Allies, Skaven, Fimir.</p>
+          <p><strong>Mercenaries:</strong> The player may spend up to one third of the armies total points on mercenaries, assembled using the <a onclick="navigate('wa-mercenaries')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Mercenaries</em></a> section. Chosen from: Giants, Half Orcs, Hobgoblins, Ogres, Orcs.</p>
           </div>
         </div><!-- /wiki-section: wa-og-allies -->
 
@@ -11371,7 +11435,7 @@
         <div class="wiki-section" id="wa-sl-allies">
           <h3>Allies</h3>
           <div class="wiki-body">
-          <p>Amongst the Slann's many subject races are the Lizardmen, already included in its armies, and Pygmies. These tributary allies are not always trustworthy, but will serve loyally if kept away from their own homelands. The player may spend up to one third of the army's total points on a Pygmy allied contingent (p126). No mercenaries are available to the Slann.</p>
+          <p>Amongst the Slann's many subject races are the Lizardmen, already included in its armies, and Pygmies. These tributary allies are not always trustworthy, but will serve loyally if kept away from their own homelands. The player may spend up to one third of the army's total points on a Pygmy allied contingent (see <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Allies</a>). No mercenaries are available to the Slann.</p>
           </div>
         </div><!-- /wiki-section: wa-sl-allies -->
 
@@ -11513,7 +11577,7 @@
             </tbody>
           </table>
           <p><strong>Champions:</strong> Level 5, 10 and 15 Undead Heroes must be assigned to specific units as leaders (unless designated as Army Standard Bearer). They are referred to as <em>Undead Champions</em>. Undead Champions are part of the unit they are assigned to and cannot leave it (see <a onclick="navigate('ag-characters');setTimeout(()=>document.getElementById('champions')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Characters — Champions</a>). Level 20 and 25 Undead Heroes may be assigned to specified units as Undead Champions if the player wishes, or left as independent characters free to associate with any unit in the normal way (see <a onclick="navigate('ag-characters');setTimeout(()=>document.getElementById('independent-characters')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Characters — Independent Characters</a>).</p>
-          <p><strong>Magic weapons:</strong> Note that Undead Heroes of level 10 or greater <em>must</em> carry a magic weapon (see p120).</p>
+          <p><strong>Magic weapons:</strong> Note that Undead Heroes of level 10 or greater <em>must</em> carry a magic weapon (see <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a>).</p>
 
           <h4 class="wiki-subsection-heading" id="wa-un-char-wizards">Wizards — Necromancers, Liches &amp; Vampires</h4>
           <p>The army may contain up to 6 Necromancers/Liches/Vampires. These characters can act either as Champions leading specific units, or as independent characters free to associate with and lead any unit.</p>
@@ -12158,7 +12222,7 @@
           <p>The dark forces of Chaos are only too willing to lend their malefic powers in the service of those touched by the corruption of the Chaos Gods. A Chaos pack of this kind is an horrific thing, harbouring diverse and foul lackeys, and the hideously twisted forms of barely recognisable creatures.</p>
           <p><strong>Alignment:</strong> Chaotic.</p>
           <p><strong>Psychology:</strong> As with a Chaos Army, a Chaos Ally Contingent contains a wide variety of creatures, many of which have complex psychological reactions to other races and to each other. Players wishing to employ a Chaos Ally Contingent should consult the <a onclick="navigate('be-overview');setTimeout(()=>document.getElementById('be-intro')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Bestiary — Overview</a> for specific details.</p>
-          <p><strong>Chaotic Attributes:</strong> Troops making up the Chaos Ally Contingent may manifest <em>chaotic attributes</em> subject to the provisions on p6. The chart across summarises the number of attributes applying to units and individual characters of the various types in the contingent.</p>
+          <p><strong>Chaotic Attributes:</strong> Troops making up the Chaos Ally Contingent may manifest <em>chaotic attributes</em> subject to the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-chaos-attributes')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Chaos Attributes</a> provisions. The chart across summarises the number of attributes applying to units and individual characters of the various types in the contingent.</p>
           <table class="wiki-table wiki-table-compact no-last-highlight" style="width:100%;table-layout:fixed;margin-bottom:12px">
             <thead><tr><th style="text-align:left">Grade</th><th style="text-align:center">Number of Attributes</th></tr></thead>
             <tbody>
@@ -12798,7 +12862,7 @@
           <p>The evil Elves of Naggarond still carry the blood of their seafaring ancestors in their corrupt veins. Their black boats sail the chill oceans, breaking the waves of the northern seas, harrying shipping, raiding coastal settlements and aiding the forces of Evil and Chaos in return for the self evident rewards of slaughter and blood-letting.</p>
           <p><strong>Alignment:</strong> Dark Elves can be either Evil or Chaotic.</p>
           <p><strong>Psychology:</strong> Dark elves <em>hate</em> other Elf kindreds. Witch Elves are subject to <em>frenzy</em>.</p>
-          <p><strong>Chaos attributes:</strong> Dark Elf character models may manifest chaotic attributes subject to the provisions on p6. A Dark Elf character may have up to D6−3 personal attributes.</p>
+          <p><strong>Chaos attributes:</strong> Dark Elf character models may manifest chaotic attributes subject to the <a onclick="navigate('wa-special-rules');setTimeout(()=>document.getElementById('wa-sr-chaos-attributes')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Chaos Attributes</a> provisions. A Dark Elf character may have up to D6−3 personal attributes.</p>
           <p><strong>Champions, Standard Bearers and Musicians:</strong> If present, these are armed and armoured as the rest of the unit. Any unit may have a <em>champion</em> leader by paying the appropriate points value as listed under the <em>options</em> for the troop type. Any unit may have a standard bearer and/or a musician which will cost double the points of an ordinary trooper.</p>
           <p><strong>Contingent commander:</strong> the ally contingent must be led by a commander who may have a magic weapon with one attribute.</p>
           </div>
@@ -14729,7 +14793,7 @@
           <p><strong>Psychology:</strong> Almost all Undead are immune to psychological effects, whilst causing <em><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('fear')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">fear</a></em> in living creatures to a degree. Most Undead are affected by <em><a onclick="navigate('be-overview');setTimeout(()=>document.getElementById('be-instability')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">instability</a></em>.</p>
           <p><strong>Champions, standard bearers and musicians:</strong> Every unit must be led by an Undead champion chosen from the Undead Heroes listed under the troop type. Any unit may have a standard bearer and/or a musician which will cost double the points of an ordinary trooper. Champions, standard bearers and musicians are armed and armoured as the rest of the unit.</p>
           <p>Undead Heroes of level 10 have a magical weapon with one attribute of up to 25 points in value. The basic cost of the magic weapon is included in the cost of the model; the additional maximum cost of the weapon's magical ability is shown as <strong>+25</strong> after the cost of the model.</p>
-          <p><strong>Contingent commander:</strong> The force must be led by a Necromancer as contingent commander. The Necromancer has a magic weapon with between 1 and 4 attributes chosen from the attribute lists (p13). The basic cost of the weapon is included in the cost of the model; additional cost of attributes will vary depending on which attributes are chosen. Points for attributes must be added once attributes have been selected.</p>
+          <p><strong>Contingent commander:</strong> The force must be led by a Necromancer as contingent commander. The Necromancer has a magic weapon with between 1 and 4 attributes chosen from the <a onclick="navigate('wa-magic-items')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Magic Items</a> attribute lists. The basic cost of the weapon is included in the cost of the model; additional cost of attributes will vary depending on which attributes are chosen. Points for attributes must be added once attributes have been selected.</p>
           </div>
         </div><!-- /wa-ally-undead-background -->
 
@@ -16271,7 +16335,7 @@
                   </div>
                 </div>
               </div>
-              <div class="al-flavour">Norse Dwarf Berserkers are subject to the special rules for Berserkers on p96 of WFB. <span style="font-size:11px;color:var(--text-faint)">Errata, WD #108.</span></div>
+              <div class="al-flavour">Norse Dwarf Berserkers are subject to the <a onclick="navigate('special-rules-ref')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Berserk special rules</a>. <span style="font-size:11px;color:var(--text-faint)">Errata, WD #108.</span></div>
             </div>
             <div class="al-card" id="card-merc-no-050-norse-dwarfs">
               <div class="al-header">0–50 Norse Dwarfs</div>
@@ -17663,7 +17727,7 @@
         <li>It charges and contacts an enemy formation at an angle of more than 22½°.</li>
         <li>A unit ends pursuit of a routed enemy, or ceases pursuit because all routing enemies are slain.</li>
       </ol>
-      <p>An unformed unit spends its entire next movement phase stationary and reforming. Alternatively it may retire as explained on p133 of <strong>WFB</strong>. If charged, the unit must take the charge at the halt but can turn models to face the enemy. A unit which is pushed back in hand-to-hand combat whilst unformed is automatically routed. An unformed unit which is <em>not</em> pushed back in hand-to-hand combat is automatically reformed.</p>
+      <p>An unformed unit spends its entire next movement phase stationary and reforming. Alternatively it may retire as explained in the <a onclick="navigate('bg-turn-movement')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Movement rules</a>. If charged, the unit must take the charge at the halt but can turn models to face the enemy. A unit which is pushed back in hand-to-hand combat whilst unformed is automatically routed. An unformed unit which is <em>not</em> pushed back in hand-to-hand combat is automatically reformed.</p>
       <p><em>Character models</em> associated with a unit are subject to the unformed rules along with the rest of the unit — they have joined the ranks and suffer when the unit's formation is lost. Individual character models not associated with a unit are never affected by unformed rules.</p>
       </div>
     </div><!-- /wiki-section: reforming -->
@@ -17895,7 +17959,7 @@
           <li>If, during the enemy's turn, the unit is charged in the side or rear by an enemy force emerging from concealing cover (such as a wood) or any situation in which they, theoretically, could not have been seen at the beginning of the <em>movement phase</em>.</li>
           <li>If, during the enemy's turn, the unit is charged while it is crossing an obstacle — for example, if divided by a hedge. Entering a building counts as an obstacle. A unit half in and half out of a house must make this test if attacked. Note that a unit may make no <em>manoeuvres</em> while crossing an obstacle and therefore models may not turn to meet their attacker. Models unable to turn may take <em>free hacks</em> from the enemy.</li>
           <li>If a friendly unit within 12″ routs from hand-to-hand combat a <em>panic test</em> must be made immediately. Any measurement is made from the routing unit's original position before its rout move is taken. If the testing unit has four times as many models as the routing unit, the test is made with a <em>Cl</em> bonus of +1.</li>
-          <li>If a unit is engaged in close combat, and one or more <em>character models</em> leaves, the unit must take an immediate <em>panic test</em>. However, if a unit includes three or more character models, and the character with the lowest (or equal lowest) character level leaves, there is no need to test. If the unit routs it does not include the model which has already left — although a further <em>panic test</em> may be required for proximity of routers. Note that a character may not leave unless already placed in a non-fighting rank during the first round (see p93).</li>
+          <li>If a unit is engaged in close combat, and one or more <em>character models</em> leaves, the unit must take an immediate <em>panic test</em>. However, if a unit includes three or more character models, and the character with the lowest (or equal lowest) character level leaves, there is no need to test. If the unit routs it does not include the model which has already left — although a further <em>panic test</em> may be required for proximity of routers. Note that a character may not leave unless already placed in a non-fighting rank during the first round.</li>
           <li>This test must be made at any time if the GM thinks it appropriate. This is the catch-all rule that enables the GM to apply his common sense to a situation, and must be used with discretion.</li>
         </ol>
         <p>A unit failing a <em>panic test</em> routs immediately. If in hand-to-hand combat it will rout away from its enemy and may be pursued as if it had broken as a result of combat. If swept away by another routing unit it will follow the path of that unit as directed by the GM. The GM has the final say over rout direction.</p>
@@ -31490,6 +31554,7 @@ const sectionMeta = {
   home:                   { label: 'Overview',              icon: '📖', desc: 'Wiki home & quick links' },
   'bg-quick-reference':   { label: 'Quick Reference',        icon: '📋', desc: 'Rules Summary & Reference — all phases A–L', key: 'bg-quick-reference', parent: null },
   'glossary':             { label: 'Glossary',               icon: '📖', desc: 'Characteristics, game terms and psychology quick-reference', key: 'glossary', parent: null },
+  'special-rules-ref':    { label: 'Special Rules',           icon: '📜', desc: 'Full reference: psychology, combat, troop types, racial rules, mounts, weapons', key: 'special-rules-ref', parent: null },
   'basic-game':           { label: 'Basic Game',            icon: '📖', desc: 'Core rules for play', key: 'basic-game', parent: null },
   'bg-characteristics':   { label: 'Characteristics',       icon: '📊', desc: 'Unit statistics explained', key: 'bg-characteristics', parent: 'basic-game' },
   'bg-units-formations':  { label: 'Units & Formations',    icon: '⚔', desc: 'Leaders, formations & unit organisation', key: 'bg-units-formations', parent: 'basic-game' },
@@ -31610,7 +31675,7 @@ function renderNav() {
     { id: 'special-rules-ref', label: '📜 Special Rules', indent: 28 },
   ].map(item => {
     if (item.id === 'special-rules-ref') {
-      return `<a class="nav-item" href="special-rules.html" style="padding-left:${item.indent}px">${item.label}</a>`;
+      return `<a class="nav-item" data-page="special-rules-ref" onclick="navigate('special-rules-ref')" style="padding-left:${item.indent}px">${item.label}</a>`;
     }
     return `<a class="nav-item" data-page="${item.id}" onclick="navigate('${item.id}')" style="padding-left:${item.indent}px">${item.label}</a>`;
   }).join('');
@@ -31723,6 +31788,7 @@ function navigate(pageId, opts={}) {
   if (el) el.classList.add('active');
 
   currentPage = pageId;
+  if (!opts.fromHash) history.pushState({ pageId }, '', '#' + pageId);
   updateBreadcrumb(pageId, opts.title);
   renderPage(pageId, opts);
   const content = document.getElementById('content');
@@ -31763,11 +31829,165 @@ function updateBreadcrumb(pageId, title) {
 }
 
 // ── RENDER PAGES ──────────────────────────────────
+let srBuilt = false;
+function renderSpecialRulesRef() {
+  if (srBuilt) return;
+  srBuilt = true;
+
+  var SR_SECTIONS = [
+    { id: 'psychology',    label: 'Psychology',               category: 'Psychology',               type: 'rules'   },
+    { id: 'combat',        label: 'Combat Rules',             category: 'Combat',                   type: 'rules'   },
+    { id: 'deployment',    label: 'Deployment',               category: 'Deployment',               type: 'rules'   },
+    { id: 'special-troop', label: 'Special Troop Types',      category: 'Special Troop',            type: 'rules'   },
+    { id: 'special-unit',  label: 'Special Unit Rules',       category: 'Special Rule',             type: 'rules'   },
+    { id: 'racial',        label: 'Racial Rules',             category: 'Racial Rules',             type: 'racial'  },
+    { id: 'giant-races',   label: 'Bestiary — Giant Races',   category: 'Bestiary — Giant Races',   type: 'rules'   },
+    { id: 'unit-specific', label: 'Bestiary — Unit Specific', category: 'Bestiary — Unit Specific', type: 'rules'   },
+    { id: 'mounts',        label: 'Mount Rules',              category: 'Mount Rule',               type: 'mounts'  },
+    { id: 'weapons',       label: 'Weapon Rules',             category: null,                       type: 'weapons' },
+  ];
+
+  function srEl(tag, cls) { var e = document.createElement(tag); if (cls) e.className = cls; return e; }
+  function srEsc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function buildRulesSection(entries) {
+    var frag = document.createDocumentFragment();
+    entries.forEach(function(pair) {
+      var name = pair[0], rule = pair[1];
+      var div = srEl('div', 'sr-rule-entry');
+      var h4 = srEl('div', 'sr-rule-name');
+      h4.id = 'rule-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      h4.textContent = name;
+      div.appendChild(h4);
+      if (rule.short) { var s = srEl('p', 'sr-rule-short'); s.textContent = rule.short; div.appendChild(s); }
+      if (rule.text)  { var t = srEl('p', 'sr-rule-text');  t.textContent = rule.text;  div.appendChild(t); }
+      frag.appendChild(div);
+    });
+    return frag;
+  }
+
+  function buildRacialSection(entries) {
+    var frag = document.createDocumentFragment();
+    entries.forEach(function(pair) {
+      var name = pair[0], rule = pair[1];
+      var div = srEl('div', 'sr-racial-entry');
+      var h4 = srEl('div', 'sr-racial-name');
+      h4.id = 'rule-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      h4.textContent = name;
+      div.appendChild(h4);
+      if (rule.short) { var s = srEl('p', 'sr-racial-short'); s.textContent = rule.short; div.appendChild(s); }
+      if (rule.text)  { var t = srEl('p', 'sr-racial-text');  t.textContent = rule.text;  div.appendChild(t); }
+      frag.appendChild(div);
+    });
+    return frag;
+  }
+
+  function buildMountsSection(entries) {
+    var table = srEl('table', 'sr-mount-table');
+    table.innerHTML = '<thead><tr><th>Mount</th><th>Rules</th></tr></thead>';
+    var tbody = srEl('tbody');
+    entries.forEach(function(pair) {
+      var name = pair[0], rule = pair[1];
+      var tr = srEl('tr');
+      var td1 = srEl('td'); td1.id = 'rule-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      td1.textContent = name.replace(/ Rules$/, '').replace(/ Magical Attacks$/, '');
+      var td2 = srEl('td'); td2.textContent = rule.text || rule.short || '';
+      tr.appendChild(td1); tr.appendChild(td2); tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    return table;
+  }
+
+  function buildWeaponsSection() {
+    var frag = document.createDocumentFragment();
+    var missileNames = ['Repeating Crossbow','Crossbow','Long Bow','Short Bow','Bow','Sling','Pistol','Blunderbuss','Throwing Weapons'];
+    var missiles = [], hth = [];
+    (typeof WFB3_WEAPON_RULES !== 'undefined' ? WFB3_WEAPON_RULES : []).forEach(function(w) {
+      (missileNames.indexOf(w.name) !== -1 ? missiles : hth).push(w);
+    });
+
+    function weaponTable(rows, isMissile) {
+      var wrap = srEl('div', 'sr-weapon-subsection');
+      var label = srEl('div', 'sr-weapon-label');
+      label.textContent = isMissile ? 'Missile Weapons' : 'Hand-to-Hand Weapons';
+      wrap.appendChild(label);
+      var t = srEl('table', 'sr-weapon-table');
+      t.innerHTML = isMissile
+        ? '<thead><tr><th>Weapon</th><th class="centre">Range</th><th class="centre">Str</th><th>Notes</th></tr></thead>'
+        : '<thead><tr><th>Weapon</th><th>Rules</th></tr></thead>';
+      var tb = srEl('tbody');
+      rows.forEach(function(w) {
+        var tr = srEl('tr');
+        if (isMissile) {
+          var rangeM = w.rule.match(/Range\s+([\d\u2033\u201d]+)/);
+          var strM   = w.rule.match(/Str(?:ength)?\s+(\d)/);
+          var notes  = w.rule.replace(/Range\s+[\d\u2033\u201d]+[\u2033\u201d]?,?\s*/,'').replace(/Str(?:ength)?\s+\d\.?\s*/,'').replace(/^[.,;]\s*/,'').trim();
+          tr.innerHTML = '<td class="weapon-name">' + srEsc(w.name) + '</td>'
+            + '<td class="centre">' + srEsc(rangeM ? rangeM[1] + '″' : '—') + '</td>'
+            + '<td class="centre">' + srEsc(strM   ? strM[1]              : '—') + '</td>'
+            + '<td>' + srEsc(notes || '—') + '</td>';
+        } else {
+          tr.innerHTML = '<td class="weapon-name">' + srEsc(w.name) + '</td><td>' + srEsc(w.rule) + '</td>';
+        }
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); wrap.appendChild(t); return wrap;
+    }
+    frag.appendChild(weaponTable(missiles, true));
+    frag.appendChild(weaponTable(hth, false));
+    return frag;
+  }
+
+  var inner = document.getElementById('sr-inner');
+  var toc   = document.getElementById('sr-page-toc');
+  if (!inner || typeof WFB3_RULES === 'undefined') return;
+
+  SR_SECTIONS.forEach(function(sec) {
+    var entries = [];
+    if (sec.type !== 'weapons') {
+      Object.keys(WFB3_RULES).forEach(function(name) {
+        if (WFB3_RULES[name].category === sec.category) entries.push([name, WFB3_RULES[name]]);
+      });
+      if (!entries.length) return;
+    }
+    var section = srEl('section', 'sr-section');
+    section.id = 'sec-' + sec.id;
+    var heading = srEl('div', 'sr-section-heading');
+    heading.textContent = sec.label;
+    section.appendChild(heading);
+    if      (sec.type === 'rules')   section.appendChild(buildRulesSection(entries));
+    else if (sec.type === 'racial')  section.appendChild(buildRacialSection(entries));
+    else if (sec.type === 'mounts')  section.appendChild(buildMountsSection(entries));
+    else if (sec.type === 'weapons') section.appendChild(buildWeaponsSection());
+    inner.appendChild(section);
+
+    var a = srEl('a'); a.dataset.target = 'sec-' + sec.id; a.textContent = sec.label;
+    a.onclick = function(e) {
+      e.preventDefault();
+      var el = document.getElementById('sec-' + sec.id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    toc.appendChild(a);
+  });
+
+  // Scroll spy on the content pane
+  var contentDiv = document.getElementById('content');
+  var allSections = inner.querySelectorAll('.sr-section');
+  var allLinks    = toc.querySelectorAll('a');
+  contentDiv.addEventListener('scroll', function() {
+    var scrollY = contentDiv.scrollTop + 100;
+    var current = '';
+    allSections.forEach(function(s) { if (s.offsetTop <= scrollY) current = s.id; });
+    allLinks.forEach(function(a) { a.classList.toggle('active', a.dataset.target === current); });
+  }, { passive: true });
+}
+
 function renderPage(pageId) {
   const rulesPages = ['basic-game','bg-quick-reference','glossary','bg-characteristics','bg-units-formations','bg-the-turn','bg-turn-movement','bg-turn-shooting','bg-turn-hand-to-hand','bg-turn-reserves','bg-turn-magic','bg-turn-rallying','bg-resolving-hits','bg-psychology','bg-leaders','bg-standards-musicians','advanced-game','ag-points-values','ag-weapons','ag-missile-weapons','ag-characters','ag-army-standards','ag-baggage','ag-beasts-of-war','ag-buildings','ag-fire','ag-scenery','ag-deployment','ag-winners-losers','magic','bestiary','ag-special-troop-types','ag-engines-of-war','ag-engine-types','ag-chariots','ag-aerial','ag-special-formations','ag-advanced-combat','warhammer-armies','wa-special-rules','wa-army-selection','wa-magic','wa-magic-items','wa-war-machines','wa-bestiary','wa-points-formula','wa-army-lists','wa-dark-elves','wa-wood-elves','wa-high-elves','wa-empire','wa-bretonnia','wa-chaos','wa-skaven','wa-orcs-goblins','wa-dwarfs','wa-slann','wa-undead','wa-mercenaries-allies','wa-allies','wa-ally-chaos','wa-ally-dwarf','wa-ally-dark-elf','wa-ally-high-elf','wa-ally-wood-elf','wa-ally-fimir','wa-ally-old-worlder','wa-ally-orc-goblin','wa-ally-pygmy','wa-ally-skaven','wa-ally-undead','wa-ally-halfling','wa-ally-zoat','wa-mercenaries','wa-merc-dwarf','wa-merc-giant-ogre','wa-merc-half-orc','wa-merc-hobgoblin','wa-merc-nippon','wa-merc-orc','wa-merc-norse','wa-merc-old-worlder','wa-norse','be-overview','be-chaos-attributes','be-intelligent-races','be-ir-men','be-ir-dwarfs','be-ir-elves','be-ir-orcs-goblins','be-giant-races','be-creatures','be-creatures-of-chaos','be-undead','be-ethereal','be-demons','be-elementals','ma-overview','ma-battle-magic','ma-demonic','ma-elemental','ma-illusionist','ma-necromantic','ma-magic-items'];
   if (rulesPages.includes(pageId)) { renderRulesSection(pageId); return; }
   switch(pageId) {
     case 'home': break;
+    case 'special-rules-ref': renderSpecialRulesRef(); break;
   }
 }
 
@@ -32230,6 +32450,7 @@ function renderRules() { renderRulesSection('basic-game'); }
 
 // ── SEARCH ────────────────────────────────────────
 let searchIndex = [];
+let searchSelectedIdx = -1;
 
 function buildSearchIndex() {
   searchIndex = [];
@@ -32239,18 +32460,11 @@ function buildSearchIndex() {
     items.forEach((item, i) => {
       const title = item.name || item.title || null;
       if (!title) return;
-      const searchText = [item.name, item.description, item.subtitle, item.special, item.notes].filter(Boolean).join(' ').toLowerCase();
-      searchIndex.push({
-        title,
-        section: meta?.label || key,
-        pageId: key,
-        sectionId: null,
-        idx: i,
-        searchText
-      });
+      const searchText = [item.name, item.description, item.subtitle, item.special, item.notes]
+        .filter(Boolean).join(' ').toLowerCase();
+      searchIndex.push({ title, section: meta?.label || key, pageId: key, sectionId: null, idx: i, searchText });
     });
   });
-
   // Index all static wiki-section elements across all pages
   document.querySelectorAll('.page[id]').forEach(pageEl => {
     const pageId = pageEl.id.replace(/^page-/, '');
@@ -32260,70 +32474,120 @@ function buildSearchIndex() {
       const heading = sec.querySelector('h3, h4');
       const title = heading ? heading.textContent.trim() : null;
       if (!title) return;
-      // Gather text from the section for full-text search (capped for performance)
-      const bodyText = sec.textContent.replace(/\s+/g, ' ').trim().toLowerCase().slice(0, 2000);
-      searchIndex.push({
-        title,
-        section: pageLabel,
-        pageId,
-        sectionId: sec.id,
-        idx: null,
-        searchText: bodyText
-      });
+      const bodyText = sec.textContent.replace(/\s+/g, ' ').trim().toLowerCase().slice(0, 4000);
+      searchIndex.push({ title, section: pageLabel, pageId, sectionId: sec.id, idx: null, searchText: bodyText });
     });
   });
+}
+
+function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function scoreEntry(entry, words) {
+  // AND search: every word must appear somewhere in the entry
+  const titleLo = entry.title ? entry.title.toLowerCase() : '';
+  const bodyLo  = entry.searchText || '';
+  let score = 0, firstPos = -1;
+  for (const w of words) {
+    const wbRe       = new RegExp('\\b' + escRe(w));
+    const inTitleSub  = titleLo.includes(w);
+    const inTitleWord = wbRe.test(titleLo);
+    const inBodySub   = bodyLo.includes(w);
+    const inBodyWord  = wbRe.test(bodyLo);
+    if (!inTitleSub && !inBodySub) return { score: 0, pos: -1 }; // AND: all words must match
+    score += inTitleWord ? 4 : inTitleSub ? 2 : 0;
+    score += inBodyWord  ? 2 : inBodySub  ? 1 : 0;
+    if (firstPos < 0) { const p = bodyLo.indexOf(w); if (p >= 0) firstPos = p; }
+  }
+  return { score, pos: firstPos };
+}
+
+function makeSnippet(rawText, words) {
+  if (!rawText) return '';
+  const lo = rawText.toLowerCase();
+  let best = rawText.length;
+  for (const w of words) { const p = lo.indexOf(w); if (p >= 0 && p < best) best = p; }
+  const start = Math.max(0, best - 35);
+  const end   = Math.min(rawText.length, best + 90);
+  let snip = (start > 0 ? '…' : '') + rawText.slice(start, end).trim() + (end < rawText.length ? '…' : '');
+  for (const w of words) {
+    snip = snip.replace(new RegExp('(' + escRe(w) + ')', 'gi'), '<mark>$1</mark>');
+  }
+  return snip;
+}
+
+function renderSearchResults(hits) {
+  const res = document.getElementById('search-results');
+  searchSelectedIdx = -1;
+  if (!hits.length) { res.style.display = 'none'; return; }
+  res._hits = hits;
+  res.style.display = 'block';
+  res.innerHTML = hits.map((h, i) =>
+    `<div class="sr-item" data-hit="${i}">` +
+    `<div class="sr-title">${h.title}</div>` +
+    `<div class="sr-section">${h.section}</div>` +
+    (h.snippet ? `<div class="sr-snippet">${h.snippet}</div>` : '') +
+    `</div>`
+  ).join('');
 }
 
 document.getElementById('search-input').addEventListener('input', function() {
   const q = this.value.trim().toLowerCase();
   const res = document.getElementById('search-results');
-  if (!q) { res.style.display = 'none'; return; }
-
-  // Score: title match = 2, searchText match = 1, no match = 0
+  if (!q) { res.style.display = 'none'; searchSelectedIdx = -1; return; }
+  const words = q.split(/\s+/).filter(Boolean);
   const scored = searchIndex
     .map(e => {
-      const titleMatch = e.title && e.title.toLowerCase().includes(q) ? 2 : 0;
-      const textMatch = e.searchText && e.searchText.includes(q) ? 1 : 0;
-      const score = titleMatch + textMatch;
-      return { ...e, score };
+      const { score } = scoreEntry(e, words);
+      if (!score) return null;
+      return { ...e, score, snippet: makeSnippet(e.searchText, words) };
     })
-    .filter(e => e.score > 0)
+    .filter(Boolean)
     .sort((a, b) => b.score - a.score)
     .slice(0, 12);
+  renderSearchResults(scored);
+});
 
-  if (!scored.length) { res.style.display = 'none'; return; }
-  res._hits = scored;
-  res.style.display = 'block';
-  res.innerHTML = scored.map((h, i) =>
-    `<div class="sr-item" data-hit="${i}">` +
-    `<div class="sr-title">${h.title}</div>` +
-    `<div class="sr-section">${h.section}</div>` +
-    `</div>`
-  ).join('');
+document.getElementById('search-input').addEventListener('keydown', function(e) {
+  const res = document.getElementById('search-results');
+  const items = res.querySelectorAll('.sr-item');
+  if (e.key === 'Escape') { res.style.display = 'none'; this.blur(); return; }
+  if (!items.length) return;
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    searchSelectedIdx = Math.min(searchSelectedIdx + 1, items.length - 1);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    searchSelectedIdx = Math.max(searchSelectedIdx - 1, 0);
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const idx = searchSelectedIdx >= 0 ? searchSelectedIdx : 0;
+    const h = res._hits && res._hits[idx];
+    if (h) handleSearchClick(h.pageId, h.idx, h.sectionId);
+    return;
+  } else { return; }
+  items.forEach((el, i) => el.classList.toggle('selected', i === searchSelectedIdx));
+  items[searchSelectedIdx]?.scrollIntoView({ block: 'nearest' });
 });
 
 document.getElementById('search-results').addEventListener('click', function(e) {
   const item = e.target.closest('.sr-item');
   if (!item) return;
-  const i = parseInt(item.dataset.hit, 10);
-  const h = this._hits && this._hits[i];
-  if (!h) return;
-  handleSearchClick(h.pageId, h.idx, h.sectionId);
+  const h = this._hits && this._hits[parseInt(item.dataset.hit, 10)];
+  if (h) handleSearchClick(h.pageId, h.idx, h.sectionId);
 });
 
-function handleSearchClick(pageId, idx, sectionId) {
-  document.getElementById('search-results').style.display = 'none';
-  document.getElementById('search-input').value = '';
-  if (sectionId) {
-    navigate(pageId);
-    setTimeout(() => {
-      const el = document.getElementById(sectionId);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 150);
-  } else {
-    navigate(pageId);
+// Ctrl+K or / to jump to search
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    e.preventDefault();
+    const inp = document.getElementById('search-input');
+    inp.focus(); inp.select();
+  } else if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+    e.preventDefault();
+    const inp = document.getElementById('search-input');
+    inp.focus(); inp.select();
   }
-}
+});
 
 document.addEventListener('click', e => {
   if (!e.target.closest('.search-wrap')) {
@@ -32551,7 +32815,17 @@ Object.keys(embeddedData).forEach(k => { store[k] = embeddedData[k]; });
 loadFromStorage();
 renderNav();
 buildSearchIndex();
-navigate('home');
+
+// Hash routing — restore page from URL on load, keep URL in sync
+(function() {
+  const hash = location.hash.slice(1);
+  navigate(hash && document.getElementById('page-' + hash) ? hash : 'home', { fromHash: true });
+})();
+
+window.addEventListener('popstate', function(e) {
+  const pageId = (e.state && e.state.pageId) || location.hash.slice(1) || 'home';
+  navigate(pageId, { fromHash: true });
+});
 
 // ── SPELL HEADING SPLITTER ─────────────────────────
 // Splits "B1.6 Fire Ball" into <span class="spell-code">B1.6</span><span class="spell-name">Fire Ball</span>
@@ -33058,7 +33332,7 @@ document.querySelectorAll('h4.spell-heading').forEach(h4 => {
 
         <div class="wiki-section" id="wd107-norse-allies-mercs">
           <h3>Allies &amp; Mercenaries</h3><div class="wiki-body">
-          <p><strong>Allies:</strong> Few people will ally with the Norse owing to their rowdy and untrustworthy nature. This is reflected in the comparatively small size of the Norse allied contingents. No more than a quarter of the army&#39;s points value may be spent on allies. The allies must be assembled from the Allies Section of <em>Warhammer Armies</em>, using any of the following lists: <strong>Old World Allies</strong>, <strong>Fimir</strong>.</p>
+          <p><strong>Allies:</strong> Few people will ally with the Norse owing to their rowdy and untrustworthy nature. This is reflected in the comparatively small size of the Norse allied contingents. No more than a quarter of the army&#39;s points value may be spent on allies. The allies must be assembled from the <a onclick="navigate('wa-allies')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)"><em>Allies</em></a> section of <em>Warhammer Armies</em>, using any of the following lists: <strong>Old World Allies</strong>, <strong>Fimir</strong>.</p>
           <p><strong>Mercenaries:</strong> The majority of mercenaries in a Norse army are often other Norse! Norse Dwarfs and Norsemen from one area or Kingdom will often hire out to another Kingdom or roving adventurer, depending on where the best bloodletting is at the time. Other interesting mercenaries include Giants, as many of these large and dim-witted creatures live in the northlands. The player may spend up to a quarter of the army&#39;s total points on mercenaries, assembled from any of the following lists: <strong>Old World Mercenaries</strong>, <strong>Norse</strong>, <strong>Ogres</strong>, <strong>Giants</strong>.</p>
           </div></div><!-- /wd107-norse-allies-mercs -->
 

@@ -305,6 +305,7 @@ body { background: #111111; min-height: 100vh; display: flex; flex-direction: co
     <button class="card-type-tab" onclick="setCardType('character')">Character</button>
   </div>
   <button class="topbar-btn" onclick="window.print()">&#128424; Print Card</button>
+  <button class="topbar-btn" onclick="exportCardToFile()" style="background:#2a3a5a;margin-left:4px">&#8595; Export Card</button>
   <button class="topbar-btn" onclick="addToArmyList()" style="background:#3d6b50;margin-left:4px" id="add-army-btn">+ Army List</button>
   <a href="army-list.html" class="topbar-btn" style="background:#2a4a38;text-decoration:none;margin-left:2px">&#9776; View List</a>
 </div>
@@ -3710,22 +3711,142 @@ function scalePreview() {
 
 new ResizeObserver(scalePreview).observe(document.getElementById("preview-panel") || document.body);
 
+/* ═══ CUSTOM UNIT LIBRARY ═══ */
+const CUSTOM_LIBRARY_KEY = 'wfb3-custom-units';
+
+function parsePtsValue(str) {
+  if (str == null || str === '') return undefined;
+  const s = String(str).replace('½', '.5').replace('¼', '.25').replace('¾', '.75');
+  const n = parseFloat(s.replace(/[^\d.]/g, ''));
+  return isNaN(n) ? undefined : n;
+}
+
+function buildUnitObject() {
+  const id = 'custom-' + Date.now();
+  const name = ((document.getElementById('f-name') || {}).value || 'Custom Unit').trim();
+  const ptsRaw = gv('f-pts-display');
+
+  // Capture art from preview (any data URL img)
+  let art = '';
+  document.querySelectorAll('#card-preview img').forEach(function(img) {
+    if (!art && img.src && img.src.startsWith('data:')) art = img.src;
+  });
+
+  // Map optionGroups -> WFB3_UNITS-compatible options format
+  const options = optionGroups
+    .filter(function(g) { return g.options && g.options.length > 0; })
+    .map(function(g) {
+      return {
+        heading: g.subheading || 'Options',
+        items: g.options.map(function(o) { return { name: o.name, cost: o.cost }; })
+      };
+    });
+
+  const def = {
+    id: id,
+    name: name,
+    isCustom: true,
+    type: cardType,
+    art: art || undefined,
+    profiles: profileRows.map(function(r) { return { label: r.label, stats: r.stats.slice() }; }),
+    options: options.length ? options : undefined
+  };
+
+  const flavour = gv('f-flavour');
+  const profileNote = gv('f-profile-note');
+  if (flavour) def.flavour = flavour;
+  if (profileNote) def.profileNote = profileNote;
+
+  if (cardType === 'standard') {
+    const range = gv('f-range'); if (range) def.range = range;
+    const models = gv('f-models'); if (models) def.models = models;
+    const weapons = gv('f-weapons'); if (weapons) def.weapons = weapons;
+    const armour = gv('f-armour'); if (armour) def.armour = armour;
+    const mountName = getMountName(); if (mountName) def.mount = mountName;
+    def.ptsPerModel = parsePtsValue(ptsRaw);
+
+  } else if (cardType === 'warmachine') {
+    const models = gv('f-models'); if (models) def.models = models;
+    const weapons = gv('f-weapons-crew'); if (weapons) def.weapons = weapons;
+    const armour = gv('f-armour-crew'); if (armour) def.armour = armour;
+    def.ptsFixed = parsePtsValue(ptsRaw);
+    if (machineStats && (machineStats.name || machineStats.statHeaders)) {
+      def.machineStats = Object.assign({}, machineStats);
+    }
+
+  } else if (cardType === 'waraltar') {
+    const models = gv('f-models'); if (models) def.models = models;
+    var wpnElA = document.getElementById('f-altar-wpn');
+    if (wpnElA && wpnElA.selectedIndex >= 0) { var wtA = wpnElA.options[wpnElA.selectedIndex].text.split(' (')[0]; if (wtA) def.weapons = wtA; }
+    var armElA = document.getElementById('f-altar-armsel');
+    if (armElA && armElA.selectedIndex >= 0) { var atA = armElA.options[armElA.selectedIndex].text.split(' (')[0]; if (atA) def.armour = atA; }
+    def.ptsFixed = parsePtsValue(ptsRaw);
+
+  } else if (cardType === 'handler') {
+    const models = gv('f-beasts-note'); if (models) def.models = models;
+    const weapons = gv('f-weapons'); if (weapons) def.weapons = weapons;
+    const armour = gv('f-armour'); if (armour) def.armour = armour;
+    def.ptsPerModel = parsePtsValue(ptsRaw);
+    def.beastRows = beastRows.map(function(r) { return Object.assign({}, r, { stats: r.stats.slice() }); });
+
+  } else if (cardType === 'chariot') {
+    const models = gv('f-models'); if (models) def.models = models;
+    def.ptsFixed = parsePtsValue(ptsRaw);
+    def.chariotState = Object.assign({}, chariotState);
+    var wpnElC = document.getElementById('f-chariot-weapons');
+    if (wpnElC && wpnElC.selectedIndex >= 0) { var wtC = wpnElC.options[wpnElC.selectedIndex].text; if (wtC) def.weapons = wtC; }
+    var armElC = document.getElementById('f-chariot-armour');
+    if (armElC && armElC.selectedIndex >= 0) { var atC = armElC.options[armElC.selectedIndex].text; if (atC) def.armour = atC; }
+
+  } else if (cardType === 'character') {
+    var typeEl  = document.getElementById('ch-type');
+    var levelEl = document.getElementById('ch-level');
+    var wpnElH  = document.getElementById('ch-weapons');
+    var armElH  = document.getElementById('ch-armour');
+    if (typeEl  && typeEl.value)  def.charType = typeEl.value;
+    if (levelEl && levelEl.value) def.level    = levelEl.value;
+    if (wpnElH  && wpnElH.selectedIndex >= 0) { var wtH = wpnElH.options[wpnElH.selectedIndex].text; if (wtH) def.weapons = wtH; }
+    if (armElH  && armElH.selectedIndex >= 0) { var atH = armElH.options[armElH.selectedIndex].text; if (atH) def.armour = atH; }
+    const mountName2 = getMountName(); if (mountName2) def.mount = mountName2;
+    def.ptsFixed = parsePtsValue(ptsRaw);
+  }
+
+  return def;
+}
+
+function saveUnitToLibrary(def) {
+  var library = [];
+  try { library = JSON.parse(localStorage.getItem(CUSTOM_LIBRARY_KEY) || '[]'); } catch(e) {}
+  library = library.filter(function(u) { return u.id !== def.id; });
+  library.push(def);
+  localStorage.setItem(CUSTOM_LIBRARY_KEY, JSON.stringify(library));
+}
+
+function exportCardToFile() {
+  var def = buildUnitObject();
+  var json = JSON.stringify(def, null, 2);
+  var blob = new Blob([json], { type: 'application/json' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = (def.name || 'custom-unit').replace(/[^a-z0-9_-]/gi, '-').toLowerCase() + '.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 /* ═══ ARMY LIST ═══ */
 function addToArmyList() {
-  const card = document.getElementById("card-preview");
-  if (!card || !card.innerHTML.trim()) return;
-  const label = (document.getElementById("f-name")?.value || "Unnamed Unit").trim();
-  // Strip file inputs so stored HTML is clean
-  const clone = card.cloneNode(true);
-  clone.removeAttribute("id");
-  clone.querySelectorAll("input[type='file']").forEach(i => i.remove());
-  const html = clone.outerHTML;
-  const list = JSON.parse(localStorage.getItem("wfb3-army-list") || "[]");
-  list.push({ id: Date.now(), label, html });
+  var name = ((document.getElementById("f-name") || {}).value || "Unnamed Unit").trim();
+  var def = buildUnitObject();
+  saveUnitToLibrary(def);
+  var list = JSON.parse(localStorage.getItem("wfb3-army-list") || "[]");
+  list.push({ id: Date.now(), label: name, sourceId: def.id });
   localStorage.setItem("wfb3-army-list", JSON.stringify(list));
   const toast = document.getElementById("army-toast");
   if (toast) {
-    toast.textContent = "\u2713 \u201c" + label + "\u201d added \u2014 " + list.length + " card" + (list.length !== 1 ? "s" : "") + " in list";
+    toast.textContent = "✓ “" + name + "” added — " + list.length + " card" + (list.length !== 1 ? "s" : "") + " in list";
     toast.style.display = "block";
     toast.style.opacity = "1";
     clearTimeout(toast._t);
