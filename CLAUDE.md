@@ -113,7 +113,7 @@ This codebase is the structural and visual foundation for a family of related ga
 - Points system — RT points work differently; calculator in unit-card.html will need reworking
 
 **Known sister projects:**
-- `D:/Tabletop games/Warhammer 40000 Rogue Trader/Wiki Project/` — RT (1987) wiki, spun off May 2026
+- `D:\Tabletop games\Warhammer 40,000\1st-8th Edition - Warhammer 40K Archives\40K Editions Through the Ages (1st - 8th Edition)\1st Edition (1987) - Rogue Trader\Wiki Project\` — RT (1987) wiki, spun off May 2026
 
 ---
 
