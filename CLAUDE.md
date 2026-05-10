@@ -92,6 +92,31 @@ All bare page-number citations (e.g. "see p13", "pp126–149") have been replace
 
 ---
 
+## This project as a template
+
+This codebase is the structural and visual foundation for a family of related game reference wikis. If you are starting a new wiki project in this series, read this file first, then set up the new project's CLAUDE.md to reference it.
+
+**What ports directly to a new project:**
+- SPA shell pattern — `.page` divs, `navigate()`, `sectionMeta`, `currentPage`, hash routing, `popstate`
+- CSS design system — all `--accent`, `--bg`, `--text-dim` etc. variables, the sidebar/topbar/content layout, card styles, print media queries
+- Search — `buildSearchIndex()`, `scoreEntry()`, `makeSnippet()`, keyboard nav; just re-point at the new content
+- `card-render.js` — stat table rendering is largely game-agnostic; extend for new stat lines
+- Army list builder drag-drop architecture, force section grouping, print layout, save/load system
+- Unit card editor structure — add/remove card types as needed for the new game's unit taxonomy
+
+**What needs rebuilding for each new game:**
+- All wiki content (rules, bestiary, army lists) — specific to the source material
+- `units-data.js` — unit profiles, stats, options, flavour text
+- `special-rules-data.js`, `magic-items-data.js` equivalents — rename/restructure as appropriate
+- Unit stat line — RT uses 10 stats (M WS BS S T W I A Ld Cl WP Int) vs WFB's 9; card-render.js handles variable headers already
+- Army organisation model — RT uses force org / detachment structure, not WFB's percentage-based lists
+- Points system — RT points work differently; calculator in unit-card.html will need reworking
+
+**Known sister projects:**
+- `D:/Tabletop games/Warhammer 40000 Rogue Trader/Wiki Project/` — RT (1987) wiki, spun off May 2026
+
+---
+
 ## Repo
 
 `https://github.com/brandonsneed/Fantasy3RulesWiki`
