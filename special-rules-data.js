@@ -497,14 +497,14 @@ const WFB3_WEAPON_RULES = [
   { pattern: /blowpipe/i,                                name: 'Blowpipe',              rule: 'Range 12″, Str 1. Poisoned: wounds automatically on any hit. No armour save.' },
   { pattern: /throwing\s+(knife|knives|star|stars|axe|axes)/i, name: 'Throwing Weapons', rule: 'Range 6″, Str 3, no armour save. May move and fire. One volley per turn.' },
   /* ── Hand-to-hand weapons (rules) ─── */
-  { pattern: /\blance/i,                                 name: 'Lance',                 rule: 'Charge: +1 Strength; opponent gets no armour save in first round. Reverts to hand weapon.' },
-  { pattern: /\bspear/i,                                 name: 'Spear',                 rule: 'Two ranks may fight. vs charging cavalry: unit fights in normal Initiative order.' },
-  { pattern: /\bpike/i,                                  name: 'Pike',                  rule: 'Three ranks fight. Strikes first unless charged. −1 Str from 2nd & 3rd ranks.' },
-  { pattern: /\bhalberd/i,                               name: 'Halberd',               rule: '+1 Strength bonus. Strikes in normal Initiative order.' },
-  { pattern: /double.handed/i,                           name: 'Double-Handed Weapon',  rule: '+2 Strength. Always strikes last (except first round vs charging cavalry).' },
-  { pattern: /\bflail/i,                                 name: 'Flail',                 rule: 'Charge: +2 Strength, no armour save for opponent. Must pursue after combat.' },
-  { pattern: /\bnet\b/i,                                 name: 'Net',                   rule: 'Target −1 Attack. Roll D6 each round: 1–2 the net breaks.' },
-  { pattern: /additional\s+hand\s+weapon/i,              name: 'Additional Hand Weapon', rule: '+1 Attack. No parry bonus when used.' },
+  { pattern: /\blance/i,                                 name: 'Lance',                 rule: 'Charge only: +2 Initiative, +2 Strength; opponent −1 armour save. Reverts to hand weapon from 2nd round.' },
+  { pattern: /\bspear/i,                                 name: 'Spear',                 rule: '+1 Initiative in first round. vs. mounted: +2 Initiative if not pushed back (+3 in first round). Every other model in 2nd rank may fight. Can use shield.' },
+  { pattern: /\bpike/i,                                  name: 'Pike',                  rule: '+3 Initiative if not pushed back (+6 vs. cavalry). Every other model in 2nd rank, every 3rd in 3rd rank, every 4th in 4th rank may fight. Pushed back: loses all Initiative bonuses, fights single rank. Cannot use shield; movement restricted.' },
+  { pattern: /\bhalberd/i,                               name: 'Halberd',               rule: '+1 Strength. +1 Initiative vs. mounted or aerial opponents if not pushed back. Cannot use shield.' },
+  { pattern: /double.handed/i,                           name: 'Double-Handed Weapon',  rule: '+1 Strength; opponent −1 armour save. −1 Initiative. Cannot use shield.' },
+  { pattern: /\bflail/i,                                 name: 'Flail',                 rule: '+1 Strength. If pushed back: −1 Initiative next round. Cannot charge at full speed. Requires WS 3+.' },
+  { pattern: /\bnet\b/i,                                 name: 'Net',                   rule: '+1 armour save. Attackers −1 to hit. Cannot be used with a shield.' },
+  { pattern: /additional\s+hand\s+weapon/i,              name: 'Additional Hand Weapon', rule: 'Extra attack: right-hand weapon −1 to hit, left-hand weapon −2 to hit.' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════════

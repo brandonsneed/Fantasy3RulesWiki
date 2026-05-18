@@ -78,6 +78,10 @@ Card types: standard, warmachine, waraltar, handler+beasts, chariot, character. 
 
 - **Large file edits** — `index.html` is ~32,000 lines. The Edit tool struggles with whitespace-sensitive matching at that scale. For bulk replacements, write a Python script that does `content.replace(old, new)` and run it via Bash. The `_patch_*.py` scripts in git history are good templates.
 
+- **Looking up rules in index.html** — ALWAYS use `extract_page.py` in the project root rather than grepping index.html directly. The file is too large for Grep or subagents to reliably cover. Run `python extract_page.py --list` to see all page IDs, then `python extract_page.py <page-id>` to get the full plain-text content of that page. Example: `python extract_page.py ag-weapons` for hand-to-hand weapon rules, `python extract_page.py bg-turn-hand-to-hand` for combat rules. Never trust a subagent summary of rules content — read the extracted text directly.
+
+- **NEVER cite outside knowledge for game rules** — all rules content must come exclusively from index.html via extract_page.py. Do not use training-data knowledge of Warhammer Fantasy Battle rules under any circumstances — it will be wrong or hallucinated. If a rule isn't found in the wiki, say so; do not fill the gap from memory.
+
 ---
 
 ## Content scope

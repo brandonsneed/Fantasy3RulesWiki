@@ -569,6 +569,11 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .alb-skirmish-toggle:hover { border-color: #5a7a38; color: #8aaa5a; background: #0d1208; }
 .alb-skirmish-toggle.active { background: #141f08; border-color: #6a9a3a; color: #aada6a; }
 .alb-skirmish-limit-note { font-family: 'Barlow Condensed', sans-serif; font-size: 8px; color: #4a5a38; letter-spacing: 0.04em; }
+/* Command row (Standard Bearer / Musician) */
+.alb-command-row { display: flex; align-items: center; gap: 6px; padding: 4px 0 2px; border-top: 1px solid #1e1e1e; }
+.alb-command-toggle { background: none; border: 1px solid #3a3a28; color: #8a8a5a; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 9px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; }
+.alb-command-toggle:hover { border-color: #5a5a38; color: #aaaa6a; background: #121208; }
+.alb-command-toggle.active { background: #1a1a08; border-color: #8a8a3a; color: #d4d46a; }
 
 /* ── Stat footer strip — parchment bar at bottom of card with M / To Hit / Save cells ── */
 .al-stat-footer { display: flex; border-top: 1px solid #c8b080; }
@@ -590,6 +595,8 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
 .al-weapon-rules { display: none; }
 /* Print note — hidden on screen, shown in print */
 .al-print-note { display: none; }
+/* Print summary (models + options) — hidden on screen, shown in print */
+.al-print-summary { display: none; }
 /* Print appendix — hidden on screen, shown in print when toggle is on */
 #al-print-appendix { display: none; }
 /* Pair connector — only exists in DOM during beforeprint/afterprint window */
@@ -714,6 +721,25 @@ body { background: #111; min-height: 100vh; font-family: 'Barlow Condensed', 'Ar
     background: #fff;
   }
   .al-print-note:empty { display: none; }
+
+  /* Print summary — selections block shown below each card */
+  .al-print-summary {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 6.5pt;
+    color: #1a1a1a;
+    border-top: 0.5pt solid #ccc;
+    padding: 2px 6px 3px;
+    background: #fff;
+  }
+  .al-print-summary:empty { display: none; }
+  .al-print-summary-meta { font-weight: 700; display: block; }
+  .al-print-summary-opts { font-style: italic; display: block; }
+
+  /* Hide options catalogue in print — replaced by print summary */
+  .al-opts { display: none !important; }
+  .al-char-no-opts { display: none !important; }
+  .al-flavour { display: none !important; }
 
   /* ── Print appendix ── */
   #al-print-appendix { display: block !important; margin-top: 8mm; page-break-before: always; }
@@ -1100,6 +1126,10 @@ function renderGrid() {
           subHdr.dataset.printName = subHdr.textContent;
           subHdr.textContent = renameUnitData.name;
         }
+        // Print summary — inside card so it sits in place of the controls when printing
+        const psEl = document.createElement('div');
+        psEl.className = 'al-print-summary';
+        cardEl.appendChild(psEl);
       }
     }
 
@@ -1480,13 +1510,21 @@ function isCharUnit(unit) {
   return false;
 }
 
+// Parse a cost string to a number, handling Unicode fraction characters (½ = 0.5).
+function parseCost(costStr) {
+  var s = String(costStr || '').replace(/½/g, '.5').replace(/¼/g, '.25').replace(/¾/g, '.75');
+  return parseFloat(s.replace(/[^\d.]/g, '')) || 0;
+}
+
 // Small numeric costs on per-model units are per-model upgrades (shields, weapons, armour).
 // Larger costs (champions, magic items) are flat additions.
-function isPerModelCost(costStr, unit) {
+function isPerModelCost(costStr, unit, optName) {
   if (!unit || !unit.ptsPerModel) return false; // fixed-price units: everything flat
   if (/ea/i.test(String(costStr))) return true;
-  const n = parseFloat(String(costStr).replace(/[^\d.]/g, ''));
-  return !isNaN(n) && n <= 10;
+  // Standard bearers and musicians are always flat (one model, not per-rank-and-file)
+  if (optName && /\b(standard bearer|musician)\b/i.test(String(optName))) return false;
+  const n = parseCost(costStr);
+  return n > 0 && n <= 10;
 }
 
 function calcAutoPoints(item) {
@@ -1499,9 +1537,9 @@ function calcAutoPoints(item) {
     unit.options.forEach(function(group) {
       group.items.forEach(function(opt) {
         if (!item.optionsSelected[opt.name]) return;
-        const n = parseFloat(String(opt.cost).replace(/[^\d.]/g, '')) || 0;
-        if (isPerModelCost(opt.cost, unit)) { perModel += n; }
-        else                                { fixed    += n; }
+        const n = parseCost(opt.cost);
+        if (isPerModelCost(opt.cost, unit, opt.name)) { perModel += n; }
+        else                                          { fixed    += n; }
       });
     });
   }
@@ -2002,8 +2040,11 @@ function buildControls(item, displayName) {
       ctrl.appendChild(buildCharOptSections(unitForOpts, item, ptsTotalEl));
     } else {
       // Flat chip row for rank-and-file / war machines / etc.
+      // Command: group (Standard Bearer / Musician) is shown separately below.
       const allOpts = [];
+      var cmdGroup = null;
       unitForOpts.options.forEach(function(g) {
+        if (g.subheading === 'Command:') { cmdGroup = g; return; }
         g.items.forEach(function(o) { allOpts.push(o); });
       });
       if (allOpts.length) {
@@ -2018,6 +2059,25 @@ function buildControls(item, displayName) {
           }
         });
         ctrl.appendChild(optsRow);
+      }
+      // Command row: Standard Bearer / Musician as dedicated toggles
+      if (cmdGroup) {
+        const cmdRow = document.createElement('div');
+        cmdRow.className = 'alb-command-row';
+        cmdGroup.items.forEach(function(opt) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'alb-command-toggle' + (item.optionsSelected[opt.name] ? ' active' : '');
+          btn.textContent = opt.name + '  +' + opt.cost + ' pts';
+          btn.onclick = function() {
+            item.optionsSelected[opt.name] = !item.optionsSelected[opt.name];
+            btn.classList.toggle('active', item.optionsSelected[opt.name]);
+            recalcPts(item, ptsTotalEl);
+            saveCards(); updateTotals();
+          };
+          cmdRow.appendChild(btn);
+        });
+        ctrl.appendChild(cmdRow);
       }
     }
   }
@@ -3221,7 +3281,47 @@ window.addEventListener("storage", function(e) {
  *  3. Units with no leading character
  *  Called via the beforeprint event so the layout is correct before the browser
  *  renders the print preview. renderGrid() restores normal order in afterprint. */
+
+/* Build the text content for a card's print summary div.
+   Shows: model count + pts rate + total pts, then selected options on a second line. */
+function buildPrintSummaryContent(item) {
+  var unitData = lookupUnit(item.sourceId);
+  var isChar = isCharUnit(unitData);
+
+  // Meta line: models · pts/model · Total
+  var metaParts = [];
+  if (!isChar && item.models) metaParts.push(item.models + ' models');
+  if (item.ptsPerModel) metaParts.push(item.ptsPerModel + ' pts/model');
+  else if (item.ptsFixed) metaParts.push(item.ptsFixed + ' pts (fixed)');
+  if (item.totalPts) metaParts.push('Total: ' + item.totalPts + ' pts');
+  var metaLine = metaParts.join(' · ');
+
+  // Options line: selected upgrade names (magic items show the chosen ability)
+  var selectedOpts = [];
+  if (item.optionsSelected && unitData && unitData.options) {
+    unitData.options.forEach(function(g) {
+      g.items.forEach(function(o) {
+        if (!item.optionsSelected[o.name]) return;
+        var catKey = getMagicItemCategory(o.name);
+        if (catKey && item.magicAbilities && item.magicAbilities[catKey]) {
+          var abMap = item.magicAbilities[catKey];
+          var chosen = Object.keys(abMap).filter(function(k) { return abMap[k]; });
+          selectedOpts.push(chosen.length ? chosen[0] : o.name);
+        } else {
+          selectedOpts.push(o.name);
+        }
+      });
+    });
+  }
+  var optsLine = selectedOpts.join(', ');
+
+  return { meta: metaLine, opts: optsLine };
+}
+
 function applyPrintOrder() {
+  // Refresh print header total from live card data before the browser renders print
+  updatePrintHeader();
+
   // Restore display names in card headers (screen shows unit.name; print needs the full display name)
   document.querySelectorAll('.card-wrapper .al-header[data-print-name]').forEach(function(h) {
     h.textContent = h.dataset.printName;
@@ -3233,6 +3333,28 @@ function applyPrintOrder() {
   const wrapperMap = {};
   grid.querySelectorAll('.card-wrapper[data-list-id]').forEach(function(el) {
     wrapperMap[el.dataset.listId] = el;
+  });
+
+  // Populate print summary divs with current selections
+  cards.forEach(function(item) {
+    var el = wrapperMap[String(item.id)];
+    if (!el) return;
+    var sumEl = el.querySelector('.al-print-summary');
+    if (!sumEl) return;
+    sumEl.innerHTML = '';
+    var s = buildPrintSummaryContent(item);
+    if (s.meta) {
+      var m = document.createElement('span');
+      m.className = 'al-print-summary-meta';
+      m.textContent = s.meta;
+      sumEl.appendChild(m);
+    }
+    if (s.opts) {
+      var o = document.createElement('span');
+      o.className = 'al-print-summary-opts';
+      o.textContent = s.opts;
+      sumEl.appendChild(o);
+    }
   });
 
   const charItems = cards.filter(function(c) {

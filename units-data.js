@@ -133,6 +133,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -202,6 +215,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -266,6 +292,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -327,6 +366,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -395,6 +447,19 @@ const WFB3_UNITS = [
           {
             "name": "Horse Barding",
             "cost": "8"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "44"
+          },
+          {
+            "name": "Musician",
+            "cost": "44"
           }
         ]
       }
@@ -487,6 +552,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "78"
+          },
+          {
+            "name": "Musician",
+            "cost": "78"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -577,6 +655,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "66"
+          },
+          {
+            "name": "Musician",
+            "cost": "66"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -657,6 +748,19 @@ const WFB3_UNITS = [
           {
             "name": "Repeating Crossbows",
             "cost": "8"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "70"
+          },
+          {
+            "name": "Musician",
+            "cost": "70"
           }
         ]
       }
@@ -960,6 +1064,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "62"
+          },
+          {
+            "name": "Musician",
+            "cost": "62"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -1022,6 +1139,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
           }
         ]
       }
@@ -1158,6 +1288,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -1227,6 +1370,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
           }
         ]
       }
@@ -1357,6 +1513,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "32"
+          },
+          {
+            "name": "Musician",
+            "cost": "32"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -1419,6 +1588,19 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
           }
         ]
       }
@@ -1495,6 +1677,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -1615,6 +1810,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -1724,6 +1932,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "56"
+          },
+          {
+            "name": "Musician",
+            "cost": "56"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -1766,7 +1987,21 @@ const WFB3_UNITS = [
     "models": "1–3",
     "weapons": "Stomp Attacks",
     "armour": "None",
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "560"
+          },
+          {
+            "name": "Musician",
+            "cost": "560"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -1840,6 +2075,19 @@ const WFB3_UNITS = [
           {
             "name": "Bow",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "630"
+          },
+          {
+            "name": "Musician",
+            "cost": "630"
           }
         ]
       }
@@ -1923,6 +2171,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "70"
+          },
+          {
+            "name": "Musician",
+            "cost": "70"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -1984,6 +2245,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "44"
+          },
+          {
+            "name": "Musician",
+            "cost": "44"
           }
         ]
       }
@@ -2095,7 +2369,21 @@ const WFB3_UNITS = [
     "models": "10–20",
     "weapons": "Long Bow & Hand Weapon",
     "armour": "Light Armour",
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "28"
+          },
+          {
+            "name": "Musician",
+            "cost": "28"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -2160,6 +2448,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -2229,6 +2530,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -2290,6 +2604,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -2378,6 +2705,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -2458,6 +2798,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -2529,6 +2882,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -2590,6 +2956,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "32"
+          },
+          {
+            "name": "Musician",
+            "cost": "32"
           }
         ]
       }
@@ -2713,6 +3092,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "78"
+          },
+          {
+            "name": "Musician",
+            "cost": "78"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -2781,6 +3173,19 @@ const WFB3_UNITS = [
           {
             "name": "Warhorse Barding",
             "cost": "8"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "50"
+          },
+          {
+            "name": "Musician",
+            "cost": "50"
           }
         ]
       }
@@ -2857,6 +3262,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "74"
+          },
+          {
+            "name": "Musician",
+            "cost": "74"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -2911,6 +3329,19 @@ const WFB3_UNITS = [
           {
             "name": "Spear",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
           }
         ]
       }
@@ -2981,6 +3412,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3024,7 +3468,21 @@ const WFB3_UNITS = [
     "weapons": "Arquebus & Hand Weapon",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -3066,7 +3524,21 @@ const WFB3_UNITS = [
     "weapons": "Crossbow & Hand Weapon",
     "armour": "Light Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -3133,6 +3605,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3176,7 +3661,21 @@ const WFB3_UNITS = [
     "weapons": "Halberd & Hand Weapon",
     "armour": "Light Armour",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -3235,6 +3734,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "6"
+          },
+          {
+            "name": "Musician",
+            "cost": "6"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3285,6 +3797,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -3343,6 +3868,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3397,6 +3935,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
           }
         ]
       }
@@ -3519,6 +4070,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "62"
+          },
+          {
+            "name": "Musician",
+            "cost": "62"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3591,6 +4155,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "50"
+          },
+          {
+            "name": "Musician",
+            "cost": "50"
           }
         ]
       }
@@ -3675,6 +4252,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "58"
+          },
+          {
+            "name": "Musician",
+            "cost": "58"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3749,6 +4339,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "54"
+          },
+          {
+            "name": "Musician",
+            "cost": "54"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3805,6 +4408,19 @@ const WFB3_UNITS = [
             "cost": "6"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "32"
+          },
+          {
+            "name": "Musician",
+            "cost": "32"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3855,6 +4471,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -3921,6 +4550,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -3973,6 +4615,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -4023,6 +4678,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "½"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "8"
+          },
+          {
+            "name": "Musician",
+            "cost": "8"
           }
         ]
       }
@@ -4097,6 +4765,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "14"
+          },
+          {
+            "name": "Musician",
+            "cost": "14"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -4153,6 +4834,19 @@ const WFB3_UNITS = [
             "cost": "½"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "8"
+          },
+          {
+            "name": "Musician",
+            "cost": "8"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -4207,6 +4901,19 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -4272,6 +4979,19 @@ const WFB3_UNITS = [
           {
             "name": "Spears",
             "cost": "½"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "6"
+          },
+          {
+            "name": "Musician",
+            "cost": "6"
           }
         ]
       }
@@ -4440,6 +5160,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "14"
+          },
+          {
+            "name": "Musician",
+            "cost": "14"
           }
         ]
       }
@@ -4648,6 +5381,19 @@ const WFB3_UNITS = [
             "cost": "26"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "160"
+          },
+          {
+            "name": "Musician",
+            "cost": "160"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -4734,6 +5480,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "90"
+          },
+          {
+            "name": "Musician",
+            "cost": "90"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -4807,6 +5566,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "32"
+          },
+          {
+            "name": "Musician",
+            "cost": "32"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -4873,6 +5645,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "148"
+          },
+          {
+            "name": "Musician",
+            "cost": "148"
           }
         ]
       }
@@ -4954,6 +5739,19 @@ const WFB3_UNITS = [
           {
             "name": "Crossbows",
             "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "78"
+          },
+          {
+            "name": "Musician",
+            "cost": "78"
           }
         ]
       }
@@ -5049,6 +5847,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5130,6 +5941,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5190,6 +6014,19 @@ const WFB3_UNITS = [
             "cost": "8"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "80"
+          },
+          {
+            "name": "Musician",
+            "cost": "80"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5233,7 +6070,21 @@ const WFB3_UNITS = [
     "weapons": "Hand Weapon",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "130"
+          },
+          {
+            "name": "Musician",
+            "cost": "130"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -5275,7 +6126,21 @@ const WFB3_UNITS = [
     "weapons": "Hand Weapon",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -5317,7 +6182,21 @@ const WFB3_UNITS = [
     "weapons": "Double-Handed Weapon",
     "armour": "Heavy Armour & Barding",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "240"
+          },
+          {
+            "name": "Musician",
+            "cost": "240"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -5398,6 +6277,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "28"
+          },
+          {
+            "name": "Musician",
+            "cost": "28"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5448,6 +6340,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "100"
+          },
+          {
+            "name": "Musician",
+            "cost": "100"
           }
         ]
       }
@@ -5569,6 +6474,19 @@ const WFB3_UNITS = [
             "cost": "50"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "15"
+          },
+          {
+            "name": "Musician",
+            "cost": "15"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5627,6 +6545,19 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "12"
+          },
+          {
+            "name": "Musician",
+            "cost": "12"
           }
         ]
       }
@@ -5688,6 +6619,19 @@ const WFB3_UNITS = [
             "cost": "50"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "13"
+          },
+          {
+            "name": "Musician",
+            "cost": "13"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5747,6 +6691,19 @@ const WFB3_UNITS = [
             "cost": "½"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "5"
+          },
+          {
+            "name": "Musician",
+            "cost": "5"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5804,6 +6761,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "17"
+          },
+          {
+            "name": "Musician",
+            "cost": "17"
           }
         ]
       }
@@ -5878,6 +6848,19 @@ const WFB3_UNITS = [
             "cost": "½"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "25"
+          },
+          {
+            "name": "Musician",
+            "cost": "25"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -5927,6 +6910,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "80"
+          },
+          {
+            "name": "Musician",
+            "cost": "80"
           }
         ]
       }
@@ -5987,6 +6983,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "100"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "9"
+          },
+          {
+            "name": "Musician",
+            "cost": "9"
           }
         ]
       }
@@ -6079,6 +7088,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "50"
+          },
+          {
+            "name": "Musician",
+            "cost": "50"
           }
         ]
       }
@@ -6283,6 +7305,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "54"
+          },
+          {
+            "name": "Musician",
+            "cost": "54"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -6362,6 +7397,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "38"
+          },
+          {
+            "name": "Musician",
+            "cost": "38"
           }
         ]
       }
@@ -6462,6 +7510,15 @@ const WFB3_UNITS = [
           {
             "name": "Standard Bearer",
             "cost": "104"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Musician",
+            "cost": "54"
           }
         ]
       }
@@ -6609,6 +7666,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "19"
+          },
+          {
+            "name": "Musician",
+            "cost": "19"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -6681,6 +7751,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "17"
+          },
+          {
+            "name": "Musician",
+            "cost": "17"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -6743,6 +7826,19 @@ const WFB3_UNITS = [
           {
             "name": "Bows for Crossbows",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "15"
+          },
+          {
+            "name": "Musician",
+            "cost": "15"
           }
         ]
       }
@@ -6824,6 +7920,19 @@ const WFB3_UNITS = [
           {
             "name": "Spears",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -6989,6 +8098,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "7"
+          },
+          {
+            "name": "Musician",
+            "cost": "7"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -7059,6 +8181,19 @@ const WFB3_UNITS = [
           {
             "name": "Halberds",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "6"
+          },
+          {
+            "name": "Musician",
+            "cost": "6"
           }
         ]
       }
@@ -7151,6 +8286,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "11"
+          },
+          {
+            "name": "Musician",
+            "cost": "11"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -7209,6 +8357,19 @@ const WFB3_UNITS = [
           {
             "name": "Additional Hand Weapon",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "15"
+          },
+          {
+            "name": "Musician",
+            "cost": "15"
           }
         ]
       }
@@ -7287,6 +8448,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -7357,6 +8531,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magic Standard",
             "cost": "50"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -7452,7 +8639,21 @@ const WFB3_UNITS = [
     "models": "1–10",
     "weapons": "Hand Weapon",
     "armour": "None",
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "130"
+          },
+          {
+            "name": "Musician",
+            "cost": "130"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -7946,6 +9147,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "32"
+          },
+          {
+            "name": "Musician",
+            "cost": "32"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -8016,6 +9230,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -8079,6 +9306,19 @@ const WFB3_UNITS = [
           {
             "name": "A Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
           }
         ]
       }
@@ -8150,6 +9390,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "28"
+          },
+          {
+            "name": "Musician",
+            "cost": "28"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -8218,6 +9471,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour for Light",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -8293,6 +9559,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -8343,6 +9622,19 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -8403,6 +9695,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
           }
         ]
       }
@@ -8467,6 +9772,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
           }
         ]
       }
@@ -8537,6 +9855,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -8587,6 +9918,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour for Light",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
           }
         ]
       }
@@ -8711,6 +10055,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "112"
+          },
+          {
+            "name": "Musician",
+            "cost": "112"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -8761,6 +10118,19 @@ const WFB3_UNITS = [
           {
             "name": "Magic Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
           }
         ]
       }
@@ -8841,6 +10211,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "62"
+          },
+          {
+            "name": "Musician",
+            "cost": "62"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -8904,6 +10287,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
           }
         ]
       }
@@ -8973,6 +10369,19 @@ const WFB3_UNITS = [
           {
             "name": "Magical Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
           }
         ]
       }
@@ -9048,6 +10457,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9117,6 +10539,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9167,6 +10602,19 @@ const WFB3_UNITS = [
           {
             "name": "Darts",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
           }
         ]
       }
@@ -9229,6 +10677,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9283,6 +10744,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -9349,6 +10823,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9412,6 +10899,19 @@ const WFB3_UNITS = [
           {
             "name": "Darts",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
           }
         ]
       }
@@ -9512,6 +11012,19 @@ const WFB3_UNITS = [
             "cost": "8"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "72"
+          },
+          {
+            "name": "Musician",
+            "cost": "72"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9572,6 +11085,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9615,7 +11141,21 @@ const WFB3_UNITS = [
     "weapons": "Hand Weapon",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -9737,6 +11277,19 @@ const WFB3_UNITS = [
           {
             "name": "Bows",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "42"
+          },
+          {
+            "name": "Musician",
+            "cost": "42"
           }
         ]
       }
@@ -9882,6 +11435,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -9932,6 +11498,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
           }
         ]
       }
@@ -9995,6 +11574,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -10049,6 +11641,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
           }
         ]
       }
@@ -10111,6 +11716,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "8"
+          },
+          {
+            "name": "Musician",
+            "cost": "8"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -10154,7 +11772,21 @@ const WFB3_UNITS = [
     "weapons": "Bite, Claw or Club",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -10196,7 +11828,21 @@ const WFB3_UNITS = [
     "weapons": "Claw",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "160"
+          },
+          {
+            "name": "Musician",
+            "cost": "160"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -10238,7 +11884,21 @@ const WFB3_UNITS = [
     "weapons": "Bite/Claw",
     "armour": "None",
     "mount": null,
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "90"
+          },
+          {
+            "name": "Musician",
+            "cost": "90"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -10460,6 +12120,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "500"
+          },
+          {
+            "name": "Musician",
+            "cost": "500"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -10627,6 +12300,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "148"
+          },
+          {
+            "name": "Musician",
+            "cost": "148"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -10758,6 +12444,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "8"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "80"
+          },
+          {
+            "name": "Musician",
+            "cost": "80"
           }
         ]
       }
@@ -10904,6 +12603,19 @@ const WFB3_UNITS = [
           {
             "name": "Halberds",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
           }
         ]
       }
@@ -11064,6 +12776,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "64"
+          },
+          {
+            "name": "Musician",
+            "cost": "64"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -11206,6 +12931,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "5"
+          },
+          {
+            "name": "Musician",
+            "cost": "5"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -11289,6 +13027,19 @@ const WFB3_UNITS = [
           {
             "name": "Shield",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -11429,6 +13180,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -11478,6 +13242,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "140"
+          },
+          {
+            "name": "Musician",
+            "cost": "140"
           }
         ]
       }
@@ -11563,7 +13340,21 @@ const WFB3_UNITS = [
     "models": "1–4",
     "weapons": null,
     "armour": "Heavy Armour",
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "84"
+          },
+          {
+            "name": "Musician",
+            "cost": "84"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -11619,6 +13410,19 @@ const WFB3_UNITS = [
           {
             "name": "Mithril Heavy Armour",
             "cost": "26"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "340"
+          },
+          {
+            "name": "Musician",
+            "cost": "340"
           }
         ]
       }
@@ -11692,6 +13496,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -11780,6 +13597,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -11859,6 +13689,19 @@ const WFB3_UNITS = [
           {
             "name": "Spears",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
           }
         ]
       }
@@ -11976,6 +13819,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "340"
+          },
+          {
+            "name": "Musician",
+            "cost": "340"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -12065,6 +13921,19 @@ const WFB3_UNITS = [
           {
             "name": "Warhorse",
             "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "236"
+          },
+          {
+            "name": "Musician",
+            "cost": "236"
           }
         ]
       }
@@ -12275,6 +14144,19 @@ const WFB3_UNITS = [
             "cost": "8"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "70"
+          },
+          {
+            "name": "Musician",
+            "cost": "70"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -12387,6 +14269,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "66"
+          },
+          {
+            "name": "Musician",
+            "cost": "66"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -12471,6 +14366,19 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
           }
         ]
       }
@@ -12559,6 +14467,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -12644,6 +14565,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "336"
+          },
+          {
+            "name": "Musician",
+            "cost": "336"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -12711,6 +14645,19 @@ const WFB3_UNITS = [
           {
             "name": "Warhorse",
             "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "236"
+          },
+          {
+            "name": "Musician",
+            "cost": "236"
           }
         ]
       }
@@ -12903,6 +14850,19 @@ const WFB3_UNITS = [
             "cost": "50"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "70"
+          },
+          {
+            "name": "Musician",
+            "cost": "70"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -12992,6 +14952,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -13059,6 +15032,19 @@ const WFB3_UNITS = [
           {
             "name": "Champion Leader",
             "cost": "53"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "28"
+          },
+          {
+            "name": "Musician",
+            "cost": "28"
           }
         ]
       }
@@ -13156,6 +15142,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -13239,6 +15238,19 @@ const WFB3_UNITS = [
           {
             "name": "Barding",
             "cost": "4"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "260"
+          },
+          {
+            "name": "Musician",
+            "cost": "260"
           }
         ]
       }
@@ -13398,6 +15410,19 @@ const WFB3_UNITS = [
           {
             "name": "Double-Handed Weapons",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -13576,6 +15601,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -13669,6 +15707,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -13749,6 +15800,19 @@ const WFB3_UNITS = [
           {
             "name": "Magic Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "32"
+          },
+          {
+            "name": "Musician",
+            "cost": "32"
           }
         ]
       }
@@ -13969,6 +16033,19 @@ const WFB3_UNITS = [
             "cost": "4"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "84"
+          },
+          {
+            "name": "Musician",
+            "cost": "84"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -14048,6 +16125,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "8"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "64"
+          },
+          {
+            "name": "Musician",
+            "cost": "64"
           }
         ]
       }
@@ -14133,6 +16223,19 @@ const WFB3_UNITS = [
           {
             "name": "Lance",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "216"
+          },
+          {
+            "name": "Musician",
+            "cost": "216"
           }
         ]
       }
@@ -14233,6 +16336,19 @@ const WFB3_UNITS = [
           {
             "name": "Magic Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "78"
+          },
+          {
+            "name": "Musician",
+            "cost": "78"
           }
         ]
       }
@@ -14343,6 +16459,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "50"
+          },
+          {
+            "name": "Musician",
+            "cost": "50"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -14410,6 +16539,19 @@ const WFB3_UNITS = [
           {
             "name": "Champion Leader",
             "cost": "34"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -14493,6 +16635,19 @@ const WFB3_UNITS = [
             "cost": "4"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "28"
+          },
+          {
+            "name": "Musician",
+            "cost": "28"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -14566,6 +16721,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "14"
+          },
+          {
+            "name": "Musician",
+            "cost": "14"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -14623,6 +16791,19 @@ const WFB3_UNITS = [
           {
             "name": "Shield",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "238"
+          },
+          {
+            "name": "Musician",
+            "cost": "238"
           }
         ]
       }
@@ -14807,6 +16988,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "19"
+          },
+          {
+            "name": "Musician",
+            "cost": "19"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -14882,6 +17076,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "15"
+          },
+          {
+            "name": "Musician",
+            "cost": "15"
           }
         ]
       }
@@ -14974,6 +17181,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "17"
+          },
+          {
+            "name": "Musician",
+            "cost": "17"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -15053,6 +17273,19 @@ const WFB3_UNITS = [
           {
             "name": "Spears",
             "cost": "½"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "6"
+          },
+          {
+            "name": "Musician",
+            "cost": "6"
           }
         ]
       }
@@ -15283,6 +17516,19 @@ const WFB3_UNITS = [
             "cost": "½"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -15356,6 +17602,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "7"
+          },
+          {
+            "name": "Musician",
+            "cost": "7"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -15427,6 +17686,19 @@ const WFB3_UNITS = [
           {
             "name": "Javelins",
             "cost": "½"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "7"
+          },
+          {
+            "name": "Musician",
+            "cost": "7"
           }
         ]
       }
@@ -15510,6 +17782,19 @@ const WFB3_UNITS = [
             "cost": "½"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "17"
+          },
+          {
+            "name": "Musician",
+            "cost": "17"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -15567,6 +17852,19 @@ const WFB3_UNITS = [
           {
             "name": "Poisoned Attacks",
             "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "196"
+          },
+          {
+            "name": "Musician",
+            "cost": "196"
           }
         ]
       }
@@ -15630,6 +17928,19 @@ const WFB3_UNITS = [
           {
             "name": "Net",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "62"
+          },
+          {
+            "name": "Musician",
+            "cost": "62"
           }
         ]
       }
@@ -15755,6 +18066,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "9"
+          },
+          {
+            "name": "Musician",
+            "cost": "9"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -15845,6 +18169,19 @@ const WFB3_UNITS = [
             "cost": "½"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "25"
+          },
+          {
+            "name": "Musician",
+            "cost": "25"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -15894,6 +18231,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "80"
+          },
+          {
+            "name": "Musician",
+            "cost": "80"
           }
         ]
       }
@@ -15967,6 +18317,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "9"
+          },
+          {
+            "name": "Musician",
+            "cost": "9"
           }
         ]
       }
@@ -16268,6 +18631,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -16385,6 +18761,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -16498,6 +18887,19 @@ const WFB3_UNITS = [
             "cost": "50"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -16584,6 +18986,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "8"
+          },
+          {
+            "name": "Musician",
+            "cost": "8"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -16637,6 +19052,19 @@ const WFB3_UNITS = [
           {
             "name": "Spear",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "154"
+          },
+          {
+            "name": "Musician",
+            "cost": "154"
           }
         ]
       }
@@ -16779,6 +19207,19 @@ const WFB3_UNITS = [
             "cost": "½"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "7"
+          },
+          {
+            "name": "Musician",
+            "cost": "7"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -16846,6 +19287,19 @@ const WFB3_UNITS = [
           {
             "name": "Champion Leader",
             "cost": "28"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "19"
+          },
+          {
+            "name": "Musician",
+            "cost": "19"
           }
         ]
       }
@@ -16944,6 +19398,19 @@ const WFB3_UNITS = [
             "cost": "100"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "100"
+          },
+          {
+            "name": "Musician",
+            "cost": "100"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -17019,6 +19486,19 @@ const WFB3_UNITS = [
             "cost": "26"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "340"
+          },
+          {
+            "name": "Musician",
+            "cost": "340"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -17068,6 +19548,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
           }
         ]
       }
@@ -17168,6 +19661,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -17248,6 +19754,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour",
             "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "138"
+          },
+          {
+            "name": "Musician",
+            "cost": "138"
           }
         ]
       }
@@ -17382,7 +19901,21 @@ const WFB3_UNITS = [
     "models": "1–3",
     "weapons": "Big Blunt Implement",
     "armour": "None",
-    "options": [],
+    "options": [
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "500"
+          },
+          {
+            "name": "Musician",
+            "cost": "500"
+          }
+        ]
+      }
+    ],
     "machineStats": null,
     "chariot": null,
     "packs": null,
@@ -17458,6 +19991,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour",
             "cost": "12"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "480"
+          },
+          {
+            "name": "Musician",
+            "cost": "480"
           }
         ]
       }
@@ -17560,6 +20106,19 @@ const WFB3_UNITS = [
             "cost": "12"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "76"
+          },
+          {
+            "name": "Musician",
+            "cost": "76"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -17651,6 +20210,19 @@ const WFB3_UNITS = [
           {
             "name": "Warhorse",
             "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "210"
+          },
+          {
+            "name": "Musician",
+            "cost": "210"
           }
         ]
       }
@@ -17784,6 +20356,19 @@ const WFB3_UNITS = [
             "cost": "50"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -17863,6 +20448,19 @@ const WFB3_UNITS = [
           {
             "name": "Crossbows instead of Bows",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
           }
         ]
       }
@@ -17948,6 +20546,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "12"
+          },
+          {
+            "name": "Musician",
+            "cost": "12"
           }
         ]
       }
@@ -18041,6 +20652,19 @@ const WFB3_UNITS = [
           {
             "name": "Temple Dog Mount",
             "cost": "85"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "214"
+          },
+          {
+            "name": "Musician",
+            "cost": "214"
           }
         ]
       }
@@ -18229,6 +20853,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -18304,6 +20941,19 @@ const WFB3_UNITS = [
           {
             "name": "Bows",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "18"
+          },
+          {
+            "name": "Musician",
+            "cost": "18"
           }
         ]
       }
@@ -18597,6 +21247,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "160"
+          },
+          {
+            "name": "Musician",
+            "cost": "160"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -18676,6 +21339,19 @@ const WFB3_UNITS = [
           {
             "name": "Heavy Armour",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
           }
         ]
       }
@@ -18766,6 +21442,19 @@ const WFB3_UNITS = [
           {
             "name": "Arquebus",
             "cost": "3"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "10"
+          },
+          {
+            "name": "Musician",
+            "cost": "10"
           }
         ]
       }
@@ -18859,6 +21548,19 @@ const WFB3_UNITS = [
           {
             "name": "War Boar",
             "cost": "16"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "236"
+          },
+          {
+            "name": "Musician",
+            "cost": "236"
           }
         ]
       }
@@ -18966,6 +21668,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "11"
+          },
+          {
+            "name": "Musician",
+            "cost": "11"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -19041,6 +21756,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "15"
+          },
+          {
+            "name": "Musician",
+            "cost": "15"
           }
         ]
       }
@@ -19122,6 +21850,19 @@ const WFB3_UNITS = [
           {
             "name": "Warhorse",
             "cost": "6"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "216"
+          },
+          {
+            "name": "Musician",
+            "cost": "216"
           }
         ]
       }
@@ -19273,6 +22014,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "12"
+          },
+          {
+            "name": "Musician",
+            "cost": "12"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -19352,6 +22106,19 @@ const WFB3_UNITS = [
           {
             "name": "Shield",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
           }
         ]
       }
@@ -19458,6 +22225,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -19543,6 +22323,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -19622,6 +22415,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
           }
         ]
       }
@@ -19712,6 +22518,19 @@ const WFB3_UNITS = [
           {
             "name": "Light Armour",
             "cost": "2"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
           }
         ]
       }
@@ -19807,6 +22626,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "214"
+          },
+          {
+            "name": "Musician",
+            "cost": "214"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -19898,6 +22730,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "46"
+          },
+          {
+            "name": "Musician",
+            "cost": "46"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -19982,6 +22827,19 @@ const WFB3_UNITS = [
           {
             "name": "Magic Standard",
             "cost": "50"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "40"
+          },
+          {
+            "name": "Musician",
+            "cost": "40"
           }
         ]
       }
@@ -20070,6 +22928,19 @@ const WFB3_UNITS = [
             "cost": "50"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "36"
+          },
+          {
+            "name": "Musician",
+            "cost": "36"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -20147,6 +23018,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -20216,6 +23100,19 @@ const WFB3_UNITS = [
             "cost": "33"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -20283,6 +23180,19 @@ const WFB3_UNITS = [
           {
             "name": "Champion",
             "cost": "35"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "22"
+          },
+          {
+            "name": "Musician",
+            "cost": "22"
           }
         ]
       }
@@ -20378,6 +23288,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "14"
+          },
+          {
+            "name": "Musician",
+            "cost": "14"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -20444,6 +23367,19 @@ const WFB3_UNITS = [
           {
             "name": "Magic Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "24"
+          },
+          {
+            "name": "Musician",
+            "cost": "24"
           }
         ]
       }
@@ -20513,6 +23449,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "12"
+          },
+          {
+            "name": "Musician",
+            "cost": "12"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -20570,6 +23519,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "14"
+          },
+          {
+            "name": "Musician",
+            "cost": "14"
           }
         ]
       }
@@ -20639,6 +23601,19 @@ const WFB3_UNITS = [
             "cost": "1"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -20692,6 +23667,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "12"
+          },
+          {
+            "name": "Musician",
+            "cost": "12"
           }
         ]
       }
@@ -20787,6 +23775,19 @@ const WFB3_UNITS = [
             "cost": "25"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "30"
+          },
+          {
+            "name": "Musician",
+            "cost": "30"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -20861,6 +23862,19 @@ const WFB3_UNITS = [
           {
             "name": "Magic Instrument",
             "cost": "25"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "20"
+          },
+          {
+            "name": "Musician",
+            "cost": "20"
           }
         ]
       }
@@ -20939,6 +23953,19 @@ const WFB3_UNITS = [
             "cost": "3"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -21000,6 +24027,19 @@ const WFB3_UNITS = [
           {
             "name": "Shields",
             "cost": "1"
+          }
+        ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "26"
+          },
+          {
+            "name": "Musician",
+            "cost": "26"
           }
         ]
       }
@@ -21065,6 +24105,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -21128,6 +24181,19 @@ const WFB3_UNITS = [
             "cost": "2"
           }
         ]
+      },
+      {
+        "subheading": "Command:",
+        "items": [
+          {
+            "name": "Standard Bearer",
+            "cost": "16"
+          },
+          {
+            "name": "Musician",
+            "cost": "16"
+          }
+        ]
       }
     ],
     "machineStats": null,
@@ -21135,8 +24201,7 @@ const WFB3_UNITS = [
     "packs": null,
     "aggregateTable": null,
     "flavour": "A Troll Slayer lucky enough to survive the attentions of Trolls becomes greatly respected by his fellow Slayers. Such individuals are known as Giant Slayers because they often seek out Giants and do battle with them. They are immune to fear caused by living creatures, are subject to , and cannot be routed from hand-to-hand combat.frenzy"
-  }
-,
+  },
   {
     "id": "de-char-hero-5-deathshade",
     "army": "dark-elves",
@@ -38017,16 +41082,16 @@ const WFB3_UNITS = [
     "name": "Orc Level 5 Hero",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "5 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "4",
+          "4",
+          "4",
           "4",
           "1",
+          "3",
           "2",
-          "1",
           "7",
           "5",
           "7",
@@ -38161,16 +41226,16 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 5 Hero",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "5 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "3",
-          "1",
+          "4",
+          "4",
+          "4",
           "3",
           "1",
+          "4",
+          "2",
           "7",
           "6",
           "7",
@@ -38305,16 +41370,16 @@ const WFB3_UNITS = [
     "name": "Goblin Level 5 Hero",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "5 Hero",
         "stats": [
           "4",
-          "2",
           "3",
-          "3",
+          "4",
+          "4",
           "3",
           "1",
+          "3",
           "2",
-          "1",
           "5",
           "5",
           "5",
@@ -38449,16 +41514,16 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 5 Hero",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "5 Hero",
         "stats": [
           "4",
+          "5",
           "4",
+          "5",
+          "4",
+          "1",
           "3",
-          "4",
-          "4",
-          "1",
           "2",
-          "1",
           "8",
           "5",
           "7",
@@ -38593,16 +41658,16 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 5 Hero",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "5 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "4",
+          "4",
+          "4",
           "4",
           "1",
+          "3",
           "2",
-          "1",
           "7",
           "5",
           "7",
@@ -38737,17 +41802,17 @@ const WFB3_UNITS = [
     "name": "Orc Level 10 Hero",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "10 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "5",
           "4",
-          "1",
+          "4",
+          "5",
           "2",
-          "1",
-          "7",
+          "3",
+          "3",
+          "8+1",
           "5",
           "7",
           "7"
@@ -38881,17 +41946,17 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 10 Hero",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "10 Hero",
         "stats": [
           "4",
+          "5",
+          "4",
+          "4",
+          "4",
+          "2",
+          "4",
           "3",
-          "3",
-          "3",
-          "3",
-          "1",
-          "3",
-          "1",
-          "7",
+          "8+1",
           "6",
           "7",
           "7"
@@ -39025,17 +42090,17 @@ const WFB3_UNITS = [
     "name": "Goblin Level 10 Hero",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "10 Hero",
         "stats": [
+          "4",
+          "4",
+          "4",
+          "4",
           "4",
           "2",
           "3",
           "3",
-          "3",
-          "1",
-          "2",
-          "1",
-          "5",
+          "6+1",
           "5",
           "5",
           "5"
@@ -39169,17 +42234,17 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 10 Hero",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "10 Hero",
         "stats": [
           "4",
+          "6",
           "4",
-          "3",
-          "4",
-          "4",
-          "1",
+          "5",
+          "5",
           "2",
-          "1",
-          "8",
+          "3",
+          "3",
+          "9+1",
           "5",
           "7",
           "7"
@@ -39313,17 +42378,17 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 10 Hero",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "10 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "5",
           "4",
-          "1",
+          "4",
+          "5",
           "2",
-          "1",
-          "7",
+          "3",
+          "3",
+          "8+1",
           "5",
           "7",
           "7"
@@ -39457,20 +42522,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 15 Hero",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "15 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
+          "5",
+          "4",
+          "4",
+          "5",
           "3",
           "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "3",
+          "9+2",
           "5",
-          "7",
-          "7"
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Orc"
       }
@@ -39601,20 +42666,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 15 Hero",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "15 Hero",
         "stats": [
           "4",
+          "5",
+          "4",
+          "4",
+          "4",
           "3",
+          "5",
           "3",
-          "3",
-          "3",
-          "1",
-          "3",
-          "1",
-          "7",
+          "9+2",
           "6",
-          "7",
-          "7"
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -39745,20 +42810,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 15 Hero",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "15 Hero",
         "stats": [
           "4",
-          "2",
+          "4",
+          "4",
+          "4",
+          "4",
           "3",
+          "4",
           "3",
-          "3",
-          "1",
-          "2",
-          "1",
+          "7+2",
           "5",
-          "5",
-          "5",
-          "5"
+          "6+1",
+          "6+1"
         ],
         "raceGroup": "Goblin"
       }
@@ -39889,20 +42954,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 15 Hero",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "15 Hero",
         "stats": [
           "4",
+          "6",
           "4",
+          "5",
+          "5",
           "3",
           "4",
-          "4",
-          "1",
-          "2",
-          "1",
-          "8",
+          "3",
+          "10+2",
           "5",
-          "7",
-          "7"
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Black Orc"
       }
@@ -40033,20 +43098,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 15 Hero",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "15 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
+          "5",
+          "4",
+          "4",
+          "5",
           "3",
           "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "3",
+          "9+2",
           "5",
-          "7",
-          "7"
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -40177,20 +43242,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 20 Hero",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "20 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "6",
           "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "4",
           "5",
-          "7",
-          "7"
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "5",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Orc"
       }
@@ -40321,20 +43386,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 20 Hero",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "20 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "3",
-          "1",
-          "3",
-          "1",
-          "7",
           "6",
-          "7",
-          "7"
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "4",
+          "10+3",
+          "6",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -40465,20 +43530,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 20 Hero",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "20 Hero",
         "stats": [
           "4",
-          "2",
-          "3",
-          "3",
-          "3",
-          "1",
-          "2",
-          "1",
           "5",
+          "4",
+          "4",
+          "4",
+          "4",
           "5",
+          "4",
+          "8+3",
           "5",
-          "5"
+          "6+1",
+          "6+1"
         ],
         "raceGroup": "Goblin"
       }
@@ -40609,20 +43674,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 20 Hero",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "20 Hero",
         "stats": [
           "4",
-          "4",
-          "3",
-          "4",
-          "4",
-          "1",
-          "2",
-          "1",
-          "8",
-          "5",
           "7",
-          "7"
+          "4",
+          "5",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "5",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Black Orc"
       }
@@ -40753,20 +43818,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 20 Hero",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "20 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "6",
           "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "4",
           "5",
-          "7",
-          "7"
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "5",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -40897,20 +43962,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 25 Hero",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "25 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "6",
           "5",
-          "7",
-          "7"
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "7+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Orc"
       }
@@ -41041,20 +44106,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 25 Hero",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "25 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "3",
-          "1",
-          "3",
-          "1",
-          "7",
           "6",
-          "7",
-          "7"
+          "5",
+          "4",
+          "4",
+          "4",
+          "6",
+          "4",
+          "10+3",
+          "8+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -41185,20 +44250,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 25 Hero",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "25 Hero",
         "stats": [
           "4",
-          "2",
-          "3",
-          "3",
-          "3",
-          "1",
-          "2",
-          "1",
           "5",
+          "4",
+          "4",
+          "4",
+          "4",
           "5",
-          "5",
-          "5"
+          "4",
+          "8+3",
+          "7+2",
+          "7+2",
+          "7+2"
         ],
         "raceGroup": "Goblin"
       }
@@ -41329,20 +44394,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 25 Hero",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "25 Hero",
         "stats": [
           "4",
-          "4",
-          "3",
-          "4",
-          "4",
-          "1",
-          "2",
-          "1",
-          "8",
-          "5",
           "7",
-          "7"
+          "5",
+          "5",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "7+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Black Orc"
       }
@@ -41473,20 +44538,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 25 Hero",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "25 Hero",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "6",
           "5",
-          "7",
-          "7"
+          "4",
+          "5",
+          "4",
+          "5",
+          "4",
+          "10+3",
+          "7+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -41617,20 +44682,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 5 Wizard",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "5 Wizard",
         "stats": [
           "4",
           "3",
           "3",
-          "3",
+          "4",
           "4",
           "1",
           "2",
           "1",
           "7",
-          "5",
-          "7",
-          "7"
+          "6+1",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Orc"
       }
@@ -41761,20 +44826,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 5 Wizard",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "5 Wizard",
         "stats": [
           "4",
+          "4",
           "3",
-          "3",
-          "3",
+          "4",
           "3",
           "1",
           "3",
           "1",
           "7",
-          "6",
-          "7",
-          "7"
+          "7+1",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -41905,20 +44970,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 5 Wizard",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "5 Wizard",
         "stats": [
           "4",
-          "2",
           "3",
           "3",
+          "4",
           "3",
           "1",
           "2",
           "1",
           "5",
-          "5",
-          "5",
-          "5"
+          "6+1",
+          "6+1",
+          "6+1"
         ],
         "raceGroup": "Goblin"
       }
@@ -42049,20 +45114,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 5 Wizard",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "5 Wizard",
         "stats": [
           "4",
+          "5",
           "4",
-          "3",
-          "4",
+          "5",
           "4",
           "1",
           "2",
           "1",
           "8",
-          "5",
-          "7",
-          "7"
+          "6+1",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Black Orc"
       }
@@ -42193,20 +45258,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 5 Wizard",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "5 Wizard",
         "stats": [
           "4",
           "3",
           "3",
-          "3",
+          "4",
           "4",
           "1",
           "2",
           "1",
           "7",
-          "5",
-          "7",
-          "7"
+          "6+1",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -42337,20 +45402,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 10 Wizard",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "10 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
+          "4",
           "3",
           "4",
-          "1",
+          "4",
+          "2",
           "2",
           "1",
-          "7",
-          "5",
-          "7",
-          "7"
+          "8+1",
+          "7+2",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Orc"
       }
@@ -42481,20 +45546,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 10 Wizard",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "10 Wizard",
         "stats": [
           "4",
+          "4",
           "3",
+          "4",
           "3",
-          "3",
-          "3",
+          "2",
+          "4",
           "1",
-          "3",
-          "1",
-          "7",
-          "6",
-          "7",
-          "7"
+          "8+1",
+          "7+2",
+          "8+2",
+          "8+2"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -42625,20 +45690,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 10 Wizard",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "10 Wizard",
         "stats": [
           "4",
+          "4",
+          "3",
+          "4",
+          "3",
           "2",
-          "3",
-          "3",
-          "3",
-          "1",
           "2",
           "1",
-          "5",
-          "5",
-          "5",
-          "5"
+          "6+1",
+          "7+2",
+          "6+1",
+          "7+2"
         ],
         "raceGroup": "Goblin"
       }
@@ -42769,20 +45834,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 10 Wizard",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "10 Wizard",
         "stats": [
           "4",
+          "5",
           "4",
-          "3",
+          "5",
           "4",
-          "4",
-          "1",
+          "2",
           "2",
           "1",
-          "8",
-          "5",
-          "7",
-          "7"
+          "9+1",
+          "7+2",
+          "8+1",
+          "9+2"
         ],
         "raceGroup": "Black Orc"
       }
@@ -42913,20 +45978,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 10 Wizard",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "10 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
+          "4",
           "3",
           "4",
-          "1",
+          "4",
+          "2",
           "2",
           "1",
-          "7",
-          "5",
-          "7",
-          "7"
+          "8+1",
+          "7+2",
+          "8+1",
+          "8+1"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -43057,20 +46122,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 15 Wizard",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "15 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
+          "5",
           "3",
           "4",
-          "1",
-          "2",
-          "1",
-          "7",
           "5",
-          "7",
-          "7"
+          "3",
+          "3",
+          "1",
+          "9+2",
+          "7+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Orc"
       }
@@ -43201,20 +46266,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 15 Wizard",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "15 Wizard",
         "stats": [
           "4",
+          "5",
           "3",
+          "4",
+          "4",
           "3",
-          "3",
-          "3",
+          "4",
           "1",
-          "3",
-          "1",
-          "7",
-          "6",
-          "7",
-          "7"
+          "9+2",
+          "8+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -43345,20 +46410,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 15 Wizard",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "15 Wizard",
         "stats": [
           "4",
-          "2",
+          "4",
           "3",
+          "4",
+          "4",
           "3",
           "3",
           "1",
-          "2",
-          "1",
-          "5",
-          "5",
-          "5",
-          "5"
+          "7+2",
+          "7+2",
+          "7+2",
+          "7+2"
         ],
         "raceGroup": "Goblin"
       }
@@ -43489,20 +46554,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 15 Wizard",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "15 Wizard",
         "stats": [
           "4",
+          "6",
           "4",
-          "3",
-          "4",
-          "4",
-          "1",
-          "2",
-          "1",
-          "8",
           "5",
-          "7",
-          "7"
+          "5",
+          "3",
+          "3",
+          "1",
+          "10+2",
+          "7+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Black Orc"
       }
@@ -43633,20 +46698,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 15 Wizard",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "15 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
+          "5",
           "3",
           "4",
-          "1",
-          "2",
-          "1",
-          "7",
           "5",
-          "7",
-          "7"
+          "3",
+          "3",
+          "1",
+          "9+2",
+          "7+2",
+          "9+2",
+          "9+2"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -43777,20 +46842,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 20 Wizard",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "20 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "5",
+          "4",
+          "4",
+          "5",
+          "4",
           "4",
           "1",
-          "2",
-          "1",
-          "7",
-          "5",
-          "7",
-          "7"
+          "9+2",
+          "8+3",
+          "9+2",
+          "10+3"
         ],
         "raceGroup": "Orc"
       }
@@ -43921,20 +46986,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 20 Wizard",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "20 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "3",
+          "5",
+          "4",
+          "4",
+          "4",
+          "4",
+          "5",
           "1",
-          "3",
-          "1",
-          "7",
-          "6",
-          "7",
-          "7"
+          "9+2",
+          "9+3",
+          "9+2",
+          "10+3"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -44065,20 +47130,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 20 Wizard",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "20 Wizard",
         "stats": [
           "4",
-          "2",
-          "3",
-          "3",
-          "3",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
           "1",
-          "2",
-          "1",
-          "5",
-          "5",
-          "5",
-          "5"
+          "7+2",
+          "8+3",
+          "7+2",
+          "8+3"
         ],
         "raceGroup": "Goblin"
       }
@@ -44209,20 +47274,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 20 Wizard",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "20 Wizard",
         "stats": [
           "4",
-          "4",
-          "3",
-          "4",
-          "4",
-          "1",
-          "2",
-          "1",
-          "8",
+          "6",
           "5",
-          "7",
-          "7"
+          "5",
+          "5",
+          "4",
+          "4",
+          "1",
+          "10+2",
+          "8+3",
+          "9+2",
+          "10+3"
         ],
         "raceGroup": "Black Orc"
       }
@@ -44353,20 +47418,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 20 Wizard",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "20 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
+          "5",
+          "4",
+          "4",
+          "5",
+          "4",
           "4",
           "1",
-          "2",
-          "1",
-          "7",
-          "5",
-          "7",
-          "7"
+          "9+2",
+          "8+3",
+          "9+2",
+          "10+3"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -44497,20 +47562,20 @@ const WFB3_UNITS = [
     "name": "Orc Level 25 Wizard",
     "profiles": [
       {
-        "label": "Orc (base)",
+        "label": "25 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "6",
           "5",
-          "7",
-          "7"
+          "4",
+          "5",
+          "4",
+          "5",
+          "1",
+          "10+3",
+          "8+3",
+          "10+3",
+          "10+3"
         ],
         "raceGroup": "Orc"
       }
@@ -44641,20 +47706,20 @@ const WFB3_UNITS = [
     "name": "Half-Orc Level 25 Wizard",
     "profiles": [
       {
-        "label": "Half-Orc (base)",
+        "label": "25 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "3",
-          "1",
-          "3",
-          "1",
-          "7",
           "6",
-          "7",
-          "7"
+          "5",
+          "4",
+          "4",
+          "4",
+          "6",
+          "1",
+          "10+3",
+          "9+3",
+          "10+3",
+          "10+3"
         ],
         "raceGroup": "Half-Orc"
       }
@@ -44785,20 +47850,20 @@ const WFB3_UNITS = [
     "name": "Goblin Level 25 Wizard",
     "profiles": [
       {
-        "label": "Goblin (base)",
+        "label": "25 Wizard",
         "stats": [
           "4",
-          "2",
-          "3",
-          "3",
-          "3",
+          "5",
+          "5",
+          "4",
+          "4",
+          "4",
+          "5",
           "1",
-          "2",
-          "1",
-          "5",
-          "5",
-          "5",
-          "5"
+          "8+3",
+          "8+3",
+          "8+3",
+          "8+3"
         ],
         "raceGroup": "Goblin"
       }
@@ -44929,20 +47994,20 @@ const WFB3_UNITS = [
     "name": "Black Orc Level 25 Wizard",
     "profiles": [
       {
-        "label": "Black Orc (base)",
+        "label": "25 Wizard",
         "stats": [
           "4",
-          "4",
-          "3",
-          "4",
-          "4",
-          "1",
-          "2",
-          "1",
-          "8",
-          "5",
           "7",
-          "7"
+          "5",
+          "5",
+          "5",
+          "4",
+          "5",
+          "1",
+          "10+3",
+          "8+3",
+          "10+3",
+          "10+3"
         ],
         "raceGroup": "Black Orc"
       }
@@ -45073,20 +48138,20 @@ const WFB3_UNITS = [
     "name": "Savage Orc Level 25 Wizard",
     "profiles": [
       {
-        "label": "Savage Orc (base)",
+        "label": "25 Wizard",
         "stats": [
           "4",
-          "3",
-          "3",
-          "3",
-          "4",
-          "1",
-          "2",
-          "1",
-          "7",
+          "6",
           "5",
-          "7",
-          "7"
+          "4",
+          "5",
+          "4",
+          "5",
+          "1",
+          "10+3",
+          "8+3",
+          "10+3",
+          "10+3"
         ],
         "raceGroup": "Savage Orc"
       }
@@ -48292,7 +51357,7 @@ const WFB3_UNITS = [
           "7",
           "7"
         ],
-        "raceGroup": "Undead Hero"
+        "raceGroup": "Undead"
       }
     ],
     "profileNote": null,
@@ -48412,7 +51477,7 @@ const WFB3_UNITS = [
           "7",
           "7"
         ],
-        "raceGroup": "Undead Hero"
+        "raceGroup": "Undead"
       }
     ],
     "profileNote": null,
@@ -48532,7 +51597,7 @@ const WFB3_UNITS = [
           "7",
           "7"
         ],
-        "raceGroup": "Undead Hero"
+        "raceGroup": "Undead"
       }
     ],
     "profileNote": null,
@@ -48652,7 +51717,7 @@ const WFB3_UNITS = [
           "7",
           "7"
         ],
-        "raceGroup": "Undead Hero"
+        "raceGroup": "Undead"
       }
     ],
     "profileNote": null,
@@ -48772,7 +51837,7 @@ const WFB3_UNITS = [
           "7",
           "7"
         ],
-        "raceGroup": "Undead Hero"
+        "raceGroup": "Undead"
       }
     ],
     "profileNote": null,
@@ -48892,7 +51957,7 @@ const WFB3_UNITS = [
           "8+1",
           "8+1"
         ],
-        "raceGroup": "Evil Sorcerer"
+        "raceGroup": "Necromancer"
       }
     ],
     "profileNote": null,
@@ -49264,7 +52329,7 @@ const WFB3_UNITS = [
           "8+1",
           "8+1"
         ],
-        "raceGroup": "Evil Sorcerer"
+        "raceGroup": "Necromancer"
       }
     ],
     "profileNote": null,
@@ -49636,7 +52701,7 @@ const WFB3_UNITS = [
           "8+1",
           "8+1"
         ],
-        "raceGroup": "Evil Sorcerer"
+        "raceGroup": "Necromancer"
       }
     ],
     "profileNote": null,
@@ -50008,7 +53073,7 @@ const WFB3_UNITS = [
           "8+1",
           "8+1"
         ],
-        "raceGroup": "Evil Sorcerer"
+        "raceGroup": "Necromancer"
       }
     ],
     "profileNote": null,
@@ -50380,7 +53445,7 @@ const WFB3_UNITS = [
           "8+1",
           "8+1"
         ],
-        "raceGroup": "Evil Sorcerer"
+        "raceGroup": "Necromancer"
       }
     ],
     "profileNote": null,

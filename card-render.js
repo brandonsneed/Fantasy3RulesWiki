@@ -171,6 +171,7 @@ function buildOptions(options) {
 
   let html = '<div class="al-opts"><div class="al-opts-h">Options</div>';
   options.forEach(function(group) {
+    if (group.subheading === 'Command:') return; // universal rule, not shown on card
     if (group.subheading) {
       html += `<div class="al-opts-sh">${esc(group.subheading)}</div>`;
     }
@@ -668,7 +669,8 @@ function buildStatFooter(unit, optionsSelected) {
 ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ── standard ────────────────────────────────────────────────────────────── */
-function renderStandard(unit) {
+function renderStandard(unit, renderOpts) {
+  var wikiMode = renderOpts && renderOpts.wikiMode;
   let html = buildProfileTable(unit.profiles);
   html += buildProfileNote(unit.profileNote);
 
@@ -678,15 +680,15 @@ function renderStandard(unit) {
 
   let info = '<div class="al-info">';
   info += buildInfoRows(unit);
-  info += buildSpecialRules(unit.id, unit.name);
-  info += buildWeaponRules(unit.weapons, null, null);
+  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name);
+  if (!wikiMode) info += buildWeaponRules(unit.weapons, null, null);
   info += buildOptions(unit.options);
   info += '</div>';
 
   mid += info;
   html += `<div class="al-mid">${mid}</div>`;
   html += buildFlavour(unit.flavour);
-  html += buildStatFooter(unit);
+  if (!wikiMode) html += buildStatFooter(unit);
   return html;
 }
 
@@ -696,7 +698,8 @@ function renderStandard(unit) {
  * The models row uses a column-direction layout (per index.html inline style).
  * Race-group header rows in the profile table distinguish handler from animals.
  */
-function renderHandler(unit) {
+function renderHandler(unit, renderOpts) {
+  var wikiMode = renderOpts && renderOpts.wikiMode;
   let html = buildProfileTable(unit.profiles);
   html += buildProfileNote(unit.profileNote);
 
@@ -752,8 +755,8 @@ function renderHandler(unit) {
       `</div>`;
   }
 
-  info += buildSpecialRules(unit.id, unit.name);
-  info += buildWeaponRules(unit.weapons, null, null);
+  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name);
+  if (!wikiMode) info += buildWeaponRules(unit.weapons, null, null);
   info += buildOptions(unit.options);
   info += buildPacks(unit.packs);
   info += '</div>';
@@ -770,7 +773,8 @@ function renderHandler(unit) {
  * .al-wm-art → .al-wm-footer (weapons / armour cells).
  * Optional options block sits between the art and footer when present.
  */
-function renderWarMachine(unit) {
+function renderWarMachine(unit, renderOpts) {
+  var wikiMode = renderOpts && renderOpts.wikiMode;
   let html = '';
 
   // Profile table (may be empty for aggregate-style war engine cards)
@@ -810,8 +814,8 @@ function renderWarMachine(unit) {
   }
 
   // Special rules + options block (between art and footer, if present)
-  const srHtml = buildSpecialRules(unit.id, unit.name);
-  const wrHtml = buildWeaponRules(unit.weapons, null, null);
+  const srHtml = wikiMode ? '' : buildSpecialRules(unit.id, unit.name);
+  const wrHtml = wikiMode ? '' : buildWeaponRules(unit.weapons, null, null);
   if (srHtml || wrHtml || (unit.options && unit.options.length)) {
     html += `<div style="padding:4px 10px 6px">` + srHtml + wrHtml + buildOptions(unit.options) + `</div>`;
   }
@@ -856,7 +860,8 @@ function renderWarAltar(unit) {
  * .al-chariot-mid (weapons panel | art | armour panel) →
  * .al-chariot-info-bar (models | points).
  */
-function renderChariot(unit) {
+function renderChariot(unit, renderOpts) {
+  var wikiMode = renderOpts && renderOpts.wikiMode;
   const chariot     = unit.chariot || {};
   const charioLabel = chariot.label || null;
 
@@ -922,8 +927,8 @@ function renderChariot(unit) {
     `</div>`;
 
   // Special rules + options (if any)
-  const srHtml2 = buildSpecialRules(unit.id, unit.name);
-  const wrHtml2 = buildWeaponRules(unit.weapons, null, null);
+  const srHtml2 = wikiMode ? '' : buildSpecialRules(unit.id, unit.name);
+  const wrHtml2 = wikiMode ? '' : buildWeaponRules(unit.weapons, null, null);
   if (srHtml2 || wrHtml2 || (unit.options && unit.options.length)) {
     html += `<div style="padding:4px 10px 6px">` + srHtml2 + wrHtml2 + buildOptions(unit.options) + `</div>`;
   }
@@ -1042,7 +1047,8 @@ function renderAggregate(unit) {
  * @param {Object|null} magicAbilities  { optionName: { abilityName: true } } map
  *   from the army list item — used to expand selected magic item abilities.
  */
-function renderCharacter(unit, selectedOpts, magicAbilities) {
+function renderCharacter(unit, selectedOpts, magicAbilities, renderOpts) {
+  var wikiMode = renderOpts && renderOpts.wikiMode;
   let html = buildProfileTable(unit.profiles);
   if (unit.profileNote) html += buildProfileNote(unit.profileNote);
 
@@ -1110,10 +1116,10 @@ function renderCharacter(unit, selectedOpts, magicAbilities) {
   }
 
   // Special rules
-  info += buildSpecialRules(unit.id, unit.name);
+  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name);
 
   // Weapon rules (print-only; for army-list show only equipped weapons)
-  info += buildWeaponRules(unit.weapons,
+  if (!wikiMode) info += buildWeaponRules(unit.weapons,
     selectedOpts != null ? selectedOpts : null,
     selectedOpts != null ? unit.options : null);
 
@@ -1128,7 +1134,7 @@ function renderCharacter(unit, selectedOpts, magicAbilities) {
 
   html += `<div class="al-mid">${artHtml}${info}</div>`;
   html += buildFlavour(unit.flavour);
-  html += buildStatFooter(unit, selectedOpts);
+  if (!wikiMode) html += buildStatFooter(unit, selectedOpts);
   return html;
 }
 
@@ -1185,26 +1191,27 @@ function renderAlCard(unit, selectedOpts, magicAbilities, renderOpts) {
     case 'character':
       body = renderCharacter(unit,
         selectedOpts != null ? selectedOpts : null,
-        magicAbilities || null);
+        magicAbilities || null,
+        renderOpts);
       break;
     case 'warmachine':
-      body = renderWarMachine(unit);
+      body = renderWarMachine(unit, renderOpts);
       break;
     case 'waraltar':
-      body = renderWarAltar(unit);
+      body = renderWarAltar(unit, renderOpts);
       break;
     case 'handler':
-      body = renderHandler(unit);
+      body = renderHandler(unit, renderOpts);
       break;
     case 'chariot':
-      body = renderChariot(unit);
+      body = renderChariot(unit, renderOpts);
       break;
     case 'aggregate':
-      body = renderAggregate(unit);
+      body = renderAggregate(unit, renderOpts);
       break;
     case 'standard':
     default:
-      body = renderStandard(unit);
+      body = renderStandard(unit, renderOpts);
       break;
   }
 

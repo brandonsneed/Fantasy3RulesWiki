@@ -2125,7 +2125,7 @@
               <p>Units may make 1 <em>complex manoeuvre</em> or up to 3 <em>simple manoeuvres</em>. The first <em>simple manoeuvre</em> is automatic. All others require a leader and a 2D6 roll equal to or under <strong>Ld</strong> or the unit immediately halts. A failed <em>complex manoeuvre</em> also costs the unit its <em>reserve move</em>.</p>
               <p><em><a onclick="navigate('bg-turn-movement');setTimeout(()=>document.getElementById('simple-manoeuvres')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Simple manoeuvres</a>:</em> formation changes, turns, wheels; <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-mixed-ranks')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">changing ranks, deploying flanks</a>; <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-shieldwall')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">wedges, archer wedges, shieldwalls</a>.</p>
               <p><em><a onclick="navigate('bg-turn-movement');setTimeout(()=>document.getElementById('complex-manoeuvres')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Complex manoeuvres</a>:</em> moving backwards, wheeling backwards, wheeling from the centre; <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-mixed-ranks')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">squares</a>, <a onclick="navigate('ag-special-formations');setTimeout(()=>document.getElementById('sf-testudo')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">testudos</a>.</p>
-              <p>Units in single file can follow snaking paths without penalty. Single characters can make as many turns as desired without penalty. A unit with a musician in the front rank adds +1 to <strong>Ld</strong> tests for manoeuvres.</p>
+              <p>Units in single file can follow snaking paths without penalty. Single characters can make as many turns as desired without penalty. A unit with a musician in the front rank adds +1 to <strong>Ld</strong> tests for manoeuvres (max. Ld 10).</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('ag-aerial');setTimeout(()=>document.getElementById('aerial-movement-in-the-air')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Aerial Movement</a></h4>
               <p><strong>Limitations:</strong></p>
@@ -2169,6 +2169,7 @@
                   <tr><td><strong>−1</strong></td><td>Firer moved this turn (turning or manoeuvring counts)</td></tr>
                   <tr><td><strong>−1</strong></td><td>Target moved more than 6″ in its previous reserve phase</td></tr>
                   <tr><td><strong>−1</strong></td><td>Target is charging this turn</td></tr>
+                  <tr><td><strong>−1</strong></td><td>Throwing improvised missiles (stones, bottles, bricks)</td></tr>
                   <tr><td><strong>−1</strong></td><td>Target behind soft cover (vegetation, woods, wagons)</td></tr>
                   <tr><td><strong>−2</strong></td><td>Target behind hard cover (walls, buildings, solid obstacles)</td></tr>
                   <tr><td><strong>−1</strong></td><td>Small target (under 1′ high and long)</td></tr>
@@ -2245,11 +2246,11 @@
                   <tr><td><strong>+1</strong></td><td>Following up — won previous round and followed up the enemy</td></tr>
                   <tr><td><strong>+1</strong></td><td>Advantage of higher ground</td></tr>
                   <tr><td><strong>−1</strong></td><td>Enemy behind an obstacle</td></tr>
-                  <tr><td><strong>−1</strong></td><td>Attacker pushed back this round</td></tr>
-                  <tr><td><strong>−1</strong></td><td>Attacker subject to stupidity and failed test this turn</td></tr>
+                  <tr><td><strong>−2</strong></td><td>Unarmed attacker (exception: stomp, bite, gore, claw or tail attacks)</td></tr>
                   <tr><td colspan="2" style="padding-top:6px;font-size:11px;color:var(--text-faint)">See <a onclick="navigate('ag-weapons')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">weapon-specific modifiers</a> in the Advanced Game.</td></tr>
                 </tbody>
               </table>
+              <p style="font-size:0.9em;color:var(--text-dim);margin-top:4px"><em>Note:</em> Models affected by <em>stupidity</em> in close combat <em>may not strike</em> — this is not a to-hit modifier; affected models simply do not fight. If an odd number of models are engaged, the single unaffected model fights on a D6 score of 4+. See <a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('stupidity')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Stupidity</a>.</p>
 
             </div>
           </div><!-- /wiki-section: qr-combat -->
@@ -2372,10 +2373,10 @@
                   <tr><td>Long Bow</td><td>30″</td><td>3</td><td>−1/0</td><td></td></tr>
                   <tr><td>Crossbow</td><td>30″</td><td>4</td><td>−1/0</td><td>cannot move and fire during the same turn</td></tr>
                   <tr><td>Repeating crossbow</td><td>16″</td><td>3</td><td>−/-</td><td>may be fired twice per turn at −1 to hit</td></tr>
-                  <tr><td>Throwing Spear/Axe</td><td>4″</td><td>S</td><td>−1/-</td><td>may be thrown as model charges into combat</td></tr>
+                  <tr><td>Throwing Spear/Axe</td><td>4″</td><td>S</td><td>−1/−1</td><td>may be thrown as model charges into combat</td></tr>
                   <tr><td>Throwing Dart/Knife</td><td>6″</td><td>S</td><td>−/-</td><td>may be thrown as model charges into combat</td></tr>
                   <tr><td>Javelin</td><td>8″</td><td>S</td><td>−/-</td><td>may be thrown as model charges into combat</td></tr>
-                  <tr><td>Sling</td><td>18″</td><td>S</td><td>−/-</td><td>may fire twice at ½ range if no move that turn</td></tr>
+                  <tr><td>Sling</td><td>18″</td><td>3</td><td>−/-</td><td>may fire twice at ½ range if no move that turn</td></tr>
                   <tr><td>Blowpipe</td><td>12″</td><td>D6</td><td>−/-</td><td></td></tr>
                   <tr><td>Improvised Weapon</td><td>3″</td><td>S−2</td><td>+1/+1</td><td></td></tr>
                 </tbody>
@@ -2404,10 +2405,11 @@
                   <tr><td>Improvised Weapon</td><td>—</td><td>−1</td><td>—</td><td>+1</td><td></td></tr>
                   <tr><td>Dagger</td><td>+1</td><td>—</td><td>−1</td><td>+1</td><td></td></tr>
                   <tr><td>Double-handed Weapon</td><td>−1</td><td>—</td><td>+1</td><td>−1</td><td>Cannot be used with shield</td></tr>
-                  <tr><td>Flail</td><td>—</td><td>—</td><td>+1</td><td>—</td><td>Charge at normal rate; −1 if pushed back; −1 to hit if WS less than 3</td></tr>
-                  <tr><td>Halberd</td><td>—</td><td>—</td><td>+1</td><td>—</td><td>Cannot be used with shield; +1 vs aerial/mounted if not pushed back</td></tr>
-                  <tr><td>Pike</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Cannot be used with shield; 2nd–4th ranks may attack; all mods lost if pushed back; vs mounted: +6; vs aerial: +1</td></tr>
-                  <tr><td>Spear</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Half of 2nd rank may attack; vs aerial in 1st turn: +1; vs mounted if not pushed back: +2</td></tr>
+                  <tr><td>Flail</td><td>—</td><td>—</td><td>+1</td><td>—</td><td>Charge at normal rate; −1 I (next round) if pushed back; WS 3+ required (else counts as improvised)</td></tr>
+                  <tr><td>Halberd</td><td>—</td><td>—</td><td>+1</td><td>—</td><td>Cannot use shield<br>+1 I vs mounted if not pushed back<br>+1 I vs aerial</td></tr>
+                  <tr><td>Net</td><td>—</td><td>—</td><td>—</td><td>—</td><td>+1 to own armour save; attackers −1 to hit; cannot use with shield</td></tr>
+                  <tr><td>Pike</td><td>—</td><td>—</td><td>—</td><td>—</td><td>+3 I if not pushed back (+6 vs mounted)<br>+1 I vs aerial<br>Every 2nd model in 2nd rank, every 3rd in 3rd rank, every 4th in 4th rank may attack<br>Cannot use shield; all I mods and multi-rank lost if pushed back</td></tr>
+                  <tr><td>Spear</td><td>—</td><td>—</td><td>—</td><td>—</td><td>+1 I (1st round)<br>+2 I vs mounted if not pushed back<br>+1 I vs aerial<br>Half of 2nd rank may attack (directly behind engaged model only). Can use shield.</td></tr>
                   <tr><td>Pistol</td><td>—</td><td>−1</td><td>—</td><td>−2</td><td>Only fire once in a combat</td></tr>
                 </tbody>
               </table>
@@ -2416,10 +2418,10 @@
               <table class="wiki-table wiki-table-compact wiki-table-text no-last-highlight" style="width:100%;table-layout:fixed;margin-top:8px;font-size:13px">
                 <thead><tr><th style="text-align:left">Weapon Type</th><th style="width:3em">I Mod</th><th style="width:3.5em">To Hit Mod</th><th style="width:3.5em">Str Mod</th><th style="width:4em">Save Mod</th><th>Notes</th></tr></thead>
                 <tbody>
-                  <tr><td>Hand Weapon</td><td>—</td><td>+1</td><td>—</td><td>—</td><td></td></tr>
+                  <tr><td>Hand Weapon</td><td>—</td><td>+1</td><td>—</td><td>—</td><td>vs foot under 10′ only; not if pushed back</td></tr>
                   <tr><td>Improvised Weapon</td><td>—</td><td>−1</td><td>—</td><td>+1</td><td></td></tr>
                   <tr><td>Dagger</td><td>+1</td><td>—</td><td>−1</td><td>+1</td><td></td></tr>
-                  <tr><td>Flail</td><td>−1</td><td>−1*</td><td>+1</td><td>+1*</td><td>*if WS less than 4</td></tr>
+                  <tr><td>Flail</td><td>—</td><td>−1*</td><td>+1</td><td>+1*</td><td>−1 I from 2nd round onward; *if WS less than 4</td></tr>
                   <tr><td>Lance</td><td>+2</td><td>—</td><td>+2</td><td>−1</td><td>hand weapon after 1st turn</td></tr>
                   <tr><td>Spear</td><td>+1*</td><td>+1**</td><td>+1***</td><td>—</td><td>*in 1st turn; **vs enemy under 10′ if not pushed back; ***if charging</td></tr>
                   <tr><td>Pistol</td><td>—</td><td>−1</td><td>—</td><td>−2</td><td>only fire once in a combat</td></tr>
@@ -2443,7 +2445,7 @@
                 <li>Units within 4″ of friendly or enemy routing troops</li>
                 <li>Units hurling insults at friendly troops while subject to <em>animosity</em></li>
                 <li>Flying creatures of any type</li>
-                <li>Large vehicles and war machines (excluding 1 and 2 horse chariots)</li>
+                <li>Large vehicles, wagons, and war machines — <em>light chariots</em> (1–2 draft creatures and 1–2 crew) may still reserve</li>
               </ul>
 
             </div>
@@ -2453,9 +2455,11 @@
             <h3>H. Magic Phase</h3>
             <div class="wiki-body">
               <p>Dispel any spells whose duration has now expired and remove relevant effects from play. The GM or player may move or redirect existing spells where appropriate.</p>
-              <p>Wizards who were wounded during the combat phase or who are routing may not cast spells.</p>
+              <p>Wizards who were wounded during the combat phase or who are routing may not cast spells. A wizard who does not move, shoot, fight, or cast spells this turn recovers <strong>1 magic point</strong> at the end of the turn (up to their power level maximum).</p>
               <p>Wizards with less than 12 magic points left must roll equal to or under their <em>Intelligence</em> or the number of remaining points (whichever is higher) on 2D6 to <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-casting')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">successfully cast a spell</a> — the relevant magic points must be expended regardless of the spell's success or failure.</p>
-              <p>Spell targets may be allowed a <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-save')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">magic save</a>, requiring a 2D6 roll equal to or under the target's <strong>WP</strong>. Wizards may augment their <em>magic save</em>, gaining +1 per magic point expended: the caster may also reduce the target's save by −1 per extra point — these must be spent before the <em>saving throw</em> is made.</p>
+              <p>Spell targets may be allowed a <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-save')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">magic save</a>, requiring a 2D6 roll equal to or under the target's <strong>WP</strong>. Wizards may augment their <em>magic save</em>, gaining +1 per magic point expended: the caster may also reduce the target's save by −1 per extra point — when both apply, each side secretly commits their points simultaneously before the throw.</p>
+              <p style="font-size:0.9em;color:var(--text-dim);margin-top:4px"><em>Note:</em> <strong>Undead, ethereal creatures, demons, and elementals</strong> are magically vulnerable and have no <em>magic saving throw</em>. If such a creature is itself a wizard, it may use its own magic points to generate a save (base 0, +1 per MP spent).</p>
+              <p style="font-size:0.9em;color:var(--text-dim);margin-top:4px"><em>Note:</em> Wizards wearing armour or carrying shields cannot recover magic points by resting, and all spells cost extra MPs (+1 per armour save pip). See <a onclick="navigate('ma-overview');setTimeout(()=>document.getElementById('magic-armour')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Wizards and Armour</a>.</p>
               <p>Test for <em>rout</em> in any unit that has just lost a quarter of its current strength to the combined effects of missile and magical attacks this turn — see <a onclick="document.getElementById('qr-rout')?.scrollIntoView({behavior:'smooth'})" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">K. Rout</a>.</p>
             </div>
           </div><!-- /wiki-section: qr-magic -->
@@ -2469,7 +2473,7 @@
               <ol style="margin:6px 0 8px 20px;padding:0;line-height:1.8">
                 <li>Be free of pursuers — no enemy in base-to-base contact</li>
                 <li>Retain at least 25% of its original strength</li>
-                <li>Have a non-routing, friendly unit of at least 5 models closer than any enemy units</li>
+                <li>Be closer to friendly models than to any enemy unit (see <a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Routs &amp; Rallying</a> for full conditions)</li>
                 <li>Not be within range of any <em>fear</em>-causing enemy</li>
                 <li>Not have started routing during the current turn</li>
               </ol>
@@ -2484,40 +2488,86 @@
               <p>Units are subject to their own psychology and that of their leader. Leaders and characters always follow the psychology of the unit they accompany. Unless otherwise noted, tests are made against the unit's <strong>Cl</strong>.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('fear')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Fear</a></h4>
-              <p>Test if the unit wishes to fire missiles at a <em>feared</em> enemy within charge range (failure: no shot fired); wishes to charge a <em>feared</em> enemy (failure: unit halts for the rest of the turn); or is charged by a <em>feared</em> enemy (failure: unit routs immediately).</p>
-              <p>Any unit pushed back and followed up by a <em>feared</em> enemy is automatically routed. Models with a <em>ranged fear</em> ability affect enemy units within <em>fear</em> range: all attacks at −1 to hit; no attempt may be made to <em>rally</em>; no <em>reserve move</em> may be made. Bonuses to the <em>fear</em> ability (eg <em>fear</em> +2) are applied to the enemy's dice roll against <strong>Cl</strong>.</p>
+              <p>Test (vs <strong>Cl</strong>) when:</p>
+              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+                <li>Wishing to <em>fire</em> at a <em>feared</em> enemy within charge range — failure: no shot fired</li>
+                <li>Wishing to <em>charge</em> a <em>feared</em> enemy — failure: unit halts for the rest of the turn</li>
+                <li>Being <em>charged</em> by a <em>feared</em> enemy — failure: unit routs immediately</li>
+              </ul>
+              <p>A unit <em>pushed back</em> and followed up by a <em>feared</em> enemy is automatically routed.</p>
+              <p><strong>Ranged fear</strong> affects all enemy within fear range: −1 to hit; cannot <em>rally</em>; no <em>reserve move</em>. A <em>fear +N</em> bonus adds N to the enemy's roll against <strong>Cl</strong>.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('frenzy')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Frenzy</a></h4>
-              <p>Test when a unit <em>subject to frenzy</em> charges — roll 2D6 against the unit's <strong>Cl</strong>. <strong>Note: this test is inverted</strong> — rolling <em>more than</em> <strong>Cl</strong> means the unit <em>goes frenzied</em>; rolling equal to or under <strong>Cl</strong> means it keeps its cool and does not frenzy. The following rules apply while frenzied: <em>frenzy</em> continues while the unit remains in base-to-base contact with the enemy; the unit must always <em>follow up</em> and <em>pursue</em>; the unit never takes other <em>psychology</em> tests or <em>rout</em> tests; models gain +1 to hit, +1 to wound, and +1 to any <em>saves</em> made.</p>
+              <p>Test when a unit <em>subject to frenzy</em> charges — 2D6 vs <strong>Cl</strong>. <strong>Inverted:</strong> rolling <em>more than</em> <strong>Cl</strong> = frenzied; equal or under = controlled.</p>
+              <p>While frenzied:</p>
+              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+                <li>Continues while the unit remains in base-to-base contact with the enemy</li>
+                <li>Must always <em>follow up</em> and <em>pursue</em></li>
+                <li>Ignores all other <em>psychology</em> tests and <em>rout</em> tests</li>
+                <li>+1 to hit, +1 to wound, +1 to saves</li>
+              </ul>
+              <p style="font-size:0.9em;color:var(--text-dim);margin-top:4px"><em>Note:</em> The controlling player may add <em>or subtract</em> the leader's <strong>Cl</strong> bonus when testing — whipping troops up makes frenzy more likely, restraint makes it less. See <a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('frenzy')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Frenzy</a>.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('hatred')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hatred</a></h4>
-              <p>Units <em>subject to hatred</em> must always charge a <em>bated</em> enemy, or shoot at them if outside charge range, unless a <strong>Cl</strong> test is passed. Models in hand-to-hand combat with <em>bated</em> enemy gain +1 to hit, and +1 to <strong>Ld</strong> for rout tests. They must always pursue routing enemy.</p>
+              <p>Units <em>subject to hatred</em> must always charge or shoot at a <em>bated</em> enemy (pass <strong>Cl</strong> to resist) and must always pursue routing <em>bated</em> enemy. In hand-to-hand combat with a <em>bated</em> enemy:</p>
+              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+                <li>+1 to hit</li>
+                <li>+1 to <strong>Ld</strong> for rout tests (only if the hated element caused the push-back)</li>
+              </ul>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('panic')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Panic</a></h4>
-              <p>A unit must pass a <em>panic</em> test or <em>rout</em> immediately if: within 4″ of a visible, friendly, routing unit at the start of their turn; charged in the side or rear while engaged in combat to the front (unless models have <em>stomp</em> or <em>tail</em> attacks); charged by a unit that has emerged from concealing cover; charged while crossing an obstacle or entering a building; a friendly unit within 12″ routs due to close combat losses (<strong>Cl</strong> bonus of +1 if the unit outnumbers the routers by 4:1); a character leaves a unit while it is engaged in combat; the unit <em>fears</em> fire and is attacked by fire or comes within 4″ of a burning building; at any time the GM thinks appropriate.</p>
+              <p>Test or rout immediately if:</p>
+              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+                <li>Within 4″ of a visible, friendly routing unit at the start of their turn</li>
+                <li>Charged in the side or rear while engaged to the front (exception: stomp or tail attacks)</li>
+                <li>Charged by a unit that has emerged from concealing cover</li>
+                <li>Charged while crossing an obstacle or entering a building</li>
+                <li>A friendly unit within 12″ routs due to combat losses (+1 <strong>Cl</strong> bonus if outnumbering routers 4:1)</li>
+                <li>A character leaves while the unit is engaged (exception: 3+ characters and the lowest-level one leaves — see <a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('panic')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Panic</a>)</li>
+                <li>The unit <em>fears fire</em> and is attacked by fire, or comes within 4″ of a burning building (see <a onclick="navigate('ag-fire')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Fire rules</a>)</li>
+                <li>At any time the GM thinks appropriate</li>
+              </ul>
+              <p style="font-size:0.9em;color:var(--text-dim);margin-top:4px"><em>Note:</em> Units that rout from a failed panic test do not trigger further panic cascades — only routs caused by combat losses do.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('stupidity')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Stupidity</a></h4>
-              <p>Test at the start of the side's turn. If <em>stupid</em> while in combat, half the models fail to fight (roll D6 for odd models and characters, 1–3 indicating inaction). If not in combat, roll a D6:</p>
+              <p>Test at the start of the side's turn. While in combat: half the models fail to fight (roll D6 for odd numbers and characters — 1–3 = inactive). While not in combat:</p>
               <table class="wiki-table wiki-table-compact no-last-highlight" style="margin-top:8px;width:auto">
                 <tbody>
                   <tr><td style="width:3em;white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">1–3</td><td>unit moves at half speed in a random direction (no penalty for turning)</td></tr>
-                  <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">4–6</td><td>unit remains inactive with models staring mindlessly or falling asleep</td></tr>
+                  <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">4–6</td><td>unit remains inactive — models stare mindlessly or fall asleep</td></tr>
                 </tbody>
               </table>
-              <p style="margin-top:8px">A <em>stupid</em> unit encountering an enemy while wandering rolls a second D6: 1–2 halt and stare stupidly; 3–4 each model makes 1 attack; 5–6 attack as normal. Units affected by <em>stupidity</em> ignore all other <em>psychology</em> tests.</p>
+              <p style="margin-top:8px">Not in combat: no missile fire, no magic, no reserve move. If a stupid unit wanders into enemy, roll D6: 1–2 halt and stare; 3–4 each model makes 1 attack; 5–6 attack as normal. Units affected by <em>stupidity</em> ignore all other <em>psychology</em> tests.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('be-overview');setTimeout(()=>document.getElementById('be-animosity')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Animosity</a></h4>
-              <p>Test if a unit causing animosity is within 12″ at the start of the turn, unless enemy troops are within 12″ or charge range, there are <em>bated</em> enemy within sight, or the unit is already engaged in combat. Roll a D6, deduct the leaders' <strong>Ld</strong> bonus and modify: +1 if the animosity unit is directly in front and in charge range; +1 if of a different race; +1 if no enemy in sight.</p>
+              <p>Test at the start of the turn if a unit causing animosity is within 12″ — unless:</p>
+              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+                <li>Enemy troops are within 12″ or within the unit's charge reach</li>
+                <li><em>Bated</em> enemy are within sight</li>
+                <li>The unit is already in close combat from a previous animosity result</li>
+              </ul>
+              <p>Always test against the <em>closest</em> animosity unit only. Roll D6 − leader's <strong>Ld</strong> bonus, then add:</p>
+              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+                <li>+1 if the animosity unit is directly in front and within charge reach</li>
+                <li>+1 if the animosity unit is of a different race</li>
+                <li>+1 if no enemies are in sight</li>
+              </ul>
               <table class="wiki-table wiki-table-compact no-last-highlight" style="margin-top:8px;width:auto">
                 <tbody>
-                  <tr><td style="width:3em;white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">7+</td><td>charges the other unit — if beyond charge range, moves as close as possible and fires missiles (hurling deadly insults if no missiles are available)</td></tr>
-                  <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">6</td><td>fires missiles if available, or moves as close as possible (no closer than 1″) and exchanges jeers — neither unit can <em>reserve move</em></td></tr>
+                  <tr><td style="width:3em;white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">7+</td><td>charges the animosity unit if within reach — if not, moves as close as possible and fires missiles; if no missiles, simply moves as close as possible</td></tr>
+                  <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">6</td><td>fires missiles if available; if not, moves to within 1″ and exchanges jeers — neither unit may <em>reserve move</em></td></tr>
                   <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">5−</td><td>unit behaves normally</td></tr>
                 </tbody>
               </table>
+              <p style="margin-top:8px">Once in animosity combat, leader models are placed out of the fight. Combat continues until enemy come within 12″, within the fighting unit's charge reach, or bated enemy appear in sight. At the end of any round where one side pushes the other back:</p>
+              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+                <li>Winning side rolls 2D6 vs <strong>Ld</strong> (as a rout test) — if passed, leaders hold their troops back; no follow-up; pushed-back unit takes no rout test; both units freeze for the rest of the turn</li>
+                <li>If combat is ended by intervening enemy instead: units are not unformed, but auto-rout if pushed back by the fresh enemy</li>
+                <li>If a unit routs from animosity combat: it automatically rallies on its first rally test</li>
+              </ul>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('be-overview');setTimeout(()=>document.getElementById('be-saga-animosity')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Saga Animosity</a></h4>
-              <p>As normal <em>animosity</em>, except no <strong>Ld</strong> test is required to break off combat after a <em>push back</em> (if drawn, both sides pull back 2″) — the remainder of the turn is spent jeering at the opposition.</p>
+              <p>As <em>animosity</em>, except no <strong>Ld</strong> test is required to break off — the winning side automatically holds and jeers. On a draw, both sides pull back 2″ and spend the remainder of the turn exchanging insults.</p>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('be-overview');setTimeout(()=>document.getElementById('be-instability')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Instability</a></h4>
               <p>Test if: the unit is pushed back in combat; the unit begins its turn within 12″ of a wizard using a relevant zone spell; a wizard casts <em>dispel magic</em> at the unit. Roll a D6:</p>
@@ -2531,9 +2581,11 @@
                   <tr><td style="white-space:nowrap;font-family:'Share Tech Mono',monospace;color:var(--accent);font-weight:bold">6</td><td>any casualties caused this turn are returned to the unit, though still counted for establishing the winner of a combat</td></tr>
                 </tbody>
               </table>
+
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('mixed-units')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Mixed Units</a></h4>
-              <p>Psychology applying to a leader also applies to his troops, and vice versa. Where a unit consists of mixed races, all their combined psychology applies. For <strong>Cl</strong> tests in mixed-race units, the lowest value among all troops is used.</p>
+              <p>Psychology applying to a leader also applies to his troops, and vice versa. In mixed-race units, all their combined psychology applies. For <strong>Cl</strong> tests in mixed-race units, the lowest value among all troops is used.</p>
             </div>
+          
           </div><!-- /wiki-section: qr-psychology -->
 
           <div class="wiki-section" id="qr-rout">
@@ -2541,9 +2593,9 @@
             <div class="wiki-body">
               <p>Test (roll 2D6 equal to or under unit's <strong>Ld</strong>) if the unit: has just lost 25% of its current strength to missile and magical attacks; has lost 25% of its original strength and has just lost the current turn of combat; loses a combat fought to capture a standard; has been penetrated by a <em>wedge</em>.</p>
               <p>The unit automatically routs if it has: failed a <em>panic</em> test; been <em>pushed back</em> while <em>unformed</em>; been <em>followed up</em> by a <em>feared</em> enemy; failed to break free of pursuers after a voluntary withdrawal from combat. <em>Frenzied</em> units never take <em>rout</em> tests.</p>
-              <p>If a rout is caused, the enemy gets a <em>free hack</em> for each model remaining in the front rank: the routers are hit automatically — armour saves are allowed, ignoring shields.</p>
-              <p>The routing unit turns and moves away at double rate during its side's <em>movement phase</em> (with no <em>reserve move</em>) towards the nearest table edge until it has <a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">rallied</a> or has left the table. Terrain penalties apply, but no <em>manoeuvres</em> are made.</p>
-              <p>The enemy which caused the rout will pursue the fleeing unit unless a 2D6 roll equal to or under <strong>Ld</strong> is made. Units routing a <em>bated</em> enemy must always pursue. Pursuers that keep contact make all subsequent attacks as <em>free hacks</em>.</p>
+              <p>If a rout is caused, the enemy fights a <em>free hack</em>: all attacks hit automatically — armour saves apply, but shields are ignored. Up to two rounds of free hacks may occur (one as the unit initially flees; a second if pursuers maintain contact). See <a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('the-free-hack')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Routs &amp; Rallying</a> for full procedure.</p>
+              <p>The routing unit turns and moves away at double rate <strong>at the start</strong> of its side's <em>movement phase</em>, before any other movement (no <em>reserve move</em>). Direction is determined by the GM — typically towards the most obvious escape route — until it has <a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">rallied</a> or has left the table. Terrain penalties apply, but no <em>manoeuvres</em> are made.</p>
+              <p>The enemy which caused the rout will pursue the fleeing unit unless a 2D6 roll equal to or under <strong>Ld</strong> is made. Units routing a <em>bated</em> enemy must always pursue. Pursuers that keep contact make all subsequent attacks as <em>free hacks</em>. To halt an <em>ongoing</em> pursuit voluntarily, a <strong>Ld</strong>−1 test is required; success leaves the unit <em>unformed</em> until its next movement phase. See <a onclick="navigate('bg-turn-rallying')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Routs &amp; Rallying</a>.</p>
               <p>If a pursuing unit loses contact or kills all the routers, it becomes unformed until the end of its next <em>movement phase</em>. An unformed unit makes <strong>Ld</strong>, <strong>Int</strong>, <strong>Cl</strong> and <strong>WP</strong> tests at −1, and automatically <em>routs</em> if <em>followed up</em>.</p>
             </div>
           </div><!-- /wiki-section: qr-rout -->
@@ -2553,13 +2605,13 @@
             <div class="wiki-body">
               <p>Determine the winner according to the <a onclick="navigate('ag-winners-losers');setTimeout(()=>document.getElementById('wl-results')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">victory points</a> gained by each side — if the side with the highest number has 10% more points it has won, otherwise the battle is a draw (the higher scoring side gaining a winning draw in competition).</p>
               <h4 class="wiki-subsection-heading">Victory Points</h4>
-              <p>Specific conditions with points bonuses may be determined in advance, otherwise add up the points values of surviving models on each side and award the following bonus points:</p>
+              <p>Specific conditions with points bonuses may be determined in advance, otherwise add up the points values of surviving models on each side and award the following bonus points. Routing models are not counted. Models rallying during the <em>final turn</em> count at half value.</p>
               <table class="wiki-table wiki-table-compact wiki-table-text no-last-highlight" style="margin:6px 0 4px;width:auto">
                 <thead><tr><th colspan="2" style="text-align:left;padding-bottom:4px;font-size:11px;color:var(--text-faint);font-weight:normal;letter-spacing:0.08em;text-transform:uppercase">Scenery &amp; Territory</th></tr></thead>
                 <tbody>
                   <tr><td style="width:5em;white-space:nowrap"><strong>50 pts</strong></td><td>Hill occupied by 5+ friendly troops with no enemy present</td></tr>
-                  <tr><td><strong>50 pts</strong></td><td>Control of a table zone (occupied by friendly, no uncontested enemy)</td></tr>
-                  <tr><td><strong>100 pts</strong></td><td>Control of a bridge (friendly model on it, no enemy within charge distance)</td></tr>
+                  <tr><td><strong>50 pts</strong></td><td>Control of a table zone — 1+ friendly units present, no enemy units; enemy outnumbered 3:1 counts as no enemy (separate 3:1 thresholds apply for characters and creatures over 10′ — see <a onclick="navigate('ag-winners-losers')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Victory</a>)</td></tr>
+                  <tr><td><strong>100 pts</strong></td><td>Control of a bridge (friendly model on it, no enemy within charge distance; unoccupied bridge defaults to zone controller)</td></tr>
                   <tr><td><strong>50 pts</strong></td><td>Enemy general slain</td></tr>
                   <tr><td><strong>100 pts</strong></td><td>Own baggage intact and unoccupied by enemy at game end</td></tr>
                 </tbody>
@@ -2583,12 +2635,13 @@
               <p>Army composition limits (as a percentage of total army points):</p>
               <table class="wiki-table wiki-table-compact wiki-table-text no-last-highlight" style="margin:6px 0 10px;width:auto">
                 <tbody>
-                  <tr><td style="width:5em"><strong>≥ 50%</strong></td><td><strong>Rank &amp; file</strong> — core troops must make up at least half the army</td></tr>
-                  <tr><td><strong>≤ 25%</strong></td><td><strong>Characters</strong> — heroes, wizards, and commanders combined</td></tr>
-                  <tr><td><strong>≤ 33%</strong></td><td><strong>Allies</strong> — allied contingents from other army lists</td></tr>
-                  <tr><td><strong>≤ 33%</strong></td><td><strong>Mercenaries</strong> — mercenary contingents</td></tr>
+                  <tr><td style="width:5em"><strong>≥ ⅓</strong></td><td><strong>Rank &amp; file</strong> — core troops minimum (exact fraction varies by army list)</td></tr>
+                  <tr><td><strong>≤ ½</strong></td><td><strong>Characters</strong> — heroes, wizards, and commanders combined (exact maximum varies by army list)</td></tr>
+                  <tr><td><strong>≤ ⅓</strong></td><td><strong>Allies</strong> — allied contingents from other army lists</td></tr>
+                  <tr><td><strong>≤ ⅓</strong></td><td><strong>Mercenaries</strong> — mercenary contingents</td></tr>
                 </tbody>
               </table>
+              <p style="font-size:0.9em;color:var(--text-dim);margin-top:4px"><em>Note:</em> Rank &amp; file and character limits are general guides only — consult each army's specific list for exact fractions, as they vary. See <a onclick="navigate('wa-army-selection')" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Army Selection</a>.</p>
               <p><strong>Standard bearers and musicians</strong> cost double the basic trooper points cost of their unit.</p>
             </div>
           </div><!-- /wiki-section: qr-army-notes -->
@@ -6472,7 +6525,7 @@
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>1</td><td>3</td><td>1</td><td>7</td><td>8+1</td><td>8+1</td><td>8+1</td><td>60</td></tr>
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>2</td><td>4</td><td>1</td><td>8+1</td><td>9+2</td><td>8+1</td><td>9+2</td><td>85</td></tr>
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Wizard</td><td>4</td><td>5</td><td>3</td><td>4</td><td>4</td><td>3</td><td>4</td><td>1</td><td>9+2</td><td>9+2</td><td>9+2</td><td>9+2</td><td>155</td></tr>
-              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>5</td><td>1</td><td>1</td><td>9+2</td><td>10+3</td><td>10+3</td><td>10+3</td><td>240</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>1</td><td>9+2</td><td>10+3</td><td>10+3</td><td>10+3</td><td>240</td></tr>
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Wizard</td><td>4</td><td>6</td><td>5</td><td>4</td><td>4</td><td>4</td><td>6</td><td>1</td><td>10+3</td><td>10+3</td><td>10+3</td><td>10+3</td><td>340</td></tr>
             </tbody>
           </table>
@@ -7077,7 +7130,7 @@
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>1</td><td>3</td><td>1</td><td>7</td><td>8+1</td><td>8+1</td><td>8+1</td><td>60</td></tr>
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>2</td><td>4</td><td>1</td><td>8+1</td><td>9+2</td><td>8+1</td><td>9+2</td><td>85</td></tr>
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Wizard</td><td>4</td><td>5</td><td>3</td><td>4</td><td>4</td><td>3</td><td>4</td><td>1</td><td>9+2</td><td>9+2</td><td>9+2</td><td>9+2</td><td>155</td></tr>
-              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>5</td><td>1</td><td>1</td><td>9+2</td><td>10+3</td><td>9+2</td><td>10+3</td><td>240</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>1</td><td>9+2</td><td>10+3</td><td>9+2</td><td>10+3</td><td>240</td></tr>
               <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Wizard</td><td>4</td><td>6</td><td>5</td><td>4</td><td>4</td><td>4</td><td>6</td><td>1</td><td>10+3</td><td>10+3</td><td>10+3</td><td>10+3</td><td>340</td></tr>
             </tbody>
           </table>
@@ -9127,21 +9180,111 @@
           <p><strong>Army Standard:</strong> The army is allowed one army standard, carried by a character model and paid for from the character model points allowance. Army standards cost 50 points.</p>
           <p><strong>Points:</strong> Points costs are for a basic unarmoured model with a hand weapon. Characters should be provided with armament as depicted on the model and selected from the following list. If the model is carrying a piece of equipment <em>not</em> mentioned on the table, it may be ignored.</p>
 
-          <h4 class="wiki-subsection-heading" id="wa-og-char-profiles">Race Profiles</h4>
-          <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:8px">
-            <thead><tr><th style="text-align:left;padding-left:4px;white-space:nowrap">Race</th><th>M</th><th>WS</th><th>BS</th><th>S</th><th>T</th><th>W</th><th>I</th><th>A</th><th>Ld</th><th>Int</th><th>Cl</th><th>WP</th><th>Pts</th></tr></thead>
+          <h4 class="wiki-subsection-heading" id="wa-og-char-profiles">Character Profiles</h4>
+          <p style="font-size:11px;font-weight:600;margin:10px 0 3px;color:var(--text)">Goblin</p>
+          <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:4px;margin-bottom:14px">
+            <thead><tr><th style="text-align:left;padding-left:4px;white-space:nowrap">Type</th><th>M</th><th>WS</th><th>BS</th><th>S</th><th>T</th><th>W</th><th>I</th><th>A</th><th>Ld</th><th>Int</th><th>Cl</th><th>WP</th><th>Pts</th></tr></thead>
             <tbody>
-              <tr><td style="text-align:left;padding-left:4px">Goblin</td><td>4</td><td>2</td><td>3</td><td>3</td><td>3</td><td>1</td><td>2</td><td>1</td><td>5</td><td>5</td><td>5</td><td>5</td><td>2½</td></tr>
-              <tr><td style="text-align:left;padding-left:4px">Half-Orc</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>3</td><td>1</td><td>7</td><td>6</td><td>7</td><td>7</td><td>5</td></tr>
-              <tr><td style="text-align:left;padding-left:4px">Orc</td><td>4</td><td>3</td><td>3</td><td>3</td><td>4</td><td>1</td><td>2</td><td>1</td><td>7</td><td>5</td><td>7</td><td>7</td><td>5½</td></tr>
-              <tr><td style="text-align:left;padding-left:4px">Savage Orc</td><td>4</td><td>3</td><td>3</td><td>3</td><td>4</td><td>1</td><td>2</td><td>1</td><td>7</td><td>5</td><td>7</td><td>7</td><td>5½</td></tr>
-              <tr><td style="text-align:left;padding-left:4px">Black Orc</td><td>4</td><td>4</td><td>3</td><td>4</td><td>4</td><td>1</td><td>2</td><td>1</td><td>8</td><td>5</td><td>7</td><td>7</td><td>7</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">Goblin</td><td>4</td><td>2</td><td>3</td><td>3</td><td>3</td><td>1</td><td>2</td><td>1</td><td>5</td><td>5</td><td>5</td><td>5</td><td>2½</td></tr>
               <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
-              <tr><td style="text-align:left;padding-left:4px">Snotling Base</td><td>4</td><td>2</td><td>2</td><td>1</td><td>1</td><td>3</td><td>3</td><td>3</td><td>4</td><td>4</td><td>4</td><td>4</td><td>25*</td></tr>
-              <tr><td style="text-align:left;padding-left:4px">Troll</td><td>6</td><td>3</td><td>1</td><td>5</td><td>4</td><td>3</td><td>1</td><td>3</td><td>4</td><td>4</td><td>6</td><td>6</td><td>65</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Hero</td><td>4</td><td>3</td><td>4</td><td>4</td><td>3</td><td>1</td><td>3</td><td>2</td><td>5</td><td>5</td><td>5</td><td>5</td><td>15</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Hero</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>2</td><td>3</td><td>3</td><td>6+1</td><td>5</td><td>5</td><td>5</td><td>28</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Hero</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>7+2</td><td>5</td><td>6+1</td><td>6+1</td><td>40</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>4</td><td>8+3</td><td>5</td><td>6+1</td><td>6+1</td><td>53</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>4</td><td>8+3</td><td>7+2</td><td>7+2</td><td>7+2</td><td>65</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Wizard</td><td>4</td><td>3</td><td>3</td><td>4</td><td>3</td><td>1</td><td>2</td><td>1</td><td>5</td><td>6+1</td><td>6+1</td><td>6+1</td><td>45</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>2</td><td>2</td><td>1</td><td>6+1</td><td>7+2</td><td>6+1</td><td>7+2</td><td>58</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>4</td><td>3</td><td>3</td><td>1</td><td>7+2</td><td>7+2</td><td>7+2</td><td>7+2</td><td>115</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>1</td><td>7+2</td><td>8+3</td><td>7+2</td><td>8+3</td><td>188</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Wizard</td><td>4</td><td>5</td><td>5</td><td>4</td><td>4</td><td>4</td><td>5</td><td>1</td><td>8+3</td><td>8+3</td><td>8+3</td><td>8+3</td><td>275</td></tr>
             </tbody>
           </table>
-          <p style="margin-top:4px;font-size:12px;color:var(--text-dim)"><em>* Snotlings cost 25pts per base (up to 9 figures). Goblin base: 20mm×20mm; Wolf Riders 25mm×50mm. Orc/Savage Orc/Black Orc base: 25mm×25mm; Boar/Giant Wolf Riders 25mm×50mm. Snotling base: 40mm×40mm. Troll base: 40mm×40mm.</em></p>
+          <p style="font-size:11px;font-weight:600;margin:10px 0 3px;color:var(--text)">Half-Orc</p>
+          <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:4px;margin-bottom:14px">
+            <thead><tr><th style="text-align:left;padding-left:4px;white-space:nowrap">Type</th><th>M</th><th>WS</th><th>BS</th><th>S</th><th>T</th><th>W</th><th>I</th><th>A</th><th>Ld</th><th>Int</th><th>Cl</th><th>WP</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">Half-Orc</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>3</td><td>1</td><td>7</td><td>6</td><td>7</td><td>7</td><td>5</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Hero</td><td>4</td><td>4</td><td>4</td><td>4</td><td>3</td><td>1</td><td>4</td><td>2</td><td>7</td><td>6</td><td>7</td><td>7</td><td>30</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>2</td><td>4</td><td>3</td><td>8+1</td><td>6</td><td>7</td><td>7</td><td>55</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>3</td><td>5</td><td>3</td><td>9+2</td><td>6</td><td>8+1</td><td>8+1</td><td>80</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Hero</td><td>4</td><td>6</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>4</td><td>10+3</td><td>6</td><td>8+1</td><td>8+1</td><td>105</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Hero</td><td>4</td><td>6</td><td>5</td><td>4</td><td>4</td><td>4</td><td>6</td><td>4</td><td>10+3</td><td>8+2</td><td>9+2</td><td>9+2</td><td>150</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>1</td><td>3</td><td>1</td><td>7</td><td>7+1</td><td>8+1</td><td>8+1</td><td>60</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>3</td><td>2</td><td>4</td><td>1</td><td>8+1</td><td>7+2</td><td>8+2</td><td>8+2</td><td>85</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Wizard</td><td>4</td><td>5</td><td>3</td><td>4</td><td>4</td><td>3</td><td>4</td><td>1</td><td>9+2</td><td>8+2</td><td>9+2</td><td>9+2</td><td>155</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>1</td><td>9+2</td><td>9+3</td><td>9+2</td><td>10+3</td><td>240</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Wizard</td><td>4</td><td>6</td><td>5</td><td>4</td><td>4</td><td>4</td><td>6</td><td>1</td><td>10+3</td><td>9+3</td><td>10+3</td><td>10+3</td><td>340</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:11px;font-weight:600;margin:10px 0 3px;color:var(--text)">Orc</p>
+          <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:4px;margin-bottom:14px">
+            <thead><tr><th style="text-align:left;padding-left:4px;white-space:nowrap">Type</th><th>M</th><th>WS</th><th>BS</th><th>S</th><th>T</th><th>W</th><th>I</th><th>A</th><th>Ld</th><th>Int</th><th>Cl</th><th>WP</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">Orc</td><td>4</td><td>3</td><td>3</td><td>3</td><td>4</td><td>1</td><td>2</td><td>1</td><td>7</td><td>5</td><td>7</td><td>7</td><td>5½</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Hero</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>1</td><td>3</td><td>2</td><td>7</td><td>5</td><td>7</td><td>7</td><td>33</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>5</td><td>2</td><td>3</td><td>3</td><td>8+1</td><td>5</td><td>7</td><td>7</td><td>61</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>5</td><td>3</td><td>4</td><td>3</td><td>9+2</td><td>5</td><td>8+1</td><td>8+1</td><td>88</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Hero</td><td>4</td><td>6</td><td>4</td><td>4</td><td>5</td><td>4</td><td>5</td><td>4</td><td>10+3</td><td>5</td><td>8+1</td><td>8+1</td><td>116</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Hero</td><td>4</td><td>6</td><td>5</td><td>4</td><td>5</td><td>4</td><td>5</td><td>4</td><td>10+3</td><td>7+2</td><td>9+2</td><td>9+2</td><td>143</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Wizard</td><td>4</td><td>3</td><td>3</td><td>4</td><td>4</td><td>1</td><td>2</td><td>1</td><td>7</td><td>6+1</td><td>8+1</td><td>8+1</td><td>63</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>4</td><td>2</td><td>2</td><td>1</td><td>8+1</td><td>7+2</td><td>8+1</td><td>8+1</td><td>91</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Wizard</td><td>4</td><td>5</td><td>3</td><td>4</td><td>5</td><td>3</td><td>3</td><td>1</td><td>9+2</td><td>7+2</td><td>9+2</td><td>9+2</td><td>163</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>5</td><td>4</td><td>4</td><td>5</td><td>4</td><td>4</td><td>1</td><td>9+2</td><td>8+3</td><td>9+2</td><td>10+3</td><td>251</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Wizard</td><td>4</td><td>6</td><td>5</td><td>4</td><td>5</td><td>4</td><td>5</td><td>1</td><td>10+3</td><td>8+3</td><td>10+3</td><td>10+3</td><td>353</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:11px;font-weight:600;margin:10px 0 3px;color:var(--text)">Savage Orc</p>
+          <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:4px;margin-bottom:14px">
+            <thead><tr><th style="text-align:left;padding-left:4px;white-space:nowrap">Type</th><th>M</th><th>WS</th><th>BS</th><th>S</th><th>T</th><th>W</th><th>I</th><th>A</th><th>Ld</th><th>Int</th><th>Cl</th><th>WP</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">Savage Orc</td><td>4</td><td>3</td><td>3</td><td>3</td><td>4</td><td>1</td><td>2</td><td>1</td><td>7</td><td>5</td><td>7</td><td>7</td><td>5½</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Hero</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>1</td><td>3</td><td>2</td><td>7</td><td>5</td><td>7</td><td>7</td><td>33</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>5</td><td>2</td><td>3</td><td>3</td><td>8+1</td><td>5</td><td>7</td><td>7</td><td>61</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Hero</td><td>4</td><td>5</td><td>4</td><td>4</td><td>5</td><td>3</td><td>4</td><td>3</td><td>9+2</td><td>5</td><td>8+1</td><td>8+1</td><td>88</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Hero</td><td>4</td><td>6</td><td>4</td><td>4</td><td>5</td><td>4</td><td>5</td><td>4</td><td>10+3</td><td>5</td><td>8+1</td><td>8+1</td><td>116</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Hero</td><td>4</td><td>6</td><td>5</td><td>4</td><td>5</td><td>4</td><td>5</td><td>4</td><td>10+3</td><td>7+2</td><td>9+2</td><td>9+2</td><td>143</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Wizard</td><td>4</td><td>3</td><td>3</td><td>4</td><td>4</td><td>1</td><td>2</td><td>1</td><td>7</td><td>6+1</td><td>8+1</td><td>8+1</td><td>63</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Wizard</td><td>4</td><td>4</td><td>3</td><td>4</td><td>4</td><td>2</td><td>2</td><td>1</td><td>8+1</td><td>7+2</td><td>8+1</td><td>8+1</td><td>91</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Wizard</td><td>4</td><td>5</td><td>3</td><td>4</td><td>5</td><td>3</td><td>3</td><td>1</td><td>9+2</td><td>7+2</td><td>9+2</td><td>9+2</td><td>163</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>5</td><td>4</td><td>4</td><td>5</td><td>4</td><td>4</td><td>1</td><td>9+2</td><td>8+3</td><td>9+2</td><td>10+3</td><td>251</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Wizard</td><td>4</td><td>6</td><td>5</td><td>4</td><td>5</td><td>4</td><td>5</td><td>1</td><td>10+3</td><td>8+3</td><td>10+3</td><td>10+3</td><td>353</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:11px;font-weight:600;margin:10px 0 3px;color:var(--text)">Black Orc</p>
+          <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:4px;margin-bottom:14px">
+            <thead><tr><th style="text-align:left;padding-left:4px;white-space:nowrap">Type</th><th>M</th><th>WS</th><th>BS</th><th>S</th><th>T</th><th>W</th><th>I</th><th>A</th><th>Ld</th><th>Int</th><th>Cl</th><th>WP</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">Black Orc</td><td>4</td><td>4</td><td>3</td><td>4</td><td>4</td><td>1</td><td>2</td><td>1</td><td>8</td><td>5</td><td>7</td><td>7</td><td>7</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Hero</td><td>4</td><td>5</td><td>4</td><td>5</td><td>4</td><td>1</td><td>3</td><td>2</td><td>8</td><td>5</td><td>7</td><td>7</td><td>42</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Hero</td><td>4</td><td>6</td><td>4</td><td>5</td><td>5</td><td>2</td><td>3</td><td>3</td><td>9+1</td><td>5</td><td>7</td><td>7</td><td>77</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Hero</td><td>4</td><td>6</td><td>4</td><td>5</td><td>5</td><td>3</td><td>4</td><td>3</td><td>10+2</td><td>5</td><td>8+1</td><td>8+1</td><td>112</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Hero</td><td>4</td><td>7</td><td>4</td><td>5</td><td>5</td><td>4</td><td>5</td><td>4</td><td>10+3</td><td>5</td><td>8+1</td><td>8+1</td><td>147</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Hero</td><td>4</td><td>7</td><td>5</td><td>5</td><td>5</td><td>4</td><td>5</td><td>4</td><td>10+3</td><td>7+2</td><td>9+2</td><td>9+2</td><td>217</td></tr>
+              <tr style="height:6px"><td colspan="14" style="background:var(--bg2);border-left:none;border-right:none;padding:0"></td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">5 Wizard</td><td>4</td><td>5</td><td>4</td><td>5</td><td>4</td><td>1</td><td>2</td><td>1</td><td>8</td><td>6+1</td><td>8+1</td><td>8+1</td><td>72</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">10 Wizard</td><td>4</td><td>5</td><td>4</td><td>5</td><td>4</td><td>2</td><td>2</td><td>1</td><td>9+1</td><td>7+2</td><td>8+1</td><td>9+2</td><td>107</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">15 Wizard</td><td>4</td><td>6</td><td>4</td><td>5</td><td>5</td><td>3</td><td>3</td><td>1</td><td>10+2</td><td>7+2</td><td>9+2</td><td>9+2</td><td>187</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">20 Wizard</td><td>4</td><td>6</td><td>5</td><td>5</td><td>5</td><td>4</td><td>4</td><td>1</td><td>10+2</td><td>8+3</td><td>9+2</td><td>10+3</td><td>282</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">25 Wizard</td><td>4</td><td>7</td><td>5</td><td>5</td><td>5</td><td>4</td><td>5</td><td>1</td><td>10+3</td><td>8+3</td><td>10+3</td><td>10+3</td><td>427</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:11px;font-weight:600;margin:10px 0 3px;color:var(--text)">Other</p>
+          <table class="wiki-table wiki-table-grid centre-nums no-last-highlight" style="width:100%;table-layout:auto;font-size:10.5px;margin-top:4px;margin-bottom:14px">
+            <thead><tr><th style="text-align:left;padding-left:4px;white-space:nowrap">Type</th><th>M</th><th>WS</th><th>BS</th><th>S</th><th>T</th><th>W</th><th>I</th><th>A</th><th>Ld</th><th>Int</th><th>Cl</th><th>WP</th><th>Pts</th></tr></thead>
+            <tbody>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">Snotling Base</td><td>4</td><td>2</td><td>2</td><td>1</td><td>1</td><td>3</td><td>3</td><td>3</td><td>4</td><td>4</td><td>4</td><td>4</td><td>25*</td></tr>
+              <tr><td style="text-align:left;padding-left:4px;white-space:nowrap">Troll</td><td>6</td><td>3</td><td>1</td><td>5</td><td>4</td><td>3</td><td>1</td><td>3</td><td>4</td><td>4</td><td>6</td><td>6</td><td>65</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:4px;font-size:12px;color:var(--text-dim)"><em>* Snotlings cost 25pts per base (up to 9 figures). Goblin base: 20mm&#215;20mm; Wolf Riders 25mm&#215;50mm. Orc/Savage Orc/Black Orc base: 25mm&#215;25mm; Boar/Giant Wolf Riders 25mm&#215;50mm. Snotling base: 40mm&#215;40mm. Troll base: 40mm&#215;40mm.</em></p>
 
           <h4 class="wiki-subsection-heading" id="wa-og-char-heroes">Heroes</h4>
           <p>The army may contain a maximum of 20 hero models. The maximum number available at each level is given below:</p>
@@ -32379,7 +32522,7 @@ function enhanceWikiArmyCards(pageEl) {
     const unit = WFB3_UNITS.find(function(u) { return u.id === unitId; });
     if (!unit) return;
     const tmp = document.createElement('div');
-    tmp.innerHTML = renderAlCard(unit);
+    tmp.innerHTML = renderAlCard(unit, null, null, { wikiMode: true });
     const newCard = tmp.firstElementChild;
     if (newCard) {
       newCard.dataset.enhanced = '1';
