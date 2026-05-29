@@ -880,6 +880,7 @@ function buildCompanionSection(panel) {
     }
     catSel.value = "";
     renderCompanion();
+    calcPoints();
   };
   catWrap.appendChild(catLabel); catWrap.appendChild(catSel);
   body.appendChild(catWrap);
@@ -946,21 +947,23 @@ function renderCompanion() {
   const chipsArea = document.getElementById("comp-chips-area");
   if (chipsArea) {
     chipsArea.innerHTML = "";
+    const _RC = typeof WFB3_RULE_COSTS !== 'undefined' ? WFB3_RULE_COSTS : {};
+    const _badge = (key, col) => { const e = _RC[key]; if (!e || e.pts === 0) return ''; const s = e.pts > 0 ? '+' : ''; return `<span style="color:${col};font-size:8px;margin-left:1px;opacity:0.85">${s}${e.pts}${e.tier==='est.'?'~':''}</span>`; };
     // Auto chips — locked ones have no ×; others are dismissible
     autoTriggered.filter(k => !companionState.dismissedAuto.has(k) && !companionState.manualRules.includes(k)).forEach(key => {
       const isLocked = lockedRules.has(key);
       const chip = document.createElement("div");
       chip.style.cssText = "display:inline-flex;align-items:center;gap:3px;background:#222;border:1px solid #444;border-radius:2px;padding:2px 6px;font-family:'Barlow Condensed',sans-serif;font-size:10px;color:#aaa;line-height:1.3";
-      chip.innerHTML = `<span>${key}</span>` + (isLocked ? "" : `<span style="cursor:pointer;color:#666;padding:0 2px" title="Dismiss">\u00d7</span>`);
-      if (!isLocked) chip.querySelector("span:last-child").onclick = () => { companionState.dismissedAuto.add(key); renderCompanion(); };
+      chip.innerHTML = `<span>${key}</span>${_badge(key,'#7a6820')}` + (isLocked ? "" : `<span style="cursor:pointer;color:#666;padding:0 2px" title="Dismiss">\u00d7</span>`);
+      if (!isLocked) chip.querySelector("span:last-child").onclick = () => { companionState.dismissedAuto.add(key); renderCompanion(); calcPoints(); };
       chipsArea.appendChild(chip);
     });
     // Manual chips (gold — removable with ×)
     companionState.manualRules.forEach(key => {
       const chip = document.createElement("div");
       chip.style.cssText = "display:inline-flex;align-items:center;gap:3px;background:#1a1a1a;border:1px solid #8b6914;border-radius:2px;padding:2px 6px;font-family:'Barlow Condensed',sans-serif;font-size:10px;color:#c8a832;line-height:1.3";
-      chip.innerHTML = `<span>${key}</span><span style="cursor:pointer;color:#8b6914;padding:0 2px" title="Remove">\u00d7</span>`;
-      chip.querySelector("span:last-child").onclick = () => { companionState.manualRules = companionState.manualRules.filter(r => r !== key); renderCompanion(); };
+      chip.innerHTML = `<span>${key}</span>${_badge(key,'#c8a052')}<span style="cursor:pointer;color:#8b6914;padding:0 2px" title="Remove">\u00d7</span>`;
+      chip.querySelector("span:last-child").onclick = () => { companionState.manualRules = companionState.manualRules.filter(r => r !== key); renderCompanion(); calcPoints(); };
       chipsArea.appendChild(chip);
     });
     if (chipsArea.children.length === 0) {
@@ -2662,7 +2665,8 @@ function calcPoints() {
   // Rule costs — only in formula mode (custom or diverged from preset)
   if (usingFormula) {
     const RCOSTS = typeof WFB3_RULE_COSTS !== 'undefined' ? WFB3_RULE_COSTS : {};
-    const activeRules = [...new Set([...getAutoTriggeredRules(), ...companionState.manualRules])];
+    const activeAuto = getAutoTriggeredRules().filter(r => !companionState.dismissedAuto.has(r));
+    const activeRules = [...new Set([...activeAuto, ...companionState.manualRules])];
     let rulesPts = 0; const ruleLines = [];
     activeRules.forEach(r => {
       const entry = RCOSTS[r];
@@ -3814,9 +3818,9 @@ function buildUnitObject() {
       };
     });
 
-  // Capture companion rules at export time
+  // Capture companion rules at export time (excluding user-dismissed auto rules)
   const exportedCompanionRules = [...new Set([
-    ...getAutoTriggeredRules(),
+    ...getAutoTriggeredRules().filter(r => !companionState.dismissedAuto.has(r)),
     ...companionState.manualRules
   ])];
 

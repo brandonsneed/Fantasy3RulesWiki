@@ -772,21 +772,21 @@ const WFB3_RULE_COSTS = {
   'Assassin Rules':      { pts: 25, tier: 'official' },
   // ── Derived/estimated creature rules ────────────────────────────
   'Cause Fear':          { pts: 3,  tier: 'est.' },
-  'Cause Terror':        { pts: 6,  tier: 'est.' },
-  'Regeneration':        { pts: 5,  tier: 'est.' },
-  'Scaly Skin':          { pts: 4,  tier: 'est.' },
-  'Immune to Psychology':{ pts: 2,  tier: 'est.' },
+  'Cause Terror':        { pts: 5,  tier: 'est.' },   // revised from 6; Mummy gap analysis
+  'Regeneration':        { pts: 5,  tier: 'est.' },   // estimate; only seen in Troll bundle
+  'Scaly Skin':          { pts: 4,  tier: 'est.' },   // confirmed by Lizardman triangulation
+  'Immune to Psychology':{ pts: 1,  tier: 'est.' },   // revised from 2; Black Orc triangulation
   'Fly':                 { pts: 5,  tier: 'est.' },
   'Magical Attacks':     { pts: 2,  tier: 'est.' },
-  'Frenzy':              { pts: 3,  tier: 'est.' },
+  'Frenzy':              { pts: 2,  tier: 'est.' },   // revised from 3; appears free in Savage Orc data
   'Hatred':              { pts: 1,  tier: 'est.' },
   'Hatred (Goblinoids)': { pts: 1,  tier: 'est.' },
-  'Hatred (Dwarfs & Gnomes)': { pts: 1, tier: 'est.' },
+  'Hatred (Dwarfs & Gnomes)':         { pts: 1, tier: 'est.' },
   'Hatred (High Elves & Wood Elves)': { pts: 1, tier: 'est.' },
   // ── Drawbacks (negative pts) ────────────────────────────────────
-  'Stupidity':           { pts: -2, tier: 'est.' },
+  'Animosity':           { pts: 0,  tier: 'est.' },   // confirmed free; Orc/Goblin formula gaps ~0
+  'Stupidity':           { pts: -1, tier: 'est.' },   // revised from -2; uncertain, Fimir-Fimm data
   'Instability':         { pts: -2, tier: 'est.' },
-  'Animosity':           { pts: -1, tier: 'est.' },
 };
 
 /* ═══════════════════════════════════════════════════════════════════
