@@ -806,50 +806,36 @@ function getAutoTriggeredRules() {
   const stt   = sttRaw.split("|")[1] || "";
   const rules = [];
 
-  // Racial rules — reference pointers or succinct summaries
-  if (raceName === "Dwarf" || raceName === "Norse Dwarf" || raceName === "Chaos Dwarf")
-    rules.push("Dwarf Racial Rules");
-  if (["Goblin","Orc","Half-Orc","Savage Orc","Black Orc","Hobgoblin"].includes(raceName))
-    rules.push("Orc & Goblin Racial Rules");
-  if (raceName === "Skaven")       rules.push("Skaven Racial Rules");
-  if (raceName === "Skeleton" || raceName === "Zombie" || raceName === "Ghoul" ||
-      raceName === "Human Slave")  rules.push("Undead Racial Rules");
-  if (raceName === "Chaos Warrior" || raceName === "Chaos Marauder" ||
-      raceName === "Chaos Thug" || raceName === "Beastman")
-    rules.push("Chaos Racial Rules");
-  if (raceName === "Dark Elf")     rules.push("Dark Elf Racial Rules");
+  // Racial rules — from WFB3_RACE_RULES lookup (single source of truth in special-rules-data.js)
+  const RACE_RULES = typeof WFB3_RACE_RULES !== 'undefined' ? WFB3_RACE_RULES : {};
+  const raceRuleList = RACE_RULES[raceName] || [];
+  raceRuleList.forEach(r => { if (!rules.includes(r)) rules.push(r); });
 
-  // Giant Races — auto-push their bestiary rule entries
-  if (raceName === "Giant")      rules.push("Giant Rules");
-  if (raceName === "Ogre")       rules.push("Ogre Rules");
-  if (raceName === "Troll")      rules.push("Troll Rules");
-  if (raceName === "Minotaur")   rules.push("Minotaur Rules");
-  if (raceName === "Treeman")    rules.push("Treeman Rules");
-  if (raceName === "Troglodyte") rules.push("Troglodyte Rules");
+  // Name-pattern fallbacks for cases not covered by dropdown display name
+  if (race.includes("Rat-Ogre"))   { if (!rules.includes("Rat-Ogre Fear")) rules.push("Rat-Ogre Fear"); }
 
-  // Specific bestiary rules
-  if (raceName === "Black Orc")    rules.push("Black Orc Animosity");
-  if (raceName === "Savage Orc")   rules.push("Savage Orc Frenzy");
-  if (race.includes("Rat-Ogre"))   rules.push("Rat-Ogre Fear");
-  if (mount === "War Boar")           rules.push("War Boar Gore");
-  if (mount === "Ki-rin")             rules.push("Ki-rin Magical Attacks");
-  if (mount === "Pegasus")            rules.push("Pegasus Magical Attacks");
-  if (mount === "Temple Dog")         rules.push("Temple Dog Rules");
-  if (mount === "Unicorn")            rules.push("Unicorn Rules");
-  if (mount === "Wild Cat")           rules.push("Wild Cat Rules");
-  if (mount === "Wolf-Rat")           rules.push("Wolf-Rat Rules");
-  if (mount === "Cold One")           rules.push("Cold One Rules");
-  if (mount === "Giant Spider")       rules.push("Giant Spider Rules");
-  if (mount === "Great Eagle")        rules.push("Great Eagle Rules");
-  if (mount === "Griffon")            rules.push("Griffon Rules");
-  if (mount === "Hippogriff")         rules.push("Hippogriff Rules");
-  if (mount === "Manticore")          rules.push("Manticore Rules");
-  if (mount === "Wyvern")             rules.push("Wyvern Rules");
-  if (mount.startsWith("Dragon"))     rules.push("Dragon Rules");
-  if (ct === "waraltar")           rules.push("War Altar Rules");
-  if (ct === "handler")            rules.push("Animal Handler Rules");
-  if (chT === "assassin")          rules.push("Assassin Rules");
-  if (STT_RULE_MAP[stt]) rules.push(STT_RULE_MAP[stt]);
+  // Mount rules
+  if (mount === "War Boar")        rules.push("War Boar Gore");
+  if (mount === "Ki-rin")          rules.push("Ki-rin Magical Attacks");
+  if (mount === "Pegasus")         rules.push("Pegasus Magical Attacks");
+  if (mount === "Temple Dog")      rules.push("Temple Dog Rules");
+  if (mount === "Unicorn")         rules.push("Unicorn Rules");
+  if (mount === "Wild Cat")        rules.push("Wild Cat Rules");
+  if (mount === "Wolf-Rat")        rules.push("Wolf-Rat Rules");
+  if (mount === "Cold One")        rules.push("Cold One Rules");
+  if (mount === "Giant Spider")    rules.push("Giant Spider Rules");
+  if (mount === "Great Eagle")     rules.push("Great Eagle Rules");
+  if (mount === "Griffon")         rules.push("Griffon Rules");
+  if (mount === "Hippogriff")      rules.push("Hippogriff Rules");
+  if (mount === "Manticore")       rules.push("Manticore Rules");
+  if (mount === "Wyvern")          rules.push("Wyvern Rules");
+  if (mount.startsWith("Dragon"))  rules.push("Dragon Rules");
+
+  // Card type rules
+  if (ct === "waraltar")  rules.push("War Altar Rules");
+  if (ct === "handler")   rules.push("Animal Handler Rules");
+  if (chT === "assassin") rules.push("Assassin Rules");
+  if (STT_RULE_MAP[stt])  rules.push(STT_RULE_MAP[stt]);
   return rules;
 }
 
@@ -2673,6 +2659,26 @@ function calcPoints() {
       breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["x 2 (mounted)",null],[`+ half mount value (${mntCost}/2)`,halfMount]],rt,true,halfMount);
     } else { pts = effectiveBase + equipCost + specialVal + mntCost; breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["Mount (direct add)",mntCost]]); }
   }
+  // Rule costs — only in formula mode (custom or diverged from preset)
+  if (usingFormula) {
+    const RCOSTS = typeof WFB3_RULE_COSTS !== 'undefined' ? WFB3_RULE_COSTS : {};
+    const activeRules = [...new Set([...getAutoTriggeredRules(), ...companionState.manualRules])];
+    let rulesPts = 0; const ruleLines = [];
+    activeRules.forEach(r => {
+      const entry = RCOSTS[r];
+      if (entry && entry.pts !== 0) {
+        rulesPts += entry.pts;
+        const sign = entry.pts > 0 ? "+" : "";
+        ruleLines.push(`${r}: ${sign}${entry.pts}${entry.tier === 'est.' ? '~' : ''}`);
+      }
+    });
+    if (rulesPts !== 0) {
+      pts += rulesPts;
+      const sign = rulesPts > 0 ? "+" : "";
+      breakdown += `Rules (${sign}${fractionStr(rulesPts)}): ${ruleLines.join(", ")}<br>`;
+    }
+  }
+
   pts = Math.ceil(pts * 2) / 2;
   document.getElementById("pts-result").textContent = fractionStr(pts);
   document.getElementById("pts-breakdown").innerHTML = breakdown;
@@ -3808,6 +3814,12 @@ function buildUnitObject() {
       };
     });
 
+  // Capture companion rules at export time
+  const exportedCompanionRules = [...new Set([
+    ...getAutoTriggeredRules(),
+    ...companionState.manualRules
+  ])];
+
   const def = {
     id: id,
     name: name,
@@ -3815,7 +3827,8 @@ function buildUnitObject() {
     type: cardType,
     art: art || undefined,
     profiles: profileRows.map(function(r) { return { label: r.label, stats: r.stats.slice() }; }),
-    options: options.length ? options : undefined
+    options: options.length ? options : undefined,
+    companionRules: exportedCompanionRules.length ? exportedCompanionRules : undefined
   };
 
   const flavour = gv('f-flavour');

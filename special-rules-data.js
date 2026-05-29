@@ -87,6 +87,18 @@ const WFB3_RULES = {
 
   /* ── COMBAT SPECIAL RULES ───────────────────────────────────────────── */
 
+  'Cause Terror': {
+    category: 'Psychology',
+    short: 'All living creatures regardless of size must test (2D6 vs Cl) when charged, when they wish to charge, or when they wish to fire missiles within charge reach. Same modifiers as Cause Fear but applies to all creature sizes.',
+    text: 'This unit causes Terror in all living creatures regardless of their size. Terror tests (2D6 vs Cl) are required in the same situations as Fear tests (before charging, when charged, and before firing within charge reach) but with no size exemption — even giant creatures are affected. All the same results apply: failed charge test means frozen for the turn, failed counter-charge means automatic rout, failed missile test means the unit cannot fire. Units pushed back in combat by a Terror-causing unit automatically rout. Terror supersedes Fear: a unit that causes Terror also causes Fear for all purposes.'
+  },
+
+  'Scaly Skin': {
+    category: 'Combat',
+    short: 'Natural armour from scales or thick hide. Grants a basic saving throw without encumbrance (6+ for light scales, 5+ for heavy hide). Stacks with worn armour to a maximum of 3+.',
+    text: 'The creature's natural scales or hide give it a basic saving throw without any encumbrance penalty. The save value varies by creature: Lizardmen and Zoats have 6+ (equivalent to chainmail); Treemen have 5+. This natural save stacks with worn armour in the same way as any other armour combination, subject to the usual 3+ maximum. Unlike normal armour it cannot be stripped away by enemy action or special rules that remove armour.'
+  },
+
   'Poisoned Attacks': {
     category: 'Combat',
     short: 'Each poisoned attack counts as +1 to the attacker\'s Strength for wounding. No effect against undead, ethereal, daemonic, or elemental creatures (attacks still hit at normal Strength).',
@@ -738,4 +750,98 @@ const WFB3_SKIRMISHER_ELIGIBILITY = {
   'wdno-030-bondsmen-archers':     null,  // Any
   'wdno-080-bondsdwarfs':          null,  // Any; only if armed with bows
 
+};
+
+/* ═══════════════════════════════════════════════════════════════════
+   RULE COSTS
+   Points values for special rules used in the custom unit calculator.
+   Two tiers:
+     official — drawn directly from WA surcharge tables (exact)
+     est.     — derived from formula gap analysis (approximate)
+   Keys match WFB3_RULES entry names exactly.
+═══════════════════════════════════════════════════════════════════ */
+const WFB3_RULE_COSTS = {
+  // ── Official WA surcharges ───────────────────────────────────────
+  'Poisoned Attacks':    { pts: 3,  tier: 'official' },
+  'Scouts':              { pts: 5,  tier: 'official' },
+  'Forester Rules':      { pts: 2,  tier: 'official' },
+  'Falconer Rules':      { pts: 3,  tier: 'official' },
+  'Berserker Rules':     { pts: 5,  tier: 'official' },
+  'Flagellant Rules':    { pts: 4,  tier: 'official' },
+  'Animal Handler Rules':{ pts: 5,  tier: 'official' },
+  'Assassin Rules':      { pts: 25, tier: 'official' },
+  // ── Derived/estimated creature rules ────────────────────────────
+  'Cause Fear':          { pts: 3,  tier: 'est.' },
+  'Cause Terror':        { pts: 6,  tier: 'est.' },
+  'Regeneration':        { pts: 5,  tier: 'est.' },
+  'Scaly Skin':          { pts: 4,  tier: 'est.' },
+  'Immune to Psychology':{ pts: 2,  tier: 'est.' },
+  'Fly':                 { pts: 5,  tier: 'est.' },
+  'Magical Attacks':     { pts: 2,  tier: 'est.' },
+  'Frenzy':              { pts: 3,  tier: 'est.' },
+  'Hatred':              { pts: 1,  tier: 'est.' },
+  'Hatred (Goblinoids)': { pts: 1,  tier: 'est.' },
+  'Hatred (Dwarfs & Gnomes)': { pts: 1, tier: 'est.' },
+  'Hatred (High Elves & Wood Elves)': { pts: 1, tier: 'est.' },
+  // ── Drawbacks (negative pts) ────────────────────────────────────
+  'Stupidity':           { pts: -2, tier: 'est.' },
+  'Instability':         { pts: -2, tier: 'est.' },
+  'Animosity':           { pts: -1, tier: 'est.' },
+};
+
+/* ═══════════════════════════════════════════════════════════════════
+   RACE RULES
+   Maps each race's dropdown display name to the special rules that
+   are intrinsic to that race, sourced from their Bestiary entries.
+   Used by unit-card.html to auto-populate the companion reference
+   sheet when a race is selected.
+   Keys match the option text in the f-race dropdown exactly.
+═══════════════════════════════════════════════════════════════════ */
+const WFB3_RACE_RULES = {
+  // ── Intelligent Races — Bestiary ────────────────────────────────
+  'Goblin':         ['Animosity', 'Hatred (Dwarfs & Gnomes)'],
+  'Pygmy':          [],
+  'Halfling':       [],
+  'Skaven':         ['Skaven Racial Rules'],
+  'Human':          [],
+  'Gnome':          [],
+  'Hobgoblin':      ['Animosity', 'Hatred (Dwarfs & Gnomes)'],
+  'Half-Orc':       ['Animosity'],
+  'Orc':            ['Animosity'],
+  'Savage Orc':     ['Savage Orc Frenzy', 'Animosity'],
+  'Chaos Thug':     ['Chaos Racial Rules'],
+  'Black Orc':      ['Black Orc Animosity', 'Immune to Psychology'],
+  'Slann':          [],
+  'Dwarf':          ['Dwarf Racial Rules', 'Hatred (Goblinoids)'],
+  'Norse Dwarf':    ['Dwarf Racial Rules', 'Hatred (Goblinoids)'],
+  'Chaos Dwarf':    ['Dwarf Racial Rules', 'Hatred (Goblinoids)'],
+  'Elf':            [],
+  'Dark Elf':       ['Dark Elf Racial Rules'],
+  'Wood Elf':       [],
+  'High Elf':       [],
+  'Fimir-Shearl':   [],
+  'Beastman':       ['Chaos Racial Rules'],
+  'Were':           ['Cause Fear'],
+  'Lizardman':      ['Immune to Psychology', 'Scaly Skin'],
+  'Centaur':        ['Hatred (Goblinoids)'],
+  'Fimir-Fimm':     ['Stupidity'],
+  'Coatl':          ['Cause Fear', 'Fly', 'Poisoned Attacks'],
+  'Chaos Marauder': ['Chaos Racial Rules'],
+  'Zoat':           ['Scaly Skin'],
+  'Chaos Warrior':  ['Chaos Racial Rules', 'Immune to Psychology'],
+  // ── Named race overrides ────────────────────────────────────────
+  'Skeleton':        ['Undead Racial Rules'],
+  'Slann Levy':      [],
+  'Human Slave':     [],
+  'Zombie':          ['Undead Racial Rules'],
+  'Ghoul':           ['Cause Fear', 'Poisoned Attacks'],
+  'Mummy':           ['Cause Terror', 'Undead Racial Rules'],
+  'Undead Horseman': ['Undead Racial Rules'],
+  // ── Giant Races ─────────────────────────────────────────────────
+  'Giant':           ['Giant Rules', 'Cause Fear'],
+  'Ogre':            ['Ogre Rules', 'Cause Fear'],
+  'Troll':           ['Troll Rules', 'Cause Fear', 'Stupidity', 'Regeneration'],
+  'Minotaur':        ['Minotaur Rules', 'Cause Fear'],
+  'Treeman':         ['Treeman Rules', 'Cause Fear', 'Scaly Skin', 'Hatred (Goblinoids)'],
+  'Troglodyte':      ['Troglodyte Rules', 'Cause Fear', 'Stupidity', 'Immune to Psychology'],
 };

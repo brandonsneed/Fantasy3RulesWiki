@@ -353,7 +353,15 @@ function buildInfoRows(unit) {
  * @param {string} unitId   — unit.id
  * @param {string} unitName — unit.name (used for pattern inference)
  */
-function buildSpecialRules(unitId, unitName) {
+function buildSpecialRules(unitId, unitName, unit) {
+  // For custom units, companion rules from the card creator take precedence
+  if (unit && unit.isCustom && unit.companionRules && unit.companionRules.length) {
+    const tags = unit.companionRules.map(function(r) {
+      return `<span class="al-rule-tag" data-rule="${esc(r)}" onclick="showRuleDetail(this)">${esc(r)}</span>`;
+    }).join('');
+    return `<div class="al-special-rules">${tags}</div><div class="al-rule-detail"></div>`;
+  }
+
   const explicit = (typeof WFB3_UNIT_RULES !== 'undefined' && WFB3_UNIT_RULES[unitId])
     ? WFB3_UNIT_RULES[unitId].slice()
     : [];
@@ -680,7 +688,7 @@ function renderStandard(unit, renderOpts) {
 
   let info = '<div class="al-info">';
   info += buildInfoRows(unit);
-  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name);
+  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name, unit);
   if (!wikiMode) info += buildWeaponRules(unit.weapons, null, null);
   info += buildOptions(unit.options);
   info += '</div>';
@@ -755,7 +763,7 @@ function renderHandler(unit, renderOpts) {
       `</div>`;
   }
 
-  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name);
+  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name, unit);
   if (!wikiMode) info += buildWeaponRules(unit.weapons, null, null);
   info += buildOptions(unit.options);
   info += buildPacks(unit.packs);
@@ -814,7 +822,7 @@ function renderWarMachine(unit, renderOpts) {
   }
 
   // Special rules + options block (between art and footer, if present)
-  const srHtml = wikiMode ? '' : buildSpecialRules(unit.id, unit.name);
+  const srHtml = wikiMode ? '' : buildSpecialRules(unit.id, unit.name, unit);
   const wrHtml = wikiMode ? '' : buildWeaponRules(unit.weapons, null, null);
   if (srHtml || wrHtml || (unit.options && unit.options.length)) {
     html += `<div style="padding:4px 10px 6px">` + srHtml + wrHtml + buildOptions(unit.options) + `</div>`;
@@ -927,7 +935,7 @@ function renderChariot(unit, renderOpts) {
     `</div>`;
 
   // Special rules + options (if any)
-  const srHtml2 = wikiMode ? '' : buildSpecialRules(unit.id, unit.name);
+  const srHtml2 = wikiMode ? '' : buildSpecialRules(unit.id, unit.name, unit);
   const wrHtml2 = wikiMode ? '' : buildWeaponRules(unit.weapons, null, null);
   if (srHtml2 || wrHtml2 || (unit.options && unit.options.length)) {
     html += `<div style="padding:4px 10px 6px">` + srHtml2 + wrHtml2 + buildOptions(unit.options) + `</div>`;
@@ -1116,7 +1124,7 @@ function renderCharacter(unit, selectedOpts, magicAbilities, renderOpts) {
   }
 
   // Special rules
-  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name);
+  if (!wikiMode) info += buildSpecialRules(unit.id, unit.name, unit);
 
   // Weapon rules (print-only; for army-list show only equipped weapons)
   if (!wikiMode) info += buildWeaponRules(unit.weapons,
