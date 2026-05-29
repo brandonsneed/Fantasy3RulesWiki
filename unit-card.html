@@ -425,6 +425,10 @@ const NAMED_RACE_COSTS = {
   // Giant Races — flat per-model cost, no formula scaling
   "Giant": 250, "Ogre": 38, "Troll": 65, "Minotaur": 40, "Treeman": 280, "Troglodyte": 36
 };
+// Oldhammer Universal Points System — stat-delta formula
+// Baseline = Human (5 pts). Per-stat delta costs match race cost table.
+const FORMULA_BASELINE = [4, 3, 3, 3, 3, 1, 3, 1, 7, 7, 7, 7];
+const FORMULA_COSTS    = [0.25, 0.5, 0.25, 1, 1, 4, 0.25, 4, 0.25, 0.25, 0.25, 0.25];
 const GIANT_D6_PROFILES = [
   { label: "1", stats: ["5","2","2","6","6","5","1","special","5","4","5","5"] },
   { label: "2", stats: ["6","3","2","6","6","5","2","special","6","5","6","6"] },
@@ -444,6 +448,28 @@ function addNumericStat(base, mod) {
   const m = base.match(/^(-?\d+)(\+\d+)?$/);
   if (!m) return base;
   return (parseInt(m[1]) + mod) + (m[2] || "");
+}
+
+function calcPPVFromStats(stats) {
+  let v = 5.0;
+  for (let i = 0; i < 12; i++) {
+    const raw = String(stats[i] || "").split("+")[0].replace(/special/g,"").replace(/[–-]/g,"").trim();
+    if (!raw) continue;
+    const n = parseFloat(raw);
+    if (isNaN(n)) continue;
+    v += (n - FORMULA_BASELINE[i]) * FORMULA_COSTS[i];
+  }
+  if (v <= 10) return v;
+  if (v <= 15) return v * 1.5;
+  return v * Math.ceil(v / 10);
+}
+function statsMatchPreset(stats, raceKey) {
+  const preset = RACE_PROFILES[raceKey];
+  if (!preset) return false;
+  for (let i = 0; i < 12; i++) {
+    if (String(stats[i] || "").trim() !== String(preset[i] || "").trim()) return false;
+  }
+  return true;
 }
 
 /* ═══ DOM HELPERS ═══ */
@@ -1659,7 +1685,7 @@ function buildProfileForms() {
     STAT_KEYS.forEach((k, si) => {
       const inp = document.createElement("input"); inp.className = "stat-input"; inp.type = "text";
       inp.value = row.stats[si] || "–";
-      inp.oninput = () => { profileRows[ri].stats[si] = inp.value; render(); }; grid.appendChild(inp);
+      inp.oninput = () => { profileRows[ri].stats[si] = inp.value; render(); if (cardType === "standard" && ri === 0) calcPoints(); }; grid.appendChild(inp);
     }); block.appendChild(grid); container.appendChild(block);
   });
 }
@@ -2271,6 +2297,7 @@ function buildCalculatorSection() {
   const raceField = el("div","form-field"); raceField.innerHTML = "<label>Base Race</label>";
   const raceSel = document.createElement("select"); raceSel.id = "f-race"; raceSel.onchange = () => { applyRaceProfile(); calcPoints(); renderCompanion(); };
   raceSel.innerHTML = `<option value="">— Select race —</option>
+     <option value="custom">Custom (from stats)</option>
      <optgroup label="2½ pts">
        <option value="2.5">Goblin</option>
      </optgroup>
@@ -2322,7 +2349,7 @@ function buildCalculatorSection() {
        <option value="15">Were</option>
      </optgroup>
      <optgroup label="20 pts">
-       <option value="20">Lizardman</option>
+       <option value="Lizardman">Lizardman</option>
      </optgroup>
      <optgroup label="30 pts">
        <option value="30">Centaur</option>
@@ -2349,6 +2376,10 @@ function buildCalculatorSection() {
        <option value="Troglodyte">Troglodyte (36pts)</option>
      </optgroup>`;
   raceField.appendChild(raceSel); body.appendChild(raceField);
+  const baseLabelDiv = document.createElement("div");
+  baseLabelDiv.id = "calc-base-label";
+  baseLabelDiv.style.cssText = "font-size:9px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.08em;margin-top:-4px;margin-bottom:6px;min-height:14px;transition:color 0.15s";
+  body.appendChild(baseLabelDiv);
   const eliteField = el("div","form-field"); eliteField.innerHTML = "<label>Elite / Levy Modifier</label>";
   const eliteSel = document.createElement("select"); eliteSel.id = "f-elite"; eliteSel.onchange = () => { calcPoints(); applyRaceProfile(); };
   eliteSel.innerHTML = `<option value="-2|levy">Levy (−2pts)</option><option value="0|none" selected>None (standard)</option><option value="1|shock">+1 Shock Elite</option><option value="1|missile">+1 Missile Elite</option><option value="2|shock">+2 Shock Elite</option><option value="2|missile">+2 Missile Elite</option><option value="3|shock">+3 Shock Elite</option><option value="3|missile">+3 Missile Elite</option><option value="4|shock">+4 Shock Elite</option><option value="4|missile">+4 Missile Elite</option>`;
@@ -2577,7 +2608,41 @@ function fractionStr(n) {
 }
 function calcPoints() {
   const raceEl = document.getElementById("f-race"); if (!raceEl) return;
-  const raceVal = isNaN(parseFloat(raceEl.value)) ? (NAMED_RACE_COSTS[raceEl.value] || 0) : parseFloat(raceEl.value);
+  const raceKey = raceEl.value;
+
+  // Determine base cost — fixed from dropdown, or PPV formula from stats
+  let raceBase = null, usingFormula = false;
+  const currentStats = profileRows[0] ? profileRows[0].stats : Array(12).fill("–");
+  if (raceKey === "") {
+    document.getElementById("pts-result").textContent = "—";
+    document.getElementById("pts-breakdown").innerHTML = "Select a base race to calculate.";
+    const bl = document.getElementById("calc-base-label"); if (bl) { bl.textContent = ""; }
+    return;
+  } else if (raceKey === "custom") {
+    raceBase = calcPPVFromStats(currentStats);
+    usingFormula = true;
+  } else {
+    const fixedBase = isNaN(parseFloat(raceKey)) ? (NAMED_RACE_COSTS[raceKey] ?? null) : parseFloat(raceKey);
+    if (fixedBase !== null && RACE_PROFILES[raceKey] && !statsMatchPreset(currentStats, raceKey)) {
+      raceBase = calcPPVFromStats(currentStats);
+      usingFormula = true;
+    } else {
+      raceBase = fixedBase !== null ? fixedBase : 0;
+    }
+  }
+
+  // Update base indicator label
+  const bl = document.getElementById("calc-base-label");
+  if (bl) {
+    if (usingFormula) {
+      bl.textContent = "base: formula (" + fractionStr(Math.ceil(raceBase * 2) / 2) + " pts)";
+      bl.style.color = "#c8a052";
+    } else {
+      bl.textContent = "base: " + fractionStr(raceBase) + " pts";
+      bl.style.color = "#555555";
+    }
+  }
+
   const eliteRaw = document.getElementById("f-elite").value.split("|");
   const eliteVal = parseFloat(eliteRaw[0]);
   const specialVal = parseFloat((document.getElementById("f-special").value || "0").split("|")[0]) || 0;
@@ -2588,25 +2653,25 @@ function calcPoints() {
   const wpnCost = parseFloat(wpnParts[0]) || 0; const wpn2Cost = parseFloat(wpn2Parts[0]) || 0;
   const armCost = parseFloat(armParts[0]) || 0; const mntCost = parseFloat(mntParts[0]) || 0;
   const mntType = mntParts[1];
-  if (isNaN(raceVal)) { document.getElementById("pts-result").textContent = "—"; document.getElementById("pts-breakdown").textContent = "Select a base race to calculate."; return; }
-  let effectiveBase = Math.max(raceVal + eliteVal, 1);
-  const equipMultiplier = raceVal < 5 ? 0.5 : 1;
+  let effectiveBase = Math.max(raceBase + eliteVal, 1);
+  const equipMultiplier = raceBase < 5 ? 0.5 : 1;
   const equipCost = (wpnCost + wpn2Cost + armCost) * equipMultiplier;
+  const baseLabel = usingFormula ? "Base (formula)" : "Base";
   let pts, breakdown;
   if (mntType === "none") {
     pts = effectiveBase + equipCost + specialVal;
-    breakdown = buildBreakdown([["Base",raceVal],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null]);
+    breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null]);
   } else if (mntType === "move") {
     if (effectiveBase <= 10) {
       const rt = effectiveBase + equipCost + specialVal; pts = rt * 2;
-      breakdown = buildBreakdown([["Base",raceVal],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["x 2 (mounted)",null]],rt,true);
-    } else { pts = effectiveBase + equipCost + specialVal + mntCost; breakdown = buildBreakdown([["Base",raceVal],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["Mount (direct add)",mntCost]]); }
+      breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["x 2 (mounted)",null]],rt,true);
+    } else { pts = effectiveBase + equipCost + specialVal + mntCost; breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["Mount (direct add)",mntCost]]); }
   } else {
     const halfMount = mntCost / 2;
     if (effectiveBase <= 10) {
       const rt = effectiveBase + equipCost + specialVal; pts = rt * 2 + halfMount;
-      breakdown = buildBreakdown([["Base",raceVal],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["x 2 (mounted)",null],[`+ half mount value (${mntCost}/2)`,halfMount]],rt,true,halfMount);
-    } else { pts = effectiveBase + equipCost + specialVal + mntCost; breakdown = buildBreakdown([["Base",raceVal],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["Mount (direct add)",mntCost]]); }
+      breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["x 2 (mounted)",null],[`+ half mount value (${mntCost}/2)`,halfMount]],rt,true,halfMount);
+    } else { pts = effectiveBase + equipCost + specialVal + mntCost; breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["Mount (direct add)",mntCost]]); }
   }
   pts = Math.ceil(pts * 2) / 2;
   document.getElementById("pts-result").textContent = fractionStr(pts);

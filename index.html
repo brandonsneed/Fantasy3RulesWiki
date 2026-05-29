@@ -1477,6 +1477,7 @@
   .sr-rule-entry { border-bottom: 1px solid var(--border); padding: 18px 0; }
   .sr-rule-entry:last-child { border-bottom: none; padding-bottom: 0; }
   .sr-rule-name { font-family: 'Cinzel', serif; font-weight: 600; font-size: 13px; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 5px; scroll-margin-top: 20px; }
+  .sr-rule-cite { font-size:0.82em; color:var(--text-dim); font-family:'Share Tech Mono',monospace; letter-spacing:0.03em; margin:2px 0 6px; }
   .sr-rule-short { font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 10px; line-height: 1.45; padding-left: 12px; border-left: 2px solid var(--border2); }
   .sr-rule-text { font-size: 15px; color: var(--text-dim); line-height: 1.7; }
   .sr-racial-entry { border: 1px solid var(--border2); border-left: 3px solid #6a8a6a; background: rgba(106,138,106,0.04); padding: 16px 20px; margin-bottom: 16px; }
@@ -1810,9 +1811,10 @@
     #topbar, #mobile-overlay, .wiki-toc, .qr-print-bar { display: none !important; }
     #content  { display: block !important; padding: 0 !important; max-width: none !important; min-height: 0 !important; height: auto !important; }
 
-    /* ── Show only the Quick Reference page ─────────── */
+    /* ── Show the active print page ─────────────────── */
     .page { display: none !important; }
-    #page-bg-quick-reference { display: block !important; }
+    body:not(.print-sr) #page-bg-quick-reference { display: block !important; }
+    body.print-sr #page-special-rules-ref        { display: block !important; }
 
     /* ── Page header — spans full width above columns ── */
     .article-header {
@@ -1930,6 +1932,105 @@
     td[style*="monospace"] {
       font-family: 'Courier New', monospace !important;
       color: #000 !important; font-weight: 700;
+    }
+    /* ── Special Rules Reference print layout ───────────────────────────── */
+    body.print-sr .qr-print-bar { display: none !important; }
+    body.print-sr .sr-toc       { display: none !important; }
+    body.print-sr .sr-layout    { display: block !important; }
+    body.print-sr .sr-body      { width: 100% !important; }
+
+    body.print-sr #sr-inner {
+      column-count: 3;
+      column-gap: 4mm;
+      column-fill: auto;
+    }
+
+    body.print-sr .sr-section { break-inside: auto; margin: 0 !important; padding: 0 !important; border: none !important; }
+
+    body.print-sr .sr-section-table { column-span: all; }
+    body.print-sr .sr-section-table-body {
+      column-count: 2;
+      column-gap: 6mm;
+      column-fill: auto;
+    }
+
+    body.print-sr .sr-section-heading {
+      column-span: all;
+      font-family: 'Cinzel', serif !important;
+      font-size: 7.5pt; color: #000 !important;
+      background: #efefef !important;
+      border-left: 3pt solid #111 !important;
+      padding: 2pt 6pt; margin: 5pt 0 3pt;
+      letter-spacing: 0.08em; line-height: 1.3;
+      break-after: avoid;
+    }
+
+    body.print-sr .sr-rule-entry {
+      break-inside: avoid;
+      background: none !important;
+      border-bottom: 0.4pt solid #ddd !important;
+      padding: 3pt 0 !important;
+      margin: 0 !important;
+    }
+    body.print-sr .sr-rule-entry:last-child { border-bottom: none !important; }
+
+    body.print-sr .sr-racial-entry {
+      break-inside: avoid;
+      background: none !important;
+      border: none !important;
+      border-bottom: 0.4pt solid #ddd !important;
+      border-left: 1.5pt solid #6a8a6a !important;
+      padding: 3pt 0 3pt 5pt !important;
+      margin: 0 !important;
+    }
+    body.print-sr .sr-racial-entry:last-child { border-bottom: none !important; }
+
+    body.print-sr .sr-rule-name,
+    body.print-sr .sr-racial-name {
+      font-family: 'Cinzel', serif !important;
+      font-size: 7pt !important; font-weight: 700;
+      color: #000 !important; letter-spacing: 0.05em;
+      margin-bottom: 1pt !important;
+    }
+
+    body.print-sr .sr-rule-cite {
+      font-size: 5pt !important; color: #888 !important;
+      font-family: 'Courier New', monospace !important;
+      letter-spacing: 0.03em; margin-bottom: 1.5pt !important;
+    }
+
+    body.print-sr .sr-rule-text,
+    body.print-sr .sr-racial-text {
+      font-size: 6pt !important; color: #111 !important;
+      line-height: 1.3 !important; margin: 0 !important;
+    }
+    body.print-sr .sr-rule-text p  { font-size: 6pt !important; margin-bottom: 1.5pt !important; }
+    body.print-sr .sr-rule-text ul { margin: 1pt 0 1.5pt 8pt !important; padding: 0 !important; }
+    body.print-sr .sr-rule-text li { font-size: 6pt !important; line-height: 1.25 !important; margin-bottom: 0.5pt !important; }
+
+    body.print-sr .sr-mount-table,
+    body.print-sr .sr-weapon-table {
+      font-size: 6pt !important; width: 100%; border-collapse: collapse; break-inside: avoid;
+    }
+    body.print-sr .sr-mount-table th,
+    body.print-sr .sr-weapon-table th {
+      font-family: 'Cinzel', serif !important; font-size: 5.5pt !important;
+      background: #efefef !important; color: #000 !important;
+      padding: 1pt 3pt !important; border-bottom: 0.5pt solid #aaa !important;
+    }
+    body.print-sr .sr-mount-table td,
+    body.print-sr .sr-weapon-table td {
+      font-size: 6pt !important; color: #111 !important;
+      padding: 1pt 3pt !important; border-bottom: 0.4pt solid #e0e0e0 !important;
+      vertical-align: top; line-height: 1.25;
+    }
+    body.print-sr .wiki-table tr { break-inside: avoid; }
+    body.print-sr .sr-weapon-subsection { break-inside: auto; margin-bottom: 4pt; }
+    body.print-sr .sr-weapon-label {
+      font-family: 'Cinzel', serif !important; font-size: 6.5pt !important;
+      font-weight: 700; letter-spacing: 0.08em; margin: 5pt 0 2pt;
+      border-left: 2pt solid #888 !important; padding-left: 4pt !important;
+      color: #333 !important; break-after: avoid;
     }
   }
 </style>
@@ -2085,7 +2186,7 @@
               <p><strong>Spells:</strong> resolve any effects beginning to act in this turn. Dispel any which expired at the end of the previous turn.</p>
               <h4 class="wiki-subsection-heading">Miscellaneous</h4>
               <p>Roll for (see also <a onclick="document.getElementById('qr-psychology')?.scrollIntoView({behavior:'smooth'})" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Psychology</a>):</p>
-              <ul style="margin:4px 0 0 16px;line-height:1.8">
+              <ul class="wiki-list">
                 <li><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('stupidity')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Stupidity</a> — units subject to stupidity test at the start of each turn</li>
                 <li><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('frenzy')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Frenzy</a> — units subject to frenzy test when they charge</li>
                 <li><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('hatred')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Animosity</a> — Orc/Goblin units test if a causing-animosity unit is within 12″ (unless enemy within 12″ or charge range, bated enemy in sight, or unit already engaged)</li>
@@ -2436,7 +2537,7 @@
               <p>Units making a reserve move may not approach within 4″ of an enemy unit (including routing enemy units).</p>
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-turn-movement');setTimeout(()=>document.getElementById('reserve-move')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Committed Units</a></h4>
               <p>The following may not make a <em>reserve move:</em></p>
-              <ul style="margin:6px 0 8px 18px;padding:0;line-height:1.8">
+              <ul class="wiki-list">
                 <li>Units divided by an <em>obstacle</em> or with any models on <em>difficult ground</em></li>
                 <li>Units that failed a <em>complex manoeuvre</em> in their previous movement phase</li>
                 <li>Units that failed a <em>fear</em> test before charging a <em>feared</em> enemy</li>
@@ -2470,7 +2571,7 @@
               <p>The player may roll equal to or under <strong>Ld</strong> on 2D6 to rally any units that began routing last turn or earlier. Rallied units may not move but may <strong>shoot normally</strong> during the shooting phase; they can adopt any permitted formation and facing, reverting to normal after this phase.</p>
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Rallying Units</a></h4>
               <p>To qualify for <em>rallying</em>, a unit must:</p>
-              <ol style="margin:6px 0 8px 20px;padding:0;line-height:1.8">
+              <ol class="wiki-list" style="list-style:decimal;padding-left:20px">
                 <li>Be free of pursuers — no enemy in base-to-base contact</li>
                 <li>Retain at least 25% of its original strength</li>
                 <li>Be closer to friendly models than to any enemy unit (see <a onclick="navigate('bg-turn-rallying');setTimeout(()=>document.getElementById('rallying-a-broken-unit')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Routs &amp; Rallying</a> for full conditions)</li>
@@ -2489,7 +2590,7 @@
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('fear')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Fear</a></h4>
               <p>Test (vs <strong>Cl</strong>) when:</p>
-              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+              <ul class="wiki-list">
                 <li>Wishing to <em>fire</em> at a <em>feared</em> enemy within charge range — failure: no shot fired</li>
                 <li>Wishing to <em>charge</em> a <em>feared</em> enemy — failure: unit halts for the rest of the turn</li>
                 <li>Being <em>charged</em> by a <em>feared</em> enemy — failure: unit routs immediately</li>
@@ -2500,7 +2601,7 @@
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('frenzy')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Frenzy</a></h4>
               <p>Test when a unit <em>subject to frenzy</em> charges — 2D6 vs <strong>Cl</strong>. <strong>Inverted:</strong> rolling <em>more than</em> <strong>Cl</strong> = frenzied; equal or under = controlled.</p>
               <p>While frenzied:</p>
-              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+              <ul class="wiki-list">
                 <li>Continues while the unit remains in base-to-base contact with the enemy</li>
                 <li>Must always <em>follow up</em> and <em>pursue</em></li>
                 <li>Ignores all other <em>psychology</em> tests and <em>rout</em> tests</li>
@@ -2510,14 +2611,14 @@
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('hatred')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Hatred</a></h4>
               <p>Units <em>subject to hatred</em> must always charge or shoot at a <em>bated</em> enemy (pass <strong>Cl</strong> to resist) and must always pursue routing <em>bated</em> enemy. In hand-to-hand combat with a <em>bated</em> enemy:</p>
-              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+              <ul class="wiki-list">
                 <li>+1 to hit</li>
                 <li>+1 to <strong>Ld</strong> for rout tests (only if the hated element caused the push-back)</li>
               </ul>
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('bg-psychology');setTimeout(()=>document.getElementById('panic')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Panic</a></h4>
               <p>Test or rout immediately if:</p>
-              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+              <ul class="wiki-list">
                 <li>Within 4″ of a visible, friendly routing unit at the start of their turn</li>
                 <li>Charged in the side or rear while engaged to the front (exception: stomp or tail attacks)</li>
                 <li>Charged by a unit that has emerged from concealing cover</li>
@@ -2541,13 +2642,13 @@
 
               <h4 class="wiki-subsection-heading"><a onclick="navigate('be-overview');setTimeout(()=>document.getElementById('be-animosity')?.scrollIntoView({behavior:'smooth'}),150)" style="color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent)">Animosity</a></h4>
               <p>Test at the start of the turn if a unit causing animosity is within 12″ — unless:</p>
-              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+              <ul class="wiki-list">
                 <li>Enemy troops are within 12″ or within the unit's charge reach</li>
                 <li><em>Bated</em> enemy are within sight</li>
                 <li>The unit is already in close combat from a previous animosity result</li>
               </ul>
               <p>Always test against the <em>closest</em> animosity unit only. Roll D6 − leader's <strong>Ld</strong> bonus, then add:</p>
-              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+              <ul class="wiki-list">
                 <li>+1 if the animosity unit is directly in front and within charge reach</li>
                 <li>+1 if the animosity unit is of a different race</li>
                 <li>+1 if no enemies are in sight</li>
@@ -2560,7 +2661,7 @@
                 </tbody>
               </table>
               <p style="margin-top:8px">Once in animosity combat, leader models are placed out of the fight. Combat continues until enemy come within 12″, within the fighting unit's charge reach, or bated enemy appear in sight. At the end of any round where one side pushes the other back:</p>
-              <ul style="margin:4px 0 8px 18px;padding:0;line-height:1.75">
+              <ul class="wiki-list">
                 <li>Winning side rolls 2D6 vs <strong>Ld</strong> (as a rout test) — if passed, leaders hold their troops back; no follow-up; pushed-back unit takes no rout test; both units freeze for the rest of the turn</li>
                 <li>If combat is ended by intervening enemy instead: units are not unformed, but auto-rout if pushed back by the fresh enemy</li>
                 <li>If a unit routs from animosity combat: it automatically rallies on its first rally test</li>
@@ -2800,6 +2901,11 @@
           <h1>Special Rules Reference</h1>
           <p class="article-subtitle">Psychology, combat rules, special troop types, racial rules, bestiary abilities, mount rules and weapon rules</p>
         </div>
+      </div>
+      <div class="qr-print-bar">
+        <button class="qr-print-btn" onclick="printSR()" title="Print or save as PDF">
+          <span style="font-size:14px;line-height:1">🖨</span> Print / Save PDF
+        </button>
       </div>
       <div class="sr-layout">
         <div class="sr-body">
@@ -32012,8 +32118,9 @@ function renderSpecialRulesRef() {
       h4.id = 'rule-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
       h4.textContent = name;
       div.appendChild(h4);
-      if (rule.short) { var s = srEl('p', 'sr-rule-short'); s.textContent = rule.short; div.appendChild(s); }
-      if (rule.text)  { var t = srEl('p', 'sr-rule-text');  t.textContent = rule.text;  div.appendChild(t); }
+      var cite = srEl('p', 'sr-rule-cite'); cite.textContent = rule.category + ': ' + name; div.appendChild(cite);
+      if (rule.html)  { var t = srEl('div', 'sr-rule-text'); t.innerHTML = rule.html;    div.appendChild(t); }
+      else if (rule.text)  { var t = srEl('p', 'sr-rule-text');  t.textContent = rule.text;  div.appendChild(t); }
       frag.appendChild(div);
     });
     return frag;
@@ -32028,7 +32135,7 @@ function renderSpecialRulesRef() {
       h4.id = 'rule-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
       h4.textContent = name;
       div.appendChild(h4);
-      if (rule.short) { var s = srEl('p', 'sr-racial-short'); s.textContent = rule.short; div.appendChild(s); }
+      var cite = srEl('p', 'sr-rule-cite'); cite.textContent = rule.category + ': ' + name; div.appendChild(cite);
       if (rule.text)  { var t = srEl('p', 'sr-racial-text');  t.textContent = rule.text;  div.appendChild(t); }
       frag.appendChild(div);
     });
@@ -32036,15 +32143,23 @@ function renderSpecialRulesRef() {
   }
 
   function buildMountsSection(entries) {
-    var table = srEl('table', 'sr-mount-table');
-    table.innerHTML = '<thead><tr><th>Mount</th><th>Rules</th></tr></thead>';
+    function srFmt(s) { return srEsc(s || '').replace(/\.\s+(?=[A-Z0-9\u2212])/g, '.<br>'); }
+    var table = srEl('table', 'wiki-table wiki-table-compact wiki-table-text no-last-highlight');
+    table.setAttribute('style', 'width:100%;table-layout:auto');
+    table.innerHTML = '<thead><tr><th style="text-align:left;white-space:nowrap">Mount</th><th>Rules</th></tr></thead>';
     var tbody = srEl('tbody');
     entries.forEach(function(pair) {
       var name = pair[0], rule = pair[1];
       var tr = srEl('tr');
-      var td1 = srEl('td'); td1.id = 'rule-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      var td1 = srEl('td');
+      td1.id = 'rule-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      td1.style.fontFamily = "'Cinzel', serif";
+      td1.style.fontWeight = '600';
+      td1.style.color = 'var(--text)';
+      td1.style.whiteSpace = 'nowrap';
       td1.textContent = name.replace(/ Rules$/, '').replace(/ Magical Attacks$/, '');
-      var td2 = srEl('td'); td2.textContent = rule.text || rule.short || '';
+      var td2 = srEl('td');
+      td2.innerHTML = srFmt(rule.text || rule.short || '');
       tr.appendChild(td1); tr.appendChild(td2); tbody.appendChild(tr);
     });
     table.appendChild(tbody);
@@ -32052,8 +32167,10 @@ function renderSpecialRulesRef() {
   }
 
   function buildWeaponsSection() {
+    function srFmt(s) { return srEsc(s || '').replace(/\.\s+(?=[A-Z0-9\u2212])/g, '.<br>'); }
     var frag = document.createDocumentFragment();
-    var missileNames = ['Repeating Crossbow','Crossbow','Long Bow','Short Bow','Bow','Sling','Pistol','Blunderbuss','Throwing Weapons'];
+    var missileNames = ['Repeating Crossbow','Crossbow','Long Bow','Short Bow','Bow','Sling',
+                        'Pistol','Blunderbuss','Arquebus / Handgun','Javelin','Blowpipe','Throwing Weapons'];
     var missiles = [], hth = [];
     (typeof WFB3_WEAPON_RULES !== 'undefined' ? WFB3_WEAPON_RULES : []).forEach(function(w) {
       (missileNames.indexOf(w.name) !== -1 ? missiles : hth).push(w);
@@ -32061,13 +32178,14 @@ function renderSpecialRulesRef() {
 
     function weaponTable(rows, isMissile) {
       var wrap = srEl('div', 'sr-weapon-subsection');
-      var label = srEl('div', 'sr-weapon-label');
-      label.textContent = isMissile ? 'Missile Weapons' : 'Hand-to-Hand Weapons';
-      wrap.appendChild(label);
-      var t = srEl('table', 'sr-weapon-table');
+      var lbl = srEl('div', 'sr-weapon-label');
+      lbl.textContent = isMissile ? 'Missile Weapons' : 'Hand-to-Hand Weapons';
+      wrap.appendChild(lbl);
+      var t = srEl('table', 'wiki-table wiki-table-compact wiki-table-text no-last-highlight');
+      t.setAttribute('style', 'width:100%;table-layout:auto');
       t.innerHTML = isMissile
-        ? '<thead><tr><th>Weapon</th><th class="centre">Range</th><th class="centre">Str</th><th>Notes</th></tr></thead>'
-        : '<thead><tr><th>Weapon</th><th>Rules</th></tr></thead>';
+        ? '<thead><tr><th style="text-align:left;white-space:nowrap">Weapon</th><th style="width:3.5em;text-align:center;white-space:nowrap">Range</th><th style="width:2.5em;text-align:center;white-space:nowrap">Str</th><th>Notes</th></tr></thead>'
+        : '<thead><tr><th style="text-align:left;white-space:nowrap">Weapon</th><th>Rules</th></tr></thead>';
       var tb = srEl('tbody');
       rows.forEach(function(w) {
         var tr = srEl('tr');
@@ -32075,16 +32193,17 @@ function renderSpecialRulesRef() {
           var rangeM = w.rule.match(/Range\s+([\d\u2033\u201d]+)/);
           var strM   = w.rule.match(/Str(?:ength)?\s+(\d)/);
           var notes  = w.rule.replace(/Range\s+[\d\u2033\u201d]+[\u2033\u201d]?,?\s*/,'').replace(/Str(?:ength)?\s+\d\.?\s*/,'').replace(/^[.,;]\s*/,'').trim();
-          tr.innerHTML = '<td class="weapon-name">' + srEsc(w.name) + '</td>'
-            + '<td class="centre">' + srEsc(rangeM ? rangeM[1] + '″' : '—') + '</td>'
-            + '<td class="centre">' + srEsc(strM   ? strM[1]              : '—') + '</td>'
-            + '<td>' + srEsc(notes || '—') + '</td>';
+          tr.innerHTML = '<td style="font-family:\'Cinzel\',serif;font-weight:600;color:var(--text);white-space:nowrap">' + srEsc(w.name) + '</td>'
+            + '<td style="text-align:center;white-space:nowrap">' + srEsc(rangeM ? rangeM[1] + '\u2033' : '\u2014') + '</td>'
+            + '<td style="text-align:center;white-space:nowrap">' + srEsc(strM   ? strM[1]              : '\u2014') + '</td>'
+            + '<td>' + srFmt(notes || '\u2014') + '</td>';
         } else {
-          tr.innerHTML = '<td class="weapon-name">' + srEsc(w.name) + '</td><td>' + srEsc(w.rule) + '</td>';
+          tr.innerHTML = '<td style="font-family:\'Cinzel\',serif;font-weight:600;color:var(--text);white-space:nowrap">' + srEsc(w.name) + '</td><td>' + srFmt(w.rule) + '</td>';
         }
         tb.appendChild(tr);
       });
-      t.appendChild(tb); wrap.appendChild(t); return wrap;
+      t.appendChild(tb); wrap.appendChild(t);
+      return wrap;
     }
     frag.appendChild(weaponTable(missiles, true));
     frag.appendChild(weaponTable(hth, false));
@@ -32103,15 +32222,19 @@ function renderSpecialRulesRef() {
       });
       if (!entries.length) return;
     }
-    var section = srEl('section', 'sr-section');
+    var isTable = (sec.type === 'mounts' || sec.type === 'weapons');
+    var section = srEl('section', isTable ? 'sr-section sr-section-table' : 'sr-section');
     section.id = 'sec-' + sec.id;
     var heading = srEl('div', 'sr-section-heading');
     heading.textContent = sec.label;
     section.appendChild(heading);
-    if      (sec.type === 'rules')   section.appendChild(buildRulesSection(entries));
-    else if (sec.type === 'racial')  section.appendChild(buildRacialSection(entries));
-    else if (sec.type === 'mounts')  section.appendChild(buildMountsSection(entries));
-    else if (sec.type === 'weapons') section.appendChild(buildWeaponsSection());
+    if (isTable) {
+      var tbody = srEl('div', 'sr-section-table-body');
+      if (sec.type === 'mounts')  tbody.appendChild(buildMountsSection(entries));
+      else                        tbody.appendChild(buildWeaponsSection());
+      section.appendChild(tbody);
+    } else if (sec.type === 'rules')  section.appendChild(buildRulesSection(entries));
+    else if   (sec.type === 'racial') section.appendChild(buildRacialSection(entries));
     inner.appendChild(section);
 
     var a = srEl('a'); a.dataset.target = 'sec-' + sec.id; a.textContent = sec.label;
@@ -32822,6 +32945,12 @@ function exportData() {
   }
 }
 
+function printSR() {
+  document.body.classList.add('print-sr');
+  window.onafterprint = function() { document.body.classList.remove('print-sr'); };
+  window.print();
+}
+
 function showRuleDetail(tag) {
   var sr = tag.parentNode;
   var detail = sr.nextElementSibling;
@@ -32843,9 +32972,10 @@ function showRuleDetail(tag) {
   tag.classList.add('active');
 
   var rule = (typeof WFB3_RULES !== 'undefined') ? WFB3_RULES[name] : null;
+  var cite = rule ? (rule.category + ': ' + name) : name;
   var html = '<div class="al-rule-detail-name">' + name + '</div>';
-  if (rule && rule.short) html += '<div class="al-rule-detail-short">' + rule.short + '</div>';
-  if (rule && rule.text)  html += '<div class="al-rule-detail-text">'  + rule.text  + '</div>';
+  html += '<div class="al-rule-detail-cite">' + cite + '</div>';
+  html += '<div class="al-rule-detail-ref">See Special Rules Reference</div>';
 
   detail.innerHTML = html;
   detail.style.display = 'block';

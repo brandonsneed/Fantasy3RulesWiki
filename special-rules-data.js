@@ -27,44 +27,26 @@ const WFB3_RULES = {
 
   'Animosity': {
     category: 'Psychology',
-    short: 'O&G units test if a friendly Animosity unit is within 12″ (unless enemy in reach, bated enemy in sight, or in combat). Roll D6 − leader Ld bonus ± modifiers. 7+: charges or fires on the friendly unit. 6: moves up and insults — no reserve move. 5−: passes.',
-    text: 'At the start of each player turn, if a friendly Animosity-causing unit is within 12″, any Orc or Goblin unit must test — unless enemy troops are within 12″ or charge range, there is a bated enemy in sight, or the unit is already engaged in combat (Black Orcs are exempt — see Black Orc Animosity). Roll D6, deduct the leader\'s Ld bonus, then modify: +1 if the Animosity unit is directly in front and within charge range; +1 if of a different race; +1 if no enemy in sight. Result 7+: charges or fires missiles at the friendly unit (hurling insults if no missiles). Result 6: fires missiles if available, otherwise moves as close as possible (no closer than 1″) and exchanges jeers — neither unit may make a reserve move. Result 5−: unit behaves normally. Units gripped by Animosity will fight unless enemy approach within 12″ (or charge range) or a bated enemy appears.'
+    short: 'O&G units test against the closest friendly Animosity unit within 12″ (unless enemy in reach, bated enemy in sight, or in combat). Roll D6 − leader Ld bonus ± modifiers. 7+: charges or moves/fires on the friendly unit. 6: fires or moves to within 1″ and jeers — no reserve move. 5−: passes.',
+    html: '<p>Test at the start of the turn if a friendly Animosity unit is within 12″ — unless:</p><ul class="wiki-list"><li>Enemy troops are within 12″ or within the unit\'s charge reach</li><li>A <em>bated</em> enemy is within sight</li><li>The unit is already in close combat from a previous animosity result</li></ul><p>Always test against the <em>closest</em> animosity unit only. Roll D6 − leader\'s <strong>Ld</strong> bonus, then add:</p><ul class="wiki-list"><li>+1 if the animosity unit is directly in front and within charge reach</li><li>+1 if the animosity unit is of a different race</li><li>+1 if no enemies are in sight</li></ul><p><strong>7+:</strong> charges the animosity unit if within reach — if not, moves as close as possible and fires missiles; if no missiles, simply moves as close as possible.</p><p><strong>6:</strong> fires missiles if available; if not, moves to within 1″ and exchanges jeers — neither unit may reserve move.</p><p><strong>5−:</strong> unit behaves normally.</p><p>Once in animosity combat, leader models are placed out of the fight. Combat continues until enemy come within 12″, within the fighting unit\'s charge reach, or bated enemy appear in sight. At the end of any round where one side pushes the other back:</p><ul class="wiki-list"><li>Winning side rolls 2D6 vs <strong>Ld</strong> (as a rout test) — if passed, leaders hold their troops back; no follow-up; pushed-back unit takes no rout test; both units freeze</li><li>If combat is ended by intervening enemy: units are not unformed, but auto-rout if pushed back by the fresh enemy</li><li>If a unit routs from animosity combat: it automatically rallies on its first rally test</li></ul>'
   },
 
   'Cause Fear': {
     category: 'Psychology',
-    short: 'Enemies test (2D6 vs Cl): to fire missiles within charge reach, to charge (fail = frozen), and when charged (fail = auto-rout). Pushed-back by this unit: auto-rout.',
+    short: 'Enemies (under 10′ tall) test 2D6 vs Cl: to fire missiles within charge reach (fail = no shot), to charge (fail = frozen for turn), when charged (fail = auto-rout). Pushed back by this unit: auto-rout. Fear Range (if listed): −1 to hit within range; cannot rally; no reserve move into range.',
     text: 'This unit causes Fear in all living enemies under 10′ tall (unless those enemies are themselves Fear-causing or Immune to Psychology). Fear tests (2D6 vs Cl) are required in three situations: (1) a unit wants to fire missiles at this unit while it is within the shooter\'s charge reach — fail means it cannot fire; (2) a unit wants to charge this unit — fail means it cannot move that turn; (3) a unit is charged by this unit — fail means it automatically routs. In addition, any unit pushed back in combat by a Fear-causing unit automatically routs. Creatures over 10′ tall are not affected by Fear from smaller creatures. Some creatures have a Fear Range (e.g. Fear 15″): enemy units within that range suffer −1 to hit in all attacks, cannot rally if routing within range, and may not make reserve moves toward the feared creature.'
-  },
-
-  'Cause Terror': {
-    category: 'Psychology',
-    short: 'Causes Terror (stronger than Fear). Enemies test on WP with −1 modifier before charging; fail = rout.',
-    text: 'This unit causes Terror — a more powerful form of Fear. Enemies (regardless of size) wishing to charge must pass a Terror test (2D6 vs WP, with a −1 modifier). Failure means they cannot charge. When this unit charges, targets must test or automatically rout. Enemies pushed back in combat by a Terror-causing unit automatically rout. Units that are already subject to Fear are not additionally penalised; Terror supersedes Fear. Units that themselves Cause Terror are immune to Terror from others.'
-  },
-
-  'Fear': {
-    category: 'Psychology',
-    short: 'Enemies of this unit must pass a Fear test (2D6 vs Cl) to charge, or rout when charged.',
-    text: 'Enemies must test (2D6 vs Cl) to charge, fire within charge reach of, or when charged by this unit. Fail to charge: cannot move. Fail when charged: auto-rout. Pushed-back by a feared enemy: auto-rout.'
-  },
-
-  'Terror': {
-    category: 'Psychology',
-    short: 'Stronger than Fear. Enemies test on WP (−1) to charge or when charged; fail = rout.',
-    text: 'Terror is a heightened form of Fear caused by truly monstrous creatures. It affects enemies regardless of size. Enemies must test (2D6 vs WP, −1 modifier) to charge, fire within charge reach of, or when charged by a Terror-causing creature. Fail to charge: cannot move. Fail when charged: auto-rout.'
   },
 
   'Frenzy': {
     category: 'Psychology',
-    short: '+1 to hit, +1 to wound, +1 to saves. Must follow up and pursue. Ignores psychology tests. Lasts while in base-to-base contact with enemy.',
+    short: 'Test on charge (2D6 vs Cl, inverted: MORE than Cl = frenzied). While frenzied: +1 to hit, +1 to wound, +1 to saves; must follow up and pursue; cannot be routed; ignores all psychology tests. Lasts while in base-to-base contact.',
     text: 'When this unit charges, test 2D6 vs Cl — note the inverted logic: rolling MORE than Cl triggers frenzy; rolling equal to or under Cl means the unit keeps its cool and does not frenzy. While frenzied: +1 to hit, +1 to wound, +1 to all saving throws; must always follow up enemies who are pushed back; must always pursue routing enemies; never takes other psychology tests or Rout tests. Frenzy persists as long as the unit remains in base-to-base contact with the enemy, including during pursuit and free hacks — it is not lost when the unit takes casualties.'
   },
 
   'Hatred': {
     category: 'Psychology',
-    short: 'Must charge/shoot hated enemy if able (Cl test to resist). +1 to hit in first round of combat. +1 Ld on rout tests. Must always pursue.',
-    text: 'Must charge a hated enemy if able, or shoot at them if unable to charge (make a Cl test to resist either compulsion). In the first round of hand-to-hand combat against the hated enemy: +1 to hit. If pushed back by hated enemy, +1 Ld bonus on rout tests. Must always pursue a routing hated enemy.'
+    short: 'Must charge/shoot hated enemy if able (Cl test to resist). +1 to hit in hand-to-hand. +1 Ld on rout tests if pushed back by the hated element. Must always pursue routing hated enemy.',
+    text: 'Must charge a hated enemy if able, or shoot at them if unable to charge (make a Cl test to resist either compulsion). In hand-to-hand combat against the hated enemy: +1 to hit. If pushed back, +1 Ld bonus on rout tests — only applies if the hated element inflicted sufficient casualties to cause the push-back. Must always pursue a routing hated enemy.'
   },
 
   'Hatred (High Elves & Wood Elves)': {
@@ -107,7 +89,7 @@ const WFB3_RULES = {
 
   'Poisoned Attacks': {
     category: 'Combat',
-    short: 'Each poisoned attack counts as +1 to the attacker\'s Strength for wounding purposes. Normal to-wound roll still applies.',
+    short: 'Each poisoned attack counts as +1 to the attacker\'s Strength for wounding. No effect against undead, ethereal, daemonic, or elemental creatures (attacks still hit at normal Strength).',
     text: 'Each attack made with poison counts as having +1 bonus to the attacker\'s Strength when determining whether a wound is caused — the normal Strength vs Toughness wounding roll is still made, but at the higher effective Strength. Armour saves are taken as normal. Troops may be equipped with poisoned weapons at a cost of 3 points per model; some creatures have natural poisoned attacks as part of their profile (cost already included). If the model has multiple attacks only the specified attacks are poisoned unless otherwise noted.'
   },
 
@@ -125,7 +107,7 @@ const WFB3_RULES = {
 
   'Magical Attacks': {
     category: 'Combat',
-    short: 'All attacks count as magical — required to harm ethereal and certain daemonic creatures.',
+    short: 'All attacks count as magical — required to harm Ethereal creatures, Daemons, and Elementals, which are immune to non-magical attacks.',
     text: 'All attacks made by this unit count as magical attacks. This is required to harm Ethereal creatures (wraiths, spirits) and some types of Daemonic or Chaos entities that can only be harmed by magic. Magical attacks also interact with certain spell effects and magic item abilities. A unit with Magical Attacks does not automatically receive any combat bonus — the magical nature only matters for the purpose of wounding creatures immune to mundane weapons.'
   },
 
@@ -159,7 +141,7 @@ const WFB3_RULES = {
 
   'Berserker Rules': {
     category: 'Special Troop',
-    short: 'Auto-Frenzy on first contact. Cannot rout. Must always charge nearest enemy if not in combat.',
+    short: 'Auto-Frenzy on first charge or being charged (permanent). Cannot be pushed back or routed in hand-to-hand. Must always follow up and pursue. If not in combat: must charge nearest enemy, or nearest friendly unit if no enemies in reach.',
     text: 'No armour (shield allowed). Auto-Frenzy on first charge or being charged — permanent for battle. Cannot be pushed back or routed in hand-to-hand. Must always follow up and pursue. If not in combat: must charge nearest enemy (or nearest friendly if none in range). +5 pts per model.'
   },
 
