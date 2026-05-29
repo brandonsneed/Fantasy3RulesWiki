@@ -416,12 +416,13 @@ const RACE_PROFILES = {
   "Zombie":          ["4","2","0","3","3","1","1","1","5","5","5","5"],
   "Ghoul":           ["4","2","0","3","4","1","3","2","2","5","8","8"],
   "Mummy":           ["3","3","0","4","5","4","3","2","9","8","8","9"],
-  "Undead Horseman": ["8","2","2","3","3","1","2","2","5","5","5","5"]
+  "Undead Horseman": ["8","2","2","3","3","1","2","2","5","5","5","5"],
+  "Carrion":         ["4","3","0","3","3","2","4","3","7","3","7","7"]
 };
 const NAMED_RACE_COSTS = {
   "Skeleton": 10, "Black Orc": 7, "Savage Orc": 5.5,
   "Slann": 7, "Slann Levy": 5, "Lizardman": 20, "Human Slave": 4,
-  "Zombie": 4, "Ghoul": 8, "Mummy": 80, "Undead Horseman": 20,
+  "Zombie": 4, "Ghoul": 8, "Mummy": 80, "Undead Horseman": 20, "Carrion": 45,
   // Giant Races — flat per-model cost, no formula scaling
   "Giant": 250, "Ogre": 38, "Troll": 65, "Minotaur": 40, "Treeman": 280, "Troglodyte": 36
 };
@@ -516,6 +517,10 @@ function buildForm() {
   if (cardType === "chariot")    buildFormChariot(panel);
   if (cardType === "character")  buildFormCharacter(panel);
   buildCompanionSection(panel);
+  // Reposition: move Special Rules to just after the Points Calculator (2nd section → index 1)
+  const _calcSec = panel.children[1];
+  const _compSec = panel.lastElementChild;
+  if (_calcSec && _compSec && _compSec !== _calcSec) panel.insertBefore(_compSec, _calcSec.nextSibling);
   panel.appendChild(makePointsOverrideSection());
 }
 
@@ -745,7 +750,8 @@ const SPECIAL_RULES_CATALOGUE = (typeof WFB3_SPECIAL_RULES_CATALOGUE !== 'undefi
 // Companion sheet state (persists across card re-renders)
 let companionState = {
   dismissedAuto: new Set(),
-  manualRules: [],
+  manualRules: [],       // rules from SPECIAL_RULES_CATALOGUE
+  customRuleNames: [],   // freeform names not in the catalogue
   customNotes: ""
 };
 
@@ -840,14 +846,12 @@ function getAutoTriggeredRules() {
 }
 
 function buildCompanionSection(panel) {
-  const sec = makeSec("Reference Sheet");
-  sec.classList.add("form-section-collapsible");
-  sec.querySelector(".form-section-title").onclick = () => sec.classList.toggle("open");
+  const sec = makeSec("Special Rules");
   const body = sec.querySelector(".form-section-body");
 
   const note = document.createElement("div");
   note.style.cssText = "font-size:9px;color:#777;font-family:'Barlow Condensed',sans-serif;line-height:1.5;padding:2px 0 8px";
-  note.textContent = "Auto-populates from race, mount, and card type. Prints beside the card.";
+  note.textContent = "Rules appear as tags on the card and companion sheet. Added rule costs factor into the points total. Auto rules come from race/mount — add extras from the catalogue or enter custom names below.";
   body.appendChild(note);
 
   // Chips area (populated by renderCompanion)
@@ -858,7 +862,7 @@ function buildCompanionSection(panel) {
 
   // Add rule from catalogue — auto-adds on selection
   const catWrap = el("div","form-field");
-  const catLabel = document.createElement("label"); catLabel.textContent = "Add Rule";
+  const catLabel = document.createElement("label"); catLabel.textContent = "Add from Catalogue";
   const catSel = document.createElement("select"); catSel.id = "comp-cat-sel";
   catSel.style.cssText = "background:#0d0d0d;border:1px solid #3a3a3a;border-radius:2px;color:#e8e8e8;font-family:'Barlow Condensed',sans-serif;font-size:11px;padding:3px 6px;outline:none;width:100%";
   const catGroups = {};
@@ -869,7 +873,13 @@ function buildCompanionSection(panel) {
   catSel.innerHTML = '<option value="">— select to add —</option>';
   Object.entries(catGroups).forEach(([cat, keys]) => {
     const og = document.createElement("optgroup"); og.label = cat;
-    keys.forEach(k => { const o = document.createElement("option"); o.value = k; o.textContent = k; og.appendChild(o); });
+    keys.forEach(k => {
+      const o = document.createElement("option"); o.value = k;
+      const rc = typeof WFB3_RULE_COSTS !== 'undefined' && WFB3_RULE_COSTS[k];
+      const costStr = rc && rc.pts !== 0 ? ` (${rc.pts > 0 ? '+' : ''}${rc.pts}${rc.tier === 'est.' ? '~' : ''} pts)` : '';
+      o.textContent = k + costStr;
+      og.appendChild(o);
+    });
     catSel.appendChild(og);
   });
   catSel.onchange = () => {
@@ -885,11 +895,43 @@ function buildCompanionSection(panel) {
   catWrap.appendChild(catLabel); catWrap.appendChild(catSel);
   body.appendChild(catWrap);
 
-  // Custom notes
+  // Add custom rule name (freeform — not in catalogue)
+  const customWrap = el("div","form-field");
+  const customLabel = document.createElement("label"); customLabel.textContent = "Add Custom Rule";
+  const customRow = document.createElement("div"); customRow.style.cssText = "display:flex;gap:4px";
+  const customInp = document.createElement("input"); customInp.type = "text";
+  customInp.id = "comp-custom-rule-inp";
+  customInp.placeholder = "eg. Hatred (Undead), Night Vision…";
+  customInp.style.cssText = "flex:1;background:#0d0d0d;border:1px solid #3a3a3a;border-radius:2px;color:#e8e8e8;font-family:'Barlow Condensed',sans-serif;font-size:11px;padding:3px 6px;outline:none;min-width:0";
+  const customBtn = document.createElement("button");
+  customBtn.className = "add-btn";
+  customBtn.style.cssText = "width:auto;padding:3px 10px;margin:0;flex-shrink:0";
+  customBtn.textContent = "+ Add";
+  const doAddCustom = () => {
+    const val = customInp.value.trim(); if (!val) return;
+    if (SPECIAL_RULES_CATALOGUE[val]) {
+      // It's in the catalogue — treat as a catalogue add so it gets text in the preview
+      if (!companionState.manualRules.includes(val)) {
+        companionState.manualRules.push(val);
+        companionState.dismissedAuto.delete(val);
+      }
+    } else {
+      if (!companionState.customRuleNames.includes(val)) companionState.customRuleNames.push(val);
+    }
+    customInp.value = "";
+    renderCompanion(); calcPoints();
+  };
+  customBtn.onclick = doAddCustom;
+  customInp.onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); doAddCustom(); } };
+  customRow.appendChild(customInp); customRow.appendChild(customBtn);
+  customWrap.appendChild(customLabel); customWrap.appendChild(customRow);
+  body.appendChild(customWrap);
+
+  // Reference notes (free text for companion preview)
   const notesWrap = el("div","form-field");
-  const notesLabel = document.createElement("label"); notesLabel.textContent = "Custom Notes";
+  const notesLabel = document.createElement("label"); notesLabel.textContent = "Reference Notes";
   const notesTa = document.createElement("textarea"); notesTa.id = "comp-custom-notes";
-  notesTa.placeholder = "Free text — any notes not in the catalogue...";
+  notesTa.placeholder = "Additional notes printed on the reference sheet...";
   notesTa.style.cssText = "width:100%;box-sizing:border-box;min-height:60px;resize:vertical";
   notesTa.value = companionState.customNotes;
   notesTa.oninput = () => { companionState.customNotes = notesTa.value; renderCompanion(); };
@@ -899,7 +941,7 @@ function buildCompanionSection(panel) {
   // Wiki link row
   const linkRow = document.createElement("div");
   linkRow.style.cssText = "display:flex;gap:6px;align-items:flex-end;margin-top:4px";
-  const pagef = el("div","form-field"); pagef.style.flex = "1"; pagef.innerHTML = "<label>Wiki Page</label>";
+  const pagef = el("div","form-field"); pagef.style.flex = "1"; pagef.innerHTML = "<label>Quick Reference</label>";
   const pageSel = document.createElement("select"); pageSel.id = "comp-wiki-page";
   pageSel.style.cssText = "background:#0d0d0d;border:1px solid #3a3a3a;border-radius:2px;color:#e8e8e8;font-family:'Barlow Condensed',sans-serif;font-size:11px;padding:3px 6px;outline:none;width:100%";
   pageSel.innerHTML = `
@@ -922,6 +964,10 @@ function buildCompanionSection(panel) {
   linkBtn.onclick = () => window.open("whfb3 wiki.html#" + pageSel.value, "_blank");
   linkRow.appendChild(linkBtn);
   body.appendChild(linkRow);
+  const linkHint = document.createElement("div");
+  linkHint.style.cssText = "font-size:9px;color:#555;font-family:'Barlow Condensed',sans-serif;line-height:1.4;padding:3px 0 0";
+  linkHint.textContent = "Opens the selected wiki page in a new tab for reference — no effect on the card or export.";
+  body.appendChild(linkHint);
 
   panel.appendChild(sec);
   renderCompanion();
@@ -966,6 +1012,14 @@ function renderCompanion() {
       chip.querySelector("span:last-child").onclick = () => { companionState.manualRules = companionState.manualRules.filter(r => r !== key); renderCompanion(); calcPoints(); };
       chipsArea.appendChild(chip);
     });
+    // Custom rule name chips (teal — freeform names not in catalogue)
+    companionState.customRuleNames.forEach(key => {
+      const chip = document.createElement("div");
+      chip.style.cssText = "display:inline-flex;align-items:center;gap:3px;background:#1a1a1a;border:1px solid #2a6060;border-radius:2px;padding:2px 6px;font-family:'Barlow Condensed',sans-serif;font-size:10px;color:#6bbcbc;line-height:1.3";
+      chip.innerHTML = `<span>${key}</span><span style="cursor:pointer;color:#2a6060;padding:0 2px" title="Remove">×</span>`;
+      chip.querySelector("span:last-child").onclick = () => { companionState.customRuleNames = companionState.customRuleNames.filter(r => r !== key); renderCompanion(); calcPoints(); };
+      chipsArea.appendChild(chip);
+    });
     if (chipsArea.children.length === 0) {
       const empty = document.createElement("div");
       empty.style.cssText = "font-size:9px;color:#555;font-family:'Barlow Condensed',sans-serif;padding:6px 4px";
@@ -980,7 +1034,9 @@ function renderCompanion() {
 
   const activeAuto = autoTriggered.filter(k => !companionState.dismissedAuto.has(k));
   const allKeys = [...new Set([...activeAuto, ...companionState.manualRules])];
-  const hasContent = allKeys.length > 0 || companionState.customNotes.trim();
+  const _WR = typeof WFB3_RULES !== 'undefined' ? WFB3_RULES : {};
+  const hasUsableKey = allKeys.some(k => SPECIAL_RULES_CATALOGUE[k] || (_WR[k] && (_WR[k].short || _WR[k].html || _WR[k].text)));
+  const hasContent = hasUsableKey || companionState.customRuleNames.length > 0 || companionState.customNotes.trim();
 
   comp.classList.toggle("companion-empty", !hasContent);
   comp.innerHTML = "";
@@ -993,10 +1049,28 @@ function renderCompanion() {
 
   allKeys.forEach(key => {
     const entry = SPECIAL_RULES_CATALOGUE[key];
-    if (!entry) return;
+    const raw = _WR[key];
+    if (!entry && !raw) return;
     const sec = el("div","companion-section");
     const title = el("div","companion-section-title"); title.textContent = key;
-    const body = el("div","companion-body"); body.textContent = entry.text;
+    const body = el("div","companion-body");
+    if (entry) {
+      body.textContent = entry.text;
+    } else {
+      let txt = raw.short || "";
+      if (!txt && raw.html) { const tmp = document.createElement("div"); tmp.innerHTML = raw.html; txt = tmp.textContent || tmp.innerText || ""; }
+      body.textContent = txt;
+    }
+    sec.appendChild(title); sec.appendChild(body); comp.appendChild(sec);
+  });
+
+  companionState.customRuleNames.forEach(key => {
+    if (allKeys.includes(key)) return; // already rendered via catalogue
+    const sec = el("div","companion-section");
+    const title = el("div","companion-section-title"); title.textContent = key;
+    const body = el("div","companion-body");
+    body.style.cssText = "font-size:7.5px;line-height:1.6;color:#888;font-style:italic;font-family:'Barlow Condensed',sans-serif;white-space:pre-wrap";
+    body.textContent = "Custom rule — no catalogue entry.";
     sec.appendChild(title); sec.appendChild(body); comp.appendChild(sec);
   });
 
@@ -2299,6 +2373,7 @@ function buildCalculatorSection() {
      <optgroup label="4 pts">
        <option value="4">Slann Slave</option>
        <option value="Human Slave">Human Slave</option>
+       <option value="Zombie">Zombie</option>
      </optgroup>
      <optgroup label="4½ pts">
        <option value="4.5">Skaven</option>
@@ -2329,6 +2404,7 @@ function buildCalculatorSection() {
        <option value="8">Wood Elf</option>
        <option value="8">High Elf</option>
        <option value="8">Fimir-Shearl</option>
+       <option value="Ghoul">Ghoul</option>
      </optgroup>
      <optgroup label="10 pts">
        <option value="10">Beastman</option>
@@ -2339,6 +2415,7 @@ function buildCalculatorSection() {
      </optgroup>
      <optgroup label="20 pts">
        <option value="Lizardman">Lizardman</option>
+       <option value="Undead Horseman">Undead Horseman</option>
      </optgroup>
      <optgroup label="30 pts">
        <option value="30">Centaur</option>
@@ -2363,6 +2440,10 @@ function buildCalculatorSection() {
        <option value="Minotaur">Minotaur (40pts)</option>
        <option value="Treeman">Treeman (280pts)</option>
        <option value="Troglodyte">Troglodyte (36pts)</option>
+     </optgroup>
+     <optgroup label="Creatures (flat cost)">
+       <option value="Mummy">Mummy (80pts)</option>
+       <option value="Carrion">Carrion (45pts)</option>
      </optgroup>`;
   raceField.appendChild(raceSel); body.appendChild(raceField);
   const baseLabelDiv = document.createElement("div");
@@ -2662,24 +2743,41 @@ function calcPoints() {
       breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["x 2 (mounted)",null],[`+ half mount value (${mntCost}/2)`,halfMount]],rt,true,halfMount);
     } else { pts = effectiveBase + equipCost + specialVal + mntCost; breakdown = buildBreakdown([[baseLabel,raceBase],eliteVal!==0?["Elite/Levy modifier",eliteVal]:null,equipCost>0?[`Equipment (x${equipMultiplier})`,equipCost]:null,specialVal>0?["Special surcharge",specialVal]:null,["Mount (direct add)",mntCost]]); }
   }
-  // Rule costs — only in formula mode (custom or diverged from preset)
-  if (usingFormula) {
-    const RCOSTS = typeof WFB3_RULE_COSTS !== 'undefined' ? WFB3_RULE_COSTS : {};
-    const activeAuto = getAutoTriggeredRules().filter(r => !companionState.dismissedAuto.has(r));
-    const activeRules = [...new Set([...activeAuto, ...companionState.manualRules])];
-    let rulesPts = 0; const ruleLines = [];
-    activeRules.forEach(r => {
+  // Rule costs
+  const RCOSTS = typeof WFB3_RULE_COSTS !== 'undefined' ? WFB3_RULE_COSTS : {};
+  // Manual rule costs — always applied (user explicitly added these as extras)
+  {
+    let manPts = 0; const manLines = [];
+    companionState.manualRules.forEach(r => {
       const entry = RCOSTS[r];
       if (entry && entry.pts !== 0) {
-        rulesPts += entry.pts;
+        manPts += entry.pts;
         const sign = entry.pts > 0 ? "+" : "";
-        ruleLines.push(`${r}: ${sign}${entry.pts}${entry.tier === 'est.' ? '~' : ''}`);
+        manLines.push(`${r}: ${sign}${entry.pts}${entry.tier === 'est.' ? '~' : ''}`);
       }
     });
-    if (rulesPts !== 0) {
-      pts += rulesPts;
-      const sign = rulesPts > 0 ? "+" : "";
-      breakdown += `Rules (${sign}${fractionStr(rulesPts)}): ${ruleLines.join(", ")}<br>`;
+    if (manPts !== 0) {
+      pts += manPts;
+      const sign = manPts > 0 ? "+" : "";
+      breakdown += `Rules (${sign}${fractionStr(manPts)}): ${manLines.join(", ")}<br>`;
+    }
+  }
+  // Auto-triggered rule costs — formula mode only (already baked into preset race costs)
+  if (usingFormula) {
+    const activeAuto = getAutoTriggeredRules().filter(r => !companionState.dismissedAuto.has(r) && !companionState.manualRules.includes(r));
+    let autoPts = 0; const autoLines = [];
+    activeAuto.forEach(r => {
+      const entry = RCOSTS[r];
+      if (entry && entry.pts !== 0) {
+        autoPts += entry.pts;
+        const sign = entry.pts > 0 ? "+" : "";
+        autoLines.push(`${r}: ${sign}${entry.pts}${entry.tier === 'est.' ? '~' : ''}`);
+      }
+    });
+    if (autoPts !== 0) {
+      pts += autoPts;
+      const sign = autoPts > 0 ? "+" : "";
+      breakdown += `Auto rules (${sign}${fractionStr(autoPts)}): ${autoLines.join(", ")}<br>`;
     }
   }
 
@@ -3481,7 +3579,23 @@ function calcCharacterPoints() {
   if (wizardSurcharge) breakdown += `Wizard surcharge (level ${level}): +${wizardSurcharge}<br>`;
   if (magicCost)  breakdown += `Magic items: +${magicCost}<br>`;
 
-  const total = charBase + equipTotal + mntCost + wizardSurcharge + magicCost;
+  // Manual rule costs — always applied
+  const RCOSTS_CH = typeof WFB3_RULE_COSTS !== 'undefined' ? WFB3_RULE_COSTS : {};
+  let manRulesPts = 0; const manRulesLines = [];
+  companionState.manualRules.forEach(r => {
+    const entry = RCOSTS_CH[r];
+    if (entry && entry.pts !== 0) {
+      manRulesPts += entry.pts;
+      const sign = entry.pts > 0 ? "+" : "";
+      manRulesLines.push(`${r}: ${sign}${entry.pts}${entry.tier === 'est.' ? '~' : ''}`);
+    }
+  });
+  if (manRulesPts !== 0) {
+    const sign = manRulesPts > 0 ? "+" : "";
+    breakdown += `Rules (${sign}${fractionStr(manRulesPts)}): ${manRulesLines.join(", ")}<br>`;
+  }
+
+  const total = charBase + equipTotal + mntCost + wizardSurcharge + magicCost + manRulesPts;
   resEl.textContent = fractionStr(total);
   brkEl.innerHTML = breakdown;
   if (!ptsLocked) { const chPtsEl = document.getElementById("f-pts-display"); if (chPtsEl) { chPtsEl.value = fractionStr(total); } }
@@ -3561,6 +3675,7 @@ function buildFormCharacter(panel) {
     <optgroup label="35 pts"><option value="35">Chaos Marauder</option><option value="35">Coatl</option></optgroup>
     <optgroup label="50 pts"><option value="50">Zoat</option></optgroup>
     <optgroup label="70 pts"><option value="70">Chaos Warrior</option></optgroup>
+    <optgroup label="Creatures (flat cost)"><option value="Mummy">Mummy (80pts)</option></optgroup>
     <optgroup label="Undead (fixed tables)">
       <option value="Undead Hero">Undead Hero</option>
       <option value="Liche">Liche</option>
@@ -3821,7 +3936,8 @@ function buildUnitObject() {
   // Capture companion rules at export time (excluding user-dismissed auto rules)
   const exportedCompanionRules = [...new Set([
     ...getAutoTriggeredRules().filter(r => !companionState.dismissedAuto.has(r)),
-    ...companionState.manualRules
+    ...companionState.manualRules,
+    ...companionState.customRuleNames
   ])];
 
   const def = {

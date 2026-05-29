@@ -774,15 +774,15 @@ const WFB3_RULE_COSTS = {
   'Cause Fear':          { pts: 3,  tier: 'est.' },
   'Cause Terror':        { pts: 5,  tier: 'est.' },   // revised from 6; Mummy gap analysis
   'Regeneration':        { pts: 5,  tier: 'est.' },   // estimate; only seen in Troll bundle
-  'Scaly Skin':          { pts: 4,  tier: 'est.' },   // confirmed by Lizardman triangulation
-  'Immune to Psychology':{ pts: 1,  tier: 'est.' },   // revised from 2; Black Orc triangulation
+  'Scaly Skin':          { pts: 4,  tier: 'est.' },   // Lizardman: ImPsych+ScalySkin(6+) = gap 4.25; if ImPsych≈1 then SS≈3.25–4
+  'Immune to Psychology':{ pts: 1,  tier: 'est.' },   // Black Orc: BlackOrcAnim+ImPsych(full)=gap 0; cannot cleanly isolate
   'Fly':                 { pts: 5,  tier: 'est.' },
   'Magical Attacks':     { pts: 2,  tier: 'est.' },
-  'Frenzy':              { pts: 2,  tier: 'est.' },   // revised from 3; appears free in Savage Orc data
-  'Hatred':              { pts: 1,  tier: 'est.' },
-  'Hatred (Goblinoids)': { pts: 1,  tier: 'est.' },
-  'Hatred (Dwarfs & Gnomes)':         { pts: 1, tier: 'est.' },
-  'Hatred (High Elves & Wood Elves)': { pts: 1, tier: 'est.' },
+  'Frenzy':              { pts: 0,  tier: 'est.' },   // confirmed 0: Savage Orc = Orc price, identical stats
+  'Hatred':              { pts: 0,  tier: 'est.' },   // confirmed ~0: Goblin/Hobgoblin/Dwarf/Gnome/Centaur all near-zero gap
+  'Hatred (Goblinoids)': { pts: 0,  tier: 'est.' },   // Gnome: Hatred(Goblinoids)+HorsePenalty → gap=0
+  'Hatred (Dwarfs & Gnomes)':         { pts: 0, tier: 'est.' },   // Goblin/Hobgoblin: near-zero gap
+  'Hatred (High Elves & Wood Elves)': { pts: 0, tier: 'est.' },   // extrapolated from other Hatred data
   // ── Drawbacks (negative pts) ────────────────────────────────────
   'Animosity':           { pts: 0,  tier: 'est.' },   // confirmed free; Orc/Goblin formula gaps ~0
   'Stupidity':           { pts: -1, tier: 'est.' },   // revised from -2; uncertain, Fimir-Fimm data
@@ -837,6 +837,7 @@ const WFB3_RACE_RULES = {
   'Ghoul':           ['Cause Fear', 'Poisoned Attacks'],
   'Mummy':           ['Cause Terror', 'Undead Racial Rules'],
   'Undead Horseman': ['Undead Racial Rules'],
+  'Carrion':         ['Cause Fear', 'Immune to Psychology', 'Instability', 'Fly'],
   // ── Giant Races ─────────────────────────────────────────────────
   'Giant':           ['Giant Rules', 'Cause Fear'],
   'Ogre':            ['Ogre Rules', 'Cause Fear'],
