@@ -96,7 +96,7 @@ const WFB3_RULES = {
   'Scaly Skin': {
     category: 'Combat',
     short: 'Natural armour from scales or thick hide. Grants a basic saving throw without encumbrance (6+ for light scales, 5+ for heavy hide). Stacks with worn armour to a maximum of 3+.',
-    text: 'The creature's natural scales or hide give it a basic saving throw without any encumbrance penalty. The save value varies by creature: Lizardmen and Zoats have 6+ (equivalent to chainmail); Treemen have 5+. This natural save stacks with worn armour in the same way as any other armour combination, subject to the usual 3+ maximum. Unlike normal armour it cannot be stripped away by enemy action or special rules that remove armour.'
+    text: 'The creature\'s natural scales or hide give it a basic saving throw without any encumbrance penalty. The save value varies by creature: Lizardmen and Zoats have 6+ (equivalent to chainmail); Treemen have 5+. This natural save stacks with worn armour in the same way as any other armour combination, subject to the usual 3+ maximum. Unlike normal armour it cannot be stripped away by enemy action or special rules that remove armour.'
   },
 
   'Poisoned Attacks': {
